@@ -181,7 +181,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # ice theme for frost oni
 # blizzard sounds
 
-# --- Sound Effects ---
+# --- SFX ---
 # find sfx for the ff:
 # qiongqi_roar
 # earth_spike

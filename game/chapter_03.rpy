@@ -196,7 +196,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # --- Music ---
 # TODO: royalty free music with the vibes of the game
 
-# --- Sound Effects ---
+# --- SFX ---
 # TODO: find and add sfx
 
 # --- Ambient ---

@@ -142,18 +142,13 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # PLACEHOLDER: Replace each path with your real .ogg file.
 # =============================================================================
 
+# --- Music ---
 # define audio.ost_tianho_festival # upbeat plays during the city exploration sequence
-
 # define audio.ost_emperor_arrival  #Grand ceremonial fanfare — plays as Emperor Min-joon enters
-
 # define audio.ost_dream_dragon   #ethereal — prosperity Dragon dream sequence
-
 # define audio.ost_tension_rising      
-
 # define audio.ost_battle_tianho       
-
 # define audio.ost_taotie_battle       
-
 # define audio.ost_tragedy     
 
 # --- SFX ---
