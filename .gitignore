@@ -29,3 +29,14 @@ cache/
 log.txt
 errors.txt
 traceback.txt
+
+# xclude audio files
+*.ogg
+*.mp3
+*.wav
+*.flac
+*.aac
+*.m4a
+
+# Exclude entire audio folder
+game/audio/
