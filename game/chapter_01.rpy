@@ -59,7 +59,7 @@ define taotie_roar    = Character("",                color="#ff0000")  # Red, no
 # PLACEHOLDER: Replace all path strings with real asset paths.
 # All paths are relative to the /game/ folder.
 # =============================================================================
-
+# TODO: add image assets
 # --- Backgrounds: Dorian's Room and Hotel ---
 image bg_tianho_dorians_room:
     "images/Assets/Background/Livingroom.LightsON.1920x1080.png"
@@ -81,42 +81,28 @@ image bg_tianho_zhong_promenade  = "images/backgrounds/bg_tianho_zhong_promenade
 
 # --- Backgrounds: Castle and Ceremony ---
 image bg_tianho_castle_interior  = "images/backgrounds/bg_tianho_castle_interior.png"    # PLACEHOLDER
-
 image bg_tianho_castle_balcony   = "images/backgrounds/bg_tianho_castle_balcony.png"     # PLACEHOLDER
-
 image bg_tianho_celeb_deng       = "images/backgrounds/bg_tianho_celeb_deng.png"         # PLACEHOLDER
 
 # --- Backgrounds: Night and Dream ---
 image bg_dorians_room_night      = "images/backgrounds/bg_dorians_room_night.png"        # PLACEHOLDER
-
 image bg_dream_white             = "images/backgrounds/bg_dream_white.png"               # PLACEHOLDER
 
 # --- Backgrounds: Battle ---
 image bg_tianho_castle_gate      = "images/backgrounds/bg_tianho_castle_gate.png"        # PLACEHOLDER
-
 image bg_tianho_castle_interior_battle = "images/backgrounds/bg_tianho_castle_interior_battle.png" # PLACEHOLDER
-
 image bg_tianho_stairway         = "images/backgrounds/bg_tianho_stairway.png"           # PLACEHOLDER
-
 image bg_tianho_city_on_fire     = "images/backgrounds/bg_tianho_city_on_fire.png"       # PLACEHOLDER
-
 image bg_tianho_underground_2    = "images/backgrounds/bg_tianho_underground_2.png"      # PLACEHOLDER
 
 # --- CGs (Full-screen Event Illustrations) ---
 image cg_emperor_arrival         = "images/cg/cg_emperor_arrival.png"                    # PLACEHOLDER
-
 image cg_prosperity_dragon_dream = "images/cg/cg_prosperity_dragon_dream.png"            # PLACEHOLDER
-
 image cg_olympia_vision          = "images/cg/cg_olympia_vision.png"                     # PLACEHOLDER
-
 image cg_elara_children_death    = "images/cg/cg_elara_children_death.png"               # PLACEHOLDER
-
 image cg_winged_god_appears      = "images/cg/cg_winged_god_appears.png"                 # PLACEHOLDER
-
 image cg_taotie_charge           = "images/cg/cg_taotie_charge.png"                      # PLACEHOLDER
-
 image cg_feng_eye_injury         = "images/cg/cg_feng_eye_injury.png"                    # PLACEHOLDER
-
 image cg_black                   = "images/cg/cg_black.png"                              # PLACEHOLDER
 
 # =============================================================================
@@ -146,10 +132,12 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # define audio.amb_festival_crowd   #festival crowd (anime festival sounds type shit?) | to be called again in ch2
 # define audio.amb_castle_battle   #get from asian war dramas
 
+# ========== VOICE LINES ==========
+# TODO: add voice lines
+
 # =============================================================================
 # SECTION 4: GAME VARIABLES
 # =============================================================================
-
 # --- Affection / relationship trackers (persist across all chapters) ---
 default niko_affection    = 0   # Niko romance/trust tracker
 default feng_affection    = 0   # Feng respect/loyalty tracker
@@ -177,7 +165,6 @@ default ch1_gate_qtc         = ""   # "nothing" / "shield" / "fireball"
 default ch1_castle_qtc       = ""   # "freeze" / "spikes"
 default ch1_stair_qtc        = ""   # "wind" / "stumble"
 
-
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_1 — Opening (Dorian's Room)
 # =============================================================================
@@ -185,7 +172,6 @@ default ch1_stair_qtc        = ""   # "wind" / "stumble"
 # Scene: Tianho hotel room, evening. Dorian watches the city with binoculars.
 # Elara drags him out to the lantern markets.
 # =============================================================================
-
 label chapter_1:
 
     # -------------------------------------------------------------------------
@@ -195,7 +181,7 @@ label chapter_1:
     # -------------------------------------------------------------------------
 
     # Fade in from the chapter title card black
-    scene bg_tianho_dorians_room with fade      # PLACEHOLDER — Dorian's hotel room, evening light
+    scene bg_tianho_dorians_room with fade
 
     # Festival music starts soft — they're inside looking out
     play music ost_tianho_festival volume 0.4 fadein 2.0  # PLACEHOLDER — ost_tianho_festival

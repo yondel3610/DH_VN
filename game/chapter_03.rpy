@@ -74,6 +74,7 @@ define girl_ald_soldier=Character("Girl Aldorith",     color="#cd5c5c")  # Muted
 # All paths are relative to the /game/ folder.
 # Search "# PLACEHOLDER" to find every line needing a real asset.
 # =============================================================================
+# TODO: declare image assets
 
 # --- Backgrounds: Journey and Exterior ---
 image bg_mjoll_icelands_journey  = "images/backgrounds/bg_mjoll_icelands_journey.png"    # PLACEHOLDER

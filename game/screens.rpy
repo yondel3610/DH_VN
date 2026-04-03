@@ -887,6 +887,7 @@ screen settings():
         vbox:
             spacing 15
 
+            # TODO: add new checkbox code
             # ────── Display ──────
             if renpy.variant("pc") or renpy.variant("web"):
                 text _("Display"):
@@ -914,7 +915,7 @@ screen settings():
                 textbutton "☐ After Choices" action Preference("after choices", "toggle")
                 textbutton "☐ Transitions" action InvertSelected(Preference("transitions", "toggle"))
             null height 10
-            
+
             # ────── Text Speed ──────
             text _("Text Speed"):
                 size 40
@@ -1180,9 +1181,7 @@ style history_label_text:
 # Help screen #################################################################
 #
 # A screen that gives information about key and mouse bindings. It uses other
-# screens (keyboard_help, mouse_help, and gamepad_help) to display the actual
-# help.
-
+# screens (keyboard_help, mouse_help, and gamepad_help) to display the actual help.
 screen help():
     tag menu
     default device = "keyboard"
@@ -1202,7 +1201,6 @@ screen help():
                 use mouse_help
             elif device == "gamepad":
                 use gamepad_help
-
 
 screen keyboard_help():
     hbox:

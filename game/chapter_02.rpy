@@ -175,7 +175,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # Format:  define audio.name = "path/to/file.ogg"
 # PLACEHOLDER: Replace each path with your real .ogg audio file.
 # =============================================================================
-
+# TODO: find audio, royalty free and convert to .ogg
 # --- Music ---
 # find babala sfx (eat bulaga)
 # ice theme for frost oni

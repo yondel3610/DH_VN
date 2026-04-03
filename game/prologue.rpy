@@ -44,6 +44,7 @@ image kristin_kneeling:
     xalign 0.5
     yalign 1.0
 
+# TODO: fix sprite zoom and positioning, start from the knees and zoom idealy 1.25x or 1.5x depending on how it looks 
 # --- Character Sprites ---
 image kristin_normal:
     "images/Assets/Character Sprites/Kristin Nordstrom.png"
@@ -72,6 +73,7 @@ image yk:
     xalign 0.5
     yalign 1.0
 
+# TODO: check image folder again, illus and bg
 # --- CG / Event Images (full screen, fit to cover) ---
 image cg_black:
     "images/Assets/plain_colors/HD-wallpaper-plain-black-black.jpg"
@@ -97,6 +99,7 @@ image cg_yk_surveying:
     "images/cg/cg_yk_surveying.png"
     fit "cover"
 
+# TODO: fix qtc
 # --- GUI Elements ---
 image ui_timer_bar_bg:
     "images/gui/ui_timer_bar_bg.png"
@@ -110,7 +113,7 @@ image ui_timer_bar_fill:
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
-
+# TODO: add ambient sounds, royalty free music, and sfx
 # --- Ambient ---
 # define audio.amb_underground   = "audio/ambient/amb_underground.ogg"
 
@@ -126,7 +129,7 @@ image ui_timer_bar_fill:
 # define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg"
 # define audio.ost_tension       = "audio/music/ost_tension.ogg"
 
-
+# ========== VOICE LINES ==========
 # --- Boy Aldorith ---
 define audio.boy_ald_prl_line1     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 001.ogg"
 define audio.boy_ald_prl_line2     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 002.ogg"
