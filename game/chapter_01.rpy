@@ -133,7 +133,6 @@ image cg_feng_eye_injury         = "images/cg/cg_feng_eye_injury.png"           
 image cg_black                   = "images/cg/cg_black.png"                              # PLACEHOLDER
 # Description: Pure black screen — used for fade-outs, sedation, end of chapter
 
-
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
@@ -141,7 +140,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # Format: define audio.name = "path/to/file.ogg"
 # PLACEHOLDER: Replace each path with your real .ogg file.
 # =============================================================================
-
+# TODO: fix audio needed
 # --- Music ---
 # define audio.ost_tianho_festival # upbeat plays during the city exploration sequence
 # define audio.ost_emperor_arrival  #Grand ceremonial fanfare — plays as Emperor Min-joon enters

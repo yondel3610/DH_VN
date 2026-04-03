@@ -112,20 +112,60 @@ image ui_timer_bar_fill:
 # =============================================================================
 
 # --- Ambient ---
-define audio.amb_underground   = "audio/ambient/amb_underground.ogg"
+# define audio.amb_underground   = "audio/ambient/amb_underground.ogg"
 
 # --- Sound Effects ---
-define audio.sfx_yaoguai_burst = "audio/sfx/sfx_yaoguai_burst.ogg"
-define audio.sfx_stone_break   = "audio/sfx/sfx_stone_break.ogg"
-define audio.sfx_body_thud     = "audio/sfx/sfx_body_thud.ogg"
-define audio.sfx_heartbeat     = "audio/sfx/sfx_heartbeat.ogg"
-define audio.sfx_timer_tick    = "audio/sfx/sfx_timer_tick.ogg"
-define audio.sfx_timer_end     = "audio/sfx/sfx_timer_end.ogg"
+# define audio.sfx_yaoguai_burst = "audio/sfx/sfx_yaoguai_burst.ogg"
+# define audio.sfx_stone_break   = "audio/sfx/sfx_stone_break.ogg"
+# define audio.sfx_body_thud     = "audio/sfx/sfx_body_thud.ogg"
+# define audio.sfx_heartbeat     = "audio/sfx/sfx_heartbeat.ogg"
+# define audio.sfx_timer_tick    = "audio/sfx/sfx_timer_tick.ogg"
+# define audio.sfx_timer_end     = "audio/sfx/sfx_timer_end.ogg"
 
 # --- Music ---
-define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg"
-define audio.ost_tension       = "audio/music/ost_tension.ogg"
+# define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg"
+# define audio.ost_tension       = "audio/music/ost_tension.ogg"
 
+
+# --- Boy Aldorith ---
+define audio.boy_ald_prl_line1     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 001.ogg"
+define audio.boy_ald_prl_line2     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 002.ogg"
+define audio.boy_ald_prl_line3     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 003.ogg"
+define audio.boy_ald_prl_line4     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 004.ogg"
+define audio.boy_ald_prl_line5     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 005.ogg"
+define audio.boy_ald_prl_line6     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 006.ogg"
+define audio.boy_ald_prl_line7     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 007.ogg"
+define audio.boy_ald_prl_line8     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 008.ogg"
+define audio.boy_ald_prl_line9     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 009.ogg"
+define audio.boy_ald_prl_line10    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 010.ogg"
+define audio.boy_ald_prl_line11    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 011.ogg"
+define audio.boy_ald_prl_line12    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 012.ogg"
+define audio.boy_ald_prl_line13    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 013.ogg"
+define audio.boy_ald_prl_line14    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 014.ogg"
+define audio.boy_ald_prl_line15    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 015.ogg"
+define audio.boy_ald_prl_line16    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 016.ogg"
+define audio.boy_ald_prl_line17    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 017.ogg"
+define audio.boy_ald_prl_line18    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 018.ogg"
+
+# --- Girl Aldorith ---
+# define audio.girl_ald_prl_line1
+
+# --- Kristin --- 
+define audio.kristin_ald_prl_line1 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 001.ogg"
+define audio.kristin_ald_prl_line2 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 002.ogg"
+define audio.kristin_ald_prl_line3 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 003.ogg"
+define audio.kristin_ald_prl_line4 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 004.ogg"
+define audio.kristin_ald_prl_line5 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 005.ogg"
+define audio.kristin_ald_prl_line6 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 006.ogg"
+
+# --- Yaoguai King ---
+define audio.yk_ald_prl_line1      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 1.ogg"
+define audio.yk_ald_prl_line2      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 2.ogg"
+define audio.yk_ald_prl_line3      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 3.ogg"
+define audio.yk_ald_prl_line4      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 4.ogg"
+define audio.yk_ald_prl_line5      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 5.ogg"
+define audio.yk_ald_prl_line6      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 6.ogg"
+define audio.yk_ald_prl_line7      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 7.ogg"
 
 # =============================================================================
 # SECTION 4: CUSTOM SCREENS (UX FEATURES)
@@ -265,7 +305,7 @@ label prologue:
     # -------------------------------------------------------------------------
     stop music fadeout 2.0
     scene bg_underground_dim with fade
-    play audio amb_underground loop fadein 2.0
+    # play audio amb_underground loop fadein 2.0
     
     # --- Opening narration ---
     "Let their spirits pass without suffering. Let their memories remain unspoiled."
@@ -275,6 +315,8 @@ label prologue:
     "The torchlight flickered against her trembling form. She closed her eyes and spoke softly, her voice barely more than a breath."
     
     scene kristin_kneeling with fade
+
+    voice audio.kristin_ald_prl_line1
     kristin "Grant me strength to carry out your will: to lay these bodies to rest with reverence, to honor their passage, and to usher them into your sacred silence."
     
     # --- Aldorith soldiers enter ---
@@ -285,46 +327,57 @@ label prologue:
     show boy_ald_normal at left
     show girl_ald_normal at right
     
+    voice audio.boy_ald_prl_line1
     boy_ald "She's still praying. It's been five minutes."
+    #voice audio.girl_ald_prl_
     girl_ald "You're right. We cannot linger. The rot will draw attention."
     
     "Kristin's voice quivered as she continued to whisper her prayer—begging Enoch to take their souls gently."
     "To let them find peace. To weigh the sins of the living, not the dead."
     
+    voice audio.boy_ald_prl_line2
     boy_ald "Enough of this, Kristin."
+
     hide boy_ald_normal 
     hide girl_ald_normal
     "Kristin flinched as if struck. She turned, eyes wide, lips pale."
     
     show kristin_normal at center
-    
+
+    voice audio.kristin_ald_prl_line2
     kristin "I was only… I was praying to Lord Enoch."
-    
+
+    #voice audio.girl_ald_prl_
     girl_ald "A prayer that's lasted too long. For minutes, sister. We've listened. Are you certain you're not harboring doubts?"
     
+    voice audio.kristin_ald_prl_line3
     kristin "D-Doubts? No, sister."
-    
+    voice audio.kristin_ald_prl_line4
     kristin "But… What we did—what happened—was it really right? We killed the queen and her two sons."
     
     show boy_ald_normal at left
-    
+    voice audio.boy_ald_prl_line3
     boy_ald "What are you saying? That our Father was wrong?"
-    
+    voice audio.kristin_ald_prl_line5
     kristin "N-no! I would never—why would I?"
     
     show girl_ald_normal at right
-    
+
+    #voice audio.girl_ald_prl_
     girl_ald "Your blood-brother Svante didn't hesitate. He slit their throats without blinking. He was useful. You? You pray for corpses."
-    
+    voice audio.boy_ald_prl_line4
     boy_ald "Useless."
     
     "Kristin dropped her gaze. Her hands trembled at her sides."
     
     show kristin_normal at center
     
+    voice audio.kristin_ald_prl_line6
     kristin "I'm very sorry… I just—"
-    
-    boy_ald "We don't need you anymore. You're only stalling. Count Vasily might have better use for someone like you."
+    voice audio.boy_ald_prl_line5
+    boy_ald "We don't need you anymore. You're only stalling."
+    voice audio.boy_ald_prl_line6
+    boy_ald "Count Vasily might have better use for someone like you."
     
     # --- Kristin leaves ---
     "She didn't argue. With her head bowed and hands trembling at her sides, Kristin turned and walked away."
@@ -334,31 +387,42 @@ label prologue:
     
     "The two Aldoriths watched her disappear into the dark before exchanging a glance."
     "Their gazes drifted to the lifeless forms behind them: the Queen of Tianho, regal even in death, and her two sons, wrapped in the stillness of final silence."
-    
+    voice audio.boy_ald_prl_line7
     boy_ald "That Kristin… soft-hearted as ever."
+    #voice audio.girl_ald_prl_line
     girl_ald "She won't last. We both know Father only kept her around to control Svante."
     
     "They moved wordlessly to the bodies, the ritual of burial unfolding with grim familiarity."
     "Cloth unrolled. Blood wiped. Limbs bound with reverent efficiency."
     "Their hands worked swiftly—mechanical, practiced—but there was a flicker of hesitation behind their eyes."
     
+    voice audio.boy_ald_prl_line8
     boy_ald "Why do you think Father really wanted them dead?"
     girl_ald "I don't know. And I really don't plan to ask. Best not to chase answers when you're already neck-deep in secrets."
     
     "She reached for the Queen's hand, cold and graceful, and began to wrap the burial cloth tight around her wrist."
     
-    boy_ald "This feels… different. We've carried out assassinations before, but never like this. A queen. Two princes. Royals of Tianho."
+    voice boy_ald_prl_line9
+    boy_ald "This feels… different. We've carried out assassinations before, but never like this."
+    voice boy_ald_prl_line10
+    boy_ald "A queen. Two princes. Royals of Tianho."
+    #voice audio.girl_ald_prl_
     girl_ald "Exactly why we need to hurry. If anyone finds out what's buried down here—before the earth swallows it whole—we're finished."
     
+    
+    voice audio.boy_ald_prl_line11
     boy_ald "Still… Svante didn't even blink. Just walked in and—"
+    #voice audio.girl_ald_prl_
     girl_ald "Cold as stone. That's why he's Father's favorite. A metal channeler with no hesitation? That's worth more than loyalty."
+    #voice audio.girl_ald_prl_
     girl_ald "Which is why he still keeps that skank Kristin…"
     
     "She tied the final knot, sealing the last shroud."
     "The flickering torchlight danced across the linen, casting their silhouettes long and stretched across the stone."
     
+    #voice audio.girl_ald_prl_
     girl_ald "And you should remember that."
-    
+
     "A breath passed between them."
     
     # -------------------------------------------------------------------------
@@ -367,14 +431,16 @@ label prologue:
     "A pressure, subtle at first, then sudden and suffocating, pressed down on the tunnel."
     "The torches guttered, flames trembling like they, too, felt the change."
     
-    play music ost_tension volume 0.3 fadein 3.0
-    
+    # play music ost_tension volume 0.3 fadein 3.0
+
+    voice boy_ald_prl_line12
     boy_ald "D-Do you feel that?"
     
     pause 0.8
     
     "A shriek—deep, guttural, wrong—ripped through the silence."
     
+    #voice audio.girl_ald_prl_
     girl_ald "Did you hear that?"
     
     # -------------------------------------------------------------------------
@@ -384,7 +450,7 @@ label prologue:
     scene bg_underground_lit with flash
     pause 0.6
     
-    scene bg_underground_dim with dissolve
+    scene bg_underground_red with dissolve
     play music ost_yaoguai_theme volume 0.8
     
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
@@ -392,12 +458,15 @@ label prologue:
     
     show yk at center
     
+    voice audio.yk_ald_prl_line1
     yk "You bury corpses… while your own hearts still beat? How generous. More for my yaoguai to feed on."
     
     show girl_ald_normal at right
     show boy_ald_normal at left
     
+    #voice audio.girl_ald_prl_
     girl_ald "Enoch above…"
+    voice boy_ald_prl_line13
     boy_ald "Sister, run!! I'll hold him off-!"
     
     "He slammed his palm to the ground, trying to channel earth. A ripple of stone shifted—but it was too late."
@@ -409,14 +478,19 @@ label prologue:
     pause 0.4
     scene bg_underground_dim with dissolve
     
+    #voice audio.girl_ald_prl_
     girl_ald "AHHH!!! NO!!!"
     
     "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
     
     show boy_ald_normal at left
+
+    voice boy_ald_prl_line14
     boy_ald "SISTER!!"
     
     show yk at right
+
+    voice audio.yk_ald_prl_line2
     yk "Your turn, little one…"
     
     # -------------------------------------------------------------------------
@@ -441,6 +515,7 @@ label prologue_choice_wall:
     
     "He dropped to one knee, forcing all his will into the trembling ground."
     
+    voice boy_ald_prl_line15
     boy_ald "Come on, come on—!"
     
     "A slab of earth surged upward between him and the Yaoguai King."
@@ -455,10 +530,12 @@ label prologue_choice_wall:
     pause 0.5
     scene bg_underground_red with dissolve
     
+    voice boy_ald_prl_line16
     boy_ald "ARGHH!!!"
     
     "His ribs burned. Blood filled his mouth."
     
+    voice boy_ald_prl_line17
     boy_ald "—gkkhh—!"
     
     "He collapsed."
@@ -474,9 +551,13 @@ label prologue_choice_dash:
     "He bolted down the side corridor, heart hammering."
     
     show boy_ald_normal at left
+
+    voice boy_ald_prl_line18
     boy_ald "Come on… Come on…"
     
     show yk at center
+
+    voice audio.yk_ald_prl_line3
     yk "Running away from me? Pathetic."
     
     "He didn't make it ten steps."
@@ -506,7 +587,9 @@ label prologue_common:
     
     "He inhaled deeply, tasting the air."
     
+    voice audio.yk_ald_prl_line4
     yk "Three royal corpses, wrapped so lovingly… yet buried in secret…"
+    voice audio.yk_ald_prl_line5
     yk "And not a whisper in the winds? No fanfare. No grief. No mourning bells."
     
     "His eyes narrowed. Slowly, he stepped closer to the bodies, talons clicking against the stone."
@@ -515,10 +598,12 @@ label prologue_common:
     # pause 1.0
     # scene bg_underground_red with dissolve
     
+    voice audio.yk_ald_prl_line6
     yk "That old man… What are you plotting?"
     
     "He leaned down, baring rows of jagged teeth."
     
+    voice audio.yk_ald_prl_line7
     yk "Tianho… it seems your game has begun again. And I've always loved a good hunt."
     
     # -------------------------------------------------------------------------

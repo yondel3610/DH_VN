@@ -1,11 +1,9 @@
 # =============================================================================
 # BRANCHING AND ENDINGS GUIDE
 # =============================================================================
-
 # -----------------------------------------------------------------------------
 # HOW BRANCHING WORKS IN REN'PY
 # -----------------------------------------------------------------------------
-#
 # 1. VARIABLES - Track player choices
 #    Use 'default' to declare variables that persist across saves:
 #    default niko_affection = 0
@@ -195,3 +193,14 @@
 #  BRANCHING GUIDE:
 #    See the inline guide block in Section 4 for a full explanation of
 #    how affection trackers, flags, and if/elif/else drive different endings.
+#
+# ====================================================================
+#                           AUDIO SYNTAX:
+# voice audio.for_va_lines - put this above the dialogue line
+#--------------------------------------------
+# voice audio.boy_ald_prl_line1
+# boy_ald "She's still praying. It's been five minutes."
+#
+# play music audio.name - bg music, can loop, plays unntil stopped  
+# play sound audio.name - one-shot sfx
+# play audio audio.name - for ambient sounds
