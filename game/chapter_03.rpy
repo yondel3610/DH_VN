@@ -194,71 +194,14 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # =============================================================================
 
 # --- Music ---
-define audio.ost_frostcradle_approach = "audio/music/ost_frostcradle_approach.ogg"  # PLACEHOLDER
-# Tense, sparse — solo trek through Iceclaw Pass; strings and distant wind instruments
-
-define audio.ost_yuki_onna_battle     = "audio/music/ost_yuki_onna_battle.ogg"      # PLACEHOLDER
-# Ethereal yet urgent — Yuki-onna fight; crystalline tones over driving percussion
-
-define audio.ost_ekaterina_truth      = "audio/music/ost_ekaterina_truth.ogg"       # PLACEHOLDER
-# Mournful and haunting — the ghost's revelation; solo cello or viola
-
-define audio.ost_blizzard_days        = "audio/music/ost_blizzard_days.ogg"         # PLACEHOLDER
-# Quiet, intimate warmth — days in the shack; acoustic strings, gentle piano
-
-define audio.ost_supply_bot_jingle    = "audio/music/ost_supply_bot_jingle.ogg"     # PLACEHOLDER
-# The Cheng Industries jingle — cheerful, slightly off-key; brief comedic earworm
-
-define audio.ost_mushroom_walk        = "audio/music/ost_mushroom_walk.ogg"         # PLACEHOLDER
-# Tender, curious — Yuxuan mushroom scene; soft piano with gentle warmth
-
-define audio.ost_vasily_arrives       = "audio/music/ost_vasily_arrives.ogg"        # PLACEHOLDER
-# Low, dread-filled — Vasily's battalion marching; military drums beneath dark strings
-
-define audio.ost_critical_fork        = "audio/music/ost_critical_fork.ogg"         # PLACEHOLDER
-# Suspended tension — the choice moment; near-silence with a single high string note
-
-define audio.ost_bad_end_luxury       = "audio/music/ost_bad_end_luxury.ogg"        # PLACEHOLDER
-# Hollow grandeur — the BAD END years; waltz tempo that feels empty and wrong
-
-define audio.ost_draconic_awakening   = "audio/music/ost_draconic_awakening.ogg"    # PLACEHOLDER
-# Explosive, divine rage — draconic fire erupts; full orchestra, brass-forward
-
-define audio.ost_escape_carriage      = "audio/music/ost_escape_carriage.ogg"       # PLACEHOLDER
-# Bittersweet relief — riding to Tianho; gentle melody with warmth returning
-
-define audio.ost_family_dream         = "audio/music/ost_family_dream.ogg"          # PLACEHOLDER
-# Gentle, fading — the family farewell dream; the same theme as ost_cave_grief, quieter
+# TODO: royalty free music with the vibes of the game
 
 # --- Sound Effects ---
-define audio.sfx_yuki_scream          = "audio/sfx/sfx_yuki_scream.ogg"             # PLACEHOLDER
-define audio.sfx_ice_wall_crash       = "audio/sfx/sfx_ice_wall_crash.ogg"          # PLACEHOLDER
-define audio.sfx_ice_spear_launch     = "audio/sfx/sfx_ice_spear_launch.ogg"        # PLACEHOLDER
-define audio.sfx_fire_blast           = "audio/sfx/sfx_fire_blast.ogg"              # PLACEHOLDER
-define audio.sfx_fire_burst           = "audio/sfx/sfx_fire_burst.ogg"              # PLACEHOLDER
-define audio.sfx_frost_crawl          = "audio/sfx/sfx_frost_crawl.ogg"             # PLACEHOLDER
-define audio.sfx_amulet_surge         = "audio/sfx/sfx_amulet_surge.ogg"            # PLACEHOLDER
-define audio.sfx_heartbeat            = "audio/sfx/sfx_heartbeat.ogg"               # PLACEHOLDER
-define audio.sfx_arrow_hit            = "audio/sfx/sfx_arrow_hit.ogg"               # PLACEHOLDER
-define audio.sfx_earth_eruption       = "audio/sfx/sfx_earth_eruption.ogg"          # PLACEHOLDER
-define audio.sfx_draconic_roar        = "audio/sfx/sfx_draconic_roar.ogg"           # PLACEHOLDER
-define audio.sfx_blade_strike         = "audio/sfx/sfx_blade_strike.ogg"            # PLACEHOLDER
-define audio.sfx_carriage_rumble      = "audio/sfx/sfx_carriage_rumble.ogg"         # PLACEHOLDER
-define audio.sfx_thunder_vision       = "audio/sfx/sfx_thunder_vision.ogg"          # PLACEHOLDER
+# TODO: find and add sfx
 
 # --- Ambient ---
-define audio.amb_frostcradle_wind     = "audio/ambient/amb_frostcradle_wind.ogg"    # PLACEHOLDER
-# Cold hollow echo — wind through the mine tunnels; looping; plays through most mine scenes
-
-define audio.amb_blizzard_howl        = "audio/ambient/amb_blizzard_howl.ogg"       # PLACEHOLDER
-# Heavy blizzard roar — looping; the trapped days in the shack
-
-define audio.amb_shack_fire           = "audio/ambient/amb_shack_fire.ogg"          # PLACEHOLDER
-# Soft fireplace crackle — looping; warm counterpoint to the blizzard outside
-
-define audio.amb_carriage_wheels      = "audio/ambient/amb_carriage_wheels.ogg"     # PLACEHOLDER
-# Steady wheel-on-road rhythm — looping; escape carriage scene
-
+# TODO: find and add ambient sounds
+# cold wind, blizzard, fire crackles, carriage wheels
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES

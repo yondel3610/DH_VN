@@ -142,37 +142,29 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # PLACEHOLDER: Replace each path with your real .ogg file.
 # =============================================================================
 
-define audio.ost_tianho_festival  = "audio/music/ost_tianho_festival.ogg"    # PLACEHOLDER
-# Upbeat, festive Tianho theme — plays during the city exploration sequence
+# define audio.ost_tianho_festival # upbeat plays during the city exploration sequence
 
-define audio.ost_emperor_arrival  = "audio/music/ost_emperor_arrival.ogg"    # PLACEHOLDER
-# Grand ceremonial fanfare — plays as Emperor Min-joon enters
+# define audio.ost_emperor_arrival  #Grand ceremonial fanfare — plays as Emperor Min-joon enters
 
-define audio.ost_dream_dragon     = "audio/music/ost_dream_dragon.ogg"       # PLACEHOLDER
-# Soft, ethereal — Prosperity Dragon dream sequence
+# define audio.ost_dream_dragon   #ethereal — prosperity Dragon dream sequence
 
-define audio.ost_tension_rising   = "audio/music/ost_tension_rising.ogg"     # PLACEHOLDER
-# Low, building dread — waking from the dream, the vision of Olympia
+# define audio.ost_tension_rising      
 
-define audio.ost_battle_tianho    = "audio/music/ost_battle_tianho.ogg"      # PLACEHOLDER
-# Full battle theme — yaoguai attack on the castle
+# define audio.ost_battle_tianho       
 
-define audio.ost_taotie_battle    = "audio/music/ost_taotie_battle.ogg"      # PLACEHOLDER
-# Heavier, monstrous battle theme — the Taotie fight
+# define audio.ost_taotie_battle       
 
-define audio.ost_tragedy          = "audio/music/ost_tragedy.ogg"            # PLACEHOLDER
-# Devastating, grief-soaked — plays during Elara and children's death
+# define audio.ost_tragedy     
 
-define audio.sfx_fireworks        = "audio/sfx/sfx_fireworks.ogg"            # PLACEHOLDER
-define audio.sfx_yaoguai_roar     = "audio/sfx/sfx_yaoguai_roar.ogg"        # PLACEHOLDER
-define audio.sfx_explosion        = "audio/sfx/sfx_explosion.ogg"            # PLACEHOLDER
-define audio.sfx_stone_spike      = "audio/sfx/sfx_stone_spike.ogg"          # PLACEHOLDER
-define audio.sfx_wind_blast       = "audio/sfx/sfx_wind_blast.ogg"           # PLACEHOLDER
-define audio.sfx_taotie_lava      = "audio/sfx/sfx_taotie_lava.ogg"         # PLACEHOLDER
-define audio.sfx_heartbeat        = "audio/sfx/sfx_heartbeat.ogg"            # PLACEHOLDER
-define audio.amb_festival_crowd   = "audio/ambient/amb_festival_crowd.ogg"   # PLACEHOLDER
-define audio.amb_castle_battle    = "audio/ambient/amb_castle_battle.ogg"    # PLACEHOLDER
-
+# --- SFX ---
+# define audio.sfx_fireworks #find free fireworks sfx   
+# define audio.sfx_yaoguai_roar # monster roar
+# define audio.sfx_explosion #find free explosion audio
+# define audio.sfx_stone_spike #stone spike 
+# define audio.sfx_wind_blast #wind blast from other games basta kung ano mas fit
+# define audio.sfx_heartbeat  #heartbeat audio
+# define audio.amb_festival_crowd   #festival crowd (anime festival sounds type shit?) | to be called again in ch2
+# define audio.amb_castle_battle   #get from asian war dramas
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES + BRANCHING GUIDE

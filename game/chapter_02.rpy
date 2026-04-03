@@ -177,56 +177,27 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # =============================================================================
 
 # --- Music ---
-define audio.ost_mjoll_theme     = "audio/music/ost_mjoll_theme.ogg"          # PLACEHOLDER
-# Cold, sparse — Mjoll's main region theme; strings + low horns
-
-define audio.ost_qiongqi_hunt    = "audio/music/ost_qiongqi_hunt.ogg"         # PLACEHOLDER
-# Tense pursuit music — builds from silence to full percussion on the beast's charge
-
-define audio.ost_mjoll_palace    = "audio/music/ost_mjoll_palace.ogg"         # PLACEHOLDER
-# Stiff, formal — Gustav's court; harpsichord and cold strings
-
-define audio.ost_cave_grief      = "audio/music/ost_cave_grief.ogg"           # PLACEHOLDER
-# Fragile, intimate — Dorian's cave; solo piano or single instrument
-
-define audio.ost_mjoll_festive   = "audio/music/ost_mjoll_festive.ogg"        # PLACEHOLDER
-# Lively Mjollian celebration — drums, horns, folk strings
-
-define audio.ost_babala_prophecy = "audio/music/ost_babala_prophecy.ogg"      # PLACEHOLDER
-# Ethereal, suspended — prophecy moment; soft choir and orb-pulse undertone
-
-define audio.ost_frost_oni_battle= "audio/music/ost_frost_oni_battle.ogg"     # PLACEHOLDER
-# Urgent, icy battle theme — fast strings, percussive ice-crack motif
-
-define audio.ost_blizzard_days   = "audio/music/ost_blizzard_days.ogg"        # PLACEHOLDER
-# Desolate — the days after the attack; low drone, sparse melody
-
-define audio.ost_briefing        = "audio/music/ost_briefing.ogg"             # PLACEHOLDER
-# Tense and deliberate — assassination mission briefing; dark undertones
+# find babala sfx (eat bulaga)
+# ice theme for frost oni
+# blizzard sounds
 
 # --- Sound Effects ---
-define audio.sfx_qiongqi_roar    = "audio/sfx/sfx_qiongqi_roar.ogg"          # PLACEHOLDER
-define audio.sfx_earth_spike     = "audio/sfx/sfx_earth_spike.ogg"           # PLACEHOLDER
-define audio.sfx_wind_blast      = "audio/sfx/sfx_wind_blast.ogg"            # PLACEHOLDER
-define audio.sfx_ice_crack       = "audio/sfx/sfx_ice_crack.ogg"             # PLACEHOLDER
-define audio.sfx_ice_shatter     = "audio/sfx/sfx_ice_shatter.ogg"           # PLACEHOLDER
-define audio.sfx_frost_oni_roar  = "audio/sfx/sfx_frost_oni_roar.ogg"        # PLACEHOLDER
-define audio.sfx_prophecy_thunder= "audio/sfx/sfx_prophecy_thunder.ogg"      # PLACEHOLDER
-define audio.sfx_dunk_splash     = "audio/sfx/sfx_dunk_splash.ogg"           # PLACEHOLDER
-define audio.sfx_heartbeat       = "audio/sfx/sfx_heartbeat.ogg"             # PLACEHOLDER
-define audio.sfx_ground_swallow  = "audio/sfx/sfx_ground_swallow.ogg"        # PLACEHOLDER
-define audio.sfx_vine_attack     = "audio/sfx/sfx_vine_attack.ogg"           # PLACEHOLDER
+# find sfx for the ff:
+# qiongqi_roar
+# earth_spike
+# wind_blast
+# ice_crack
+# ice_shatter
+# frost_oni_roar  
+# prophecy_thunder
+# dunk_splash  
+# heartbeat    
+# ground_swallow
+# vine_attack
 
 # --- Ambient ---
-define audio.amb_mjoll_wind      = "audio/ambient/amb_mjoll_wind.ogg"         # PLACEHOLDER
-# Howling icy wind — looping; plays under most Mjoll exterior scenes
-
-define audio.amb_cave_fire       = "audio/ambient/amb_cave_fire.ogg"          # PLACEHOLDER
-# Crackling fireplace — looping; Dorian's cave interior
-
-define audio.amb_crowd_festive   = "audio/ambient/amb_crowd_festive.ogg"      # PLACEHOLDER
-# Festival crowd noise — looping; town square celebration
-
+# TODO: add ambient sounds
+# fire crackle, icy wind, festival crowd (anime festival sounds type shit?)
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES
