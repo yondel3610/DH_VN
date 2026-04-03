@@ -90,48 +90,34 @@ image bg_tianho_celeb_deng       = "images/backgrounds/bg_tianho_celeb_deng.png"
 image bg_dorians_room_night      = "images/backgrounds/bg_dorians_room_night.png"        # PLACEHOLDER
 
 image bg_dream_white             = "images/backgrounds/bg_dream_white.png"               # PLACEHOLDER
-# Description: Pure white void — used for the Prosperity Dragon dream sequence
 
 # --- Backgrounds: Battle ---
 image bg_tianho_castle_gate      = "images/backgrounds/bg_tianho_castle_gate.png"        # PLACEHOLDER
-# Description: Tianho Castle outer gate at night — torchlit, panicked soldiers, yaoguai shadows
 
 image bg_tianho_castle_interior_battle = "images/backgrounds/bg_tianho_castle_interior_battle.png" # PLACEHOLDER
-# Description: Castle interior mid-battle — toppled banners, cracked floors, yaoguai blood
 
 image bg_tianho_stairway         = "images/backgrounds/bg_tianho_stairway.png"           # PLACEHOLDER
-# Description: Castle stairway descent — narrow stone steps, flickering torches, yaoguai lurking
 
 image bg_tianho_city_on_fire     = "images/backgrounds/bg_tianho_city_on_fire.png"       # PLACEHOLDER
-# Description: Tianho city post-attack — burning buildings, smoke, fallen lanterns, ash
 
 image bg_tianho_underground_2    = "images/backgrounds/bg_tianho_underground_2.png"      # PLACEHOLDER
-# Description: Secondary underground passage below the castle — darker, flooded with firelight
 
 # --- CGs (Full-screen Event Illustrations) ---
 image cg_emperor_arrival         = "images/cg/cg_emperor_arrival.png"                    # PLACEHOLDER
-# Description: Emperor Min-joon's ceremonial arrival — Tianho crowd, imperial escort, golden light
 
 image cg_prosperity_dragon_dream = "images/cg/cg_prosperity_dragon_dream.png"            # PLACEHOLDER
-# Description: Dorian's dream — Prosperity Dragon whispers in swirling gold light
 
 image cg_olympia_vision          = "images/cg/cg_olympia_vision.png"                     # PLACEHOLDER
-# Description: Bloodied Empress Olympia vision — she reaches toward Dorian, desperate warning
 
 image cg_elara_children_death    = "images/cg/cg_elara_children_death.png"               # PLACEHOLDER
-# Description: The Yaoguai King killing Elara and the four children — the central trauma CG
 
 image cg_winged_god_appears      = "images/cg/cg_winged_god_appears.png"                 # PLACEHOLDER
-# Description: The winged death god (Magnus's 'original') destroying Castle Tianho — massive, divine
 
 image cg_taotie_charge           = "images/cg/cg_taotie_charge.png"                      # PLACEHOLDER
-# Description: The Taotie monster charging — massive stone beast, lava mouth open
 
 image cg_feng_eye_injury         = "images/cg/cg_feng_eye_injury.png"                    # PLACEHOLDER
-# Description: Paladin Feng losing sight in one eye during the Taotie battle — blood, torn face
 
 image cg_black                   = "images/cg/cg_black.png"                              # PLACEHOLDER
-# Description: Pure black screen — used for fade-outs, sedation, end of chapter
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
@@ -140,7 +126,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # Format: define audio.name = "path/to/file.ogg"
 # PLACEHOLDER: Replace each path with your real .ogg file.
 # =============================================================================
-# TODO: fix audio needed
+# TODO: fix audio 
 # --- Music ---
 # define audio.ost_tianho_festival # upbeat plays during the city exploration sequence
 # define audio.ost_emperor_arrival  #Grand ceremonial fanfare — plays as Emperor Min-joon enters
