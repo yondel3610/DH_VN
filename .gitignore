@@ -1,0 +1,31 @@
+# Ren'Py compiled files
+*.rpyc
+*.rpymc
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+
+# Ren'Py cache
+cache/
+
+# Logs
+log.txt
+errors.txt
+traceback.txt
