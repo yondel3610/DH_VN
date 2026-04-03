@@ -298,7 +298,7 @@ screen navigation():
         if main_menu: #main menu buttons
             textbutton _("Start") action Start()
             textbutton _("Load") action ShowMenu("load")
-            textbutton _("Preferences") action ShowMenu("preferences")
+            textbutton _("Settings") action ShowMenu("settings")
             textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
@@ -308,7 +308,7 @@ screen navigation():
             textbutton _("History") action ShowMenu("history")
             textbutton _("Save") action ShowMenu("save")
             textbutton _("Load") action ShowMenu("load")
-            textbutton _("Preferences") action ShowMenu("preferences")
+            textbutton _("Settings") action ShowMenu("settings")
 
             # indentation 
             if _in_replay:
@@ -863,10 +863,9 @@ style slot_button:
 style slot_button_text:
     properties gui.text_properties("slot_button")
 
-# TODO: make this into settings page
-# Preferences screen 
-# The preferences screen allows the player to configure the game to better suit
-# themselves.
+# TODO: add the help page, above about section
+# Settings screen 
+# The settings screen allows the player to configure the game to better suit themselves.
 #
 # https://www.renpy.org/doc/html/screen_special.html#preferences
 
@@ -880,94 +879,130 @@ init python:
         renpy.music.set_volume(vol, channel="voice")
         persistent.main_volume = vol
 
-screen preferences():
+screen settings():
     tag menu
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Settings"), scroll="viewport"):
         
         style_prefix "pref"
         vbox:
-            spacing 0
+            spacing 15
 
-            # display
+            # ────── Display ──────
             if renpy.variant("pc") or renpy.variant("web"):
-                label _("Display")
+                text _("Display"):
+                    size 40
+                    bold True
+                    color gui.accent_color
+                
                 vbox:
-                    style_prefix "radio"
-                    textbutton _("Window")     action Preference("display", "window")
-                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                    xoffset 30
+                    spacing 8
+                    textbutton "◯ Window" action Preference("display", "window")
+                    textbutton "◯ Fullscreen" action Preference("display", "fullscreen")
+                null height 10
 
-            # ── Skip ─────────────────────────────────────────────────────
-            label _("Skip")
+            # ────── Skip ──────
+            text _("Skip"):
+                size 40
+                bold True
+                color gui.accent_color
+
             vbox:
-                style_prefix "check"
-                textbutton _("Unseen Text")  action Preference("skip", "toggle")
-                textbutton _("After Choices") action Preference("after choices", "toggle")
-                textbutton _("Transitions")  action InvertSelected(Preference("transitions", "toggle"))
+                xoffset 30
+                spacing 8
+                textbutton "☐ Unseen Text" action Preference("skip", "toggle")
+                textbutton "☐ After Choices" action Preference("after choices", "toggle")
+                textbutton "☐ Transitions" action InvertSelected(Preference("transitions", "toggle"))
+            null height 10
+            
+            # ────── Text Speed ──────
+            text _("Text Speed"):
+                size 40
+                bold True
+                color gui.accent_color
 
-            # ── Text ─────────────────────────────────────────────────────
-            label _("Text Speed")
-            bar value Preference("text speed") style "pref_bar"
+            bar value Preference("text speed") style "pref_bar_thin"
+            null height 10
 
-            label _("Auto-Forward Time")
-            bar value Preference("auto-forward time") style "pref_bar"
+            # ────── Auto-Forward Time ──────
+            text _("Auto-Forward Time"):
+                size 40
+                bold True
+                color gui.accent_color
 
-            # ── Sound ────────────────────────────────────────────────────
-            label _("Sound")
+            bar value Preference("auto-forward time") style "pref_bar_thin"
+            null height 10
 
-            # Main / master volume
-            hbox:
-                style_prefix "slider"
-                vbox:
-                    label _("Main")
-                    hbox:
-                        bar:
-                            style "pref_bar"
-                            value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
-                            changed apply_main_volume
-                        null width 8
+            # ────── Sound ──────
+            text _("Sound"):
+                size 40
+                bold True
+                color gui.accent_color
 
-            # Individual channels
+            # Main/master volume | changes: indentation added
+            label _("Main"):
+                style "pref_label_text"
+                text_size 18
+                xoffset 30
+            
+            bar:
+                style "pref_bar_thin"
+                xoffset 30
+                value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
+                changed apply_main_volume
+
+            # Individual channels | changes: indentation added
             if config.has_music:
-                hbox:
-                    style_prefix "slider"
-                    vbox:
-                        label _("Music")
-                        bar value Preference("music volume") style "pref_bar"
+                label _("Music"):
+                    style "pref_label_text"
+                    text_size 18
+                    xoffset 30
+                bar:
+                    style "pref_bar_thin"
+                    xoffset 30
+                    value Preference("music volume")
 
             if config.has_sound:
-                hbox:
-                    style_prefix "slider"
-                    vbox:
-                        label _("SFX")
-                        bar value Preference("sound volume") style "pref_bar"
+                label _("SFX"):
+                    style "pref_label_text"
+                    text_size 18
+                    xoffset 30
+                bar:
+                    style "pref_bar_thin"
+                    xoffset 30
+                    value Preference("sound volume")
 
             if config.has_voice:
-                hbox:
-                    style_prefix "slider"
-                    vbox:
-                        label _("Voice Volume")
-                        bar value Preference("voice volume") style "pref_bar"
+                label _("Voice Volume"):
+                    style "pref_label_text"
+                    text_size 18
+                    xoffset 30
+                bar:
+                    style "pref_bar_thin"
+                    xoffset 30
+                    value Preference("voice volume")
 
             if config.has_music or config.has_sound or config.has_voice:
                 null height gui.pref_spacing
                 textbutton _("Mute All"):
                     action Preference("all mute", "toggle")
-                    style "mute_all_button"
+                    xoffset 30
+                    text_size 18
 
-            # ── About ────────────────────────────────────────────────────
+            #  ────── About  ──────
             null height (2 * gui.pref_spacing)
 
             textbutton _("About"):
                 action ShowMenu("about")
                 xalign 0.0
-                text_size 35
+                text_size 40
                 text_color gui.accent_color
                 text_hover_color "#ffcc88"
 
-style pref_bar is bar: #for preference()
+style pref_bar_thin is bar:
     xsize 525
-    ysize gui.bar_size
-    left_bar  Frame("gui/bar/left.png",  gui.bar_borders, tile=gui.bar_tile)
+    ysize 15  # Half of default (was 30-35)
+    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
     right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
 
 style pref_label is gui_label
@@ -1001,7 +1036,13 @@ style pref_label:
     bottom_margin 3
 
 style pref_label_text:
+    size 24
+    color gui.accent_color
     yalign 1.0
+
+style pref_label_text_bold is pref_label_text:
+    size 28
+    bold True
 
 style pref_vbox:
     xsize 338
@@ -1012,9 +1053,13 @@ style radio_vbox:
 style radio_button:
     properties gui.button_properties("radio_button")
     foreground "gui/button/radio_[prefix_]foreground.png"
+    xpadding 25
 
 style radio_button_text:
     properties gui.text_properties("radio_button")
+    size 18
+    color "#ffffff"
+    hover_color "#ffcc88"
 
 style check_vbox:
     spacing gui.pref_button_spacing
@@ -1022,9 +1067,13 @@ style check_vbox:
 style check_button:
     properties gui.button_properties("check_button")
     foreground "gui/button/check_[prefix_]foreground.png"
+    xpadding 25
 
 style check_button_text:
     properties gui.text_properties("check_button")
+    size 18
+    color "#ffffff"
+    hover_color "#ffcc88"
 
 style slider_slider:
     xsize 525
@@ -1594,8 +1643,8 @@ style pref_vbox:
     variant "medium"
     xsize 675
 
-## Since a mouse may not be present, we replace the quick menu with a version
-## that uses fewer and bigger buttons that are easier to touch.
+# Since a mouse may not be present, we replace the quick menu with a version
+# that uses fewer and bigger buttons that are easier to touch.
 screen quick_menu():
     variant "touch"
 
