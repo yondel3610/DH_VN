@@ -1090,7 +1090,7 @@ style slider_button_text:
 style slider_vbox:
     xsize 675
 
-# TODO: fix or remove entirely
+# TODO: REMOVE ENTIRELY
 # History screen 
 #
 # This is a screen that displays the dialogue history to the player. While
