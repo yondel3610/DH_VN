@@ -1,6 +1,6 @@
 # Dragon's Heart: The Crimson Rebirth
 
-## A Visual Novel by [insert studio name]
+## A Visual Novel by [Temer's Studio](https://x.com/TemersStudio?s=20)
 
 ---
 
