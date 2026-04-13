@@ -37,19 +37,11 @@
 #    Search "# PLACEHOLDER" to find every line needing a real asset.
 ###############################################################################
 
-
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-# All previous characters loaded from ch1–ch6.
-# New characters for ch7:
 
-define woman_2       = Character("Woman 2",      color="#f4a7b9")  # Rose — wounded civilian
-define male_soldier_ch7 = Character("Male Soldier", color="#a0a0a0") # Grey — young wounded soldier
-
-# Note: magnus, feng, aoi, svante, niko, chung_hee, yuxuan, weng, tim, tedda,
-#       roboto, gao, jiang, elias, dorian, vasily already defined in prior chapters.
-
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
@@ -98,7 +90,6 @@ default ch7_d1_choice         = ""    # "svante"/"niko"/"chunghee"/"yuxuan"
 default ch7_drink_choice      = ""    # "drink"/"refuse"
 default feng_affection        = 0
 default aoi_affection         = 0
-
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_7 — White Void / Magnus Dream / Wake Up

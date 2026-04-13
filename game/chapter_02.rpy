@@ -49,27 +49,8 @@
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-# Characters from prologue.rpy and chapter_01.rpy already loaded by Ren'Py.
-# Only NEW characters introduced in Chapter 2 are defined here.
-# =============================================================================
 
-define svante          = Character("Svante",            color="#9b59b6")  # Purple — violet-haired aldorith
-define king_gustav     = Character("King Gustav",        color="#c0392b")  # Crimson — hard, imperious
-define queen_ekaterina = Character("Queen Ekaterina",    color="#8e44ad")  # Dark violet — sharp, venomous
-define babala          = Character("Babala",             color="#27ae60")  # Green — earthy, prophetic
-define herald          = Character("Herald",             color="#7f8c8d")  # Grey — ceremonial announcer
-define messenger       = Character("Messenger",          color="#7f8c8d")  # Grey — palace runner
-define mjoll_pavel     = Character("Soldier Pavel",      color="#95a5a6")  # Light grey — nervous mercenary
-define mjoll_helga     = Character("Soldier Helga",      color="#95a5a6")  # Light grey — steady mercenary
-define mjoll_lars      = Character("Soldier Lars",       color="#95a5a6")  # Light grey — blunt mercenary
-define boy_ald_spa     = Character("Boy Aldorith",       color="#cd5c5c")  # Muted red — spa child worker
-define girl_ald_spa    = Character("Girl Aldorith",      color="#cd5c5c")  # Muted red — spa child worker
-define noblewoman      = Character("Noblewoman",         color="#f39c12")  # Amber — cruel spa patron
-define vendor_mjoll    = Character("Vendor",             color="#cd853f")  # Peru — Mjollian food vendor
-define male_guard      = Character("Male Guard",         color="#7f8c8d")  # Grey — palace guard
-define female_guard    = Character("Female Guard",       color="#7f8c8d")  # Grey — palace guard
-define frost_oni       = Character("",                   color="#5dade2")  # Ice blue, no name — monster
-
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS

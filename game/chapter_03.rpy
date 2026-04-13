@@ -49,19 +49,8 @@
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-# Characters from prologue.rpy, chapter_01.rpy, and chapter_02.rpy are
-# already loaded by Ren'Py — do NOT redefine them here.
-# Only NEW characters introduced in Chapter 3 are defined below.
-# =============================================================================
 
-define yuki_onna      = Character("Yuki-onna",         color="#aee8f8")  # Pale ice blue — spirit form
-define ekaterina_ghost= Character("Queen Ekaterina",   color="#d8b4fe")  # Soft violet — ghost/vision
-define elias          = Character("Elias",             color="#fcd34d")  # Warm yellow — toddler, innocent
-define niko_raven     = Character("Niko",              color="#e0c8a0")  # Parchment — raven form
-define weng           = Character("Miss Weng",         color="#f97316")  # Orange — Yuxuan's chef/caretaker
-define boy_ald_soldier= Character("Boy Aldorith",      color="#cd5c5c")  # Muted red — Gustav's soldier
-define girl_ald_soldier=Character("Girl Aldorith",     color="#cd5c5c")  # Muted red — Gustav's soldier
-
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS

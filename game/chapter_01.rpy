@@ -30,40 +30,8 @@
 # Characters already defined in prologue.rpy (yk, boy_ald, girl_ald, kristin)
 # are NOT redefined here. Ren'Py will load both files simultaneously.
 # =============================================================================
-# TODO: make compiled character files
 
-define dorian         = Character("Dorian",          color="#d4af37")  # Gold — paladin, protagonist
-define narrator       = Character("",                color="#ffffff")  # Blank name = pure narration
-define elara          = Character("Elara",           color="#f4a7b9")  # Soft rose — warm, loving
-define lucas          = Character("Lucas",           color="#87ceeb")  # Sky blue — youngest, excited
-define sarah          = Character("Sarah",           color="#dda0dd")  # Plum — artistic, quiet
-define emily          = Character("Emily",           color="#f0e68c")  # Khaki — witty, streetwise
-define daniel         = Character("Daniel",          color="#90ee90")  # Light green — cool, sarcastic
-define cyrus          = Character("Paladin Cyrus",   color="#8b0000")  # Dark red — authoritarian
-define feng           = Character("Paladin Feng",    color="#4169e1")  # Royal blue — loyal, warm
-define olympia        = Character("Empress Olympia", color="#9370db")  # Medium purple — regal
-define long_shen      = Character("King Long Shen",  color="#228b22")  # Forest green — Tianho king
-define emperor_minjoon = Character("Emperor Min-joon", color="#b8860b") # Dark gold — Kyeongjang
-define niko           = Character("Niko",            color="#e0c8a0")  # Warm parchment — healer, devout
-define kaito          = Character("Kaito",           color="#b0d0e0")  # Pale blue — Niko's brother
-define yuxuan         = Character("Cheng Yuxuan",    color="#00ced1")  # Dark turquoise — inventor
-define vasily         = Character("Count Vasily",    color="#c0c0c0")  # Silver — Dorian's commander
-define gao            = Character("Soldier Gao",     color="#a0a0a0")  # Grey — reliable soldier
-define jiang          = Character("Soldier Jiang",   color="#a0a0a0")  # Grey — reliable soldier
-define prosperity_dragon = Character("Prosperity Dragon", color="#ffd700") # Bright gold — divine voice
-define performers     = Character("Nervous Performer", color="#ff8c00") # Orange — festival performers
-define vendor         = Character("Vendor",          color="#cd853f")  # Peru — market vendor
-define taotie    = Character("Taotie",                color="#ff0000")  # Red, no name — monster sounds
-define lead_fire_channeler = Character("Lead Fire Channeler", color="#ff4500")  # Red-orange — rehearsal leader
-define female_guard        = Character("Female Guard",        color="#708090")  # Slate — castle guard
-define male_soldier_1      = Character("Soldier",             color="#a0a0a0")  # Grey — generic soldier
-define male_soldier_2      = Character("Soldier",             color="#a0a0a0")  # Grey — generic soldier
-define woman_1     = Character("Woman 1",               color="#f4a7b9")  # Rose — desperate audition applicant
-define woman_1     = Character("Woman 1",               color="#f4a7b9") 
-define man_1     = Character("Man 1",               color="#0054ca")
-define man_2     = Character("Man 2",               color="#0054ca") 
-define man_3     = Character("Man 3",               color="#0054ca")
-define yg        = Character("Yaoguai",              color="#6c0909")
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS + BACKGROUND/SPRITE GUIDE

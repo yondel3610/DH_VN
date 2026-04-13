@@ -13,13 +13,7 @@
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
 
-define kristin     = Character("Kristin",      color="#b0c4de", what_prefix='"', what_suffix='"')
-define boy_ald     = Character("Boy Aldorith", color="#cd5c5c", what_prefix='"', what_suffix='"')
-define girl_ald    = Character("Girl Aldorith",color="#cd5c5c", what_prefix='"', what_suffix='"')
-define yk          = Character("Yaoguai King", color="#8b0000", what_prefix='"', what_suffix='"')
-
-# Narrator with configurable text speed settings
-define narrator = Character(None, what_italic=False)
+#centralized character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS

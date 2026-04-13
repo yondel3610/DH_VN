@@ -63,24 +63,8 @@
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS (NEW FOR CHAPTER 5)
 # =============================================================================
-# All characters from ch4 already loaded. Only new characters defined here.
-# =============================================================================
 
-define roboto        = Character("Roboto",      color="#22d3ee")  # Cyan — Yuxuan's robot companion
-define weng          = Character("Cai Weng",    color="#f0abfc")  # Soft pink — Yuxuan's personal assistant
-define tim           = Character("Tim",         color="#4ade80")  # Green — green-haired child prodigy
-define magnus        = Character("Magnus",      color="#fbbf24")  # Gold — winged figure in the white void
-define yaoguai_king  = Character("Yaoguai King",color="#ef4444")  # Red — the monster from Dorian's past
-define seo_yeon      = Character("Empress Seo-yeon", color="#e9d5ff") # Soft purple — Chung-hee's mother
-define emperor_minjoon = Character("Emperor Min-joon", color="#93c5fd") # Light blue — Chung-hee's father
-
-# door_voice uses a neutral grey — the automated door AI at Yuxuan's lab.
-define door_voice    = Character("Door",        color="#9ca3af")
-
-# Characters carried over from ch4 in use this chapter:
-# dorian, yuxuan, elias, niko, svante, chung_hee, tian_xun (flashback), king_gustav (vision)
-# tedda_alive, prophet, girl_ald_soldier, carriage_driver
-
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
@@ -2829,7 +2813,7 @@ label ch5_nightmare:
     "A deep, inhuman cackle slithered through the black, curling like smoke."
     "It echoed inside my skull."
 
-    yaoguai_king "Hahahaha… Dragonkin… don't interfere."
+    yk "Hahahaha… Dragonkin… don't interfere."
 
     "The darkness shifted."
     "I saw flashes—distorted, broken images—a nightmare burned into my soul."
@@ -2839,7 +2823,7 @@ label ch5_nightmare:
     "His twisted horns curled like a crown, glowing embers crackling beneath his skin. His veins—molten gold—and pulsing."
     "His jagged teeth gleamed as he grinned."
 
-    yaoguai_king "Do you remember what I took from you last time?"
+    yk "Do you remember what I took from you last time?"
 
     "I gasped—choking, drowning—memories crashing over me."
 
@@ -2865,7 +2849,7 @@ label ch5_nightmare:
 
     dorian "I… I will! No! No!! Let them go, please! I'll do anything!"
 
-    yaoguai_king "Hahahaha!"
+    yk "Hahahaha!"
 
     "His laughter warped—a monstrous, guttural sound ripping through the void."
     "A shriek—Emily."

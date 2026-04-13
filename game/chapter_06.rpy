@@ -57,27 +57,11 @@
 #    Search "# PLACEHOLDER" to find every line that needs a real asset.
 ###############################################################################
 
-
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS (NEW FOR CHAPTER 6)
 # =============================================================================
-# Characters from ch1–ch5 already loaded by Ren'Py.
-# Only new characters introduced in Chapter 6 are defined here.
-# =============================================================================
 
-define tedda_alive   = Character("Tedda",           color="#fbbf24")  # Warm yellow — Chung-hee's animated stuffed bear
-define hundun        = Character("",                color="#6b21a8")  # Deep purple, no name — chaos monster
-define vasily_illusion = Character("Vasily",        color="#c0c0c0")  # Silver — illusion copy of Vasily
-define olympia_illusion= Character("Empress Olympia",color="#9370db") # Purple — illusion copy of Olympia
-define gustav_illusion = Character("King Gustav",   color="#c0392b")  # Crimson — illusion copy of Gustav
-define minjoon_illusion= Character("Emperor Min-joon",color="#93c5fd")# Light blue — illusion copy of Min-joon
-define aoi            = Character("Aoi",            color="#67e8f9")  # Cyan — water channeler, ex-Mjoll
-define yaoguai_ch6    = Character("",               color="#6c0909")  # Dark red, no name — Yaoguai sounds
-
-# Feng already defined in chapter_01.rpy.
-# Roboto, tedda_alive, tim, weng, chung_hee, elias already defined in ch4/ch5.
-# Soldier Gao and Soldier Jiang already defined in chapter_01.rpy.
-
+# compiled character definitions
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
@@ -712,7 +696,7 @@ label ch6_overlooking:
 
     "Out of nowhere, three Yaoguai burst into view, tearing through the dust and haze with inhuman speed. Their grotesque forms flickered in and out of sight—limbs too long, spines twisted at unnatural angles, glowing eyes burning with raw hunger."
 
-    yaoguai_ch6 "Raaaaaaawwrrr!!! Craaawwrrr!!"
+    yg "Raaaaaaawwrrr!!! Craaawwrrr!!"
 
     "Chung-hee reacted instantly."
 
@@ -726,7 +710,7 @@ label ch6_overlooking:
 
     "I spun around and the yaoguai was already upon me."
 
-    yaoguai_ch6 "Raaaaaaawwrrr!!!"
+    yg "Raaaaaaawwrrr!!!"
 
     "Its clawed hands stretched forward, its gaping maw snapping open, teeth like jagged shards of obsidian."
     "Too close. Too fast."
@@ -755,7 +739,7 @@ label ch6_yaoguai_encounter:
             "My foot slammed into the ground, and a pulse of raw energy surged through my veins."
             "A burst of sharpened rock erupted from the ground, spearing upward like a wall of jagged teeth. The Yaoguai screeched, twisting in midair to avoid the worst of it, but the stone still caught its leg—a sickening crunch."
 
-            yaoguai_ch6 "GRAAAHHH!!!"
+            yg "GRAAAHHH!!!"
 
             "It crashed onto its side, hissing in fury."
 
@@ -774,7 +758,7 @@ label ch6_yaoguai_encounter:
 
             "I barely registered his voice—the Yaoguai loomed over me."
 
-            yaoguai_ch6 "Graaaaaaawwrrr!!!"
+            yg "Graaaaaaawwrrr!!!"
 
             "Then, a flash of light. A bolt of lightning hit the beast."
             "The Yaoguai was sent flying—its body crashed through a tree, splintering bark on impact."
@@ -819,7 +803,7 @@ label ch6_yaoguai_barrier:
             "The earth rumbled."
             "A wall of solid rock erupted between us and the Yaoguai—thick, sturdy, unyielding. The creature crashed into it headfirst, letting out a choked snarl as the impact sent it sprawling."
 
-            yaoguai_ch6 "GRAAAH—!!"
+            yg "GRAAAH—!!"
 
             "I could hear it scratching, clawing, trying to scale the wall, but I had bought us time."
 
@@ -845,7 +829,7 @@ label ch6_yaoguai_barrier:
             "I barely had time to react before it was on me."
             "Sharp claws raked across my shoulder. Pain exploded through me as I staggered back."
 
-            yaoguai_ch6 "RRRAAAAGH!!!"
+            yg "RRRAAAAGH!!!"
 
             "It reared back for another strike—"
             "BOOM!"
@@ -916,7 +900,7 @@ label ch6_yaoguai_common:
         "A storm of raw electricity erupted from his fingertips, forking through the air."
         "The Yaoguai screeched as the bolts struck one, then another, then the last—lightning chaining them together in a web."
 
-        yaoguai_ch6 "GRAAAHHHHH!"
+        yg "GRAAAHHHHH!"
 
         "Their bodies twisted, convulsing violently—"
         "Then they were gone. Soot."
@@ -1788,7 +1772,7 @@ label ch6_hundun_defeated:
 
     chung_hee "I don't know much about the details. Maybe someone familiar with Enoch can tell us more. We—"
 
-    yaoguai_ch6 "Raaaaaaawwrrr!!!"
+    yg "Raaaaaaawwrrr!!!"
 
     "A guttural scream pierced the air. I stiffened, my instincts already sharpening."
 
@@ -1800,7 +1784,7 @@ label ch6_hundun_defeated:
     jiang "Yaoguai."
     gao   "They must be enraged. They can't feel their leader anymore."
 
-    yaoguai_ch6 "Raaaaaa!!!"
+    yg "Raaaaaa!!!"
 
     jiang "Then that means… there might be a few left!"
 
@@ -1867,12 +1851,12 @@ label ch6_feng_appears:
 
     chung_hee "I can feel more of them coming. Prepare yourself, Dorian."
 
-    yaoguai_ch6 "RAAAAA!!!!"
+    yg "RAAAAA!!!!"
 
     "Their grotesque forms twisted, eyes burning with a deep, unnatural rage. Clawed feet slammed against the ground as they charged."
     "Their attention flicked between us and the Hundun's smoldering corpse. They howled again, the sound rattling through the broken streets of Tianho."
 
-    yaoguai_ch6 "SKREEEEEAAAAAAAAAAAARGHHH!!"
+    yg "SKREEEEEAAAAAAAAAAAARGHHH!!"
 
     play sound sfx_wind_blast                   # PLACEHOLDER — wind SFX
 
@@ -1880,14 +1864,14 @@ label ch6_feng_appears:
     "A violent gust tore through the Yaoguai, sweeping them up like ragdolls. I twisted my fingers, and the currents snapped—spinning like a tornado, hurling the creatures into the crumbling walls of Tianho's ruins."
     "Bones cracked. Flesh splintered. They shrieked as they were flung into the air."
 
-    yaoguai_ch6 "GRAAAAAA!!!"
+    yg "GRAAAAAA!!!"
 
     play sound sfx_lightning_crack              # PLACEHOLDER — Chung-hee lightning SFX
 
     "Beside me, Chung-hee raised his hands, and a shimmering forcefield exploded outward. A Yaoguai leapt toward him—fangs bared, claws outstretched—only to slam into the forcefield."
     "The creature was thrown back so violently that it left a crater where it landed. Another tried, only for Chung-hee to flick his wrist. The forcefield twisted and with a sickening crunch, the Yaoguai's body caved inward."
 
-    yaoguai_ch6 "Raaaaaaa!!!!"
+    yg "Raaaaaaa!!!!"
 
     "For a fleeting moment, I thought we had them."
     "Then—there were more."
@@ -1921,14 +1905,14 @@ label ch6_feng_appears:
 
     "Before I could even open my mouth—"
 
-    yaoguai_ch6 "Graaaawwrrrr!!!"
+    yg "Graaaawwrrrr!!!"
 
     play sound sfx_water_spear                  # PLACEHOLDER — water spear SFX
 
     "A surge of water rushed through the streets, coiling unnaturally, moving like a living serpent. The liquid swirled with unnatural precision, snaking between us and slamming into the advancing monsters with crushing force."
     "The water pierced through them, shaping into sharp spears that skewered the creatures in mid-air."
 
-    yaoguai_ch6 "Raaaaaaaaaahhh!! Graahh—"
+    yg "Raaaaaaaaaahhh!! Graahh—"
 
     "Their bodies tensed—twitched—then dissolved into black mist."
 
@@ -1950,7 +1934,7 @@ label ch6_feng_appears:
 
     dorian "What…"
 
-    yaoguai_ch6 "Graaaarrrrr!!"
+    yg "Graaaarrrrr!!"
 
     "Aoi's head snapped toward the sound, water already coiling at her fingertips, alive and restless. Her expression was unreadable, cold as ever."
 
@@ -2083,7 +2067,7 @@ label ch6_end:
 
     "But before I could reply, the air shattered—another piercing screech."
 
-    yaoguai_ch6 "Grawwwrrrr!!!"
+    yg "Grawwwrrrr!!!"
 
     "Feng's entire body went rigid. The easygoing playfulness vanished in an instant. His smirk faded, his stance shifting, shoulders squared."
 
