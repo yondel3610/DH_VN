@@ -80,29 +80,99 @@ image bg_tianho_dorians_room:
     yalign 1.0
 
 # --- Backgrounds: Tianho City Night ---
-image bg_tianho_city_night       = "images/backgrounds/bg_tianho_city_night.png"         # PLACEHOLDER
+image bg_tianho_city_night:
+    "images/Assets/Background/Tianho - night.jpg"
+    size (1920, 1080) # STANDARD FOR ALL FUTURE BG
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: City Exploration Locations ---
-image bg_tianho_deng_blossom     = "images/backgrounds/bg_tianho_deng_blossom.png"       # PLACEHOLDER
-image bg_tianho_fanrong_square   = "images/backgrounds/bg_tianho_fanrong_square.png"     # PLACEHOLDER
-image bg_tianho_xiangli_stalls   = "images/backgrounds/bg_tianho_xiangli_stalls.png"     # PLACEHOLDER
-image bg_tianho_zhong_promenade  = "images/backgrounds/bg_tianho_zhong_promenade.png"    # PLACEHOLDER
+image bg_tianho_deng_blossom:
+    "images/Assets/Background/Tianho Celeb.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_fanrong_square: #TODO: ask for fanrong square assets
+    "images/Assets/Background/" 
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_xiangli_stalls:
+    "images/Assets/Background/Tianho Food Stalls.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_zhong_promenade:
+    "images/Assets/Background"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: Castle and Ceremony ---
-image bg_tianho_castle_interior  = "images/backgrounds/bg_tianho_castle_interior.png"    # PLACEHOLDER
-image bg_tianho_castle_balcony   = "images/backgrounds/bg_tianho_castle_balcony.png"     # PLACEHOLDER
-image bg_tianho_celeb_deng       = "images/backgrounds/bg_tianho_celeb_deng.png"         # PLACEHOLDER
+image bg_tianho_castle_interior:
+    "images/backgrounds/bg_tianho_castle_interior.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_castle_balcony:
+    "images/backgrounds/bg_tianho_castle_balcony.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_celeb_deng:
+    "images/backgrounds/bg_tianho_celeb_deng.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: Night and Dream ---
-image bg_dorians_room_night      = "images/backgrounds/bg_dorians_room_night.png"        # PLACEHOLDER
-image bg_dream_white             = "images/backgrounds/bg_dream_white.png"               # PLACEHOLDER
+image bg_dorians_room_night:
+    "images/backgrounds/bg_dorians_room_night.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_dream_white:
+    "images/backgrounds/bg_dream_white.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: Battle ---
-image bg_tianho_castle_gate      = "images/backgrounds/bg_tianho_castle_gate.png"        # PLACEHOLDER
-image bg_tianho_castle_interior_battle = "images/backgrounds/bg_tianho_castle_interior_battle.png" # PLACEHOLDER
-image bg_tianho_stairway         = "images/backgrounds/bg_tianho_stairway.png"           # PLACEHOLDER
-image bg_tianho_city_on_fire     = "images/backgrounds/bg_tianho_city_on_fire.png"       # PLACEHOLDER
-image bg_tianho_underground_2    = "images/backgrounds/bg_tianho_underground_2.png"      # PLACEHOLDER
+image bg_tianho_castle_gate:
+    "images/backgrounds/bg_tianho_castle_gate.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_castle_interior_battle:
+    "images/backgrounds/bg_tianho_castle_interior_battle.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_stairway:
+    "images/backgrounds/bg_tianho_stairway.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_city_on_fire:
+    "images/backgrounds/bg_tianho_city_on_fire.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_underground_2:
+    "images/backgrounds/bg_tianho_underground_2.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- ADDED LATER: Additional backgrounds found in PDF ---
 # image bg_tianho_food_stalls_fire = "images/backgrounds/bg_tianho_food_stalls_fire.png"  # PLACEHOLDER

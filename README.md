@@ -9,7 +9,7 @@
 **Genre:** Fantasy / Drama / Romance (multi-route)  
 **Engine:** Ren'Py 8.5+  
 **Platforms:** [insert when done]
-**Demo Status:** Act 1 (Prologue + Chapter 1) in progress
+**Demo Status:** Chapter 5 and 6 in progress
 
 ---
 
