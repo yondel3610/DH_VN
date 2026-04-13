@@ -21,7 +21,7 @@
 #    Section 11 — label ch2_common_freetime  (free time convergence)
 #    Section 12 — label ch2_ceremony  (celebration + D1: dunk tank)
 #    Section 13 — label ch2_frost_oni (Frost Oni battle — D4, D5, D6 QTCs)
-#    Section 14 — label game_over     (shared GAME OVER screen — ICE freeze)
+#    Section 14 — label game_over_freeze     (shared GAME OVER screen — ICE freeze)
 #    Section 15 — label ch2_common_end  (post-battle + Yuxuan letter + D3)
 #    Section 16 — label ch2_castle_briefing  (assassination mission briefing)
 #    Section 17 — label ch2_questions (optional questions to Vasily)
@@ -1659,7 +1659,7 @@ label ch2_frost_oni:
         babala "Dragon! No!"
         vasily "Dorian! No! Dorian!"
 
-        jump game_over
+        jump game_over_freeze
 
     else:
 
@@ -1715,13 +1715,13 @@ label ch2_frost_oni:
 
 
 # =============================================================================
-# SECTION 14: LABEL GAME_OVER — Shared GAME OVER (ICE Freeze)
+# SECTION 14: LABEL game_over_freeze — Shared GAME OVER (ICE Freeze)
 # =============================================================================
 # Only reached from the Frost Oni ICE tracker check.
 # PDF page 85.
 # =============================================================================
 
-label game_over:
+label game_over_freeze:
 
     scene cg_dorian_frozen with fade            # PLACEHOLDER — cg_dorian_frozen (frost spreading)
     stop music fadeout 1.0

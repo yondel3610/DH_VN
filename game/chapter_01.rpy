@@ -54,7 +54,6 @@ define prosperity_dragon = Character("Prosperity Dragon", color="#ffd700") # Bri
 define performers     = Character("Nervous Performer", color="#ff8c00") # Orange — festival performers
 define vendor         = Character("Vendor",          color="#cd853f")  # Peru — market vendor
 define taotie    = Character("Taotie",                color="#ff0000")  # Red, no name — monster sounds
-
 define lead_fire_channeler = Character("Lead Fire Channeler", color="#ff4500")  # Red-orange — rehearsal leader
 define female_guard        = Character("Female Guard",        color="#708090")  # Slate — castle guard
 define male_soldier_1      = Character("Soldier",             color="#a0a0a0")  # Grey — generic soldier
@@ -64,7 +63,7 @@ define woman_1     = Character("Woman 1",               color="#f4a7b9")
 define man_1     = Character("Man 1",               color="#0054ca")
 define man_2     = Character("Man 2",               color="#0054ca") 
 define man_3     = Character("Man 3",               color="#0054ca")
-define yg        = Character("Yaoguai",              color"#6c0909")
+define yg        = Character("Yaoguai",              color="#6c0909")
 
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS + BACKGROUND/SPRITE GUIDE
@@ -1312,7 +1311,7 @@ label ch1_long_shen:
         "Tell the old man to shut up.":
             $ ch1_cyrus_choice = "told_off"
             $ feng_affection += 1
-            +
+            
             "I narrow my eyes at Cyrus, my patience with his nagging finally snapping."
 
             dorian "Shut up, old man. You've been yelling all day — take a break before you keel over."
