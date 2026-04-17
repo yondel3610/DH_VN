@@ -231,24 +231,24 @@ define audio.amb_crowd_festive    = "audio/ambient/amb_crowd_festive.ogg"      #
 #   ch2_qtc4, ch2_qtc5, ch2_qtc6
 # =============================================================================
 
-default svante_affection     = 0      # Svante trust/romance tracker
-default ice_tracker          = 0      # ICE damage — >=2 = frozen GAME OVER
-default yuxuan_affection     = 0      # Yuxuan relationship tracker
+# default svante_affection     = 0      # Svante trust/romance tracker
+# default ice_tracker          = 0      # ICE damage — >=2 = frozen GAME OVER
+# default yuxuan_affection     = 0      # Yuxuan relationship tracker
 
-default ch2_visited_food     = False  # Free time: food stalls visited
-default ch2_visited_fortune  = False  # Free time: fortune teller visited
-default ch2_visited_spa      = False  # Free time: spa visited
-default ch2_visited_rest     = False  # Free time: rest with Vasily visited
+# default ch2_visited_food     = False  # Free time: food stalls visited
+# default ch2_visited_fortune  = False  # Free time: fortune teller visited
+# default ch2_visited_spa      = False  # Free time: spa visited
+# default ch2_visited_rest     = False  # Free time: rest with Vasily visited
 
-default ch2_babala_asked_family = False  # True after Babala topic 1 chosen
+# default ch2_babala_asked_family = False  # True after Babala topic 1 chosen
 
-default ch2_dunk_choice      = ""    # "aimed" or "missed"
-default ch2_food_choice      = ""    # "confront" or "nothing"
-default ch2_spa_choice       = ""    # "nothing" or "punish"
-default ch2_letter_choice    = ""    # "warm" or "distant"
-default ch2_qtc4             = ""    # "wind" or "dodge"
-default ch2_qtc5             = ""    # "wind" or "wall"
-default ch2_qtc6             = ""    # "wind_babala" or "spike"
+# default ch2_dunk_choice      = ""    # "aimed" or "missed"
+# default ch2_food_choice      = ""    # "confront" or "nothing"
+# default ch2_spa_choice       = ""    # "nothing" or "punish"
+# default ch2_letter_choice    = ""    # "warm" or "distant"
+# default ch2_qtc4             = ""    # "wind" or "dodge"
+# default ch2_qtc5             = ""    # "wind" or "wall"
+# default ch2_qtc6             = ""    # "wind_babala" or "spike"
 
 
 # =============================================================================

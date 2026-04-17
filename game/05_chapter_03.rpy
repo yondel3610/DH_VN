@@ -220,18 +220,18 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # yuki_tracker already declared in chapter_01.rpy — not redeclared here
 
 # --- Chapter 3 choice records ---
-default ch3_d1    = ""   # "fire_circle" or "smash"
-default ch3_d2    = ""   # "lure" or "stand"
-default ch3_d3    = ""   # "fire_wall" or "dodge_burst"
-default ch3_d4    = ""   # "dodge" (game over) or "fire_blast"
-default ch3_d5    = ""   # "gave" or "refused"
-default ch3_d6    = ""   # "joined" or "skipped"
-default ch3_d7    = ""   # "omelette" / "soup" / "fried" / "rice"
+# default ch3_d1    = ""   # "fire_circle" or "smash"
+# default ch3_d2    = ""   # "lure" or "stand"
+# default ch3_d3    = ""   # "fire_wall" or "dodge_burst"
+# default ch3_d4    = ""   # "dodge" (game over) or "fire_blast"
+# default ch3_d5    = ""   # "gave" or "refused"
+# default ch3_d6    = ""   # "joined" or "skipped"
+# default ch3_d7    = ""   # "omelette" / "soup" / "fried" / "rice"
 
-# --- Elias question flags (for the optional question menu in ch3_truth) ---
-default ch3_asked_mom       = False
-default ch3_asked_amulet    = False
-default ch3_asked_bodies    = False
+# # --- Elias question flags (for the optional question menu in ch3_truth) ---
+# default ch3_asked_mom       = False
+# default ch3_asked_amulet    = False
+# default ch3_asked_bodies    = False
 
 
 # =============================================================================

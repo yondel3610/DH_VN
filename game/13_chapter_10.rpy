@@ -150,9 +150,9 @@ define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"         # PL
 # SECTION 3: GAME VARIABLES
 # =============================================================================
 
-default yking_score  = 0    # +1 per correct timed choice, max 3 — gates good/bad ending
-default feng_score   = 0    # +1 if Feng alerted and arrived
-default aoi_score    = 0    # +1 if Aoi was present in Tianho
+# default yking_score  = 0    # +1 per correct timed choice, max 3 — gates good/bad ending
+# default feng_score   = 0    # +1 if Feng alerted and arrived
+# default aoi_score    = 0    # +1 if Aoi was present in Tianho
 
 
 # =============================================================================

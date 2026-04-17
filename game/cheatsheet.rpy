@@ -154,23 +154,6 @@
 # └─────────────────────────────────────────────────────────────────────────┘
 #
 
-###############################################################################
-#  CONTENTS:
-#    Section 1  — Character Definitions (Chapter 1 cast)
-#    Section 2  — Image Declarations   (all BGs and CGs)
-#    Section 3  — Audio Declarations   (all music and SFX)
-#    Section 4  — Game Variables       (affection, trackers, visit flags)
-#    Section 5  — label chapter_1      (Dorian's Room opening)
-#    Section 6  — label ch1_city       (repeatable city exploration menu)
-#    Section 7  — City sub-scenes      (Deng / Fanrong / Xiangli / Zhong)
-#    Section 8  — label ch1_common_fireworks  (city convergence)
-#    Section 9  — label ch1_auditions  (D2 — Niko/Kaito)
-#    Section 10 — label ch1_long_shen  (D3 — Cyrus interruption)
-#    Section 11 — label ch1_elara_chat (D4 — repeatable night chat)
-#    Section 12 — label ch1_battle     (D5–D10 — castle battle + Taotie QTCs)
-#    Section 13 — label game_over      (shared GAME OVER screen)
-#    Section 14 — label ch1_common_end (post-battle convergence + epilogue)
-#
 #  NAMING CONVENTIONS (enforced throughout):
 #    - All image tags        : lowercase, words separated by underscores
 #                              e.g.  bg_tianho_dorians_room

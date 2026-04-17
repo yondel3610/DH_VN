@@ -107,8 +107,8 @@ define audio.amb_hilltop_night   = "audio/ambient/amb_hilltop_night.ogg"   # PLA
 # SECTION 3: GAME VARIABLES
 # =============================================================================
 
-default huli_jing_approval  = 0     # +1 per exile judgment, max 3
-default love_route_locked   = ""    # "yuxuan" "niko" "svante" "chunghee" "magnus"
+# default huli_jing_approval  = 0     # +1 per exile judgment, max 3
+# default love_route_locked   = ""    # "yuxuan" "niko" "svante" "chunghee" "magnus"
 
 
 # =============================================================================

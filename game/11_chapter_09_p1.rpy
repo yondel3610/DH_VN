@@ -47,13 +47,13 @@
 # SECTION 1: CHARACTER DEFINITIONS (NEW FOR CHAPTER 9)
 # =============================================================================
 
-define huli_jing   = Character("Huli Jing",    color="#f0c040")  # Amber gold — nine-tailed fox spirit
-define fynn        = Character("Fynn",          color="#cd5c5c")  # Muted red — the zealot, Mjoll
-define katashi     = Character("Katashi",       color="#8b7355")  # Earth brown — the fisherman, Hinami
-define emi         = Character("Emi",           color="#f9a8d4")  # Soft pink — Katashi's daughter
-define seorin      = Character("Seorin",        color="#a8d8ea")  # Pale blue — the alchemist, Kyeongjang
-define feng        = Character("Paladin Feng",  color="#ff8c00")  # Orange — Dorian's best friend, emcee
-define soldier_gao = Character("Soldier Gao",   color="#a0a0a0")  # Grey — Dorian's old soldier
+# define huli_jing   = Character("Huli Jing",    color="#f0c040")  # Amber gold — nine-tailed fox spirit
+# define fynn        = Character("Fynn",          color="#cd5c5c")  # Muted red — the zealot, Mjoll
+# define katashi     = Character("Katashi",       color="#8b7355")  # Earth brown — the fisherman, Hinami
+# define emi         = Character("Emi",           color="#f9a8d4")  # Soft pink — Katashi's daughter
+# define seorin      = Character("Seorin",        color="#a8d8ea")  # Pale blue — the alchemist, Kyeongjang
+# define feng        = Character("Paladin Feng",  color="#ff8c00")  # Orange — Dorian's best friend, emcee
+# define soldier_gao = Character("Soldier Gao",   color="#a0a0a0")  # Grey — Dorian's old soldier
 
 # Characters in use this chapter (already defined in earlier chapters):
 # dorian, elias, magnus, yuxuan, niko, svante, chung_hee, weng, tim, tedda_alive, roboto
@@ -100,14 +100,14 @@ define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PL
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 
-default ch9_elias_choice   = ""      # "stay" or "rush"
-default ch9_lab_choice     = ""      # "library" "bedroom" "tavern" or "kitchen"
-default ch9_chung_pressed  = False
-default ch9_yuxuan_ate     = False
-default ch9_niko_ate       = False
-default ch9_svante_photo   = False
-default ch9_magnus_song    = False
-default ch9_story_promised = False
+# default ch9_elias_choice   = ""      # "stay" or "rush"
+# default ch9_lab_choice     = ""      # "library" "bedroom" "tavern" or "kitchen"
+# default ch9_chung_pressed  = False
+# default ch9_yuxuan_ate     = False
+# default ch9_niko_ate       = False
+# default ch9_svante_photo   = False
+# default ch9_magnus_song    = False
+# default ch9_story_promised = False
 
 
 # =============================================================================

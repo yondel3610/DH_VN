@@ -86,10 +86,10 @@ define audio.amb_bunker        = "audio/ambient/amb_bunker.ogg"            # PLA
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 
-default ch7_d1_choice         = ""    # "svante"/"niko"/"chunghee"/"yuxuan"
-default ch7_drink_choice      = ""    # "drink"/"refuse"
-default feng_affection        = 0
-default aoi_affection         = 0
+# default ch7_d1_choice         = ""    # "svante"/"niko"/"chunghee"/"yuxuan"
+# default ch7_drink_choice      = ""    # "drink"/"refuse"
+# default feng_affection        = 0
+# default aoi_affection         = 0
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_7 — White Void / Magnus Dream / Wake Up

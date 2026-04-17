@@ -280,9 +280,9 @@ screen accessibility_preferences():
 # SECTION 5: GAME VARIABLES
 # =============================================================================
 
-default prologue_choice = ""
-default quick_timer_active = False
-default tutorial_shown = False
+# default prologue_choice = ""
+# default quick_timer_active = False
+# default tutorial_shown = False
 
 # =============================================================================
 # SECTION 6: PROLOGUE LABEL

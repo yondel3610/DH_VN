@@ -208,31 +208,31 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 # --- Affection / relationship trackers (persist across all chapters) ---
-default niko_affection    = 0   # Niko romance/trust tracker
-default feng_affection    = 0   # Feng respect/loyalty tracker
+# default niko_affection    = 0   # Niko romance/trust tracker
+# default feng_affection    = 0   # Feng respect/loyalty tracker
 
-# --- Chapter-specific trackers ---
-default yuki_tracker      = 0   # YUKI — unlocks Yuki-onna content in later chapters
+# # --- Chapter-specific trackers ---
+# default yuki_tracker      = 0   # YUKI — unlocks Yuki-onna content in later chapters
 
-# --- City exploration visit flags ---
-# True once the player visits that location (Zhong locks after first visit)
-default city_visited_deng    = False
-default city_visited_fanrong = False
-default city_visited_xiangli = False
-default city_visited_zhong   = False   # Locks permanently after first visit
+# # --- City exploration visit flags ---
+# # True once the player visits that location (Zhong locks after first visit)
+# default city_visited_deng    = False
+# default city_visited_fanrong = False
+# default city_visited_xiangli = False
+# default city_visited_zhong   = False   # Locks permanently after first visit
 
-# --- Elara chat topic flags (for the repeatable D4 menu) ---
-default elara_talked_cyrus   = False
-default elara_talked_feng    = False
-default elara_talked_olympia = False
-# Note: Talking about Emperor Min-joon ends the chat loop — no flag needed
+# # --- Elara chat topic flags (for the repeatable D4 menu) ---
+# default elara_talked_cyrus   = False
+# default elara_talked_feng    = False
+# default elara_talked_olympia = False
+# # Note: Talking about Emperor Min-joon ends the chat loop — no flag needed
 
-# --- Chapter 1 choice records (for optional flavour callbacks later) ---
-default ch1_audition_choice  = ""   # "intervene" or "silent"
-default ch1_cyrus_choice     = ""   # "obey" or "told_off"
-default ch1_gate_qtc         = ""   # "nothing" / "shield" / "fireball"
-default ch1_castle_qtc       = ""   # "freeze" / "spikes"
-default ch1_stair_qtc        = ""   # "wind" / "stumble"
+# # --- Chapter 1 choice records (for optional flavour callbacks later) ---
+# default ch1_audition_choice  = ""   # "intervene" or "silent"
+# default ch1_cyrus_choice     = ""   # "obey" or "told_off"
+# default ch1_gate_qtc         = ""   # "nothing" / "shield" / "fireball"
+# default ch1_castle_qtc       = ""   # "freeze" / "spikes"
+# default ch1_stair_qtc        = ""   # "wind" / "stumble"
 
 
 # =============================================================================

@@ -175,15 +175,15 @@ define audio.amb_kitchen         = "audio/ambient/amb_kitchen.ogg"          # PL
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 
-default niko_affection           = 0       # Niko trust tracker
-default svante_affection         = 0       # Svante trust tracker
-default ch5_food_choice          = ""      # "tianho" "gale" "hinami" or "mjoll"
-default ch5_roboto_witness       = ""      # "yes" or "no" (Roboto stumble testimony)
-default ch5_chunghee_speech      = ""      # "naive" or "inspiring"
-default ch5_magnus_q1            = False   # Asked Magnus about Min-joon vision
-default ch5_magnus_q2            = False   # Asked Magnus about Tragedy of Tianho
-default ch5_magnus_q3            = False   # Asked Magnus about this place
-default ch5_magnus_q4            = False   # Asked Magnus about the amulet
+# default niko_affection           = 0       # Niko trust tracker
+# default svante_affection         = 0       # Svante trust tracker
+# default ch5_food_choice          = ""      # "tianho" "gale" "hinami" or "mjoll"
+# default ch5_roboto_witness       = ""      # "yes" or "no" (Roboto stumble testimony)
+# default ch5_chunghee_speech      = ""      # "naive" or "inspiring"
+# default ch5_magnus_q1            = False   # Asked Magnus about Min-joon vision
+# default ch5_magnus_q2            = False   # Asked Magnus about Tragedy of Tianho
+# default ch5_magnus_q3            = False   # Asked Magnus about this place
+# default ch5_magnus_q4            = False   # Asked Magnus about the amulet
 
 
 # =============================================================================

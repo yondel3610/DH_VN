@@ -145,15 +145,15 @@ define audio.amb_cavern_deep    = "audio/ambient/amb_cavern_deep.ogg"       # PL
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 
-default wing_tracker    = 0      # correct battle QTCs; >= 3 = proceed to peace
-default ch8_d1_choice   = ""    # door opening: "niko"/"svante"/"yuxuan"/"chunghee"
-default ch8_d2_choice   = ""    # "spearheads"/"lanterns"
-default ch8_d3_choice   = ""    # "stand"/"dodge"
-default ch8_d4_choice   = ""    # "fire_wind"/"earth_anchor"
-default ch8_d5_choice   = ""    # "fire_magnus"/"reason"
-default ch8_read_letter = False
-default ch8_puzzle_seen = False
-default ch8_puzzle_pass = False
+# default wing_tracker    = 0      # correct battle QTCs; >= 3 = proceed to peace
+# default ch8_d1_choice   = ""    # door opening: "niko"/"svante"/"yuxuan"/"chunghee"
+# default ch8_d2_choice   = ""    # "spearheads"/"lanterns"
+# default ch8_d3_choice   = ""    # "stand"/"dodge"
+# default ch8_d4_choice   = ""    # "fire_wind"/"earth_anchor"
+# default ch8_d5_choice   = ""    # "fire_magnus"/"reason"
+# default ch8_read_letter = False
+# default ch8_puzzle_seen = False
+# default ch8_puzzle_pass = False
 
 
 # =============================================================================

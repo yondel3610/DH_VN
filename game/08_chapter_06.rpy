@@ -186,13 +186,13 @@ define audio.amb_blizzard         = "audio/ambient/amb_blizzard.ogg"            
 #   ch6_ice_qtc          — "earth" or "fire"
 # =============================================================================
 
-default ch6_yaoguai_tracker  = 0    # Accumulates on wrong Yaoguai QTC answers
-default ch6_d1_elias_choice  = ""
-default ch6_first_qtc        = ""
-default ch6_second_qtc       = ""
-default ch6_vasily_qtc       = ""
-default ch6_darkness_qtc     = ""
-default ch6_ice_qtc          = ""
+# default ch6_yaoguai_tracker  = 0    # Accumulates on wrong Yaoguai QTC answers
+# default ch6_d1_elias_choice  = ""
+# default ch6_first_qtc        = ""
+# default ch6_second_qtc       = ""
+# default ch6_vasily_qtc       = ""
+# default ch6_darkness_qtc     = ""
+# default ch6_ice_qtc          = ""
 
 
 # =============================================================================

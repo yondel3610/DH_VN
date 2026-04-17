@@ -159,14 +159,14 @@ define audio.amb_tunnel           = "audio/ambient/amb_tunnel.ogg"             #
 # SECTION 4: GAME VARIABLES
 # =============================================================================
 
-default chunghee_affection   = 0      # Chung-hee trust/romance tracker
-# yuxuan_affection already defined in chapter_02.rpy
+# default chunghee_affection   = 0      # Chung-hee trust/romance tracker
+# # yuxuan_affection already defined in chapter_02.rpy
 
-default ch4_yuxuan_interrupted = False  # True if player chose "Interrupt Yuxuan yourself"
-default ch4_chunghee_choice    = ""     # "naive" or "inspiring" — D(Chung) speech choice
-default ch4_carriage_qtc1      = ""     # "earth" or "sleep_powder"
-default ch4_carriage_qtc2      = ""     # "stumble" or "wind"
-default ch4_draconic_choice    = ""     # "tianho" "family" "mjoll" or "self"
+# default ch4_yuxuan_interrupted = False  # True if player chose "Interrupt Yuxuan yourself"
+# default ch4_chunghee_choice    = ""     # "naive" or "inspiring" — D(Chung) speech choice
+# default ch4_carriage_qtc1      = ""     # "earth" or "sleep_powder"
+# default ch4_carriage_qtc2      = ""     # "stumble" or "wind"
+# default ch4_draconic_choice    = ""     # "tianho" "family" "mjoll" or "self"
 
 
 # =============================================================================
