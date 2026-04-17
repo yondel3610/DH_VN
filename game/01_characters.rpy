@@ -5,7 +5,7 @@ define girl_ald    = Character("Girl Aldorith",color="#cd5c5c", what_prefix='"',
 define yk          = Character("Yaoguai King", color="#8b0000", what_prefix='"', what_suffix='"')
 define narrator = Character(None, what_italic=False)
 
-#Chapter 1
+# Chapter 1
 define dorian         = Character("Dorian",          color="#d4af37")  # Gold — paladin, protagonist
 define elara          = Character("Elara",           color="#f4a7b9")  # Soft rose — warm, loving
 define lucas          = Character("Lucas",           color="#87ceeb")  # Sky blue — youngest, excited
@@ -37,7 +37,7 @@ define man_2     = Character("Man 2",               color="#0054ca")
 define man_3     = Character("Man 3",               color="#0054ca")
 define yg        = Character("Yaoguai",              color="#6c0909") #Yaoguai 
 
-#Chapter 2
+# Chapter 2
 define svante          = Character("Svante",            color="#9b59b6")  # Purple — violet-haired aldorith
 define king_gustav     = Character("King Gustav",        color="#c0392b")  # Crimson — hard, imperious
 define queen_ekaterina = Character("Queen Ekaterina",    color="#8e44ad")  # Dark violet — sharp, venomous
@@ -55,7 +55,7 @@ define male_guard      = Character("Male Guard",         color="#7f8c8d")  # Gre
 define female_guard    = Character("Female Guard",       color="#7f8c8d")  # Grey — palace guard
 define frost_oni       = Character("",                   color="#5dade2")  # Ice blue, no name — monster
 
-#Chapter 3
+# Chapter 3
 define yuki_onna      = Character("Yuki-onna",         color="#aee8f8")  # Pale ice blue — spirit form
 define ekaterina_ghost= Character("Queen Ekaterina",   color="#d8b4fe")  # Soft violet — ghost/vision
 define elias          = Character("Elias",             color="#fcd34d")  # Warm yellow — toddler, innocent
@@ -64,7 +64,7 @@ define weng           = Character("Miss Weng",         color="#f97316")  # Orang
 define boy_ald_soldier= Character("Boy Aldorith",      color="#cd5c5c")  # Muted red — Gustav's soldier
 define girl_ald_soldier=Character("Girl Aldorith",     color="#cd5c5c")  # Muted red — Gustav's soldier
 
-#Chapter 4
+# Chapter 4
 define chung_hee      = Character("Hyon Chung-hee",   color="#a78bfa")  # Soft violet — deaf-mute Emperor of Kyeongjang
 define captain_sunwoo = Character("Captain Sunwoo",    color="#60a5fa")  # Sky blue — Imperial Guard captain
 define ji_hye         = Character("Royal Advisor Ji-hye", color="#f9a8d4")  # Soft pink — Chung-hee's aunt/advisor
@@ -79,13 +79,13 @@ define courtier_2     = Character("Courtier 2",        color="#d1d5db")  # Light
 define servant        = Character("Servant",           color="#9ca3af")  # Grey — Kyeongjang servant
 define dae_hyun       = Character("Park Dae-hyun",     color="#6b7280")  # Grey — Head of Infrastructure
 
-#Chapter 5
+# Chapter 5
 define roboto        = Character("Roboto",      color="#22d3ee")  # Cyan — Yuxuan's robot companion
 define magnus        = Character("Magnus",      color="#fbbf24")  # Gold — winged figure in the white void
 define seo_yeon      = Character("Empress Seo-yeon", color="#e9d5ff") # Soft purple — Chung-hee's mother
 define door_voice    = Character("Door",        color="#9ca3af") # door_voice uses a neutral grey — the automated door AI at Yuxuan's lab.
 
-#Chapter 6
+# Chapter 6
 define hundun        = Character("",                color="#6b21a8")  # Deep purple, no name — chaos monster
 define vasily_illusion = Character("Vasily",        color="#c0c0c0")  # Silver — illusion copy of Vasily
 define olympia_illusion= Character("Empress Olympia",color="#9370db") # Purple — illusion copy of Olympia
@@ -93,12 +93,23 @@ define gustav_illusion = Character("King Gustav",   color="#c0392b")  # Crimson 
 define minjoon_illusion= Character("Emperor Min-joon",color="#93c5fd")# Light blue — illusion copy of Min-joon
 define yaoguai_ch6    = Character("",               color="#6c0909")  # Dark red, no name — Yaoguai sounds
 
-#Chapter 7
+# Chapter 7
 define woman_2       = Character("Woman 2",      color="#f4a7b9")  # Rose — wounded civilian
 define male_soldier_ch7 = Character("Male Soldier", color="#a0a0a0") # Grey — young wounded soldier
 
 #Chapter 8
+define hwan_sik   = Character("Baek Hwan-sik",  color="#c0c0c0")  # Silver — Kyeongjang royal guard, mind-letter voice
+define spirit     = Character("Spirit",          color="#ffd700")  # Gold — voice of the sealed chamber's spirit
+define olympia    = Character("Empress Olympia", color="#9370db")  # (reused — illusion in paintings)
 
-#Chapter 9
+# Chapter 9
+define huli_jing   = Character("Huli Jing",    color="#f0c040")  # Amber gold — nine-tailed fox spirit
+define fynn        = Character("Fynn",          color="#cd5c5c")  # Muted red — the zealot, Mjoll
+define katashi     = Character("Katashi",       color="#8b7355")  # Earth brown — the fisherman, Hinami
+define emi         = Character("Emi",           color="#f9a8d4")  # Soft pink — Katashi's daughter
+define seorin      = Character("Seorin",        color="#a8d8ea")  # Pale blue — the alchemist, Kyeongjang
+define feng        = Character("Paladin Feng",  color="#ff8c00")  # Orange — Dorian's best friend, emcee
+define soldier_gao = Character("Soldier Gao",   color="#a0a0a0")  # Grey — Dorian's old soldier
 
-#Chapter 10
+# Chapter 10
+# none
