@@ -8,7 +8,6 @@
 #  save/load compatibility, auto-forward, and text speed controls.
 ###############################################################################
 
-
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
@@ -34,44 +33,34 @@ image bg_underground_red:
 
 image kristin_kneeling:
     "images/Assets/Illustrations/1 - Kristin Praying.png"
-    size (1920, 1080) # STANDARD FOR ALL FUTURE BG ILLUSTRATION
+    fit "cover"
     xalign 0.5
     yalign 1.0
 
 # TODO: fix sprite zoom and positioning, start from the knees and zoom idealy 1.25x or 1.5x depending on how it looks 
 # --- Character Sprites ---
 image kristin_normal:
-    "images/Assets/Character Sprites/Kristin Nordstrom.png"
+    At("images/Assets/Character Sprites/Kristin Nordstrom.png", sprite_highlight("kristin"))
     fit "contain"
-    xalign 0.5
-    yalign 1.0
 
-# Boy Aldorith sprite
 image boy_ald_normal:
-    "images/Assets/Character Sprites/Boy Aldorith.png"
+    At("images/Assets/Character Sprites/Boy Aldorith.png", sprite_highlight("boy_ald"))
     fit "contain"
-    xalign 0.5
-    yalign 1.0
 
-# Girl Aldorith sprite
 image girl_ald_normal:
-    "images/Assets/Character Sprites/Girl Aldorith.png"
+    At("images/Assets/Character Sprites/Girl Aldorith.png", sprite_highlight("girl_ald"))
     fit "contain"
-    xalign 0.5
-    yalign 1.0
 
-# Yaoguai King sprites(gray skin, bone crown)
 image yk:
-    "images/Assets/Character Sprites/yaoguai king v3.png"
+    At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
     fit "contain"
-    xalign 0.5
-    yalign 1.0
+
 
 # TODO: check image folder again, illus and bg
 # --- CG / Event Images (full screen, fit to cover) ---
 image cg_black:
-    "images/Assets/plain_colors/HD-wallpaper-plain-black-black.jpg"
-    fit "cover"
+    "images/cg/cg_black.png"
+    zoom 2.26 
 
 image cg_yaoguai_entrance:
     "images/cg/cg_yaoguai_entrance.png"
@@ -170,6 +159,7 @@ define audio.yk_ald_prl_line7      = "audio/Prologue/Yaoguai King Prologue/YAOGU
 
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
 
+# TODO: remove and apply the global style
 # -----------------------------------------------------------------------------
 # 4.1 QUICK TIMED CHOICE SCREEN
 # -----------------------------------------------------------------------------
@@ -223,9 +213,7 @@ screen timed_choice(items, timeout=5.0, default=None):
 # 4.2 CHAPTER TITLE SCREEN
 # -----------------------------------------------------------------------------
 screen chapter_title_screen(chapter_num, chapter_title, subtitle="", duration=2.0):
-    
     timer duration action Hide("chapter_title_screen")
-    
     frame:
         background None
         xfill True
@@ -241,43 +229,8 @@ screen chapter_title_screen(chapter_num, chapter_title, subtitle="", duration=2.
             if subtitle:
                 text subtitle size 20 color "#ccccaa" italic True
 
-
-# -----------------------------------------------------------------------------
-# 4.3 ACCESSIBILITY PREFERENCE SCREEN
-# -----------------------------------------------------------------------------
-screen accessibility_preferences():
-    frame:
-        xalign 0.5
-        yalign 0.5
-        xsize 600
-        ysize 400
-        
-        vbox:
-            spacing 20
-            xfill True
-            
-            hbox:
-                text "Text Speed:" size 18 xalign 0.0
-                bar value Preference("text speed") xsize 300
-                text "[_preferences.text_cps] cps" size 14
-            
-            hbox:
-                text "Auto-Forward Delay:" size 18 xalign 0.0
-                bar value Preference("auto-forward time") xsize 300
-                text "[_preferences.afm_time]s" size 14
-            
-            vbox:
-                textbutton "Skip Unseen Text" action Preference("skip", "toggle")
-                textbutton "Skip After Choices" action Preference("after choices", "toggle")
-            
-            if renpy.has_label("voice"):
-                hbox:
-                    text "Voice Volume:" size 18 xalign 0.0
-                    bar value Preference("voice volume") xsize 300
-
-
 # =============================================================================
-# SECTION 5: GAME VARIABLES
+# SECTION 5: GAME VARIABLES (added to a compiled file)
 # =============================================================================
 
 # default prologue_choice = ""
@@ -290,20 +243,15 @@ screen accessibility_preferences():
 
 label prologue:
     # -------------------------------------------------------------------------
-    # INITIAL SETUP
-    # -------------------------------------------------------------------------
-    $ renpy.game.preferences.skip_unseen = False
-    
-    if _preferences.text_cps == 0:
-        $ _preferences.text_cps = 40
-    
-    # -------------------------------------------------------------------------
     # OPENING — Silence and darkness
     # -------------------------------------------------------------------------
-    stop music fadeout 2.0
-    scene bg_underground_dim with fade
-    # play audio amb_underground loop fadein 2.0
-    
+
+    scene black
+    with fade
+    pause 0.5
+    scene bg_underground_dim
+    with fade
+
     # --- Opening narration ---
     "Let their spirits pass without suffering. Let their memories remain unspoiled."
     "Let Your cloak be warm. Let their burdens fall at Your feet, Almighty Enoch."
@@ -321,8 +269,8 @@ label prologue:
 
     show bg_underground_lit with fade
 
-    show boy_ald_normal at left
-    show girl_ald_normal at right
+    show boy_ald_normal at left_char
+    show girl_ald_normal at right_char
     
     voice audio.boy_ald_prl_line1
     boy_ald "She's still praying. It's been five minutes."
@@ -339,11 +287,12 @@ label prologue:
     hide girl_ald_normal
     "Kristin flinched as if struck. She turned, eyes wide, lips pale."
     
-    show kristin_normal at center
+    show kristin_normal at center_char
 
     voice audio.kristin_ald_prl_line2
     kristin "I was only… I was praying to Lord Enoch."
 
+    show girl_ald_normal at right_char
     #voice audio.girl_ald_prl_
     girl_ald "A prayer that's lasted too long. For minutes, sister. We've listened. Are you certain you're not harboring doubts?"
     
@@ -352,13 +301,13 @@ label prologue:
     voice audio.kristin_ald_prl_line4
     kristin "But… What we did—what happened—was it really right? We killed the queen and her two sons."
     
-    show boy_ald_normal at left
+    show boy_ald_normal at left_char
     voice audio.boy_ald_prl_line3
     boy_ald "What are you saying? That our Father was wrong?"
     voice audio.kristin_ald_prl_line5
     kristin "N-no! I would never—why would I?"
     
-    show girl_ald_normal at right
+    show girl_ald_normal at right_char
 
     #voice audio.girl_ald_prl_
     girl_ald "Your blood-brother Svante didn't hesitate. He slit their throats without blinking. He was useful. You? You pray for corpses."
@@ -367,7 +316,7 @@ label prologue:
     
     "Kristin dropped her gaze. Her hands trembled at her sides."
     
-    show kristin_normal at center
+    show kristin_normal at center_char
     
     voice audio.kristin_ald_prl_line6
     kristin "I'm very sorry… I just—"
@@ -380,7 +329,7 @@ label prologue:
     "She didn't argue. With her head bowed and hands trembling at her sides, Kristin turned and walked away."
     "Her footsteps echoed faintly down the underground tunnel—slow and hesitant."
     
-    hide kristin_normal 
+    hide kristin_normal with dissolve
     
     "The two Aldoriths watched her disappear into the dark before exchanging a glance."
     "Their gazes drifted to the lifeless forms behind them: the Queen of Tianho, regal even in death, and her two sons, wrapped in the stillness of final silence."
@@ -453,14 +402,14 @@ label prologue:
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
     "The Yaoguai King emerged from the rubble, obsidian-scaled and crowned in bone, the shadows clinging to his form like loyal hounds."
     
-    show yk at center
+    show yk at center_char
     
     voice audio.yk_ald_prl_line1
     yk "You bury corpses… while your own hearts still beat? How generous. More for my yaoguai to feed on."
-    
-    show girl_ald_normal at right
-    show boy_ald_normal at left
-    
+
+    show girl_ald_normal at right_char
+    show boy_ald_normal at left_char
+
     #voice audio.girl_ald_prl_
     girl_ald "Enoch above…"
     voice boy_ald_prl_line13
@@ -480,12 +429,12 @@ label prologue:
     
     "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
     
-    show boy_ald_normal at left
+    show boy_ald_normal at left_char
 
     voice boy_ald_prl_line14
     boy_ald "SISTER!!"
     
-    show yk at right
+    show yk at right_char
 
     voice audio.yk_ald_prl_line2
     yk "Your turn, little one…"
@@ -547,12 +496,12 @@ label prologue_choice_dash:
     
     "He bolted down the side corridor, heart hammering."
     
-    show boy_ald_normal at left
+    show boy_ald_normal at left_char
 
     voice boy_ald_prl_line18
     boy_ald "Come on… Come on…"
     
-    show yk at center
+    show yk at center_char
 
     voice audio.yk_ald_prl_line3
     yk "Running away from me? Pathetic."
@@ -578,7 +527,7 @@ label prologue_common:
     
     "Silence returned—oppressive and final."
 
-    show yk at center
+    show yk at center_char
     
     "The Yaoguai King stood among the dead. His eyes drifted to the bodies wrapped in burial cloth: a queen and two princes, now claimed by darkness."
     

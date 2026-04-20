@@ -100,12 +100,12 @@ screen say(who, what):
 
         text what id "what"
 
-
-    # If there's a side image, display it above the text. Do not display on the
-    # phone variant - there's no room.
+    # If there's a side image, display it above the text.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
-
+    
+    # Add voice auto-forward indicator
+    use voice_auto_indicator
 
 # Make the namebox available for styling through the Character object.
 init python:
@@ -302,7 +302,7 @@ screen navigation():
             textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Quit") action Quit(confirm=True)
 
         else: #in-game menu buttons
             textbutton _("History") action ShowMenu("history")
@@ -872,12 +872,19 @@ style slot_button_text:
 default persistent.main_volume = 1.0   # 1.0 = 100 %, range 0.0 – 1.0
 
 init python:
-    def apply_main_volume(vol): #uses renpy.music.set_volume - absolute channel ceiling
+    # This ensures volume settings apply when game loads
+    def apply_main_volume(vol):
         """Scale all three audio channels by the master fader."""
         renpy.music.set_volume(vol, channel="music")
         renpy.music.set_volume(vol, channel="sound")
         renpy.music.set_volume(vol, channel="voice")
         persistent.main_volume = vol
+
+# Apply saved volume on game start
+label after_load:
+    if persistent.main_volume is not None:
+        $ apply_main_volume(persistent.main_volume)
+    return
 
 screen settings():
     tag menu
@@ -898,22 +905,60 @@ screen settings():
                 vbox:
                     xoffset 30
                     spacing 8
-                    textbutton "◯ Window" action Preference("display", "window")
-                    textbutton "◯ Fullscreen" action Preference("display", "fullscreen")
+                    
+                    # Conditional symbols for window/fullscreen
+                    $ win_symbol = "◉" if not preferences.fullscreen else "◯"
+                    textbutton "[win_symbol] Window":
+                        action Preference("display", "window")
+                        if not preferences.fullscreen:
+                            text_color "#88ff88"
+                        else:
+                            text_color "#cccccc"
+                    
+                    $ full_symbol = "◉" if preferences.fullscreen else "◯"
+                    textbutton "[full_symbol] Fullscreen":
+                        action Preference("display", "fullscreen")
+                        if preferences.fullscreen:
+                            text_color "#88ff88"
+                        else:
+                            text_color "#cccccc"
                 null height 10
-
+                
             # ────── Skip ──────
             text _("Skip"):
                 size 40
                 bold True
                 color gui.accent_color
-
             vbox:
                 xoffset 30
                 spacing 8
-                textbutton "☐ Unseen Text" action Preference("skip", "toggle")
-                textbutton "☐ After Choices" action Preference("after choices", "toggle")
-                textbutton "☐ Transitions" action InvertSelected(Preference("transitions", "toggle"))
+                
+                # Unseen Text checkbox with conditional symbol
+                $ unseen_symbol = "☑" if preferences.skip_unseen else "☐"
+                textbutton "[unseen_symbol] Unseen Text":
+                    action Preference("skip", "toggle")
+                    if preferences.skip_unseen:
+                        text_color "#88ff88"
+                    else:
+                        text_color "#cccccc"
+                
+                # After Choices checkbox with conditional symbol  
+                $ after_symbol = "☑" if preferences.skip_after_choices else "☐"
+                textbutton "[after_symbol] After Choices":
+                    action Preference("after choices", "toggle")
+                    if preferences.skip_after_choices:
+                        text_color "#88ff88"
+                    else:
+                        text_color "#cccccc"
+                
+                # Transitions checkbox with conditional symbol
+                $ trans_symbol = "☐" if preferences.transitions else "☑"
+                textbutton "[trans_symbol] Transitions":
+                    action InvertSelected(Preference("transitions", "toggle"))
+                    if not preferences.transitions:
+                        text_color "#88ff88"
+                    else:
+                        text_color "#cccccc"
             null height 10
 
             # ────── Text Speed ──────
@@ -940,55 +985,88 @@ screen settings():
                 bold True
                 color gui.accent_color
 
-            # Main/master volume | changes: indentation added
-            label _("Main"):
-                style "pref_label_text"
-                text_size 18
+            vbox:
                 xoffset 30
-            
-            bar:
-                style "pref_bar_thin"
+                spacing 8
+
+                label _("Main"):
+                    style "pref_label_text"
+                    text_size 18
+                bar:
+                    style "pref_bar_thin"
+                    value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
+                    changed apply_main_volume
+
+                if config.has_music:
+                    label _("Music"):
+                        style "pref_label_text"
+                        text_size 18
+                    bar:
+                        style "pref_bar_thin"
+                        value Preference("music volume")
+
+                if config.has_sound:
+                    label _("SFX"):
+                        style "pref_label_text"
+                        text_size 18
+                    bar:
+                        style "pref_bar_thin"
+                        value Preference("sound volume")
+
+                if config.has_voice:
+                    label _("Voice"):
+                        style "pref_label_text"
+                        text_size 18
+                    bar:
+                        style "pref_bar_thin"
+                        value Preference("voice volume")
+
+                null height 5
+
+                if config.has_music or config.has_sound or config.has_voice:
+                    textbutton _("Mute All"):
+                        action Preference("all mute", "toggle")
+                        text_size 18
+
+            null height 10
+
+            # ────── Autoplay ──────
+            text _("Autoplay"):
+                size 40
+                bold True
+                color gui.accent_color
+
+            vbox:
                 xoffset 30
-                value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
-                changed apply_main_volume
+                spacing 8
 
-            # Individual channels | changes: indentation added
-            if config.has_music:
-                label _("Music"):
-                    style "pref_label_text"
-                    text_size 18
-                    xoffset 30
-                bar:
-                    style "pref_bar_thin"
-                    xoffset 30
-                    value Preference("music volume")
+                hbox:
+                    spacing 20
 
-            if config.has_sound:
-                label _("SFX"):
-                    style "pref_label_text"
-                    text_size 18
-                    xoffset 30
-                bar:
-                    style "pref_bar_thin"
-                    xoffset 30
-                    value Preference("sound volume")
+                    $ off_symbol = "◉" if not persistent.voice_auto_forward else "◯"
+                    textbutton "[off_symbol] Off":
+                        action SetField(persistent, "voice_auto_forward", False)
+                        text_size 22
+                        if not persistent.voice_auto_forward:
+                            text_color "#88ff88"
+                        else:
+                            text_color "#cccccc"
 
-            if config.has_voice:
-                label _("Voice Volume"):
-                    style "pref_label_text"
-                    text_size 18
-                    xoffset 30
-                bar:
-                    style "pref_bar_thin"
-                    xoffset 30
-                    value Preference("voice volume")
+                    $ on_symbol = "◉" if persistent.voice_auto_forward else "◯"
+                    textbutton "[on_symbol] On (with voice)":
+                        action SetField(persistent, "voice_auto_forward", True)
+                        text_size 22
+                        if persistent.voice_auto_forward:
+                            text_color "#88ff88"
+                        else:
+                            text_color "#cccccc"
 
-            if config.has_music or config.has_sound or config.has_voice:
-                null height gui.pref_spacing
-                textbutton _("Mute All"):
-                    action Preference("all mute", "toggle")
-                    xoffset 30
-                    text_size 18
+                if persistent.voice_auto_forward:
+                    text _("Automatically advances after voice lines finish"):
+                        size 16
+                        color "#aaaaaa"
+                        italic True
+                        yoffset 5
 
             #  ────── About  ──────
             null height (2 * gui.pref_spacing)

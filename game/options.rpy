@@ -206,3 +206,11 @@ define config.window_icon = "gui/window_icon.png"
 
 # Or if you want to pause the game when minimized (mobile)
 # define config.pause_after_rollback = False
+
+init python:
+    # Enable/disable the quick menu
+    config.overlay_screens.append("quick_menu")
+    # Or to control it with a variable:
+    def should_show_quick_menu():
+        return True  # Change to False to disable by default
+

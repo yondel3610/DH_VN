@@ -187,3 +187,44 @@
 # play music audio.name - bg music, can loop, plays unntil stopped  
 # play sound audio.name - one-shot sfx
 # play audio audio.name - for ambient sounds
+
+# ====================================================================
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+# define e = Character("Eileen")
+
+# The game starts here.
+
+# label start:
+#     # Show a background. This uses a placeholder by default, but you can
+#     # add a file (named either "bg room.png" or "bg room.jpg") to the
+#     # images directory to show it.
+
+#     scene bg room
+
+#     # This shows a character sprite. A placeholder is used, but you can
+#     # replace it by adding a file named "eileen happy.png" to the images
+#     # directory.
+
+#     show eileen happy
+
+#     # These display lines of dialogue.
+
+#     e "You've created a new Ren'Py game."
+
+#     e "Once you add a story, pictures, and music, you can release it to the world!"
+
+#     # This ends the game.
+
+#     return
+
+# =============================================================================
+# CUSTOM TRANSITIONS — defined once, available to all .rpy files
+# =============================================================================
+# Ren'Py built-ins used for reference:
+#   fade      = fade through black, ~1.0s  (scene changes, calm moments)
+#   dissolve  = cross-dissolve,     ~0.5s  (smooth cuts, sprite changes)
+#   flash     = white flash,        ~0.5s  (explosions, divine moments)
+#   None      = instant hard cut           (no animation at all)
