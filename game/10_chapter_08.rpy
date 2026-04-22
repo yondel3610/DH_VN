@@ -163,7 +163,7 @@ define audio.amb_cavern_deep    = "audio/ambient/amb_cavern_deep.ogg"       # PL
 # =============================================================================
 
 label chapter_8:
-
+    $ save_name = "Chapter 9"
     # ch8 lines 1-13 — bridge from ch7 ending
     scene bg_cheng_bunker with fade             # PLACEHOLDER — bunker corridor
     play music ost_ch8_tunnel fadein 2.0        # PLACEHOLDER — tunnel theme

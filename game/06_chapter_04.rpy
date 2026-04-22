@@ -177,7 +177,7 @@ define audio.amb_tunnel           = "audio/ambient/amb_tunnel.ogg"             #
 # =============================================================================
 
 label chapter_4:
-
+    $ save_name = "Chapter 4"
     # PDF p149
     scene cg_black with fade                    # PLACEHOLDER — black screen
     play music ost_mjoll_aftermath fadein 2.0   # PLACEHOLDER — dark aftermath theme

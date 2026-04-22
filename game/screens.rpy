@@ -1,4 +1,8 @@
-﻿# Initialization
+﻿# ==========================================
+#               screens.rpy
+# ==========================================
+
+# Initialization
 init offset = -1
 
 # Styles
@@ -66,12 +70,9 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
-
-
 ###############################################################################
 # In-game screens
 ###############################################################################
-
 
 # Say screen ##################################################################
 #
@@ -103,9 +104,6 @@ screen say(who, what):
     # If there's a side image, display it above the text.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
-    
-    # Add voice auto-forward indicator
-    use voice_auto_indicator
 
 # Make the namebox available for styling through the Character object.
 init python:
@@ -279,16 +277,14 @@ style quick_button_text:
     properties gui.text_properties("quick_button")
 
 
-############################
+# ========================================
 # Main and Game Menu Screens
-############################
-
-## Navigation screen
-## This screen is included in the main and game menus, and provides navigation
-## to other menus, and to start the game.
+# ========================================
+# Navigation screen
+# This screen is included in the main and game menus, and provides navigation
+# to other menus, and to start the game.
 
 screen navigation():
-
     vbox:
         style_prefix "navigation"
         xpos gui.navigation_xpos
@@ -297,17 +293,14 @@ screen navigation():
 
         if main_menu: #main menu buttons
             textbutton _("Start") action Start()
-            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load Game") action ShowMenu("load")
             textbutton _("Settings") action ShowMenu("settings")
-            textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
                 textbutton _("Quit") action Quit(confirm=True)
 
         else: #in-game menu buttons
             textbutton _("History") action ShowMenu("history")
-            textbutton _("Save") action ShowMenu("save")
-            textbutton _("Load") action ShowMenu("load")
             textbutton _("Settings") action ShowMenu("settings")
 
             # indentation 
@@ -315,8 +308,6 @@ screen navigation():
                 textbutton _("End Replay") action EndReplay(confirm=True)
             else:
                 textbutton _("Main Menu") action MainMenu()
-
-            textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
                 textbutton _("Quit") action Quit(confirm=True)
@@ -598,164 +589,97 @@ screen load():
 # Save screen behaviour is completely unchanged from the Ren'Py default.
 
 screen file_slots(title):
+    key "game_menu" action NullAction()
+    use game_menu(title, scroll="viewport"):
+        vbox:
+            spacing 10
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+            if not persistent.save_list:
+                text "No saves found.":
+                    xalign 0.5
+                    color "#888888"
+                    size 26
+            else:
+                # Filter to only show slots that actually have save files
+                $ valid_saves = []
+                for entry in persistent.save_list:
+                    if renpy.can_load(str(entry["slot"])):
+                        $ valid_saves.append(entry)
+                
+                if not valid_saves:
+                    text "No saves found.":
+                        xalign 0.5
+                        color "#888888"
+                        size 26
+                else:
+                    vbox:
+                        style_prefix "slot"
+                        xalign 0.5
+                        spacing gui.slot_spacing
 
-    # Tracks which slot is currently showing its Load / Delete overlay.
-    # None means no slot is selected.
-    default selected_slot = None
-
-    use game_menu(title):
-
-        fixed:
-
-            # This ensures the input will get the enter event before any of the
-            # buttons do.
-            order_reverse True
-
-            # The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
-
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
-
-                input:
-                    style "page_label_text"
-                    value page_name_value
-
-            # The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
-
-                xalign 0.5
-                yalign 0.5
-
-                spacing gui.slot_spacing
-
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
-
-                    $ slot = i + 1
-
-                    if CurrentScreenName() == "save":
-
-                        # ───────────── SAVE SCREEN ───────────── 
-                        # Unchanged from the Ren'Py default: click saves,
-                        # Delete key deletes.
-                        button:
-                            action FileAction(slot)
-
-                            has vbox
-
-                            add FileScreenshot(slot) xalign 0.5
-
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                                style "slot_time_text"
-
-                            text FileSaveName(slot):
-                                style "slot_name_text"
-
-                            key "save_delete" action FileDelete(slot)
-
-                    else:
-
-                        # ─────────────  LOAD SCREEN ───────────── 
-                        # Click toggles the Load / Delete action overlay.
-                        # No keyboard Delete shortcut while hovering.
-                        vbox:
-                            spacing 6
+                        for idx, entry in enumerate(valid_saves):
+                            $ slot = entry["slot"]
+                            $ display_num = entry["num"]
 
                             button:
-                                # Toggle selection on this slot.
-                                # Re-clicking the active slot deselects it.
-                                action If(
-                                    selected_slot == slot,
-                                    true  = SetScreenVariable("selected_slot", None),
-                                    false = SetScreenVariable("selected_slot", slot)
+                                action FileAction(slot)
+                                xsize 1250
+                                ysize 240
+                                xpadding 0
+                                ypadding 0
+                                mouse "default"
+
+                                # Right-click to show delete option
+                                alternate ShowMenu(
+                                    "confirm_slot_delete",
+                                    slot=entry["slot"],
+                                    idx=idx
                                 )
 
-                                # Visual highlight so the player can see which
-                                # slot is currently expanded.
-                                selected (selected_slot == slot)
+                                has hbox:
+                                    spacing 0
+                                    xfill True
+                                    yalign 0.25
 
-                                has vbox
+                                frame:
+                                    xsize 240
+                                    ysize 150
+                                    xoffset 20
+                                    padding (8, 8, 8, 8)
+                                    background "#111111"
+                                    add FileScreenshot(slot):
+                                        xsize 224
+                                        ysize 164
+                                        fit "contain"
+                                        xalign 1
+                                        yalign 0.5
 
-                                add FileScreenshot(slot) xalign 0.5
+                                vbox:
+                                    yalign 0.5
+                                    spacing 8
+                                    xsize 980
+                                    xoffset 20
 
-                                text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                                    style "slot_time_text"
+                                    text "Save [display_num]":
+                                        size 28
+                                        color "#ffffff"
+                                        bold True
 
-                                text FileSaveName(slot):
-                                    style "slot_name_text"
+                                    text FileSaveName(slot):
+                                        size 22
+                                        color "#cccccc"
 
-                                # ── No 'key "save_delete"' binding here ──
-                                # Prevents accidental deletion while hovering.
-
-                            # Action overlay — only visible when this slot is
-                            # selected.
-                            if selected_slot == slot:
-                                hbox:
-                                    xalign 0.5
-                                    spacing 20
-
-                                    # LOAD — loads the save file immediately
-                                    textbutton _("Load"):
-                                        style "slot_action_button"
-                                        sensitive FileLoadable(slot)
-                                        action [
-                                            SetScreenVariable("selected_slot", None),
-                                            FileAction(slot)
-                                        ]
-
-                                    # DELETE — opens the confirm dialog
-                                    textbutton _("Delete"):
-                                        style "slot_action_button"
-                                        sensitive FileLoadable(slot)
-                                        action ShowMenu(
-                                            "slot_confirm_delete",
-                                            slot         = slot,
-                                            return_screen = "load"
-                                        )
-
-            # Buttons to access other pages.
-            vbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                hbox:
-                    xalign 0.5
-
-                    spacing gui.page_spacing
-
-                    textbutton _("<") action FilePagePrevious()
-                    key "save_page_prev" action FilePagePrevious()
-
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
-
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                    ## range(1, 10) gives the numbers from 1 to 9.
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
-
-                    textbutton _(">") action FilePageNext()
-                    key "save_page_next" action FilePageNext()
-
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Download Sync"):
-                            action DownloadSync()
-                            xalign 0.5
-
+                                    hbox:
+                                        spacing 20
+                                        text FileTime(slot, format=_("{#file_time}%H:%M"), empty=_("--:--")):
+                                            size 20
+                                            color "#aaaaaa"
+                                        text "|":
+                                            size 20
+                                            color "#555555"
+                                        text FileTime(slot, format=_("{#file_time}%m/%d/%Y"), empty=_("")):
+                                            size 20
+                                            color "#aaaaaa"
 
 # Slot action button style ####################################################
 #
@@ -785,28 +709,19 @@ style slot_action_button_text is default:
 #   slot          — integer slot number to delete
 #   return_screen — screen to return to after the action (default "load")
 
-screen slot_confirm_delete(slot, return_screen="load"):
-
-    ## Block all input to screens underneath.
+screen confirm_slot_delete(slot, idx):
     modal True
-
     zorder 200
-
-    ## Reuse the confirm style prefix so this inherits the game's existing
-    ## confirm frame background, text styles, and button styles.
     style_prefix "confirm"
-
     add "gui/overlay/confirm.png"
 
     frame:
-
         vbox:
             xalign 0.5
             yalign 0.5
             spacing 45
 
-            ## Prompt text
-            label _("Delete this save file?\nThis cannot be undone."):
+            label _("Delete this save?\nThis cannot be undone."):
                 style "confirm_prompt"
                 xalign 0.5
 
@@ -814,23 +729,20 @@ screen slot_confirm_delete(slot, return_screen="load"):
                 xalign 0.5
                 spacing 150
 
-                ## Confirm deletion
-                textbutton _("Delete"):
+                textbutton _("Yes"):
                     action [
-                        FileDelete(slot),
-                        ShowMenu(return_screen)
+                        Function(delete_save_slot, slot=slot, idx=idx),
+                        Hide("confirm_slot_delete"),
+                        renpy.restart_interaction
                     ]
 
-                ## Cancel — go back without changing anything
-                textbutton _("Cancel"):
-                    action ShowMenu(return_screen)
+                textbutton _("No"):
+                    action Hide("confirm_slot_delete")
 
-    ## Right-click and Escape both cancel
-    key "game_menu" action ShowMenu(return_screen)
+    key "game_menu" action Hide("confirm_slot_delete")
 
 
 ## Slot styles #################################################################
-
 style page_label is gui_label
 style page_label_text is gui_label_text
 style page_button is gui_button
@@ -880,6 +792,32 @@ init python:
         renpy.music.set_volume(vol, channel="voice")
         persistent.main_volume = vol
 
+    # ADDED: save list management
+    if persistent.save_list is None:
+        persistent.save_list = []
+    if persistent.save_counter is None:
+        persistent.save_counter = 0
+
+    cleaned = []
+    for entry in persistent.save_list:
+        if isinstance(entry, dict) and "slot" in entry and "num" in entry:
+            cleaned.append(entry)
+        # old integer entries are dropped — they had no num tracking
+    persistent.save_list = cleaned
+    renpy.save_persistent()
+
+    def delete_save_slot(slot, idx):
+        """Delete a save file and remove from persistent.save_list"""
+        slot_str = str(slot)
+        renpy.unlink_save(slot_str)
+        
+        # Remove from persistent.save_list by matching slot number
+        for i, entry in enumerate(persistent.save_list):
+            if entry["slot"] == slot:
+                persistent.save_list.pop(i)
+                break
+        renpy.save_persistent()
+
 # Apply saved volume on game start
 label after_load:
     if persistent.main_volume is not None:
@@ -888,195 +826,334 @@ label after_load:
 
 screen settings():
     tag menu
+    default tab = "general"  # ADDED: tracks active tab
+
     use game_menu(_("Settings"), scroll="viewport"):
-        
         style_prefix "pref"
         vbox:
             spacing 15
 
-            # TODO: add new checkbox code
-            # ────── Display ──────
-            if renpy.variant("pc") or renpy.variant("web"):
-                text _("Display"):
+            # ────── Tab Bar ──────
+            hbox:
+                spacing 10
+                textbutton _("General"):
+                    action SetScreenVariable("tab", "general")
+                    text_color (gui.accent_color if tab == "general" else "#888888")
+                    text_size 45
+                    text_hover_color "#ffffff"
+                    background (Frame("#1a6e8840", 5, 5) if tab == "general" else None)
+                    hover_background Frame("#1a6e8860", 5, 5)
+                    xpadding 12
+                    ypadding 6
+
+                textbutton _("Sounds"):
+                    action SetScreenVariable("tab", "sounds")
+                    text_color (gui.accent_color if tab == "sounds" else "#888888")
+                    text_size 45
+                    text_hover_color "#ffffff"
+                    # FIXED: was checking tab == "general"
+                    background (Frame("#1a6e8840", 5, 5) if tab == "sounds" else None)
+                    hover_background Frame("#1a6e8860", 5, 5)
+                    xpadding 12
+                    ypadding 6
+
+                textbutton _("Display"):
+                    action SetScreenVariable("tab", "display")
+                    text_color (gui.accent_color if tab == "display" else "#888888")
+                    text_size 45
+                    text_hover_color "#ffffff"
+                    # FIXED: was checking tab == "general"
+                    background (Frame("#1a6e8840", 5, 5) if tab == "display" else None)
+                    hover_background Frame("#1a6e8860", 5, 5)
+                    xpadding 12
+                    ypadding 6
+                    
+                textbutton _("About"):
+                    action SetScreenVariable("tab", "about")
+                    text_color (gui.accent_color if tab == "about" else "#888888")
+                    text_size 45
+                    text_hover_color "#ffffff"
+                    # FIXED: was checking tab == "general"
+                    background (Frame("#1a6e8840", 5, 5) if tab == "about" else None)
+                    hover_background Frame("#1a6e8860", 5, 5)
+                    xpadding 12
+                    ypadding 6
+                textbutton _("Controls"):
+                    action SetScreenVariable("tab", "controls")
+                    text_color (gui.accent_color if tab == "controls" else "#888888")
+                    text_size 45
+                    text_hover_color "#ffffff"
+                    # FIXED: was checking tab == "general"
+                    background (Frame("#1a6e8840", 5, 5) if tab == "controls" else None)
+                    hover_background Frame("#1a6e8860", 5, 5)
+                    xpadding 12
+                    ypadding 6
+
+            null height 15
+
+            # ────── Tab Content ──────
+            if tab == "general":
+                # ── Skip ──
+                text _("Skip"):
                     size 40
                     bold True
                     color gui.accent_color
-                
                 vbox:
                     xoffset 30
                     spacing 8
-                    
-                    # Conditional symbols for window/fullscreen
-                    $ win_symbol = "◉" if not preferences.fullscreen else "◯"
-                    textbutton "[win_symbol] Window":
-                        action Preference("display", "window")
-                        if not preferences.fullscreen:
+                    $ unseen_symbol = "☑" if preferences.skip_unseen else "☐"
+                    textbutton "[unseen_symbol] Unseen Text":
+                        action Preference("skip", "toggle")
+                        if preferences.skip_unseen:
                             text_color "#88ff88"
                         else:
                             text_color "#cccccc"
-                    
-                    $ full_symbol = "◉" if preferences.fullscreen else "◯"
-                    textbutton "[full_symbol] Fullscreen":
-                        action Preference("display", "fullscreen")
-                        if preferences.fullscreen:
+                    $ after_symbol = "☑" if preferences.skip_after_choices else "☐"
+                    textbutton "[after_symbol] After Choices":
+                        action Preference("after choices", "toggle")
+                        if preferences.skip_after_choices:
+                            text_color "#88ff88"
+                        else:
+                            text_color "#cccccc"
+                    $ trans_symbol = "☐" if preferences.transitions else "☑"
+                    textbutton "[trans_symbol] Transitions":
+                        action InvertSelected(Preference("transitions", "toggle"))
+                        if not preferences.transitions:
                             text_color "#88ff88"
                         else:
                             text_color "#cccccc"
                 null height 10
-                
-            # ────── Skip ──────
-            text _("Skip"):
-                size 40
-                bold True
-                color gui.accent_color
-            vbox:
-                xoffset 30
-                spacing 8
-                
-                # Unseen Text checkbox with conditional symbol
-                $ unseen_symbol = "☑" if preferences.skip_unseen else "☐"
-                textbutton "[unseen_symbol] Unseen Text":
-                    action Preference("skip", "toggle")
-                    if preferences.skip_unseen:
-                        text_color "#88ff88"
-                    else:
-                        text_color "#cccccc"
-                
-                # After Choices checkbox with conditional symbol  
-                $ after_symbol = "☑" if preferences.skip_after_choices else "☐"
-                textbutton "[after_symbol] After Choices":
-                    action Preference("after choices", "toggle")
-                    if preferences.skip_after_choices:
-                        text_color "#88ff88"
-                    else:
-                        text_color "#cccccc"
-                
-                # Transitions checkbox with conditional symbol
-                $ trans_symbol = "☐" if preferences.transitions else "☑"
-                textbutton "[trans_symbol] Transitions":
-                    action InvertSelected(Preference("transitions", "toggle"))
-                    if not preferences.transitions:
-                        text_color "#88ff88"
-                    else:
-                        text_color "#cccccc"
-            null height 10
 
-            # ────── Text Speed ──────
-            text _("Text Speed"):
-                size 40
-                bold True
-                color gui.accent_color
+                # ── Text Speed ──
+                text _("Text Speed"):
+                    size 40
+                    bold True
+                    color gui.accent_color
+                bar value Preference("text speed") style "pref_bar_thin"
+                null height 10
 
-            bar value Preference("text speed") style "pref_bar_thin"
-            null height 10
+                # ── Auto-Forward Time ──
+                text _("Auto-Forward Time"):
+                    size 40
+                    bold True
+                    color gui.accent_color
+                bar value Preference("auto-forward time") style "pref_bar_thin"
 
-            # ────── Auto-Forward Time ──────
-            text _("Auto-Forward Time"):
-                size 40
-                bold True
-                color gui.accent_color
-
-            bar value Preference("auto-forward time") style "pref_bar_thin"
-            null height 10
-
-            # ────── Sound ──────
-            text _("Sound"):
-                size 40
-                bold True
-                color gui.accent_color
-
-            vbox:
-                xoffset 30
-                spacing 8
-
-                label _("Main"):
-                    style "pref_label_text"
-                    text_size 18
-                bar:
-                    style "pref_bar_thin"
-                    value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
-                    changed apply_main_volume
-
-                if config.has_music:
-                    label _("Music"):
+            elif tab == "sounds":
+                # ── Sound ──
+                text _("Sound"):
+                    size 40
+                    bold True
+                    color gui.accent_color
+                vbox:
+                    xoffset 30
+                    spacing 8
+                    label _("Main"):
                         style "pref_label_text"
                         text_size 18
                     bar:
                         style "pref_bar_thin"
-                        value Preference("music volume")
+                        value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
+                        changed apply_main_volume
+                    if config.has_music:
+                        label _("Music"):
+                            style "pref_label_text"
+                            text_size 18
+                        bar:
+                            style "pref_bar_thin"
+                            value Preference("music volume")
+                    if config.has_sound:
+                        label _("SFX"):
+                            style "pref_label_text"
+                            text_size 18
+                        bar:
+                            style "pref_bar_thin"
+                            value Preference("sound volume")
+                    if config.has_voice:
+                        label _("Voice"):
+                            style "pref_label_text"
+                            text_size 18
+                        bar:
+                            style "pref_bar_thin"
+                            value Preference("voice volume")
+                    null height 5
+                    if config.has_music or config.has_sound or config.has_voice:
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            text_size 18
 
-                if config.has_sound:
-                    label _("SFX"):
-                        style "pref_label_text"
-                        text_size 18
-                    bar:
-                        style "pref_bar_thin"
-                        value Preference("sound volume")
+            elif tab == "display":
+                if renpy.variant("pc") or renpy.variant("web"):
+                    text _("Display"):
+                        size 40
+                        bold True
+                        color gui.accent_color
+                    vbox:
+                        xoffset 30
+                        spacing 8
+                        $ win_symbol = "◉" if not preferences.fullscreen else "◯"
+                        textbutton "[win_symbol] Window":
+                            action Preference("display", "window")
+                            if not preferences.fullscreen:
+                                text_color "#88ff88"
+                            else:
+                                text_color "#cccccc"
+                        $ full_symbol = "◉" if preferences.fullscreen else "◯"
+                        textbutton "[full_symbol] Fullscreen":
+                            action Preference("display", "fullscreen")
+                            if preferences.fullscreen:
+                                text_color "#88ff88"
+                            else:
+                                text_color "#cccccc"
+                else:
+                    text _("No display options available on this platform."):
+                        size 22
+                        color "#888888"
 
-                if config.has_voice:
-                    label _("Voice"):
-                        style "pref_label_text"
-                        text_size 18
-                    bar:
-                        style "pref_bar_thin"
-                        value Preference("voice volume")
+            elif tab == "about":
+                vbox:
+                    spacing 15
+                    text "[config.name!t]" size 35
+                    text _("Version [config.version!t]\n") size 25
+                    null height 20
+                    # TODO: insert text info
+                    null height 20
+                    text _("Created with Ren'Py [renpy.version_only]") size 20 color "#888888"
+                    text _("© 2025-2026 Temers Studio") size 20 color "#888888"
 
-                null height 5
+            elif tab == "controls":
+                default device = "keyboard"
+                vbox:
+                    spacing 15
+                    hbox:
+                        spacing 10
+                        textbutton _("Keyboard"):
+                            action SetScreenVariable("device", "keyboard")
+                            text_color (gui.accent_color if device == "keyboard" else "#888888")
+                            text_size 30
+                            text_hover_color "#ffffff"
+                            background (Frame("#1a6e8840", 5, 5) if device == "keyboard" else None)
+                            hover_background Frame("#1a6e8860", 5, 5)
+                            xpadding 12
+                            ypadding 6
+                        textbutton _("Mouse"):
+                            action SetScreenVariable("device", "mouse")
+                            text_color (gui.accent_color if device == "mouse" else "#888888")
+                            text_size 30
+                            text_hover_color "#ffffff"
+                            background (Frame("#1a6e8840", 5, 5) if device == "mouse" else None)
+                            hover_background Frame("#1a6e8860", 5, 5)
+                            xpadding 12
+                            ypadding 6
+                        if GamepadExists():
+                            textbutton _("Gamepad"):
+                                action SetScreenVariable("device", "gamepad")
+                                text_color (gui.accent_color if device == "gamepad" else "#888888")
+                                text_size 30
+                                text_hover_color "#ffffff"
+                                background (Frame("#1a6e8840", 5, 5) if device == "gamepad" else None)
+                                hover_background Frame("#1a6e8860", 5, 5)
+                                xpadding 12
+                                ypadding 6
 
-                if config.has_music or config.has_sound or config.has_voice:
-                    textbutton _("Mute All"):
-                        action Preference("all mute", "toggle")
-                        text_size 18
+                    null height 5
 
-            null height 10
+                    if device == "keyboard":
+                        vbox:
+                            spacing 8
+                            for key_label, key_desc in [
+                                ("Enter",      "Advances dialogue and activates the interface."),
+                                ("Space",      "Advances dialogue without selecting choices."),
+                                ("Arrow Keys", "Navigate the interface."),
+                                ("Escape",     "Accesses the game menu."),
+                                ("Ctrl",       "Skips dialogue while held down."),
+                                ("Tab",        "Toggles dialogue skipping."),
+                                ("Page Up",    "Rolls back to earlier dialogue."),
+                                ("Page Down",  "Rolls forward to later dialogue."),
+                                ("H",          "Hides the user interface."),
+                                ("S",          "Takes a screenshot."),
+                                ("V",          "Toggles assistive self-voicing."),
+                                ("Shift+A",    "Opens the accessibility menu."),
+                            ]:
+                                hbox:
+                                    xsize 850
+                                    spacing 0
+                                    text "[key_label]":
+                                        xsize 200
+                                        xalign 0.0
+                                        textalign 0.0
+                                        size 30
+                                        color gui.accent_color
+                                        yalign 0.5
+                                    null width 20
+                                    text "[key_desc]":
+                                        xsize 620
+                                        size 30
+                                        color "#dddddd"
+                                        yalign 0.5
 
-            # ────── Autoplay ──────
-            text _("Autoplay"):
-                size 40
-                bold True
-                color gui.accent_color
+                    elif device == "mouse":
+                        vbox:
+                            spacing 8
+                            for key_label, key_desc in [
+                                ("Left Click",       "Advances dialogue and activates the interface."),
+                                ("Middle Click",     "Hides the user interface."),
+                                ("Right Click",      "Accesses the game menu."),
+                                ("Mouse Wheel Up",   "Rolls back to earlier dialogue."),
+                                ("Mouse Wheel Down", "Rolls forward to later dialogue."),
+                            ]:
+                                hbox:
+                                    xsize 850
+                                    spacing 0
+                                    text "[key_label]":
+                                        xsize 200
+                                        xalign 0.0
+                                        textalign 0.0
+                                        size 30
+                                        color gui.accent_color
+                                        yalign 0.5
+                                    null width 20
+                                    text "[key_desc]":
+                                        xsize 620
+                                        size 30
+                                        color "#dddddd"
+                                        yalign 0.5
 
-            vbox:
-                xoffset 30
-                spacing 8
-
-                hbox:
-                    spacing 20
-
-                    $ off_symbol = "◉" if not persistent.voice_auto_forward else "◯"
-                    textbutton "[off_symbol] Off":
-                        action SetField(persistent, "voice_auto_forward", False)
-                        text_size 22
-                        if not persistent.voice_auto_forward:
-                            text_color "#88ff88"
-                        else:
-                            text_color "#cccccc"
-
-                    $ on_symbol = "◉" if persistent.voice_auto_forward else "◯"
-                    textbutton "[on_symbol] On (with voice)":
-                        action SetField(persistent, "voice_auto_forward", True)
-                        text_size 22
-                        if persistent.voice_auto_forward:
-                            text_color "#88ff88"
-                        else:
-                            text_color "#cccccc"
-
-                if persistent.voice_auto_forward:
-                    text _("Automatically advances after voice lines finish"):
-                        size 16
-                        color "#aaaaaa"
-                        italic True
-                        yoffset 5
-
-            #  ────── About  ──────
-            null height (2 * gui.pref_spacing)
-
-            textbutton _("About"):
-                action ShowMenu("about")
-                xalign 0.0
-                text_size 40
-                text_color gui.accent_color
-                text_hover_color "#ffcc88"
+                    elif device == "gamepad":
+                        vbox:
+                            spacing 8
+                            for key_label, key_desc in [
+                                ("Right Trigger\nA/Bottom Button", "Advances dialogue and activates the interface."),
+                                ("Left Trigger\nLeft Shoulder",    "Rolls back to earlier dialogue."),
+                                ("Right Shoulder",                 "Rolls forward to later dialogue."),
+                                ("D-Pad, Sticks",                  "Navigate the interface."),
+                                ("Start, Guide,\nB/Right Button",  "Accesses the game menu."),
+                                ("Y/Top Button",                   "Hides the user interface."),
+                            ]:
+                                hbox:
+                                    xsize 850
+                                    spacing 0
+                                    text "[key_label]":
+                                        xsize 200
+                                        xalign 0.0
+                                        textalign 0.0   
+                                        size 30
+                                        color gui.accent_color
+                                        yalign 0.5
+                                        layout "subtitle"
+                                    null width 20
+                                    text "[key_desc]":
+                                        xsize 620
+                                        size 30
+                                        color "#dddddd"
+                                        yalign 0.5
+                            if tab == "controls" and device == "gamepad":
+                                textbutton _("Calibrate"):
+                                    action GamepadCalibrate()
+                                    xpos 5
+                                    yalign 1.75
+                                    yoffset 70
+                                    style "return_button"
 
 style pref_bar_thin is bar:
     xsize 525
@@ -1255,8 +1332,8 @@ style history_label:
 style history_label_text:
     xalign 0.5
 
-# TODO: should appear in settings page instead
-# Help screen #################################################################
+
+# Controls (previously Help)
 #
 # A screen that gives information about key and mouse bindings. It uses other
 # screens (keyboard_help, mouse_help, and gamepad_help) to display the actual help.

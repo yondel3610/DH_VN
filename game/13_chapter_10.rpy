@@ -160,7 +160,7 @@ define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"         # PL
 # =============================================================================
 
 label chapter_10:
-
+    $ save_name = "Chapter 10"
     # [COMMENT: bg_white_screen — dream void, warm shimmer]
     scene bg_white_screen with fade             # PLACEHOLDER — white dream void
     play music ost_ch10_dream fadein 2.0        # PLACEHOLDER — dream theme

@@ -203,7 +203,7 @@ define audio.amb_blizzard         = "audio/ambient/amb_blizzard.ogg"            
 # =============================================================================
 
 label chapter_6:
-
+    $ save_name = "Chapter 6"
     scene bg_lab_bedroom with fade              # PLACEHOLDER — lab bedroom, dim lamp in corner
 
     play music ost_lab_dim fadein 2.0           # PLACEHOLDER — quiet late lab theme

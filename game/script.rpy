@@ -11,6 +11,11 @@ define slow_fade = Fade(0.3, 0.5, 0.3)
 define fast_dissolve = Dissolve(0.2)    
 
 label start:
+    $ persistent.save_counter = getattr(persistent, 'save_counter', 0) + 1
+    $ new_slot = persistent.save_counter
+    $ persistent.save_list.append({"slot": new_slot, "num": persistent.save_counter})
+    $ renpy.save_persistent()
+    $ _save_name = "Prologue"
     jump prologue
 
 # Custom chapter start transition

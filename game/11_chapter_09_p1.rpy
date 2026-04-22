@@ -115,7 +115,7 @@ define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PL
 # =============================================================================
 
 label chapter_9:
-
+    $ save_name = "Chapter 9"
     # [COMMENT: bg_lab_bedroom — warm spare room, Elias on bed with chocolate]
     scene bg_lab_bedroom with fade              # PLACEHOLDER — lab bedroom
     play music ost_ch9_morning fadein 2.0       # PLACEHOLDER — gentle morning theme

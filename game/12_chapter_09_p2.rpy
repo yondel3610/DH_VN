@@ -116,7 +116,7 @@ define audio.amb_hilltop_night   = "audio/ambient/amb_hilltop_night.ogg"   # PLA
 # =============================================================================
 
 label chapter_09_p2:
-
+    $ save_name = "Chapter 9"
     # [COMMENT: bg_hot_spring — natural cavern hot spring, lanterns, steam]
     scene bg_hot_spring with dissolve           # PLACEHOLDER — hot spring
     play music ost_ch9_hotspring fadein 2.0     # PLACEHOLDER — hot spring theme

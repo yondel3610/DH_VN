@@ -242,6 +242,7 @@ screen chapter_title_screen(chapter_num, chapter_title, subtitle="", duration=2.
 # =============================================================================
 
 label prologue:
+    $ save_name = "Prologue"
     # -------------------------------------------------------------------------
     # OPENING — Silence and darkness
     # -------------------------------------------------------------------------

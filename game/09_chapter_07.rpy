@@ -98,7 +98,7 @@ define audio.amb_bunker        = "audio/ambient/amb_bunker.ogg"            # PLA
 # =============================================================================
 
 label chapter_7:
-
+    $ save_name = "Chapter 7"
     # ch7 line 1-18
     scene bg_white_screen with fade             # PLACEHOLDER — white void
     play music ost_ch7_dream fadein 1.0         # PLACEHOLDER — urgent dream theme

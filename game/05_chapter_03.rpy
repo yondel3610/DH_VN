@@ -243,7 +243,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # =============================================================================
 
 label chapter_3:
-
+    $ save_name = "Chapter 3"
     # -------------------------------------------------------------------------
     # OPENING — Trek through the Iceclaw Pass
     # BG: bg_mjoll_icelands_journey

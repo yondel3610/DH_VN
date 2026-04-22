@@ -193,7 +193,7 @@ define audio.amb_kitchen         = "audio/ambient/amb_kitchen.ogg"          # PL
 # =============================================================================
 
 label chapter_5:
-
+    $ save_name = "Chapter 5"
     scene bg_tianho_underground_1 with fade     # PLACEHOLDER — natural cave tunnel
     play music ost_tunnel_move fadein 2.0       # PLACEHOLDER — tense tunnel theme
     play audio amb_tunnel_drip loop fadein 1.5  # PLACEHOLDER — dripping water ambient

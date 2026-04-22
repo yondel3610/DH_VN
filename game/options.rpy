@@ -16,7 +16,7 @@ define config.name = _("Dragon's Heart: Crimson Rebirth")
 
 ## The version of the game.
 
-define config.version = "alpha 1.0.0"
+define config.version = "alpha 1.1.0"
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
@@ -214,3 +214,10 @@ init python:
     def should_show_quick_menu():
         return True  # Change to False to disable by default
 
+init python:
+    preferences.skip_unseen = False
+    if preferences.text_cps == 0:
+        preferences.text_cps = 40
+
+init python:
+    config.keymap['game_menu'].remove('mouseup_3')

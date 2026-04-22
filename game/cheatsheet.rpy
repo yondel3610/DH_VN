@@ -228,3 +228,9 @@
 #   dissolve  = cross-dissolve,     ~0.5s  (smooth cuts, sprite changes)
 #   flash     = white flash,        ~0.5s  (explosions, divine moments)
 #   None      = instant hard cut           (no animation at all)
+
+#                           REMOVING .rpyc files
+# ----------------------------------------------------------------------------------------
+# Get-ChildItem -Recurse -Filter *.rpyc | Remove-Item -Force -ErrorAction SilentlyContinue
+# ----------------------------------------------------------------------------------------
+
