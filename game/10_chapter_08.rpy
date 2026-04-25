@@ -47,12 +47,7 @@
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-# All previous characters loaded from ch1–ch7.
-# New for chapter 8:
-
-define hwan_sik   = Character("Baek Hwan-sik",  color="#c0c0c0")  # Silver — Kyeongjang royal guard, mind-letter voice
-define spirit     = Character("Spirit",          color="#ffd700")  # Gold — voice of the sealed chamber's spirit
-define olympia    = Character("Empress Olympia", color="#9370db")  # (reused — illusion in paintings)
+# moved to compiled file
 
 # Note: magnus, yaoguai_king, feng, aoi, svante, niko, chung_hee, yuxuan, weng, tim, tedda,
 #       roboto, gao, jiang, elias, dorian, vasily already defined in prior chapters.

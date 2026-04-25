@@ -40,6 +40,11 @@
 # All paths are relative to the /game/ folder.
 # =============================================================================
 # TODO: add image assets
+# --- Character Sprites ----
+# image char_name:
+#     At("images/path.png", sprite_highlight("name in game"))
+#     fit "contain"
+
 # --- Backgrounds: Dorian's Room and Hotel ---
 image bg_tianho_dorians_room:
     "images/Assets/Background/Livingroom.LightsON.1920x1080.png"
@@ -170,7 +175,6 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # image cg_vasily_first_meeting  = "images/cg/cg_vasily_first_meeting.png"                # PLACEHOLDER
 # Description: Vasily destroying a yaoguai with light — courtyard, first impression (p43)
 
-
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
@@ -250,7 +254,6 @@ label chapter_1:
 
     dorian "My heart, you know how important tomorrow is. Everything has to be perfect."
 
-    # ADDED LATER: Elara sighs before her line (PDF p7)
     "She sighs."
 
     elara "I know, Dorian. I know how important it is. The entire world will be watching as Kyeongjang's emperor makes his first public appearance in centuries."

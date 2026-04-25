@@ -221,3 +221,5 @@ init python:
 
 init python:
     config.keymap['game_menu'].remove('mouseup_3')
+
+define config.developer = True  # change to False for release

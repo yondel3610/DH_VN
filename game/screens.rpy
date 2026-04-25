@@ -599,87 +599,76 @@ screen file_slots(title):
                     xalign 0.5
                     color "#888888"
                     size 26
-            else:
-                # Filter to only show slots that actually have save files
-                $ valid_saves = []
-                for entry in persistent.save_list:
-                    if renpy.can_load(str(entry["slot"])):
-                        $ valid_saves.append(entry)
                 
-                if not valid_saves:
-                    text "No saves found.":
-                        xalign 0.5
-                        color "#888888"
-                        size 26
-                else:
-                    vbox:
-                        style_prefix "slot"
-                        xalign 0.5
-                        spacing gui.slot_spacing
+            else:
+                vbox:
+                    style_prefix "slot"
+                    xalign 0.5
+                    spacing gui.slot_spacing
 
-                        for idx, entry in enumerate(valid_saves):
-                            $ slot = entry["slot"]
-                            $ display_num = entry["num"]
+                    for idx, entry in enumerate(persistent.save_list):
+                        $ slot = entry["slot"]
+                        $ display_num = entry["num"]
 
-                            button:
-                                action FileAction(slot)
-                                xsize 1250
-                                ysize 240
-                                xpadding 0
-                                ypadding 0
-                                mouse "default"
+                        button:
+                            action FileAction(slot)
+                            xsize 1250
+                            ysize 240
+                            xpadding 0
+                            ypadding 0
+                            mouse "default"
 
-                                # Right-click to show delete option
-                                alternate ShowMenu(
-                                    "confirm_slot_delete",
-                                    slot=entry["slot"],
-                                    idx=idx
-                                )
+                            # Right-click to show delete option
+                            alternate ShowMenu(
+                                "confirm_slot_delete",
+                                slot=entry["slot"],
+                                idx=idx
+                            )
 
-                                has hbox:
-                                    spacing 0
-                                    xfill True
-                                    yalign 0.25
+                            has hbox:
+                                spacing 0
+                                xfill True
+                                yalign 0.25
 
-                                frame:
-                                    xsize 240
-                                    ysize 150
-                                    xoffset 20
-                                    padding (8, 8, 8, 8)
-                                    background "#111111"
-                                    add FileScreenshot(slot):
-                                        xsize 224
-                                        ysize 164
-                                        fit "contain"
-                                        xalign 1
-                                        yalign 0.5
-
-                                vbox:
+                            frame:
+                                xsize 240
+                                ysize 150
+                                xoffset 20
+                                padding (8, 8, 8, 8)
+                                background "#111111"
+                                add FileScreenshot(slot):
+                                    xsize 224
+                                    ysize 164
+                                    fit "contain"
+                                    xalign 1
                                     yalign 0.5
-                                    spacing 8
-                                    xsize 980
-                                    xoffset 20
 
-                                    text "Save [display_num]":
-                                        size 28
-                                        color "#ffffff"
-                                        bold True
+                            vbox:
+                                yalign 0.5
+                                spacing 8
+                                xsize 980
+                                xoffset 20
 
-                                    text FileSaveName(slot):
-                                        size 22
-                                        color "#cccccc"
+                                text "Save [display_num]":
+                                    size 28
+                                    color "#ffffff"
+                                    bold True
 
-                                    hbox:
-                                        spacing 20
-                                        text FileTime(slot, format=_("{#file_time}%H:%M"), empty=_("--:--")):
-                                            size 20
-                                            color "#aaaaaa"
-                                        text "|":
-                                            size 20
-                                            color "#555555"
-                                        text FileTime(slot, format=_("{#file_time}%m/%d/%Y"), empty=_("")):
-                                            size 20
-                                            color "#aaaaaa"
+                                text FileSaveName(slot):
+                                    size 22
+                                    color "#cccccc"
+
+                                hbox:
+                                    spacing 20
+                                    text FileTime(slot, format=_("{#file_time}%H:%M"), empty=_("--:--")):
+                                        size 20
+                                        color "#aaaaaa"
+                                    text "|":
+                                        size 20
+                                        color "#555555"
+                                    text FileTime(slot, format=_("{#file_time}%m/%d/%Y"), empty=_("")):
+                                        size 20
+                                        color "#aaaaaa"
 
 # Slot action button style ####################################################
 #
@@ -807,15 +796,10 @@ init python:
     renpy.save_persistent()
 
     def delete_save_slot(slot, idx):
-        """Delete a save file and remove from persistent.save_list"""
-        slot_str = str(slot)
-        renpy.unlink_save(slot_str)
-        
-        # Remove from persistent.save_list by matching slot number
-        for i, entry in enumerate(persistent.save_list):
-            if entry["slot"] == slot:
-                persistent.save_list.pop(i)
-                break
+        # CHANGED: convert slot to string for renpy.unlink_save
+        renpy.unlink_save(str(slot))
+        if idx < len(persistent.save_list):
+            persistent.save_list.pop(idx)
         renpy.save_persistent()
 
 # Apply saved volume on game start

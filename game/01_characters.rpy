@@ -61,8 +61,8 @@ define ekaterina_ghost= Character("Queen Ekaterina",   color="#d8b4fe", callback
 define elias          = Character("Elias",             color="#fcd34d", callback=name_callback, cb_name="elias")  # Warm yellow — toddler, innocent
 define niko_raven     = Character("Niko",              color="#e0c8a0", callback=name_callback, cb_name="niko_raven")  # Parchment — raven form
 define weng           = Character("Miss Weng",         color="#f97316", callback=name_callback, cb_name="weng")  # Orange — Yuxuan's chef/caretaker
-define boy_ald_soldier= Character("Boy Aldorith",      color="#cd5c5c", callback=name_callback, cb_name="boy_ald_soldier")  # Muted red — Gustav's soldier
-define girl_ald_soldier=Character("Girl Aldorith",     color="#cd5c5c", callback=name_callback, cb_name="girl_ald_soldier")  # Muted red — Gustav's soldier
+define boy_ald_soldier = Character("Boy Aldorith",      color="#cd5c5c", callback=name_callback, cb_name="boy_ald_soldier")  # Muted red — Gustav's soldier
+define girl_ald_soldier =Character("Girl Aldorith",     color="#cd5c5c", callback=name_callback, cb_name="girl_ald_soldier")  # Muted red — Gustav's soldier
 
 # Chapter 4
 define chung_hee      = Character("Hyon Chung-hee",   color="#a78bfa", callback=name_callback, cb_name="chung_hee")  # Soft violet — deaf-mute Emperor of Kyeongjang

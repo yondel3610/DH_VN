@@ -91,10 +91,8 @@ define audio.ost_ch9_tavern      = "audio/music/ost_ch9_tavern.ogg"         # PL
 # Tianho street festival atmosphere — distant drums, flutes
 
 define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"        # PLACEHOLDER
-
 define audio.amb_tianho_festival = "audio/ambient/amb_tianho_festival.ogg"  # PLACEHOLDER
 define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PLACEHOLDER
-
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES
