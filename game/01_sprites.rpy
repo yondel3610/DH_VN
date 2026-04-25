@@ -22,16 +22,20 @@
 # =============================================================================
 
 # Character list folders from assets:
-# roboto
-# yuxuan
 # dorian
+# yuxuan
 # elias
 # vasily
 # hyon chung-hee
 # magnus
+# niko
 # supply robot
+# roboto
 # svante
-
+# tim
+# weng
+# other chars folder (added)
+# single sprites from upper dir
 
 # TODO: fix file path
 # =============================================================================
@@ -463,7 +467,6 @@ image yuxuan ceremonial_sad:
 #   show roboto happy at far_left
 #   show roboto malfunction at far_right
 # =============================================================================
-
 # TODO: fix file path
 # =============================================================================
 # ROBOTO — ALL VARIANTS (5 sprites)
@@ -668,6 +671,123 @@ image magnus underwear_base:
     At("images/Assets/Character Sprites/Magnus Wyndham/Underwear/magnus base.png", sprite_highlight("magnus"))
     fit "contain"
 
+# TODO: bookmark niko
+# =============================================================================
+# NIKO TSUKUMO - All Sprite Variants
+# =============================================================================
+image niko normal_anger:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions anger.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_ignore:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions ignore.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_meditate:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions meditate.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_sad:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions sad.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_serious:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions serious.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_smile:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit emotions smile.png", sprite_highlight("niko"))
+    fit "contain"
+image niko normal_base:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal/niko tsukumo suit.png", sprite_highlight("niko"))
+    fit "contain"
+
+# =============================================================================
+# NIKO — NORMAL ALT POSES
+# =============================================================================
+image niko alt_annoyed:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal - Alternate Pose/niko tsukumo new pose annoyed.png", sprite_highlight("niko"))
+    fit "contain"
+image niko alt_disappointed:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal - Alternate Pose/niko tsukumo new pose dissapointed.png", sprite_highlight("niko"))
+    fit "contain"
+image niko alt_irritate:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal - Alternate Pose/niko tsukumo new pose irritate.png", sprite_highlight("niko"))
+    fit "contain"
+image niko alt_tense:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal - Alternate Pose/niko tsukumo new pose tense.png", sprite_highlight("niko"))
+    fit "contain"
+image niko alt_base:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Normal - Alternate Pose/niko tsukumo new pose.png", sprite_highlight("niko"))
+    fit "contain"
+
+# =============================================================================
+# NIKO — SLEEPWEAR
+# =============================================================================
+image niko sleepwear_anger:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama anger.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_ignore:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama ignore.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_meditate:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama meditate.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_sad:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama sad.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_serious:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama serious.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_smile:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama smile.png", sprite_highlight("niko"))
+    fit "contain"
+image niko sleepwear_base:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Sleepwear/niko tsukumo pajama.png", sprite_highlight("niko"))
+    fit "contain"
+
+# =============================================================================
+# NIKO — TIANHO CEREMONIAL
+# =============================================================================
+image niko ceremonial_anger:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe emotion anger.png", sprite_highlight("niko"))
+    fit "contain"
+image niko ceremonial_meditate:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe emotion meditate.png", sprite_highlight("niko"))
+    fit "contain"
+image niko ceremonial_sad:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe emotion sad.png", sprite_highlight("niko"))
+    fit "contain"
+image niko ceremonial_serious:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe emotion serious.png", sprite_highlight("niko"))
+    fit "contain"
+image niko ceremonial_smile:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe emotion smile.png", sprite_highlight("niko"))
+    fit "contain"
+image niko ceremonial_base:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Tianho Ceremonial/niko tsukumo robe.png", sprite_highlight("niko"))
+    fit "contain"
+
+# =============================================================================
+# NIKO — UNDERWEAR
+# =============================================================================
+image niko underwear_base:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo base.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_anger:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions anger.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_ignore:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions ignore.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_meditate:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions meditate.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_sad:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions sad.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_serious:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions serious.png", sprite_highlight("niko"))
+    fit "contain"
+image niko underwear_smile:
+    At("images/Assets/Character Sprites/Niko Tsukumo/Underwear/niko tsukumo emotions smile.png", sprite_highlight("niko"))
+    fit "contain"
+
 # TODO: fix file path
 # =============================================================================
 # SVANTE - All Sprite Variants
@@ -691,9 +811,9 @@ image svante normal_base:
     At("images/Assets/Character Sprites/Svante Nordstrom/Normal/svante armor.png", sprite_highlight("svante"))
     fit "contain"
 
-# =============================================================================
+# ===============================
 # SVANTE — NORMAL ALT POSES
-# =============================================================================
+# ===============================
 image svante alt_catface:
     At("images/Assets/Character Sprites/Svante Nordstrom/Normal - Alternate Pose/svante armor new pose catface.png", sprite_highlight("svante"))
     fit "contain"
@@ -710,9 +830,9 @@ image svante alt_base:
     At("images/Assets/Character Sprites/Svante Nordstrom/Normal - Alternate Pose/svante armor new pose.png", sprite_highlight("svante"))
     fit "contain"
 
-# =============================================================================
+# ===============================
 # SVANTE — SLEEPWEAR
-# =============================================================================
+# ===============================
 image svante sleepwear_angry:
     At("images/Assets/Character Sprites/Svante Nordstrom/Sleepwear/svante pajama angry.png", sprite_highlight("svante"))
     fit "contain"
@@ -732,9 +852,9 @@ image svante sleepwear_base:
     At("images/Assets/Character Sprites/Svante Nordstrom/Sleepwear/svante pajama.png", sprite_highlight("svante"))
     fit "contain"
 
-# =============================================================================
+# ===============================
 # SVANTE — TIANHO CEREMONIAL
-# =============================================================================
+# ===============================
 image svante ceremonial_angry:
     At("images/Assets/Character Sprites/Svante Nordstrom/Tianho Ceremonial/svante robe angry.png", sprite_highlight("svante"))
     fit "contain"
@@ -754,9 +874,9 @@ image svante ceremonial_base:
     At("images/Assets/Character Sprites/Svante Nordstrom/Tianho Ceremonial/svante robe.png", sprite_highlight("svante"))
     fit "contain"
 
-# =============================================================================
+# ===============================
 # SVANTE — UNDERWEAR
-# =============================================================================
+# ===============================
 image svante underwear_angry:
     At("images/Assets/Character Sprites/Svante Nordstrom/Underwear/svante emotions angry.png", sprite_highlight("svante"))
     fit "contain"
@@ -816,6 +936,7 @@ image olympia:
     At("images/Assets/Character Sprites/Other Characters/empress olympia.png", sprite_highlight("olympia"))
     fit "contain"
 
+# TODO: bookmark
 # =============================================================================
 # SINGLE SPRITES
 # =============================================================================
