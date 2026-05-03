@@ -45,9 +45,10 @@
 #     At("images/path.png", sprite_highlight("name in game"))
 #     fit "contain"
 
+# TODO: fix bg based on the script
 # --- Backgrounds: Dorian's Room and Hotel ---
-image bg_tianho_dorians_room:
-    "images/Assets/Background/Livingroom.LightsON.1920x1080.png"
+image dorians_room:
+    "images/Assets/Background/bg_tianho_dorians_room.png"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
     yalign 1.0
@@ -66,39 +67,27 @@ image bg_tianho_deng_blossom:
     xalign 0.5
     yalign 1.0
 
-image bg_tianho_fanrong_square: #TODO: ask for fanrong square assets
-    "images/Assets/Background/" 
+image bg_tianho_fanrong_square: #TODO: ask for fanrong square assets | use celeb instead if none 
+    "images/Assets/Background/Tianho Celeb.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
-image bg_tianho_xiangli_stalls:
+image bg_tianho_xiangli_stalls: # XIANGLI STALLS ARE def tianho food stalls from files | reuse for BG - Tianho Food Stalls diff lighting
     "images/Assets/Background/Tianho Food Stalls.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
-image bg_tianho_zhong_promenade:
-    "images/Assets/Background"
+image bg_tianho_zhong_promenade: # tianho proper at night in files
+    "images/Assets/Background/Tianho - night.jpg"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
 # --- Backgrounds: Castle and Ceremony ---
 image bg_tianho_castle_interior:
-    "images/backgrounds/bg_tianho_castle_interior.png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_tianho_castle_balcony:
-    "images/backgrounds/bg_tianho_castle_balcony.png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_tianho_celeb_deng:
-    "images/backgrounds/bg_tianho_celeb_deng.png"
+    "images/backgrounds/bg_tianho_castle_interior.png" # PLACEHOLDER ASSET
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -117,63 +106,55 @@ image bg_dream_white:
     yalign 1.0
 
 # --- Backgrounds: Battle ---
-image bg_tianho_castle_gate:
-    "images/backgrounds/bg_tianho_castle_gate.png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
 image bg_tianho_castle_interior_battle:
     "images/backgrounds/bg_tianho_castle_interior_battle.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
-image bg_tianho_stairway:
-    "images/backgrounds/bg_tianho_stairway.png"
+image bg_tianho_city_on_fire:
+    "images/Assets/Background/Tianho in fire.jpg" # city proper on fire
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
-image bg_tianho_city_on_fire:
-    "images/backgrounds/bg_tianho_city_on_fire.png"
+image bg_tianho_food_stalls_fire: # TIANHO FOOD STALLS ON FIRE ASSET
+    "images/Assets/Background/Tianho Food Stalls on fire.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
 image bg_tianho_underground_2:
-    "images/backgrounds/bg_tianho_underground_2.png"
+    "images/Assets/Background/Underground Lights Off (1).png" # TODO: check if correct
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
-# --- ADDED LATER: Additional backgrounds found in PDF ---
-# image bg_tianho_food_stalls_fire = "images/backgrounds/bg_tianho_food_stalls_fire.png"  # PLACEHOLDER
-# Description: Xiangli food stalls on fire — battle aftermath (p42, 54)
-# image bg_tianho_imperial_gardens = "images/backgrounds/bg_tianho_imperial_gardens.png"  # PLACEHOLDER
-# Description: Tianho Imperial Gardens — daytime, preparation for the ceremony (p29)
-# image bg_tianho_city_proper_night = "images/backgrounds/bg_tianho_city_proper_night.png" # PLACEHOLDER
-# Description: Tianho city streets at night — used for post-fireworks walkback (p20)
-# image bg_tianho_celeb_fanrong   = "images/backgrounds/bg_tianho_celeb_fanrong.png"      # PLACEHOLDER
-# Description: Fanrong Dragon Square during festival — dragon dancers, drums (p11)
-
 # --- CGs (Full-screen Event Illustrations) ---
-image cg_emperor_arrival         = "images/cg/cg_emperor_arrival.png"                    # PLACEHOLDER
-image cg_prosperity_dragon_dream = "images/cg/cg_prosperity_dragon_dream.png"            # PLACEHOLDER
-image cg_olympia_vision          = "images/cg/cg_olympia_vision.png"                     # PLACEHOLDER
-image cg_elara_children_death    = "images/cg/cg_elara_children_death.png"               # PLACEHOLDER
-image cg_winged_god_appears      = "images/cg/cg_winged_god_appears.png"                 # PLACEHOLDER
-image cg_taotie_charge           = "images/cg/cg_taotie_charge.png"                      # PLACEHOLDER
-image cg_feng_eye_injury         = "images/cg/cg_feng_eye_injury.png"                    # PLACEHOLDER
-image cg_black                   = "images/cg/cg_black.png"                              # PLACEHOLDER
+# TODO: NOTE: the CG is a transparent png
+image cg_emperor_arrival:
+    "images/Assets/Illustrations/4 - Empress Olympia and Minjoon.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
-# --- ADDED LATER: Additional CGs found in PDF ---
-# image cg_prosperity_dragon_balcony = "images/cg/cg_prosperity_dragon_balcony.png"       # PLACEHOLDER
-# Description: Prosperity Dragon on Dorian's balcony — scales red and gold, overlooking Tianho (p21)
-# image cg_yaoguai_king_reveal   = "images/cg/cg_yaoguai_king_reveal.png"                # PLACEHOLDER
-# Description: Yaoguai King holding Elara's severed head — the central trauma reveal (p56)
-# image cg_vasily_first_meeting  = "images/cg/cg_vasily_first_meeting.png"                # PLACEHOLDER
-# Description: Vasily destroying a yaoguai with light — courtyard, first impression (p43)
+image cg_taotie_fight:
+    "images/Assets/Illustrations/6 - Taotie Fight.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_feng_eye_injury:
+    "images/Assets/Illustrations/7 - Taotie scratches Feng_s eye.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_elara_children_death:
+    "images/Assets/Illustrations/8 - Yaoguai King kills Elara.jpeg"     
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
@@ -185,13 +166,13 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # TODO: fix audio
 
 # --- Music ---
-# define audio.ost_tianho_festival    # upbeat plays during the city exploration sequence
-# define audio.ost_emperor_arrival    # Grand ceremonial fanfare — plays as Emperor Min-joon enters
-# define audio.ost_dream_dragon       # ethereal — prosperity Dragon dream sequence
-# define audio.ost_tension_rising
-# define audio.ost_battle_tianho
-# define audio.ost_taotie_battle
-# define audio.ost_tragedy
+define audio.ost_tianho_festival = "audio/sfx and ost/01_ch1/ost/ost_tianho_festival_music.ogg"   # upbeat plays during the city exploration sequence
+define audio.ost_emperor_arrival = "audio/sfx and ost/01_ch1/ost/ost_emperor_arrival.ogg"   # Grand ceremonial fanfare — plays as Emperor Min-joon enters
+define audio.ost_dream_dragon    = "audio/sfx and ost/01_ch1/ost/ost_dream_dragon.ogg" # DONE | main theme na rin
+define audio.ost_tension_rising = "audio/sfx and ost/01_ch1/ost"
+define audio.ost_battle_tianho = "audio/sfx and ost/01_ch1/ost"
+define audio.ost_taotie_battle = "audio/sfx and ost/01_ch1/ost/beast sounds/zapsplat_horror_demon_monster_evil_scream_screech_114117.ogg"
+define audio.ost_tragedy = "audio/sfx and ost/01_ch1/ost/ost_tragedy.ogg"
 
 # --- SFX ---
 # define audio.sfx_fireworks          # find free fireworks sfx
@@ -200,7 +181,7 @@ image cg_black                   = "images/cg/cg_black.png"                     
 # define audio.sfx_stone_spike        # stone spike
 # define audio.sfx_wind_blast         # wind blast from other games
 # define audio.sfx_heartbeat          # heartbeat audio
-# define audio.sfx_taotie_lava        # lava cracking SFX
+# define audio.sfx_taotie_lava        # lava cracking SFX DONE
 # define audio.amb_festival_crowd     # festival crowd | to be called again in ch2
 # define audio.amb_castle_battle      # get from asian war dramas
 
@@ -225,26 +206,27 @@ label chapter_1:
     $ save_name = "Chapter 1"
     # -------------------------------------------------------------------------
     # OPENING — Dorian's Room, evening
-    # BG: bg_tianho_dorians_room
+    # BG: dorians_room
     # Music: ost_tianho_festival (soft intro volume)
     # -------------------------------------------------------------------------
+    scene black
+    with fade
+    pause 0.5
+    scene dorians_room with fade
+    # play music ost_tianho_festival volume 0.4 fadein 2.0  # PLACEHOLDER — ost_tianho_festival
 
-    scene bg_tianho_dorians_room with fade
-
-    play music ost_tianho_festival volume 0.4 fadein 2.0  # PLACEHOLDER — ost_tianho_festival
-
-    # ADDED LATER: Elara's two opening lines before narration begin (PDF p6)
+    show elara at right_char
     elara "Tianho… Tetrad above… It's even more beautiful than the stories."
     elara "Dorian, we should take the kids to see the market! Lucas is going to love this!"
 
+    show dorian serious at left_char
     "I exhale a slow breath, watching the evening lights bathe the city of Tianho through my binoculars, reflecting off the rivers that weave through its heart like threads of silver."
     "The air smells of spiced tea and roasted chestnuts from the market stalls below, mingling with the faint fragrance of cherry blossoms that line the cobblestone streets."
     "The streets below are bustling with life, lined with towering pagodas adorned in colors of crimson, gold, and jade. Lanterns of every imaginable hue float above the streets, their light glowing softly."
 
-    # show elara happy at right with dissolve   # PLACEHOLDER — Elara sprite (leaning on doorframe, amused)
-
     elara "Dorian. Are you even listening to me? You've been standing there for a while now."
 
+    show dorian sad at left_char
     "I turn to face her, sighing as I pocket my binoculars. She's leaning against the doorframe, arms crossed, a wry smile playing on her lips."
 
     elara "You've been standing there long enough to memorize every single detail of the city. Meanwhile, the children are pestering me about seeing the nighttime lantern markets."
@@ -252,20 +234,23 @@ label chapter_1:
 
     "I sigh, turning back to the view."
 
+    show dorian neutral at left_char
     dorian "My heart, you know how important tomorrow is. Everything has to be perfect."
 
     "She sighs."
 
     elara "I know, Dorian. I know how important it is. The entire world will be watching as Kyeongjang's emperor makes his first public appearance in centuries."
+
+    show dorian serious at left_char
     dorian "For centuries, Kyeongjang was nothing more than a legend. Many doubted it even existed, and now, their emperor is emerging from the shadows to reconnect."
     dorian "This meeting isn't just a reunion—it's a turning point. Alliances will shift. Trade will flourish—or collapse. Power balances will be rewritten."
     dorian "And you know Her Majesty. She won't settle for anything less than perfection."
 
-    # ADDED LATER: Elara steps closer and brushes fingertips against Dorian's cheek (PDF p6)
     "Elara steps closer, her soft smile returning. She reaches up and brushes her fingertips against my cheek."
 
     elara "And you, sir Dorian. You're part of that perfection, aren't you? The Dragon of Gale, second only to the High Paladin himself. You'll make sure it all goes smoothly, like you always do."
 
+    show dorian neutral at left_char
     "I manage a faint smile, but the tension in my chest doesn't ease. She notices, of course. She always does."
 
     elara "But, my heart. That's tomorrow. Tomorrow is for the world, the king and the empress and the emperor and their grand, history-altering plans. But tonight?"
@@ -273,9 +258,12 @@ label chapter_1:
     "She steps even closer, giving my cheek a kiss."
 
     elara "Tonight, you're not the Dragon of Gale. You're not a paladin. You're my husband. And the father of four wonderful, slightly rambunctious children who are dying to explore this incredible city."
+    
+    show dorian sad at left_char
     dorian "But, my heart…"
     elara "No excuses, my heart. You've been working tirelessly ever since we left Gale. Tonight is for us. For me. For the kids who adore their father. For a family that rarely gets days like this together."
 
+    show dorian neutral at left_char
     "I sigh, a small smile finally breaking through my resolve. I kiss her."
 
     dorian "Alright, my heart. You win."
@@ -297,8 +285,10 @@ label chapter_1:
 
     "The moment we step out into the street, the kids swarm us, buzzing with excitement."
 
+    show lucas at right_char_kids
     lucas "Dad! Dad! Look! Look at all the people! This place is huge!"
 
+    show dorian normal_alt_neutral at left_char
     "Lucas' eyes are open wide as he keeps tugging at the hem of my tunic with both hands."
     "I chuckle, bending down to ruffle his hair."
 
@@ -367,7 +357,6 @@ label chapter_1:
 # =============================================================================
 
 label ch1_city:
-
     menu:
         "Deng Blossom Avenue — Lanterns.":
             $ city_visited_deng = True
@@ -858,13 +847,7 @@ label ch1_common_fireworks:
 
     "As the crowd starts to disperse, we gather the children and head back toward the inn."
 
-    # -------------------------------------------------------------------------
-    # RETURN TO INN — Kids settling to sleep
-    # BG: bg_tianho_dorians_room
-    # ADDED LATER: From PDF p20-21
-    # -------------------------------------------------------------------------
-
-    scene bg_tianho_dorians_room with fade      # PLACEHOLDER — Dorian's hotel room, evening
+    scene dorians_room with fade      # PLACEHOLDER — Dorian's hotel room, evening
 
     "By the time we reach the inn, the kids are noticeably calmer. Elara ushers them inside, and one by one, they begin to settle."
     "Lucas and Emily curl up together, still whispering about the dragons they hope to see tomorrow. Daniel sits by the window for a moment, staring out at the now-still city before finally joining his siblings."
@@ -890,7 +873,7 @@ label ch1_common_fireworks:
 
     # -------------------------------------------------------------------------
     # PROSPERITY DRAGON DREAM — Balcony / Promise
-    # BG: bg_dream_white (or bg_tianho_dorians_room — dragon on balcony)
+    # BG: bg_dream_white (or dorians_room — dragon on balcony)
     # ADDED LATER: Full dream from PDF p21-23 — much longer than original
     # -------------------------------------------------------------------------
 
@@ -1444,7 +1427,7 @@ label ch1_ceremony:
 
 label ch1_elara_chat:
 
-    scene bg_tianho_dorians_room with fade
+    scene dorians_room with fade
 
     stop music fadeout 2.0
 
@@ -1982,7 +1965,7 @@ label ch1_battle:
     "The ground beneath us splits once more, sending a fresh wave of heat and ash into the air. Then, a deafening roar cuts through the screams and crackling flames."
     "A monstrous Taotie, its grotesque form towering above the crumbling city, emerges from the fiery chasm. Its gaping maw seems endless, filled with jagged teeth dripping molten saliva."
 
-    scene cg_taotie_charge with shock_cut       # PLACEHOLDER — cg_taotie_charge
+    scene cg_taotie_fight with shock_cut       # PLACEHOLDER — cg_taotie_fight
     pause 0.5
     scene bg_tianho_city_on_fire with dissolve
 

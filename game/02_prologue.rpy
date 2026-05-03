@@ -42,19 +42,15 @@ image kristin_kneeling:
 image kristin_normal:
     At("images/Assets/Character Sprites/Kristin Nordstrom.png", sprite_highlight("kristin"))
     fit "contain"
-
 image boy_ald_normal:
     At("images/Assets/Character Sprites/Boy Aldorith.png", sprite_highlight("boy_ald"))
     fit "contain"
-
 image girl_ald_normal:
     At("images/Assets/Character Sprites/Girl Aldorith.png", sprite_highlight("girl_ald"))
     fit "contain"
-
 image yk:
     At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
     fit "contain"
-
 
 # TODO: check image folder again, illus and bg
 # --- CG / Event Images (full screen, fit to cover) ---
@@ -92,25 +88,22 @@ image ui_timer_bar_fill:
     "images/gui/ui_timer_bar_fill.png"
     fit "contain"
 
-
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
-# TODO: add ambient sounds, royalty free music, and sfx
+# TODO: file paths
 # --- Ambient ---
-# define audio.amb_underground   = "audio/ambient/amb_underground.ogg"
+define audio.amb_underground   = "audio/ambient/amb_underground.ogg" # cave ambience DONE
 
 # --- Sound Effects ---
-# define audio.sfx_yaoguai_burst = "audio/sfx/sfx_yaoguai_burst.ogg"
-# define audio.sfx_stone_break   = "audio/sfx/sfx_stone_break.ogg"
-# define audio.sfx_body_thud     = "audio/sfx/sfx_body_thud.ogg"
-# define audio.sfx_heartbeat     = "audio/sfx/sfx_heartbeat.ogg"
-# define audio.sfx_timer_tick    = "audio/sfx/sfx_timer_tick.ogg"
-# define audio.sfx_timer_end     = "audio/sfx/sfx_timer_end.ogg"
-
-# --- Music ---
-# define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg"
-# define audio.ost_tension       = "audio/music/ost_tension.ogg"
+define audio.sfx_yaoguai_burst = "audio/sfx/sfx_yaoguai_burst.ogg" # DONE
+define audio.sfx_stone_break   = "audio/sfx/sfx_stone_break.ogg"  # DONE
+define audio.sfx_body_thud     = "audio/sfx/sfx_body_thud.ogg"    # DONE
+define audio.sfx_heartbeat     = "audio/sfx/sfx_heartbeat.ogg" # DONE
+define audio.sfx_timer_tick    = "audio/sfx/sfx_timer_tick.ogg" # DONE
+define audio.sfx_timer_end     = "audio/sfx/sfx_timer_end.ogg" # DONE
+define audio.ost_tension       = "audio/music/ost_tension.ogg" # DONEd
+define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg" # menacing tense music for villains DONE
 
 # ========== VOICE LINES ==========
 # --- Boy Aldorith ---
@@ -240,7 +233,6 @@ screen chapter_title_screen(chapter_num, chapter_title, subtitle="", duration=2.
 # =============================================================================
 # SECTION 6: PROLOGUE LABEL
 # =============================================================================
-
 label prologue:
     $ save_name = "Prologue"
     # -------------------------------------------------------------------------

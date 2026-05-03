@@ -792,6 +792,13 @@ init python:
         if isinstance(entry, dict) and "slot" in entry and "num" in entry:
             cleaned.append(entry)
         # old integer entries are dropped — they had no num tracking
+
+    # Remove entries whose save files no longer exist on disk
+    cleaned = [
+        entry for entry in cleaned
+        if renpy.can_load(str(entry["slot"]))
+    ]
+
     persistent.save_list = cleaned
     renpy.save_persistent()
 

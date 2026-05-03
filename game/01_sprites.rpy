@@ -142,7 +142,7 @@ image dorian underwear_angry:
     At("images/Assets/Character Sprites/Dorian/Underwear/dorian-mc with emotions angry.png", sprite_highlight("dorian"))
     fit "contain"
 image dorian underwear_sad:
-    At("images/Assets/Character Sprites/Dorian/Underwear/dorian-mc with emotions sad.png, sprite_highlight("dorian"))
+    At("images/Assets/Character Sprites/Dorian/Underwear/dorian-mc with emotions sad.png", sprite_highlight("dorian"))
     fit "contain"
 image dorian underwear_dragon_eyes:
     At("images/Assets/Character Sprites/Dorian/Underwear/dorian-mc with emotions dragon eyes.png", sprite_highlight("dorian"))
@@ -189,7 +189,7 @@ image vasily alt_savage:
     At("images/Assets/Character Sprites/Count Vasily/Normal - Alternate Pose/count vasilynorubics savage.png", sprite_highlight("vasily"))
     fit "contain"
 image vasily alt_think:
-    At("images/Assets/Character Sprites/Count Vasily/Normal - Alternate Pose/count vasilynorubics think.png" sprite_highlight("vasily"))
+    At("images/Assets/Character Sprites/Count Vasily/Normal - Alternate Pose/count vasilynorubics think.png", sprite_highlight("vasily"))
     fit "contain"
 
 # TODO: fix file path

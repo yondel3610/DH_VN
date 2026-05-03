@@ -8,12 +8,12 @@
 # AFFECTION / RELATIONSHIP TRACKERS
 # =============================================================================
 default niko_affection       = 0
-default feng_affection       = 0   # ch7 canonical — ch1 duplicate removed
+default feng_affection       = 0
 default aoi_affection        = 0
 default svante_affection     = 0
 default yuxuan_affection     = 0
 default chunghee_affection   = 0
-default magnus_affection     = 0   # add: first used ch9
+default magnus_affection     = 0 
 
 # =============================================================================
 # BATTLE / GATE TRACKERS
