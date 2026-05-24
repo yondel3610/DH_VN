@@ -1012,3 +1012,9 @@ image yaoguai:
 image yuki_onna:
     At("images/Assets/Character Sprites/yuki onna v2.png", sprite_highlight("yuki_onna"))
     fit "contain"
+
+
+# =============================================================================
+# FOOD ILLUS
+# =============================================================================
+

@@ -333,6 +333,7 @@ label ch5_yuxuan_lab:
 
     "At his command, a small mechanical figure whirred to life from the corner of the room. With a series of cheerful beeps, a scrappy little robot wobbled its way toward us, its monitor-like face flickering before settling into a bright, pixelated smile."
 
+    # line 1 (1)
     roboto "You called, Master Yuxuan? Roboto is here. At your service."
     yuxuan "Can you show these people to the spare room?"
 
@@ -355,7 +356,8 @@ label ch5_yuxuan_lab:
     elias  "Ooohhh, so cute! Mister Roboto, do you wanna play with me and Tedda?"
 
     "Roboto's head twitched slightly as it processed the request."
-
+    
+    # line 06 (1) end
     roboto "Certainly! My b-b-b-built-in intelligence allows me to play a wide v-v-variety of games. S-Seeing that you are a child, might I suggest a game of 'tag'?"
     dorian "Don't touch the robot, Elias. Take a seat and wait for us…"
 
@@ -411,6 +413,7 @@ label ch5_yuxuan_lab:
 
     "Roboto's screen flickered. A sleeping face with Zs on top."
 
+    # line 01
     roboto "I detect sudden drowsiness. Should I-I-I activate tuck-in mode?"
     niko   "No. No, no, no. Right now, we need to get to the spare room. We have a man that needs treatment."
     roboto "Ah! Of course. Prioritizing medical emergency. Please follow me."
@@ -501,7 +504,6 @@ label ch5_spare_room:
 label ch5_niko_choices:
 
     menu:
-
         "Thank him for his assistance earlier.":
 
             dorian "You didn't have to help back there. But you did. So… thanks."
@@ -621,7 +623,7 @@ label ch5_niko_choices:
             jump ch5_niko_choices
 
         "Ask him about his faith in the Death God.":
-
+            
             dorian "You're a follower of the death god, right?"
 
             "Niko looked down at his half-robe."
@@ -976,9 +978,7 @@ label ch5_living_room:
 # =============================================================================
 
 label ch5_storage_room:
-
     stop music fadeout 1.5
-
     # [COMMENT: bg_lab_storage — dim storage room, single candle, cold stone]
     scene bg_lab_storage with dissolve          # PLACEHOLDER — lab storage room
 
@@ -1413,13 +1413,71 @@ label ch5_food_choice:
 
             weng "Something that will keep the cold away."
 
-    jump ch5_storage_room
+    jump ch5_common
 
+# =============================================================================
+# SECTION 16B: LABEL CH5_COMMON — Weng, Tim & Elias Dinner Scene
+# =============================================================================
+label ch5_common:
+    # [COMMENT: bg_yuxuan_kitchen or bg_yuxuan_lab — Weng approaches the toddlers]
+    scene bg_yuxuan_lab with dissolve           # PLACEHOLDER — lab/common area
+
+    "Weng then approached the two toddlers, smoothing out the wrinkles in her apron."
+
+    weng "Alright, little ones. What would you like for dinner?"
+
+    "Tim adjusted his tiny glasses, crossing his arms."
+
+    tim "Braised Tianho fish with fermented black beans. Steamed tofu with ginger. And a side of sautéed bok choy with garlic."
+
+    "I blinked."
+
+    dorian "What kind of five-year-old asks for that?"
+    yuxuan "Hahaha! That's Tim. He has quite the refined palate, just like me and Weng."
+    "Tim pushed his glasses up the bridge of his nose, utterly serious."
+    tim "Proper nutrition is essential for cognitive development of toddlers like myself. My brain requires high-quality fuel."
+    "Meanwhile, Elias was bouncing on his heels, practically vibrating with excitement."
+    elias "Ooh! I want choco—"
+    "I cut him off before he could even finish."
+    dorian "Chicken. Rice. Soup. And lots of vegetables. He'll have that."
+    "Elias's little face scrunched up into a dramatic pout, his lower lip jutting out."
+    elias "But daddy—"
+    "I gave him The Look."
+    dorian "No, Elias. You already ate enough chocolate today. You need your vitamins."
+    "Elias squirmed. His little hands clutched Tedda, his stuffed bear, like the poor toy could somehow convince me to change my mind."
+    
+    tim "Vegetables are good for you, Elias."
+    elias "No, they're not… They're icky!"
+    tim "Yes, they are. They contain essential vitamins and minerals that help you grow stronger and support brain function. You want to be smart like me, don't you?"
+    elias "Fiiineeee…"
+    weng "Alright then, why don't you two go play while I prepare dinner?"
+    tim "Master Yuxuan, can Elias and I go to the library?"
+    yuxuan "Always, Tim. Keep on reading, green-haired buddy."
+
+    "Tim's face lit up. He turned to Elias, taking his hand like a tiny professor guiding his student."
+
+    tim "Come with me. I'll show you the library."
+
+    "Elias blinked, surprised."
+
+    tim "I'll show you my favorite books! Let's read together! Oh, you're gonna love the legend of the kumiho!"
+    elias "Let's go! Ooh! Do they have pictures and flowers there?"
+    weng "Tim… Make sure to be back once dinner is finished, okay? It's a challenge to get you away from those books once you start. Be mindful of little Elias with you."
+
+    "Yuxuan and I watched them go, both of us shaking our heads in amusement."
+
+    yuxuan "They make quite the pair huh, Dorian? They just met and they're acting like they've known each other for a long time!"
+    dorian "No kidding."
+
+    "Weng chuckled as she headed toward the kitchen."
+
+    weng "You two, just sit tight and wait. Dinner will be ready soon."
+
+    jump ch5_nap
 
 # =============================================================================
 # SECTION 17: LABEL CH5_NAP — Dorian Naps Before Dinner
 # =============================================================================
-
 label ch5_nap:
 
     # [COMMENT: bg_yuxuan_lab_dim — lab with dimmed lights]
@@ -1483,15 +1541,290 @@ label ch5_nap:
 
     "Weng nodded in approval before turning back to the stove, resuming her work."
 
-    jump ch5_storage_room
+    jump ch5_interrogation
 
+# =============================================================================
+# SECTION 17A: LABEL ch5_storage_room interrogation
+# =============================================================================
+label ch5_interrogation:
+    scene bg_lab_storage with dissolve          # PLACEHOLDER — lab storage room
+    play music ost_svante_talk fadein 1.5       # PLACEHOLDER — low tension theme
+    "I stepped into the storage room, my movements silent against the cold stone floor. The dim flicker of a single candle cast long shadows across the walls, stretching and shifting with the flame's uncertain dance."
+    "Unlike the other rooms, the air was stale, thick with dust and the faint scent of damp stone."
+    "Then I heard it."
+    "A voice—low, trembling—whispering desperate words into the dark."
 
+    svante "Mighty Enoch… Please… {i}*tears*{/i} Your servant is afraid…"
+
+    "I stood still, just inside the doorway. He hadn't noticed me. Not yet."
+
+    svante "I know I have strayed, I know I have sinned... I never meant to question Father. I never meant to doubt him."
+
+    "He paused, sniffling."
+
+    svante "I— I betrayed our sacred law. I know I should never have doubted Father... I know my place. But… Kristin…"
+    svante "But… what if…"
+    svante "What if Kristin was right all along?"
+
+    "He swallowed hard, his words now coming in ragged, pleading bursts."
+
+    svante "My Lord Enoch, please... {i}*crying*{/i} Please don't abandon me. Not now, not when the monster is near."
+    svante "My mother needs me… She's the only family I have left, my Lord. Please help me…"
+    svante "I… I don't know what to do anymore. I'm so sorry. I feel so lost and broken. Please, mighty Enoch, show me mercy."
+
+    "His fingers twitched uselessly, bound and helpless against the wall. The sheen of Jinshen steel caught the dim candlelight, the cuffs glinting like an executioner's blade. I recognized them instantly."
+    "Good. That way, I wouldn't have to worry about his channeling."
+    "I took a single step forward."
+    "His breath hitched. His head snapped up so fast I thought he'd hurt himself."
+
+    svante "No… No, no, no… Please—please, no…"
+    dorian "Calm down. I just want to ask you a few things."
+    svante "Sir… I beg you. Please let me go! {i}*crying*{/i} I have a mother! She's sick. She's the only family that I have left!"
+    svante "No… No, no, no… Don't hurt me! I beg you! Please—please, no—"
+
+    "I heard his stomach rumble."
+    dorian "You must be starving. Here, I just need to—"
+    svante "I… Is that it, sir? I-If you wish to spare me, Please, you don't have to feed me."
+    svante "Please. I'll eat morsels from the garbage if I have to. Just please let me live!"
+
+    "I rolled my eyes."
+
+    dorian "ARE YOU GOING TO CALM DOWN OR NOT?!"
+
+    "Silence. He stopped struggling. But I could see him trembling."
+
+    svante "{i}*crying*{/i}"
+    dorian "No one needs to die today. I just need to ask you a few questions. Calm down."
+    svante "Y-Yes, sir…"
+
+    "I took a deep breath."
+
+    dorian "Let's start with the obvious. Why does Mjoll want the man that we saved dead?"
+
+    "Svante hesitated, his fingers twitching against the cuffs. His gaze flickered toward the floor, avoiding mine."
+
+    svante "I—I don't know everything, sir. I swear it. But..."
+    svante "Father said that the man we were supposed to kill… cursed him."
+    dorian "Cursed him?"
+
+    "My eyes widened."
+    svante "That's what he told us. That the man— he was some kind of heretic and is an enemy of Mjoll."
+    dorian "And you believe him?"
+
+    "A brief silence erupted between us."
+
+    svante "No… I think he's… lying…"
+    svante "Because he's lied before… with the Elias incident. He told everyone that it was Elias who killed his own mother."
+    svante "My sister Kristin… she accompanied the two prophets as they examined Queen Ekaterina's body."
+    svante "The fingerprints on the knife belonged to Father himself. But still, he tried to pin the blame on Elias..."
+    svante "I was the only person my sister talked to about this. At first, I got mad at her for doubting Father but after her death, I… I started to wonder."
+    svante "What if she was right?"
+    dorian "So you think the man you were sent to kill today… was innocent?"
+
+    svante "Y-Yes, sir."
+    "I nodded. That was brave of him to say. For an aldorith, it would have been a death sentence."
+    svante "Do you have any more questions, sir?"
+
+# =============================================================================
+# SECTION 17B: INTERROGATION CHOICE MENU
+# =============================================================================
+label ch5_interrogation_menu:
+    menu:
+        "Why were you the only aldorith spared by this man?":
+            jump ch5_interro_q1
+        "Who are you?":
+            jump ch5_interro_q2
+        "How do you know me?":
+            jump ch5_interro_q3
+        "That's all for now.":
+            jump ch5_interro_q4
+
+# --- Q1 ---
+label ch5_interro_q1:
+    dorian "When I saw the battlefield, the bodies of your brothers and sisters were scattered around him. Yet, you… you were still alive."
+    dorian "How did he know you were on his side?"
+    svante "I… defended him. He saw it, surely."
+    svante "I tried to explain to our commanders Tian Xun, to Lady Aoi… to all of them… I told them that something felt wrong. That I wasn't sure this man deserved to die."
+    svante "But Tian Xun and Lady Aoi called me a traitor."
+    svante "Then… he attacked. Almost everyone who came close to him died. They didn't expect him to be that powerful. No one did."
+
+    "I studied him carefully. He wasn't lying. The tremor in his voice, the way his body tensed at the memory—it was all genuine."
+
+    dorian "What about your commanders? Tell me about them."
+    svante "Oh them? Tian Xun was um…"
+
+    "Svante shifted, adjusting his wrists against the cuffs. He winced slightly."
+
+    svante "Sorry. A little bit itchy."
+    svante "Tian Xun was a loose cannon. He's obsessed with bombs. They say he grew up in Tianho in an impoverished family, even though his father worked for the King."
+    dorian "You mean King Long Shen, the late king of Tianho?"
+
+    "Svante frowned a little."
+
+    svante "I think so. Sorry, sir. I'm not familiar with the other kings. I only know Father."
+    dorian "And the last one? Lady Aoi?"
+    svante "Oh! Believe it or not, Lady Aoi used to be a songstress from Hinami."
+    dorian "That's not what I asked."
+
+    "Svante flinched."
+
+    svante "O-Oh! Sorry, sir! She—uh—she's a powerful water channeler from Hinami. She just… showed up at the palace one day, gave a demonstration of her power."
+    svante "Father was impressed. So impressed that he made her commander of an entire battalion of Aldoriths."
+    dorian "You don't sound convinced."
+    svante "Just between you and me, sir… word among my brothers is that Father only sees Queen Ekaterina in her."
+    dorian "Yeah…. I can see that."
+
+    jump ch5_interrogation_menu
+
+# --- Q2 ---
+label ch5_interro_q2:
+    dorian "What's your name?"
+
+    "Svante blinked at me, looking genuinely confused—almost as if the question was unnecessary."
+
+    svante "Svante, sir. Svante Nordstrom."
+
+    "I tilted my head slightly."
+
+    dorian "Nordstrom. As in Gustav Nordstrom. You took on the king's last name. I'm surprised he even let you do that."
+
+    svante "You're not wrong, sir. Usually, us aldoriths carry the last name of their mothers."
+
+    svante "M-Mother received special permission from Father, sir."
+    dorian "Really? How come?"
+    svante "Mother was at the top of her career when she gave birth to me. She was a songstress. Father was really into her back then."
+    dorian "What about your sister?"
+    svante "Kristin…"
+
+    "He paused, his hands twitching against the cuffs."
+
+    svante "She only carried my mother's name."
+
+    jump ch5_interrogation_menu
+
+# --- Q3 ---
+label ch5_interro_q3:
+    dorian "How did you recognize me?"
+    "He shifted slightly, as if trying to find the right words."
+
+    svante "I… I actually didn't at first, sir."
+    dorian "How come?"
+    
+    "Svante's gaze flickered toward me. At my hair, my clothes, everything."
+    svante "Well, your hair, sir. It's different. And your clothes."
+    "He bit his lip, hesitating."
+    svante "Elias was also wearing girl's clothes so I didn't recognize him."
+
+    dorian "But then you figured it out."
+    svante "It wasn't until I heard you call Elias' name that I put all the pieces together."
+    dorian "You called me a different name as well. Why?"
+    svante "The Massacrer of Mjoll. They named you that after you… you—"
+
+    "His breathing quickened, and his eyes darted toward mine—fearful, desperate. A long silence erupted."
+
+    dorian "I won't hurt you. I promise."
+    svante "O-Okay, sir."
+
+    jump ch5_interrogation_menu
+
+# --- Q4 ---
+label ch5_interro_q4:
+    dorian "That's all. I don't have any more questions for you."
+    "I exhaled, stepping back, watching him in the dim light. His breathing had steadied, but his posture remained rigid, his body still caught between fear and exhaustion."
+    svante "Sir Dorian…"
+    svante "What would you have done? If you were me?"
+
+    "I narrowed my eyes."
+
+    dorian "If I were you?"
+
+    "He nodded. His violet eyes met mine, pleading, uncertain. No malice. No scheming. Just a hurt and tormented man."
+
+    dorian "I wouldn't let doubt rule me. I would decide. I'd choose a side. And stick with it."
+
+    "He swallowed, nodding slowly."
+
+# =============================================================================
+# SECTION 17C: INTERROGATION COMMON — Svante Released
+# =============================================================================
+label ch5_interro_common:
+    "A pause. I studied him. The way his shoulders slumped in exhaustion, the way his fingers twitched, the way he spoke—like a man who had already lost everything and was now only waiting for the final blow."
+    "I'd seen men like him before. Broken. But not beyond repair."
+    "I felt that he wasn't a threat. Not now."
+    "I reached into my pocket, fingers brushing over the cold metal key Weng had given me."
+
+    dorian "Can I trust you?"
+
+    "His head shot up."
+
+    svante "Trust me with what?"
+
+    "I held the key up between us, letting it glint in the dim light."
+
+    dorian "Swear to me—by your god—that you will never harm my family."
+    svante "I… I wasn't planning to, but…. I swear by Enoch that I will never harm you or your family."
+
+    "Then, without breaking eye contact, I stepped forward and reached for his cuffs."
+    "The metal was cool beneath my fingers as I slid the key into the lock. A sharp click echoed in the small room."
+    "The heavy Jinshen steel fell away from his wrists."
+    "Svante inhaled sharply, his arms dropping limply to his sides. He stared at his freed hands for a moment."
+
+    dorian "Don't make me regret this."
+    svante "I won't, sir."
+
+# =============================================================================
+# SECTION 17D: RETURN TO LAB — Dinner Begins
+# =============================================================================
+label ch5_return_to_lab:
+    scene bg_yuxuan_lab with dissolve           # PLACEHOLDER — lab main room, warm light
+    play music ost_dinner_warm fadein 2.0       # PLACEHOLDER — warm dinner theme
+    play audio amb_kitchen loop fadein 1.5      # PLACEHOLDER — kitchen ambient
+
+    "As Svante and I stepped into the main room, the warm scent of spices and simmering broth filled the air. The rich aroma of slow-cooked meats and fragrant herbs curled through the space."
+    "Weng was still by the stove, stirring a pot with practiced ease. The moment her gaze landed on Svante, she set down her spoon and wiped her hands on her apron, stepping forward with a welcoming smile."
+
+    weng "Ah, you're awake! That's good to see. You must be starving."
+    weng "Proper introductions are in order. I'm Cai Weng, Master Yuxuan's assistant. It's a pleasure to meet you, young man."
+
+    "He blinked, as if taken aback by the kindness in her voice. He looked at me, and then back to her."
+
+    svante "I… Yes. Thank you, m-mam. My name's Svante. Svante Nordstrom. I-I'm so glad to meet you."
+    weng "Dinner is ready. Please have a seat, gentlemen and I'll be serving you up the food."
+    weng "I hope you like haugensoppa. I made it just for you."
+    svante "Haugensoppa? You… know Mjoll cuisine?"
+    weng "Oh, I've had my fair share of travelers from the North. You lot love your root vegetable stews."
+
+    "Svante opened his mouth, perhaps to ask more, but before he could reply—"
+    "A sudden burst of tiny, hurried footsteps came from the hallway."
+
+    tim "Elias, you're going too slow! Dinner's about to start!"
+    elias "I'm carrying Tedda and my book! It's a little heavy!"
+
+    "Tim marched into the room first, his small arms wrapped around a thick, leather-bound book far too large for someone his age. The title was embossed in gold: {i}Tianho's Ancient Dynasties.{/i}"
+    "Elias followed closely behind, but instead of a weighty tome, he proudly clutched a children's coloring book, its cover splashed with bright rainbows and smiling animals. Perched lazily on top was Tedda."
+    "Tim sighed dramatically, adjusting his glasses."
+
+    tim "Elias, I told you to pick something educational."
+    elias "This one had colors, Tim! It's got rainbows! They're educational."
+    tim "Rainbows are not educational, Elias."
+
+    "Elias gasped as he spotted Svante. His eyes widened with delight."
+
+    elias "Look! It's the pink haired guy! He's awake!"
+    tim "Huh? He's not pink haired, Elias! It's violet!"
+    elias "Tim, pink and violet are the same. Right, Tedda?"
+    tim "What?! They're completely different colors. Right, Miss Weng?"
+    svante "Actually… my hair is violet. It's not really pink."
+    tim "HA! It's violet! See, Elias? See? I win! HAHA—"
+    weng "Tim, quit it. You're embarrassing me in front of Sir Burnham and Sir Nordstrom. Now be a good boy and help me serve dinner."
+
+    "Tim huffed but did as he was told, setting his book down carefully before moving to grab a stack of bowls."
+
+    jump ch5_chung_wakes
 # =============================================================================
 # SECTION 18: LABEL CH5_CHUNG_WAKES — Chung-hee Arrives at Dinner
 # =============================================================================
-
 label ch5_chung_wakes:
-
     # [COMMENT: bg_kitchen — long dining table, warm light, Weng cooking]
     scene bg_kitchen with dissolve              # PLACEHOLDER — kitchen / dining area
 
@@ -1602,14 +1935,12 @@ label ch5_chung_wakes:
     play sound sfx_roboto_crash                 # PLACEHOLDER — Roboto crash SFX
 
     roboto "R-R-R-R-R-R-R-ooooooo- *crashes*"
-
     niko "Right. Moving on."
     niko "A green-haired toddler who, for some reason, spends his free time reading damn bibliographies instead of playing with toys."
 
     "Tim blinked up at him from behind his book, entirely unfazed. Then, as if on cue, he calmly turned a page in his heavy tome—Tianho's Ancient Dynasties."
 
     tim "Hnn…"
-
     niko "A crossdressing toddler who just so happens to be the crown Prince of Mjoll and carries around a smelly ragdoll named 'Tedda.'"
 
     "Elias suddenly giggled, completely unaware of the tension in the air. He held up his coloring book, showing it off proudly."
@@ -1666,7 +1997,6 @@ label ch5_chung_wakes:
     yuxuan "Miss Weng! You shouldn't have! My precious dragonfire curry! Oh, how I've missed you!"
 
     "He clasped his hands together dramatically."
-
     "Meanwhile, Roboto whirred into view, carefully balancing trays of food."
 
     roboto "Robotoooo is ready to s-s-s-serve~ F-f-food is ready~"
@@ -1689,7 +2019,6 @@ label ch5_chung_wakes:
 label ch5_roboto_witness:
 
     menu:
-
         "Yes. Roboto almost tripped.":
             $ ch5_roboto_witness = "yes"
             $ niko_affection += 1               # +1 Niko affection
@@ -2522,7 +2851,6 @@ label ch5_divine_weapon:
     "The moment my fingers made contact—"
 
     jump ch5_amulet_vision
-
 
 # =============================================================================
 # SECTION 27: LABEL CH5_AMULET_VISION — Dorian Touches the Amulet

@@ -46,6 +46,7 @@ define build.name = "dh_prologuever001"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
+define config.auto_voice = "voice/{id}.ogg"
 
 
 ## To allow the user to play a test sound on the sound or voice channel,

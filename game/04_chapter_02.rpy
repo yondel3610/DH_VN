@@ -65,18 +65,30 @@
 # =============================================================================
 
 # --- Backgrounds: Mjoll Exterior ---
-image bg_mjoll_icelands          = "images/backgrounds/bg_mjoll_icelands.png"             # PLACEHOLDER
-# Snow-blanketed frozen wilderness — dark sky, blizzard conditions, sparse pine trees
+image bg_mjoll_icelands:
+    "images/Assets/Background/Mjoll.jpg"            
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
-image bg_mjoll_blizzard          = "images/backgrounds/bg_mjoll_blizzard.png"             # PLACEHOLDER
-# Same icelands but heavy snowfall — near-whiteout conditions, harsher
+image bg_mjoll_blizzard:
+    "images/Assets/Background/Mjoll - blizzard.png"            
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: Mjoll Palace ---
-image bg_mjoll_palace_exterior   = "images/backgrounds/bg_mjoll_palace_exterior.png"      # PLACEHOLDER
-# Stone-and-ice fortress gate — guards posted, torchlight, imposing
+image bg_mjoll_palace_throne_lightsoff:
+    "images/Assets/Background/Mjoll - lights off - throne off.png"           
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
-image bg_mjoll_palace_throne     = "images/backgrounds/bg_mjoll_palace_throne.png"        # PLACEHOLDER
-# Grand throne room — gilded stone, fur banners, cold light through high windows
+image bg_mjoll_palace_throne_:
+    "images/Assets/Background/Mjoll - lights off - throne off.png"           
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 image bg_mjoll_palace_hall       = "images/backgrounds/bg_mjoll_palace_hall.png"          # PLACEHOLDER
 # Inner palace hall — aldoriths gearing up, torches, dim warmth
@@ -231,25 +243,7 @@ define audio.amb_crowd_festive    = "audio/ambient/amb_crowd_festive.ogg"      #
 #   ch2_qtc4, ch2_qtc5, ch2_qtc6
 # =============================================================================
 
-# default svante_affection     = 0      # Svante trust/romance tracker
-# default ice_tracker          = 0      # ICE damage — >=2 = frozen GAME OVER
-# default yuxuan_affection     = 0      # Yuxuan relationship tracker
-
-# default ch2_visited_food     = False  # Free time: food stalls visited
-# default ch2_visited_fortune  = False  # Free time: fortune teller visited
-# default ch2_visited_spa      = False  # Free time: spa visited
-# default ch2_visited_rest     = False  # Free time: rest with Vasily visited
-
-# default ch2_babala_asked_family = False  # True after Babala topic 1 chosen
-
-# default ch2_dunk_choice      = ""    # "aimed" or "missed"
-# default ch2_food_choice      = ""    # "confront" or "nothing"
-# default ch2_spa_choice       = ""    # "nothing" or "punish"
-# default ch2_letter_choice    = ""    # "warm" or "distant"
-# default ch2_qtc4             = ""    # "wind" or "dodge"
-# default ch2_qtc5             = ""    # "wind" or "wall"
-# default ch2_qtc6             = ""    # "wind_babala" or "spike"
-
+# added to game_vars
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_2 — Opening (Icelands / Qiongqi Hunt)
@@ -896,6 +890,7 @@ label ch2_fortune:
     babala "Haha. You are as stubborn as the stone you channel, Dragon of Gale. But even the hardest stone cracks in time."
 
     "Vasily laughs, patting my shoulder."
+    # vasily laugh 042 in files
 
     # PDF p70
     "We step inside. The booth is small but warm, the scent of incense hanging in the air. A crystal orb glows faintly on the table, and behind it sits Babala."
@@ -903,6 +898,8 @@ label ch2_fortune:
 
     babala "The Dragon of Gale. I wondered when you'd visit me."
     vasily "He didn't want to come, of course, but I dragged him here. Babala, tell him something interesting—preferably about his love life."
+    # v laugh 043
+
     babala "*laughing* Your friend has a sharp tongue."
 
     "I glare at Vasily, but Babala's chuckle draws my attention back to her."
@@ -1216,6 +1213,7 @@ label ch2_rest:
     "He pauses."
 
     vasily "You, too, though. You looked... at peace, for once."
+    # vasily 049
     dorian "I agree. Rest is a moment I don't take for granted."
 
     return

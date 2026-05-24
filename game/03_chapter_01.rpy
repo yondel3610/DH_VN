@@ -62,7 +62,7 @@ image bg_tianho_city_night:
 
 # --- Backgrounds: City Exploration Locations ---
 image bg_tianho_deng_blossom:
-    "images/Assets/Background/Tianho Celeb.png"
+    "images/Assets/Background/Untitled203_20251007140552.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -169,14 +169,14 @@ image cg_elara_children_death:
 define audio.ost_tianho_festival = "audio/sfx and ost/01_ch1/ost/ost_tianho_festival_music.ogg"   # upbeat plays during the city exploration sequence
 define audio.ost_emperor_arrival = "audio/sfx and ost/01_ch1/ost/ost_emperor_arrival.ogg"   # Grand ceremonial fanfare — plays as Emperor Min-joon enters
 define audio.ost_dream_dragon    = "audio/sfx and ost/01_ch1/ost/ost_dream_dragon.ogg" # DONE | main theme na rin
-define audio.ost_tension_rising = "audio/sfx and ost/01_ch1/ost"
+define audio.ost_tension_rising = "audio/sfx and ost/01_ch1/ost/ost_tension_rising.ogg"
 define audio.ost_battle_tianho = "audio/sfx and ost/01_ch1/ost"
 define audio.ost_taotie_battle = "audio/sfx and ost/01_ch1/ost/beast sounds/zapsplat_horror_demon_monster_evil_scream_screech_114117.ogg"
 define audio.ost_tragedy = "audio/sfx and ost/01_ch1/ost/ost_tragedy.ogg"
 
 # --- SFX ---
 # define audio.sfx_fireworks          # find free fireworks sfx
-# define audio.sfx_yaoguai_roar       # monster roar
+# define audio.sfx_yaoguai_roar       # monster roar DONE
 # define audio.sfx_explosion          # find free explosion audio
 # define audio.sfx_stone_spike        # stone spike
 # define audio.sfx_wind_blast         # wind blast from other games
@@ -186,8 +186,7 @@ define audio.ost_tragedy = "audio/sfx and ost/01_ch1/ost/ost_tragedy.ogg"
 # define audio.amb_castle_battle      # get from asian war dramas
 
 # ========== VOICE LINES ==========
-# TODO: add voice lines
-
+# syntax: audio.char_name_ch#_line#
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES
@@ -281,7 +280,7 @@ label chapter_1:
     scene bg_tianho_city_night with dissolve
 
     play music ost_tianho_festival volume 0.8
-    play audio amb_festival_crowd loop fadein 1.5  # PLACEHOLDER — crowd ambient loop
+    #play audio amb_festival_crowd loop fadein 1.5  # PLACEHOLDER — crowd ambient loop
 
     "The moment we step out into the street, the kids swarm us, buzzing with excitement."
 
@@ -296,41 +295,57 @@ label chapter_1:
 
     "Sarah, as expected, is lost in her own world, flipping through her sketchbook and occasionally glancing up to capture the essence of the city in her drawings."
 
+    hide lucas
+    show elara at right_char
     elara "Sarah… Sarah… Honey. *snaps her fingers* Your father is here."
 
+    hide elara
+    show sarah at right_char_kids
     sarah "*mumbles* Oh, hey dad!"
-
     "She glances quickly at me, smiles, then turns back, completely absorbed in her art."
-
     sarah "This place is full of colors. I need to capture the lanterns. But, I don't know what color they should be…"
 
     "Emily leans over to Daniel and whispers something in his ear, making him roll his eyes but smirk at the same time."
 
+    hide sarah
+    show emily at right_char_kids
     emily "Come on, Daniel! You have to at least pretend to be excited!"
+
+    hide emily
+    show daniel at right_char_kids
     daniel "Hey, I am excited! Just not the way you are."
     dorian "Come on, kids. We're going to the market."
 
+    hide dorian
+    show elara at left_char
     elara "But stay close to your father and me. Tianho may be beautiful, but—"
+
+    hide daniel
+    show emily at right_char_kids
     emily "You never know what lurks beneath the hearts of strangers and how we kids are gullible and—"
+    hide emily
+    show daniel at right_char_kids
     daniel "We know that, mom! Stranger Danger a thousand times. Can we just hurry up? I wanna see some dragons."
 
+    hide daniel
+    show sarah at right_char_kids
     sarah "Mom, we need to see the dragons!"
 
-    # ADDED LATER: Elara kisses Sarah before responding (PDF p8)
     "Elara sighs and kisses Sarah on her forehead."
 
     elara "Alright, alright. Let's go see them. But remember, no pretending to be dragons."
 
-    # ADDED LATER: Kids collective response + extended city intro (PDF p8)
-    "Kids: Yes, mom."
+    hide sarah
+    "Yes, mom. (in unison)"
 
     "With that, the children take off ahead of us, their chatter and laughter blending into the sounds of the city."
     "Elara walks beside me and I hold her hand."
 
+    show elara at right_char
     elara "So, where should we go first?"
 
+    show dorian normal at left_char
     "I look around, taking in the scenery of the market."
-
     dorian "Well, all of the kids seem intent on finding dragons, and you say that you want to eat at the stalls. I say we follow the flow of the crowd and see where it takes us."
 
     "Elara nods, her eyes sparkling with the same excitement I see in the children."
@@ -347,6 +362,8 @@ label chapter_1:
     "I glance at Elara, who's watching the children with an amused smile as they eagerly debate where to go first. She meets my eyes and tilts her head slightly."
 
     elara "Well, my heart, you're the Father. What'll it be? The kids can't wait."
+    hide elara
+    show lucas at right_char_kids
     lucas "Hurry up, dad!"
 
     jump ch1_city
@@ -398,25 +415,36 @@ label ch1_city:
 label ch1_city_deng:
 
     scene bg_tianho_deng_blossom with dissolve  # PLACEHOLDER — Deng Blossom Avenue
-
-    # ADDED LATER: Full Deng scene from PDF p9-11, replacing placeholder version
     "We turn toward Deng Blossom Avenue, a decision met with a satisfied hum from Sarah and nods of approval from the others."
     "The moment we step onto the avenue, lanterns — hundreds, perhaps thousands of them — float effortlessly in the air, their glow soft and ethereal."
     "They seem alive, swaying gently as though in sync with the faint breeze that carries the sweet scent of lotus blossoms and jasmine."
 
+    show daniel at right_char_kids
     daniel "Look! They're moving!"
-    lucas  "Are they alive? How are they doing that?"
+    hide daniel
 
+    show lucas at right_char_kids
+    lucas  "Are they alive? How are they doing that?"
+    hide lucas
+    
+    show elara at right_char
     elara "It's breathtaking."
+    show dorian smile at left_char
     dorian "It is, my heart."
+    show dorian neutral at left_char
 
     "Sarah, predictably, has already flipped open her sketchbook, her pencil moving furiously as she tries to capture the scene."
 
+    hide elara
+    show sarah at right_char_kids
     sarah "Oh gosh! This is so beautiful! The colors… I need to get the colors just right!"
     sarah "But how do I even start? The reds aren't just red—they're ruby, garnet, scarlet—oh, this is impossible!"
 
+    show dorian normal_alt_neutral at left_char
     dorian "Take your time, Sarah. The lanterns aren't going anywhere."
 
+    hide sarah
+    show lucas at right_char_kids
     "Lucas points to a massive lantern shaped like a koi fish."
 
     lucas "Dad look! That lantern's huge!"
@@ -424,17 +452,21 @@ label ch1_city_deng:
     "He darts forward to get a better look. I quickly grab his hand."
 
     dorian "Careful, Lucas. Stay close."
+    hide lucas
+    show daniel at right_char_kids
     daniel "How do they even make those?"
+    show dorian normal at left_char
     dorian "With bamboo and silk, Daniel."
 
-    # ADDED LATER: Lead Fire Channeler calls them back (PDF p10)
-    # show lead_fire_channeler at center         # PLACEHOLDER — Lead Fire Channeler sprite
+    # show lead_fire_channeler at center
 
-    "Lead Fire Channeler: Alright, that's enough! Bring them back, fire channelers!"
+    "Lead Fire Channeler: Alright, that's enough! Bring them back, fire channelers!" #TODO: fix fire channeler sprites
 
     "A group of figures in crimson robes steps into view at the far end of the avenue, their hands raised in precise, fluid motions. Flames flicker in their palms."
     "One by one, the lanterns return to the fire channelers, floating gently into their hands like obedient birds."
 
+    hide daniel
+    show emily at right_char_kids
     emily "Dad! They're making them come back!"
 
     "Emily tugs at my sleeve, her excitement bubbling over."
@@ -442,18 +474,27 @@ label ch1_city_deng:
     emily "Dad, you're a fire channeler right? Can you make the lanterns move like that?"
 
     dorian "Of course, Emily."
+    hide emily
+    show daniel at right_char_kids
     daniel "That's a stupid question, Emily! Dad's the strongest!"
+    hide daniel
+    show elara at right_char
     elara "Shh! Daniel, watch your words or you'll be heading back to our room at the inn!"
 
     "All of us watch intently as the last lantern disappears into the robes of the fire channelers."
     "The lead fire channeler finally addresses the crowd."
 
-    "Lead Fire Channeler: This is just a rehearsal. Tomorrow, we'll perform before the Emperor of Kyeongjang himself. We better bring our A game."
-    "Channelers: Sir!"
+    "Lead Fire Channeler: This is just a rehearsal. Tomorrow, we'll perform before the Emperor of Kyeongjang himself. We better bring our A game." #TODO: fix fire channeler sprites
+    "Channelers: Sir!" # TODO: fix fire channeler sprites
 
     "Sarah closes her sketchbook and walks toward Lucas."
 
+    hide elara
+    hide dorian
+    show sarah at right_char_kids
     sarah "I'm done!"
+    hide sarah
+    show daniel at left_char_kids
     daniel "Really? Lemme see!"
     sarah "Later, Daniel! I'll show it once I place some finishing touches! *giggles*"
     lucas "Let's go somewhere else, Dad!"
@@ -477,20 +518,34 @@ label ch1_city_fanrong:
     "As we arrive, we find that the square is alive with rhythm and energy, the pounding of drums and clanging of cymbals echoing off the towering pagodas."
     "Brightly colored dragons — red, gold, and violet — twist and coil through the crowd, their movements fluid yet deliberate, each step in perfect harmony with the beat of the music."
 
+    show lucas at right_char_kids
     lucas "Look at them, Dad! It's a real dragon!"
 
+    hide lucas
+    show sarah at right_char_kids
     sarah "Mom! Dad! It's the Prosperity Dragon!"
 
+    show dorian serious at left_char
     "I glance at the gilded dragon costume, its shimmering scales catching the lantern light with every fluid motion."
-
     dorian "Yeah… The Prosperity Dragon…"
 
+    hide dorian
+    hide sarah
+    show lucas at right_char_kids
     "Lucas can't contain himself. His arms flail as he mimics the twisting, serpentine motions of the dragon dancers, his tiny legs stomping a rhythm of their own on the cobblestone square."
+    show sarah at left_char_kids
     "Sarah joins in, her movements more graceful, while Daniel smirks and crosses his arms, clearly too cool to dance but not immune to the energy."
 
+    hide sarah
+    hide lucas
+    show dorian neutral at left_char
     dorian "Careful, kids. You'll wear yourselves out before we even explore the rest of the city."
+    show daniel at right_char_kids
     daniel "I never get tired, Dad."
+    hide daniel
+    show emily at right_char_kids
     emily "Daniel, please…"
+    hide emily
 
     "As we step closer to the rehearsal, I notice some of the dragon dancers stealing glances in our direction. Whispers ripple through their group, and I catch snippets of their murmurs."
 
@@ -502,41 +557,51 @@ label ch1_city_fanrong:
     "One of the performers, a young man holding the golden dragon's head, stumbles slightly, his confidence clearly shaken. He regains his footing quickly, but his face is flushed with embarrassment."
     "I sigh softly and step forward, raising a hand in greeting."
 
+    show dorian smile at left_char
     dorian "You're doing well. Keep your movements calm and deliberate. The Prosperity Dragon commands respect, not chaos."
 
     "The young man straightens immediately, nodding with wide eyes."
 
+    show dorian neutral at left_char
     performers "Th-thank you, sir. We're… we're just nervous, you see. Tomorrow's performance is for the Emperor of Kyeongjang, the King of Tianho, and, of course, Empress Olympia."
     performers "We're just very nervous… Our dance, we just want it to be perfect."
 
     dorian "You'll be fine. Focus on your training, not the audience."
     "Channelers: Sir!"
 
+    show lucas at right_char_kids
     lucas "Can I try to be a dragon, Dad? Please? I want to be a dragon too!"
 
     "Lucas runs to Daniel, making sweeping motions with his hands."
 
     lucas "Look at me! I'm the Dragon of Gale! Rwarrr!!"
-
+    hide lucas
     "Emily mimics the performers too, her hands weaving imaginary dragon movements in the air. Daniel crosses his arms as he studies the drummers."
-
+    show emily at right_char_kids
     emily "Roaaarr!!! Look, Dad! I can do it too!"
+    hide emily
+    show daniel at right_char_kids
     daniel "I could totally play the drums better than that guy."
+    hide daniel
 
+    show elara at right_char
     "Elara says gently, placing a hand on my arm."
 
     elara "Kids, calm down. My heart, maybe we should move on before they start asking to join the rehearsal."
-
     dorian "Alright, let's head somewhere else."
 
     "As we turn to leave, one of the young performers in the dragon costume calls out."
+    hide elara
 
     performers "Thank you for your encouragement. We'll make sure tomorrow's performance is flawless!"
+    show dorian normal_alt_neutral at left_char
     dorian "I'm sure you will."
-
+    
+    show elara at right_char
     "As we walk away, Elara links her arm through mine."
 
     elara "That was nice of you, you know. Giving them a little confidence boost."
+    show dorian normal at left_char
     dorian "It's the least I could do."
 
     return
@@ -553,21 +618,25 @@ label ch1_city_xiangli:
 
     scene bg_tianho_xiangli_stalls with dissolve  # PLACEHOLDER — Xiangli food stalls
 
-    # ADDED LATER: Full Xiangli scene from PDF p13-15, replacing placeholder version
     "I decided to take the family out for dinner at the stalls at Xiangli Centre."
     "My family surges ahead, the kids' excitement pulling me along like a tide. Lanterns strung overhead illuminate the bustling food stalls, casting everything in a warm, golden glow."
-
+    
+    show elara at right_char
     elara "Come on, Dorian. Even you can't resist this."
-
+    hide elara
+    show lucas at right_char_kids
     "Lucas is already at the first stall, pressing his face as close as he can without falling into the sizzling grill."
 
     lucas "Dad! They've got... uh... what are these?"
+    show dorian normal at left_char
     dorian "Those are Tianho's famous 'Spring Bite Skewers.' Roasted jiān yán chūn shì, Lucas."
-
+    hide lucas
     # [COMMENT: FOOD1 — Spring Bite Skewers: bite-sized glazed meat with charred fruit slices and crispy greens]
+    # food illus at center with transitions
     "The vendor lifts a skewer of the food. Each skewer has bite-sized pieces of meat glazed in a tangy-sweet sauce, interspersed with charred fruit slices and crispy greens. Lucas' mouth hangs open as he stares at it."
 
     vendor "Tianho's finest! Would you like to have some?"
+    # hide food1 here
     lucas "Yes please! Yes please!"
     emily "I want some! I want some!"
     daniel "Hey! I'm older than you, Lucas! I should have one before you!"
@@ -967,11 +1036,13 @@ label ch1_castle_morning:
 
     "I rub my temples, trying to shake off the haze of interrupted sleep, when the air suddenly grows tense. A shadow looms over the two soldiers."
 
+    voice audio.cyrus_ch1_line1
     cyrus "What is the meaning of this racket?!"
 
     "The soldiers freeze, their backs stiffening as though turned to stone. Soldier Gao, who just moments ago seemed on the verge of nervous collapse, spins on his heel and salutes so sharply he nearly hits himself in the face."
 
     gao "P-P-Paladin Cyrus! Sir! I-I was just—"
+    voice audio.cyrus_ch1_line2
     cyrus "Spit it out, boy! I haven't the time to decipher your blubbering!"
     jiang "Paladin Dorian fell asleep, sir. Gao thought coffee would help, but he, uh… tripped."
 
@@ -985,14 +1056,16 @@ label ch1_castle_morning:
     dorian "Enough, Cyrus. They were only doing their job — clumsily, I'll admit, but well-intentioned. Let it go."
 
     "Cyrus narrows his eyes at me, clearly annoyed."
-
+    
+    voice audio.cyrus_ch1_line3
     cyrus "Your leniency is why discipline among the ranks is slipping, Dorian. Soldiers like these will never survive the battlefield if they can't even handle a simple morning task."
     dorian "Berating them further isn't going to change anything."
+    voice audio.cyrus_ch1_line4
     cyrus "Fine. But don't let this happen again, Dorian. The Emperor's procession waits for no one — not even the Dragon of Gale and his soldiers."
 
     "The four of us stride through the expansive halls of Tianho Castle, the sound of our boots echoing against polished stone floors."
     "Delicate silk banners sway gently in the morning breeze filtering through open lattice windows, each banner bearing an embroidered sigil of Tianho's imperial line."
-
+    voice audio.cyrus_ch1_line5
     cyrus "The Emperor of Kyeongjang will be arriving shortly. His appearance has been meticulously planned. Extravagance is expected."
     dorian "We got that covered, Cyrus. Every single guard and soldier have been stationed on all locations of the city."
     dorian "We secured the area from the Qiaxing Square to the Xiangli Centre. Guarded by trained fire, wind and earth channelers from Tianho, Gale and Mjoll."
@@ -1008,24 +1081,27 @@ label ch1_castle_morning:
     "Most of them clutch documents, some carrying small tokens or gifts."
 
     gao "What's with the line, sir?"
+    voice audio.cyrus_ch1_line6
     cyrus "They're here to apply for the position of a sign language interpreter for the Emperor of Kyeongjang's son. The lad's deaf mute, and the Emperor insists on finding the very best for him."
     dorian "There's no need to prolong this. My men already found someone qualified — his name is Jiyo. He's more than capable to serve the son for the night."
+    voice audio.cyrus_ch1_line7
     cyrus "Jiyo? You're suggesting a convict, Dorian. A man with a criminal record to serve the Emperor's son?"
     dorian "He's served his time and turned his life around. He's an exceptional signer, far better than most of these applicants. My men vetted him thoroughly."
+    voice audio.cyrus_ch1_line8
     cyrus "Clearly, your men need to learn what 'thorough' means. A man's past cannot be ignored so easily, not when it concerns the imperial family."
     dorian "Are you questioning my men's judgment or mine, Cyrus?"
 
     "Before Cyrus can respond, a commotion breaks out near the front of the line. A woman falls to her knees, clutching the hem of a guard's armor. Her face is streaked with tears, her voice desperate."
 
-    # show woman_applicant kneeling at left      # PLACEHOLDER — desperate woman sprite
+    # show woman_2 kneeling at left      # PLACEHOLDER — desperate woman sprite
     # show female_guard at right                 # PLACEHOLDER — female guard sprite
 
-    # woman_applicant "Please, I beg you! Let me audition! My son is starving, and this is my only chance to provide for him. I'll do anything!"
+    # woman_2 "Please, I beg you! Let me audition! My son is starving, and this is my only chance to provide for him. I'll do anything!"
 
     "The female guard standing before her doesn't flinch."
 
     # female_guard "I'm sorry, mam but according to your criminal record, you were convicted of stealing food from your workplace at a bathhouse. We're disqualifying your application. Next!"
-    # woman_applicant *sobbing* "Please, no! What does that have to do with this?"
+    # woman_2 *sobbing* "Please, no! What does that have to do with this?"
 
     "The woman clings tighter, her sobs echoing across the courtyard. The guard sighs, her patience wearing thin."
 
@@ -1033,14 +1109,17 @@ label ch1_castle_morning:
 
     "With a curt nod, two other guards step forward and grab the woman by the arms, dragging her away as she struggles."
 
-    #woman_applicant "No! Please, my son — he needs me! Just give me a chance, please!"
+    #woman_2 "No! Please, my son — he needs me! Just give me a chance, please!"
     #female_guard "Good riddance. Pft."
 
     dorian "Your people are quick to dismiss, Cyrus. Not everyone's past defines them. Sometimes all they need is a second chance."
+    voice audio.cyrus_ch1_line9
     cyrus  "You're being too soft, Paladin Dorian. A second chance is a gamble we cannot afford to take."
     jiang  "The compensation must be prestigious for so many people to be desperate to apply for a one-time job."
+    voice audio.cyrus_ch1_line10
     cyrus  "Prestigious doesn't even begin to cover it. Whoever is chosen will not only serve the royal family of Kyeongjang. It's a chance to rise far above their station."
     dorian "And chances are, if they like their service, they might take the person to live with them in Kyeongjang."
+    voice audio.cyrus_ch1_line11
     cyrus  "Imagine living in an empire that lives only in legends. Gah! The dream! One can—"
 
     jump ch1_auditions
@@ -1069,16 +1148,17 @@ label ch1_auditions:
     niko "You got this, Kaito. Remember what we practiced."
 
     "Before either man can say more, Cyrus raises a hand, his face hardening like stone."
-
+    voice audio.cyrus_ch1_line12
     cyrus "That's enough. Guards, take these men out of here."
 
     "The two men exchange a glance, confusion flickering across their faces. Niko's expression tightens."
 
     niko "Paladin, with respect — may I ask why?"
+    voice audio.cyrus_ch1_line13
     cyrus "Do you think I am ignorant of who you are, Tsukumo? Or of who your brother is? Do you think your false civility cloaks who you truly are?"
     niko "If you know who we are, then you must also know that we have done nothing wrong. My brother seeks only to serve."
-    cyrus "You are prophets of the death god, are you not? The one whose disciples are forbidden to save a dying man — even if he begs for breath."
-    cyrus "You let children bleed out on cold stone if it is 'their time.' You would stand silent as plague takes a village, all in the name of some sacred death. And now you want to 'serve' the palace?"
+    voice audio.cyrus_ch1_line14
+    cyrus "You are prophets of the death god, are you not? The one whose disciples are forbidden to save a dying man — even if he begs for breath. You let children bleed out on cold stone if it is 'their time.' You would stand silent as plague takes a village, all in the name of some sacred death. And now you want to 'serve' the palace?"
 
     "A murmur ripples through the line of applicants, and a few people take a cautious step back."
 
@@ -1092,15 +1172,15 @@ label ch1_auditions:
     niko  "Yes. We serve Enoch. But we do not bring death. We offer peace to those whose time has come. We comfort. We do not decide. That is not our place."
 
     "Cyrus' lips curl into a sneer."
-
-    cyrus "Don't twist your heresies into compassion. Your order watched my cousin bleed out on a battlefield — because he had 'met his time.'"
-    cyrus "Your order knelt beside him, praying, as his lungs filled with blood. Don't you dare speak of comfort."
+    voice audio.cyrus_ch1_line15
+    cyrus "Don't twist your heresies into compassion. Your order watched my cousin bleed out on a battlefield — because he had 'met his time'. Your order knelt beside him, praying, as his lungs filled with blood. Don't you dare speak of comfort."
 
     female_guard "So this is what the Death God's kindness looks like? Letting the weak die, untouched? And you think we'll let you serve the royal family?"
     man_3 "They worship death. That's all you need to know. Get them out of here before misfortune falls on all of us!"
     man_1 "Please! Let them out!"
 
     niko "We came to serve. Not to interfere, not to harm. My brother only asks for a chance to interpret — not to pass judgment on life or death."
+    voice audio.cyrus_ch1_line16
     cyrus "Spare me your platitudes, Tsukumo. Prophets of Enoch have no place in this court. Your kind are lunatics — worshippers of a barbaric, ritualistic god who revels in death and despair."
     jiang "That's right! Tell him like it is, Paladin!"
 
@@ -1131,6 +1211,7 @@ label ch1_auditions:
             "I step forward, positioning myself between the guards and the brothers."
 
             female_guard "P-Paladin Dorian? I don't understand. Why would you defend these lunatics? I—"
+            voice audio.cyrus_ch1_line17
             cyrus "Dorian, you overstep your bounds."
 
             "I turn to him, meeting his glare."
@@ -1139,13 +1220,13 @@ label ch1_auditions:
             
             "Cyrus glares at me, his fists tightening at his sides."
             
-            cyrus "“Innocents”?! Have you lost your bloody mind, Dorian? You really believe these barbarians are innocent? May I remind you that they serve the death god Enoch?"
-            cyrus "Tsukumo is a chosen of the Death God! He and his brother are part of the prophets!"
+            cyrus "“Innocents”?! Have you lost your bloody mind, Dorian? You really believe these barbarians are innocent? May I remind you that they serve the death god Enoch? Tsukumo is a chosen of the Death God! He and his brother are part of the prophets!"
             niko  "We've harmed no one. Let Lord Enoch himself bear witness to that."
             dorian "Leave them be, Cyrus. I won't ask again."
 
             "Cyrus scoffs and finally steps back, though it's clear he does so grudgingly."
 
+            voice audio.cyrus_ch1_line19
             cyrus "Fine. But I still don't trust them near the imperial family. Guards, remove them."
 
             "Before the guards can act, Kaito raises his chin, his voice trembling but defiant."
@@ -1163,9 +1244,8 @@ label ch1_auditions:
             niko "Thank you, Paladin. I do not know your name but I know that few would risk standing against their peers. You have my respect."
 
             "As the brothers vanish from sight, Cyrus scoffs, his expression sour with contempt."
-
-            cyrus "Siding with those disgusting lunatics… pft! We shall not speak of this again, Dorian."
-            cyrus "Eventhe thought of them disgusts me."
+            voice audio.cyrus_ch1_line20
+            cyrus "Siding with those disgusting lunatics… pft! We shall not speak of this again, Dorian. Even the thought of them disgusts me."
             
             "I turn to Cyrus, my voice low and"
 
@@ -1184,7 +1264,8 @@ label ch1_auditions:
             gao "J-Jiang! Stop it!"
 
             "Cyrus takes a deep breath."
-
+            
+            voice audio.cyrus_ch1_line21
             cyrus "You're right. I won't have the imperial family sullied by the hands of a prophet of Enoch. Guards, remove them."
 
             "The female guard spits on Kaito's feet."
@@ -1193,6 +1274,7 @@ label ch1_auditions:
 
             kaito "You people are awful."
             niko  "I expected more from all of you. May Enoch have mercy on your souls. Let's go Kaito."
+            voice audio.cyrus_ch1_line22
             cyrus "May Enoch have mercy on your souls — spare me. If it were up to me, I'd gut their corpses and toss them to the crows."
             jiang "Hahahaha! Disgusting!"
 
@@ -1212,7 +1294,7 @@ label ch1_long_shen:
 
     # ADDED LATER: Imperial Gardens inspection before ceremony (PDF p29-30)
     # [COMMENT: bg_tianho_imperial_gardens — sprawling gardens, lanterns, musicians tuning]
- 
+
     "The Emperor of Kyeongjang, along with his family, will be arriving at nighttime."
     "We decide to pass the time by heading to the Imperial Gardens, a sprawling, meticulously maintained space filled with flowering trees, stone lanterns, and koi ponds."
     "Together with Paladin Cyrus, Soldier Jiang, and Soldier Gao, we inspect the venue for the Emperor of Kyeongjang's arrival."
@@ -1220,7 +1302,7 @@ label ch1_long_shen:
 
     "I personally oversee the placements of banners bearing Tianho's imperial crest, ensuring every detail reflects the dignity of the moment."
     "Paladin Cyrus supervises the final security checks, scrutinizing every station with his sharp eyes… and sharp tongue."
-    
+    voice audio.cyrus_ch1_line23
     cyrus "MERCIFUL TETRAD! If I see one more screw-up, I will personally see to it that you spend the night scrubbing latrines!"
     jiang "Y-Y-Yes, sir!"
     gao   "O-O-On it, sir!"
@@ -1244,11 +1326,13 @@ label ch1_long_shen:
 
     olympia "Paladin Dorian. Paladin Cyrus."
     dorian  "Your Grace."
+    voice audio.cyrus_ch1_line24
     cyrus   "Your Grace."
 
     "Olympia's lips curl into a faint smile, her sharp eyes glinting."
 
     olympia "Both of you have done well. The preparations are flawless."
+    voice audio.cyrus_ch1_line25
     cyrus   "Thank you, Your Grace. It's truly an honor."
 
     "She turns to address the assembled crowd, her voice carrying with regal authority."
@@ -1276,13 +1360,14 @@ label ch1_long_shen:
     dorian "Wait… coupons? She didn't give me any. I'm starting to think you're the favorite Paladin."
 
     "Before Feng could reply, Paladin Cyrus storms over, his weathered face flushed with irritation."
-
+    voice audio.cyrus_ch1_line26
     cyrus "You two fools! Standing here gossiping like washerwomen while the King of Tianho is giving his address? Do you have no sense of decorum?"
 
     feng "Relax, Cyrus. We're just killing time. You should try it sometime — it might help with your blood pressure."
 
     "I suppress a laugh, but Cyrus' glare deepens, his face reddening."
 
+    voice audio.cyrus_ch1_line27
     cyrus "I suggest that you obey and listen to the address. This is no time for your childish antics!"
 
     menu:
@@ -1301,6 +1386,7 @@ label ch1_long_shen:
             "Cyrus shoots me a sideways glance and gives the faintest of approving nods, as if my silence was a small victory for him. I roll my eyes but hold my tongue."
 
             feng "Well, that was… enlightening. Glad you kept the peace, but you owe me for sitting through that without cracking a joke."
+            voice audio.cyrus_ch1_line28
             cyrus "The two of you could learn something from the King's wisdom. Perhaps you should take notes."
 
         # -----------------------------------------------------------------------
@@ -1318,6 +1404,7 @@ label ch1_long_shen:
 
             feng "Pft— Hahahaha!"
             dorian "You heard me. Save the theatrics for the soldiers, Cyrus. It's not like the King will notice if I miss one line of his speech."
+            voice audio.cyrus_ch1_line29
             cyrus "I-well… Tsk…"
             feng "Dorian's right, Cyrus. We're all tired, and honestly, you yelling at us isn't helping your blood pressure. Maybe you should sit down for a minute before you pop a vein."
             dorian "Just loosen up, will you?"
@@ -1668,7 +1755,8 @@ label ch1_battle:
             "Flames roar to life, swirling in a protective arc that absorbs the beast's attack with a deafening crack."
             "The heat from my shield is intense, but Gao and Jiang hold their ground."
 
-            taotie_roar "Grrraaawwwrrr!!"
+            voice audio.toatie_roar_ch1_line3
+            taotie "Grrraaawwwrrr!!"
 
             dorian "Are you alright?"
             jiang  "Paladin… Thank you!"
@@ -1687,7 +1775,9 @@ label ch1_battle:
             "The yaoguai lunges, its glowing red eyes locked on me. Without hesitation, I channel fire into my palm, condensing the heat into a pulsing orb."
             "I hurl the fireball with all my strength. The orb smashes into the yaoguai's face, erupting in a fiery explosion that engulfs its head in flames."
 
-            taotie_roar "Raaaaaaawwrrr!!! Grrraaawwwrrr!!"
+            voice audio.toatie_roar_ch1_line1
+            voice audio.toatie_roar_ch1_line3
+            taotie "Raaaaaaawwrrr!!! Grrraaawwwrrr!!"
 
             "The yaoguai lets out an ear-splitting roar, thrashing wildly as it tries to shake off the fire. Gao and Jiang take the opportunity to scramble to safety."
 
@@ -1790,7 +1880,8 @@ label ch1_battle:
 
             "I slam my hand to the ground, channeling the raw power of the earth beneath me. Jagged spikes of stone erupt from the floor with a deafening crack, impaling the yaoguai before they can take another step."
 
-            taotie_roar "Raaaaaaa!!!!"
+            voice audio.toatie_roar_ch1_line3
+            taotie "Raaaaaaa!!!!"
 
             "Their bodies twitch once before falling limp, pinned like broken marionettes."
 
@@ -1874,7 +1965,7 @@ label ch1_battle:
     dorian "Where are the others? The Kyeongjang Emperor? The King of Tianho?"
 
     "Feng shakes his head, his eyes filled with frustration and shame."
-
+    voice audio.cyrus_ch1_line30
     cyrus "We couldn't find them. We searched the upper levels and the throne room. It's as if they vanished."
     vasily "Vanished? That's impossible!"
 
@@ -1896,10 +1987,11 @@ label ch1_battle:
     olympia "Tianho… Danger…"
     feng    "We need to get her out of here. She's lost too much blood."
     dorian  "Feng, Cyrus — we need a plan. And fast."
+    voice audio.cyrus_ch1_line31
     cyrus   "There might be a doctor here who can—"
 
     "The ground beneath us begins to tremble. Then, the entire castle shakes violently, dust and debris raining down from the ceiling."
-
+    voice audio.cyrus_ch1_line32
     cyrus "The castle's collapsing! We need to get out — NOW!"
     feng  "In Tetrad's name… What is going on here?!"
 
@@ -1949,13 +2041,15 @@ label ch1_battle:
     dorian "Feng, we need to help them evacuate! The city will burn if we don't act now!"
     feng  "On it. I'll clear the streets and rally anyone who can still fight."
     dorian "Cyrus, what about you?"
-
+    voice audio.cyrus_ch1_line33
     cyrus "Dorian, you evacuate the city. I'll deal with the winged monster."
     dorian "Cyrus, you can't—"
+    voice audio.cyrus_ch1_line34
     cyrus "Listen to me. This city still needs a future, and that future doesn't happen unless someone stops that thing."
 
     "He tightens his grip on his sword, a rare softness in his gaze as he meets my eyes."
 
+    voice audio.cyrus_ch1_line35
     cyrus "Protect the people, Dorian. That's your duty now."
 
     "Before I can argue, Cyrus charges toward the ruins of the castle, his figure soon swallowed by the smoke and flames."
@@ -1970,8 +2064,9 @@ label ch1_battle:
     scene bg_tianho_city_on_fire with dissolve
 
     play music ost_taotie_battle fadein 1.0     # PLACEHOLDER — Taotie battle OST
-
-    taotie_roar "GRAAAWWRRRR!!"
+    
+    voice audio.toatie_roar_ch1_line3
+    taotie "GRAAAWWRRRR!!"
 
     dorian "Tetrad above… What the—"
 
@@ -1990,7 +2085,8 @@ label ch1_battle:
     pause 0.5
     scene bg_tianho_city_on_fire with dissolve
 
-    taotie_roar "GRAAAWWRRRR!!"
+    voice audio.toatie_roar_ch1_line3
+    taotie "GRAAAWWRRRR!!"
 
     "The claws rake across his face, sending him flying backward. He crashes into the ground, rolling to a stop near me. Blood gushes from deep, savage gashes across his eyes, the blue fire extinguished from his blade as it clatters to the ground."
     feng "ARGGGHHHH!!!!"
@@ -2000,7 +2096,8 @@ label ch1_battle:
 
     "I think of rushing towards his aid, but somehow I need to kill this creature first."
 
-    taotie_roar "GRAAAWWRRRR!!"
+    voice audio.toatie_roar_ch1_line3
+    taotie "GRAAAWWRRRR!!"
 
     "The Taotie lunges forward, its gaping maw threatening to devour me whole. I only have a moment to act."
 
@@ -2024,7 +2121,8 @@ label ch1_battle:
 
             "I try to dodge, but my footing slips on the rubble beneath me. I fall hard onto my side, the impact knocking the wind out of me."
 
-            taotie_roar "GRAAAWWRRRR!!"
+            voice audio.toatie_roar_ch1_line3
+            taotie "GRAAAWWRRRR!!"
             dorian "AAHHHH!!!"
             feng "DORIAN!!"
             olympia "PALADIN! NO!"
@@ -2038,7 +2136,7 @@ label ch1_battle:
     # =====================================================================
     # D9 — TIMED QTC: Shut mouth or Run (HARD GATE)
     # =====================================================================
-
+    voice audio.toatie_roar_ch1_line1
     taotie "GRAAAWWRRRR!!!"
     "The Taotie opens its maw wide, preparing to unleash a devastating roar that shakes the ground."
 
@@ -2049,7 +2147,8 @@ label ch1_battle:
 
             "I focus my energy, summoning a powerful gust of wind that slams into the Taotie's gaping maw. The force is enough to snap its jaws shut with a thunderous clang, cutting off the ear-splitting roar."
 
-            taotie_roar "Mmmmmmm—"
+            voice audio.toatie_roar_ch1_line2
+            taotie "Mmmmmmm—"
             dorian "Think again, mate."
 
         "Run toward its flank to avoid the blast.":
@@ -2104,7 +2203,8 @@ label ch1_battle:
     "The beast roars in confusion and stumbles back, teetering precariously on the edge of a deep pit. The wind intensifies, forcing the Taotie to lose its balance."
     "With a final deafening roar, it plummets into the pit below, disappearing into the fiery abyss."
 
-    taotie_roar "GRAAAWWRRRR!!"
+    voice audio.toatie_roar_ch1_line3
+    taotie "GRAAAWWRRRR!!"
 
     "I whirl around, heart pounding, to see the source of the wind. There stands Empress Olympia, barely upright."
 
@@ -2197,7 +2297,9 @@ label ch1_common_end:
     "As I sprint, my gaze locks onto a building half-consumed by flames. The roof is sagging, embers raining down like hellfire. Faint cries reach my ears through the roaring inferno."
 
     man_3 "Help! Someone, help us!"
+
     yuxuan "Please, we're trapped! *coughs*"
+    voice audio.woman3_ch1_line1
     woman_3 "My baby! My child and I are inside!"
 
     "I skid to a halt. The doorway is blocked by debris, the flames licking hungrily at the edges. I stretch out a hand, summoning my power."
@@ -2248,10 +2350,7 @@ label ch1_common_end:
     "I give him a quick nod, urgency pulling me back to my original mission. Elara, the kids... hold on."
     "As I sprint away, I feel Yuxuan's gaze lingering."
 
-    # -------------------------------------------------------------------------
-    # THE INN — The Yaoguai King reveal (MUCH expanded from PDF p55-57)
-    # -------------------------------------------------------------------------
-
+    # THE INN
     stop music
 
     "Soon, the inn comes into view, but my heart plummets as I see the hellscape before me."

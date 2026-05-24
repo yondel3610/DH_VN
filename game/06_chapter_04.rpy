@@ -139,7 +139,6 @@ define audio.ost_underground_move = "audio/music/ost_underground_move.ogg"      
 define audio.sfx_explosion_boom   = "audio/sfx/sfx_explosion_boom.ogg"         # PLACEHOLDER
 define audio.sfx_arrow_volley     = "audio/sfx/sfx_arrow_volley.ogg"           # PLACEHOLDER
 define audio.sfx_earth_pillar     = "audio/sfx/sfx_earth_pillar.ogg"           # PLACEHOLDER
-define audio.sfx_wind_blast       = "audio/sfx/sfx_wind_blast.ogg"             # PLACEHOLDER  (already in ch2 but re-declared for ch4 scope)
 define audio.sfx_carriage_crash   = "audio/sfx/sfx_carriage_crash.ogg"         # PLACEHOLDER
 define audio.sfx_metal_barrier    = "audio/sfx/sfx_metal_barrier.ogg"          # PLACEHOLDER
 define audio.sfx_shadow_surge     = "audio/sfx/sfx_shadow_surge.ogg"           # PLACEHOLDER

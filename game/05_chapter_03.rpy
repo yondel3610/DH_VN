@@ -1236,6 +1236,7 @@ label ch3_yuxuan_arrives:
     yuxuan "Wait… Who's Tedda? Is there another person here?"
     dorian "That's just the knit doll with the missing eye."
     yuxuan "Oh… I thought it was another person. Anyway, Dorian… Have you handled the situation yet?"
+    # line 08
     dorian "What situation?"
     yuxuan "Have you killed the Prince? The one who murdered the Queen. You know, to stop the blizzard?"
     yuxuan "King Gustav upped the bounty. He already tripled it."

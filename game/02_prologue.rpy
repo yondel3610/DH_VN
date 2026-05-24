@@ -11,7 +11,6 @@
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-
 #centralized character definitions
 
 # =============================================================================
@@ -28,7 +27,7 @@ image bg_underground_lit:
     fit "cover"
 
 image bg_underground_red:
-    "images/Assets/Background/Underground Red.png"
+    "images/Assets/Background/Underground Redpng.png"
     fit "cover"
 
 image kristin_kneeling:
@@ -389,7 +388,7 @@ label prologue:
     scene bg_underground_lit with flash
     pause 0.6
     
-    scene bg_underground_red with dissolve
+    scene bg_underground_dim with dissolve
     play music ost_yaoguai_theme volume 0.8
     
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
@@ -421,7 +420,7 @@ label prologue:
     girl_ald "AHHH!!! NO!!!"
     
     "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
-    
+    scene bg_underground_red with flash
     show boy_ald_normal at left_char
 
     voice boy_ald_prl_line14
@@ -503,9 +502,9 @@ label prologue_choice_dash:
     "Too fast."
     "A blur. A slash. A body fell."
     
-    scene bg_underground_dim with flash
+    scene bg_underground_red with flash
     pause 0.4
-    scene bg_underground_dim with dissolve
+    scene bg_underground_red with dissolve
     
     jump prologue_common
 
@@ -532,10 +531,8 @@ label prologue_common:
     yk "And not a whisper in the winds? No fanfare. No grief. No mourning bells."
     
     "His eyes narrowed. Slowly, he stepped closer to the bodies, talons clicking against the stone."
-    
-    # scene cg_yk_surveying with dissolve
-    # pause 1.0
-    # scene bg_underground_red with dissolve
+
+    scene bg_underground_red with dissolve
     
     voice audio.yk_ald_prl_line6
     yk "That old man… What are you plotting?"

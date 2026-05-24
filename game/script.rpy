@@ -10,6 +10,24 @@ define slow_fade = Fade(0.3, 0.5, 0.3)
 # fast_dissolve — quicker version of dissolve for sprite swaps mid-scene.
 define fast_dissolve = Dissolve(0.2)    
 
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "Temer's Studio presents..." with dissolve
+    with Pause(1.5)
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "PLACEHOLDER FOR DH LOGO" with dissolve
+    with Pause(1.5)
+
+    hide text with dissolve
+    with Pause(1)
+    return
+
+
 label start:
     $ persistent.save_counter = getattr(persistent, 'save_counter', 0) + 1
     $ new_slot = persistent.save_counter
