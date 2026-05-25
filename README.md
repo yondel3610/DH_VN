@@ -59,7 +59,6 @@ renpy.exe /path/to/project
    - macOS
    - Linux
    - Android (requires RAPT)
-   - Web (HTML5)
    - iOS (requires Xcode on Mac)
 
 ---
