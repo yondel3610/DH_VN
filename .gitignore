@@ -7,6 +7,7 @@ __pycache__/
 *.pyc
 *.pyo
 
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -29,6 +30,7 @@ cache/
 log.txt
 errors.txt
 traceback.txt
+dialogue_scan.txt
 
 # xclude audio files
 *.ogg
@@ -40,3 +42,7 @@ traceback.txt
 
 # Exclude entire audio folder
 game/audio/
+
+# Sample saves
+*.save
+*.saves

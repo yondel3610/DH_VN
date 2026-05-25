@@ -1017,4 +1017,41 @@ image yuki_onna:
 # =============================================================================
 # FOOD ILLUS
 # =============================================================================
+# TODO: add food illus in the game
+image food1:
+    At("images/Assets/Food Illustrations/FOOD1.png")
+    fit "contain"
+image food3:
+    At("images/Assets/Food Illustrations/FOOD3.png")
+    fit "contain"
+image food4:
+    At("images/Assets/Food Illustrations/FOOD4.png")
+    fit "contain"
+image food6:
+    At("images/Assets/Food Illustrations/FOOD6.png")
+    fit "contain"
+image food7:
+    At("images/Assets/Food Illustrations/FOOD7.png")
+    fit "contain"
+image food8:
+    At("images/Assets/Food Illustrations/FOOD8.png")
+    fit "contain"
+image food9:
+    At("images/Assets/Food Illustrations/FOOD9.png")
+    fit "contain"
+image food11:
+    At("images/Assets/Food Illustrations/FOOD11.png")
+    fit "contain"
+image food12:
+    At("images/Assets/Food Illustrations/FOOD12.png")
+    fit "contain"
+image food13:
+    At("images/Assets/Food Illustrations/FOOD13.png")
+    fit "contain"
+image food14:
+    At("images/Assets/Food Illustrations/FOOD14.png")
+    fit "contain"
+image food15:
+    At("images/Assets/Food Illustrations/FOOD15.png")
+    fit "contain"
 
