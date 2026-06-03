@@ -196,9 +196,66 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        # ── SPACING BETWEEN CHOICES AND TIMER ─────────────────────
+        spacing gui.choice_spacing   # ← spacing between choice buttons
+
         for i in items:
             textbutton i.caption action i.action
 
+        # Timer bar sits directly below the last choice button
+        if hasattr(store, '_choice_timeout') and _choice_timeout > 0:
+            timer _choice_timeout action items[0].action
+
+            if _choice_timeout <= 2.0:
+                timer 0.5 repeat True action Play("sound", audio.sfx_timer_tick) # TODO: add clock timer sfx
+
+            #  ERTICAL GAP BETWEEN LAST CHOICE AND BAR 
+            null height 12  # ← CHANGE THIS to push bar further down
+
+            fixed:
+                # SIZE (total including border) 
+                xsize 604   # bar width + (border thickness × 2)
+                ysize 20    # bar height + (border thickness × 2)
+
+                # PLACEMENT 
+                xalign 0.5  # centers under the choice buttons
+                # No yalign needed — position is now relative to vbox
+
+                # Border frame
+                frame:
+                    xsize 604
+                    ysize 20
+                    xalign 0.5
+                    yalign 0.5
+                    background Frame(Solid(
+                        # ── BORDER COLOR ──────────────────────────
+                        "#c8a96e"
+                    ), 8, 8)    # ← CORNER ROUNDING HERE
+
+                # Inner fill frame
+                frame:
+                    xsize 600
+                    ysize 16
+                    xalign 0.5
+                    yalign 0.5
+                    # ── BORDER THICKNESS ──────────────────────────
+                    padding (2, 2, 2, 2) # ← CHANGE THICKNESS HERE
+                    background Frame(Solid("#2a2a2a"), 8, 8)
+
+                    bar:
+                        xsize 600
+                        ysize 16
+                        xalign 0.5
+                        yalign 0.5
+                        value AnimatedValue(
+                            value=_choice_timeout,
+                            range=_choice_timeout,
+                            delay=_choice_timeout,
+                            old_value=0
+                        )
+                        # ── BAR COLORS ────────────────────────────
+                        left_bar Frame(Solid("#c8a96e"), 8, 8)  # fill
+                        right_bar Frame(Solid("#2a2a2a"), 8, 8) # empty
 
 style choice_vbox is vbox
 style choice_button is button
@@ -283,15 +340,25 @@ style quick_button_text:
 # Navigation screen
 # This screen is included in the main and game menus, and provides navigation
 # to other menus, and to start the game.
-
+default lastsave = renpy.newest_slot(r"\d+-\d+")
 screen navigation():
     vbox:
         style_prefix "navigation"
         xpos gui.navigation_xpos
+        # xalign 0.5
         yalign 0.5
         spacing gui.navigation_spacing
 
-        if main_menu: #main menu buttons
+        if main_menu:
+            $ _qs = renpy.newest_slot(r"quick-\d+")
+            if _qs is not None:
+                textbutton _("Debug: [_qs]") action NullAction()
+
+            if FileLoadable("quick-1"):
+                textbutton _("Continue") action FileLoad("quick-1")
+            elif lastsave is not None:
+                textbutton _("Continue") action FileLoad(lastsave)
+
             textbutton _("Start") action Start()
             textbutton _("Load Game") action ShowMenu("load")
             textbutton _("Settings") action ShowMenu("settings")
@@ -307,10 +374,18 @@ screen navigation():
             if _in_replay:
                 textbutton _("End Replay") action EndReplay(confirm=True)
             else:
-                textbutton _("Main Menu") action MainMenu()
+                textbutton _("Main Menu") action [
+                    SetVariable("save_name", "Quick Save"),
+                    QuickSave(message="Saved to Quick Save", newest=True),
+                    MainMenu(confirm=True)
+                ]
 
             if renpy.variant("pc"):
-                textbutton _("Quit") action Quit(confirm=True)
+                textbutton _("Quit") action [
+                    SetVariable("save_name", "Quick Save"),
+                    QuickSave(message="Saved to Quick Save", newest=True),
+                    Quit(confirm=True)
+                ]
 
 
 style navigation_button is gui_button
@@ -319,10 +394,14 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    xalign 0.5 # centered
 
+# TODO: change idle and hover color before release
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-
+    size 45
+    color "#aaaaaa"        # idle color
+    hover_color "#ffffff"  # hover color
 
 # Main Menu screen
 #
@@ -334,7 +413,6 @@ screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
-
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
@@ -366,7 +444,6 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
-
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
@@ -396,19 +473,14 @@ style main_menu_version:
 ## transcluded (placed) inside it.
 
 screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-
     style_prefix "game_menu"
-
     if main_menu:
         add gui.main_menu_background
     else:
         add gui.game_menu_background
-
     frame:
         style "game_menu_outer_frame"
-
         hbox:
-
             ## Reserve space for the navigation section.
             frame:
                 style "game_menu_navigation_frame"
@@ -417,51 +489,39 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                 style "game_menu_content_frame"
 
                 if scroll == "viewport":
-
                     viewport:
                         yinitial yinitial
                         scrollbars "vertical"
                         mousewheel True
                         draggable True
                         pagekeys True
-
                         side_yfill True
 
                         vbox:
                             spacing spacing
-
                             transclude
 
                 elif scroll == "vpgrid":
-
                     vpgrid:
                         cols 1
                         yinitial yinitial
-
                         scrollbars "vertical"
                         mousewheel True
                         draggable True
                         pagekeys True
-
                         side_yfill True
 
                         spacing spacing
-
                         transclude
 
                 else:
-
                     transclude
-
     use navigation
 
     textbutton _("Return"):
         style "return_button"
-
         action Return()
-
     label title
-
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
 
@@ -514,9 +574,80 @@ style game_menu_label_text:
 
 style return_button:
     xpos gui.navigation_xpos
-    yalign 1.0
+    yalign 0.975 # 1.0 = lower pos
     yoffset -45
+    xoffset 120 # push to right
 
+# =============================================================================
+# GAME OVER SCREEN
+# =============================================================================
+init python:
+    def debug_check_slots():
+        import os
+        savedir = renpy.config.savedir
+        print("=== SAVE DIRECTORY ===")
+        print(f"Path: {savedir}")
+        if os.path.exists(savedir):
+            files = os.listdir(savedir)
+            for f in sorted(files):
+                if f.endswith('.save'):
+                    print(f"  {f}")
+        else:
+            print("  Directory not found")
+        
+        print("\n=== QUICK SLOTS CHECK ===")
+        for i in range(1, 13):
+            slot = f"quick-{i}"
+            if renpy.can_load(slot):
+                print(f"  {slot}: EXISTS")
+            else:
+                print(f"  {slot}: empty")
+
+screen game_over_screen():
+    modal True
+    add "#000000" alpha 0.85
+    vbox:
+        xalign 0.5
+        yalign 0.6
+        spacing 20
+        text "The fire went out." xalign 0.5 style "game_over_text"
+        text "And with it — everything." xalign 0.5 style "game_over_text"
+        null height 30
+
+        # Loads the checkpoint saved just before the QTC
+        textbutton "Retry":
+            xalign 0.5
+            style "game_over_button"
+            action Function(renpy.load, "quick-1")
+
+        # Saves to quick page then restarts cleanly
+        # Player can resume via Continue on main menu
+        # or find it manually on the quick page in Load Game
+        textbutton "Save && Quit to Main Menu":
+            xalign 0.5
+            style "game_over_button"
+            action [
+                QuickSave(message="Saved to Quick Save", newest=True),
+                Function(renpy.full_restart)
+            ]
+
+        textbutton "Debug: Check Slots":
+            xalign 0.5
+            style "game_over_button"
+            action [
+                Function(debug_check_slots)
+            ]
+
+style game_over_text:
+    color "#ffffff"
+    size 32
+    font "DejaVuSans.ttf"   # TODO: replace with your actual font path
+
+style game_over_button is button_text:
+    color "#ffffff"
+    hover_color "#ffcc00"
+    size 28
+    font "DejaVuSans.ttf"   # TODO: replace with your actual font path
 
 # About screen ################################################################
 #
@@ -588,87 +719,114 @@ screen load():
 #
 # Save screen behaviour is completely unchanged from the Ren'Py default.
 
+default last_manual_save = "1-1"
 screen file_slots(title):
-    key "game_menu" action NullAction()
     use game_menu(title, scroll="viewport"):
         vbox:
             spacing 10
 
-            if not persistent.save_list:
-                text "No saves found.":
-                    xalign 0.5
-                    color "#888888"
-                    size 26
-                
-            else:
-                vbox:
-                    style_prefix "slot"
-                    xalign 0.5
-                    spacing gui.slot_spacing
+            # --- Page Buttons ---
+            hbox:
+                xalign 0.5
+                spacing 8
+                for page in ["auto", "quick"] + [str(i) for i in range(1, 5)]:
+                    textbutton "[page]":
+                        action FilePage(page)
+                        xsize 60
+                        ysize 36
+                        xalign 0.5
+                        text_align 0.5
+                        background Frame("#1a1a2e", 4, 4)
+                        hover_background Frame("#c8a96e", 4, 4)
+                        selected_background Frame("#c8a96e", 4, 4)
+                        text_color "#aaaacc"
+                        text_hover_color "#0d0d1a"
+                        text_selected_color "#0d0d1a"
+                        text_size 18
 
-                    for idx, entry in enumerate(persistent.save_list):
-                        $ slot = entry["slot"]
-                        $ display_num = entry["num"]
+            # --- Save Slots ---
+            vpgrid:
+                cols 1
+                xalign 0.5
+                spacing 12
 
-                        button:
-                            action FileAction(slot)
-                            xsize 1250
-                            ysize 240
-                            xpadding 0
-                            ypadding 0
-                            mouse "default"
+                for i in range(gui.file_slot_cols * gui.file_slot_rows):
+                    $ slot_id = FileSlotName(i + 1, gui.file_slot_cols * gui.file_slot_rows)
 
-                            # Right-click to show delete option
-                            alternate ShowMenu(
-                                "confirm_slot_delete",
-                                slot=entry["slot"],
-                                idx=idx
-                            )
+                    button:
+                        action FileAction(slot_id)
+                        xsize 1100
+                        ysize 160
+                        xalign 0.5
+                        background Frame("#12121f", 6, 6)
+                        hover_background Frame("#1e1e3a", 6, 6)
+                        xpadding 0
+                        ypadding 0
 
-                            has hbox:
-                                spacing 0
-                                xfill True
-                                yalign 0.25
+                        has hbox:
+                            spacing 0
+                            xfill True
+                            yalign 0.5
 
-                            frame:
-                                xsize 240
-                                ysize 150
-                                xoffset 20
-                                padding (8, 8, 8, 8)
-                                background "#111111"
-                                add FileScreenshot(slot):
-                                    xsize 224
-                                    ysize 164
-                                    fit "contain"
-                                    xalign 1
-                                    yalign 0.5
+                        # Left gold accent bar
+                        frame:
+                            xsize 6
+                            ysize 160
+                            background "#c8a96e"
 
-                            vbox:
+                        # Screenshot
+                        frame:
+                            xsize 220
+                            ysize 144
+                            xoffset 0
+                            yoffset 0
+                            padding (6, 6, 6, 6)
+                            background "#0d0d1a"
+                            add FileScreenshot(slot_id):
+                                xsize 208
+                                ysize 132
+                                fit "contain"
+                                xalign 0.5
                                 yalign 0.5
-                                spacing 8
-                                xsize 980
-                                xoffset 20
 
-                                text "Save [display_num]":
-                                    size 28
-                                    color "#ffffff"
+                        # Slot info text
+                        vbox:
+                            yalign 0.5
+                            spacing 6
+                            xsize 860
+                            xoffset 24
+
+                            text slot_id:
+                                size 14
+                                color "#c8a96e"
+                                bold True
+
+                            if FileLoadable(slot_id):
+                                text FileSaveName(slot_id):
+                                    size 24
+                                    color "#e8e8f0"
                                     bold True
 
-                                text FileSaveName(slot):
-                                    size 22
-                                    color "#cccccc"
-
                                 hbox:
-                                    spacing 20
-                                    text FileTime(slot, format=_("{#file_time}%H:%M"), empty=_("--:--")):
-                                        size 20
-                                        color "#aaaaaa"
+                                    spacing 16
+                                    text FileTime(slot_id, format=_("{#file_time}%H:%M"), empty=_("--:--")):
+                                        size 18
+                                        color "#7a7a9a"
                                     text "|":
-                                        size 20
-                                        color "#555555"
-                                    text FileTime(slot, format=_("{#file_time}%m/%d/%Y"), empty=_("")):
-                                        size 20
-                                        color "#aaaaaa"
+                                        size 18
+                                        color "#3a3a5a"
+                                    text FileTime(slot_id, format=_("{#file_time}%m/%d/%Y"), empty=_("")):
+                                        size 18
+                                        color "#7a7a9a"
+                            else:
+                                text "Empty Slot":
+                                    size 24
+                                    color "#555566"
+                                    italic True
+
+                                text "No save data":
+                                    size 18
+                                    color "#555566"
 
 # Slot action button style ####################################################
 #
@@ -780,34 +938,6 @@ init python:
         renpy.music.set_volume(vol, channel="sound")
         renpy.music.set_volume(vol, channel="voice")
         persistent.main_volume = vol
-
-    # ADDED: save list management
-    if persistent.save_list is None:
-        persistent.save_list = []
-    if persistent.save_counter is None:
-        persistent.save_counter = 0
-
-    cleaned = []
-    for entry in persistent.save_list:
-        if isinstance(entry, dict) and "slot" in entry and "num" in entry:
-            cleaned.append(entry)
-        # old integer entries are dropped — they had no num tracking
-
-    # Remove entries whose save files no longer exist on disk
-    cleaned = [
-        entry for entry in cleaned
-        if renpy.can_load(str(entry["slot"]))
-    ]
-
-    persistent.save_list = cleaned
-    renpy.save_persistent()
-
-    def delete_save_slot(slot, idx):
-        # CHANGED: convert slot to string for renpy.unlink_save
-        renpy.unlink_save(str(slot))
-        if idx < len(persistent.save_list):
-            persistent.save_list.pop(idx)
-        renpy.save_persistent()
 
 # Apply saved volume on game start
 label after_load:

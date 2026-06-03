@@ -1,0 +1,3611 @@
+01_characters.rpy
+01_characters.rpyc
+01_game_vars.rpy
+01_game_vars.rpyc
+01_sprites.rpy
+01_sprites.rpyc
+01_transforms.rpy
+01_transforms.rpyc
+01_voice_lines.rpy
+01_voice_lines.rpyc
+01auto-highlight.rpy
+01auto-highlight.rpyc
+02_prologue.rpy
+02_prologue.rpyc
+03_chapter_01.rpy
+03_chapter_01.rpyc
+04_chapter_02.rpy
+04_chapter_02.rpyc
+05_chapter_03.rpy
+05_chapter_03.rpyc
+06_chapter_04.rpy
+06_chapter_04.rpyc
+07_chapter_05.rpy
+07_chapter_05.rpyc
+08_chapter_06.rpy
+08_chapter_06.rpyc
+09_chapter_07.rpy
+09_chapter_07.rpyc
+10_chapter_08.rpy
+10_chapter_08.rpyc
+11_chapter_09_p1.rpy
+11_chapter_09_p1.rpyc
+12_chapter_09_p2.rpy
+12_chapter_09_p2.rpyc
+13_chapter_10.rpy
+13_chapter_10.rpyc
+cheatsheet.rpy
+cheatsheet.rpyc
+gui.rpy
+gui.rpyc
+options.rpy
+options.rpyc
+screens.rpy
+screens.rpyc
+script.rpy
+script.rpyc
+.vscode\settings.json
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_001.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_002.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_003.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_004.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_005.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_006.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_007.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_008.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_009.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_010.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_011.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_012.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_013.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_014.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_015.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_016.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_017.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_018.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_019.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_020.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_021.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_022.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_023.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_024.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_025.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_026.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_027.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_028.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_029.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_030.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_031.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_032.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_033.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_034.ogg
+audio\Chapter 1\Cyrus_Chapter 1\cyrus_ch1_035.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_001.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_002.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_003.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_004.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_005.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_006.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_007.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_008.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_009.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_010.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_011.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_012.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_013.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_014.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_015.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_016.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_017.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_018.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_019.ogg
+audio\Chapter 1\Daniel_Chapter 1\daniel_ch1_020.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_001.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_002.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_003.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_004.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_005.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_006.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_007.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_008.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_009.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_010.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_011.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_012.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_013.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_014.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_015.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_016.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_017.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_018.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_019.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_020.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_021.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_022.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_023.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_024.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_025.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_026.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_027.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_028.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_029.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_030.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_031.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_032.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_033.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_034.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_035.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_036.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_037.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_038.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_039.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_040.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_041.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_042.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_043.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_044.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_045.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_046.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_047.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_048.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_049.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_050.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_051.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_052.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_053.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_054.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_055.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_056.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_057.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_058.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_059.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_060.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_061.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_062.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_063.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_064.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_065.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_066.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_067.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_068.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_069.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_070.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_071.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_072.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_073.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_074.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_075.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_076.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_077.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_078.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_079.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_080.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_081.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_082.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_083.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_084.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_085.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_086.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_087.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_088.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_089.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_090.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_091.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_092.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_093.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_094.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_095.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_096.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_097.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_098.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_099.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_100.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_101.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_102.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_103.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_104.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_105.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_106.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_107.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_108.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_109.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_110.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_111.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_112.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_113.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_114.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_115.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_116.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_117.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_118.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_119.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_120.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_121.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_122.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_123.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_124.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_125.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_126.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_127.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_128.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_129.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_130.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_131.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_132.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_133.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_134.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_135.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_136.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_137.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_138.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_139.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_140.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_141.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_142.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_143.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_144.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_145.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_146.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_147.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_148.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_149.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_150.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_151.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_152.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_153.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_154.ogg
+audio\Chapter 1\Dorian_Chapter 1\dorian_ch1_155.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_001.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_002.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_003.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_004.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_005.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_006.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_007.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_008.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_009.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_010.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_011.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_012.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_013.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_014.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_015.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_016.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_017.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_018.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_019.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_020.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_021.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_022.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_023.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_024.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_025.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_026.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_027.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_028.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_029.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_030.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_031.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_032.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_033.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_034.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_035.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_036.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_037.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_038.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_039.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_040.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_041.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_042.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_043.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_044.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_045.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_046.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_047.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_048.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_049.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_050.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_051.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_052.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_053.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_054.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_055.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_056.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_057.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_058.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_059.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_060.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_061.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_062.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_063.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_064.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_065.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_066.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_067.ogg
+audio\Chapter 1\Elara_Chapter 1\elara_ch1_068.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_001.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_002.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_003.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_004.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_005.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_006.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_007.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_008.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_009.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_010.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_011.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_012.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_013.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_014.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_015.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_016.ogg
+audio\Chapter 1\Jiang_Chapter 1\jiang_ch1_017.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_001.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_002.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_003.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_004.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_005.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_006.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_007.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_008.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_009.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_010.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_011.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_012.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_013.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_014.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_015.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_016.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_017.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_018.ogg
+audio\Chapter 1\Lucas_Chapter 1\lucas_ch1_019.ogg
+audio\Chapter 1\Man 1_Chapter 1\man1_ch1_001.ogg
+audio\Chapter 1\Man 1_Chapter 1\man1_ch1_002.ogg
+audio\Chapter 1\Man 1_Chapter 1\man1_ch1_003.ogg
+audio\Chapter 1\Man 1_Chapter 1\man1_ch1_004.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_001.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_002.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_003.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_004.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_005.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_006.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_007.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_008.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_009.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_010.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_011.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_012.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_013.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_014.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_015.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_016.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_017.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_018.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_019.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_020.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_021.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_022.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_023.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_024.ogg
+audio\Chapter 1\Olympia_Chapter 1\olympia_ch1_025.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_001.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_002.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_003.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_004.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_005.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_006.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_007.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_008.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_009.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_010.ogg
+audio\Chapter 1\Prosperity Dragon_Chapter 1\prosperity_dragon_ch1_011.ogg
+audio\Chapter 1\Roboto_Chapter 1\roboto_ch1_001.ogg
+audio\Chapter 1\Roboto_Chapter 1\roboto_ch1_002.ogg
+audio\Chapter 1\Roboto_Chapter 1\roboto_ch1_003.ogg
+audio\Chapter 1\Roboto_Chapter 1\roboto_ch1_004.ogg
+audio\Chapter 1\Roboto_Chapter 1\roboto_ch1_005.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_001.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_002.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_003.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_004.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_005.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_006.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_007.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_008.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_009.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_010.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_011.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_012.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_013.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_014.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_015.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_016.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_017.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_018.ogg
+audio\Chapter 1\Sarah_Chapter 1\sarah_ch1_019.ogg
+audio\Chapter 1\Taotie Roar_Chapter 1\taotie_ch1_001.ogg
+audio\Chapter 1\Taotie Roar_Chapter 1\taotie_ch1_002.ogg
+audio\Chapter 1\Taotie Roar_Chapter 1\taotie_ch1_003.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_001.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_002.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_003.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_004.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_005.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_006.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_007.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_008.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_009.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_010.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_011.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_012.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_013.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_014.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_015.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_016.ogg
+audio\Chapter 1\Vasily_Chapter 1\vasily_ch1_017.ogg
+audio\Chapter 1\Woman 3_Chapter 1\woman3_ch1_001.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_001.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_002.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_003.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_004.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_005.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_006.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_007.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_008.ogg
+audio\Chapter 1\Yaoguaoi King_Chapter 1\yk_ch1_009.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_001.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_002.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_003.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_004.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_005.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_006.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_007.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_008.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_009.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_010.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_011.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_012.ogg
+audio\Chapter 1\Yuxuan_Chapter 1\yuxuan_ch1_013.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_001.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_002.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_003.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_004.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_005.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_006.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_007.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_008.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_009.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_010.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_011.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_012.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_013.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_014.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_015.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_016.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_017.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_018.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_019.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_020.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_021.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_022.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_023.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_024.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_025.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_026.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_027.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_028.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_029.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_030.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_031.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_032.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_033.ogg
+audio\Chapter 2\Babala_Chapter 2\babala_ch2_034.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_001.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_002.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_003.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_004.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_005.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_006.ogg
+audio\Chapter 2\Boy Aldorith_Chapter 2\boy_ald_ch2_007.ogg
+audio\Chapter 2\Daniel_Chapter 2\daniel_ch2_001.ogg
+audio\Chapter 2\Daniel_Chapter 2\daniel_ch2_002.ogg
+audio\Chapter 2\Daniel_Chapter 2\daniel_ch2_003.ogg
+audio\Chapter 2\Daniel_Chapter 2\daniel_ch2_004.ogg
+audio\Chapter 2\Daniel_Chapter 2\daniel_ch2_005.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_001.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_002.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_003.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_004.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_005.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_006.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_007.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_008.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_009.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_010.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_011.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_012.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_013.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_014.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_015.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_016.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_017.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_018.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_019.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_020.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_021.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_022.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_023.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_024.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_025.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_026.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_027.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_028.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_029.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_030.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_031.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_032.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_033.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_034.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_035.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_036.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_037.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_038.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_039.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_040.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_041.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_042.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_043.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_044.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_045.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_046.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_047.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_048.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_049.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_050.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_051.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_052.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_053.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_054.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_055.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_056.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_057.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_058.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_059.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_060.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_061.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_062.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_063.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_064.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_065.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_066.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_067.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_068.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_069.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_070.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_071.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_072.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_073.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_074.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_075.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_076.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_077.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_078.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_079.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_080.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_081.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_082.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_083.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_084.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_085.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_086.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_087.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_088.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_089.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_090.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_091.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_092.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_093.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_094.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_095.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_096.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_097.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_098.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_099.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_100.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_101.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_102.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_103.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_104.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_105.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_106.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_107.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_108.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_109.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_110.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_111.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_112.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_113.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_114.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_115.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_116.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_117.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_118.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_119.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_120.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_121.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_122.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_123.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_124.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_125.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_126.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_127.ogg
+audio\Chapter 2\Dorian_Chapter 2\dorian_ch2_128.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_001.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_002.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_003.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_004.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_005.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_006.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_007.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_008.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_009.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_010.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_011.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_012.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_013.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_014.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_015.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_016.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_017.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_018.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_019.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_020.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_021.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_022.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_023.ogg
+audio\Chapter 2\Elara_Chapter 2\elara_ch2_024.ogg
+audio\Chapter 2\Female Guard_Chapter 2\female_guard_ch2_001.ogg
+audio\Chapter 2\Female Guard_Chapter 2\female_guard_ch2_002.ogg
+audio\Chapter 2\Gustav_Chapter 2\gustav_ch2_001.ogg
+audio\Chapter 2\Gustav_Chapter 2\gustav_ch2_002.ogg
+audio\Chapter 2\Gustav_Chapter 2\gustav_ch2_003.ogg
+audio\Chapter 2\Gustav_Chapter 2\gustav_ch2_004.ogg
+audio\Chapter 2\Gustav_Chapter 2\gustav_ch2_005.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_001.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_002.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_003.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_004.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_005.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_006.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_007.ogg
+audio\Chapter 2\Kristin_Chapter 2\kristin_ch2_008.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_002.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_003.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_004.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_005.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_006.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_007.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_008.ogg
+audio\Chapter 2\Lars_Chapter 2\lars_ch2_009.ogg
+audio\Chapter 2\Lucas_Chapter 2\lucas_ch2_001.ogg
+audio\Chapter 2\Lucas_Chapter 2\lucas_ch2_002.ogg
+audio\Chapter 2\Lucas_Chapter 2\lucas_ch2_003.ogg
+audio\Chapter 2\Magnus_Chapter 2\magnus_ch2_001.ogg
+audio\Chapter 2\Magnus_Chapter 2\magnus_ch2_002.ogg
+audio\Chapter 2\Magnus_Chapter 2\magnus_ch2_003.ogg
+audio\Chapter 2\Magnus_Chapter 2\magnus_ch2_004.ogg
+audio\Chapter 2\Magnus_Chapter 2\magnus_ch2_005.ogg
+audio\Chapter 2\Pavel_Chapter 2\pavel_ch2_001.ogg
+audio\Chapter 2\Pavel_Chapter 2\pavel_ch2_002.ogg
+audio\Chapter 2\Pavel_Chapter 2\pavel_ch2_003.ogg
+audio\Chapter 2\Pavel_Chapter 2\pavel_ch2_004.ogg
+audio\Chapter 2\Pavel_Chapter 2\pavel_ch2_005.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_001.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_002.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_003.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_004.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_005.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_006.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_007.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_008.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_009.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_010.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_011.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_012.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_013.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_014.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_015.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_016.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_017.ogg
+audio\Chapter 2\Queen Ekaterina_Chapter 2\queen_ekaterina_ch2_018.ogg
+audio\Chapter 2\Sarah_Chapter 2\sarah_ch2_001.ogg
+audio\Chapter 2\Sarah_Chapter 2\sarah_ch2_002.ogg
+audio\Chapter 2\Sarah_Chapter 2\sarah_ch2_003.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_001.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_002.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_003.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_004.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_005.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_006.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_007.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_008.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_009.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_010.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_011.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_012.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_013.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_014.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_015.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_016.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_017.ogg
+audio\Chapter 2\Svante_Chapter 2\svante_ch2_018.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_042.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_043.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_044.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_045.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_046.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_047.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_048.ogg
+audio\Chapter 2\Vasily_Chapter 2\Vasily_laugh_CH2_049.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_001.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_002.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_003.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_004.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_005.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_006.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_007.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_008.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_009.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_010.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_011.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_012.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_013.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_014.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_015.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_016.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_017.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_018.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_019.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_020.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_021.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_022.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_023.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_024.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_025.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_026.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_027.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_028.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_029.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_030.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_031.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_032.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_033.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_034.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_035.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_036.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_037.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_038.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_039.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_040.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_041.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_042.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_043.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_044.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_045.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_046.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_047.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_048.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_049.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_050.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_051.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_052.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_053.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_054.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_055.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_056.ogg
+audio\Chapter 2\Vasily_Chapter 2\vasily_ch2_057.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_001.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_002.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_003.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_004.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_005.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_006.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_007.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_008.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_009.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_010.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_011.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_012.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_013.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_014.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_015.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_016.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_017.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_018.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_019.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_020.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_021.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_022.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_023.ogg
+audio\Chapter 2\Yoki Onna_Chapter 2\yuki_ch2_024.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_001.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_002.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_003.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_004.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_005.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_006.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_007.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_008.ogg
+audio\Chapter 3\Boy Aldorith_Chapter 3\boy_ald_ch3_009.ogg
+audio\Chapter 3\Daniel_Chapter 3\daniel_ch3_001.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_001.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_002.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_003.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_004.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_005.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_006.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_007.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_008.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_009.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_010.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_011.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_012.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_013.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_014.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_015.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_016.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_017.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_018.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_019.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_020.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_021.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_022.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_023.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_024.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_025.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_026.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_027.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_028.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_029.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_030.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_031.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_032.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_033.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_034.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_035.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_036.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_037.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_038.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_039.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_040.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_041.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_042.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_043.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_044.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_045.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_046.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_047.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_048.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_049.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_050.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_051.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_052.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_053.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_054.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_055.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_056.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_057.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_058.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_059.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_060.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_061.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_062.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_063.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_064.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_065.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_066.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_067.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_068.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_069.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_070.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_071.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_072.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_073.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_074.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_075.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_076.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_077.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_078.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_079.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_080.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_081.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_082.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_083.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_084.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_085.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_086.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_087.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_088.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_089.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_090.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_091.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_092.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_093.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_094.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_095.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_096.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_097.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_098.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_099.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_100.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_101.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_102.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_103.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_104.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_105.ogg
+audio\Chapter 3\Dorian_Chapter 3\dorian_ch3_106.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_001.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_002.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_003.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_004.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_005.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_006.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_007.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_008.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_009.ogg
+audio\Chapter 3\Elara_Chapter 3\elara_ch3_010.ogg
+audio\Chapter 3\Magnus_Chapter 3\magnus_ch3_001.ogg
+audio\Chapter 3\Magnus_Chapter 3\magnus_ch3_002.ogg
+audio\Chapter 3\Magnus_Chapter 3\magnus_ch3_003.ogg
+audio\Chapter 3\Magnus_Chapter 3\magnus_ch3_004.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_001.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_002.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_003.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_004.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_005.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_006.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_007.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_008.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_009.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_010.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_011.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_012.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_013.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_014.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_015.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_016.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_017.ogg
+audio\Chapter 3\Svante_Chapter 3\svante_ch3_018.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_001.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_002.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_003.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_004.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_005.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_006.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_007.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_008.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_009.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_010.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_011.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_012.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_013.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_014.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_015.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_016.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_017.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_018.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_019.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_020.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_021.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_022.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_023.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_024.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_025.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_026.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_027.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_028.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_029.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_030.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_031.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_032.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_033.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_034.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_035.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_036.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_037.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_038.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_039.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_040.ogg
+audio\Chapter 3\Vasily_Chapter 3\vasily_ch3_041.ogg
+audio\Chapter 3\Woman 3_Chapter 3\woman3_ch3_001.ogg
+audio\Chapter 3\Woman 3_Chapter 3\woman3_ch3_002.ogg
+audio\Chapter 3\Woman 3_Chapter 3\woman3_ch3_003.ogg
+audio\Chapter 3\Woman 3_Chapter 3\woman3_ch3_004.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_001.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_004.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_005.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_008.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_010.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_012.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_013.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_016.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_017.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_018.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_025.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_026.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_027.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_028.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_029.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_030.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_031.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_032.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_033.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_034.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_035.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_036.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_037.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_038.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_039.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_040.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_041.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_042.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_043.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_044.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_045.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_046.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_047.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_048.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_049.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_050.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_051.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_052.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_053.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_054.ogg
+audio\Chapter 3\Yuxuan_Chapter 3\yuxuan_ch3_055.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_001.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_002.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_003.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_004.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_005.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_006.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_007.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_008.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_009.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_010.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_011.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_012.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_013.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_014.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_015.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_016.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_017.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_018.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_019.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_020.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_021.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_022.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_023.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_024.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_025.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_026.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_027.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_028.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_029.ogg
+audio\Chapter 4\Aoi_Chapter 4\aoi_ch4_030.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_001.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_002.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_003.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_004.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_005.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_006.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_007.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_008.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_009.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_010.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_011.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_012.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_013.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_014.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_015.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_016.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_017.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_018.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_019.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_020.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_021.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_022.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_023.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_024.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_025.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_026.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_027.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_028.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_029.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_030.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_031.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_032.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_033.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_034.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_035.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_036.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_037.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_038.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_039.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_040.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_041.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_042.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_043.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_044.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_045.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_046.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_047.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_048.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_049.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_050.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_051.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_052.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_053.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_054.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_055.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_056.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_057.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_058.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_059.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_060.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_061.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_062.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_063.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_064.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_065.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_066.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_067.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_068.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_069.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_070.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_071.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_072.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_073.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_074.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_075.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_076.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_077.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_078.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_079.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_080.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_081.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_082.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_083.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_084.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_085.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_086.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_087.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_088.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_089.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_090.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_091.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_092.ogg
+audio\Chapter 4\Dorian_Chapter 4\dorian_ch4_093.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_001.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_002.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_003.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_004.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_005.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_006.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_007.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_008.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_009.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_010.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_011.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_012.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_013.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_014.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_015.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_016.ogg
+audio\Chapter 4\Gustav_Chapter 4\gustav_ch4_017.ogg
+audio\Chapter 4\Man 1 & 2_Chapter 4\man1_ch4_001.ogg
+audio\Chapter 4\Man 1 & 2_Chapter 4\man1_ch4_002.ogg
+audio\Chapter 4\Man 1 & 2_Chapter 4\man1_ch4_003.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_001.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_002.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_003.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_004.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_005.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_006.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_007.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_008.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_009.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_010.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_011.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_012.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_013.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_014.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_015.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_016.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_017.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_018.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_019.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_020.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_021.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_022.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_023.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_024.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_025.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_026.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_027.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_028.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_029.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_030.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_031.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_032.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_033.ogg
+audio\Chapter 4\Sunwoo_Chapter 4\sunwoo_ch4_034.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_001.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_002.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_003.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_004.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_005.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_006.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_007.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_008.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_009.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_010.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_011.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_012.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_013.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_014.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_015.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_016.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_017.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_018.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_019.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_020.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_021.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_022.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_023.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_024.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_025.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_026.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_027.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_028.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_029.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_030.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_031.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_032.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_033.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_034.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_035.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_036.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_037.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_038.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_039.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_040.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_041.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_042.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_043.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_044.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_045.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_046.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_047.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_048.ogg
+audio\Chapter 4\Svante_Chapter 4\svante_ch4_049.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_001.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_002.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_003.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_004.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_005.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_006.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_007.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_008.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_009.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_010.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_011.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_012.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_013.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_014.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_015.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_016.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_017.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_018.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_019.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_020.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_021.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_022.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_023.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_024.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_025.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_026.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_027.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_028.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_029.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_030.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_031.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_032.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_033.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_034.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_035.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_036.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_037.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_038.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_039.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_040.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_041.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_042.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_043.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_044.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_045.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_046.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_047.ogg
+audio\Chapter 4\TianXun_Chapter 4\tianxun_ch4_048.ogg
+audio\Chapter 4\Vasily_Chapter 4\vasily_ch4_001.ogg
+audio\Chapter 4\Yaoguai_Chapter 4\yk_ch4_001.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_001.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_002.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_003.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_004.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_005.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_006.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_007.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_008.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_009.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_010.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_011.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_012.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_013.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_014.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_015.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_016.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_017.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_018.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_019.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_020.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_021.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_022.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_023.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_024.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_025.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_026.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_027.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_028.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_029.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_030.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_031.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_032.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_033.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_034.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_035.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_036.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_037.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_038.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_039.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_040.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_041.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_042.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_043.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_044.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_045.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_046.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_047.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_048.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_049.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_050.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_051.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_052.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_053.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_054.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_055.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_056.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_057.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_058.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_059.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_060.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_061.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_062.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_063.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_064.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_065.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_066.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_067.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_068.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_069.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_070.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_071.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_072.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_073.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_074.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_075.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_076.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_077.ogg
+audio\Chapter 4\Yuxuan_Chapter 4\yuxuan_ch4_078.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_001.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_002.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_003.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_004.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_005.ogg
+audio\Chapter 5\Door_Chapter 5\door_ch5_006.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_001.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_002.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_003.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_004.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_005.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_006.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_007.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_008.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_009.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_010.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_011.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_012.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_013.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_014.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_015.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_016.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_017.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_018.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_019.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_020.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_021.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_022.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_023.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_024.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_025.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_026.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_027.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_028.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_029.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_030.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_031.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_032.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_033.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_034.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_035.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_036.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_037.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_038.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_039.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_040.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_041.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_042.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_043.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_044.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_045.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_046.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_047.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_048.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_049.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_050.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_051.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_052.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_053.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_054.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_055.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_056.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_057.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_058.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_059.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_060.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_061.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_062.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_063.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_064.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_065.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_066.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_067.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_068.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_069.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_070.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_071.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_072.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_073.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_074.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_075.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_076.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_077.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_078.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_079.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_080.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_081.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_082.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_083.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_084.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_085.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_086.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_087.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_088.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_089.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_090.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_091.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_092.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_093.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_094.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_095.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_096.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_097.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_098.ogg
+audio\Chapter 5\Dorian_Chapter 5\dorian_ch5_099.ogg
+audio\Chapter 5\Elara_Chapter 5\elara_ch5_001.ogg
+audio\Chapter 5\Elara_Chapter 5\elara_ch5_002.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_001.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_002.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_003.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_004.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_005.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_006.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_007.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_008.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_009.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_010.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_011.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_012.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_013.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_014.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_015.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_016.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_017.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_018.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_019.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_020.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_021.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_022.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_023.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_024.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_025.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_026.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_027.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_028.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_029.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_030.ogg
+audio\Chapter 5\Magnus_Chapter 5\magnus_ch5_031.ogg
+audio\Chapter 5\Paladin Cyrus_Chapter 5\cyrus_ch5_001.ogg
+audio\Chapter 5\Paladin Cyrus_Chapter 5\cyrus_ch5_002.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_001.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_002.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_003.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_004.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_005.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_006.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_007.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_008.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_009.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_010.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_011.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_012.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_013.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_014.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_015.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_016.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_017.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_018.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_019.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_020.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_021.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_022.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_023.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_024.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_025.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_026.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_027.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_028.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_029.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_030.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_031.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_032.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_033.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_034.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_035.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_036.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_037.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_038.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_039.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_040.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_041.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_042.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_043.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_044.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_045.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_046.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_047.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_048.ogg
+audio\Chapter 5\Roboto_Chapter 5\roboto_ch5_049.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_001.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_002.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_003.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_004.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_005.ogg
+audio\Chapter 5\Roboto_Chapter 5\first lines\roboto1_ch5_006.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_001.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_002.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_003.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_004.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_005.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_006.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_007.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_008.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_009.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_010.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_011.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_012.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_013.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_014.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_015.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_016.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_017.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_018.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_019.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_020.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_021.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_022.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_023.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_024.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_025.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_026.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_027.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_028.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_029.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_030.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_031.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_032.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_033.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_034.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_035.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_036.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_037.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_038.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_039.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_040.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_041.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_042.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_043.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_044.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_045.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_046.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_047.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_048.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_049.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_050.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_051.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_052.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_053.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_054.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_055.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_056.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_057.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_058.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_059.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_060.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_061.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_062.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_063.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_064.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_065.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_066.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_067.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_068.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_069.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_070.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_071.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_072.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_073.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_074.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_075.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_076.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_077.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_078.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_079.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_080.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_081.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_082.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_083.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_084.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_085.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_086.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_087.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_088.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_089.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_090.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_091.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_092.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_093.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_094.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_095.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_096.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_097.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_098.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_099.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_100.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_101.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_102.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_103.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_104.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_105.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_106.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_107.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_108.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_109.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_110.ogg
+audio\Chapter 5\Svante_Chapter 5\svante_ch5_111.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_001.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_002.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_003.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_004.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_005.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_006.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_007.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_008.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_009.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_010.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_011.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_012.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_013.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_014.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_015.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_016.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_017.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_018.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_019.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_020.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_021.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_022.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_023.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_024.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_025.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_026.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_027.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_028.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_029.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_030.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_031.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_032.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_033.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_034.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_035.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_036.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_037.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_038.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_039.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_040.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_041.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_042.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_043.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_044.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_045.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_046.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_047.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_048.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_049.ogg
+audio\Chapter 5\Tim_Chapter 5\tim_ch5_050.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_039.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_040.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_041.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_042.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_043.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_044.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_045.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_046.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_047.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_048.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_049.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_050.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_051.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_052.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_053.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_054.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_055.ogg
+audio\Chapter 5\Weng_Chapter 5\weng_ch5_056.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_001.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_002.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_003.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_004.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_005.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_006.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_007.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_008.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_009.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_010.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_011.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_012.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_013.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_014.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_015.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_016.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_017.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_018.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_019.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_020.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_021.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_022.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_023.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_024.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_025.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_026.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_027.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_028.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_029.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_030.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_031.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_032.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_033.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_034.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_035.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_036.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_037.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_038.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_039.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_040.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_041.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_042.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_043.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_044.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_045.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_046.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_047.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_048.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_049.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_050.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_051.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_052.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_053.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_054.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_055.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_056.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_057.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_058.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_059.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_060.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_061.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_062.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_063.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_064.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_065.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_066.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_067.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_068.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_069.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_070.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_071.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_072.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_073.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_074.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_075.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_076.ogg
+audio\Chapter 5\Yuxuan_Chapter 5\yuxuan_ch5_077.ogg
+audio\Chapter 6\Aoi_Chapter 6\aoi_ch6_001.ogg
+audio\Chapter 6\Aoi_Chapter 6\aoi_ch6_002.ogg
+audio\Chapter 6\Aoi_Chapter 6\aoi_ch6_003.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_001.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_002.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_003.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_004.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_005.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_006.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_007.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_008.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_009.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_010.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_011.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_012.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_013.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_014.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_015.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_016.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_017.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_018.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_019.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_020.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_021.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_022.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_023.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_024.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_025.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_026.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_027.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_028.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_029.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_030.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_031.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_032.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_033.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_034.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_035.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_036.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_037.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_038.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_039.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_040.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_041.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_042.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_043.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_044.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_045.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_046.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_047.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_048.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_049.ogg
+audio\Chapter 6\Chung_Chapter 6\chung_ch6_050.ogg
+audio\Chapter 6\Daniel_Chapter 6\daniel_ch6_001.ogg
+audio\Chapter 6\Door-Chapter 6\Door_CH6_001.ogg
+audio\Chapter 6\Door-Chapter 6\Door_CH6_002.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_001.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_002.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_003.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_004.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_005.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_006.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_007.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_008.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_009.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_010.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_011.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_012.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_013.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_014.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_015.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_016.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_017.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_018.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_019.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_020.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_021.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_022.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_023.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_024.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_025.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_026.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_027.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_028.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_029.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_030.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_031.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_032.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_033.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_034.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_035.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_036.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_037.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_038.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_039.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_040.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_041.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_042.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_043.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_044.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_045.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_046.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_047.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_048.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_049.ogg
+audio\Chapter 6\Dorian_Chapter 6\dorian_ch6_050.ogg
+audio\Chapter 6\Elara_Chapter 6\elara_ch6_001.ogg
+audio\Chapter 6\Elara_Chapter 6\elara_ch6_002.ogg
+audio\Chapter 6\Elara_Chapter 6\elara_ch6_003.ogg
+audio\Chapter 6\Empress Olympia_Chapter 6\olympia_ch6_001.ogg
+audio\Chapter 6\Empress Olympia_Chapter 6\olympia_ch6_002.ogg
+audio\Chapter 6\Empress Olympia_Chapter 6\olympia_ch6_003.ogg
+audio\Chapter 6\Empress Olympia_Chapter 6\olympia_ch6_004.ogg
+audio\Chapter 6\Empress Olympia_Chapter 6\olympia_ch6_005.ogg
+audio\Chapter 6\Gustav_Chapter 6\gustav_ch6_001.ogg
+audio\Chapter 6\Gustav_Chapter 6\gustav_ch6_002.ogg
+audio\Chapter 6\Gustav_Chapter 6\gustav_ch6_003.ogg
+audio\Chapter 6\Gustav_Chapter 6\gustav_ch6_004.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_001.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_002.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_003.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_004.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_005.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_006.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_007.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_008.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_009.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_010.ogg
+audio\Chapter 6\Roboto_Chapter 6\roboto_ch6_011.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_001.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_002.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_003.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_004.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_005.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_006.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_007.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_008.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_009.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_010.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_011.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_012.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_013.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_014.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_015.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_016.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_017.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_018.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_019.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_020.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_021.ogg
+audio\Chapter 6\Soldier Jiang_Chapter 6\jiang_ch6_022.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_001.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_002.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_003.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_004.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_005.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_006.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_007.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_008.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_009.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_010.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_011.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_012.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_013.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_014.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_015.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_016.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_017.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_018.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_019.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_020.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_021.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_022.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_023.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_024.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_025.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_026.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_027.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_028.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_029.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_030.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_031.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_032.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_033.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_034.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_035.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_036.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_037.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_038.ogg
+audio\Chapter 6\Tim_Chapter 6\tim_ch6_039.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_001.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_002.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_003.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_004.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_005.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_006.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_007.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_008.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_009.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_010.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_011.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_012.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_013.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_014.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_015.ogg
+audio\Chapter 7\Aoi_Chapter 7\aoi_ch7_016.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_001.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_002.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_003.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_004.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_005.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_006.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_007.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_008.ogg
+audio\Chapter 7\Chung_Chapter 7\chung_ch7_009.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_001.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_002.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_003.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_004.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_005.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_006.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_007.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_008.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_009.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_010.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_011.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_012.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_013.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_014.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_015.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_016.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_017.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_018.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_019.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_020.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_021.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_022.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_023.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_024.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_025.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_026.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_027.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_028.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_029.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_030.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_031.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_032.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_033.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_034.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_035.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_036.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_037.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_038.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_039.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_040.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_041.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_042.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_043.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_044.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_045.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_046.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_047.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_048.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_049.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_050.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_051.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_052.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_053.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_054.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_055.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_056.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_057.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_058.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_059.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_060.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_061.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_062.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_063.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_064.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_065.ogg
+audio\Chapter 7\Dorian_Chapter 7\dorian_ch7_066.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_001.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_002.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_003.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_004.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_005.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_006.ogg
+audio\Chapter 7\Magnus_Chapter 7\magnus_ch7_007.ogg
+audio\Chapter 7\Roboto_Chapter 7\roboto_ch7_001.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_001.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_002.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_003.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_004.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_005.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_006.ogg
+audio\Chapter 7\Soldier Jiang_Chapter 7\jiang_ch7_007.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_001.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_002.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_003.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_004.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_005.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_006.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_007.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_008.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_009.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_010.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_011.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_012.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_013.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_014.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_015.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_016.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_017.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_018.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_019.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_020.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_021.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_022.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_023.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_024.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_025.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_026.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_027.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_028.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_029.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_030.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_031.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_032.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_033.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_034.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_035.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_036.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_037.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_038.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_039.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_040.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_041.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_042.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_043.ogg
+audio\Chapter 7\Svante_Chapter 7\svante_ch7_044.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_001.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_002.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_003.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_004.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_005.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_006.ogg
+audio\Chapter 7\Tim_Chapter 7\tim_ch7_007.ogg
+audio\Chapter 7\Yaoguai_Chapter 7\yk_ch7_001.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_001.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_002.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_003.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_004.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_005.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_006.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_007.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_008.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_009.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_010.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_011.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_012.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_013.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_014.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_015.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_016.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_017.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_018.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_019.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_020.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_021.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_022.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_023.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_024.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_025.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_026.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_027.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_028.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_029.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_030.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_031.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_032.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_033.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_034.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_035.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_036.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_037.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_038.ogg
+audio\Chapter 7\Yuxuan_Chapter 7\yuxuan_ch7_039.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_001.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_002.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_003.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_004.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_005.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_006.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_007.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_008.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_009.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_010.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_011.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_012.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_013.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_014.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_015.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_016.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_017.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_018.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_019.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_020.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_021.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_022.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_023.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_024.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_025.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_026.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_027.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_028.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_029.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_030.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_031.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_032.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_033.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_034.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_035.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_036.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_037.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_038.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_039.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_040.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_041.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_042.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_043.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_044.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_045.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_046.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_047.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_048.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_049.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_050.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_051.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_052.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_053.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_054.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_055.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_056.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_057.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_058.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_059.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_060.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_061.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_062.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_063.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_064.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_065.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_066.ogg
+audio\Chapter 8\Chung_Chapter 8\chung_ch8_067.ogg
+audio\Chapter 8\Door_Chapter 8\door_ch8_001.ogg
+audio\Chapter 8\Door_Chapter 8\door_ch8_002.ogg
+audio\Chapter 8\Door_Chapter 8\door_ch8_003.ogg
+audio\Chapter 8\Door_Chapter 8\door_ch8_004.ogg
+audio\Chapter 8\Door_Chapter 8\door_ch8_005.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_001.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_002.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_003.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_004.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_005.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_006.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_007.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_008.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_009.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_010.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_011.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_012.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_013.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_014.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_015.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_016.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_017.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_018.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_019.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_020.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_021.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_022.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_023.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_024.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_025.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_026.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_027.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_028.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_029.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_030.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_031.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_032.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_033.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_034.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_035.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_036.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_037.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_038.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_039.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_040.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_041.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_042.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_043.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_044.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_045.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_046.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_047.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_048.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_049.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_050.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_051.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_052.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_053.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_054.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_055.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_056.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_057.ogg
+audio\Chapter 8\Dorian_Chapter 8\dorian_ch8_058.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_001.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_002.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_003.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_004.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_005.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_006.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_007.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_008.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_009.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_010.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_011.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_012.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_013.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_014.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_015.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_016.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_017.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_018.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_019.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_020.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_021.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_022.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_023.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_024.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_025.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_026.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_027.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_028.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_029.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_030.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_031.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_032.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_033.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_034.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_035.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_036.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_037.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_038.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_039.ogg
+audio\Chapter 8\Magnus_Chapter 8\magnus_ch8_040.ogg
+audio\Chapter 8\Prosperity Dragon_Chapter 8\prosperity_dragon_ch8_001.ogg
+audio\Chapter 8\Prosperity Dragon_Chapter 8\prosperity_dragon_ch8_002.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_001.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_002.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_003.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_004.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_005.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_006.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_007.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_008.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_009.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_010.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_011.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_012.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_013.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_014.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_015.ogg
+audio\Chapter 8\Roboto_Chapter 8\roboto_ch8_016.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_001.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_002.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_003.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_004.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_005.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_006.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_007.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_008.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_009.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_010.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_011.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_012.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_013.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_014.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_015.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_016.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_017.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_018.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_019.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_020.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_021.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_022.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_023.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_024.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_025.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_026.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_027.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_028.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_029.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_030.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_031.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_032.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_033.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_034.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_035.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_036.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_037.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_038.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_039.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_040.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_041.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_042.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_043.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_044.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_045.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_046.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_047.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_048.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_049.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_050.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_051.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_052.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_053.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_054.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_055.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_056.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_057.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_058.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_059.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_060.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_061.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_062.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_063.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_064.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_065.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_066.ogg
+audio\Chapter 8\Svante_Chapter 8\svante_ch8_067.ogg
+audio\Chapter 8\Tim_Chapter 8\tim_ch8_001.ogg
+audio\Chapter 8\Tim_Chapter 8\tim_ch8_002.ogg
+audio\Chapter 8\Tim_Chapter 8\tim_ch8_003.ogg
+audio\Chapter 8\Yaoguai_Chapter 8\yk_ch8_001.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_001.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_002.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_003.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_004.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_005.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_006.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_009.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_010.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_011.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_012.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_013.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_014.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_015.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_016.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_017.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_018.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_019.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_020.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_021.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_022.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_023.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_024.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_025.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_026.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_027.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_028.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_029.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_030.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_031.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_032.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_033.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_034.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_035.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_036.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_037.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_038.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_039.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_040.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_041.ogg
+audio\Chapter 8\Yuxuan_Chapter 8\yuxuan_ch8_042.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_001.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_002.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_003.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_005.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_006.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_007.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_008.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_009.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_010.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_011.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_012.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_013.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_014.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_015.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_016.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_017.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_018.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_019.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_020.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_021.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_022.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_023.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_024.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_025.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_026.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_027.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_028.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_029.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_030.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_031.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_032.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_033.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_034.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_035.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_036.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_037.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_038.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_039.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_040.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_041.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_042.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_043.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_044.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_045.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_046.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_047.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_048.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_049.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_050.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_051.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_052.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_053.ogg
+audio\Chapter 9\Aoi_Chapter 9\aoi_ch9_054.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_001.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_002.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_003.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_004.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_005.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_006.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_007.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_008.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_009.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_010.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_011.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_012.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_013.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_014.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_015.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_016.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_017.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_018.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_019.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_020.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_021.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_022.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_023.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_024.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_025.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_026.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_027.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_028.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_029.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_030.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_031.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_032.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_033.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_034.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_035.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_036.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_037.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_038.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_039.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_040.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_041.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_042.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_043.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_044.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_045.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_046.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_047.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_048.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_049.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_050.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_051.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_052.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_053.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_054.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_055.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_056.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_057.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_058.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_059.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_060.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_061.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_062.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_063.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_064.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_065.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_066.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_067.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_069.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_070.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_071.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_072.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_073.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_074.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_075.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_076.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_077.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_078.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_079.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_080.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_081.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_082.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_083.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_084.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_085.ogg
+audio\Chapter 9\Chung_Chapter 9\chung_ch9_086.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_001.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_002.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_003.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_004.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_005.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_006.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_007.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_008.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_009.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_010.ogg
+audio\Chapter 9\Door_Chapter 9\door_ch9_011.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_001.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_002.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_003.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_004.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_005.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_006.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_007.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_008.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_009.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_010.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_011.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_012.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_013.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_014.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_015.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_016.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_017.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_018.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_019.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_020.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_021.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_022.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_023.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_024.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_025.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_026.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_027.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_028.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_029.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_030.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_031.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_032.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_033.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_034.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_035.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_036.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_037.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_038.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_039.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_040.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_041.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_042.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_043.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_044.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_045.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_046.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_047.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_048.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_049.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_050.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_051.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_052.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_053.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_054.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_055.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_056.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_057.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_058.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_059.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_060.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_061.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_062.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_063.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_064.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_065.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_066.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_067.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_068.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_069.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_070.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_071.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_072.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_073.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_074.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_075.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_076.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_077.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_078.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_079.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_080.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_081.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_082.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_083.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_084.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_085.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_086.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_087.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_088.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_089.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_090.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_091.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_092.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_093.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_094.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_095.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_096.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_097.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_098.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_099.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_100.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_101.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_102.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_103.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_104.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_105.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_106.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_107.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_108.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_109.ogg
+audio\Chapter 9\Dorian_Chapter 9\dorian_ch9_110.ogg
+audio\Chapter 9\Elara_Chapter 9\elara_ch9_001.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_001.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_002.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_003.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_004.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_005.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_006.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_007.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_008.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_009.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_010.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_011.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_012.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_013.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_014.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_015.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_016.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_017.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_018.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_019.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_020.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_021.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_022.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_023.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_024.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_025.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_026.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_027.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_028.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_029.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_030.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_031.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_032.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_033.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_034.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_035.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_036.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_037.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_038.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_039.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_040.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_041.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_042.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_043.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_044.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_045.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_046.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_047.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_048.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_049.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_050.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_051.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_052.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_053.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_054.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_055.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_056.ogg
+audio\Chapter 9\Niko_Chapter 9\niko_ch9_057.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_001.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_002.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_003.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_004.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_005.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_006.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_007.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_008.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_009.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_010.ogg
+audio\Chapter 9\Roboto_Chapter 9\roboto_ch9_011.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_001.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_002.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_003.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_004.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_005.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_006.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_007.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_008.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_009.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_010.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_011.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_012.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_013.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_014.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_015.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_016.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_017.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_018.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_019.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_020.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_021.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_022.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_023.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_024.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_025.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_026.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_027.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_028.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_029.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_030.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_031.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_032.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_033.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_034.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_035.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_036.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_037.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_038.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_039.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_040.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_041.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_042.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_043.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_044.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_045.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_046.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_047.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_048.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_049.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_050.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_051.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_052.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_053.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_054.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_055.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_056.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_057.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_058.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_059.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_060.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_061.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_062.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_063.ogg
+audio\Chapter 9\Svante_Chapter 9\svante_ch9_064.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_001.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_002.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_003.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_004.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_005.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_006.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_007.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_008.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_009.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_010.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_011.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_012.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_013.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_014.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_015.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_016.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_017.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_018.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_019.ogg
+audio\Chapter 9\Tedda_Chapter 9\Tedda_CH9_020.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_001.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_002.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_003.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_004.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_005.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_006.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_007.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_008.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_009.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_010.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_011.ogg
+audio\Chapter 9\Vendor_Chapter 9\Vendor_CH9_012.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_001.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_002.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_003.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_004.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_005.ogg
+audio\Chapter 9\Weng_Chapter 9\weng_ch9_006.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_001.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_002.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_003.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_004.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_005.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_006.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_007.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_008.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_009.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_010.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_011.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_012.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_013.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_014.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_015.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_016.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_017.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_018.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_019.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_020.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_021.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_022.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_023.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_024.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_025.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_026.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_027.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_028.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_029.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_030.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_031.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_032.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_033.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_034.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_035.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_036.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_037.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_038.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_039.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_040.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_041.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_042.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_043.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_044.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_045.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_046.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_047.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_048.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_049.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_050.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_051.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_052.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_053.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_054.ogg
+audio\Chapter 9\Yuxuan_Chapter 9\yuxuan_ch9_055.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 001.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 002.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 003.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 004.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 005.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 006.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 007.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 008.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 009.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 010.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 011.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 012.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 013.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 014.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 015.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 016.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 017.ogg
+audio\Prologue\Boy Aldorith Prologue\Boy Aldorith _ Prologue _ 018.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 001.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 002.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 003.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 004.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 005.ogg
+audio\Prologue\Kristin Prologue\Kristin _ Prologue _ 006.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 1.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 2.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 3.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 4.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 5.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 6.ogg
+audio\Prologue\Yaoguai King Prologue\YAOGUAI KING_prologue.line 7.ogg
+audio\sfx and ost\00_prologue\amb\Cave.ogg
+audio\sfx and ost\00_prologue\sfx\fast-heartbeat.ogg
+audio\sfx and ost\00_prologue\sfx\sfx_body_thud.ogg
+audio\sfx and ost\00_prologue\sfx\sfx_stone_break.ogg
+audio\sfx and ost\00_prologue\sfx\sfx_timer_ticking_down.ogg
+audio\sfx and ost\00_prologue\sfx\sfx_yg_burst.ogg
+audio\sfx and ost\00_prologue\sfx\yg_king_theme.ogg
+audio\sfx and ost\01_ch1\ost\ost_dream_dragon.ogg
+audio\sfx and ost\01_ch1\ost\ost_emperor_arrival.ogg
+audio\sfx and ost\01_ch1\ost\ost_taotie_battle.ogg
+audio\sfx and ost\01_ch1\ost\ost_tension_rising.ogg
+audio\sfx and ost\01_ch1\ost\ost_tianho_festival_music.ogg
+audio\sfx and ost\01_ch1\ost\ost_tragedy.ogg
+audio\sfx and ost\01_ch1\ost\beast sounds\man-bat-sounds-332-thb.ogg
+audio\sfx and ost\01_ch1\ost\beast sounds\zapsplat_horror_demon_monster_evil_moan_screech_114116.ogg
+audio\sfx and ost\01_ch1\ost\beast sounds\zapsplat_horror_demon_monster_evil_scream_screech_114117.ogg
+audio\sfx and ost\01_ch1\ost\beast sounds\zapsplat_horror_demon_monster_evil_short_snore_003_114120.ogg
+audio\sfx and ost\01_ch1\ost\beast sounds\zapsplat_horror_demon_monster_evil_snarl_nasal_short_114121.ogg
+cache\bytecode-312.rpyb
+cache\py3analysis.rpyb
+cache\screens.rpyb
+cache\shaders.txt
+gui\black_fade_textbox.png
+gui\bubble.png
+gui\frame.png
+gui\game_menu.png
+gui\main_menu.png
+gui\namebox.png
+gui\notify.png
+gui\nvl.png
+gui\skip.png
+gui\textbox.png
+gui\thoughtbubble.png
+gui\window_icon.png
+gui\bar\bottom.png
+gui\bar\left.png
+gui\bar\right.png
+gui\bar\top.png
+gui\button\check_foreground.png
+gui\button\check_selected_foreground.png
+gui\button\choice_hover_background.png
+gui\button\choice_idle_background.png
+gui\button\hover_background.png
+gui\button\idle_background.png
+gui\button\quick_hover_background.png
+gui\button\quick_idle_background.png
+gui\button\radio_foreground.png
+gui\button\radio_selected_foreground.png
+gui\button\slot_hover_background.png
+gui\button\slot_idle_background.png
+gui\overlay\confirm.png
+gui\overlay\game_menu.png
+gui\overlay\main_menu.png
+gui\phone\nvl.png
+gui\phone\textbox.png
+gui\phone\bar\bottom.png
+gui\phone\bar\left.png
+gui\phone\bar\right.png
+gui\phone\bar\top.png
+gui\phone\button\check_foreground.png
+gui\phone\button\check_selected_foreground.png
+gui\phone\button\choice_hover_background.png
+gui\phone\button\choice_idle_background.png
+gui\phone\button\hover_background.png
+gui\phone\button\idle_background.png
+gui\phone\button\radio_foreground.png
+gui\phone\button\radio_selected_foreground.png
+gui\phone\button\slot_hover_background.png
+gui\phone\button\slot_idle_background.png
+gui\phone\overlay\game_menu.png
+gui\phone\overlay\main_menu.png
+gui\phone\scrollbar\horizontal_hover_bar.png
+gui\phone\scrollbar\horizontal_hover_thumb.png
+gui\phone\scrollbar\horizontal_idle_bar.png
+gui\phone\scrollbar\horizontal_idle_thumb.png
+gui\phone\scrollbar\vertical_hover_bar.png
+gui\phone\scrollbar\vertical_hover_thumb.png
+gui\phone\scrollbar\vertical_idle_bar.png
+gui\phone\scrollbar\vertical_idle_thumb.png
+gui\phone\slider\horizontal_hover_bar.png
+gui\phone\slider\horizontal_hover_thumb.png
+gui\phone\slider\horizontal_idle_bar.png
+gui\phone\slider\horizontal_idle_thumb.png
+gui\phone\slider\vertical_hover_bar.png
+gui\phone\slider\vertical_hover_thumb.png
+gui\phone\slider\vertical_idle_bar.png
+gui\phone\slider\vertical_idle_thumb.png
+gui\scrollbar\horizontal_hover_bar.png
+gui\scrollbar\horizontal_hover_thumb.png
+gui\scrollbar\horizontal_idle_bar.png
+gui\scrollbar\horizontal_idle_thumb.png
+gui\scrollbar\vertical_hover_bar.png
+gui\scrollbar\vertical_hover_thumb.png
+gui\scrollbar\vertical_idle_bar.png
+gui\scrollbar\vertical_idle_thumb.png
+gui\slider\horizontal_hover_bar.png
+gui\slider\horizontal_hover_thumb.png
+gui\slider\horizontal_idle_bar.png
+gui\slider\horizontal_idle_thumb.png
+gui\slider\vertical_hover_bar.png
+gui\slider\vertical_hover_thumb.png
+gui\slider\vertical_idle_bar.png
+gui\slider\vertical_idle_thumb.png
+images\Assets\Untitled186.jpg
+images\Assets\Background\Cheng industries bunk - lights off.png
+images\Assets\Background\Cheng industries bunk - lights on.png
+images\Assets\Background\Destroyed Land.png
+images\Assets\Background\Frostcradle - Blizzard.png
+images\Assets\Background\Frostcradle - Inside cave.png
+images\Assets\Background\Frostcradle - No blizzard.png
+images\Assets\Background\Frostcradle - cabin inside.png
+images\Assets\Background\Frostcradle - lights on -  cabin inside.jpg
+images\Assets\Background\Hinami Castle Evening.png
+images\Assets\Background\Hinami Castle Morning.png
+images\Assets\Background\Kyeongjang Room Blinders.png
+images\Assets\Background\Kyeongjang Room No Blinders 2.png
+images\Assets\Background\Mjoll - blizzard.png
+images\Assets\Background\Mjoll - lights off - throne off.png
+images\Assets\Background\Mjoll - throne room.png
+images\Assets\Background\Mjoll.jpg
+images\Assets\Background\Spare Room Lights Off.png
+images\Assets\Background\Spare Room.png
+images\Assets\Background\Storage Room Lights Off.png
+images\Assets\Background\Storage Room.png
+images\Assets\Background\Tianho - night.jpg
+images\Assets\Background\Tianho - sleeping.jpg
+images\Assets\Background\Tianho Celeb.png
+images\Assets\Background\Tianho Cemetary Morning Ent.png
+images\Assets\Background\Tianho Cemetery Afternoon.png
+images\Assets\Background\Tianho Cemetery Day.png
+images\Assets\Background\Tianho Food Stalls on fire.png
+images\Assets\Background\Tianho Food Stalls.png
+images\Assets\Background\Tianho Graveyard Afternoon Ent.png
+images\Assets\Background\Tianho in fire.jpg
+images\Assets\Background\Underground - Magnus.jpg
+images\Assets\Background\Underground Lights Off (1).png
+images\Assets\Background\Underground Redpng.png
+images\Assets\Background\Underground.png
+images\Assets\Background\Untitled203_20251001031452.png
+images\Assets\Background\Untitled203_20251001050021.png
+images\Assets\Background\Untitled203_20251007140552.png
+images\Assets\Background\Untitled205_20251030152719.png
+images\Assets\Background\Yuxuan_s lab - Hot spring.png
+images\Assets\Background\bg_tianho_dorians_room.png
+images\Assets\Background\bg_tianho_dorians_room_off.png
+images\Assets\Background\throne.png
+images\Assets\Background\tianho_cemetery_morning.png
+images\Assets\Background\yuxuan manor dimmed.png
+images\Assets\Background\yuxuan manor.png
+images\Assets\Character Sprites\Babala.png
+images\Assets\Character Sprites\Boy Aldorith.png
+images\Assets\Character Sprites\Girl Aldorith.png
+images\Assets\Character Sprites\Huli Jing.png
+images\Assets\Character Sprites\Kristin Nordstrom.png
+images\Assets\Character Sprites\Paladin Cyrus colored.png
+images\Assets\Character Sprites\Qiongqi.png
+images\Assets\Character Sprites\Queen Ekaterina Drakos.png
+images\Assets\Character Sprites\captain kang sun woo colored.png
+images\Assets\Character Sprites\daniel.png
+images\Assets\Character Sprites\elara colored.png
+images\Assets\Character Sprites\emily.png
+images\Assets\Character Sprites\empress olympia.png
+images\Assets\Character Sprites\hundun.png
+images\Assets\Character Sprites\king gustav nordstrom.png
+images\Assets\Character Sprites\king long shen copy.png
+images\Assets\Character Sprites\lady aoi battle suit.png
+images\Assets\Character Sprites\lady aoi colored.png
+images\Assets\Character Sprites\lucas.png
+images\Assets\Character Sprites\paladin feng suit.png
+images\Assets\Character Sprites\pavel colored v2.png
+images\Assets\Character Sprites\sarah.png
+images\Assets\Character Sprites\soldier Jiang colored.png
+images\Assets\Character Sprites\soldier gao colored.png
+images\Assets\Character Sprites\taotie.png
+images\Assets\Character Sprites\tedda human form.png
+images\Assets\Character Sprites\tian xun copy.png
+images\Assets\Character Sprites\ya ji hye colored (1).png
+images\Assets\Character Sprites\yaoguai king v3.png
+images\Assets\Character Sprites\yaoguai.png
+images\Assets\Character Sprites\yuki onna v2.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono angry.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono happy.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono lying.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono normal.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono sad.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal\cheng yuxuan kimono.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal - Alternate Pose\cheng yuxuan kimono new pose close eyes.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal - Alternate Pose\cheng yuxuan kimono new pose mid close eyes.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal - Alternate Pose\cheng yuxuan kimono new pose wide smile.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal - Alternate Pose\cheng yuxuan kimono new pose.png
+images\Assets\Character Sprites\Cheng Yuxuan\Normal - Alternate Pose\cheng yuxuan kimono new thinktense.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama angry.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama happy.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama lying.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama normal.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama sad.png
+images\Assets\Character Sprites\Cheng Yuxuan\Sleepwear\cheng yuxuan pajama.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe angry.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe happy.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe lying.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe normal.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe sad.png
+images\Assets\Character Sprites\Cheng Yuxuan\Tianho Ceremonial\cheng yuxuan robe.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan base.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan emotions angry.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan emotions happy.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan emotions lying.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan emotions normal.png
+images\Assets\Character Sprites\Cheng Yuxuan\Underwear\cheng yuxuan emotions sad.png
+images\Assets\Character Sprites\Count Vasily\count vasilynorubics.png
+images\Assets\Character Sprites\Count Vasily\Normal - Alternate Pose\count vasilynorubics aggressive.png
+images\Assets\Character Sprites\Count Vasily\Normal - Alternate Pose\count vasilynorubics mad.png
+images\Assets\Character Sprites\Count Vasily\Normal - Alternate Pose\count vasilynorubics savage.png
+images\Assets\Character Sprites\Count Vasily\Normal - Alternate Pose\count vasilynorubics think.png
+images\Assets\Character Sprites\Count Vasily\Normal - Alternate Pose\count vasilynorubics.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit angry.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit dragon eyes.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit neutral.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit sad.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit serious.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-emotion suit smile.png
+images\Assets\Character Sprites\Dorian\Normal\dorian-mc battlesuit.png
+images\Assets\Character Sprites\Dorian\Normal - Alternate Pose\dorian-emotion suit neutral new pose annoyed.png
+images\Assets\Character Sprites\Dorian\Normal - Alternate Pose\dorian-emotion suit neutral new pose calmed.png
+images\Assets\Character Sprites\Dorian\Normal - Alternate Pose\dorian-emotion suit neutral new pose confident.png
+images\Assets\Character Sprites\Dorian\Normal - Alternate Pose\dorian-emotion suit neutral new pose tense.png
+images\Assets\Character Sprites\Dorian\Normal - Alternate Pose\dorian-emotion suit neutral.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama angry.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama dragon eyes.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama neutral.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama sad.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama serious.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama smile.png
+images\Assets\Character Sprites\Dorian\Sleepwear\dorian-mc pajama.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-mc kimono-yello.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe angry.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe dragon eyes.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe neutral.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe sad.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe serious.png
+images\Assets\Character Sprites\Dorian\Tianho Ceremonial\dorian-robe smile.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc base.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions angry.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions dragon eyes.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions neutral.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions sad.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions serious.png
+images\Assets\Character Sprites\Dorian\Underwear\dorian-mc with emotions smile.png
+images\Assets\Character Sprites\Elias\Chapter 2 & 3 Only\elias first meet with dorian colored v2 crying.png
+images\Assets\Character Sprites\Elias\Chapter 2 & 3 Only\elias first meet with dorian colored v2 happy.png
+images\Assets\Character Sprites\Elias\Chapter 2 & 3 Only\elias first meet with dorian colored v2 sad.png
+images\Assets\Character Sprites\Elias\Chapter 2 & 3 Only\elias first meet with dorian colored v2.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress cute.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress evil.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress happy.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress lying.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress mad.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress sad.png
+images\Assets\Character Sprites\Elias\Normal\kid girl dress.png
+images\Assets\Character Sprites\Elias\Normal - Alternative Pose\elias new pose crying.png
+images\Assets\Character Sprites\Elias\Normal - Alternative Pose\elias new pose doubt.png
+images\Assets\Character Sprites\Elias\Normal - Alternative Pose\elias new pose joy.png
+images\Assets\Character Sprites\Elias\Normal - Alternative Pose\elias new pose smirk.png
+images\Assets\Character Sprites\Elias\Normal - Alternative Pose\elias new pose.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama cute.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama evil.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama happy.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama lying.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama mad.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama sad.png
+images\Assets\Character Sprites\Elias\Sleepwear\kid girl pajama.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions cute.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions evil.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions happy.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions lying.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions mad.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base emotions sad.png
+images\Assets\Character Sprites\Elias\Swimwear\kid girl base.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe cute.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe evil.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe happy.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe lying.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe mad.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe sad.png
+images\Assets\Character Sprites\Elias\Tianho Ceremonial\kid girl robe.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit angry.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit happy.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit neutral.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit power up.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit sad.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal\chung hee suit-v2.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal - Alternate Pose\chung hee new pose charging.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal - Alternate Pose\chung hee new pose smirk.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal - Alternate Pose\chung hee new pose tense.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal - Alternate Pose\chung hee new pose wink.png
+images\Assets\Character Sprites\Hyon Chung-hee\Normal - Alternate Pose\chung hee new pose.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama angry.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama happy.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama neutral.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama power up.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama sad.png
+images\Assets\Character Sprites\Hyon Chung-hee\Sleepwear\chung hee pajama.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe angry.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe happy.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe neutral.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe power up.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe sad.png
+images\Assets\Character Sprites\Hyon Chung-hee\Tianho Ceremonial\chung hee robe.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee base.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee emotions angry.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee emotions happy.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee emotions neutral.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee emotions powerup.png
+images\Assets\Character Sprites\Hyon Chung-hee\Underwear\chung hee emotions sad.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal\magnus form.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose evil eye anger.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose evil eye close.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose evil eye shocked.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose evil eye.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose smirk.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal - Alternative Pose\base magnus file newpose.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal-Clothed\magnus form upper suit without wings.png
+images\Assets\Character Sprites\Magnus Wyndham\Normal-Clothed\magnus form upper suit.png
+images\Assets\Character Sprites\Magnus Wyndham\Sleepwear\magnus pajama.png
+images\Assets\Character Sprites\Magnus Wyndham\Tianho Ceremonial\magnus robe.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base head emotions angry.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base head emotions ignore.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base head emotions powered.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base head emotions sad.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base head emotions serious.png
+images\Assets\Character Sprites\Magnus Wyndham\Underwear\magnus base.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions anger.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions ignore.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions meditate.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions sad.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions serious.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit emotions smile.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal\niko tsukumo suit.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal - Alternate Pose\niko tsukumo new pose annoyed.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal - Alternate Pose\niko tsukumo new pose dissapointed.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal - Alternate Pose\niko tsukumo new pose irritate.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal - Alternate Pose\niko tsukumo new pose tense.png
+images\Assets\Character Sprites\Niko Tsukumo\Normal - Alternate Pose\niko tsukumo new pose.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama anger.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama ignore.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama meditate.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama sad.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama serious.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama smile.png
+images\Assets\Character Sprites\Niko Tsukumo\Sleepwear\niko tsukumo pajama.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe emotion anger.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe emotion meditate.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe emotion sad.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe emotion serious.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe emotion smile.png
+images\Assets\Character Sprites\Niko Tsukumo\Tianho Ceremonial\niko tsukumo robe.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo base.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions anger.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions ignore.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions meditate.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions sad.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions serious.png
+images\Assets\Character Sprites\Niko Tsukumo\Underwear\niko tsukumo emotions smile.png
+images\Assets\Character Sprites\Other Characters\count vasily.png
+images\Assets\Character Sprites\Other Characters\count vasilynorubics.png
+images\Assets\Character Sprites\Other Characters\empress olympia.png
+images\Assets\Character Sprites\Other Characters\king gustav nordstrom.png
+images\Assets\Character Sprites\Other Characters\paladin feng suit.png
+images\Assets\Character Sprites\Other Characters\tedda human form.png
+images\Assets\Character Sprites\Roboto\roboto-bad mood.png
+images\Assets\Character Sprites\Roboto\roboto-error.png
+images\Assets\Character Sprites\Roboto\roboto-fin.png
+images\Assets\Character Sprites\Roboto\roboto-happy.png
+images\Assets\Character Sprites\Roboto\roboto-malfunction.png
+images\Assets\Character Sprites\Supply Robot\supply robot colored v2hologram lied.png
+images\Assets\Character Sprites\Supply Robot\supply robot colored v2hologram normal.png
+images\Assets\Character Sprites\Supply Robot\supply robot colored v2hologram sad.png
+images\Assets\Character Sprites\Supply Robot\supply robot colored v2hologram.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor angry.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor happy.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor nervous.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor neutral.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor sad.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal\svante armor.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal - Alternate Pose\svante armor new pose catface.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal - Alternate Pose\svante armor new pose funny.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal - Alternate Pose\svante armor new pose guilty.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal - Alternate Pose\svante armor new pose weird.png
+images\Assets\Character Sprites\Svante Nordstrom\Normal - Alternate Pose\svante armor new pose.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama angry.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama happy.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama nervous.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama neutral.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama sad.png
+images\Assets\Character Sprites\Svante Nordstrom\Sleepwear\svante pajama.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe angry.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe happy.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe nervous.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe neutral.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe sad.png
+images\Assets\Character Sprites\Svante Nordstrom\Tianho Ceremonial\svante robe.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante base.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions angry.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions happy.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions nervous.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions neutral.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions sad.png
+images\Assets\Character Sprites\Svante Nordstrom\Underwear\svante emotions.psd
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth angry.png
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth happy.png
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth sad.png
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth shy.png
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth thinking.png
+images\Assets\Character Sprites\Tim\Normal\kid boy cloth.png
+images\Assets\Character Sprites\Tim\Normal - Alternative Pose\tim new pose annoyed.png
+images\Assets\Character Sprites\Tim\Normal - Alternative Pose\tim new pose nervous.png
+images\Assets\Character Sprites\Tim\Normal - Alternative Pose\tim new pose pump up.png
+images\Assets\Character Sprites\Tim\Normal - Alternative Pose\tim new pose serious.png
+images\Assets\Character Sprites\Tim\Normal - Alternative Pose\tim new pose.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama angry.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama happy.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama sad.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama shy.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama thinking.png
+images\Assets\Character Sprites\Tim\Sleepwear\kid boy pajama.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green angry.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green happy.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green sad.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green shy.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green thinking.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe green.png
+images\Assets\Character Sprites\Tim\Tianho Ceremonial\kid boy robe.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base emotions angry.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base emotions happy.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base emotions sad.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base emotions shy.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base emotions thinking.png
+images\Assets\Character Sprites\Tim\Underwear\kid boy base.png
+images\Assets\Character Sprites\Weng\Bathwear\weng dress 2.png
+images\Assets\Character Sprites\Weng\Normal\weng base angry.png
+images\Assets\Character Sprites\Weng\Normal\weng base happy.png
+images\Assets\Character Sprites\Weng\Normal\weng base sad.png
+images\Assets\Character Sprites\Weng\Normal\weng base serious.png
+images\Assets\Character Sprites\Weng\Normal\weng base thinking.png
+images\Assets\Character Sprites\Weng\Normal\weng base.png
+images\Assets\Character Sprites\Weng\Normal - Alternate Pose\weng newpose calm.png
+images\Assets\Character Sprites\Weng\Normal - Alternate Pose\weng newpose close eyes.png
+images\Assets\Character Sprites\Weng\Normal - Alternate Pose\weng newpose nervous close eyes.png
+images\Assets\Character Sprites\Weng\Normal - Alternate Pose\weng newpose nervous.png
+images\Assets\Character Sprites\Weng\Normal - Alternate Pose\weng newpose.png
+images\Assets\Character Sprites\Weng\Sleepwear\weng dress 1.png
+images\Assets\Character Sprites\Weng\Tianho Ceremonial\weng robe.png
+images\Assets\Food Illustrations\FOOD1.png
+images\Assets\Food Illustrations\FOOD11.png
+images\Assets\Food Illustrations\FOOD12.png
+images\Assets\Food Illustrations\FOOD13.png
+images\Assets\Food Illustrations\FOOD14.png
+images\Assets\Food Illustrations\FOOD15.png
+images\Assets\Food Illustrations\FOOD3.png
+images\Assets\Food Illustrations\FOOD4.png
+images\Assets\Food Illustrations\FOOD6.png
+images\Assets\Food Illustrations\FOOD7.png
+images\Assets\Food Illustrations\FOOD8.png
+images\Assets\Food Illustrations\FOOD9.png
+images\Assets\Illustrations\1 - Kristin Praying.png
+images\Assets\Illustrations\12 - Dorian fight Yuki-onna.png
+images\Assets\Illustrations\13 - Yuki-onna cry.png
+images\Assets\Illustrations\15 - Dorian Elias hug.png
+images\Assets\Illustrations\17 - Elara, Daniel, Sarah, Emily, Lucas walk into the light.png
+images\Assets\Illustrations\18 , 19 - Yuxuan, Elias, Dorian in Frostcradle.png
+images\Assets\Illustrations\2 - Dorian with Elara and Kids.jpeg
+images\Assets\Illustrations\20 - Kristin getting killed.png
+images\Assets\Illustrations\21 - Elias getting hit by arrow.jpeg
+images\Assets\Illustrations\22 - The Massacrer of Mjoll.png
+images\Assets\Illustrations\23 - Dorian paying respects to his family.jpeg
+images\Assets\Illustrations\26 - Niko saves Chung.png
+images\Assets\Illustrations\27 - Svante saves Chung.png
+images\Assets\Illustrations\28 - Dorian redirects.png
+images\Assets\Illustrations\31 - Weng cooking.png
+images\Assets\Illustrations\32 - Tim and Elias.png
+images\Assets\Illustrations\32.5 - Hundun attacks.png
+images\Assets\Illustrations\33 - Chung hee slays hundun colored.png
+images\Assets\Illustrations\34 - Feng and Aoi.png
+images\Assets\Illustrations\4 - Empress Olympia and Minjoon.png
+images\Assets\Illustrations\41 - Roboto carrying Yuxuan_s.png
+images\Assets\Illustrations\42 - Magnus Battle.png
+images\Assets\Illustrations\47 - Aoi singing.png
+images\Assets\Illustrations\48 - The men trapped.png
+images\Assets\Illustrations\48.5 - Tim shows his powers.jpeg
+images\Assets\Illustrations\49 - Elias releases.png
+images\Assets\Illustrations\49.5 - Elias releases surprised.png
+images\Assets\Illustrations\50 - Yuxuan kiss Dorian on the cheek.png
+images\Assets\Illustrations\51 - Chung-hee saves Dorian.png
+images\Assets\Illustrations\52 - Svante rests his head.png
+images\Assets\Illustrations\53 - Niko gives charm.png
+images\Assets\Illustrations\54 - Magnus and Dorian fall down.png
+images\Assets\Illustrations\55 - Festivities.png
+images\Assets\Illustrations\56 - Yuxuan saves Dorian.png
+images\Assets\Illustrations\57 - Chung-hee saves Dorian.png
+images\Assets\Illustrations\58 - Niko saves Dorian.png
+images\Assets\Illustrations\59 - Svante saves Dorian.png
+images\Assets\Illustrations\6 - Taotie Fight.png
+images\Assets\Illustrations\60 - Magnus saves Dorian.png
+images\Assets\Illustrations\7 - Taotie scratches Feng_s eye.png
+images\Assets\Illustrations\8 - Yaoguai King kills Elara.jpeg
+images\Assets\Illustrations\9 -Quiongqi Fight.png
+images\cg\cg_black.png
+libs\libs.txt
+saves\1-1-1-LT1.save
+saves\1-1-2-LT1.save
+saves\1-1-4-LT1.save
+saves\1-23-LT1.save
+saves\1-24-LT1.save
+saves\_reload-1-LT1.save
+saves\_reload-2-LT1.save
+saves\_tracesave-1-LT1.save
+saves\_tracesave-2-LT1.save
+saves\_tracesave-3-LT1.save
+saves\_tracesave-4-LT1.save
+saves\_tracesave-5-LT1.save
+saves\_tracesave-6-LT1.save
+saves\_tracesave-7-LT1.save
+saves\_tracesave-8-LT1.save
+saves\_tracesave-9-LT1.save
+saves\auto-1-LT1.save
+saves\auto-10-LT1.save
+saves\auto-2-LT1.save
+saves\auto-3-LT1.save
+saves\auto-4-LT1.save
+saves\auto-5-LT1.save
+saves\auto-6-LT1.save
+saves\auto-7-LT1.save
+saves\auto-8-LT1.save
+saves\auto-9-LT1.save
+saves\navigation.json
+saves\persistent
+saves\quick-1-LT1.save
+saves\quick-quick-1-LT1.save
+tl\None\common.rpym
+tl\None\common.rpymc

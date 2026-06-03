@@ -4,7 +4,7 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
-
+## OPTIONS.RPY for Dragon's Heart
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -12,11 +12,17 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Dragon's Heart: Crimson Rebirth")
+# TODO: change build name and version on release
+# define config.name = _("Dragon's Heart: Crimson Rebirth")
+define config.name = _("Dragon's Heart: demo version")
 
 ## The version of the game.
+# game version docs:
+# [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "alpha 1.1.0"
+define config.version = "dev 1.1.0"
+# define config.version = "alpha 1.2.0"
+# define config.version = "demo 1.2.0"
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
@@ -33,8 +39,10 @@ define gui.about = _p("""
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
-
-define build.name = "dh_prologuever001"
+# TODO: change build name and version on release
+define build.name = "Dragon's Heart"
+# define build.name = "DragonsHeart_Demo"
+# define build.version = "1.2.0"
 
 
 ## Sounds and music ############################################################
@@ -71,12 +79,11 @@ define config.auto_voice = "voice/{id}.ogg"
 
 ## Entering or exiting the game menu.
 
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
-
+define config.enter_transition = Dissolve(0.15)
+define config.exit_transition = Dissolve(0.15)
 
 ## Between screens of the game menu.
-define config.intra_transition = dissolve
+define config.intra_transition = Dissolve(0.15)
 
 ## A transition that is used after a game has been loaded.
 define config.after_load_transition = None
@@ -224,3 +231,13 @@ init python:
     config.keymap['game_menu'].remove('mouseup_3')
 
 define config.developer = True  # change to False for release
+
+## Perform a quicksave w/o notifying the player that a quicksave has been made
+# define config.quit_action = [QuickSave(message="Saved to Quick Save", newest=True), Quit(confirm=True)]
+# define config.quit_action = [QuickSave(message="Saved to Quick Save", newest=False, cycle=True), Quit(confirm=True)]
+
+define config.quit_action = [
+    SetVariable("save_name", "Quick Save"),
+    QuickSave(message="Saved to Quick Save", newest=True),
+    Quit(confirm=True)
+]

@@ -1,4 +1,6 @@
-﻿# shock_cut — jarring instant cut for violence, monster attacks, sudden shocks.
+﻿# script.rpy for DH
+
+# shock_cut — jarring instant cut for violence, monster attacks, sudden shocks.
 # Uses ImageDissolve with a pure black image to simulate a hard frame snap.
 # Duration 0.1s is fast enough to feel instant but avoids a single-frame flash.
 define shock_cut = Fade(0.0, 0.0, 0.1)
@@ -14,7 +16,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Temer's Studio presents..." with dissolve
+    show text "Temer's Studio presents..." with Dissolve(1)
     with Pause(1.5)
 
     hide text with dissolve
@@ -27,13 +29,18 @@ label splashscreen:
     with Pause(1)
     return
 
+init python:
+    if persistent.save_counter is None:
+        persistent.save_counter = 0
+    if persistent.save_list is None:
+        persistent.save_list = []
 
 label start:
-    $ persistent.save_counter = getattr(persistent, 'save_counter', 0) + 1
-    $ new_slot = persistent.save_counter
-    $ persistent.save_list.append({"slot": new_slot, "num": persistent.save_counter})
-    $ renpy.save_persistent()
-    $ _save_name = "Prologue"
+    # $ persistent.save_counter = getattr(persistent, 'save_counter', 0) + 1
+    # $ new_slot = "1-" + str(persistent.save_counter)
+    # $ persistent.save_list.append({"slot": new_slot, "num": persistent.save_counter})
+    # $ renpy.save_persistent()
+    $ save_name = "Prologue"
     jump prologue
 
 # Custom chapter start transition

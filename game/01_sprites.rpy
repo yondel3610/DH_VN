@@ -366,7 +366,7 @@ image yuxuan normal_lying:
     At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono lying.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan normal_normal:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono normal.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/ Yuxuan/Normal/cheng yuxuan kimono normal.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan normal_sad:
     At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono sad.png", sprite_highlight("yuxuan"))
@@ -923,7 +923,7 @@ image supply_robot base:
 image king_gustav:
     At("images/Assets/Character Sprites/Other Characters/king gustav nordstrom.png", sprite_highlight("king_gustav"))
     fit "contain"
-image feng suit:
+image feng_suit:
     At("images/Assets/Character Sprites/Other Characters/paladin feng suit.png", sprite_highlight("feng"))
     fit "contain"
 image tedda_human:
@@ -1013,6 +1013,18 @@ image yuki_onna:
     At("images/Assets/Character Sprites/yuki onna v2.png", sprite_highlight("yuki_onna"))
     fit "contain"
 
+image kristin_normal:
+    At("images/Assets/Character Sprites/Kristin Nordstrom.png", sprite_highlight("kristin"))
+    fit "contain"
+image boy_ald_normal:
+    At("images/Assets/Character Sprites/Boy Aldorith.png", sprite_highlight("boy_ald"))
+    fit "contain"
+image girl_ald_normal:
+    At("images/Assets/Character Sprites/Girl Aldorith.png", sprite_highlight("girl_ald"))
+    fit "contain"
+image yk:
+    At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
+    fit "contain"
 
 # =============================================================================
 # FOOD ILLUS

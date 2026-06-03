@@ -1,0 +1,3062 @@
+{
+  "version": 1,
+  "timestamp": "2026-06-02T14:18:41",
+  "nodes": [
+    {
+      "label": "start",
+      "file": "game\\script.rpy",
+      "line": 37,
+      "type": "label"
+    },
+    {
+      "label": "prologue",
+      "file": "game\\02_prologue.rpy",
+      "line": 191,
+      "type": "label"
+    },
+    {
+      "label": "prologue_choice_dash",
+      "file": "game\\02_prologue.rpy",
+      "line": 440,
+      "type": "label"
+    },
+    {
+      "label": "prologue_choice_wall",
+      "file": "game\\02_prologue.rpy",
+      "line": 406,
+      "type": "label"
+    },
+    {
+      "label": "prologue_common",
+      "file": "game\\02_prologue.rpy",
+      "line": 473,
+      "type": "label"
+    },
+    {
+      "label": "chapter_1",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 85,
+      "type": "label"
+    },
+    {
+      "label": "ch1_city",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 260,
+      "type": "label"
+    },
+    {
+      "label": "ch1_city_deng",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 296,
+      "type": "label"
+    },
+    {
+      "label": "ch1_city_fanrong",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 393,
+      "type": "label"
+    },
+    {
+      "label": "ch1_city_xiangli",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 494,
+      "type": "label"
+    },
+    {
+      "label": "ch1_city_zhong",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 651,
+      "type": "label"
+    },
+    {
+      "label": "ch1_common_fireworks",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 846,
+      "type": "label"
+    },
+    {
+      "label": "ch1_castle_morning",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1049,
+      "type": "label"
+    },
+    {
+      "label": "ch1_auditions",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1199,
+      "type": "label"
+    },
+    {
+      "label": "ch1_long_shen",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1432,
+      "type": "label"
+    },
+    {
+      "label": "ch1_ceremony",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1605,
+      "type": "label"
+    },
+    {
+      "label": "ch1_elara_chat",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1715,
+      "type": "label"
+    },
+    {
+      "label": "ch1_elara_topic_menu",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1746,
+      "type": "label"
+    },
+    {
+      "label": "ch1_elara_chat_common",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1827,
+      "type": "label"
+    },
+    {
+      "label": "ch1_battle",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 1911,
+      "type": "label"
+    },
+    {
+      "label": "game_over",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 2765,
+      "type": "label"
+    },
+    {
+      "label": "ch1_common_end",
+      "file": "game\\03_chapter_01.rpy",
+      "line": 2779,
+      "type": "label"
+    },
+    {
+      "label": "chapter_2",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 151,
+      "type": "label"
+    },
+    {
+      "label": "ch2_palace",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 368,
+      "type": "label"
+    },
+    {
+      "label": "ch2_cave",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 456,
+      "type": "label"
+    },
+    {
+      "label": "ch2_square_intro",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 502,
+      "type": "label"
+    },
+    {
+      "label": "ch2_freetime",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 614,
+      "type": "label"
+    },
+    {
+      "label": "ch2_common_freetime",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1136,
+      "type": "label"
+    },
+    {
+      "label": "ch2_food_stalls",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 655,
+      "type": "label"
+    },
+    {
+      "label": "ch2_fortune",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 768,
+      "type": "label"
+    },
+    {
+      "label": "ch2_spa",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 954,
+      "type": "label"
+    },
+    {
+      "label": "ch2_rest",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1080,
+      "type": "label"
+    },
+    {
+      "label": "ch2_ceremony",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1172,
+      "type": "label"
+    },
+    {
+      "label": "ch2_frost_oni",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1334,
+      "type": "label"
+    },
+    {
+      "label": "game_over_freeze",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1610,
+      "type": "label"
+    },
+    {
+      "label": "ch2_common_end",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1640,
+      "type": "label"
+    },
+    {
+      "label": "ch2_castle_briefing",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1838,
+      "type": "label"
+    },
+    {
+      "label": "ch2_questions",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 1975,
+      "type": "label"
+    },
+    {
+      "label": "ch2_end",
+      "file": "game\\04_chapter_02.rpy",
+      "line": 2159,
+      "type": "label"
+    },
+    {
+      "label": "chapter_3",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 243,
+      "type": "label"
+    },
+    {
+      "label": "ch3_mine",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 305,
+      "type": "label"
+    },
+    {
+      "label": "ch3_yuki_boss",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 375,
+      "type": "label"
+    },
+    {
+      "label": "ch3_truth",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 628,
+      "type": "label"
+    },
+    {
+      "label": "ch3_elias_questions",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 858,
+      "type": "label"
+    },
+    {
+      "label": "ch3_question_menu",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 912,
+      "type": "label"
+    },
+    {
+      "label": "ch3_blizzard_trapped",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1016,
+      "type": "label"
+    },
+    {
+      "label": "ch3_yuxuan_arrives",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1181,
+      "type": "label"
+    },
+    {
+      "label": "ch3_mushroom",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1393,
+      "type": "label"
+    },
+    {
+      "label": "ch3_breakfast",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1497,
+      "type": "label"
+    },
+    {
+      "label": "ch3_vasily_arrives",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1667,
+      "type": "label"
+    },
+    {
+      "label": "ch3_critical_fork",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1812,
+      "type": "label"
+    },
+    {
+      "label": "ch3_bad_end",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1908,
+      "type": "label"
+    },
+    {
+      "label": "ch3_fight_back",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 1983,
+      "type": "label"
+    },
+    {
+      "label": "ch3_escape",
+      "file": "game\\05_chapter_03.rpy",
+      "line": 2153,
+      "type": "label"
+    },
+    {
+      "label": "chapter_4",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 177,
+      "type": "label"
+    },
+    {
+      "label": "ch4_kyeongjang",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 267,
+      "type": "label"
+    },
+    {
+      "label": "ch4_kyeongjang_night",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 383,
+      "type": "label"
+    },
+    {
+      "label": "ch4_chunghee_qtc",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 549,
+      "type": "label"
+    },
+    {
+      "label": "ch4_common_1",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 748,
+      "type": "label"
+    },
+    {
+      "label": "ch4_common_2",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 809,
+      "type": "label"
+    },
+    {
+      "label": "ch4_tianho_dorian",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 842,
+      "type": "label"
+    },
+    {
+      "label": "ch4_cemetery",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 928,
+      "type": "label"
+    },
+    {
+      "label": "ch4_yuxuan_convo",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1056,
+      "type": "label"
+    },
+    {
+      "label": "ch4_yuxuan_common",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1163,
+      "type": "label"
+    },
+    {
+      "label": "ch4_cemetery_exit",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1223,
+      "type": "label"
+    },
+    {
+      "label": "ch4_battlefield",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1566,
+      "type": "label"
+    },
+    {
+      "label": "ch4_niko_raven",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1660,
+      "type": "label"
+    },
+    {
+      "label": "ch4_svante_capture",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 1746,
+      "type": "label"
+    },
+    {
+      "label": "ch4_prosperity_dragon",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 2021,
+      "type": "label"
+    },
+    {
+      "label": "ch4_bad_end_bomb",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 2158,
+      "type": "label"
+    },
+    {
+      "label": "ch4_draconic_fire",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 2192,
+      "type": "label"
+    },
+    {
+      "label": "ch4_underground",
+      "file": "game\\06_chapter_04.rpy",
+      "line": 2370,
+      "type": "label"
+    },
+    {
+      "label": "chapter_5",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 194,
+      "type": "label"
+    },
+    {
+      "label": "ch5_lab_entrance",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 228,
+      "type": "label"
+    },
+    {
+      "label": "ch5_yuxuan_lab",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 277,
+      "type": "label"
+    },
+    {
+      "label": "ch5_spare_room",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 437,
+      "type": "label"
+    },
+    {
+      "label": "ch5_niko_choices",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 503,
+      "type": "label"
+    },
+    {
+      "label": "ch5_niko_common",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 641,
+      "type": "label"
+    },
+    {
+      "label": "ch5_living_room",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 786,
+      "type": "label"
+    },
+    {
+      "label": "ch5_food_choice",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 1280,
+      "type": "label"
+    },
+    {
+      "label": "ch5_common",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 1421,
+      "type": "label"
+    },
+    {
+      "label": "ch5_nap",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 1481,
+      "type": "label"
+    },
+    {
+      "label": "ch5_interrogation",
+      "file": "game\\07_chapter_05.rpy",
+      "line": 1549,
+      "type": "label"
+    }
+  ],
+  "edges": [
+    {
+      "from": {
+        "label": "start",
+        "file": "game\\script.rpy",
+        "line": 44,
+        "type": "statement"
+      },
+      "to": {
+        "label": "prologue",
+        "file": "game\\02_prologue.rpy",
+        "line": 191,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "prologue",
+        "file": "game\\02_prologue.rpy",
+        "line": 398,
+        "type": "statement"
+      },
+      "to": {
+        "label": "prologue_choice_dash",
+        "file": "game\\02_prologue.rpy",
+        "line": 440,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "prologue",
+        "file": "game\\02_prologue.rpy",
+        "line": 401,
+        "type": "statement"
+      },
+      "to": {
+        "label": "prologue_choice_wall",
+        "file": "game\\02_prologue.rpy",
+        "line": 406,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "prologue",
+        "file": "game\\02_prologue.rpy",
+        "line": 395,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "prologue_choice_dash",
+        "file": "game\\02_prologue.rpy",
+        "line": 440,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "prologue",
+        "file": "game\\02_prologue.rpy",
+        "line": 395,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "prologue_choice_wall",
+        "file": "game\\02_prologue.rpy",
+        "line": 406,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "prologue_choice_dash",
+        "file": "game\\02_prologue.rpy",
+        "line": 467,
+        "type": "statement"
+      },
+      "to": {
+        "label": "prologue_common",
+        "file": "game\\02_prologue.rpy",
+        "line": 473,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "prologue_choice_wall",
+        "file": "game\\02_prologue.rpy",
+        "line": 439,
+        "type": "statement"
+      },
+      "to": {
+        "label": "prologue_common",
+        "file": "game\\02_prologue.rpy",
+        "line": 473,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "prologue_common",
+        "file": "game\\02_prologue.rpy",
+        "line": 520,
+        "type": "statement"
+      },
+      "to": {
+        "label": "chapter_1",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 85,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "chapter_1",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 250,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 260,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 266,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 260,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 271,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 260,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 276,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 260,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 265,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city_deng",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 296,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 270,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city_fanrong",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 393,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 275,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city_xiangli",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 494,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 280,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_city_zhong",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 651,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 262,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_city_deng",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 296,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Deng Blossom Avenue — Lanterns.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 262,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_city_fanrong",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 393,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Fanrong Dragon Square — Dragon Dances.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_city",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 262,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_city_zhong",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 651,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Zhong Lotus Promenade — Inventors.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_city_zhong",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 837,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_common_fireworks",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 846,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_common_fireworks",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1040,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_castle_morning",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1049,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_castle_morning",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1191,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_auditions",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1199,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_auditions",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1423,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_long_shen",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1432,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_long_shen",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1597,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_ceremony",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1605,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_ceremony",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1706,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_chat",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1715,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_chat",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1745,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1769,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1785,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1803,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1826,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_elara_chat_common",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1827,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1749,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Talk about Cyrus.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1749,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Talk about Feng.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1749,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Talk about Empress Olympia.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_topic_menu",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1749,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch1_elara_chat_common",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1827,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch1_elara_chat_common",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1905,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1911,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2610,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2648,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2679,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2759,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch1_common_end",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2779,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2585,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2625,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch1_battle",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2663,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch1_common_end",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2993,
+        "type": "statement"
+      },
+      "to": {
+        "label": "chapter_2",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 151,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "chapter_2",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 361,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_palace",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 368,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_palace",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 448,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_cave",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 456,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_cave",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 494,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_square_intro",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 502,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_square_intro",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 604,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 614,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 621,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 614,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 626,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 614,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 635,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 614,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 640,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 614,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 643,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_common_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1136,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 620,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_food_stalls",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 655,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 625,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_fortune",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 768,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 630,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_spa",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 954,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 634,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_fortune",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 768,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 639,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_rest",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1080,
+        "type": "label"
+      },
+      "type": "call",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_food_stalls",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 655,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_fortune",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 768,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_spa",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 954,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Relax at the spa.' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_rest",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1080,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_common_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1136,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_common_freetime",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1163,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_ceremony",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1172,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_ceremony",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1324,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_frost_oni",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1334,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_frost_oni",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1549,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over_freeze",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1610,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "unknown_condition"
+    },
+    {
+      "from": {
+        "label": "ch2_frost_oni",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1601,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_common_end",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1640,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "unknown_condition"
+    },
+    {
+      "from": {
+        "label": "ch2_common_end",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1830,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_castle_briefing",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1838,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_castle_briefing",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1965,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2037,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2084,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2147,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2158,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch2_end",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2159,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1978,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1978,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1978,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1975,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_questions",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1978,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch2_end",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2159,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch2_end",
+        "file": "game\\04_chapter_02.rpy",
+        "line": 2193,
+        "type": "statement"
+      },
+      "to": {
+        "label": "chapter_3",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 243,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "chapter_3",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 296,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_mine",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 305,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_mine",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 362,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_yuki_boss",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 375,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_yuki_boss",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 556,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_yuki_boss",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 593,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "unknown_condition"
+    },
+    {
+      "from": {
+        "label": "ch3_yuki_boss",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 618,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_truth",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 628,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "unknown_condition"
+    },
+    {
+      "from": {
+        "label": "ch3_truth",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 849,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_elias_questions",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 858,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_elias_questions",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 911,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 940,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 968,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 994,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1007,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_blizzard_trapped",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1016,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 916,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Did your mom bring you here?' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 916,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'What's that amulet you're wearing?' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 916,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 912,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "unknown_condition",
+      "uncertainty_reason": "menu option 'Who are those people frozen at the entrance?' depends on runtime condition"
+    },
+    {
+      "from": {
+        "label": "ch3_question_menu",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 916,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_blizzard_trapped",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1016,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch3_blizzard_trapped",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1170,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_yuxuan_arrives",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1181,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_yuxuan_arrives",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1383,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_mushroom",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1393,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_mushroom",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1488,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_breakfast",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1497,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_breakfast",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1656,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_vasily_arrives",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1667,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_vasily_arrives",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1802,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_critical_fork",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1812,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_critical_fork",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1850,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_bad_end",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1908,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_critical_fork",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1898,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_fight_back",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1983,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_critical_fork",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1818,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_bad_end",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1908,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch3_critical_fork",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1818,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch3_fight_back",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1983,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch3_fight_back",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 2143,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch3_escape",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 2153,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch3_escape",
+        "file": "game\\05_chapter_03.rpy",
+        "line": 2263,
+        "type": "statement"
+      },
+      "to": {
+        "label": "chapter_4",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 177,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "chapter_4",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 257,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_kyeongjang",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 267,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_kyeongjang",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 374,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_kyeongjang_night",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 383,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_kyeongjang_night",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 540,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 549,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 572,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_common_1",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 748,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 631,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 809,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 685,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_common_1",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 748,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 739,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 809,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 555,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_common_1",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 748,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 555,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 809,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 555,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_common_1",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 748,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_chunghee_qtc",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 555,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 809,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_common_1",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 800,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 809,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_common_2",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 833,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_tianho_dorian",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 842,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_tianho_dorian",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 920,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_cemetery",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 928,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_cemetery",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1047,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1056,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1080,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1099,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1144,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1162,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1060,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1060,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1060,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_convo",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1060,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1163,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_yuxuan_common",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1214,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_cemetery_exit",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1223,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_cemetery_exit",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1558,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_battlefield",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1566,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_battlefield",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1651,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_niko_raven",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1660,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_niko_raven",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1738,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_svante_capture",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1746,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_svante_capture",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2012,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2021,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2105,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2118,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2131,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2150,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_draconic_fire",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2192,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2092,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2092,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2092,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2158,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_prosperity_dragon",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2092,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch4_draconic_fire",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2192,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch4_bad_end_bomb",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2184,
+        "type": "statement"
+      },
+      "to": {
+        "label": "game_over",
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2765,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_draconic_fire",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2362,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch4_underground",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2370,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch4_underground",
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2447,
+        "type": "statement"
+      },
+      "to": {
+        "label": "chapter_5",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 194,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "chapter_5",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 222,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_lab_entrance",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 228,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_lab_entrance",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 271,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_yuxuan_lab",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 277,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_yuxuan_lab",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 431,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_spare_room",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 437,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_spare_room",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 497,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 545,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 578,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 623,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 635,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_niko_common",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 641,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 506,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 506,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 506,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 503,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_choices",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 506,
+        "type": "choice_point"
+      },
+      "to": {
+        "label": "ch5_niko_common",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 641,
+        "type": "label"
+      },
+      "type": "menu_option",
+      "certainty": "likely"
+    },
+    {
+      "from": {
+        "label": "ch5_niko_common",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 780,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_living_room",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 786,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_living_room",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 973,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_food_choice",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1280,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_food_choice",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1416,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_common",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1421,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_common",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1476,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_nap",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1481,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    },
+    {
+      "from": {
+        "label": "ch5_nap",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1544,
+        "type": "statement"
+      },
+      "to": {
+        "label": "ch5_interrogation",
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1549,
+        "type": "label"
+      },
+      "type": "jump",
+      "certainty": "certain"
+    }
+  ],
+  "uncertainties": [
+    {
+      "location": 

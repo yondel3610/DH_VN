@@ -1,0 +1,68 @@
+{
+  "schema_version": "2.0",
+  "branchpy_version": "1.2.3",
+  "projectVersion": "1.2.3",
+  "cfgVersion": "v1",
+  "statsVersion": "2",
+  "generated_at": 1780282060521,
+  "project": "dh_prologue ver 001",
+  "warnings": {
+    "highVariance": [],
+    "typeInconsistencies": [],
+    "potentiallyUnused": []
+  },
+  "meta": {
+    "projectName": "dh_prologue ver 001",
+    "generatedAt": "2026-06-01T02:47:40.119657+00:00",
+    "pathCount": 0,
+    "variableCount": 0
+  },
+  "summary": {
+    "total_variables": 0,
+    "total_paths": 0,
+    "stat_variables": 0,
+    "flag_variables": 0,
+    "type_inconsistencies": 0,
+    "potentially_unused": 0,
+    "paths_enumerated": 0,
+    "cfg_nodes": 16255,
+    "cfg_edges": 16444,
+    "max_paths": 500,
+    "paths_capped": false,
+    "pilot_entry_labels": [],
+    "pilot_entry_summary": {},
+    "narrative_entry_label": "start",
+    "narrative_paths_estimate": 1,
+    "narrative_outcomes_estimate": 136,
+    "narrative_route_variants_estimate": 1,
+    "narrative_topology": "hub_loop",
+    "narrative_confidence": "medium",
+    "narrative_unavailable_reason": null,
+    "narrative_root_candidates": [],
+    "narrative_notes": [
+      "136 narrative outcome cluster(s) detected: 'After Load', 'Ch1 Auditions', 'Ch1 Battle', 'Ch1 Castle Morning', 'Ch1 Ceremony', 'Ch1 City', 'Ch1 Common', 'Ch1 Elara', 'Ch1 Long Shen', 'Ch10'…"
+    ],
+    "narrative_breakdown": [
+      "start"
+    ],
+    "structure_type": "loop_hub",
+    "structure_confidence": "medium",
+    "structure_summary": "Loop / Hub structure, 136 reachable segments",
+    "structure_path_coverage_ratio": 0.0,
+    "entry_override_requested": null,
+    "entry_resolution_status": "auto_detected"
+  },
+  "performance": {
+    "analysis_duration_ms": 3556
+  },
+  "version": "2.0",
+  "source_revision": 1780281873944,
+  "_run": {
+    "run_id": "a3bb97f3-3057-4024-a38d-7c7ba6903563",
+    "project_path": "D:\\Renpy\\dh_prologue ver 001",
+    "started_at": "2026-06-01T02:47:40.346240+00:00",
+    "completed_at": "2026-06-01T02:47:40.346275+00:00",
+    "source_revision": 1780281873944,
+    "branchpy_version": "1.2.3"
+  }
+}

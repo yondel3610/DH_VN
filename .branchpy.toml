@@ -1,0 +1,11 @@
+# BranchPy Configuration
+# See https://branchpy.org/docs/configuration for full documentation
+
+[watch]
+debounce_ms = 300
+default_command = "tests"
+include = ["**/*.rpy", "assets/**", "game/**", ".branchpy.toml"]
+exclude = ["**/__pycache__/**", "**/.git/**", "**/build/**"]
+
+[logs]
+level = "info"

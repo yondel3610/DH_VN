@@ -1,0 +1,30 @@
+{
+  "omega_version": "0.1.0",
+  "source": {
+    "tool": "pilot"
+  },
+  "stats": {
+    "paths_seen": 0,
+    "events_seen": 0,
+    "variables_seen": 0
+  },
+  "variables_summary": {},
+  "impossible_combo_count": 0,
+  "limits": {
+    "value_cap": 50,
+    "combo_cap": 2000,
+    "capped": false,
+    "capped_variables_count": 0,
+    "combo_checks": 0
+  },
+  "generated_at": 1780282097205,
+  "source_revision": 1780281873944,
+  "_run": {
+    "run_id": "449c9028-f079-4c0b-a0ba-0d1c2de3af12",
+    "project_path": "D:\\Renpy\\dh_prologue ver 001",
+    "started_at": "2026-06-01T02:48:17.089656+00:00",
+    "completed_at": "2026-06-01T02:48:17.089697+00:00",
+    "source_revision": 1780281873944,
+    "branchpy_version": "1.2.3"
+  }
+}

@@ -55,111 +55,8 @@
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
-# Naming convention:
-#   bg_  = background scene
-#   cg_  = full-screen event illustration
-#   Sprites: "character_name emotion"  (two-word tag, no underscores between)
-#
-# All paths are relative to the /game/ folder.
-# Search "# PLACEHOLDER" to find every line needing a real asset.
-# =============================================================================
 
-# --- Backgrounds: Mjoll Exterior ---
-image bg_mjoll_icelands:
-    "images/Assets/Background/Mjoll.jpg"            
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_mjoll_blizzard:
-    "images/Assets/Background/Mjoll - blizzard.png"            
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-# --- Backgrounds: Mjoll Palace ---
-image bg_mjoll_palace_throne_lightsoff:
-    "images/Assets/Background/Mjoll - lights off - throne off.png"           
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_mjoll_palace_throne_:
-    "images/Assets/Background/Mjoll - lights off - throne off.png"           
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_mjoll_palace_hall       = "images/backgrounds/bg_mjoll_palace_hall.png"          # PLACEHOLDER
-# Inner palace hall — aldoriths gearing up, torches, dim warmth
-
-# --- Backgrounds: Dorian's Cave ---
-image bg_mjoll_cave              = "images/backgrounds/bg_mjoll_cave.png"                 # PLACEHOLDER
-# Small rocky cave interior — fur curtain doorway, fireplace glow, worn wooden table
-
-image bg_mjoll_cave_night        = "images/backgrounds/bg_mjoll_cave_night.png"           # PLACEHOLDER
-# Same cave at night — deeper shadow, fire lower, toy shelf visible
-
-# --- Backgrounds: Town Square ---
-image bg_mjoll_square_prep       = "images/backgrounds/bg_mjoll_square_prep.png"          # PLACEHOLDER
-# Mjoll town square during setup — merchants arranging stalls, thin snow falling
-
-image bg_mjoll_square_festive    = "images/backgrounds/bg_mjoll_square_festive.png"       # PLACEHOLDER
-# Same square during celebration — crowd gathered, banners, Qiongqi head on pedestal
-
-image bg_mjoll_square_battle     = "images/backgrounds/bg_mjoll_square_battle.png"        # PLACEHOLDER
-# Same square mid-Frost Oni attack — crowd fleeing, ice shards, frost mist
-
-image bg_mjoll_square_blizzard   = "images/backgrounds/bg_mjoll_square_blizzard.png"      # PLACEHOLDER
-# Mjoll square days later — abandoned, snow-covered, eerie silence
-
-# --- Backgrounds: Free Time Locations ---
-image bg_mjoll_food_stalls       = "images/backgrounds/bg_mjoll_food_stalls.png"          # PLACEHOLDER
-# Mjollian food stall row — cast iron cauldrons, smoked fish, steaming bread bowls
-
-image bg_mjoll_violet_tent       = "images/backgrounds/bg_mjoll_violet_tent.png"          # PLACEHOLDER
-# Babala's fortune-teller booth interior — violet curtains, crystal orb, incense smoke
-
-image bg_mjoll_spa               = "images/backgrounds/bg_mjoll_spa.png"                  # PLACEHOLDER
-# Mjollian spa interior — heated stone pools, steam, nobles lounging, aldorith workers
-
-image bg_mjoll_pavilion          = "images/backgrounds/bg_mjoll_pavilion.png"             # PLACEHOLDER
-# Quiet canopied pavilion — cushioned seats, fur blankets, sheltered from crowd noise
-
-# --- CGs (Full-screen Event Illustrations) ---
-image cg_qiongqi_charge          = "images/cg/cg_qiongqi_charge.png"                     # PLACEHOLDER
-# The Qiongqi beast mid-charge — lion-bodied, black fur, ember eyes, fangs bared
-
-image cg_qiongqi_death           = "images/cg/cg_qiongqi_death.png"                      # PLACEHOLDER
-# Qiongqi impaled on earth spike, blood on snow — Dorian standing over it
-
-image cg_svante_dunk_in          = "images/cg/cg_svante_dunk_in.png"                     # PLACEHOLDER
-# Svante plunging into the freezing dunk tank — crowd cheering, lips turning blue
-
-image cg_svante_spared           = "images/cg/cg_svante_spared.png"                      # PLACEHOLDER
-# Ball striking wood to the side of the target — Svante staring at Dorian in disbelief
-
-image cg_frost_oni_entrance      = "images/cg/cg_frost_oni_entrance.png"                 # PLACEHOLDER
-# Frost Oni emerging from ice mist — crystalline forms, spears raised, crowd fleeing
-
-image cg_babala_prophecy         = "images/cg/cg_babala_prophecy.png"                    # PLACEHOLDER
-# Babala mid-prophecy — orb blazing, smoke surrounding her, eyes luminous white
-
-image cg_dorian_cave_dinner      = "images/cg/cg_dorian_cave_dinner.png"                 # PLACEHOLDER
-# Dorian eating alone at six-plate table — ghost-versions of family visible, firelight
-
-image cg_noblewoman_swallowed    = "images/cg/cg_noblewoman_swallowed.png"               # PLACEHOLDER
-# Earth tiles opening beneath the noblewoman — her expression frozen in a gasp
-
-image cg_yuxuan_letter           = "images/cg/cg_yuxuan_letter.png"                      # PLACEHOLDER
-# The ivory Cheng Industries letter — embossed emblem, neat calligraphy, firelight
-
-image cg_dorian_frozen           = "images/cg/cg_dorian_frozen.png"                      # PLACEHOLDER
-# Dorian encased in spreading frost — used for ICE GAME OVER ending
-
-image cg_black                   = "images/cg/cg_black.png"                              # PLACEHOLDER
-# Pure black screen — fade-outs, unconscious moments, chapter end
-
+# 01_bg_cg.rpy
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
@@ -197,18 +94,18 @@ define audio.ost_blizzard_days    = "audio/music/ost_blizzard_days.ogg"        #
 define audio.ost_briefing         = "audio/music/ost_briefing.ogg"             # PLACEHOLDER
 # Tense and deliberate — assassination mission briefing; dark undertones
 
-# --- Sound Effects ---
-define audio.sfx_qiongqi_roar     = "audio/sfx/sfx_qiongqi_roar.ogg"          # PLACEHOLDER
-define audio.sfx_earth_spike      = "audio/sfx/sfx_earth_spike.ogg"           # PLACEHOLDER
-define audio.sfx_wind_blast       = "audio/sfx/sfx_wind_blast.ogg"            # PLACEHOLDER
-define audio.sfx_ice_crack        = "audio/sfx/sfx_ice_crack.ogg"             # PLACEHOLDER
-define audio.sfx_ice_shatter      = "audio/sfx/sfx_ice_shatter.ogg"           # PLACEHOLDER
-define audio.sfx_frost_oni_roar   = "audio/sfx/sfx_frost_oni_roar.ogg"        # PLACEHOLDER
-define audio.sfx_prophecy_thunder = "audio/sfx/sfx_prophecy_thunder.ogg"      # PLACEHOLDER
-define audio.sfx_dunk_splash      = "audio/sfx/sfx_dunk_splash.ogg"           # PLACEHOLDER
-define audio.sfx_heartbeat        = "audio/sfx/sfx_heartbeat.ogg"             # PLACEHOLDER
-define audio.sfx_ground_swallow   = "audio/sfx/sfx_ground_swallow.ogg"        # PLACEHOLDER
-define audio.sfx_vine_attack      = "audio/sfx/sfx_vine_attack.ogg"           # PLACEHOLDER
+# # --- Sound Effects ---
+# define audio.sfx_qiongqi_roar     = "audio/sfx/sfx_qiongqi_roar.ogg"          # PLACEHOLDER
+# define audio.sfx_earth_spike      = "audio/sfx/sfx_earth_spike.ogg"           # PLACEHOLDER
+# define audio.sfx_wind_blast       = "audio/sfx/sfx_wind_blast.ogg"            # PLACEHOLDER
+# define audio.sfx_ice_crack        = "audio/sfx/sfx_ice_crack.ogg"             # PLACEHOLDER
+# define audio.sfx_ice_shatter      = "audio/sfx/sfx_ice_shatter.ogg"           # PLACEHOLDER
+# define audio.sfx_frost_oni_roar   = "audio/sfx/sfx_frost_oni_roar.ogg"        # PLACEHOLDER
+# define audio.sfx_prophecy_thunder = "audio/sfx/sfx_prophecy_thunder.ogg"      # PLACEHOLDER
+# define audio.sfx_dunk_splash      = "audio/sfx/sfx_dunk_splash.ogg"           # PLACEHOLDER
+# define audio.sfx_heartbeat        = "audio/sfx/sfx_heartbeat.ogg"             # PLACEHOLDER
+# define audio.sfx_ground_swallow   = "audio/sfx/sfx_ground_swallow.ogg"        # PLACEHOLDER
+# define audio.sfx_vine_attack      = "audio/sfx/sfx_vine_attack.ogg"           # PLACEHOLDER
 
 # --- Ambient ---
 define audio.amb_mjoll_wind       = "audio/ambient/amb_mjoll_wind.ogg"         # PLACEHOLDER
@@ -253,6 +150,13 @@ define audio.amb_crowd_festive    = "audio/ambient/amb_crowd_festive.ogg"      #
 # =============================================================================
 
 label chapter_2:
+    if demo_mode:
+        scene black with fade
+        pause 1.0
+        centered "Thank you for playing the demo!\n\nThe full version continues here."
+        pause 2.0
+        $ MainMenu(confirm=False)()
+        
     $ save_name = "Chapter 2"
     # -------------------------------------------------------------------------
     # OPENING CARD — "Four years later"
@@ -275,161 +179,193 @@ label chapter_2:
 
     # -------------------------------------------------------------------------
     # PDF p58 — Icelands, the Qiongqi hunt
-    # BG: bg_mjoll_icelands
+    # BG: frostcradle_blizzard
     # -------------------------------------------------------------------------
 
-    scene bg_mjoll_icelands with fade           # PLACEHOLDER — frozen wilderness
-
-    # [COMMENT: bg_mjoll_icelands — snow falls steadily, silent, sparse pines]
+    scene frostcradle_blizzard with fade           # PLACEHOLDER — frozen wilderness
 
     "The snow falls steadily, blanketing the area in silence. The only sounds are the crunch of boots and the occasional muttered curses from the mercenaries behind me."
 
-    # show mjoll_pavel nervous at left           # PLACEHOLDER — Pavel sprite (nervous)
-    # show mjoll_helga steady at center          # PLACEHOLDER — Helga sprite (steady)
-    # show mjoll_lars tense at right             # PLACEHOLDER — Lars sprite (tense)
-
-    # PDF p58
+    # show dorian sad at left_char with Dissolve(0.2)
+    show mjoll_pavel at right_char with Dissolve(0.2)
     mjoll_pavel "Merciful Enoch, it's freezing. Why does it have to be this cold?"
+    show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "Quit complaining, Pavel. We've got bigger things to worry about. You know what this beast did to that caravan last week."
+    hide mjoll_pavel
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars  "Screw what it did to the caravan. It destroyed an entire village. I don't know why only five of us were sent to kill it!"
 
+    hide mjoll_lars
+    hide mjoll_helga
+    with Dissolve(0.1)
     "Their voices lower, but I can still hear them."
 
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars  "Hey... is that him? The Dragon of Gale?"
+    show mjoll_pavel at left_char with Dissolve(0.2)
     mjoll_pavel "No way. He's not... The Dragon of Gale wouldn't be out here with us."
+    hide mjoll_lars
+    show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "Wait… Enoch above… it really is him. I heard he lost his entire family. Wife and kids... all of them gone."
     mjoll_pavel "No wonder he looks dejected. What kind of man comes back from something like that?"
+    hide mjoll_helga
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars  "Shut up. He'll hear you!"
-
+    hide mjoll_lars
+    hide mjoll_pavel
     "Vasily shoots them a sharp glare. He snaps his fingers."
 
-    # show vasily commanding at center           # PLACEHOLDER — Vasily sprite (sharp authority)
-
+    show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily "Eyes forward. Lose focus out here, start thinking about the wrong things and you'll be nothing but meat for the beasts. Do I make myself clear?"
+    show mjoll_lars at left_char with Dissolve(0.2)
     mjoll_lars "Sir!"
+
+    hide vasily
+    hide mjoll_lars
+    with Dissolve(0.1)
 
     "The snow around us seemed to grow heavier. I looked around, scanning the barren landscape."
     "Something was off. Too quiet, too still. The wind carried a foul, metallic scent—blood. I stopped in my tracks and raised a hand."
 
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     dorian "We're here."
 
-    # PDF p59
     "The mercenaries stiffened, their chatter ceasing immediately. They looked around nervously, hands shaking as they start gripping their weapons."
 
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars "Umm… where?"
 
     "Silence."
+    hide dorian
+    hide mjoll_lars
+    with Dissolve(0.1)
     "Then it came."
+    # TODO: add growl sfx
     "A low, guttural growl rumbled through the frozen wilderness, vibrating the ground beneath us. The snow swirled as if alive, the wind howling in response to the beast's presence."
+    
+    # play sound sfx_qiongqi_roar                 # PLACEHOLDER — Qiongqi roar SFX
+    scene cg_qiongqi_fight with shock_cut      # PLACEHOLDER — cg_qiongqi_charge
+    play music ost_qiongqi_hunt fadein 0.5      # PLACEHOLDER — hunt battle music
     "The Qiongqi emerged from the shadows, its massive form blending with the storm. It had the body of a lion but twisted and wrong—its fur black as midnight, its eyes burning like embers. Its sharp claws scraped against the frozen ground, leaving deep gouges."
 
-    # CG: the Qiongqi emerges — full screen, shock entrance
-    play sound sfx_qiongqi_roar                 # PLACEHOLDER — Qiongqi roar SFX
-    scene cg_qiongqi_charge with shock_cut      # PLACEHOLDER — cg_qiongqi_charge
-    pause 0.8
-    scene bg_mjoll_icelands with dissolve       # Return to icelands bg
-
-    play music ost_qiongqi_hunt fadein 0.5      # PLACEHOLDER — hunt battle music
-
-    # PDF p59 — Qiongqi speaker tag used for all beast lines in this scene
-    # [COMMENT: The PDF uses "Qiongqi:" for this beast's sounds. frost_oni tag is reserved for the ice beings later]
-    frost_oni "KRRRIIEEEEEEEEAAAAAAAHHHHH!!!"
+    qiongqi "KRRRIIEEEEEEEEAAAAAAAHHHHH!!!"
 
     "It charged. A blur of claws and fury."
 
+    scene frostcradle_blizzard with shock_cut
+    show qiongqi at right_qq with Dissolve(0.2)
+    show vasily alt_aggressive at left_char with Dissolve(0.2)
     vasily "Hold your ground!"
+    hide vasily
 
+    show mjoll_lars at left_char with Dissolve(0.2)
     "One mercenary swung his sword wildly, only for the beast to swat him aside like a doll, sending him crashing into the snow. Another let loose an arrow that bounced harmlessly off the Qiongqi's thick hide."
-
     mjoll_lars  "AHHH!!"
+    hide mjoll_lars
+
+    show mjoll_helga at left_char with Dissolve(0.2)   
     mjoll_helga "My arrows aren't working! Use your shield, Lars!"
+    hide mjoll_helga
 
     "The beast lunged at the third mercenary, its claws slicing through his shield as though it were parchment."
+    
+    show dorian serious at left_char with Dissolve(0.2)
     "I thrust my arms toward the ground. Pillars of jagged earth erupted from beneath the Qiongqi, slamming into its underbelly and knocking it off balance."
-
     play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
 
-    # PDF p59
-    frost_oni "Krieeeeeeaaahh!!"
+    qiongqi "Krieeeeeeaaahh!!"
 
     "It screeched in agony, flipping mid-air, crashing to the ground. Clumps of black fur and blood sprayed into the snow."
+    hide qiongqi with Dissolve(0.1)
     "But it wasn't finished."
+    scene cg_qiongqi_fight with shock_cut
     "It rose, furious—its mouth split open unnaturally wide as it released another piercing howl."
 
-    frost_oni "RAAAAAHHHHHHHRRGHHHH!!!"
-
+    qiongqi "RAAAAAHHHHHHHRRGHHHH!!!"
+    
+    # show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily "Dorian! It's coming for you!"
 
     "I didn't move."
-
-    # PDF p60
     "Instead, I rotated my palm. The wind around me shifted. Then roared."
 
+    # hide vasily
     play sound sfx_wind_blast                   # PLACEHOLDER — wind blast SFX
 
     "A gale burst forth—a spiraling, howling torrent that slammed into the Qiongqi's face, flinging it backward across the battlefield like a rag doll. The snow whipped into a frenzy as the beast clawed at the ice, struggling to find footing."
 
-    frost_oni "RAAAAAHH!! RAAAHHH!!"
-
+    # show qiongqi at center_qq with Dissolve(0.2)
+    qiongqi "RAAAAAHH!! RAAAHHH!!"
     mjoll_lars  "Helga, your bow! Hit it on its shoulder!"
 
     "One of the Mjoll soldiers managed to shoot an arrow, and by some stroke of luck—or desperation—it embedded itself in the Qiongqi's shoulder. The beast howled, thrashing violently, but it only seemed angrier."
-
-    frost_oni "Krieeeeeewwwaaahh!!"
-
+    scene frostcradle_blizzard with shock_cut
+    show qiongqi at right_qq with Dissolve(0.2)
+    qiongqi "Krieeeeeewwwaaahh!!"
+    show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "Haha! Take that!"
+    hide mjoll_helga
 
+    show vasily alt_aggressive at left_char with Dissolve(0.2)
     "Vasily stepped forward, his expression calm but his eyes burning with resolve. He raised his hands, and a blinding light erupted from his palms. The Qiongqi screeched, recoiling from the light."
-
+    scene cg_blindinglight with flash
+    hide vasily
+    scene frostcradle_blizzard with shock_cut
+    show vasily alt_aggressive at left_char
+    show qiongqi at right_qq 
+    with Dissolve(0.2)
     vasily "Now, friend!"
-
+    hide vasily
+    
+    show dorian dragon_eyes at left_char with Dissolve(0.2)
     "I didn't hesitate. Summoning a massive portion of earth, I brought a jagged spike of stone hurtling up beneath the Qiongqi's chest, impaling it."
-
     play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
 
-    # PDF p60
-    frost_oni "Kwaaaaaaaaahhh—"
-
+    qiongqi "Kwaaaaaaaaahhh—"
     "The winds circled my body, responding to my silent fury. With a snap of my hand, a twisting column of wind slammed into the Qiongqi's skull, driving it headfirst into the frozen ground with enough force to shatter bone."
-
-    frost_oni "GRGHHHHHHKKKKHHHHHHH—"
-
+    qiongqi "GRGHHHHHHKKKKHHHHHHH—"
+    hide qiongqi
+    hide dorian
+    with Dissolve(0.1)
     "The monstrous shrieking was cut short. The Qiongqi twitched once… then went still."
     "Dead."
-
-    # CG: Qiongqi dead on snow
-    scene cg_qiongqi_death with dissolve        # PLACEHOLDER — cg_qiongqi_death
-    pause 1.5
-    scene bg_mjoll_icelands with dissolve       # Return to icelands bg
-
     stop music fadeout 2.0
-
-    # PDF p60
+    
+    show dorian normal_alt_annoyed at left_char
+    show mjoll_pavel at right_char with Dissolve(0.2)
     mjoll_pavel "He… he literally could have just done this without us."
+    hide mjoll_pavel
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars  "He really is… the Dragon…"
+    hide mjoll_lars
 
     "I stood over it, my breath steady, my gaze cold."
 
+    show dorian serious at left_char
     dorian "Cut off its head. Now."
+    show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars "Yes, sir."
 
     "He nodded quickly, drawing his blade and stepping toward the corpse."
+    hide mjoll_lars
     "I turned away, wiping the bloodied snow from my gauntlets. Vasily approached, his light fading."
 
-    # PDF p60-61
+    show vasily alt_think at right_char with Dissolve(0.2)
     vasily "That was quick, friend. You didn't even flinch."
     vasily "Are we even needed anymore, or are we just here for the scenery? Haha."
 
     "I didn't respond. My eyes were fixed on the distant horizon, where the snow-covered peaks loomed like silent watchers."
 
+    hide vasily
+    show dorian sad at left_char with Dissolve(0.2)
     dorian "Time to go back."
 
-    # PDF p61
+    # hide characters here, only bg
+    hide dorian
     "The walk back to Mjoll was silent except for the crunch of snow beneath our boots. The soldiers lingered behind me, talking about how they survived the fight with the monster."
     "The Qiongqi's head dangled from my grasp, dripping thick, acrid blood that left a crimson trail in the pure white snow. Its weight didn't bother me—I'd carried far worse."
 
     jump ch2_palace
-
 
 # =============================================================================
 # SECTION 6: LABEL CH2_PALACE — Mjoll Palace (Gustav's Court)
@@ -439,94 +375,135 @@ label chapter_2:
 
 label ch2_palace:
 
-    # PDF p61
-    # [COMMENT: bg_mjoll_palace_throne — guards stiffened at gates, incense in throne room]
-    scene bg_mjoll_palace_throne with fade      # PLACEHOLDER — Mjoll throne room
+    # [COMMENT: mjoll_palace_throne — guards stiffened at gates, incense in throne room]
+    scene bg_mjoll_icelands with fade      # PLACEHOLDER — Mjoll throne room
     play music ost_mjoll_palace fadein 2.0      # PLACEHOLDER — stiff court theme
 
+    show dorian sad at left_char with Dissolve(0.2)
     "When we reached the gates of the palace, the guards stiffened, their pale faces betraying their unease. They exchanged glances but didn't dare to stop me. As I pushed through the heavy doors, Vasily trailing close behind."
+
+    hide dorian
+    scene mjoll_palace_throne with dissolve
+
+    show dorian sad at left_char with Dissolve(0.2)
     "We enter the throne room; the smell of incense hangs thick in the air. A group of Aldoriths knelt on the cold stone floor, their heads bowed low."
     "At the far end of the room, King Gustav Nordstrom sat upon his gilded throne, his face as hard as the icy mountains that surrounded Mjoll. Beside him, Queen Ekaterina Drakos sat, her dark eyes gleaming."
-
-    # show king_gustav throne at center          # PLACEHOLDER — King Gustav sprite (throne, hard face)
-    # show queen_ekaterina beside him            # PLACEHOLDER — Queen Ekaterina sprite (gleaming dark eyes)
-    # show svante kneeling at left               # PLACEHOLDER — Svante sprite (purple hair, kneeling)
-    # show kristin kneeling at left              # PLACEHOLDER — Kristin sprite (kneeling, silver hair)
-
+    
+    hide dorian
+    show king_gustav at right_char 
+    show vasily neutral at left_char
+    with Dissolve(0.2)
     vasily "Enoch above. Another punishment?"
-
     "One of the kneeling Aldoriths—a young man with striking purple hair—raised his head."
 
+    hide vasily
+    show svante normal_nervous at left_char with Dissolve(0.2)
     svante "Please, Father! I beg you! I didn't mean to—"
-
     king_gustav "You dare speak to me that way, boy? You've been given every chance to prove your worth, and yet you continue to disappoint me."
 
     "The queen leaned forward, her voice a venomous whisper."
+    hide svante
 
+    show queen_ekaterina at left_char with Dissolve(0.2)
     queen_ekaterina "Svante should be grateful, Your Highness. Without your guidance, he'd be no better than a stray mutt."
+    hide queen_ekaterina
+    show kristin_normal at left_char with Dissolve(0.2)             # PLACEHOLDER — Kristin sprite
     kristin         "Quiet, Svante. You'll only make it worse for us. Please…"
+    hide kristin_normal
+    show boy_ald_normal at left_char with Dissolve(0.2)                # PLACEHOLDER — boy_ald sprite
     boy_ald         "Worse? What more can he take from us that he hasn't already?"
-
+    hide boy_ald_normal
     "I step closer and into the throne room, the soldiers following at a distance, the Qiongqi's head dripping blood onto the pristine marble floor."
 
-    # PDF p62
+    # show dorian serious at left_char with Dissolve(0.2)
     king_gustav "Enough! That goes for all of you. If you disobey, you will be beheaded like your brothers and sisters. IS THAT CLEAR? You are nothing without my name. Nothing!"
-    "Aldoriths: Yes, Father."
-    queen_ekaterina "Svante speaks like he's a prince, but look at him—groveling like the dog he is."
-    svante "I… I'm sorry, Father… Please forgive me… I—"
+    "Yes, Father."
 
+    show queen_ekaterina at left_char with Dissolve(0.2)
+    queen_ekaterina "Svante speaks like he's a prince, but look at him—groveling like the dog he is."
+    hide queen_ekaterina
+    show svante normal_nervous at left_char with Dissolve(0.2)
+    svante "I… I'm sorry, Father… Please forgive me… I—"
+    hide svante
+    hide king_gustav
+
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     "I step forward then, the Qiongqi's head swinging in my grasp, its blood dripping onto the pristine marble floor. The sound of the impact silences the room."
     "The Aldoriths freeze, their wide eyes darting to me."
-
+    show boy_ald_normal at right_flip with Dissolve(0.2)                # PLACEHOLDER — boy_ald sprite
     boy_ald "It's him…"
+    hide boy_ald_normal
+    show svante normal_neutral at right_char with Dissolve(0.2)
     svante  "The Dragon of Gale…"
-
+    hide svante
+    show king_gustav at right_char with Dissolve(0.2)
     king_gustav "Ah, Dorian. You've returned. Efficient as always. What news of the beast?"
 
     "I drop the Qiongqi's head unceremoniously onto the floor."
 
+    show dorian normal_alt_annoyed at left_char
     dorian "The beast is dead. Your kingdom is safe, for now. My payment."
 
     "The king gestures lazily, and a servant scurries forward, pressing a heavy pouch of gold into my hand. I take it without ceremony, glancing briefly at Vasily."
 
     dorian "Thanks."
-
     king_gustav     "This particular Qiongqi has terrorized these lands for a month now, devouring livestock, destroying villages, and killing many of my subjects. The people of Mjoll will sleep easier tonight thanks to you."
+    hide king_gustav
+    show queen_ekaterina at right_flip with Dissolve(0.2)
     queen_ekaterina "You've done this kingdom a great service. And for that, we shall show our gratitude."
+    hide queen_ekaterina
 
+    show vasily alt_normal at right_char with Dissolve(0.2)
     vasily "You've done what no one else could, Dorian. The King wants to make a spectacle of this victory, a display of his generosity to the people. He'll reward you handsomely if you make an appearance tomorrow."
 
+    show dorian serious at left_char
     dorian "Tomorrow?"
     vasily "Yes, tomorrow. There'll be a celebration for the people. They wanted to celebrate your slaying of the Qiongqi."
 
     "I glance down at the bloodied pouch of gold in my hand."
 
+    show dorian normal_alt_calm at left_char
     dorian "I'll be there."
-
-    # PDF p62-63
+    show dorian serious at left_char
     "As I turn to leave, I hear the Aldoriths' voices behind me, trembling and desperate."
-
+    hide dorian
+    hide vasily
+    show king_gustav at right_char 
+    show svante normal_nervous at left_char
+    with Dissolve(0.2)
     svante  "Father, please, I only sought to prove my loyalty! Give me another chance!"
+    hide svante
+    show kristin_normal at left_char with Dissolve(0.2)                # PLACEHOLDER — Kristin sprite
     kristin "We'll do anything—just let us stay by your side!"
-
+    hide kristin
     king_gustav "You've embarrassed me for the last time. Guards, take them to the dungeon. Perhaps some time in the dark will teach you the value of obedience."
-
+    hide king_gustav
+    show queen_ekaterina at right_flip with Dissolve(0.2)
     queen_ekaterina "They're lucky they didn't end up like the others. You're far too kind, my love."
+    hide queen_ekaterina
+    hide kristin_normal
 
     "I don't look back as the Aldoriths' pleas turn to sobs, swallowed by the clang of armor and the heavy slam of the dungeon doors."
 
-    # PDF p63
+    scene bg_mjoll_icelands with dissolve
+
     "Vasily catches up to me as I leave the palace, the snow crunching beneath our boots."
 
+    show dorian serious at left_char 
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
     vasily "Dorian, look. You don't have to come tomorrow, you know. But the King won't forget if you don't. And neither will the people."
     dorian "Let them remember what they want. I just want my gold."
 
     "Vasily places a hand on my shoulder."
 
+    show vasily alt_think at right_char
     vasily "My offer still stands, okay? Let me know if you want to grab a beer or two. On me."
 
     "I nod. The wind bites at my face as I head back into the streets of Mjoll, my path lit only by the faint glow of lanterns. I clutch the pouch tightly, its weight pulling at my hand."
 
+    hide dorian
+    hide vasily
     jump ch2_cave
 
 
@@ -539,27 +516,22 @@ label ch2_palace:
 label ch2_cave:
 
     # PDF p63
-    # [COMMENT: bg_mjoll_cave — fur curtain doorway, small fireplace, flickering shadows]
-    scene bg_mjoll_cave with fade               # PLACEHOLDER — cave interior, firelight
+    # [COMMENT: dorians_cave_on — fur curtain doorway, small fireplace, flickering shadows]
+    scene dorians_cave_on with fade               # PLACEHOLDER — cave interior, firelight
     stop music fadeout 2.0
     play music ost_cave_grief fadein 3.0        # PLACEHOLDER — fragile grief theme
     play audio amb_cave_fire loop fadein 2.0    # PLACEHOLDER — crackling fire ambient
 
+    show dorian sad at left_char with Dissolve(0.2)
     "I go back to my small cave, the entrance of which is shielded by a curtain of thick furs, swaying slightly in the icy wind of Mjoll."
     "I duck inside, pulling the curtain closed behind me, shutting out the biting cold. The glow of a small fireplace greets me, casting flickering shadows on the rough stone walls."
-
     "I kneel by the fireplace, adding another log to the fire. From the small stash of ingredients I've gathered over the years, I begin to prepare dinner."
     "I set out six simple plates, each one mismatched and worn, around a low wooden table I carved myself."
     "I ladle out portions of the stew I've cooked—one for me, and five for them."
-
-    # CG: Dorian alone at the six-plate table — ghost-family visible as warm light
-    scene cg_dorian_cave_dinner with dissolve   # PLACEHOLDER — cg_dorian_cave_dinner
-    pause 2.0
-    scene bg_mjoll_cave with dissolve           # Return to cave bg
-
     "I sit in my usual spot, looking at their plates."
 
     # These lines are ghost-voices from memory — no sprites for family here
+    # sad dorian sprite
     elara  "Kids, come on. Haven't your father and I taught you some table manners?"
     lucas  "Mom, can we go play in the snow after this?"
     emily  "Mmm the stew tastes good, Dad!"
@@ -574,8 +546,11 @@ label ch2_cave:
     dorian "I'm sorry… I wasn't there. I should've been there. I…"
 
     "I ball up my fist and continue eating. After I finished my meal, I head back to my bedroll."
+    hide dorian
+    scene black with fade
     "I close my eyes, letting the weight of exhaustion pull me under. Tomorrow will come, and with it, another mission, another royal errand, another reason to keep moving."
 
+    
     stop music fadeout 2.0
     stop audio fadeout 1.0
 
@@ -591,60 +566,65 @@ label ch2_cave:
 label ch2_square_intro:
 
     # PDF p64
-    # [COMMENT: bg_mjoll_square_prep — booths being set up, thin snow falling, merchants bustling]
-    scene bg_mjoll_square_prep with fade        # PLACEHOLDER — town square, setup in progress
+    # [COMMENT: bg_mjoll_square_festive — booths being set up, thin snow falling, merchants bustling]
+    scene bg_mjoll_square_festive with fade
     play music ost_mjoll_festive volume 0.4 fadein 2.0  # PLACEHOLDER — light festive theme
 
     "The city square of Mjoll is already alive with activity as I arrive the next day. The air is brisk, the cold biting but not enough to faze me anymore."
     "Booths are being set up around the square, their wooden frames dusted with a thin layer of snow. Merchants and servants bustle about, their breath forming small clouds in the icy air."
-
     "I spot Vasily almost immediately, standing near the center of the square. He's barking out orders, pointing left and right."
 
-    # show vasily commanding at center           # PLACEHOLDER — Vasily sprite (in his element)
-
+    show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily "Make sure the performers don't miss a single beat. We don't want to have any on-the-spot beheadings this time around. We don't want any blood on our booths now, would we?"
-    "All: Sir!"
 
+    "Sir!"
     "The crowd disperses, and I approach him. When he catches sight of me, his eyebrows shoot up in surprise."
 
+    show vasily alt_normal at right_char
     vasily "Dorian? Already here?"
 
     "I fold my arms, shrugging slightly."
 
+    show dorian normal_alt_neutral at left_char with Dissolve(0.2)
     dorian "Why wouldn't I be?"
     vasily "Oh, silly me. When have you not been early? You'd show up to your own funeral two hours in advance just to make sure everything's running smoothly."
 
     "I don't respond, letting the comment hang in the cold air. Vasily studies me for a moment, his expression softening."
 
+    show vasily alt_think at right_char
     vasily "The event doesn't start for another two hours, you know."
+    show dorian neutral at left_char
     dorian "I'm aware. Just wanted to check the area."
 
     "He raises an eyebrow but doesn't press further. Instead, he gestures to the booths around us."
 
-    # PDF p64-65
+    show vasily alt_normal at right_char
     vasily "The king and queen will be here later, but as you can see, we've got quite the spectacle planned. Feast, performances, and of course…"
 
     "He leans in slightly, lowering his voice."
 
     vasily "…the presentation of the Qiongqi's head. It'll be the centerpiece."
 
-    "I nod, glancing at the large wooden platform being constructed in the center of the square."
-
+    show dorian normal_alt_annoyed at left_char
     dorian "Don't you think it's a little extravagant?"
     vasily "You know His Highness. Also, the people need something to rally around. After everything that's happened, a little morale boost goes a long way."
-
+    
+    show dorian sad at left_char
     "I stay silent, my gaze drifting across the square. Children laugh as they chase each other around the booths. Adults are happily chatting with each other as the snow lightly falls."
 
-    # PDF p65
     vasily "You should get some rest, Dorian. Come back when the festivities start. You've done your part."
+    show dorian serious at left_char
     dorian "I'm fine."
 
     "He sighs, muttering something under his breath."
 
+    show vasily alt_think at right_char
     vasily "Suit yourself. Just don't scare the merchants."
 
+    show dorian normal_alt_neutral at left_char
     "I smirk faintly at his jab but say nothing."
 
+    show vasily alt_normal at right_char
     vasily "Come to think of it…"
 
     "I glance at him, raising a brow."
@@ -653,31 +633,38 @@ label ch2_square_intro:
 
     "He folds his arms and smirks."
 
+    show vasily alt_savage at right_char
     vasily "You're already here. Why not help me check the booths? Make sure everything's up and running?"
 
     "I scoff, shaking my head."
 
+    show dorian normal_alt_annoyed at left_char
     dorian "Not interested."
     vasily "Dorian, come on. When's the last time you did something remotely enjoyable? When's the last time you had fun?"
 
     "I narrow my eyes at him."
 
+    show dorian sad at left_char
     dorian "Every night. When I spend my time with my family."
 
     "He nudges my shoulder gently."
 
+    show vasily alt_think at right_char
     vasily "Hmm… Yeah, but you could use a distraction. Look, if you join me, I'll make it worth your while."
 
     "I raise a skeptical brow."
 
+    show dorian normal_alt_neutral at left_char
     dorian "How?"
 
-    # PDF p65-66
+    show vasily alt_normal at right_char
     vasily "Gold. From the king, naturally. Consider it… an incentive for your services."
 
     "I let out a slow breath, crossing my arms as I mull it over."
 
+    show dorian neutral at left_char
     dorian "Fine. Let's get this over with."
+    show vasily alt_savage at right_char
     vasily "That's the spirit, friend!"
 
     "He claps me on the back, his grin widening."
@@ -686,12 +673,16 @@ label ch2_square_intro:
     "The scents of freshly baked bread and spiced meat waft through the air, mingling with the faint chill of the snow. People are beginning to trickle into the square, as we walk on by."
 
     # PDF p66
+    show vasily alt_think at right_char
     vasily "See? Not so bad, is it? Unfortunately, the merchant who sells Mjollian Mead-Braised Lamb was mercilessly killed by a yaoguai before coming here so… we might have to settle for less."
 
     "I grunt in response, earning a chuckle from him."
 
+    show vasily alt_normal at right_char
     vasily "Alright, Dorian. Since you're tagging along, where do you want to go? Completely up to you."
 
+    hide dorian
+    hide vasily
     jump ch2_freetime
 
 
@@ -706,29 +697,28 @@ label ch2_square_intro:
 label ch2_freetime:
 
     menu:
-
         "Visit the food stalls.":
             $ ch2_visited_food = True
-            call ch2_food_stalls
+            call ch2_food_stalls from _call_ch2_food_stalls
             jump ch2_freetime
 
         "Visit the fortune teller.":
             $ ch2_visited_fortune = True
-            call ch2_fortune
+            call ch2_fortune from _call_ch2_fortune
             jump ch2_freetime
 
         "Relax at the spa." if not ch2_visited_spa:
             $ ch2_visited_spa = True
-            call ch2_spa
+            call ch2_spa from _call_ch2_spa
             # After spa the PDF directs to fortune teller if not yet visited
             if not ch2_visited_fortune:
                 $ ch2_visited_fortune = True
-                call ch2_fortune
+                call ch2_fortune from _call_ch2_fortune_1
             jump ch2_freetime
 
         "Rest with Vasily.":
             $ ch2_visited_rest = True
-            call ch2_rest
+            call ch2_rest from _call_ch2_rest
             jump ch2_freetime
 
         "Head to the celebration.":
@@ -746,8 +736,6 @@ label ch2_freetime:
 # -----------------------------------------------------------------------------
 
 label ch2_food_stalls:
-
-    # PDF p66
     # [COMMENT: bg_mjoll_food_stalls — cast iron cauldrons, smoked fish, bread bowls steaming]
     scene bg_mjoll_food_stalls with dissolve    # PLACEHOLDER — Mjollian food stalls
 
@@ -758,7 +746,7 @@ label ch2_food_stalls:
 
     "I grunt in response, but my stomach betrays me with a growl. He smirks and gestures toward a booth with a large cast iron cauldron."
 
-    # show vendor_mjoll cheerful at right        # PLACEHOLDER — Vendor sprite (ladling stew)
+    # show vendor_mjoll at right        # PLACEHOLDER — Vendor sprite (ladling stew)
 
     # PDF p66-67
     vendor_mjoll "Two Zarybas, fresh and hot! Best in all of Mjoll!"
@@ -780,8 +768,8 @@ label ch2_food_stalls:
 
     "As we get up to leave, I catch sight of the vendor. She stands at the edge of the stall, watching the guards escort two boys carrying heavy crates. Her eyes are filled with tears."
 
-    # show male_guard harsh at left              # PLACEHOLDER — Male Guard sprite
-    # show boy_ald_spa struggling at center      # PLACEHOLDER — Boy Aldorith (straining under crate)
+    # show male_guard  at left              # PLACEHOLDER — Male Guard sprite
+    # show boy_ald  at center      # PLACEHOLDER — Boy Aldorith (straining under crate)
 
     male_guard  "Come on! Pick up the pace, will ya? Don't make me bring out the whip!"
     boy_ald_spa "Please, sir! We just need a drink!"
@@ -1759,7 +1747,7 @@ label ch2_common_end:
     "The cold didn't bother me much—it never had. Maybe it was the fire channeling power coursing through me. But for some people, according to the vendors, it's become unbearable."
     "The pouch of gold Vasily had thrust into my hands days ago had been spent sparingly, stretched to buy food and small comforts."
 
-    scene bg_mjoll_cave_night with dissolve     # PLACEHOLDER — cave at night, fire low
+    scene dorians_cave_off with dissolve     # PLACEHOLDER — cave at night, fire low
 
     stop audio fadeout 1.0
     play audio amb_cave_fire loop fadein 2.0    # PLACEHOLDER — fire crackle ambient
@@ -1810,10 +1798,7 @@ label ch2_common_end:
     "It was an elegant thing, crisp and ivory-colored, sealed with an intricate red-and-gold emblem. There was a mark with a picture of a girl and the words: Cheng Industries."
     "The Tianho seal gleamed faintly in the dim light, the dragon motif coiled with clouds and lotus blossoms."
 
-    # CG: the Cheng Industries letter — ivory envelope, embossed emblem
-    scene cg_yuxuan_letter with dissolve        # PLACEHOLDER — cg_yuxuan_letter
-    pause 1.5
-    scene bg_mjoll_cave_night with dissolve     # Return to cave
+    scene dorians_cave_off with dissolve     # Return to cave
 
     "I turned the envelope over, running my fingers across the embossed edges before opening it carefully."
     "Inside was a letter, written in neat, flowing characters."

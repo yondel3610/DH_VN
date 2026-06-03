@@ -1,0 +1,2184 @@
+{
+  "version": 1,
+  "project": {
+    "root": "d:\\Renpy\\dh_prologue ver 001"
+  },
+  "choice_points": [
+    {
+      "choice_point_id": "cp_d1bb812651",
+      "location": {
+        "file": "game\\02_prologue.rpy",
+        "line": 395,
+        "label": "prologue"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Dash toward the entrance of the burial tunnel.",
+          "targets": [
+            "prologue_choice_dash"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Try to raise a stone wall.",
+          "targets": [
+            "prologue_choice_wall"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_daf006da6a",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 262,
+        "label": "ch1_city"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Deng Blossom Avenue — Lanterns.",
+          "targets": [
+            "ch1_city_deng"
+          ],
+          "condition_raw": "not city_visited_deng"
+        },
+        {
+          "index": 1,
+          "text": "Fanrong Dragon Square — Dragon Dances.",
+          "targets": [
+            "ch1_city_fanrong"
+          ],
+          "condition_raw": "not city_visited_fanrong"
+        },
+        {
+          "index": 2,
+          "text": "Zhong Lotus Promenade — Inventors.",
+          "targets": [
+            "ch1_city_zhong"
+          ],
+          "condition_raw": "not city_visited_zhong"
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_80a0860e0c",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1297,
+        "label": "ch1_auditions"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Intervene.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Stay Silent.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_907813a0cd",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1540,
+        "label": "ch1_long_shen"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Obey Cyrus.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Tell the old man to shut up.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_739741fee1",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1749,
+        "label": "ch1_elara_topic_menu"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Talk about Cyrus.",
+          "targets": [
+            "ch1_elara_topic_menu"
+          ],
+          "condition_raw": "not elara_talked_cyrus"
+        },
+        {
+          "index": 1,
+          "text": "Talk about Feng.",
+          "targets": [
+            "ch1_elara_topic_menu"
+          ],
+          "condition_raw": "not elara_talked_feng"
+        },
+        {
+          "index": 2,
+          "text": "Talk about Empress Olympia.",
+          "targets": [
+            "ch1_elara_topic_menu"
+          ],
+          "condition_raw": "not elara_talked_olympia"
+        },
+        {
+          "index": 3,
+          "text": "Talk about the Kyeongjang Emperor, Hyon Min-joon.",
+          "targets": [
+            "ch1_elara_chat_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_dd0dacee20",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 1975,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Do nothing.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Channel fire into a blazing shield to protect Gao and Jiang.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Hurl a fireball directly at the yaoguai's head to disorient it.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_d586d5396b",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2171,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Freeze up and do nothing.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Use your earth channeling powers.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_274d677368",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2290,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Use wind channelling.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Stumble and fall.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_84dbd3e5b2",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2585,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Dodge to the left.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Stumble.",
+          "targets": [
+            "game_over"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_7d0a2664d8",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2625,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Channel wind to force its mouth shut.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Run toward its flank to avoid the blast.",
+          "targets": [
+            "game_over"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_374e7226e0",
+      "location": {
+        "file": "game\\03_chapter_01.rpy",
+        "line": 2663,
+        "label": "ch1_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Try to run away.",
+          "targets": [
+            "game_over"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Channel earth to seal the cracks.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_14a58778ff",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 617,
+        "label": "ch2_freetime"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Visit the food stalls.",
+          "targets": [
+            "ch2_food_stalls"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Visit the fortune teller.",
+          "targets": [
+            "ch2_fortune"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Relax at the spa.",
+          "targets": [
+            "ch2_spa"
+          ],
+          "condition_raw": "not ch2_visited_spa"
+        },
+        {
+          "index": 3,
+          "text": "Rest with Vasily.",
+          "targets": [
+            "ch2_rest"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 4,
+          "text": "Head to the celebration.",
+          "targets": [
+            "ch2_common_freetime"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_05a5a66d4d",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 706,
+        "label": "ch2_food_stalls"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Confront the Guards.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Do nothing.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_2466f72360",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 847,
+        "label": "ch2_fortune"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "How is my family doing?",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "How are my companions?",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_b317b7dab2",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1017,
+        "label": "ch2_spa"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Do nothing.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Punish the noblewoman.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_2f139e6701",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1255,
+        "label": "ch2_ceremony"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Aim dead center.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Pretend to miss the shot.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_d05fc3d88f",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1768,
+        "label": "ch2_common_end"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Write a warm response.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Write a distant response.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_1a8feba32d",
+      "location": {
+        "file": "game\\04_chapter_02.rpy",
+        "line": 1978,
+        "label": "ch2_questions"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Where's the king and queen?",
+          "targets": [
+            "ch2_questions"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Who's this Elias?",
+          "targets": [
+            "ch2_questions"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Can I take some supplies with me?",
+          "targets": [
+            "ch2_questions"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "That's all I need.",
+          "targets": [
+            "ch2_end"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_c4d64c4386",
+      "location": {
+        "file": "game\\05_chapter_03.rpy",
+        "line": 916,
+        "label": "ch3_question_menu"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Did your mom bring you here?",
+          "targets": [
+            "ch3_question_menu"
+          ],
+          "condition_raw": "not ch3_asked_mom"
+        },
+        {
+          "index": 1,
+          "text": "What's that amulet you're wearing?",
+          "targets": [
+            "ch3_question_menu"
+          ],
+          "condition_raw": "not ch3_asked_amulet"
+        },
+        {
+          "index": 2,
+          "text": "Who are those people frozen at the entrance?",
+          "targets": [
+            "ch3_question_menu"
+          ],
+          "condition_raw": "not ch3_asked_bodies"
+        },
+        {
+          "index": 3,
+          "text": "I'm done asking questions for now.",
+          "targets": [
+            "ch3_blizzard_trapped"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_a1a3e0d02e",
+      "location": {
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1508,
+        "label": "ch3_breakfast"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Golden Fish Omelette.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Hearty White-Scaled Fish and Vegetable Soup.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Pan-Fried Golden Fish with Scrambled Blisscaps and Veggies.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "String-Bean and White-Scaled Fish Fried Rice.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_3fc08fc7f4",
+      "location": {
+        "file": "game\\05_chapter_03.rpy",
+        "line": 1818,
+        "label": "ch3_critical_fork"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Give Elias to Vasily.",
+          "targets": [
+            "ch3_bad_end"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Refuse. Protect Elias.",
+          "targets": [
+            "ch3_fight_back"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_d745fd328d",
+      "location": {
+        "file": "game\\06_chapter_04.rpy",
+        "line": 555,
+        "label": "ch4_chunghee_qtc"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Falter and do nothing.",
+          "targets": [
+            "ch4_common_1"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Trick Aunt Ji-Hye.",
+          "targets": [
+            "ch4_common_2"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Do what she wants. Keep Aunt Ji-hye company.",
+          "targets": [
+            "ch4_common_1"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Make Aunt Ji-hye go to sleep.",
+          "targets": [
+            "ch4_common_2"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_7beb77b8c5",
+      "location": {
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1060,
+        "label": "ch4_yuxuan_convo"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Continue to wait patiently.",
+          "targets": [
+            "ch4_yuxuan_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Try to get his attention by waving your hand.",
+          "targets": [
+            "ch4_yuxuan_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Ask Elias and Tedda for help.",
+          "targets": [
+            "ch4_yuxuan_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Interrupt Yuxuan yourself.",
+          "targets": [
+            "ch4_yuxuan_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_f2552d862d",
+      "location": {
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1467,
+        "label": "ch4_cemetery_exit"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Channel Earth.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Do nothing. Yuxuan, help!",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_14637d16d3",
+      "location": {
+        "file": "game\\06_chapter_04.rpy",
+        "line": 1506,
+        "label": "ch4_cemetery_exit"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Stumble! Elias, help!",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Use wind to knock them off!",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_89b7d7fe7b",
+      "location": {
+        "file": "game\\06_chapter_04.rpy",
+        "line": 2092,
+        "label": "ch4_prosperity_dragon"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Remember the tragedy of Tianho.",
+          "targets": [
+            "ch4_bad_end_bomb"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Remember your family.",
+          "targets": [
+            "ch4_bad_end_bomb"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Remember the people who died at Mjoll because of you.",
+          "targets": [
+            "ch4_bad_end_bomb"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Remember yourself.",
+          "targets": [
+            "ch4_draconic_fire"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_9c87776d9c",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 506,
+        "label": "ch5_niko_choices"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Thank him for his assistance earlier.",
+          "targets": [
+            "ch5_niko_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Ask him how he turned into a raven.",
+          "targets": [
+            "ch5_niko_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Ask him about our first meeting.",
+          "targets": [
+            "ch5_niko_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Ask him about his faith in the Death God.",
+          "targets": [
+            "ch5_niko_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_313c679cc8",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1075,
+        "label": "ch5_svante_choices"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Why were you the only aldorith spared by this man?",
+          "targets": [
+            "ch5_svante_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Who are you?",
+          "targets": [
+            "ch5_svante_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "How do you know me?",
+          "targets": [
+            "ch5_svante_choices"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "That's all for now.",
+          "targets": [
+            "ch5_svante_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_33baea173f",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1285,
+        "label": "ch5_food_choice"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "A dish from Tianho.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "A dish from Gale.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "A dish from Hinami.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "A dish from Mjoll.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_76a673b6ac",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 1632,
+        "label": "ch5_interrogation_menu"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Why were you the only aldorith spared by this man?",
+          "targets": [
+            "ch5_interro_q1"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Who are you?",
+          "targets": [
+            "ch5_interro_q2"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "How do you know me?",
+          "targets": [
+            "ch5_interro_q3"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "That's all for now.",
+          "targets": [
+            "ch5_interro_q4"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_a6874c4f68",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 2021,
+        "label": "ch5_roboto_witness"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes. Roboto almost tripped.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "No. Roboto had it all under control.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_fe79e451dd",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 2122,
+        "label": "ch5_food_moonlit"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Is it because of the egg?",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "I don't know.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_40a5a0bba1",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 2687,
+        "label": "ch5_dinner_talk"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Don't be naïve, Chung.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "It's inspiring how you still believe in that.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_cb473e9ab1",
+      "location": {
+        "file": "game\\07_chapter_05.rpy",
+        "line": 3008,
+        "label": "ch5_magnus_choices"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "I saw the vision of the late Kyeongjang Emperor and his wife. Why did I see it?",
+          "targets": [
+            "ch5_magnus_choices"
+          ],
+          "condition_raw": "not ch5_magnus_q1"
+        },
+        {
+          "index": 1,
+          "text": "Do you know what happened during the Tragedy of Tianho?",
+          "targets": [
+            "ch5_magnus_choices"
+          ],
+          "condition_raw": "not ch5_magnus_q2"
+        },
+        {
+          "index": 2,
+          "text": "What is this place?",
+          "targets": [
+            "ch5_magnus_choices"
+          ],
+          "condition_raw": "not ch5_magnus_q3"
+        },
+        {
+          "index": 3,
+          "text": "I touched this amulet. What did it do to me?",
+          "targets": [
+            "ch5_magnus_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_a0388b6121",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 311,
+        "label": "ch6_elias_choices"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "How's Yuxuan?",
+          "targets": [
+            "ch6_elias_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "What happened to the Emperor?",
+          "targets": [
+            "ch6_elias_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "How was the violet-haired man?",
+          "targets": [
+            "ch6_elias_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "How is the doctor?",
+          "targets": [
+            "ch6_elias_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_65c13ec72a",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 731,
+        "label": "ch6_yaoguai_encounter"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Channel earth!",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Stumble!",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_155d906ee0",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 794,
+        "label": "ch6_yaoguai_barrier"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Make a barrier made out of earth.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Make a barrier made out of wind.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_8202a9865a",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 1242,
+        "label": "ch6_vasily_qtc"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Attack the Vasily who speaks the most.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Attack the Vasily closest to you.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Close your eyes and rely on Chung-hee's mind channeling.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Use fire channeling to light up the entire room.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_3635bde967",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 1461,
+        "label": "ch6_darkness_qtc"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Hit the second shadow first, then the first, then the fourth, then the third.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Hit the second shadow first, then the fourth, then the first, then the third.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Hit the fourth shadow first, then the first, then the second, then the third.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Hit the fourth shadow first, then the second, then the first, then the third.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_c6d21e9b48",
+      "location": {
+        "file": "game\\08_chapter_06.rpy",
+        "line": 1638,
+        "label": "ch6_vasily_ice_qtc"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Channel Earth.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Channel Fire.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_638a020bd3",
+      "location": {
+        "file": "game\\09_chapter_07.rpy",
+        "line": 384,
+        "label": "ch7_waiting"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Spend time with Svante.",
+          "targets": [
+            "ch7_svante_time"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Help Niko with the patients.",
+          "targets": [
+            "ch7_niko_time"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Look for Chung-hee.",
+          "targets": [
+            "ch7_chunghee_time"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Check the remaining supplies with Yuxuan.",
+          "targets": [
+            "ch7_yuxuan_time"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_db279f186e",
+      "location": {
+        "file": "game\\09_chapter_07.rpy",
+        "line": 1375,
+        "label": "ch7_drink_choice"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Drink with Feng.",
+          "targets": [
+            "ch7_drink_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Refuse to drink with Feng.",
+          "targets": [
+            "ch7_drink_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_e0bab3fb9b",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 761,
+        "label": "ch8_open_door"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Go with Niko's suggestion.",
+          "targets": [
+            "ch8_open_door_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Go with Svante's suggestion.",
+          "targets": [
+            "ch8_open_door_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Go with Yuxuan's suggestion.",
+          "targets": [
+            "ch8_open_door_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Go with Chung-hee's suggestion.",
+          "targets": [
+            "ch8_open_door_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_4dc179b51f",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 990,
+        "label": "ch8_corpse"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Read the note.",
+          "targets": [
+            "ch8_letter_common"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Don't read the note.",
+          "targets": [
+            "ch8_letter_common"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_ae90c96233",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1266,
+        "label": "ch8_paintings"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes please.",
+          "targets": [
+            "ch8_paintings"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "No, I got everything.",
+          "targets": [
+            "ch8_painting_order"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_a3c4a6fbf8",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1294,
+        "label": "ch8_painting_order"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "The Loom's Whisper, Chains of Choice, Thrones of the Eternal, Tragedy, When the Stars Watched, Wrath",
+          "targets": [
+            "ch8_paintings"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "The Loom's Whisper, Thrones of the Eternal, When the Stars Watched, Chains of Choice, Tragedy, Wrath",
+          "targets": [
+            "ch8_painting_correct"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Thrones of the Eternal, The Loom's Whisper, Tragedy, When the Stars Watched, Chains of Choice, Wrath",
+          "targets": [
+            "ch8_paintings"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Thrones of the Eternal, When the Stars Watched, Chains of Choice, The Loom's Whisper, Wrath, Tragedy",
+          "targets": [
+            "ch8_paintings"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_5655ce509a",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1562,
+        "label": "ch8_magnus_battle"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Ask Svante to channel the fallen spearheads",
+          "targets": [
+            "ch8_battle_qtc2"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Ask Svante to channel the fallen lantern stands.",
+          "targets": [
+            "ch8_battle_qtc2"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_5e38951415",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1637,
+        "label": "ch8_battle_qtc2"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Stand my ground and try to block the attack",
+          "targets": [
+            "ch8_battle_qtc3"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Dodge and counter",
+          "targets": [
+            "ch8_battle_qtc3"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_2fedf64c40",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1735,
+        "label": "ch8_battle_qtc3"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Counter with fire, trying to burn through the wind.",
+          "targets": [
+            "ch8_battle_qtc4"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Anchor myself with earth channeling and grab onto my companions.",
+          "targets": [
+            "ch8_battle_qtc4"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_e91a9e5b75",
+      "location": {
+        "file": "game\\10_chapter_08.rpy",
+        "line": 1851,
+        "label": "ch8_battle_qtc4"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Counter with Draconic Fire",
+          "targets": [
+            "ch8_magnus_end"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Reason with Magnus",
+          "targets": [
+            "ch8_magnus_end"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_8cef4cbb9d",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 184,
+        "label": "ch9_elias_choice"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Stay with Elias and help him sleep.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Rush to check on Magnus.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_f7ac7c238a",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 467,
+        "label": "ch9_lab_choices"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Spend time at Yuxuan's library.",
+          "targets": [
+            "ch9_library"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Go back to the bedroom and check on Elias.",
+          "targets": [
+            "ch9_bedroom_yuxuan"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Have a drink at Tianho's tavern.",
+          "targets": [
+            "ch9_tavern"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Help with the kitchen.",
+          "targets": [
+            "ch9_kitchen_help"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_274debac29",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 571,
+        "label": "ch9_library"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Press further for more details about his aunt.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Let him be and read a book.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_7f8a14ade7",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 785,
+        "label": "ch9_bedroom_yuxuan"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Eat with Yuxuan.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Don't eat with Yuxuan.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_2a6b57bfda",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 962,
+        "label": "ch9_tavern"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Eat with Niko.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Pass the eating. Go home with Niko.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_7ac0f54088",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 1198,
+        "label": "ch9_tavern"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Encourage Aoi.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Don't say anything.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_c02b6a69b4",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 1356,
+        "label": "ch9_kitchen_help"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Keep quiet.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Ask about the woman in the picture.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_c734374755",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 1523,
+        "label": "ch9_kitchen_common"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Keep on listening.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Join him in singing.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_3abd1414bf",
+      "location": {
+        "file": "game\\11_chapter_09_p1.rpy",
+        "line": 1708,
+        "label": "ch9_outfit_gather"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "I'm too busy.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Sure. Maybe once I'm available.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_1d9e3131be",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 187,
+        "label": "chapter_09_p2"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes, it does.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "No, it doesn't.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_4f5bb744c6",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 550,
+        "label": "ch9_judgment_mjoll"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Pass the judgment of Death.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Pass the judgment of Exile.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Pass the judgment of Forgiveness.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Investigate first and ask the others for their opinion.",
+          "targets": [
+            "ch9_judgment_mjoll"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_b3931f4abd",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 720,
+        "label": "ch9_judgment_hinami"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Pass the judgment of Death.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Pass the judgment of Exile.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Pass the judgment of Forgiveness.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Investigate first and ask the others for their opinion.",
+          "targets": [
+            "ch9_judgment_hinami"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_0db25ff3bf",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 975,
+        "label": "ch9_judgment_kyeong"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Pass the judgment of Death.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Pass the judgment of Exile.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Pass the judgment of Forgiveness.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Investigate first and ask the others for their opinion.",
+          "targets": [
+            "ch9_judgment_kyeong"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_84e1879097",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 1185,
+        "label": "ch9_huli_reward_high"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Ask about the future of Ena.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Ask how Elara and the kids are doing.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Ask about your future.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Ask about the secret to Gao's perfect Tianho flan.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_3d530d0536",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 1358,
+        "label": "ch9_huli_love"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Yuxuan.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Niko.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Svante.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 3,
+          "text": "Chung-hee.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 4,
+          "text": "Magnus.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_b191223d1a",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 1611,
+        "label": "ch9_fox_toy"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Shwake it!",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Open it!",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_8c2f9309d3",
+      "location": {
+        "file": "game\\12_chapter_09_p2.rpy",
+        "line": 2051,
+        "label": "ch9_route_yuxuan"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "They'd be proud of you. I know I am.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Say nothing.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_89ae39e66a",
+      "location": {
+        "file": "game\\13_chapter_10.rpy",
+        "line": 255,
+        "label": "ch10_deal_choice"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Accept.",
+          "targets": [
+            "ch10_bad_end_accept"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Do not accept.",
+          "targets": [
+            "ch10_refuse"
+          ],
+          "condition_raw": null
+        },
+        {
+          "index": 2,
+          "text": "Consult the Prosperity Dragon.",
+          "targets": [
+            "ch10_consult"
+          ],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_3435158fb2",
+      "location": {
+        "file": "game\\13_chapter_10.rpy",
+        "line": 1140,
+        "label": "ch10_boss_fight_1"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Dodge to the side and counter with a burst of flame.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Block the strike with a crossed-arm guard reinforced with draconic fire.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_9c3db6fcab",
+      "location": {
+        "file": "game\\13_chapter_10.rpy",
+        "line": 1175,
+        "label": "ch10_boss_fight_2"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Stay grounded and summon a shield of fire around you to brace for impact.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Leap into the air, aiming to slam down with a draconic flame punch.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_447c5f82bd",
+      "location": {
+        "file": "game\\13_chapter_10.rpy",
+        "line": 1223,
+        "label": "ch10_boss_fight_3"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Channel wind to slice through the spirits before they could touch you.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Cover yourself in fire and charge through.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    },
+    {
+      "choice_point_id": "cp_d8b5c6a1d1",
+      "location": {
+        "file": "game\\13_chapter_10.rpy",
+        "line": 1269,
+        "label": "ch10_boss_outcome"
+      },
+      "kind": "menu_ast",
+      "options": [
+        {
+          "index": 0,
+          "text": "Stand your ground and counter.",
+          "targets": [],
+          "condition_raw": null
+        },
+        {
+          "index": 1,
+          "text": "Duck between the claws and twist behind him.",
+          "targets": [],
+          "condition_raw": null
+        }
+      ]
+    }
+  ]
+}

@@ -20,15 +20,21 @@
 # --- Backgrounds (with fit to prevent zoom) ---
 image bg_underground_dim:
     "images/Assets/Background/Underground Lights Off (1).png"
-    fit "cover"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 image bg_underground_lit:
     "images/Assets/Background/Underground.png"
-    fit "cover"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 image bg_underground_red:
     "images/Assets/Background/Underground Redpng.png"
-    fit "cover"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 image kristin_kneeling:
     "images/Assets/Illustrations/1 - Kristin Praying.png"
@@ -36,56 +42,12 @@ image kristin_kneeling:
     xalign 0.5
     yalign 1.0
 
-# TODO: fix sprite zoom and positioning, start from the knees and zoom idealy 1.25x or 1.5x depending on how it looks 
-# --- Character Sprites ---
-image kristin_normal:
-    At("images/Assets/Character Sprites/Kristin Nordstrom.png", sprite_highlight("kristin"))
-    fit "contain"
-image boy_ald_normal:
-    At("images/Assets/Character Sprites/Boy Aldorith.png", sprite_highlight("boy_ald"))
-    fit "contain"
-image girl_ald_normal:
-    At("images/Assets/Character Sprites/Girl Aldorith.png", sprite_highlight("girl_ald"))
-    fit "contain"
-image yk:
-    At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
-    fit "contain"
 
 # TODO: check image folder again, illus and bg
 # --- CG / Event Images (full screen, fit to cover) ---
 image cg_black:
     "images/cg/cg_black.png"
     zoom 2.26 
-
-image cg_yaoguai_entrance:
-    "images/cg/cg_yaoguai_entrance.png"
-    fit "cover"
-
-image cg_girl_ald_death:
-    "images/cg/cg_girl_ald_death.png"
-    fit "cover"
-
-image cg_boy_ald_wall:
-    "images/cg/cg_boy_ald_wall.png"
-    fit "cover"
-
-image cg_boy_ald_slash:
-    "images/cg/cg_boy_ald_slash.png"
-    fit "cover"
-
-image cg_yk_surveying:
-    "images/cg/cg_yk_surveying.png"
-    fit "cover"
-
-# TODO: fix qtc
-# --- GUI Elements ---
-image ui_timer_bar_bg:
-    "images/gui/ui_timer_bar_bg.png"
-    fit "contain"
-
-image ui_timer_bar_fill:
-    "images/gui/ui_timer_bar_fill.png"
-    fit "contain"
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
@@ -151,56 +113,6 @@ define audio.yk_ald_prl_line7      = "audio/Prologue/Yaoguai King Prologue/YAOGU
 
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
 
-# TODO: remove and apply the global style
-# -----------------------------------------------------------------------------
-# 4.1 QUICK TIMED CHOICE SCREEN
-# -----------------------------------------------------------------------------
-screen timed_choice(items, timeout=5.0, default=None):
-
-    default timer = timeout
-    $ default_choice = default if default is not None else len(items) - 1
-
-    timer 0.01 repeat True action [
-        SetScreenVariable("timer", timer - 0.01),
-        If(timer <= 0, true=[
-            Hide("timed_choice"),
-            Jump(items[default_choice][1])
-        ])
-    ]
-
-    if timer <= 2.0:
-        timer 0.5 action Play("sound", audio.sfx_timer_tick)
-
-    vbox:
-        xalign 0.5
-        yalign 0.6
-        spacing 8
-
-        for i, (choice_text, target_label) in enumerate(items):
-            button:
-                action [Hide("timed_choice"), Jump(target_label)]
-                xpadding 30
-                ypadding 12
-                background None
-                hover_background None
-
-                text choice_text:
-                    size 24
-                    color "#ffffff"
-                    hover_color "#ffd700"
-                    text_align 0.5
-                    layout "nobreak"
-
-        bar:
-            value AnimatedValue(timer, timeout, 0.01)
-            range timeout
-            xsize 500
-            ysize 10
-            xalign 0.5
-            left_bar  Frame("#d4af37", 0, 0)
-            right_bar Frame("#333333", 0, 0)
-
-
 # -----------------------------------------------------------------------------
 # 4.2 CHAPTER TITLE SCREEN
 # -----------------------------------------------------------------------------
@@ -243,6 +155,8 @@ label prologue:
     pause 0.5
     scene bg_underground_dim
     with fade
+
+    # $ renpy.save(new_slot, extra_info=save_name)
 
     # --- Opening narration ---
     "Let their spirits pass without suffering. Let their memories remain unspoiled."
@@ -394,13 +308,15 @@ label prologue:
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
     "The Yaoguai King emerged from the rubble, obsidian-scaled and crowned in bone, the shadows clinging to his form like loyal hounds."
     
-    show yk at center_char
+    show yk at center_char with dissolve
     
     voice audio.yk_ald_prl_line1
     yk "You bury corpses… while your own hearts still beat? How generous. More for my yaoguai to feed on."
 
-    show girl_ald_normal at right_char
+    show girl_ald_normal at right_char 
     show boy_ald_normal at left_char
+    with Dissolve(0.4)
+
 
     #voice audio.girl_ald_prl_
     girl_ald "Enoch above…"
@@ -412,16 +328,16 @@ label prologue:
     "The next, he was upon them."
     
     play sound sfx_body_thud
-    scene bg_underground_dim with flash
+    scene bg_underground_red with flash
     pause 0.4
-    scene bg_underground_dim with dissolve
+    # scene bg_underground_red with dissolve
     
     #voice audio.girl_ald_prl_
     girl_ald "AHHH!!! NO!!!"
     
     "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
-    scene bg_underground_red with flash
-    show boy_ald_normal at left_char
+    # scene bg_underground_red with flash
+    show boy_ald_normal at left_char with Dissolve(0.4)
 
     voice boy_ald_prl_line14
     boy_ald "SISTER!!"
@@ -430,17 +346,15 @@ label prologue:
 
     voice audio.yk_ald_prl_line2
     yk "Your turn, little one…"
-    
-    # -------------------------------------------------------------------------
-    # ENHANCED QUICK TIMED CHOICE
-    # -------------------------------------------------------------------------
-    call screen timed_choice([
-        ("Try to raise a stone wall.", "prologue_choice_wall"),
-        ("Dash toward the entrance of the burial tunnel.", "prologue_choice_dash")
-    ], timeout=5.0, default=1)
-    
-    return
 
+    $ _choice_timeout = 5.0
+    menu:
+        "Dash toward the entrance of the burial tunnel.":
+            $ _choice_timeout = 0
+            jump prologue_choice_dash
+        "Try to raise a stone wall.":
+            $ _choice_timeout = 0
+            jump prologue_choice_wall
 
 # =============================================================================
 # SECTION 7: QTC BRANCH LABELS
@@ -464,9 +378,9 @@ label prologue_choice_wall:
     "A single claw punctured through the wall—then shattered it in one swipe."
     "The force sent him flying, crashing against the tunnel wall."
     
-    scene cg_boy_ald_wall with flash
-    pause 0.5
-    scene bg_underground_red with dissolve
+    #scene cg_boy_ald_wall with flash
+    pause 0.3
+    scene bg_underground_red with Dissolve(0.4)
     
     voice boy_ald_prl_line16
     boy_ald "ARGHH!!!"
@@ -519,7 +433,7 @@ label prologue_common:
     
     "Silence returned—oppressive and final."
 
-    show yk at center_char
+    show yk at center_char with Dissolve(0.4)
     
     "The Yaoguai King stood among the dead. His eyes drifted to the bodies wrapped in burial cloth: a queen and two princes, now claimed by darkness."
     

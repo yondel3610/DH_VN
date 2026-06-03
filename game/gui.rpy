@@ -238,8 +238,10 @@ define config.thumbnail_height = 216
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 3
-define gui.file_slot_rows = 2
+define gui.file_slot_rows = 4
 
+## Quick Slots
+define gui.quick_slots = 6
 
 ## Positioning and Spacing #####################################################
 ##
@@ -248,7 +250,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 60
+define gui.navigation_xpos = 85
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 15
@@ -260,7 +262,7 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 20
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 15
@@ -460,8 +462,8 @@ init python:
         gui.quick_button_text_size = 30
 
         ## File button layout.
-        gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
+        gui.file_slot_cols = 1
+        gui.file_slot_rows = 1
 
         ## NVL-mode.
         gui.nvl_height = 255

@@ -31,7 +31,8 @@ define lead_fire_channeler = Character("Lead Fire Channeler", color="#ff4500", c
 define female_guard        = Character("Female Guard",        color="#708090", callback=name_callback, cb_name="female_guard")  # Slate — castle guard
 define male_soldier_1      = Character("Soldier",             color="#a0a0a0", callback=name_callback, cb_name="male_soldier_1")  # Grey — generic soldier
 define male_soldier_2      = Character("Soldier",             color="#a0a0a0", callback=name_callback, cb_name="male_soldier_2")  # Grey — generic soldier
-define woman_1     = Character("Woman 1",               color="#f4a7b9", callback=name_callback, cb_name="woman_1")  # Rose — desperate audition applicant
+define woman_1     = Character("Woman 1",               color="#f4a7b9", callback=name_callback, cb_name="woman_1")  # Rose — desperate audition applicant | NPC
+define woman_3     = Character("Woman 1",               color="#f4a7b9", callback=name_callback, cb_name="woman_3")  # Rose — desperate audition applicant | NPC
 define man_1     = Character("Man 1",               color="#0054ca", callback=name_callback, cb_name="man_1") # NPC
 define man_2     = Character("Man 2",               color="#0054ca", callback=name_callback, cb_name="man_2") # NPC
 define man_3     = Character("Man 3",               color="#0054ca", callback=name_callback, cb_name="man_3") # NPC
@@ -54,6 +55,7 @@ define vendor_mjoll    = Character("Vendor",             color="#cd853f", callba
 define male_guard      = Character("Male Guard",         color="#7f8c8d", callback=name_callback, cb_name="male_guard")  # Grey — palace guard
 define female_guard    = Character("Female Guard",       color="#7f8c8d", callback=name_callback, cb_name="female_guard")  # Grey — palace guard
 define frost_oni       = Character("",                   color="#5dade2", callback=name_callback, cb_name="frost_oni")  # Ice blue, no name — monster
+define qiongqi         = Character("Qiongqi",            color="#77bbe9", callback=name_callback, cb_name="qiongqi" ) # Chapter 2 intro monster
 
 # Chapter 3
 define yuki_onna      = Character("Yuki-onna",         color="#aee8f8", callback=name_callback, cb_name="yuki_onna")  # Pale ice blue — spirit form

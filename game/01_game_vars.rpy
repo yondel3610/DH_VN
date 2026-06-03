@@ -1,8 +1,10 @@
 # =============================================================================
 #                          GAME VARIABLES (IMPORTANT)
 # =============================================================================
-
+# Technical stuff
 # define quick_menu = True
+
+default demo_mode = False  # Set to False for full release
 
 # =============================================================================
 # AFFECTION / RELATIONSHIP TRACKERS
@@ -38,10 +40,6 @@ default love_route_locked    = ""
 # =============================================================================
 # CITY EXPLORATION FLAGS
 # =============================================================================
-default city_visited_deng    = False
-default city_visited_fanrong = False
-default city_visited_xiangli = False
-default city_visited_zhong   = False
 default ch2_visited_food     = False
 default ch2_visited_fortune  = False
 default ch2_visited_spa      = False

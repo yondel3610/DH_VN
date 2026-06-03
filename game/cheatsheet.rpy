@@ -238,3 +238,11 @@
 # ----------------------------------------------------------------------------------------
 # del "D:\Renpy\dh_prologue ver 001\game\saves\*.save"
 # ----------------------------------------------------------------------------------------
+
+# COPY PASTE FOR PROD
+# show elara at right_char with Dissolve(0.2)
+# show daniel at right_char_kids with Dissolve(0.2)
+# show lucas at right_char_kids with Dissolve(0.2)
+# show sarah at right_char_kids with Dissolve(0.2)
+# show emily at right_char_kids with Dissolve(0.2)
+ 
