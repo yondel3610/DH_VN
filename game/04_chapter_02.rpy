@@ -153,7 +153,7 @@ label chapter_2:
     if demo_mode:
         scene black with fade
         pause 1.0
-        centered "Thank you for playing the demo!\n\nThe full version continues here."
+        centered "Thank you for playing the demo\n\nThe full version continues here."
         pause 2.0
         $ MainMenu(confirm=False)()
         
@@ -668,12 +668,11 @@ label ch2_square_intro:
     vasily "That's the spirit, friend!"
 
     "He claps me on the back, his grin widening."
+    show vasily neutral at right_char
     "As we begin to walk through the square, Vasily dives into his element, greeting merchants, inspecting goods, and occasionally throwing in a comment or two about how to make things 'more appealing to the people.'"
     "I follow in silence, my eyes scanning the colorful displays and the array of items on sale."
     "The scents of freshly baked bread and spiced meat waft through the air, mingling with the faint chill of the snow. People are beginning to trickle into the square, as we walk on by."
 
-    # PDF p66
-    show vasily alt_think at right_char
     vasily "See? Not so bad, is it? Unfortunately, the merchant who sells Mjollian Mead-Braised Lamb was mercilessly killed by a yaoguai before coming here so… we might have to settle for less."
 
     "I grunt in response, earning a chuckle from him."
@@ -681,140 +680,155 @@ label ch2_square_intro:
     show vasily alt_normal at right_char
     vasily "Alright, Dorian. Since you're tagging along, where do you want to go? Completely up to you."
 
-    hide dorian
-    hide vasily
     jump ch2_freetime
-
 
 # =============================================================================
 # SECTION 9: LABEL CH2_FREETIME — D2 Free Time Menu (4 options)
 # =============================================================================
-# PDF pages 66-77.
 # Uses 'call' to visit sub-scenes; each ends with 'return'.
-# After the spa, the game forces a visit to the fortune teller before Common.
+# After the spa, the game forces a visit to the fortune teller before CommonCommon.
 # =============================================================================
-
 label ch2_freetime:
-
     menu:
-        "Visit the food stalls.":
+        "Visit the food stalls." if not ch2_visited_food:
             $ ch2_visited_food = True
             call ch2_food_stalls from _call_ch2_food_stalls
             jump ch2_freetime
 
-        "Visit the fortune teller.":
+        "Visit the fortune teller." if not ch2_visited_fortune:
             $ ch2_visited_fortune = True
             call ch2_fortune from _call_ch2_fortune
-            jump ch2_freetime
+            jump ch2_common_freetime
 
         "Relax at the spa." if not ch2_visited_spa:
             $ ch2_visited_spa = True
             call ch2_spa from _call_ch2_spa
-            # After spa the PDF directs to fortune teller if not yet visited
             if not ch2_visited_fortune:
                 $ ch2_visited_fortune = True
                 call ch2_fortune from _call_ch2_fortune_1
-            jump ch2_freetime
-
-        "Rest with Vasily.":
-            $ ch2_visited_rest = True
-            call ch2_rest from _call_ch2_rest
-            jump ch2_freetime
-
-        "Head to the celebration.":
             jump ch2_common_freetime
 
+        "Rest with Vasily." if not ch2_visited_rest:
+            $ ch2_visited_rest = True
+            call ch2_rest from _call_ch2_rest
+            jump ch2_common_freetime
 
 # =============================================================================
 # SECTION 10: FREE TIME SUB-SCENE LABELS
 # =============================================================================
-
 # -----------------------------------------------------------------------------
 # D2-A: FOOD STALLS
-# PDF pages 66-69.
 # Sub-choice: Confront the guards or Do Nothing
 # -----------------------------------------------------------------------------
-
 label ch2_food_stalls:
     # [COMMENT: bg_mjoll_food_stalls — cast iron cauldrons, smoked fish, bread bowls steaming]
     scene bg_mjoll_food_stalls with dissolve    # PLACEHOLDER — Mjollian food stalls
 
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
     "Vasily and I decided to stroll through the food stalls, the air thick with the aroma of roasted fish, hearty soups, and fresh-baked bread. The snow-covered streets contrast with the vibrant colors of the vendors' booths."
 
     vasily "Ah, here we go, Dorian. Mjollian cuisine is second to none. Let me guess, you haven't eaten anything decent in weeks."
+    show dorian normal_alt_neutral at left_char
     dorian "Hmph."
 
     "I grunt in response, but my stomach betrays me with a growl. He smirks and gestures toward a booth with a large cast iron cauldron."
 
-    # show vendor_mjoll at right        # PLACEHOLDER — Vendor sprite (ladling stew)
+    hide vasily
+    show vendor_mjoll at right_char with Dissolve(0.2)       # (ladling stew)
 
-    # PDF p66-67
     vendor_mjoll "Two Zarybas, fresh and hot! Best in all of Mjoll!"
+    hide vendor_mjoll
 
+    show vasily neutral at right_char with Dissolve(0.2)
     "Vasily hands over a few coins and passes me one of the bread bowls."
 
+    show vasily alt_think at right_char
     vasily "Eat, friend. You'll thank me later, hungry grumpy man."
 
     # [COMMENT: FOOD4 — Zaryba Stew: smoked sturgeon, root vegetables, wild herbs, served in thick crusty bread bowls]
     "I take a bite. The smoky, savory flavor of the sturgeon hits me first, followed by the earthiness of the parsnips and turnips. The bread, soaked in the stew, is soft yet hearty. It's... surprisingly good."
 
-    # PDF p67
+    show dorian neutral at left_char
     dorian "It's… *groans*"
+    show vasily alt_normal at right_char
     vasily "See? I told you. Nothing like food to make life a little less bleak."
+    show dorian sad at left_char
     dorian "…"
+    show vasily alt_think at right_char
     vasily "You know, you could make this easier on yourself. You've been carrying this weight for four years. Maybe it's time to let some of it go."
 
     "I don't answer, focusing instead on the meal. Vasily knows better than to push further and continues eating."
-
     "As we get up to leave, I catch sight of the vendor. She stands at the edge of the stall, watching the guards escort two boys carrying heavy crates. Her eyes are filled with tears."
 
-    # show male_guard  at left              # PLACEHOLDER — Male Guard sprite
-    # show boy_ald  at center      # PLACEHOLDER — Boy Aldorith (straining under crate)
-
+    hide vasily
+    hide dorian
+    show male_soldier_1 at right_char
+    show boy_ald at left_char
+    with Dissolve(0.2)            # PLACEHOLDER — Boy Aldorith (straining under crate)
     male_guard  "Come on! Pick up the pace, will ya? Don't make me bring out the whip!"
     boy_ald_spa "Please, sir! We just need a drink!"
+    hide male_soldier_1
+    show female_guard at right_char with Dissolve(0.2)
     female_guard "You'll get your drink after an hour! Now get back to work!"
+    hide female_guard
+    hide boy_ald
 
+    show vasily alt_think at right_char
+    show dorian serious at left_char
+    with Dissolve(0.2)
     vasily "Come on, friend. Don't get any ideas. You can't save everyone."
-
     "The vendor glances toward me briefly."
 
     # -----------------------------------------------------------------------
     # D2-A SUB-CHOICE: Confront or Do Nothing
     # -----------------------------------------------------------------------
-
     menu:
-
         "Confront the Guards.":
             $ ch2_food_choice = "confront"
 
-            # PDF p67-68
+            hide vasily
+            show dorian serious at left_char with Dissolve(0.2)
             "I clench my fists, stepping toward the guards as they bark orders at the two kids."
 
             dorian "Let them rest. They're just kids."
 
             "The guards turn, startled, before recognizing me. One of them straightens up, puffing out his chest."
 
+            show male_soldier_1 at right_char with Dissolve(0.2)
             male_guard "Stay out of this, mercenary. These children are property of the Crown. They do as they're told."
 
             "The vendor watches silently, her hands trembling."
 
+            show dorian normal_alt_annoyed at left_char
             dorian "They look half-dead. If you push them any further, they'll collapse."
             male_guard "Then they collapse. Not our problem their constitution's weak."
 
+            hide male_soldier_1
+            show female_guard at right_char with Dissolve(0.2)
             female_guard "Y-You fool! Th-that mercenary is the Dragon of Gale."
+            hide female_guard
+            show male_soldier_1 at right_char with Dissolve(0.2)
             male_guard   "What? O-Oh… Um… Sure. Kids, break time!"
+            hide male_soldier_1
 
             "The two kids immediately run to the vendor to get some water."
 
+            show vendor_mjoll at right_char with Dissolve(0.2)   # PLACEHOLDER — Vendor sprite
             vendor_mjoll "Here's some water. Please drink. Are you hungry, my children?"
+            hide vendor_mjoll
 
+            show vasily alt_think at right_char with Dissolve(0.2)
+            show dorian normal_alt_neutral at left_char
             vasily "*sighs* You just had to make a scene. Let's go."
 
         "Do nothing.":
             $ ch2_food_choice = "nothing"
 
-            # PDF p68
+            show dorian sad at left_char
+            show vasily alt_think at right_char
+            with Dissolve(0.2)
             "I glance at the vendor, then at the guards. My fists clench, but I force myself to stay rooted in place."
             "The vendor's gaze meets mine for a moment, her eyes pleading, but I look away. Vasily doesn't say anything—he knows what I'm feeling, even if I don't show it."
 
@@ -823,58 +837,68 @@ label ch2_food_stalls:
 
             "As we walk away, I hear the guards bark another order at the children. A crate crashes to the ground, followed by the sound of a whip cracking. A woman's stifled sob is the last thing I hear as we round the corner."
 
-    # Both sub-choices converge — PDF p68-69
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
     vasily "I know what you're thinking. You want to charge in, right every wrong. But that's not how Mjoll works, Dorian."
     vasily "This place… It survives because of the system. The King and Queen, for all their flaws, keep the kingdom standing."
 
+    show dorian normal_alt_annoyed at left_char
     dorian "You really believe that?"
 
     "Vasily doesn't answer immediately."
 
-    # PDF p69
+    show vasily alt_think at right_char
     vasily "I believe that survival comes at a cost. You've paid yours. Maybe it's time to stop paying for everyone else's."
 
     "I stay silent, the taste of the Zaryba still lingering on my tongue, now bitter."
 
+    hide dorian
+    hide vasily
     return
 
 
 # -----------------------------------------------------------------------------
 # D2-B: FORTUNE TELLER — BABALA
-# PDF pages 69-73.
 # Sub-choice: Ask about family or ask about companions
 # Both branches converge on the Five Companions prophecy
 # -----------------------------------------------------------------------------
 
 label ch2_fortune:
-
-    # PDF p69
     # [COMMENT: bg_mjoll_violet_tent — dim, violet curtains, crystal orb glowing faintly, incense]
     scene bg_mjoll_violet_tent with dissolve    # PLACEHOLDER — Babala's booth interior
-
     play music ost_babala_prophecy fadein 2.0   # PLACEHOLDER — ethereal prophecy theme
 
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
     "Vasily nudges me toward the dimly lit booth draped in heavy, violet curtains. A crooked, hastily-painted sign outside reads: 'Babala: Your Fate Awaits.'"
-
+    
     vasily "Oh she's back in town!"
+    show dorian normal_alt_neutral at left_char
     dorian "Really? Who?"
+    show vasily alt_aggressive at right_char
     vasily "Babala. She's a fortuneteller. They say she never misses with her fortunes. I'd say it's worth a try. She's—"
+    show dorian normal_alt_annoyed at left_char
     dorian "Not interested."
+    show vasily alt_normal at right_char
     vasily "Come on, Dorian. I'd say it's worth a try."
 
     "I glare at him."
 
+    show dorian serious at left_char
     dorian "Fortunes are just words to me, Vasily. Nothing more."
+    show vasily alt_savage at right_char
     vasily "Words have power, you know. Besides, maybe she'll tell you about your love life. Don't you think it's time to move on?"
 
     "I stop in my tracks, the air around us growing cold."
 
+    show dorian angry at left_char
     dorian "I will never remarry, Vasily. Don't bring that up again."
 
     "The fortune teller, a middle-aged woman, with white eyes, peeks out from the curtains, chuckling softly."
-
-    # show babala seated at center               # PLACEHOLDER — Babala sprite (white eyes, knowing smile)
-
+    show dorian normal_alt_annoyed at left_char
+    hide vasily
+    show babala at right_char with Dissolve(0.2)
     babala "Haha. You are as stubborn as the stone you channel, Dragon of Gale. But even the hardest stone cracks in time."
 
     "Vasily laughs, patting my shoulder."
@@ -883,17 +907,18 @@ label ch2_fortune:
     # PDF p70
     "We step inside. The booth is small but warm, the scent of incense hanging in the air. A crystal orb glows faintly on the table, and behind it sits Babala."
     "She looks up, her lips curling into a knowing smile."
-
+    show dorian serious at left_char
     babala "The Dragon of Gale. I wondered when you'd visit me."
+    hide babala
+    show vasily alt_savage at right_char with Dissolve(0.2)
     vasily "He didn't want to come, of course, but I dragged him here. Babala, tell him something interesting—preferably about his love life."
     # v laugh 043
-
+    hide vasily
+    show babala at right_char with Dissolve(0.2)
     babala "*laughing* Your friend has a sharp tongue."
 
     "I glare at Vasily, but Babala's chuckle draws my attention back to her."
-
     babala "Sit, child of fire. Let the Weaver guide us."
-
     "I hesitate before sitting across from her. Her gaze turns distant as she places her hands on the crystal orb."
 
     babala "The Weaver… the one who spun the first threads of existence. From the void, she created the Tetrad—four immortal beings who shaped the world."
@@ -903,33 +928,36 @@ label ch2_fortune:
 
     babala "And now, she weaves your threads, Dragon of Gale."
 
+    show dorian sad at left_char
     dorian "Th-that's great, I guess."
-
+    show dorian serious at left_char
     "The crystal orb flickers, and a faint swirl of smoke begins to rise. Babala's eyes widen slightly, and her lips curl into a smile."
 
     babala "Normally, I allow people to ask one question, but for you, Dragon, I will permit two. Fate bends itself for those who walk in its shadow."
+    hide babala
+    show vasily alt_think at right_char with Dissolve(0.2)
     vasily "*laughs jealously* Why the special treatment?"
 
     "Babala doesn't answer him. The swirling smoke grows, curling around me like an embrace. It feels strangely comforting, and I instinctively close my eyes."
-
+    hide vasily
+    show babala at right_char with Dissolve(0.2)
     babala "Don't fight it, Dragon. Open your heart to me."
 
     "She leans forward, her voice dropping to a whisper."
 
     babala "Do not fight it, Dragon. Let your heart guide your words to the Weaver's threads. Ask me anything you wish to know."
 
+    show dorian normal_alt_neutral at left_char
     dorian "Anything, huh?"
 
     # -----------------------------------------------------------------------
     # D2-B SUB-CHOICE: Family or Companions
     # -----------------------------------------------------------------------
-
     menu:
-
         "How is my family doing?":
             $ ch2_babala_asked_family = True
 
-            # PDF p71
+            show dorian sad at left_char
             dorian "I want to know how is my family doing."
 
             "Babala's expression softens, and the crystal orb flares with light."
@@ -939,61 +967,68 @@ label ch2_fortune:
 
             "My throat tightens, and I can barely speak."
 
+            show dorian neutral at left_char
             dorian "They're… happy?"
             babala "Happier than you can imagine. But they long for you to find your peace as well."
 
             "Vasily places a hand on my shoulder, his usual teasing replaced with quiet support."
 
+            show dorian sad at left_char
             dorian "Elara…"
 
             babala "But the threads of fate are not yet finished. We must look to the future."
+            hide babala
+            show vasily alt_think at right_char with Dissolve(0.2)
             vasily "I think Dorian's had enough—"
-
+            hide vasily
+            show babala at right_char with Dissolve(0.2)
+            
+            # TODO: add audio
             # Thunder — the orb blazes, Babala transforms into the vessel of prophecy
-            play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
-
-            # CG: Babala in full prophecy — luminous eyes, smoke billowing
-            scene cg_babala_prophecy with flash # PLACEHOLDER — cg_babala_prophecy
-            pause 1.0
-            scene bg_mjoll_violet_tent with dissolve
-
+            # play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
+    
             babala "Before your time is up, you will hold another daughter in your arms. She will bring you peace, Dragon. A second chance at family, a chance to heal what was broken."
-
-            # PDF p71 — internal thought
+            show dorian serious at left_char
             "Another daughter? How could I even think of raising another child after what happened to Elara and the kids?"
 
+            show dorian neutral at left_char
             dorian "That'll be impossible since I'll never remarry but, thank you."
 
             "The booth grows colder as her voice rises."
 
         "How are my companions?":
 
-            # PDF p72
+            show dorian neutral at left_char
             "My thoughts drift to the others—Paladin Feng, Paladin Cyrus, Empress Olympia, the soldiers who stood beside me during the Tragedy of Tianho."
 
             dorian "I want to know… how are my past companions?"
 
             babala "Your companions remain strong. Paladin Feng heals slowly but surely; his resolve is unbroken. Empress Olympia rebuilds what was lost, her strength inspiring those around her."
             babala "Paladin Cyrus has moved on… As for Count Vasily…"
-
+            hide babala
+            show vasily neutral at right_char
             vasily "You do realize I'm standing right here, don't you?"
 
             "She glances at him, a smirk tugging at her lips."
-
+            
+            hide vasily
+            show babala at right_char with Dissolve(0.2)
             babala "He frets over you more than he lets on."
+            hide babala
+            show vasily alt_aggressive at right_char
             vasily "I do not fret."
+            hide vasily
+            show babala at right_char with Dissolve(0.2)
             babala "But the threads of fate do not end here. We must look to the future."
+            hide babala
+            show vasily alt_think at right_char
             vasily "Well, that's enough fortune-telling for one day, don't you think? We sho—"
 
             # Thunder interrupts Vasily
-            play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
-
-            scene cg_babala_prophecy with flash # PLACEHOLDER — cg_babala_prophecy
-            pause 1.0
-            scene bg_mjoll_violet_tent with dissolve
-
+            # play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
+            hide vasily
+            show babala at right_char with Dissolve(0.2)
             "A sudden crash of thunder interrupts him. The orb glows fiercely, and Babala's voice grows deeper, more resonant. Smoke surrounds her, and her eyes shine with an unnatural light."
-
             "The booth grows colder as her voice rises."
 
     # -----------------------------------------------------------------------
@@ -1002,24 +1037,28 @@ label ch2_fortune:
     # -----------------------------------------------------------------------
 
     babala "I see you surrounded by five figures. Five men, each unique and powerful. They will walk beside you, bound by loyalty and something deeper. Together, you will face the storm that looms ahead."
-
     babala "Beware, Dragon. A great calamity will strike Ena, and only you and your companions may stand against it. The Weaver's threads will guide you, but the path will not be easy."
 
     "The light fades, and Babala slumps in her chair, panting."
 
+    show dorian neutral at left_char with Dissolve(0.2)
     babala "*pants* You're welcome."
+    hide babala
 
+    show vasily alt_normal at right_char with Dissolve(0.2)
     vasily "Well… that's something, isn't it?"
 
-    # PDF p73
     "As Vasily and I leave the booth, he tries to lighten the mood with a joke."
 
+    show vasily alt_savage at right_char
     vasily "Five men, huh? Looks like you're going to be popular."
 
     "I shake my head, the weight of Babala's words pressing heavily on my chest."
 
     dorian "Let's move on, Vasily."
 
+    hide dorian
+    hide vasily
     stop music fadeout 2.0
 
     return
@@ -1033,145 +1072,187 @@ label ch2_fortune:
 # -----------------------------------------------------------------------------
 
 label ch2_spa:
-
-    # PDF p73
     # [COMMENT: bg_mjoll_spa — heated stone pools, steam, nobles lounging, aldorith workers]
     scene bg_mjoll_spa with dissolve            # PLACEHOLDER — Mjollian spa interior
 
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
     "The spa's grand facade rises before us, smoke wafting from its chimneys."
 
+    show dorian normal_alt_neutral at left_char
     dorian "Maybe the spa would be a good idea."
+    show vasily alt_savage at right_char
     vasily "A spa? Hmm I love it! Perfect!"
 
     "We step into the spa, the warmth of the heated pools doing little to thaw the chill in my chest. The nobles recline in luxurious pools while aldorith attendants bustle about, their eyes downcast, their bodies worn thin from endless labor."
     "A young aldorith boy, looking no older than ten, struggles with a heavy bucket of steaming water, his hands trembling from the heat. He stumbles, spilling water onto his arm. His face contorts in pain, but he quickly bows his head, attempting to clean the mess with his sleeve."
-
+    hide vasily 
+    show girl_ald_spa at right_char_kids with Dissolve(0.2)       # PLACEHOLDER — girl aldorith sprite
     girl_ald_spa "Brother! Let me help you!"
 
     "Nearby, a noblewoman watches with disdain."
-
-    # show noblewoman contemptuous at right      # PLACEHOLDER — Noblewoman sprite (fan raised)
+    hide girl_ald_spa
+    show dorian serious at left_char
+    show noblewoman at right_char with Dissolve(0.2)              # PLACEHOLDER — Noblewoman sprite (fan raised)
 
     noblewoman  "Disgusting, clumsy brat! Do you think I pay for this kind of incompetence?"
+    hide noblewoman
+    show boy_ald_spa at right_char_kids with Dissolve(0.2)        # PLACEHOLDER — boy aldorith sprite
     boy_ald_spa "I-I'm sorry, mam! I didn't mean to—"
 
     "She lashes out with her fan, striking the boy across the face. The sound echoes through the room. He flinches but doesn't cry out."
-
+    hide boy_ald_spa
     "I glance at the boy, my jaw tightening. A pang of something sharp hits my chest—Sarah. Lucas. Emily. Daniel."
 
-    # PDF p74
+    show dorian angry at left_char
+    show vasily alt_think at right_char with Dissolve(0.2)
     vasily "Dorian…"
     vasily "I know what you're thinking. But don't. This place… It's not Gale. And it's not Tianho."
 
+    show dorian sad at left_char
     dorian "Tianho. As if I could forget."
+    show vasily alt_normal at right_char
     vasily "You think I don't remember, too? I lost people there. You weren't the only one who—"
+    show dorian normal_alt_annoyed at left_char
     dorian "Don't. Besides, I don't care. These kids... they're not my problem."
+    show dorian serious at left_char
 
     "The noblewoman sees a young girl scrubbing the floor nearby. Her hands are raw, the skin peeling from the harsh soaps and constant work."
     "She pauses for a moment to wipe sweat from her brow, and the same noblewoman snaps her fan toward her."
-
+    hide vasily
+    show noblewoman at right_char with Dissolve(0.2)             # PLACEHOLDER — Noblewoman sprite
     noblewoman   "Don't stop! If I can see my reflection in the marble, you're not scrubbing hard enough!"
 
     "The girl nods quickly, her small body trembling as she works faster."
-
     "I glance back at the boy, who's still scrubbing the floor with raw, trembling hands. The noblewoman raises her fan to hit him again, but the girl tries to shield him from the noblewoman's wrath."
-
+    hide noblewoman
+    show girl_ald_spa at right_char_kids with Dissolve(0.2)      # PLACEHOLDER — girl aldorith sprite
     girl_ald_spa "P-Please, mam. Forgive us."
+    hide girl_ald_spa
+    show noblewoman at right_char with Dissolve(0.2)          # PLACEHOLDER — Noblewoman sprite
     noblewoman   "Incompetent aldoriths! I'll have you both dragged out and hanged for disobeying a noble!"
-
     "The girl freezes, her eyes wide with terror as tears spill down her cheeks. The boy drops to his knees, scrubbing furiously at the floor, his shoulders shaking."
 
+    hide noblewoman
+    show boy_ald_spa at right_char_kids           # PLACEHOLDER — boy aldorith sprite
     boy_ald_spa  "Mam, I-I… *crying*"
+    hide boy_ald_spa
+    show girl_ald_spa at right_char_kids with Dissolve(0.2)    # PLACEHOLDER — girl aldorith sprite
     girl_ald_spa "Please, ma'am. He didn't mean it. We'll do better, I promise— *sniffling*"
+    hide girl_ald_spa
+    show noblewoman at right_char with Dissolve(0.2)             # PLACEHOLDER — Noblewoman sprite
     noblewoman   "Cry and beg all you want! You'll both be weeping when they tie the noose around your heads!"
 
     "The boy's shoulders shake, silent sobs wracking his small frame. The girl clutches his arm, her tears falling onto the already-damp floor."
 
+    show dorian serious at left_char
     dorian "…"
 
     # -----------------------------------------------------------------------
     # D2-C SUB-CHOICE: Do Nothing or Punish the Noblewoman
     # PDF p74-75
     # -----------------------------------------------------------------------
-
     menu:
-
         "Do nothing.":
             $ ch2_spa_choice = "nothing"
 
-            # PDF p74-75
+            show dorian sad at left_char
             "I turn away, forcing my gaze back to the warm pools and the pampered nobles. The boy's muffled sobs and the girl's quiet pleading fade into the background as I try to block it all out."
+            hide noblewoman
 
+            show vasily alt_think at right_char with Dissolve(0.2)
             vasily "Come on. Let's get out of here."
             dorian "…"
 
+            hide vasily
+            show boy_ald_spa at right_char_kids with Dissolve(0.2)
             boy_ald_spa "Mam, please. We'll do anything… Please! *crying*"
+            hide boy_ald_spa
+            show noblewoman at right_char with Dissolve(0.2)     # PLACEHOLDER — Noblewoman sprite
             noblewoman  "Get your filthy hands off my feet! Come dawn, you'll hang like the worthless scum you are. And I'll laugh as your bodies sway in the wind."
 
+            show dorian normal_alt_annoyed at left_char
             dorian "Scum…"
 
             "I force myself to walk away."
+            hide noblewoman
 
         "Punish the noblewoman.":
             $ ch2_spa_choice = "punish"
 
-            # PDF p75
+            show dorian normal_alt_calm at left_char
             "I close my eyes briefly, channeling the energy deep within me. The ground beneath her feet shifts silently, imperceptibly."
             "She doesn't even notice."
 
-            play sound sfx_ground_swallow       # PLACEHOLDER — earth swallow SFX
+            # TODO: add sfx
+            # play sound sfx_ground_swallow       # PLACEHOLDER — earth swallow SFX
 
+            show noblewoman at right_char with Dissolve(0.2)
             noblewoman "AAHHHHH!!!!"
 
             "As she steps back, the marble tiles give way. A small, perfect hole opens beneath her. She gasps, but no sound escapes as the ground swallows her whole. The hole seals as quickly as it appeared, leaving nothing behind."
-
-            # CG: noblewoman being swallowed by the earth
-            scene cg_noblewoman_swallowed with shock_cut  # PLACEHOLDER — cg_noblewoman_swallowed
-            pause 0.5
-            scene bg_mjoll_spa with dissolve
+            hide noblewoman with Dissolve(0.5)
 
             "The children stare at the empty space, confused."
 
+            show vasily alt_mad at right_char with Dissolve(0.2)
             vasily "Merciful Enoch…"
             vasily "Dorian… what did you just do? What happened to the noblewoman?"
 
+            show dorian serious at left_char
             "I walk away."
 
             dorian "Like I said, Vasily, I don't care."
 
-    # Both sub-choices converge — PDF p75-76
+    hide dorian
+    hide vasily
+    scene bg_mjoll_icelands with dissolve
+
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
     "We step out of the spa, the cold air biting at my skin, a stark contrast to the warmth we just left behind."
     "My interest in the place has completely faded."
 
+    show dorian normal_alt_neutral at left_char
     dorian "Maybe we should try someplace else."
 
     "Vasily glances at me, his expression unreadable for a moment, before giving a small nod."
 
+    show vasily alt_think at right_char
     vasily "Fair enough. Let's see the other booths."
 
+    hide dorian
+    hide vasily
     return
-
 
 # -----------------------------------------------------------------------------
 # D2-D: REST WITH VASILY
-# PDF pages 76-77.
 # A quiet moment. Vasily naps.
 # -----------------------------------------------------------------------------
-
 label ch2_rest:
 
-    # PDF p76
     # [COMMENT: bg_mjoll_pavilion — cushioned seats, fur-lined blankets, canopy, tucked from noise]
     scene bg_mjoll_pavilion with dissolve       # PLACEHOLDER — quiet canopied pavilion
+
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
 
     "I glance at Vasily, raising an eyebrow as I gesture to a small, shaded pavilion tucked away in the corner of the square."
     "It's a simple structure—a cozy area reserved for the royal advisor to escape the noise and chaos. Cushioned seats and thick, fur-lined blankets are arranged beneath the canopy."
 
+    show dorian normal_alt_neutral at left_char
     dorian "You keep telling me I need to relax. Why don't you take your own advice for once?"
 
+    show vasily alt_think at right_char
     vasily "Relax? In the middle of the square? You must be joking."
+
+    show dorian normal_alt_confident at left_char
     dorian "You have your own private area over there. No one will bother us. You look like you haven't slept in days, Vasily."
 
+    show vasily alt_normal at right_char
     "He scoffs, rubbing his temples. After a moment of hesitation, he nods."
 
     vasily "Fine. But only for a little while. If King Gustav sees me slacking, he might have my head."
@@ -1179,29 +1260,41 @@ label ch2_rest:
     "We make our way to the pavilion, and Vasily settles into one of the cushioned seats, stretching his legs out. I take a spot beside him, leaning back against a pillow."
     "For a brief moment, it feels... peaceful. The noise of the square fades into a dull hum, distant and unimportant. The sun filters through the canopy above, its warmth battling the cold, snowy air."
 
+    show vasily neutral at right_char
     vasily "You know, I can't remember the last time I did this. Just... sat down without thinking about the next task, the next problem."
 
     "I close my eyes, letting the rare stillness seep into my bones."
 
+    show dorian normal_alt_neutral at left_char
     dorian "You know the king. He never stops bitc—"
+
+    show vasily alt_savage at right_char
     vasily "And you never stop brooding."
 
     "The silence stretches between us. I catch Vasily dozing off, his head tilting to one side. He mutters something incoherent before settling into a deeper sleep."
 
+    show vasily alt_think at right_char
     vasily "Zzzzz…"
 
+    scene black with fade
     pause 2.0
+    scene bg_mjoll_pavilion with dissolve
 
-    # PDF p77
     "An hour goes by and I wake Vasily up. He stretches and glances at me, the faintest hint of a smile on his face."
 
+    show vasily alt_normal at right_char
     vasily "Alright, Dorian. I'll admit it—you were right. I needed that."
+
+    show dorian normal_alt_confident at left_char
     dorian "Told ya."
 
     "He pauses."
 
+    show vasily alt_normal at right_char
     vasily "You, too, though. You looked... at peace, for once."
     # vasily 049
+
+    show dorian normal_alt_calm at left_char
     dorian "I agree. Rest is a moment I don't take for granted."
 
     return
@@ -1209,156 +1302,222 @@ label ch2_rest:
 
 # =============================================================================
 # SECTION 11: LABEL CH2_COMMON_FREETIME — Free Time Convergence
-# =============================================================================
-# PDF page 77.
 # All four free time options converge here.
 # =============================================================================
 
 label ch2_common_freetime:
 
-    # PDF p77
     # [COMMENT: bg_mjoll_square_festive — full crowd gathered, Qiongqi head on pedestal, banners]
     scene bg_mjoll_square_festive with dissolve # PLACEHOLDER — Mjoll square, full celebration
-    play music ost_mjoll_festive volume 0.8     # PLACEHOLDER — festive theme at full volume
-    play audio amb_crowd_festive loop fadein 1.5 # PLACEHOLDER — crowd ambient loop
+
+    # TODO: add music
+    # play music ost_mjoll_festive volume 0.8     # PLACEHOLDER — festive theme at full volume
+    # play audio amb_crowd_festive loop fadein 1.5 # PLACEHOLDER — crowd ambient loop
+
+    show dorian neutral at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
 
     "It's time for the celebration."
-    "As Vasily and I approached the grand setup in the square, the energy was palpable. The monster's severed head was proudly displayed atop a gilded pedestal, its grotesque features preserved and amplified for all to see."
-    "A crowd had already gathered, their murmurs of excitement growing louder with every passing moment. The sound of children laughing, merchants yelling, and performers playing instruments filled the air."
+    "As Vasily and I approached the grand setup in the square, the energy was palpable."
+    "The monster's severed head was proudly displayed atop a gilded pedestal, its grotesque features preserved and amplified for all to see."
+    "A crowd had already gathered, their murmurs of excitement growing louder with every passing moment."
+    "The sound of children laughing, merchants yelling, and performers playing instruments filled the air."
 
+    show vasily alt_think at right_char
     vasily "There it is. Your hard work on full display. The people will talk about this for years. They'll honor you in the grand Mjollian tradition. It's my favorite part of these ceremonies."
+
     dorian "*yawns* I wanted to go back to sleep."
+
+    show vasily alt_normal at right_char
     vasily "You'll get more sleep AFTER the ceremony."
+
+    show dorian normal_alt_annoyed at left_char
     dorian "Besides, didn't you help bringing down that thing? We also had three other soldiers with us. Helga, Lars… And, I forgot the name of the last one."
+
+    show vasily alt_think at right_char
     vasily "Pavel. His name's Pavel, I believe."
+    hide vasily
+    hide dorian
 
     "The crowd roared in approval as a herald stepped forward to announce the event. My recognition was grand, as Vasily predicted. I could hear murmurs and shouts of my name from the crowd."
 
-    # show herald proud at center                # PLACEHOLDER — Herald sprite
+    show herald at center with Dissolve(0.2)             # PLACEHOLDER — Herald sprite
 
     herald "People of Mjoll! We gather today to honor the Dragon of Gale, the hero who has slain the Qiongqi that terrorized our kingdom!"
-
     "The applause was thunderous. But I had no desire for recognition, no joy in the spectacle."
-
+    hide herald
     jump ch2_ceremony
-
 
 # =============================================================================
 # SECTION 12: LABEL CH2_CEREMONY — Dunking Ceremony (D1)
 # =============================================================================
-# PDF pages 77-81.
+# COMMON
 # D1: Aim dead center (Svante dunked) or Pretend to miss (+svante_affection)
 # =============================================================================
 
 label ch2_ceremony:
 
-    # PDF p78
-    "Then my gaze shifted, and I saw it: a large setup on the other side of the square. A series of dunk tanks, each elevated on a platform, filled with freezing water with stalagmites. Above each tank, an aldorith was tied to a precarious seat, their faces pale from the cold."
+    show dorian neutral at left_char
+    show vasily neutral at right_char
+    with Dissolve(0.2)
 
-    # show svante dunk_seat at center            # PLACEHOLDER — Svante sprite (tied to dunk seat, defiant)
-    # show kristin frightened at left            # PLACEHOLDER — Kristin sprite (shaking)
+    "Then my gaze shifted, and I saw it"
+    "A large setup on the other side of the square. A series of dunk tanks, each elevated on a platform, filled with freezing water with stalagmites."
+    "Above each tank, an aldorith was tied to a precarious seat, their faces pale from the cold."
+    hide vasily
+    hide dorian
 
-    svante       "…"
-    boy_ald      "…"
-    kristin      "…"
+    show boy_ald_normal at center_char
+    show svante normal_neutral at right_char
+    show kristin_normal at left_char
+    with Dissolve(0.2)
+    svante "…"
+    boy_ald "…"
+    kristin "…"
+
+    hide svante
+    hide kristin_normal
+    hide boy_ald_normal
+
+    show dorian neutral at left_char 
+    show vasily alt_savage at right_char
+    with Dissolve(0.2)
 
     vasily "Ah… my favorite tradition. The dunk tanks."
+
+    show dorian normal_alt_annoyed at left_char
     dorian "Favorite?"
 
-    "The man with the violet hair was a standout. His shirt was thin and tattered, barely enough to protect him from the biting wind. The others— a younger girl with silver hair, a gaunt boy, and a frail woman—were dressed similarly, their clothes little more than rags."
+    "The man with the violet hair was a standout. His shirt was thin and tattered, barely enough to protect him from the biting wind."
+    "The others— a younger girl with silver hair, a gaunt boy, and a frail woman—were dressed similarly, their clothes little more than rags."
 
+    hide dorian
+    hide vasily
+
+    show herald at center_char with Dissolve(0.2)
     herald "To mark this grand occasion, we begin with the traditional dunking! And as is custom, the guest of honor shall have the first dunk!"
     herald "And as is custom, the guest of honor shall have the first dunk! Only the Dragon of Gale himself will claim this honor! After which, the dunk will be open to the public!"
 
     "The crowd erupted into cheers, and my fists clenched at my sides."
+    hide herald
 
-    "Man 1: I can't wait to see that violet-haired freak drown!"
-    "Woman 2: Dunk them all! Teach those mutts their place!"
+    man_1 "I can't wait to see that violet-haired freak drown!"
+    woman_2 "Dunk them all! Teach those mutts their place!"
 
+    show kristin_normal at left_char with Dissolve(0.2)
     kristin "*cries* They're… they're so cruel…"
-    svante  "Hey, Kristin. Don't cry. You're making it easier for them."
+
+    show svante normal_nervous at right_char with Dissolve(0.2)
+    svante "Hey, Kristin. Don't cry. You're making it easier for them."
 
     "The herald pointed dramatically at the violet-haired aldorith."
-
+    hide svante
+    hide kristin_normal
+    
+    show herald at center_char with Dissolve(0.2)
     herald "And for our first dunk, we have Svante—the metal channeling aldorith! Dragon of Gale, the first throw is yours!"
+    hide herald
 
+    show dorian normal_alt_annoyed at left_char 
+    show svante normal_sad at right_char
+    with Dissolve(0.2)
     "I glanced up at Svante. He met my gaze with his piercing violet eyes."
+    show dorian serious at left_char 
 
     svante "Of course it's me…"
-
     "A younger aldorith, a girl with silver hair, whispered frantically to him."
 
+    hide svante
+    show kristin_normal at right_char with Dissolve(0.2)
     kristin "Svante, brother, please. Don't provoke them. We—"
 
     "The words barely left her mouth before a guard struck her with the blunt end of his spear."
 
     kristin "Ahhh!!"
-    svante  "Hey! Don't lay a finger on her! I swear—"
+
+    hide kristin_normal
+    show svante normal_angry at right_char with Dissolve(0.2)
+    svante "Hey! Don't lay a finger on her! I swear—"
 
     "Another slap from the guard silenced him, followed by a harsh blow to his stomach. Svante doubled over, coughing violently as the crowd cheered."
 
+    show svante normal_nervous at right_char
     svante "*coughs*"
+    hide svante
 
-    # PDF p79
+    show male_guard at right_char with Dissolve(0.2)
     male_guard "Shut up, lowlife."
-    "Male 3: Yeah! Show that worthless mutt his place!"
+    hide male_guard
+    show man_3 at right_char with Dissolve(0.2)
+    man_3 "Yeah! Show that worthless mutt his place!"
+    hide man_3
+    show male_guard at right_char with Dissolve(0.2)
     male_guard "Wanna beg for my forgiveness?"
+    hide male_guard
 
+    show kristin_normal at right_char with Dissolve(0.2)
     kristin "Svante, please!"
-    svante  "*coughs* I… I'm sorry."
+    
+    hide kristin_normal
+    show svante normal_nervous at right_char with Dissolve(0.2)
+    svante "*coughs* I… I'm sorry."
 
     "The guard grabbed Svante by his collar, forcing him upright to face me."
+    hide svante
 
+    show male_guard at right_char with Dissolve(0.2)
     male_guard "I hope you like ice water, freak. After this, you and your siblings are done for. The Dragon of Gale will see to it."
 
     "The crowd roared again as Vasily stepped beside me, a smirk tugging at his lips. He is holding out a ball."
-
+    hide male_guard
+    show vasily alt_savage at right_char with Dissolve(0.2)
     vasily "Here. It's Mjollian tradition, my friend. It's just a dunk tank, after all. The water's only cold if you let yourself feel it. They're only aldoriths. Filthy mutts."
+    hide vasily
 
+    show herald at right_char with Dissolve(0.2)
     herald "Come now, Dragon of Gale. It's tradition. Show us your strength and honor by taking the first shot. The people are watching!"
+    hide herald
 
+    show svante normal_sad at right_char with Dissolve(0.2)
     "I looked back at Svante, his violet eyes meeting mine. His expression was unreadable. He looks down, defeated."
-
     svante "…"
+
+    show dorian sad at left_char
     dorian "…"
+
     svante "Just do it. Get it over with."
-
     "The crowd jeered, their shouts urging me to take the shot. Vasily stood beside me."
-
-    play sound sfx_heartbeat loop               # Tension SFX during the choice
 
     # -----------------------------------------------------------------------
     # D1 DECISION — Aim Dead Center or Pretend to Miss
     # PDF p79-81
     # -----------------------------------------------------------------------
-
     menu:
-
         "Aim dead center.":
             $ ch2_dunk_choice = "aimed"
             stop sound
 
-            # PDF p80
             "I raised my arm and aimed straight for the target. The crowd hushed as they watched, anticipation thick in the air. With one swift motion, I threw the ball."
             "The target hit dead center, and the mechanism released."
 
-            play sound sfx_dunk_splash          # PLACEHOLDER — dunk splash SFX
+            # TODO: add sfx
+            # play sound sfx_dunk_splash          # PLACEHOLDER — dunk splash SFX
 
-            # CG: Svante plunging into the icy tank
-            scene cg_svante_dunk_in with shock_cut  # PLACEHOLDER — cg_svante_dunk_in
-            pause 0.8
-            scene bg_mjoll_square_festive with dissolve
-
+            show svante normal_angry at right_char
             svante "*panting*"
 
             "The crowd roared with laughter."
 
+            show kristin_normal at left_char
             kristin "B-Brother!"
-            "Man 3: Look at him squirm!"
-            "Woman 2: Bet he wishes he wasn't born now!"
+
+            man_3 "Look at him squirm!"
+            woman_2 "Bet he wishes he wasn't born now!"
 
             "I stepped back, my face blank. Vasily clapped me on the back, his laughter blending in with the crowd."
 
+            show vasily alt_savage at right_char
             vasily "Haha! Look at that wet mutt! Great job, friend!"
 
         "Pretend to miss the shot.":
@@ -1366,40 +1525,58 @@ label ch2_ceremony:
             $ svante_affection += 1             # +1 Svante affection tracker
             stop sound
 
-            # PDF p80
             "I raised my arm, aimed, and threw the ball—but it went wide, striking the wood of the tank instead. The crowd groaned in disappointment, their laughter fading into murmurs."
 
-            # CG: ball striking the wood — Svante's stunned expression
-            scene cg_svante_spared with dissolve  # PLACEHOLDER — cg_svante_spared
-            pause 0.8
-            scene bg_mjoll_square_festive with dissolve
-
+            hide svante 
+            show herald at right_char with Dissolve(0.2)
             herald "A miss? Well, no matter! The Dragon of Gale may try again!"
 
+            show dorian normal_alt_annoyed at left_char
             dorian "I won't throw another."
+
             herald "But it's tradition! The dunking cannot proceed without the first shot!"
+
+            show dorian serious at left_char
             dorian "Then there will be no dunking."
 
             "The crowd booed, their shouts becoming increasingly hostile. Vasily looked at me, his face an odd mix of amusement and disbelief."
 
+            hide herald
+            show vasily alt_think at right_char with Dissolve(0.2)
             vasily "You really know how to ruin a celebration, Dorian. This is Mjollian culture."
 
             "I ignored him and turned away, my eyes meeting Svante's for a brief moment."
 
+            hide vasily
+            show svante alt_base at right_char with Dissolve(0.2)
             svante "I… t-thank you… I—"
+            hide svante
 
+            show male_guard at right_char with Dissolve(0.2)
             male_guard "Shut up, all of you, mutts!"
 
-            # PDF p81
+            hide male_guard
+            show kristin_normal at right_char with Dissolve(0.2)
             kristin "Brother!"
-            svante  "Kristin!"
-            "Boy aldorith: Wait, so does that mean…"
-            svante  "Thank you…"
+
+            hide kristin_normal
+            show svante normal_happy at right_char with Dissolve(0.2)
+            svante "Kristin!"
+            hide svante
+
+            show boy_ald_normal at right_flip with Dissolve(0.2)
+            boy_ald "Wait, so does that mean…"
+            hide boy_ald_normal
+
+            show svante normal_base at right_char with Dissolve(0.2)
+            svante "Thank you…"
 
             "Svante, though shivering, straightened his posture slightly, his violet eyes locked onto me until he is escorted out by the guards."
+            hide svante
 
+            show herald at right_char with Dissolve(0.2)
             herald "Well… There you have it, folks. No first shot has been made. For the first time ever, we will be cancelling today's dunking festivities."
-
+            hide herald
     # Both branches converge — then the Frost Oni attack begins
     jump ch2_frost_oni
 
@@ -1411,137 +1588,185 @@ label ch2_ceremony:
 # ICE tracker accumulates on wrong answers.
 # If ice_tracker >= 2 during D6's wrong branch -> GAME OVER.
 # =============================================================================
-
 label ch2_frost_oni:
 
     stop audio fadeout 1.0   # Stop crowd ambient
 
-    # PDF p81
+    "As other festive activities continued, I felt a sudden wave of unease."
     "The ground beneath us trembled violently, cutting through the crowd's laughter like a blade. The quake was sudden, jolting everyone out of their revelry."
 
-    "Man 3: Ahhh!!"
+    man_3 "Ahhh!!"
 
     "The herald stumbled forward, gripping the edge of the dunk tank for support, his face pale with terror."
 
+    show herald at right_char with Dissolve(0.2)
     herald "What… what is happening?!"
+    hide herald
 
-    "Before anyone could answer, a bone-chilling wind swept through the square. The air seemed to freeze in place, heavy and sharp like needles against the skin. Then, out of the frost-laden mist, they appeared."
-
-    play sound sfx_ice_crack                    # PLACEHOLDER — ice crack SFX
+    "Before anyone could answer, a bone-chilling wind swept through the square. The air seemed to freeze in place, heavy and sharp like needles against the skin."
+    "Then, out of the frost-laden mist, they appeared."
+    
+    # TODO: add sfx
+    # play sound sfx_ice_crack                    # PLACEHOLDER — ice crack SFX
 
     # CG: Frost Oni emerging from the mist
-    scene cg_frost_oni_entrance with shock_cut  # PLACEHOLDER — cg_frost_oni_entrance
-    pause 1.0
-    scene bg_mjoll_square_battle with dissolve  # PLACEHOLDER — square mid-battle bg
+    scene bg_mjoll_blizzard with shock_cut
 
-    play music ost_frost_oni_battle fadein 0.5  # PLACEHOLDER — Frost Oni battle theme
-
+    # play music ost_frost_oni_battle fadein 0.5  # PLACEHOLDER — Frost Oni battle theme
     "Towering figures, their forms jagged and crystalline, emerged from the haze. Beings of ice, emanating an eerie glow. Long, flowing tendrils of frost extended from their limbs, crackling as they moved. They carried weapons of ice—curved swords and long spears."
 
     frost_oni "*Crackling sounds*"
 
-    "Man 2: W-What are those things?!"
-    "Woman 1: D-Demons! Demons!"
+    man_2 "W-What are those things?!"
+    woman_1 "D-Demons! Demons!"
 
     "Without warning, one of them raised its spear and hurled it into the crowd. It struck a man through the chest, freezing him solid where he stood."
     "Another slashed its blade across a fleeing woman, leaving behind a trail of ice that consumed her body in seconds."
 
-    "Woman 1: Ahhh!!"
-    "Man 3: Run!! Run!!"
+    woman_1 "Ahhh!!"
+    man_3 "Run!! Run!!"
 
     # PDF p82
     "The herald tried to regain control, his voice breaking as he shouted."
 
+    show herald at center_char with Dissolve(0.2)
     herald "Remain calm! Guards, come quick! P-Protect—"
 
     "An ice being surged forward, impaling him with its spear."
 
     herald "Ahhh!! *dying sounds*"
+    hide herald with Dissolve(0.5)
 
     "His words died in his throat, his body encased in frost before shattering into pieces."
 
+    show frost_oni at right_char with Dissolve(0.2)
     frost_oni "Graaaaa!!"
 
-    "The dunk tank was their next target. One of the creatures slammed its massive fist against the frame, shattering it instantly. The water inside spilled out, freezing as it hit the ground. The aldoriths screamed, scattering as the ice beings turned their attention to them."
+    "The dunk tank was their next target. One of the creatures slammed its massive fist against the frame, shattering it instantly. The water inside spilled out, freezing as it hit the ground."
+    "The aldoriths screamed, scattering as the ice beings turned their attention to them."
+    hide frost_oni
 
+    show kristin_normal at left_char with Dissolve(0.2)
     kristin "Brother! Svante! Run!"
-    svante  "Let's get out of here, Kristin!"
+
+    show svante normal_angry at right_char with Dissolve(0.2)
+    svante "Let's get out of here, Kristin!"
 
     "I could see him hesitate, his fists clenching, but he eventually turned and fled with the others."
 
+    hide kristin_normal
+    hide svante
+
+    show dorian serious at left_char
+    show vasily alt_normal at right_char
+    with Dissolve(0.2)
+
     vasily "What in Tetrad's name are these?"
+
+    show dorian dragon_eyes at left_char
     dorian "I don't know."
 
-    "I raised my hands, channeling earth and wind. The ground around me shifted, sharp pillars of stone erupting to block the ice beings' path. I followed up with a gust of wind, sending shards of debris flying toward them."
+    "I raised my hands, channeling earth and wind. The ground around me shifted, sharp pillars of stone erupting to block the ice beings' path."
+    "I followed up with a gust of wind, sending shards of debris flying toward them."
 
-    play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
+    # play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
 
+    show vasily alt_aggressive at right_char
     vasily "Dorian, we need to keep them away from the civilians!"
 
-    "The ice beings seemed unfazed by the wind and stone at first, their bodies regenerating as frost crept over the damage. I clenched my fists, slamming a foot into the ground to create another barrier of earth between them and the survivors."
-    "One of the creatures turned its glowing eyes on me, its spear raised to strike. Vasily stepped forward, blasting it with a beam of light magic. The creature stumbled back, cracks forming in its icy surface."
+    "The ice beings seemed unfazed by the wind and stone at first, their bodies regenerating as frost crept over the damage."
+    "I clenched my fists, slamming a foot into the ground to create another barrier of earth between them and the survivors."
+    "One of the creatures turned its glowing eyes on me, its spear raised to strike."
+    scene cg_blindinglight with shock_cut
+    scene bg_mjoll_blizzard with Dissolve(1)
+    "Vasily stepped forward, blasting it with a beam of light magic. The creature stumbled back, cracks forming in its icy surface."
 
+    show vasily alt_savage at right_char with Dissolve(0.2)
     vasily "They're not invincible! Dorian, we need to hit them harder!"
 
+    $ renpy.save("quick-1")
+    show dorian serious at left_char with Dissolve(0.2)
     "I nodded, summoning a whirlwind of debris and stone to batter another creature. The crowd was in chaos, but some of the people were starting to flee toward safety."
     "The ice beings let out a bone-chilling screech, their forms twisting as they began to converge on us. My heart pounded, but I stood my ground."
+    hide vasily
 
+    show dorian serious at left_char 
+    show frost_oni at right_char
+    with Dissolve(0.2)
     frost_oni "Graaaaa!!"
 
-    # PDF p82-83
     "One of the creatures ran towards me, its icy breath misting the air as it raised its massive spear toward me. It would be difficult for me to physically dodge the spear."
-
-    play sound sfx_heartbeat loop
+    # play sound sfx_heartbeat loop
 
     # =====================================================================
     # D4 — TIMED QTC: Frost Spear (wind = safe / dodge = +ICE)
     # PDF p83
     # =====================================================================
-
+    $ _choice_timeout = 5.0
     menu:
-
         "Use wind to deflect the spear.":          # CORRECT — no ICE
+            $ _choice_timeout = 0
             $ ch2_qtc4 = "wind"
             stop sound
 
             play sound sfx_wind_blast           # PLACEHOLDER
-
+            show dorian dragon_eyes at left_char
             "I summoned a powerful gust of wind just in time, the spear flying off course and shattering against the ground. The ice being let out an enraged screech, its glowing eyes locked on me."
 
             frost_oni "Graaaaa!!"
 
         "Dodge to the side.":                      # WRONG — +1 ICE
+            $ _choice_timeout = 0
             $ ch2_qtc4 = "dodge"
             $ ice_tracker += 1
             stop sound
-
+            show dorian angry at left_char
             "I tried to move, but the spear grazed my side, leaving a sharp, stinging pain as frost crept along the wound."
 
+            if ice_tracker == 1:
+                show dorian angry at left_char_ice_1 with Dissolve(0.7)
+                show frost_masked_angry at frost_overlay_1
+            elif ice_tracker == 2:
+                show dorian angry at left_char_ice_2
+                show frost_masked_angry at frost_overlay_2
+            elif ice_tracker >= 3:
+                show dorian angry at left_char_ice_3
+                show frost_masked_angry at frost_overlay_3
+        
+            # TODO: add freezing ice sfx
             dorian "Ahhh!!"
+            hide frost_oni
+            show vasily alt_aggressive at right_char with Dissolve(0.2)
             vasily "Dorian!"
+            hide vasily
+            show frost_oni at right_char
             frost_oni "Graaaaa!!"
 
-    # D4 converge — second creature attacks — PDF p83
-    play sound sfx_heartbeat loop
-
+    # TODO: fix sfx
+    # play sound sfx_heartbeat loop
+    show dorian angry at left_char
     "Another creature surged forward, its clawed hand reaching for Vasily. He fired a beam of light magic, but it was too fast, dodging the attack. Its focus turned to me."
 
     frost_oni "Graaaaa!"
+    hide frost_oni
+    show vasily alt_mad at right_char with Dissolve(0.2)
     vasily    "Dorian! It's after you!"
 
     # =====================================================================
     # D5 — TIMED QTC: Ice Claws (wind = +ICE / earthen wall = safe)
-    # PDF p83-84
     # =====================================================================
-
+    $ _choice_timeout = 5.0
     menu:
-
         "Try to blast it with wind to push it back.":  # WRONG — +1 ICE
+            $ _choice_timeout = 0
             $ ch2_qtc5 = "wind"
             $ ice_tracker += 1
             stop sound
 
-            "I sent a gust of wind toward it, but it barely slowed the creature down. Its icy claws raked across my arm, freezing my flesh. I bit back a scream, but the pain was almost too much."
+            "I sent a gust of wind toward it, but it barely slowed the creature down. Its icy claws raked across my arm, freezing my flesh."
+            "I bit back a scream, but the pain was almost too much."
+
+            
 
             dorian "Ahhh!! Crap!!"
             vasily "Dorian!!"
@@ -1549,6 +1774,7 @@ label ch2_frost_oni:
             "Vasily launched a blast of light towards the being, shattering it completely."
 
         "Raise an earthen wall to block its path.":    # CORRECT — no ICE
+            $ _choice_timeout = 0
             $ ch2_qtc5 = "wall"
             stop sound
 
@@ -1557,55 +1783,92 @@ label ch2_frost_oni:
             "I slammed my hands to the ground, channeling the earth to rise in a jagged wall between us. The creature collided with it, shards of ice breaking off its body."
 
             vasily "Take this!"
-
+            scene cg_blindinglight with shock_cut
             "Vasily fired another blast, shattering part of its torso."
+            scene bg_mjoll_blizzard with Dissolve(1)
+    # play sound sfx_heartbeat loop
 
-    # D5 converge — the last Frost Oni — PDF p84
-    play sound sfx_heartbeat loop
+    "The last ice being stood in the middle of the square, frost swirling around it as it prepared a devastating attack."
+    "A frost cloud. I could feel the temperature drop further, the cold biting into my very core."
 
-    "The last ice being stood in the middle of the square, frost swirling around it as it prepared a devastating attack. A frost cloud. I could feel the temperature drop further, the cold biting into my very core."
+    if ice_tracker == 1:
+        show dorian serious at left_char_ice_1
+        show frost_masked_angry at frost_overlay_1
+    elif ice_tracker == 2:
+        show dorian serious at left_char_ice_2 with Dissolve(0.7)
+        show frost_masked_angry at frost_overlay_2
+    elif ice_tracker >= 3:
+        show dorian serious at left_char_ice_3 with Dissolve(0.7)
+        show frost_masked_angry at frost_overlay_3
+    else: 
+        show dorian serious at left_char
 
+    show vasily neutral at right_char
+    with Dissolve(0.2)
     vasily "Brr… It's getting colder…"
+    hide vasily
 
-    # show babala at right with dissolve         # PLACEHOLDER — Babala sprite (hobbling in)
-
+    show babala at right_char with Dissolve(0.2)       
     babala "Hey! Do you boys need some help? I can help you!"
 
     # =====================================================================
     # D6 — TIMED QTC: Frost Cloud (wind + Babala = safe / earth spike = +ICE)
     # If ice_tracker >= 2 after wrong answer -> GAME OVER
-    # PDF p84-85
     # =====================================================================
-
+    $ _choice_timeout = 5.0
     menu:
-
-        "Use wind to disperse the frost before it gathers. Allow Babala to help.":  # CORRECT — no ICE
+        "Use wind to disperse the frost before it gathers. Allow Babala to help.":  # CORRECT — no ICE 
+            $ _choice_timeout = 0
             $ ch2_qtc6 = "wind_babala"
             stop sound
 
-            play sound sfx_wind_blast           # PLACEHOLDER
-
+            # play sound sfx_wind_blast           # PLACEHOLDER
+            hide babala
+            show dorian dragon_eyes at left_char
+            show frost_oni at right_char 
+            with Dissolve(0.2)
             "I called on the wind, forcing it into a violent cyclone that tore through the frost cloud. The creature let out a shriek of frustration as its attack dissipated, leaving it vulnerable."
 
             dorian "Now!"
-            babala "*gibberish* Taste the wrath of the Weaver!"
+            hide frost_oni
+            show babala at right_char with Dissolve(0.2)    
+            babala "*gibberish* Taste the wrath of the Weaver!"   
 
-            play sound sfx_vine_attack          # PLACEHOLDER — vine attack SFX
-
+            # play sound sfx_vine_attack          # PLACEHOLDER — vine attack SFX
+            hide babala
+            show frost_oni at right_char with Dissolve(0.2)
             "All of a sudden, vines surrounded the ice being and smashed it on its vulnerable spot."
+            hide frost_oni
 
+            show vasily neutral at right_char
+            show dorian serious at left_char
+            with Dissolve(0.2)
             vasily "Wow."
+            hide vasily
+            show babala at right_char with Dissolve(0.2)    
             babala "You're welcome, Dragon."
 
         "Channel earth to create a spike and impale it. Don't allow her.":   # WRONG — +1 ICE
+            $ _choice_timeout = 0
             $ ch2_qtc6 = "spike"
             $ ice_tracker += 1
             stop sound
 
-            "I tried to channel the earth beneath it, but my footing slipped on the icy ground. The frost cloud thickened, and the creature unleashed its attack, shards of ice ripping through the square."
-
+            show dorian dragon_eyes at left_char
+            "I tried to channel the earth beneath it, but my footing slipped on the icy ground."
+            "The frost cloud thickened, and the creature unleashed its attack, shards of ice ripping through the square."
+            if ice_tracker == 1:
+                show dorian angry at left_char_ice_1
+                show frost_masked_angry at frost_overlay_1
+            elif ice_tracker == 2:
+                show dorian angry at left_char_ice_2
+                show frost_masked_angry at frost_overlay_2
+            elif ice_tracker >= 3:
+                show dorian angry at left_char_ice_3 with Dissolve(0.7)
+                show frost_masked_angry at frost_overlay_3
             dorian "Gaaah!"
             babala "Dragon!"
+            hide babala
 
     # -----------------------------------------------------------------------
     # POST-QTC CONVERGENCE — ICE CHECK
@@ -1617,65 +1880,87 @@ label ch2_frost_oni:
         # GAME OVER — Dorian is frozen solid
         stop music fadeout 1.0
         stop sound
-
+        hide babala
+        show dorian sad at left_char
+        show vasily neutral at right_char
+        with Dissolve(0.2)
         vasily "D-Dorian! Your skin!"
+
         dorian "C-Cold…"
 
         "I fell to my knees, frost spreading across my body as the ice takes hold of me. The cold consumed me, dragging me into darkness."
-
+        hide vasily
+        show babala at right_char with Dissolve(0.2)    
         babala "Dragon! No!"
+        hide babala
+        show vasily alt_mad at right_char with Dissolve(0.2)
         vasily "Dorian! No! Dorian!"
 
         jump game_over_freeze
 
     else:
 
-        # VICTORY — Frost Oni defeated — PDF p85-86
         stop music fadeout 2.0
         stop sound
-
+        hide frost_masked_angry with Dissolve(0.6)
         "The ice beings were shattered, their remains scattered across the square. Vasily panted beside me, his magic dimming as exhaustion took hold."
+        hide babala
 
+        show vasily alt_normal at right_char
         vasily "You did it, Dorian. You saved them… or what's left of them."
 
+        show dorian normal_alt_calm at left_char
         dorian "What are those things?"
+        show dorian serious at left_char
 
-        "The guards approached us, their faces pale and frantic. One of them leaned in and whispered something hurriedly to Vasily. His usual calm demeanor cracked as his eyes widened in shock."
+        "The guards approached us, their faces pale and frantic. One of them leaned in and whispered something hurriedly to Vasily."
+        "His usual calm demeanor cracked as his eyes widened in shock."
 
+        show vasily alt_aggressive at right_char
         vasily "W-What?! Are you certain? Tetrad above…"
 
         "The guard nodded, and Vasily swore under his breath. He grabbed a pouch from his belt and thrust it into my hands, his movements rushed."
 
+        show vasily alt_normal at right_char
         vasily "Here. Your payment. I… I need to go. I'll find you later. Stay safe, Dorian."
 
-        "He didn't wait for a reply. Before I could ask what was wrong, he spun on his heel and bolted toward the castle, the guards following closely behind. I stood there, clutching the pouch."
+        "He didn't wait for a reply. Before I could ask what was wrong, he spun on his heel and bolted toward the castle, the guards following closely behind."
+        "I stood there, clutching the pouch."
+        hide vasily
 
-        # PDF p86
         "The remaining guards approached cautiously, inspecting the shattered remnants of the ice beings scattered across the bloodied square."
 
+        show babala at right_char with Dissolve(0.2)
         babala "This… This is no ordinary attack. The Weaver's threads are tightening around us."
 
         "She bent low to inspect one of the larger shards of ice, her fingers brushing the jagged surface. A faint glow pulsed under her touch."
 
         babala "Yes… the pieces of the Weaver's plan are in motion. You, Dragon of Gale, must steel yourself. For the storms that come will not spare anyone—not kings, not queens, not even you."
 
+        show dorian normal_alt_annoyed at left_char
         dorian "The Weaver? What does this have to do with the gods?"
+
         babala "You will find out in due time. For now, my work for you is already done."
 
         "She straightened—well, as much as her hunched back would allow—and let out a dry, croaking laugh. Then, as she turned to shuffle away, her back cracked audibly."
 
         babala "Ahhh!"
+
+        show dorian normal_alt_neutral at left_char
         dorian "A-Are you alright?"
 
         "She waved me off, scowling."
 
+        show babala at right_char
         babala "Tch! Damned Weaver and your threads! Snagged me good, you meddling hag!"
 
         "She spat on the ground, muttering curses under her breath."
         "She shuffled back toward her tent, her curses growing louder with each step. The guards gave her a wide berth, whispering among themselves."
         "I watched her go, a strange unease settling in my chest."
+        hide babala
         "I looked back at the shattered remains of the ice beings, their glow still faintly pulsing in the twilight."
 
+        show dorian normal_alt_tense at left_char
         dorian "What are these monsters?"
 
         jump ch2_common_end
@@ -1687,10 +1972,9 @@ label ch2_frost_oni:
 # Only reached from the Frost Oni ICE tracker check.
 # PDF page 85.
 # =============================================================================
-
 label game_over_freeze:
 
-    scene cg_dorian_frozen with fade            # PLACEHOLDER — cg_dorian_frozen (frost spreading)
+    scene black with fade            # PLACEHOLDER — cg_dorian_frozen (frost spreading)
     stop music fadeout 1.0
     stop audio
 
@@ -1703,21 +1987,11 @@ label game_over_freeze:
 
     scene cg_black with fade                    # PLACEHOLDER — pure black
 
-    pause 1.0
-
-    "Reload your last save and take fewer hits from the Frost Oni."
-
-    pause 1.0
-
-    return   # Returns to Ren'Py main menu
-
+    jump game_over
 
 # =============================================================================
 # SECTION 15: LABEL CH2_COMMON_END — Post-Battle / Yuxuan Letter (D3)
 # =============================================================================
-# PDF pages 86-91.
-# =============================================================================
-
 label ch2_common_end:
 
     # -------------------------------------------------------------------------
@@ -1730,29 +2004,33 @@ label ch2_common_end:
     pause 1.0
 
     # PDF p86
-    # [COMMENT: bg_mjoll_square_blizzard — abandoned square, snow-covered, eerie silence]
-    scene bg_mjoll_square_blizzard with fade    # PLACEHOLDER — abandoned snowy square
+    # [COMMENT: bg_mjoll_blizzard — abandoned square, snow-covered, eerie silence]
+    scene bg_mjoll_blizzard with fade    # PLACEHOLDER — abandoned snowy square
 
-    play music ost_blizzard_days fadein 3.0     # PLACEHOLDER — desolate days-after theme
-    play audio amb_mjoll_wind loop fadein 2.0   # PLACEHOLDER — wind ambient
+    # play music ost_blizzard_days fadein 3.0     # PLACEHOLDER — desolate days-after theme
+    # play audio amb_mjoll_wind loop fadein 2.0   # PLACEHOLDER — wind ambient
 
     "The days passed in a haze. Five, maybe six—I've lost count."
-    "The silence from the castle stretched on, unnerving in its emptiness. No Vasily, no summons, no word. Not even a whisper of gold. Only rumors and idle gossip."
+    "The silence from the castle stretched on, unnerving in its emptiness."
+    "No Vasily, no summons, no word. Not even a whisper of gold. Only rumors and idle gossip."
+    "They said the ice creatures had come from inside the castle. From someone within. I didn't care."
+    "Let them chase their shadows and whisper their theories. It wasn't my concern. My only concern was survival—and, when I could afford it, distraction."
 
-    # PDF p87
-    "They said the ice creatures had come from inside the castle. From someone within. I didn't care. Let them chase their shadows and whisper their theories. It wasn't my concern. My only concern was survival—and, when I could afford it, distraction."
-
-    # [COMMENT: bg_mjoll_square_blizzard — snow falling heavier than before, vendors complaining]
+    # [COMMENT: bg_mjoll_blizzard — snow falling heavier than before, vendors complaining]
+    # add effects here
     "The biting chill nipped at my skin as I trudged back to my cave. Strangely, the snow was falling heavier than before these past few days."
     "The cold didn't bother me much—it never had. Maybe it was the fire channeling power coursing through me. But for some people, according to the vendors, it's become unbearable."
     "The pouch of gold Vasily had thrust into my hands days ago had been spent sparingly, stretched to buy food and small comforts."
 
-    scene dorians_cave_off with dissolve     # PLACEHOLDER — cave at night, fire low
+    scene dorians_cave_off with dissolve(0.8)     # PLACEHOLDER — cave at night, fire low
 
     stop audio fadeout 1.0
     play audio amb_cave_fire loop fadein 2.0    # PLACEHOLDER — fire crackle ambient
 
-    # [COMMENT: the fire crackled softly]
+    show dorian sad at left_char with Dissolve(0.2)
+
+    # [COMMENT: the fire crackled softly] 
+    # TODO: add sfx
     dorian "Elara… Kids… I'm home."
 
     elara  "…"
@@ -1794,27 +2072,22 @@ label ch2_common_end:
     "She nodded, her smile unwavering."
     "I walked to the ledge. There, tucked beneath a loose rock, was an envelope I hadn't noticed before."
 
-    # PDF p87-88
-    "It was an elegant thing, crisp and ivory-colored, sealed with an intricate red-and-gold emblem. There was a mark with a picture of a girl and the words: Cheng Industries."
+    "It was an elegant thing, crisp and ivory-colored, sealed with an intricate red-and-gold emblem."
+    "There was a mark with a picture of a girl and the words: Cheng Industries."
     "The Tianho seal gleamed faintly in the dim light, the dragon motif coiled with clouds and lotus blossoms."
-
-    scene dorians_cave_off with dissolve     # Return to cave
 
     "I turned the envelope over, running my fingers across the embossed edges before opening it carefully."
     "Inside was a letter, written in neat, flowing characters."
 
-    # PDF p88-89 — Yuxuan's letter read as narration blocks
-    "Dearest Paladin Dorian,"
-    "I hope this letter finds you well, though I fear it may be too long since we last spoke. I often think of the day you saved me from the tragedy that befell Tianho. Without your bravery, I would not be alive to write these words today. For that, I am eternally grateful. For the Prosperity Dragon, and to you."
-    "Word has reached me that you were seen in Mjoll, alive and—dare I hope—well. Knowing this fills my heart with relief. You've been on my mind these past years, and I've often wondered how you've managed, given the burdens you carry."
-    "Please, do not hesitate to reach out if ever you are in need of anything. Cheng Industries owes you a debt that cannot be repaid with gold alone. Your kindness and courage have left an indelible mark on my life."
-    "If you are interested, I would like to invite you to have tea with me. The city may have changed, but my doors will always remain open to you. Perhaps I can repay a fraction of what you have given me, even if it's only with the comfort of good tea and company."
-    "Prosperity Dragon willing, we will see again."
-    "With deepest gratitude and fondness, Cheng Yuxuan."
+    hide dorian
+    
+    # TODO: play paper sfx
+    call screen cheng_letter with Dissolve(0.9)
+
+    show dorian serious at left_char with Dissolve(0.2)
 
     dorian "Yuxuan… Cheng Yuxuan… I don't recall anyone with that name."
 
-    # PDF p89
     "The name didn't immediately strike a chord, but I felt like I heard it from somewhere before."
 
     elara  "You saved him from the fire, remember?"
@@ -1824,10 +2097,16 @@ label ch2_common_end:
     "I sighed, folding the letter carefully and setting it aside."
 
     elara  "You should write back to him."
+
+    show dorian sad at left_char
     dorian "I don't have time for this, my heart. You know that."
+
     emily  "Don't lie, Dad. We know you're not doing anything important. You're just sitting here, talking to us."
+
     dorian "But—"
+
     elara  "Oh, don't be stubborn. Writing back won't kill you. Besides, it might be good to talk to someone new for a change. You can't spend all your time with Vasily—or just us."
+
     sarah  "Yeah, dad! Think of it as my birthday gift!"
     daniel "My late birthday gift too, dad!"
     emily  "Mine too!"
@@ -1835,18 +2114,16 @@ label ch2_common_end:
 
     "I sighed again."
 
+    show dorian sleepware_serious at left_char
     dorian "Fine…"
 
-    # PDF p90
     "I reached for the old pen Vasily had given me weeks ago and pulled out a sheet of parchment. Sitting down at the rickety wooden table, the glow of the fire flickering on the cave walls, I dipped the pen in ink. What should I write, though?"
 
     # =========================================================================
     # D3 — WRITE BACK TO YUXUAN: Warm or Distant response
-    # PDF p90
     # =========================================================================
 
     menu:
-
         "Write a warm response.":
             $ ch2_letter_choice = "warm"
             $ yuxuan_affection += 1             # +1 Yuxuan affection tracker

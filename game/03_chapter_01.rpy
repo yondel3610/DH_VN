@@ -279,10 +279,6 @@ label ch1_city:
             $ city_visited_zhong = True
             call ch1_city_zhong from _call_ch1_city_zhong
 
-        # "Head to the castle — the ceremony is soon.":
-        #     jump ch1_common_fireworks
-
-
 # =============================================================================
 # SECTION 7: CITY SUB-SCENES
 # Each is a 'label' called from ch1_city. They end with 'return'
@@ -1367,7 +1363,7 @@ label ch1_auditions:
             voice audio.cyrus_ch1_line20
             cyrus "Siding with those disgusting lunatics… pft! We shall not speak of this again, Dorian. Even the thought of them disgusts me."
 
-            "I turn to Cyrus, my voice low and"
+            "I turn to Cyrus, my voice low and firm."
 
             show dorian neutral at left_char with Dissolve(0.2)
             dorian "Fair enough. But don't mistake my actions for siding with anyone, Cyrus. I act for justice, not for prejudice."
@@ -1889,7 +1885,7 @@ label ch1_elara_chat_common:
     "She steps closer — the blood drips from her fingertips onto the floor, the crimson pooling and spreading unnaturally fast."
     olympia "DO NOT TALLY!"
 
-    camera at bigshake(5.0, rate=0.020, time=0.06), shattered_glass_transform
+    camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
     with shattered_glass_transition
     hide olympia
     camera

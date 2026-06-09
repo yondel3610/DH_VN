@@ -1,7 +1,11 @@
+01_bg_cg.rpy
+01_bg_cg.rpyc
 01_characters.rpy
 01_characters.rpyc
 01_game_vars.rpy
 01_game_vars.rpyc
+01_shattered_glass.rpy
+01_shattered_glass.rpyc
 01_sprites.rpy
 01_sprites.rpyc
 01_transforms.rpy
@@ -3172,6 +3176,9 @@ gui\slider\vertical_hover_bar.png
 gui\slider\vertical_hover_thumb.png
 gui\slider\vertical_idle_bar.png
 gui\slider\vertical_idle_thumb.png
+images\frost_gradient.png
+images\shattered_glass_bg.png
+images\shattered_glass_over.png
 images\Assets\Untitled186.jpg
 images\Assets\Background\Cheng industries bunk - lights off.png
 images\Assets\Background\Cheng industries bunk - lights on.png
@@ -3202,6 +3209,7 @@ images\Assets\Background\Tianho Cemetery Day.png
 images\Assets\Background\Tianho Food Stalls on fire.png
 images\Assets\Background\Tianho Food Stalls.png
 images\Assets\Background\Tianho Graveyard Afternoon Ent.png
+images\Assets\Background\Tianho Morning.png
 images\Assets\Background\Tianho in fire.jpg
 images\Assets\Background\Underground - Magnus.jpg
 images\Assets\Background\Underground Lights Off (1).png
@@ -3210,10 +3218,9 @@ images\Assets\Background\Underground.png
 images\Assets\Background\Untitled203_20251001031452.png
 images\Assets\Background\Untitled203_20251001050021.png
 images\Assets\Background\Untitled203_20251007140552.png
-images\Assets\Background\Untitled205_20251030152719.png
 images\Assets\Background\Yuxuan_s lab - Hot spring.png
-images\Assets\Background\bg_tianho_dorians_room.png
-images\Assets\Background\bg_tianho_dorians_room_off.png
+images\Assets\Background\dorians_cave_off.png
+images\Assets\Background\dorians_cave_on.png
 images\Assets\Background\throne.png
 images\Assets\Background\tianho_cemetery_morning.png
 images\Assets\Background\yuxuan manor dimmed.png
@@ -3576,17 +3583,16 @@ images\Assets\Illustrations\7 - Taotie scratches Feng_s eye.png
 images\Assets\Illustrations\8 - Yaoguai King kills Elara.jpeg
 images\Assets\Illustrations\9 -Quiongqi Fight.png
 images\cg\cg_black.png
+images\cg\cg_blindinglight_vasily.jpg
 libs\libs.txt
 saves\1-1-1-LT1.save
 saves\1-1-2-LT1.save
-saves\1-1-4-LT1.save
-saves\1-23-LT1.save
-saves\1-24-LT1.save
-saves\_reload-1-LT1.save
+saves\1-1-LT1.save
+saves\1-2-LT1.save
 saves\_reload-2-LT1.save
 saves\_tracesave-1-LT1.save
+saves\_tracesave-10-LT1.save
 saves\_tracesave-2-LT1.save
-saves\_tracesave-3-LT1.save
 saves\_tracesave-4-LT1.save
 saves\_tracesave-5-LT1.save
 saves\_tracesave-6-LT1.save
@@ -3606,6 +3612,14 @@ saves\auto-9-LT1.save
 saves\navigation.json
 saves\persistent
 saves\quick-1-LT1.save
+saves\quick-2-LT1.save
+saves\quick-3-LT1.save
+saves\quick-4-LT1.save
+saves\quick-5-LT1.save
+saves\quick-6-LT1.save
+saves\quick-7-LT1.save
+saves\quick-8-LT1.save
+saves\quick-q1-LT1.save
 saves\quick-quick-1-LT1.save
 tl\None\common.rpym
 tl\None\common.rpymc

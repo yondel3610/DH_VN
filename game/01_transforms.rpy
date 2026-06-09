@@ -166,3 +166,86 @@ transform silhouette_reveal:
     zoom 1.17
     yoffset 40
     ease 3 matrixcolor IdentityMatrix()
+
+# =========================================
+# ICE OVERLAY (CH2 frost oni fight)
+# =========================================
+# transform left_char_frost:
+#     xalign -0.12
+#     yalign 0.3
+#     zoom 1.17
+#     yoffset 40
+#     alpha 0.0
+#     linear 3.0 alpha 0.
+
+transform frost_overlay_1:
+    xalign -0.12
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    alpha 0.0
+    linear 2.0 alpha 0.35
+
+transform frost_overlay_2:
+    xalign -0.12
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    alpha 0.0
+    linear 2.0 alpha 0.65
+
+transform frost_overlay_3:
+    xalign -0.12
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    alpha 0.0
+    linear 2.0 alpha 0.85
+
+# transform left_char_ice:
+#     xalign -0.13
+#     yalign 0.3
+#     zoom 1.17
+#     yoffset 40
+#     matrixcolor SaturationMatrix(1.0) * TintMatrix("#ffffff")
+#     linear 3.0 matrixcolor SaturationMatrix(0.3) * TintMatrix("#bce0f0")
+
+transform left_char_ice_1:
+    xalign -0.13
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    matrixcolor SaturationMatrix(0.85) * TintMatrix("#d4e8f0")
+    linear 2.0 matrixcolor SaturationMatrix(0.85) * TintMatrix("#d4e8f0")
+
+transform left_char_ice_2:
+    xalign -0.13
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    matrixcolor SaturationMatrix(0.55) * TintMatrix("#bce0f0")
+    linear 2.0 matrixcolor SaturationMatrix(0.55) * TintMatrix("#bce0f0")
+
+transform left_char_ice_3:
+    xalign -0.13
+    yalign 0.3
+    zoom 1.17
+    yoffset 40
+    matrixcolor SaturationMatrix(0.3) * TintMatrix("#90c8e0")
+    linear 2.0 matrixcolor SaturationMatrix(0.3) * TintMatrix("#90c8e0")
+
+
+# FROST MASKED OVERLAYS — Dorian silhouette-clipped frost
+image frost_masked_angry:
+    AlphaMask(
+        Transform("images/frost_gradient.png", size=(1897, 2564), fit="contain"),
+        "images/Assets/Character Sprites/Dorian/Normal/dorian-emotion suit angry.png"
+    )
+    fit "contain"
+
+image frost_masked_sad:
+    AlphaMask(
+        Transform("images/frost_gradient.png", size=(1897, 2564), fit="contain"),
+        "images/Assets/Character Sprites/Dorian/Normal/dorian-emotion suit sad.png"
+    )
+    fit "contain"

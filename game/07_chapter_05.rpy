@@ -3155,7 +3155,7 @@ label ch5_nightmare:
 
     "I gasped—choking, drowning—memories crashing over me."
 
-    "Elara: Dorian! No!"
+    elara "Dorian! No!"
 
     "I turned—her face."
     "Terror."
@@ -3165,12 +3165,12 @@ label ch5_nightmare:
 
     dorian "Elara?! Elara! No!!"
 
-    "Elara: Dorian! Please don't come! Whatever you do—!"
+    elara "Dorian! Please don't come! Whatever you do—!"
 
     "The chains around her wrists tightened."
     "A cry—small, fragile."
 
-    "Lucas: Daddy! Daddy! Save us!"
+    lucas "Daddy! Daddy! Save us!"
 
     "A surge of fire roared in my veins."
     "I lunged forward—only for chains to slam around my limbs, dragging me down."
@@ -3182,7 +3182,7 @@ label ch5_nightmare:
     "His laughter warped—a monstrous, guttural sound ripping through the void."
     "A shriek—Emily."
 
-    "Emily: Ahhh!! Daddy!"
+    emily "Ahhh!! Daddy!"
 
     "I thrashed."
     "Chains dug into my flesh."

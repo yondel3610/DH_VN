@@ -630,13 +630,13 @@ screen game_over_screen():
                 QuickSave(message="Saved to Quick Save", newest=True),
                 Function(renpy.full_restart)
             ]
-
-        textbutton "Debug: Check Slots":
-            xalign 0.5
-            style "game_over_button"
-            action [
-                Function(debug_check_slots)
-            ]
+        # TODO: remove before release
+        # textbutton "Debug: Check Slots":
+        #     xalign 0.5
+        #     style "game_over_button"
+        #     action [
+        #         Function(debug_check_slots)
+        #     ]
 
 style game_over_text:
     color "#ffffff"

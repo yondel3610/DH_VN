@@ -294,3 +294,28 @@ image cg_trio_in_frostcradle:
     xalign 0.5
     yalign 1.0
 
+# ==============================================================
+# ==============================================================
+#                       THE REST OF THE BG/CG
+# ==============================================================
+# ==============================================================
+
+# CG 
+image cg_kristin_death:
+    "images/Assets/Illustrations/20 - Kristin getting killed.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_elias_arrow:
+    "images/Assets/Illustrations/21 - Elias getting hit by arrow.jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_mjoll_massacre:
+    "images/Assets/Illustrations/22 - The Massacrer of Mjoll.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+

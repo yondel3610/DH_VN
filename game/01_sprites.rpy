@@ -913,6 +913,68 @@ image supply_robot base:
     At("images/Assets/Character Sprites/Supply Robot/supply robot colored v2hologram.png", sprite_highlight("supply_robot"))
     fit "contain"
 
+# =============================================================================
+# WENG - All Sprite Variants
+# =============================================================================
+image weng bathwear:
+    At("images/Assets/Character Sprites/Weng/Bathwear/weng_bathwear.png", sprite_highlight("weng"))
+    fit "contain"
+
+# ===============================
+# WENG — NORMAL
+# ===============================
+image weng angry:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base angry.png", sprite_highlight("weng"))
+    fit "contain"
+image weng happy:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base happy.png", sprite_highlight("weng"))
+    fit "contain"
+image weng nsad:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base sad.png", sprite_highlight("weng"))
+    fit "contain"
+image weng serious:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base serious.png", sprite_highlight("weng"))
+    fit "contain"
+image weng thinking:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base thinking.png", sprite_highlight("weng"))
+    fit "contain"
+image weng normal:
+    At("images/Assets/Character Sprites/Weng/Normal/weng base.png", sprite_highlight("weng"))
+    fit "contain"
+
+# ===============================
+# WENG — NORMAL ALT POSES
+# ===============================
+image weng alt_calm:
+    At("images/Assets/Character Sprites/Weng/Normal - Alternate Pose/weng newpose calm.png", sprite_highlight("weng"))
+    fit "contain"
+image weng alt_close_eyes:
+    At("images/Assets/Character Sprites/Weng/Normal - Alternate Pose/weng newpose close eyes.png", sprite_highlight("weng"))
+    fit "contain"
+image weng alt_close_eyes_nervous:
+    At("images/Assets/Character Sprites/Weng/Normal - Alternate Pose/weng newpose nervous close eyes.png", sprite_highlight("weng"))
+    fit "contain"
+image weng alt_nervous:
+    At("images/Assets/Character Sprites/Weng/Normal - Alternate Pose/weng newpose nervous.png", sprite_highlight("weng"))
+    fit "contain"
+image weng alt_base:
+    At("images/Assets/Character Sprites/Weng/Normal - Alternate Pose/weng newpose.png", sprite_highlight("weng"))
+    fit "contain"
+
+# ===============================
+# WENG — SLEEPWEAR
+# ===============================
+image weng sleepwear:
+    At("images/Assets/Character Sprites/Weng/Sleepwear/weng_sleepwear.png", sprite_highlight("weng"))
+    fit "contain"
+
+# ===============================
+# WENG — TIANHO CEREMONIAL
+# ===============================
+image weng ceremonial:
+    At("images/Assets/Character Sprites/Weng/Tianho Ceremonial/weng robe.png", sprite_highlight("weng"))
+    fit "contain"
+
 # TODO: fix file path
 # =============================================================================
 #                            OTHER CHARACTERS

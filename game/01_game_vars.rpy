@@ -38,7 +38,7 @@ default yuki_tracker         = 0
 default love_route_locked    = ""
 
 # =============================================================================
-# CITY EXPLORATION FLAGS
+# label ch2_freetime:
 # =============================================================================
 default ch2_visited_food     = False
 default ch2_visited_fortune  = False
