@@ -1,3 +1,11 @@
+# TODO: fix file paths with updated .ogg names
+# Change ch1-ch9 | ch10 audio still missing
+# example:
+# from: audio/Chapter 1/Vasily_Chapter 1/Vasily _ chapter1 _ CH1_001.ogg
+# to: audio/Chapter 1/Vasily_Chapter 1/vasily_ch1_001
+# i suggest using deepseek for this
+
+
 # ========================================================================================================
 # PROLOGUE
 # ========================================================================================================
