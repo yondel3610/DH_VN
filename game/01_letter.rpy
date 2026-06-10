@@ -2,7 +2,6 @@ screen cheng_letter():
     modal True
 
     # dissolve effect
-    on "show" action With(dissolve)
     on "hide" action With(dissolve)
 
     add "gui/chengletter_bg.jpg":

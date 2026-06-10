@@ -39,7 +39,7 @@ define man_3     = Character("Man 3",               color="#0054ca", callback=na
 define yg        = Character("Yaoguai",              color="#6c0909", callback=name_callback, cb_name="yg") #Yaoguai beast
 
 # Chapter 2
-define svante          = Character("Svante",            color="#9b59b6", callback=name_callback, cb_name="svante")  # Purple — violet-haired aldorith
+define svante          = Character("Svante",             color="#9b59b6", callback=name_callback, cb_name="svante")  # Purple — violet-haired aldorith
 define king_gustav     = Character("King Gustav",        color="#c0392b", callback=name_callback, cb_name="king_gustav")  # Crimson — hard, imperious
 define queen_ekaterina = Character("Queen Ekaterina",    color="#8e44ad", callback=name_callback, cb_name="queen_ekaterina")  # Dark violet — sharp, venomous
 define babala          = Character("Babala",             color="#27ae60", callback=name_callback, cb_name="babala")  # Green — earthy, prophetic
@@ -56,6 +56,7 @@ define male_guard      = Character("Male Guard",         color="#7f8c8d", callba
 define female_guard    = Character("Female Guard",       color="#7f8c8d", callback=name_callback, cb_name="female_guard")  # Grey — palace guard
 define frost_oni       = Character("",                   color="#5dade2", callback=name_callback, cb_name="frost_oni")  # Ice blue, no name — monster
 define qiongqi         = Character("Qiongqi",            color="#77bbe9", callback=name_callback, cb_name="qiongqi" ) # Chapter 2 intro monster
+define supply_robot    = Character("Supply Bot",         color="#17a8be", callback=name_callback, cb_name="supply_robot")
 
 # Chapter 3
 define yuki_onna      = Character("Yuki-onna",         color="#aee8f8", callback=name_callback, cb_name="yuki_onna")  # Pale ice blue — spirit form

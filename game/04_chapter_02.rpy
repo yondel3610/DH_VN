@@ -2082,7 +2082,7 @@ label ch2_common_end:
     hide dorian
     
     # TODO: play paper sfx
-    call screen cheng_letter with Dissolve(0.9)
+    call screen cheng_letter with fade
 
     show dorian serious at left_char with Dissolve(0.2)
 
@@ -2092,6 +2092,7 @@ label ch2_common_end:
 
     elara  "You saved him from the fire, remember?"
     daniel "Yeah! Remember when you lifted that beam like it was nothing? It was so cool!"
+    show dorian normal_alt_calm at left_char
 
     "I closed my eyes, the image of Tianho's flames flashing behind my eyelids. The man I saved from the burning building."
     "I sighed, folding the letter carefully and setting it aside."
@@ -2114,10 +2115,10 @@ label ch2_common_end:
 
     "I sighed again."
 
-    show dorian sleepware_serious at left_char
     dorian "Fine…"
 
-    "I reached for the old pen Vasily had given me weeks ago and pulled out a sheet of parchment. Sitting down at the rickety wooden table, the glow of the fire flickering on the cave walls, I dipped the pen in ink. What should I write, though?"
+    "I reached for the old pen Vasily had given me weeks ago and pulled out a sheet of parchment."
+    "Sitting down at the rickety wooden table, the glow of the fire flickering on the cave walls, I dipped the pen in ink. What should I write, though?"
 
     # =========================================================================
     # D3 — WRITE BACK TO YUXUAN: Warm or Distant response
@@ -2127,11 +2128,14 @@ label ch2_common_end:
         "Write a warm response.":
             $ ch2_letter_choice = "warm"
             $ yuxuan_affection += 1             # +1 Yuxuan affection tracker
-
+            show dorian normal_alt_calm at left_char
             "I sat for a moment, letting my memories of that night in Tianho run my hand. The ink bottle was nearly empty, but I managed to write carefully:"
 
+            show dorian neutral at left_char
             "Cheng Yuxuan,"
-            "It's great to know that the life I saved has grown into such a kind and successful soul. I would be honored to have tea with you and see how you've rebuilt your life. Perhaps we can trade stories—I have a few to tell myself. Thank you for your thoughtful letter. It means more to me than you know."
+            "It's great to know that the life I saved has grown into such a kind and successful soul. "
+            "I would be honored to have tea with you and see how you've rebuilt your life. Perhaps we can trade stories—I have a few to tell myself. "
+            "Thank you for your thoughtful letter. It means more to me than you know."
             "Dorian Burnham"
 
             "Lastly, I placed the address written on Yuxuan's letter. When I finished, I let the ink dry."
@@ -2143,7 +2147,7 @@ label ch2_common_end:
             $ ch2_letter_choice = "distant"
 
             "The fire crackled as I sat at the table, the pen feeling heavy in my hand. I stared at the parchment for a long moment before scrawling a short reply in quick, precise strokes."
-
+            show dorian serious at left_char
             "Cheng Yuxuan,"
             "I am glad to hear you are doing well. I don't have time for travel at the moment. Best of luck to you in Tianho."
 
@@ -2157,18 +2161,16 @@ label ch2_common_end:
             dorian "There. I fixed it. Happy?"
             elara  "You're impossible, you know that?"
 
-    # -----------------------------------------------------------------------
-    # Both letter choices converge — PDF p91
-    # -----------------------------------------------------------------------
-
+    show dorian serious at left_char
     "I folded the letter and tucked it into my pocket. I'd deliver it when I made my next trip into the city."
     "As I turned back to the warmth of the fire, I heard it—a voice calling for me from outside the cave. It was sharp, urgent."
 
-    # show messenger urgent at right             # PLACEHOLDER — Messenger sprite (out of breath)
+    show messenger at right_char with Dissolve(0.2)             # PLACEHOLDER — Messenger sprite (out of breath)
 
     messenger "Paladin Dorian! Are you there? Paladin?"
 
-    "I stood, brushing my hands against my tunic before stepping outside. A young messenger, dressed in the livery of Mjoll, stood at the edge of the rocky path leading to my home. His face was pale, his breathing uneven from the climb."
+    "I stood, brushing my hands against my tunic before stepping outside. A young messenger, dressed in the livery of Mjoll, stood at the edge of the rocky path leading to my home."
+    "His face was pale, his breathing uneven from the climb."
 
     messenger "You've been summoned to the castle immediately. The situation is… urgent."
 
@@ -2190,32 +2192,42 @@ label ch2_common_end:
 # =============================================================================
 # SECTION 16: LABEL CH2_CASTLE_BRIEFING — Assassination Mission Briefing
 # =============================================================================
-# PDF pages 91-99.
-# =============================================================================
-
 label ch2_castle_briefing:
+    scene mjoll_palace_throne with fade        # PLACEHOLDER — palace hall, aldoriths gearing up
+    # play music ost_briefing fadein 2.0          # PLACEHOLDER — tense briefing theme
 
-    # PDF p91
-    # [COMMENT: bg_mjoll_palace_hall — aldoriths huddled, gearing up for battle, torches low]
-    scene bg_mjoll_palace_hall with fade        # PLACEHOLDER — palace inner hall, aldoriths gearing up
-    play music ost_briefing fadein 2.0          # PLACEHOLDER — tense briefing theme
+    show dorian serious at left_char with Dissolve(0.2)
 
     "The howl of the snowstorm seemed alive, its icy fingers clawing at us even as we slammed the heavy doors shut behind us."
 
+    show messenger at right_char with Dissolve(0.2)
     messenger "C-C-Cold… Cold…"
-    dorian    "Are you alright? Are you still cold?"
-    messenger "A l-little.."
 
+    show dorian normal_alt_neutral at left_char
+    dorian "Are you alright? Are you still cold?"
+
+    messenger "A l-little.."
+    hide messenger
+
+    show dorian serious at left_char
     "Inside, the warmth of the Mjoll Castle did little to shake the lingering chill. My boots echoed on the stone floor as I took in the sight before me."
-    "A group of aldoriths stood huddled in the grand hall, their faces pale and determined. They were gearing up for battle, strapping on mismatched armor and whispering to one another in low, urgent tones."
+    "A group of aldoriths stood huddled in the grand hall, their faces pale and determined."
+    "They were gearing up for battle, strapping on mismatched armor and whispering to one another in low, urgent tones."
     "Some glanced at me briefly, but their eyes quickly darted away. They had no love for me, nor I for them."
 
-    # PDF p92
-    "Girl aldorith: Have you heard of the death toll? Enoch above…"
-    "Boy aldorith: I know… But we don't have a choice."
+    show girl_ald_normal at right_char with Dissolve(0.2)
+    girl_ald "Have you heard of the death toll? Enoch above…"
+    hide girl_ald_normal
 
+    show boy_ald_normal at right_flip with Dissolve(0.2)
+    boy_ald "I know… But we don't have a choice."
+    hide boy_ald_normal
+
+    show messenger at right_char with Dissolve(0.2)
     messenger "Paladin… Count Vasily is over there. If you'll excuse me, I'll—"
-    dorian    "Wait—"
+
+    show dorian serious at left_char
+    dorian "Wait—"
 
     "I pulled the folded letter from my pocket and handed him a few coins."
 
@@ -2223,69 +2235,80 @@ label ch2_castle_briefing:
 
     "The young man nodded, his face still flushed from the cold. Without another word, he bolted back out into the storm."
 
-    "My eyes moved across the room until they landed on Vasily. He stood to the side, leaning heavily on a table, surrounded by three hooded figures draped in deep gray robes—the unmistakable attire of the prophets of the death god."
+    hide messenger
+    hide dorian
+
+    "My eyes moved across the room until they landed on Vasily."
+    show vasily alt_think at right_char with Dissolve(0.2)
+    "He stood to the side, leaning heavily on a table, surrounded by three hooded figures draped in deep gray robes—the unmistakable attire of the prophets of the death god."
     "Vasily looked terrible. His face was gaunt, and a dark bruise marred his left eye, swelling the skin around it."
     "The prophets were whispering among themselves, their voices carrying just enough for me to listen to them."
 
-    # show vasily bruised at center              # PLACEHOLDER — Vasily sprite (bruised, gaunt)
-    # show niko hooded at right                  # PLACEHOLDER — Niko sprite (hooded prophet)
-    # show svante grim at left                   # PLACEHOLDER — Svante sprite (grim, resolute)
+    prophet_1 "The cold is unbearable… the prince must have made a pact with the death god to gain this much power."
+    prophet_2 "I disagree. It's unnatural. Not even the Enoch's touch could twist the elements this way."
 
-    "Prophet 1: The cold is unbearable… the prince must have made a pact with the death god to gain this much power."
-    "Prophet 2: I disagree. It's unnatural. Not even the Enoch's touch could twist the elements this way."
-
+    show niko alt_annoyed at left_char with Dissolve(0.2)
     niko "You lack faith, brothers. It is obvious that Enoch's hand is all over this—"
 
+    show vasily alt_mad at right_char
     vasily "Enough. Give me a moment."
+    show vasily neutral at right_char
 
     "Vasily straightened when he noticed me approaching, though the movement seemed to pain him. He waved the prophets away with a curt gesture."
 
+    hide niko
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     dorian "What in Tetrad's name happened to you?"
     vasily "You've seen what's happening outside. It's getting colder by the minute."
     dorian "I meant your face, Vasily."
+    show dorian serious at left_char
 
     "He rubbed a hand over his face, wincing as his fingers brushed the bruise."
 
-    # PDF p93
+    show vasily alt_normal at right_char
     vasily "It's from the king. It's unimportant."
 
     "The fire in the hearth sputtered as the storm outside roared with a deafening fury. He leaned on the table, his knuckles white from the strain."
 
+    show vasily neutral at right_char
     vasily "The storm won't let up, Dorian. It's relentless. Crops have failed, the rivers are freezing over, and entire villages are being swallowed by snow."
 
     "His voice cracked slightly."
 
     vasily "The kingdom is falling apart. Trade routes are blocked. Supplies can't get through. We've already lost half of our militia to hypothermia trying to secure the roads."
 
+    show dorian serious at left_char
     "I clenched my fists, the weight of his words settling like a stone in my chest."
 
     dorian "And no one knows what's causing it?"
 
+    show vasily alt_think at right_char
     vasily "There's a theory."
+    hide vasily
 
     "He turned toward the hooded prophets of the death god. One's face was familiar… yet I could not recall."
 
-    "Prophet: This storm is no mere act of nature. It reeks of the energies of the death god. We have felt this power before... during the Tragedy of Tianho."
-
-    "The mention of Tianho sent a chill down my spine. Elara. The kids."
-
+    show niko normal_base at right_char with Dissolve(0.2)
     niko "The death god's power lingers, though it is not as strong as it once was. Its source is concentrated in a desolate place west of here. An abandoned mine known as Frostcradle."
 
+    show dorian normal_alt_tense at left_char
     dorian "The Tragedy of Tianho? You're saying this storm is connected to that?"
+    show dorian serious at left_char
 
-    "The man nodded; his eyes gleaming."
-
+    show niko normal_serious at right_char
     niko "The energies are unmistakable. Whatever caused the tragedy there has resurfaced. Weaker, yes, but still potent enough to wreak havoc."
+    hide niko
 
+    show vasily alt_mad at right_char with Dissolve(0.2)
     vasily "We sent aldoriths to investigate. None of them came back alive."
-
     "He gestured toward the crowd of aldoriths huddled in the hall. One figure stood apart, his violet hair unmistakable. I think I've seen him before."
+    hide vasily
 
+    show svante normal_sad at right_char with Dissolve(0.2)
     svante "I... I saw what happened to them. My brothers, my sisters... they went west, into that cursed place. When they didn't return, I volunteered to go after them."
 
     "He paused, his voice trembling as he continued."
 
-    # PDF p93-94
     svante "They were impaled with ice. That's not all… their bodies were frozen solid. Twisted. The cold... it didn't just kill them. It consumed them."
 
     "He swallowed hard, his violet eyes glistening."
@@ -2293,30 +2316,42 @@ label ch2_castle_briefing:
     svante "T-They… They were my family…"
 
     "The room was heavy with silence. Even the prophets seemed subdued. Vasily's voice cut through the tension."
+    hide svante
 
-    # PDF p94
+    show vasily alt_normal at right_char
     vasily "That's why we're asking you, Dorian. You're not just a warrior—you're the Dragon of Gale. If anyone can survive this... it's you."
 
+    show dorian serious at left_char
     "I stared at him, my jaw tightening."
 
     dorian "What's the mission?"
 
     "Vasily's gaze darkened, and for a moment, he hesitated."
 
+    show vasily alt_savage at right_char
     vasily "You're to go west, to the Frostcradle. To the source of the storm. And once you're there…"
+
+    show vasily alt_mad at right_char
     vasily "You are to kill the Prince Elias Drakos."
 
+    show dorian normal_alt_confident at left_char
     dorian "Fine. But I want to be paid upfront."
 
     "Vasily didn't hesitate. He smiled and snapped his fingers with crisp authority. Svante reached to his belt, unclipping a leather pouch heavy with coin. It clinked as he approached, the weight unmistakable."
-
+    show dorian neutral at left_char
+    show vasily alt_savage at right_char
     vasily "We don't usually pay upfront, but given the urgency—and our past dealings—I'll make an exception."
-
+    hide vasily
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "T-T-Three thousand gold pieces. For killing Prince Elias Drakos, sir."
 
+    show dorian normal_alt_neutral at left_char
     "I took the pouch, feeling the satisfying heft of it before slipping it into my pocket. The room remained quiet, save for the occasional hiss of the fire."
 
     dorian "I have questions."
+    
+    hide svante
+    show vasily alt_think at right_char with Dissolve(0.2)
     vasily "Ask. But make it quick. Time isn't on our side."
 
     jump ch2_questions
@@ -2329,174 +2364,232 @@ label ch2_castle_briefing:
 # Player can ask 3 optional questions before accepting the mission.
 # All paths converge on ch2_end.
 # =============================================================================
-
+default ch2_asked_king_queen = False
+default ch2_asked_elias = False
+default ch2_asked_supplies = False
 label ch2_questions:
-
     menu:
-
-        "Where's the king and queen?":
-
-            # PDF p94-96
+        "Where's the king and queen?" if not ch2_asked_king_queen:
+            $ ch2_asked_king_queen = True
+            
+            show dorian normal_alt_neutral at left_char
+            show vasily alt_think at right_char
+            
             "I glanced around the hall, my eyes drawn to the twin thrones at the head of the room. Both were empty, their gilded frames casting long shadows in the dim light."
 
+            show dorian normal_alt_annoyed at left_char
             dorian "Where's King Gustav?"
 
+            show vasily alt_mad at right_char
             "Vasily's face darkened at the question, his lips pressing into a thin line."
 
+            show vasily alt_sad at right_char
             vasily "The king is… indisposed. He's in his chambers, mourning."
 
             "His voice was tight, as though every word cost him. I noticed the way his hand trembled slightly as he spoke."
 
+            show dorian serious at left_char
             dorian "And the queen? What of Queen Ekaterina?"
 
+            show vasily alt_shocked at right_char
             vasily "?!"
 
             "At that, Vasily froze. His shoulders stiffened, and a flicker of pain crossed his eyes. For a moment, he didn't answer, but Svante, standing nearby, stepped forward, his face grim."
 
+            show svante normal_sad at center with Dissolve(0.2)
             svante "She's dead, sir."
 
             "The words hung heavy in the air, like a stone dropped into a silent pond."
 
+            show dorian normal_alt_annoyed at left_char
             dorian "What?!"
 
+            show svante normal_nervous at center
             svante "We found her in her chambers... with a knife in her heart. Father saw everything."
 
-            # PDF p95
             "I stared at him, my mind struggling to process the words. Queen Ekaterina, dead? It didn't feel real. The room felt colder. I clenched my fists."
 
+            show niko normal_serious at right_char with Dissolve(0.2)
             niko "Elias killed her. Stabbed her in the heart like the heartless bastard he is."
 
             "I blinked, trying to process what I'd just heard. King Gustav and Queen Ekaterina. They'd always been there—fixtures of my early missions, handing me my rewards with smiles I'd never trusted but had grown used to."
             "I didn't care about them, not really, but the idea of her being gone was unsettling in a way I couldn't quite shake."
 
+            show dorian normal_alt_tense at left_char
             dorian "I don't… I don't understand. The queen is dead? When did this happen?"
 
+            show vasily alt_think at right_char
             vasily "During the ceremony. When those… beings appeared."
 
             "Beings of ice. The ones that disrupted the ceremony. I remember."
 
+            show vasily alt_normal at right_char
             vasily "We couldn't even do the funeral because of the trade routes."
+
+            show dorian normal_alt_neutral at left_char
             dorian "Trade routes?"
+
+            show vasily alt_think at right_char
             vasily "Her final wish was to be buried in Hinami. A water burial. But the frozen routes make it impossible to transport her body there."
 
+            show dorian normal_alt_neutral at left_char
             dorian "A Hinami burial? I didn't know Queen Ekaterina had Hinami blood."
+
+            show vasily alt_normal at right_char
             vasily "She did. Only a trace, but enough that she wanted to honor their traditions in death."
 
             "Queen Ekaterina has Hinami blood… Who knew?"
 
-            # PDF p96
+            show dorian normal_alt_confident at left_char
             dorian "Well. I suppose even queens aren't untouchable."
 
             "Vasily shot me a sharp look, but he didn't argue. Instead, he turned away, his shoulders slumping."
 
+            show niko normal_base at right_char
             niko "Do you have any other questions?"
 
             jump ch2_questions
 
-        "Who's this Elias?":
+        "Who's this Elias?" if not ch2_asked_elias:
+            $ ch2_asked_elias = True
 
-            # PDF p96
+            show dorian normal_alt_neutral at left_char
+            show vasily alt_think at right_char
+
             "Elias. The name wasn't familiar."
 
+            show dorian normal_alt_annoyed at left_char
             dorian "Who's this Elias? This is the first I've heard of him."
 
+            show vasily alt_sad at right_char
             "Vasily's shoulders tensed, and he let out a heavy sigh."
 
+            show vasily alt_normal at right_char
             vasily "The crown prince of Mjoll. Or rather, the former crown prince of Mjoll."
 
             "I frowned, confused. In all my four years of working as a mercenary here, I'd never heard of any crown prince."
 
+            show dorian normal_alt_tense at left_char
             dorian "A crown prince? Since when? All I know are the aldoriths who have claim to the throne."
 
             "Svante, standing nearby, looked down."
 
+            show svante normal_sad at center with Dissolve(0.2)
             svante "He was the son of Her Majesty, Queen Ekaterina. The true heir to the throne... but not in the eyes of the king. According to Father—"
 
             "He paused, the words catching in his throat, and his hands clenched into fists at his sides."
 
+            show svante normal_angry at center
             svante "Elias... Elias is a monster. He's the reason my brothers and sisters… *holding back tears*"
 
+            show vasily alt_mad at right_char
             vasily "After the Queen was killed... Elias disappeared. We searched, but there was no trace of him. His flight from the kingdom is as clear an indication of guilt as any."
             vasily "He fled like a coward, leaving his mother's corpse behind."
 
             "The pain in his voice, raw and jagged, was almost unbearable. I had never seen Vasily this shaken before."
 
+            show vasily alt_savage at right_char
             vasily "The queen's body was found in her solar… crumpled beside her writing desk. A dagger straight through her heart. No signs of struggle. No mercy."
             vasily "Her own son left her there like refuse."
             vasily "The day after that and the cold became unbearable. The blizzard began."
 
-            # PDF p96-97
+            show svante normal_mad at center
             svante "The king... Father… he was broken by the queen's death. After that, Elias vanished into the frost, like a shadow… He's the reason the kingdom is falling apart."
             svante "Father… He probably believed in Elias. And he left him with a corpse and a curse. If I could—"
             svante "If I only have the power to brave through this blizzard, I will kill him with my own bare hands!"
 
             "Prophet: If I may. Me and my prophet brothers can sense the death god's magic in this storm. It's unmistakable."
 
+            show niko normal_serious at right_char with Dissolve(0.2)
             niko "All signs point to Elias. The storm, the cursed frost, the powers he's wielding… they all lead back to him. For all we know, he might have sold his soul to Enoch."
 
             "I couldn't help but feel the chill of dread that crept up my spine. Everything was pointing to the same conclusion—Elias was behind it all."
 
+            show vasily alt_normal at right_char
             vasily "You're the only one who can save us, Dorian."
 
             jump ch2_questions
 
-        "Can I take some supplies with me?":
+        "Can I take some supplies with me?" if not ch2_asked_supplies:
+            $ ch2_asked_supplies = True
 
-            # PDF p97-98
+            show dorian normal_alt_neutral at left_char
+            show vasily alt_think at right_char
+
             dorian "I might need supplies if I'm to set out for Frostcradle."
 
+            show vasily alt_mad at right_char
             vasily "I'm afraid supplies are running thin, Dorian. The frost has locked us down tighter than we thought. The roads to Mjoll… they're almost impassable now."
 
             "He sighed heavily, rubbing his temples."
 
+            show vasily alt_think at right_char
             vasily "The blizzards are worsening, and the snow is deepening. It's like the very land itself is trying to bury us. We've sent several expeditions out, but none have returned."
 
+            show svante normal_nervous at center with Dissolve(0.2)
             svante "According to the scouts, even the peasants are feeling the cold, sir. It's getting harder to make trades, and even harder to get shipments in."
 
+            show vasily alt_sad at right_char
             vasily "I don't know how much longer we can last with what we have. We've sent requests to the outer regions, but even the merchants are afraid to travel these roads now."
 
+            show dorian serious at left_char
             dorian "…"
 
             "I frowned. The weight of their situation was clear."
 
+            show vasily alt_normal at right_char
             vasily "The only ones left with any supplies… are the Cheng Industries bots. They've been sending us what they can."
 
             "I blinked. I think I've heard that name before. Cheng Industries. Yuxuan's company."
 
-            # PDF p97-98 — supply bot arrives
             "As if on cue, a mechanical hum echoed through the hall, and a sleek bot rolled in through the door. It was a little taller than a man, metallic and polished, with a rectangular chest and mechanical arms designed to lift heavy objects."
 
+            show niko normal_base at right_char with Dissolve(0.2)
             niko "Right on cue…"
 
-            # PDF p98
+            show supply_robot base at center with Dissolve(0.2)
             "The bot's sensors glowed softly as it paused."
 
             "-Here at Cheng's, we bring change… -"
 
             "An oddly soothing jingle filled the room, the cheerful tone feeling almost out of place."
 
-            "Supply Bot: Greetings. Supplies delivered—courtesy of Cheng Industries."
+            supply_robot "Greetings. Supplies delivered—courtesy of Cheng Industries."
 
             "The bot spun around, unloading several crates of food and supplies with surprising agility. Canned goods, dried meats, and fresh produce packed neatly in the crates, along with a few additional barrels of water."
 
+            show svante normal_happy at center
             svante "Wow. That's… amazing! Do you think they have a robot that talks? I've never seen—"
 
+            show vasily alt_mad at right_char
             vasily "Svante… Did I give you permission to talk about anything other than the incident?"
+
+            show svante normal_nervous at center
             svante "N-No, sir. Sorry, Count."
+
+            show vasily alt_savage at right_char
             vasily "Then shut your mouth. One more slip, and I'll have you and whichever aldorith mutt you're closest to flogged for insubordination."
+
+            show svante normal_sad at center
             svante "Yes, sir. I apologize."
 
+            show niko normal_anger at right_char
             niko "Asshole."
 
+            show vasily alt_mad at right_char
             vasily "What did you just say, Prophet?"
-            "Prophet 1: P-Perhaps we can move on, sire."
 
+            prophet_1 "P-Perhaps we can move on, sire."
+
+            show vasily alt_normal at right_char
             vasily "*sighs* As I said, Cheng Industries' bots have been delivering supplies. Only a few shipments, and only what they can carry. It's helping, but it's not enough to sustain us. We can't rely on them forever."
 
             "He fixed me with a hard stare."
 
+            show vasily alt_savage at right_char
             vasily "You need to find Elias. And end him. Mjoll depends on it."
 
+            show dorian normal_alt_confident at left_char
             "I straightened, meeting his gaze with a nod."
 
             dorian "Got it."
@@ -2504,12 +2597,13 @@ label ch2_questions:
             jump ch2_questions
 
         "That's all I need.":
-
-            # PDF p98-99
+            show dorian normal_alt_neutral at left_char
+            
             "I exhaled sharply, watching my breath curl into the frigid air like smoke."
 
             dorian "That's enough questions."
 
+            show vasily alt_normal at right_char
             "Vasily gave a solemn nod. He gestured toward Niko."
 
             jump ch2_end
