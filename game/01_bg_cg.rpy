@@ -319,3 +319,273 @@ image cg_mjoll_massacre:
     xalign 0.5
     yalign 1.0
 
+image cg_dorian_to_family:
+    "images/Assets/Illustrations/23 - Dorian paying respects to his family.jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_niko_save_chung:
+    "images/Assets/Illustrations/26 - Niko saves Chung.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_svante_save_chung:
+    "images/Assets/Illustrations/27 - Svante saves Chung.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_redirects:
+    "images/Assets/Illustrations/28 - Dorian redirects.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_weng_cooking:
+    "images/Assets/Illustrations/31 - Weng cooking.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_tim_and_elias:
+    "images/Assets/Illustrations/32 - Tim and Elias.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_hundun_attack:
+    "images/Assets/Illustrations/32.5 - Hundun attacks.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_chung_slay_hundun:
+    "images/Assets/Illustrations/33 - Chung hee slays hundun colored.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_feng_aoi:
+    "images/Assets/Illustrations/34 - Feng and Aoi.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_roboto_yuxuan:
+    "images/Assets/Illustrations/41 - Roboto carrying Yuxuan_s.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_magnus_battle:
+    "images/Assets/Illustrations/42 - Magnus Battle.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_aoi_singing:
+    "images/Assets/Illustrations/47 - Aoi singing.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_men_trapped:
+    "images/Assets/Illustrations/48 - The men trapped.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_tim_powers:
+    "images/Assets/Illustrations/48.5 - Tim shows his powers.jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_elias_release:
+    "images/Assets/Illustrations/49 - Elias releases.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_elias_release_surprised:
+    "images/Assets/Illustrations/49.5 - Elias releases surprised.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_yuxian:
+    "images/Assets/Illustrations/50 - Yuxuan kiss Dorian on the cheek.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_chung:
+    "images/Assets/Illustrations/51 - Chung-hee saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_svante:
+    "images/Assets/Illustrations/52 - Svante rests his head.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_niko:
+    "images/Assets/Illustrations/53 - Niko gives charm.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_magnus:
+    "images/Assets/Illustrations/54 - Magnus and Dorian fall down.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_festivities:
+    "images/Assets/Illustrations/55 - Festivities.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_yuxuan_saves_dorian:
+    "images/Assets/Illustrations/56 - Yuxuan saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_chung_saves_dorian:
+    "images/Assets/Illustrations/57 - Chung-hee saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_niko_saves_dorian:
+    "images/Assets/Illustrations/58 - Niko saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_svante_saves_dorian:
+    "images/Assets/Illustrations/59 - Svante saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_magnus_saves_dorian:
+    "images/Assets/Illustrations/60 - Magnus saves Dorian.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+# BG
+image tianho_cemetery_morning:
+    "images/Assets/Background/Tianho Cemetery Day.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image tianho_cemetery_afternoon:
+    "images/Assets/Background/Tianho Cemetery Afternoon.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image tianho_cemetery_morning_alt:
+    "images/Assets/Background/tianho_cemetery_morning.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image underground_magnus:
+    "images/Assets/Background/Underground - Magnus.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image yuxuan_manor:
+    "images/Assets/Background/yuxuan manor.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image yuxuan_manor_off:
+    "images/Assets/Background/yuxuan manor dimmed.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image yuxuan_lab:
+    "images/Assets/Background/Yuxuan_s lab - Hot spring.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image spare_room:
+    "images/Assets/Background/Spare Room.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image spare_room_off:
+    "images/Assets/Background/Spare Room Lights Off.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image storage_room:
+    "images/Assets/Background/Storage Room.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image storage_room_off:
+    "images/Assets/Background/Storage Room Lights Off.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image hinami_castle_morning:
+    "images/Assets/Background/Hinami Castle Morning.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image hinami_castle_evening:
+    "images/Assets/Background/Hinami Castle Evening.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image kyeonjang_room:
+    "images/Assets/Background/Kyeongjang Room No Blinders 2.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image kyeonjang_room_blinders:
+    "images/Assets/Background/Kyeongjang Room Blinders.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image destroyed_land:
+    "images/Assets/Background/Destroyed Land.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cheng_industries_bunk:
+    "images/Assets/Background/Cheng industries bunk - lights on.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cheng_industries_bunk_off:
+    "images/Assets/Background/Cheng industries bunk - lights off.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0

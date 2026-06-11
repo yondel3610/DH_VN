@@ -31,6 +31,8 @@ log.txt
 errors.txt
 traceback.txt
 dialogue_scan.txt
+files.txt
+.branchpy.toml
 
 # xclude audio files
 # *.ogg
@@ -42,6 +44,9 @@ dialogue_scan.txt
 
 # Exclude entire audio folder
 # game/audio/
+
+# branchpy
+.branchpy
 
 # Sample saves
 *.save

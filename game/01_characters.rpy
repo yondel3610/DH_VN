@@ -57,6 +57,8 @@ define female_guard    = Character("Female Guard",       color="#7f8c8d", callba
 define frost_oni       = Character("",                   color="#5dade2", callback=name_callback, cb_name="frost_oni")  # Ice blue, no name — monster
 define qiongqi         = Character("Qiongqi",            color="#77bbe9", callback=name_callback, cb_name="qiongqi" ) # Chapter 2 intro monster
 define supply_robot    = Character("Supply Bot",         color="#17a8be", callback=name_callback, cb_name="supply_robot")
+define prophet_1       = Character("Prophet 1",            color="#727477", callback=name_callback, cb_name="prophet_1")
+define prophet_2       = Character("Prophet 2",            color="#727477", callback=name_callback, cb_name="prophet_2")
 
 # Chapter 3
 define yuki_onna      = Character("Yuki-onna",         color="#aee8f8", callback=name_callback, cb_name="yuki_onna")  # Pale ice blue — spirit form

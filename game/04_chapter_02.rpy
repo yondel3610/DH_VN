@@ -2383,42 +2383,43 @@ label ch2_questions:
             show vasily alt_mad at right_char
             "Vasily's face darkened at the question, his lips pressing into a thin line."
 
-            show vasily alt_sad at right_char
+            show vasily neutral at right_char
             vasily "The king is… indisposed. He's in his chambers, mourning."
 
             "His voice was tight, as though every word cost him. I noticed the way his hand trembled slightly as he spoke."
 
             show dorian serious at left_char
             dorian "And the queen? What of Queen Ekaterina?"
-
-            show vasily alt_shocked at right_char
             vasily "?!"
 
             "At that, Vasily froze. His shoulders stiffened, and a flicker of pain crossed his eyes. For a moment, he didn't answer, but Svante, standing nearby, stepped forward, his face grim."
 
-            show svante normal_sad at center with Dissolve(0.2)
+            hide vasily
+            show svante normal_sad at right_char with Dissolve(0.2)
             svante "She's dead, sir."
 
             "The words hung heavy in the air, like a stone dropped into a silent pond."
 
-            show dorian normal_alt_annoyed at left_char
             dorian "What?!"
 
-            show svante normal_nervous at center
+            show svante normal_nervous at right_char
             svante "We found her in her chambers... with a knife in her heart. Father saw everything."
 
             "I stared at him, my mind struggling to process the words. Queen Ekaterina, dead? It didn't feel real. The room felt colder. I clenched my fists."
+            hide svante
 
             show niko normal_serious at right_char with Dissolve(0.2)
             niko "Elias killed her. Stabbed her in the heart like the heartless bastard he is."
 
-            "I blinked, trying to process what I'd just heard. King Gustav and Queen Ekaterina. They'd always been there—fixtures of my early missions, handing me my rewards with smiles I'd never trusted but had grown used to."
+            "I blinked, trying to process what I'd just heard. King Gustav and Queen Ekaterina."
+            "They'd always been there—fixtures of my early missions, handing me my rewards with smiles I'd never trusted but had grown used to."
             "I didn't care about them, not really, but the idea of her being gone was unsettling in a way I couldn't quite shake."
 
             show dorian normal_alt_tense at left_char
             dorian "I don't… I don't understand. The queen is dead? When did this happen?"
+            hide niko
 
-            show vasily alt_think at right_char
+            show vasily alt_think at right_char with Dissolve(0.2)
             vasily "During the ceremony. When those… beings appeared."
 
             "Beings of ice. The ones that disrupted the ceremony. I remember."
@@ -2426,13 +2427,12 @@ label ch2_questions:
             show vasily alt_normal at right_char
             vasily "We couldn't even do the funeral because of the trade routes."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian serious at left_char
             dorian "Trade routes?"
 
-            show vasily alt_think at right_char
+            show vasily neutral at right_char
             vasily "Her final wish was to be buried in Hinami. A water burial. But the frozen routes make it impossible to transport her body there."
 
-            show dorian normal_alt_neutral at left_char
             dorian "A Hinami burial? I didn't know Queen Ekaterina had Hinami blood."
 
             show vasily alt_normal at right_char
@@ -2440,28 +2440,27 @@ label ch2_questions:
 
             "Queen Ekaterina has Hinami blood… Who knew?"
 
-            show dorian normal_alt_confident at left_char
+            show dorian normal_alt_calm at left_char
             dorian "Well. I suppose even queens aren't untouchable."
 
             "Vasily shot me a sharp look, but he didn't argue. Instead, he turned away, his shoulders slumping."
-
-            show niko normal_base at right_char
+            hide vasily
+            show niko normal_base at right_char with Dissolve(0.2)
             niko "Do you have any other questions?"
 
+            hide niko
             jump ch2_questions
 
         "Who's this Elias?" if not ch2_asked_elias:
             $ ch2_asked_elias = True
 
-            show dorian normal_alt_neutral at left_char
-            show vasily alt_think at right_char
+            show dorian serious at left_char
+            show vasily alt_think at right_char with Dissolve(0.2)
 
             "Elias. The name wasn't familiar."
 
             show dorian normal_alt_annoyed at left_char
             dorian "Who's this Elias? This is the first I've heard of him."
-
-            show vasily alt_sad at right_char
             "Vasily's shoulders tensed, and he let out a heavy sigh."
 
             show vasily alt_normal at right_char
@@ -2471,18 +2470,20 @@ label ch2_questions:
 
             show dorian normal_alt_tense at left_char
             dorian "A crown prince? Since when? All I know are the aldoriths who have claim to the throne."
+            show dorian serious at left_char
 
             "Svante, standing nearby, looked down."
-
-            show svante normal_sad at center with Dissolve(0.2)
+            hide vasily
+            show svante normal_sad at right_char with Dissolve(0.2)
             svante "He was the son of Her Majesty, Queen Ekaterina. The true heir to the throne... but not in the eyes of the king. According to Father—"
 
             "He paused, the words catching in his throat, and his hands clenched into fists at his sides."
 
-            show svante normal_angry at center
+            show svante normal_angry at right_char
             svante "Elias... Elias is a monster. He's the reason my brothers and sisters… *holding back tears*"
+            hide svante
 
-            show vasily alt_mad at right_char
+            show vasily alt_mad at right_char with Dissolve(0.2)
             vasily "After the Queen was killed... Elias disappeared. We searched, but there was no trace of him. His flight from the kingdom is as clear an indication of guilt as any."
             vasily "He fled like a coward, leaving his mother's corpse behind."
 
@@ -2492,21 +2493,27 @@ label ch2_questions:
             vasily "The queen's body was found in her solar… crumpled beside her writing desk. A dagger straight through her heart. No signs of struggle. No mercy."
             vasily "Her own son left her there like refuse."
             vasily "The day after that and the cold became unbearable. The blizzard began."
+            hide vasily
 
-            show svante normal_mad at center
+            show svante normal_angry at right_char with Dissolve(0.2)
             svante "The king... Father… he was broken by the queen's death. After that, Elias vanished into the frost, like a shadow… He's the reason the kingdom is falling apart."
             svante "Father… He probably believed in Elias. And he left him with a corpse and a curse. If I could—"
             svante "If I only have the power to brave through this blizzard, I will kill him with my own bare hands!"
+            hide svante
 
-            "Prophet: If I may. Me and my prophet brothers can sense the death god's magic in this storm. It's unmistakable."
+            show prophet_1 at right_char with Dissolve(0.2)
+            prophet_1 "If I may. Me and my prophet brothers can sense the death god's magic in this storm. It's unmistakable."
+            hide prophet_1
 
             show niko normal_serious at right_char with Dissolve(0.2)
             niko "All signs point to Elias. The storm, the cursed frost, the powers he's wielding… they all lead back to him. For all we know, he might have sold his soul to Enoch."
 
-            "I couldn't help but feel the chill of dread that crept up my spine. Everything was pointing to the same conclusion—Elias was behind it all."
+            "I couldn't help but feel the chill of dread that crept up my spine. Everything was pointing to the same conclusion — Elias was behind it all."
+            hide niko
 
-            show vasily alt_normal at right_char
+            show vasily alt_normal at right_char with Dissolve(0.2)
             vasily "You're the only one who can save us, Dorian."
+            hide vasily
 
             jump ch2_questions
 
@@ -2525,11 +2532,13 @@ label ch2_questions:
 
             show vasily alt_think at right_char
             vasily "The blizzards are worsening, and the snow is deepening. It's like the very land itself is trying to bury us. We've sent several expeditions out, but none have returned."
+            hide vasily
 
-            show svante normal_nervous at center with Dissolve(0.2)
+            show svante normal_nervous at right_char with Dissolve(0.2)
             svante "According to the scouts, even the peasants are feeling the cold, sir. It's getting harder to make trades, and even harder to get shipments in."
+            hide svante 
 
-            show vasily alt_sad at right_char
+            show vasily neutral at right_char with Dissolve(0.2)
             vasily "I don't know how much longer we can last with what we have. We've sent requests to the outer regions, but even the merchants are afraid to travel these roads now."
 
             show dorian serious at left_char
@@ -2539,15 +2548,16 @@ label ch2_questions:
 
             show vasily alt_normal at right_char
             vasily "The only ones left with any supplies… are the Cheng Industries bots. They've been sending us what they can."
+            show vasily neutral at right_char
 
             "I blinked. I think I've heard that name before. Cheng Industries. Yuxuan's company."
-
             "As if on cue, a mechanical hum echoed through the hall, and a sleek bot rolled in through the door. It was a little taller than a man, metallic and polished, with a rectangular chest and mechanical arms designed to lift heavy objects."
 
+            hide vasily
             show niko normal_base at right_char with Dissolve(0.2)
             niko "Right on cue…"
 
-            show supply_robot base at center with Dissolve(0.2)
+            show supply_robot base at center_supply with Dissolve(0.2)
             "The bot's sensors glowed softly as it paused."
 
             "-Here at Cheng's, we bring change… -"
@@ -2557,31 +2567,41 @@ label ch2_questions:
             supply_robot "Greetings. Supplies delivered—courtesy of Cheng Industries."
 
             "The bot spun around, unloading several crates of food and supplies with surprising agility. Canned goods, dried meats, and fresh produce packed neatly in the crates, along with a few additional barrels of water."
-
-            show svante normal_happy at center
+            hide niko
+            hide supply_robot
+            show svante normal_happy at right_char with Dissolve(0.2)
             svante "Wow. That's… amazing! Do you think they have a robot that talks? I've never seen—"
+            hide svante
 
-            show vasily alt_mad at right_char
+            show vasily alt_mad at right_char with Dissolve(0.2)
             vasily "Svante… Did I give you permission to talk about anything other than the incident?"
+            hide vasily
 
-            show svante normal_nervous at center
+            show svante normal_nervous at right_char with Dissolve(0.2)
             svante "N-No, sir. Sorry, Count."
+            hide svante
 
-            show vasily alt_savage at right_char
+            show vasily alt_savage at right_char with Dissolve(0.2)
             vasily "Then shut your mouth. One more slip, and I'll have you and whichever aldorith mutt you're closest to flogged for insubordination."
+            hide vasily
 
-            show svante normal_sad at center
+            show svante normal_sad at right_char with Dissolve(0.2)
             svante "Yes, sir. I apologize."
+            hide svante
 
-            show niko normal_anger at right_char
+            show niko normal_anger at right_char with Dissolve(0.2)
             niko "Asshole."
+            hide niko
 
-            show vasily alt_mad at right_char
+            show vasily alt_mad at right_char with Dissolve(0.2)
             vasily "What did you just say, Prophet?"
+            hide vasily
 
-            prophet_1 "P-Perhaps we can move on, sire."
+            show prophet_2 at right_char with Dissolve(0.2)
+            prophet_2 "P-Perhaps we can move on, sire."
+            hide prophet_2
 
-            show vasily alt_normal at right_char
+            show vasily alt_normal at right_char with Dissolve(0.2)
             vasily "*sighs* As I said, Cheng Industries' bots have been delivering supplies. Only a few shipments, and only what they can carry. It's helping, but it's not enough to sustain us. We can't rely on them forever."
 
             "He fixed me with a hard stare."
@@ -2598,7 +2618,7 @@ label ch2_questions:
 
         "That's all I need.":
             show dorian normal_alt_neutral at left_char
-            
+
             "I exhaled sharply, watching my breath curl into the frigid air like smoke."
 
             dorian "That's enough questions."

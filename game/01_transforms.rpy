@@ -63,6 +63,24 @@ transform right_robot:
     zoom 1.17
     yoffset 50
 
+transform center_supply:
+    xalign 0.5
+    yalign 1.1
+    zoom 0.8
+    yoffset 50
+
+transform left_supply:
+    xalign -0.13
+    yalign 0.9
+    zoom 1.17
+    yoffset 50
+
+transform right_supply:
+    xalign 1.13
+    yalign 0.9
+    zoom 1.17
+    yoffset 50
+
 # ==========================================
 # for children
 # ==========================================

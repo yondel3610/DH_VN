@@ -56,57 +56,6 @@ image cg_black:
 # --- Ambient ---
 define audio.amb_underground   = "audio/ambient/amb_underground.ogg" # cave ambience DONE
 
-# --- Sound Effects ---
-define audio.sfx_yaoguai_burst = "audio/sfx/sfx_yaoguai_burst.ogg" # DONE
-define audio.sfx_stone_break   = "audio/sfx/sfx_stone_break.ogg"  # DONE
-define audio.sfx_body_thud     = "audio/sfx/sfx_body_thud.ogg"    # DONE
-define audio.sfx_heartbeat     = "audio/sfx/sfx_heartbeat.ogg" # DONE
-define audio.sfx_timer_tick    = "audio/sfx/sfx_timer_tick.ogg" # DONE
-define audio.sfx_timer_end     = "audio/sfx/sfx_timer_end.ogg" # DONE
-define audio.ost_tension       = "audio/music/ost_tension.ogg" # DONEd
-define audio.ost_yaoguai_theme = "audio/music/ost_yaoguai_theme.ogg" # menacing tense music for villains DONE
-
-# ========== VOICE LINES ==========
-# --- Boy Aldorith ---
-define audio.boy_ald_prl_line1     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 001.ogg"
-define audio.boy_ald_prl_line2     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 002.ogg"
-define audio.boy_ald_prl_line3     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 003.ogg"
-define audio.boy_ald_prl_line4     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 004.ogg"
-define audio.boy_ald_prl_line5     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 005.ogg"
-define audio.boy_ald_prl_line6     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 006.ogg"
-define audio.boy_ald_prl_line7     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 007.ogg"
-define audio.boy_ald_prl_line8     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 008.ogg"
-define audio.boy_ald_prl_line9     = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 009.ogg"
-define audio.boy_ald_prl_line10    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 010.ogg"
-define audio.boy_ald_prl_line11    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 011.ogg"
-define audio.boy_ald_prl_line12    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 012.ogg"
-define audio.boy_ald_prl_line13    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 013.ogg"
-define audio.boy_ald_prl_line14    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 014.ogg"
-define audio.boy_ald_prl_line15    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 015.ogg"
-define audio.boy_ald_prl_line16    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 016.ogg"
-define audio.boy_ald_prl_line17    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 017.ogg"
-define audio.boy_ald_prl_line18    = "audio/Prologue/Boy Aldorith Prologue/Boy Aldorith _ Prologue _ 018.ogg"
-
-# --- Girl Aldorith ---
-# define audio.girl_ald_prl_line1
-
-# --- Kristin --- 
-define audio.kristin_ald_prl_line1 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 001.ogg"
-define audio.kristin_ald_prl_line2 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 002.ogg"
-define audio.kristin_ald_prl_line3 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 003.ogg"
-define audio.kristin_ald_prl_line4 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 004.ogg"
-define audio.kristin_ald_prl_line5 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 005.ogg"
-define audio.kristin_ald_prl_line6 = "audio/Prologue/Kristin Prologue/Kristin _ Prologue _ 006.ogg"
-
-# --- Yaoguai King ---
-define audio.yk_ald_prl_line1      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 1.ogg"
-define audio.yk_ald_prl_line2      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 2.ogg"
-define audio.yk_ald_prl_line3      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 3.ogg"
-define audio.yk_ald_prl_line4      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 4.ogg"
-define audio.yk_ald_prl_line5      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 5.ogg"
-define audio.yk_ald_prl_line6      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 6.ogg"
-define audio.yk_ald_prl_line7      = "audio/Prologue/Yaoguai King Prologue/YAOGUAI KING_prologue.line 7.ogg"
-
 # =============================================================================
 # SECTION 4: CUSTOM SCREENS (UX FEATURES)
 # =============================================================================
