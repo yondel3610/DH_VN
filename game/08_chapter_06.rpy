@@ -68,46 +68,7 @@
 # =============================================================================
 # Search "# PLACEHOLDER" to find every line needing a real asset.
 # =============================================================================
-
-# --- Backgrounds: Lab ---
-# bg_lab_bedroom and bg_yuxuan_lab_dim already declared in chapter_05.rpy
-
-# --- Backgrounds: Surface / Tianho ---
-image bg_tianho_overlooking_night = "images/backgrounds/bg_tianho_overlooking_night.png"  # PLACEHOLDER
-# Description: Rocky outcrop hidden by gnarled trees — looking down at a makeshift
-# village below in the valley, dim lights among ruins. Night sky.
-
-image bg_tianho_post_tragedy_night = "images/backgrounds/bg_tianho_post_tragedy_night.png" # PLACEHOLDER
-# Description: Makeshift Tianho streets at night — patched wooden scaffolding on ruins,
-# lanterns swaying, Yaoguai corpses scattered across cracked ground.
-
-image bg_cheng_store_entrance_night = "images/backgrounds/bg_cheng_store_entrance_night.png" # PLACEHOLDER
-# Description: Cheng Industries store exterior at night — ruined storefront, shadows,
-# soft light from inside, Jiang and Gao crouching near the doorway.
-
-# --- Backgrounds: Illusion Sequences ---
-image bg_tianho_dorians_room       = "images/backgrounds/bg_tianho_dorians_room.png"       # already declared ch1
-image bg_tianho_food_stalls_fire   = "images/backgrounds/bg_tianho_food_stalls_fire.png"   # PLACEHOLDER
-# Description: Tianho food stalls engulfed in warped nightmare fire — buildings bending
-# at impossible angles, sky churning in rotting ink.
-
-image bg_mjoll_palace_throne       = "images/backgrounds/bg_mjoll_palace_throne.png"       # already declared ch2
-image bg_mjoll_square_festive      = "images/backgrounds/bg_mjoll_square_festive.png"       # already declared ch2
-image bg_frostcradle_ice           = "images/backgrounds/bg_frostcradle_ice.png"            # PLACEHOLDER
-# Description: Endless frozen ice wasteland — jagged cliffs in the distance, howling
-# blizzard, sky churning gray. The Frostcradle exterior.
-
-# --- CGs ---
-image cg_hundun_form               = "images/cg/cg_hundun_form.png"                        # PLACEHOLDER
-# Description: The Hundun — massive shifting mass of flesh and darkness, limbs sprouting
-# and melting, dozens of gnashing mouths across its hide, lanterns flickering around it.
-
-image cg_feng_arrives              = "images/cg/cg_feng_arrives.png"                       # PLACEHOLDER
-# Description: Feng standing atop ruined merchant stall — blue flames erupting from his
-# hands, red-tinted glasses, scar on left side of face, coat billowing.
-
-image cg_black                     = "images/cg/cg_black.png"                              # already declared — reused
-
+# actual assets in bg rpy file
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
