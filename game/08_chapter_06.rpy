@@ -177,6 +177,9 @@ label chapter_6:
         duration=3.0
     )
     pause 3.0
+    scene spare_room with fade
+    
+    show dorian sad at left_char with Dissolve(0.2)
 
     elias "Daddy! Daddy! Wake up!"
 
@@ -197,7 +200,7 @@ label chapter_6:
     "His voice wavered, gentle, worried."
 
     elias "I was worried. Tedda went out to get water from kitchen."
-
+    show dorian neutral at left_char
     "I exhaled, rubbing my face."
 
     elias "Tedda says bad dreams need water. She'll be back."
@@ -210,7 +213,7 @@ label chapter_6:
     elias "I'm here, daddy. Okay? Don't cry. I love you."
 
     "I forced a chuckle, ruffling his messy curls."
-
+    show dorian smile at left_char
     dorian "Come on, Elias. I'm not crying. But, thank you. I love you too, Elias."
 
     "His eyes shone, full of childlike pride."
@@ -218,7 +221,7 @@ label chapter_6:
     elias "You always protect me, Daddy. I wanna protect you too."
 
     "I smirked, shaking my head."
-
+    show dorian neutral at left_char
     dorian "But what happens if I got attacked by an ugly monster? Would you save me?"
 
     "Elias gasped."
