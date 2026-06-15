@@ -6,37 +6,37 @@ define yk          = Character("Yaoguai King", color="#8b0000", what_prefix='"',
 define narrator = Character(None, what_italic=False, callback=name_callback, cb_name=None)
 
 # Chapter 1
-define dorian         = Character("Dorian",          color="#d4af37", callback=name_callback, cb_name="dorian")  # Gold — paladin, protagonist
-define elara          = Character("Elara",           color="#f4a7b9", callback=name_callback, cb_name="elara")  # Soft rose — warm, loving
-define lucas          = Character("Lucas",           color="#87ceeb", callback=name_callback, cb_name="lucas")  # Sky blue — youngest, excited
-define sarah          = Character("Sarah",           color="#dda0dd", callback=name_callback, cb_name="sarah")  # Plum — artistic, quiet
-define emily          = Character("Emily",           color="#f0e68c", callback=name_callback, cb_name="emily")  # Khaki — witty, streetwise
-define daniel         = Character("Daniel",          color="#90ee90", callback=name_callback, cb_name="daniel")  # Light green — cool, sarcastic
-define cyrus          = Character("Paladin Cyrus",   color="#8b0000", callback=name_callback, cb_name="cyrus")  # Dark red — authoritarian
-define feng           = Character("Paladin Feng",    color="#4169e1", callback=name_callback, cb_name="feng")  # Royal blue — loyal, warm
-define olympia        = Character("Empress Olympia", color="#9370db", callback=name_callback, cb_name="olympia")  # Medium purple — regal
-define long_shen      = Character("King Long Shen",  color="#228b22", callback=name_callback, cb_name="long_shen")  # Forest green — Tianho king
-define emperor_minjoon = Character("Emperor Min-joon", color="#b8860b", callback=name_callback, cb_name="emperor_minjoon") # Dark gold — Kyeongjang
-define niko           = Character("Niko",            color="#e0c8a0", callback=name_callback, cb_name="niko")  # Warm parchment — healer, devout
-define kaito          = Character("Kaito",           color="#b0d0e0", callback=name_callback, cb_name="kaito")  # Pale blue — Niko's brother
-define yuxuan         = Character("Cheng Yuxuan",    color="#00ced1", callback=name_callback, cb_name="yuxuan")  # Dark turquoise — inventor
-define vasily         = Character("Count Vasily",    color="#c0c0c0", callback=name_callback, cb_name="vasily")  # Silver — Dorian's commander
-define gao            = Character("Soldier Gao",     color="#a0a0a0", callback=name_callback, cb_name="gao")  # Grey — reliable soldier
-define jiang          = Character("Soldier Jiang",   color="#a0a0a0", callback=name_callback, cb_name="jiang")  # Grey — reliable soldier
-define prosperity_dragon = Character("Prosperity Dragon", color="#ffd700", callback=name_callback, cb_name="prosperity_dragon") # Bright gold — divine voice
-define performers     = Character("Nervous Performer", color="#ff8c00", callback=name_callback, cb_name="performers") # Orange — festival performers
-define vendor         = Character("Vendor",          color="#cd853f", callback=name_callback, cb_name="vendor")  # Peru — market vendor
-define taotie    = Character("Taotie",                color="#ff0000", callback=name_callback, cb_name="taotie")  # Red, no name — monster sounds
-define lead_fire_channeler = Character("Lead Fire Channeler", color="#ff4500", callback=name_callback, cb_name="lead_fire_channeler")  # Red-orange — rehearsal leader
-define female_guard        = Character("Female Guard",        color="#708090", callback=name_callback, cb_name="female_guard")  # Slate — castle guard
-define male_soldier_1      = Character("Soldier",             color="#a0a0a0", callback=name_callback, cb_name="male_soldier_1")  # Grey — generic soldier
-define male_soldier_2      = Character("Soldier",             color="#a0a0a0", callback=name_callback, cb_name="male_soldier_2")  # Grey — generic soldier
-define woman_1     = Character("Woman 1",               color="#f4a7b9", callback=name_callback, cb_name="woman_1")  # Rose — desperate audition applicant | NPC
-define woman_3     = Character("Woman 1",               color="#f4a7b9", callback=name_callback, cb_name="woman_3")  # Rose — desperate audition applicant | NPC
-define man_1     = Character("Man 1",               color="#0054ca", callback=name_callback, cb_name="man_1") # NPC
-define man_2     = Character("Man 2",               color="#0054ca", callback=name_callback, cb_name="man_2") # NPC
-define man_3     = Character("Man 3",               color="#0054ca", callback=name_callback, cb_name="man_3") # NPC
-define yg        = Character("Yaoguai",              color="#6c0909", callback=name_callback, cb_name="yg") #Yaoguai beast
+define dorian                   = Character("Dorian",               color="#d4af37", callback=name_callback, cb_name="dorian")  # Gold — paladin, protagonist
+define elara                    = Character("Elara",                color="#f4a7b9", callback=name_callback, cb_name="elara")  # Soft rose — warm, loving
+define lucas                    = Character("Lucas",                color="#87ceeb", callback=name_callback, cb_name="lucas")  # Sky blue — youngest, excited
+define sarah                    = Character("Sarah",                color="#dda0dd", callback=name_callback, cb_name="sarah")  # Plum — artistic, quiet
+define emily                    = Character("Emily",                color="#f0e68c", callback=name_callback, cb_name="emily")  # Khaki — witty, streetwise
+define daniel                   = Character("Daniel",               color="#90ee90", callback=name_callback, cb_name="daniel")  # Light green — cool, sarcastic
+define cyrus                    = Character("Paladin Cyrus",        color="#8b0000", callback=name_callback, cb_name="cyrus")  # Dark red — authoritarian
+define feng                     = Character("Paladin Feng",         color="#4169e1", callback=name_callback, cb_name="feng")  # Royal blue — loyal, warm
+define olympia                  = Character("Empress Olympia",      color="#9370db", callback=name_callback, cb_name="olympia")  # Medium purple — regal
+define long_shen                = Character("King Long Shen",       color="#228b22", callback=name_callback, cb_name="long_shen")  # Forest green — Tianho king
+define emperor_minjoon          = Character("Emperor Min-joon",     color="#b8860b", callback=name_callback, cb_name="emperor_minjoon") # Dark gold — Kyeongjang
+define niko                     = Character("Niko",                 color="#e0c8a0", callback=name_callback, cb_name="niko")  # Warm parchment — healer, devout
+define kaito                    = Character("Kaito",                color="#b0d0e0", callback=name_callback, cb_name="kaito")  # Pale blue — Niko's brother
+define yuxuan                   = Character("Cheng Yuxuan",         color="#00ced1", callback=name_callback, cb_name=["supply_robot", "yuxuan"])  # Dark turquoise — inventor
+define vasily                   = Character("Count Vasily",         color="#c0c0c0", callback=name_callback, cb_name="vasily")  # Silver — Dorian's commander
+define gao                      = Character("Soldier Gao",          color="#a0a0a0", callback=name_callback, cb_name="gao")  # Grey — reliable soldier
+define jiang                    = Character("Soldier Jiang",        color="#a0a0a0", callback=name_callback, cb_name="jiang")  # Grey — reliable soldier
+define prosperity_dragon        = Character("Prosperity Dragon",    color="#ffd700", callback=name_callback, cb_name="prosperity_dragon") # Bright gold — divine voice
+define performers               = Character("Nervous Performer",    color="#ff8c00", callback=name_callback, cb_name="performers") # Orange — festival performers
+define vendor                   = Character("Vendor",               color="#cd853f", callback=name_callback, cb_name="vendor")  # Peru — market vendor
+define taotie                   = Character("Taotie",               color="#ff0000", callback=name_callback, cb_name="taotie")  # Red, no name — monster sounds
+define lead_fire_channeler      = Character("Lead Fire Channeler",  color="#ff4500", callback=name_callback, cb_name="lead_fire_channeler")  # Red-orange — rehearsal leader
+define female_guard             = Character("Female Guard",         color="#708090", callback=name_callback, cb_name="female_guard")  # Slate — castle guard
+define male_soldier_1           = Character("Soldier",              color="#a0a0a0", callback=name_callback, cb_name="male_soldier_1")  # Grey — generic soldier
+define male_soldier_2           = Character("Soldier",              color="#a0a0a0", callback=name_callback, cb_name="male_soldier_2")  # Grey — generic soldier
+define woman_1                  = Character("Woman 1",              color="#f4a7b9", callback=name_callback, cb_name="woman_1")  # Rose — desperate audition applicant | NPC
+define woman_3                  = Character("Woman 1",              color="#f4a7b9", callback=name_callback, cb_name="woman_3")  # Rose — desperate audition applicant | NPC
+define man_1                    = Character("Man 1",                color="#0054ca", callback=name_callback, cb_name="man_1") # NPC
+define man_2                    = Character("Man 2",                color="#0054ca", callback=name_callback, cb_name="man_2") # NPC
+define man_3                    = Character("Man 3",                color="#0054ca", callback=name_callback, cb_name="man_3") # NPC
+define yg                       = Character("Yaoguai",              color="#6c0909", callback=name_callback, cb_name="yg") #Yaoguai beast
 
 # Chapter 2
 define svante          = Character("Svante",             color="#9b59b6", callback=name_callback, cb_name="svante")  # Purple — violet-haired aldorith
@@ -76,7 +76,7 @@ define ji_hye         = Character("Royal Advisor Ji-hye", color="#f9a8d4", callb
 define tian_xun       = Character("Tian Xun",          color="#f97316", callback=name_callback, cb_name="tian_xun")  # Orange — volatile explosives fanatic
 define aoi            = Character("Aoi",               color="#67e8f9", callback=name_callback, cb_name="aoi")  # Cyan — cold water channeler from Hinami
 define tim            = Character("Tim",               color="#4ade80", callback=name_callback, cb_name="tim")  # Green — green-haired child prodigy
-define tedda_alive    = Character("Tedda",             color="#fbbf24", callback=name_callback, cb_name="tedda_alive")  # Warm yellow — animated stuffed bear
+define tedda    = Character("Tedda",                    color="#f94294", callback=name_callback, cb_name="tedda=")  # Warm yellow — animated stuffed bear
 define carriage_driver = Character("Carriage Driver",  color="#9ca3af", callback=name_callback, cb_name="carriage_driver")  # Grey — Cheng Industries driver
 define prophet        = Character("Prophet",           color="#c4b5fd", callback=name_callback, cb_name="prophet")  # Soft purple — Niko's fellow brother
 define courtier_1     = Character("Courtier 1",        color="#d1d5db", callback=name_callback, cb_name="courtier_1")  # Light grey — Kyeongjang courtier

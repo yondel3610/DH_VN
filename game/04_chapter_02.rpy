@@ -2625,43 +2625,33 @@ label ch2_questions:
 
             show vasily alt_normal at right_char
             "Vasily gave a solemn nod. He gestured toward Niko."
+            hide vasily
 
             jump ch2_end
 
 
 label ch2_end:
-
-    # PDF p99 — Niko and Prophet give directions
+    show niko alt_base at right_char with Dissolve(0.2)
     niko "Frostcradle lies to the west, buried in the heart of the mountains."
 
     "The other prophet raised a pale hand, pointing to a crudely drawn map on the table beside him. The inked lines were jagged, as if the cartographer's hand had trembled while drawing."
-
-    "Prophet: Follow the ridge through the Iceclaw Pass. Then just go straight until you reach the Frostcradle."
+    hide niko
+    show prophet_2 at right_char with Dissolve(0.2)
+    prophet_2 "Follow the ridge through the Iceclaw Pass. Then just go straight until you reach the Frostcradle."
+    hide prophet_2
 
     "I nodded, already tightening the straps of my pack. I adjusted the thick layers of fur and leather I had donned before leaving the castle."
-
+    show vasily neutral at right_char with Dissolve(0.2)
     vasily "Take care, Dorian. I wouldn't want you to end up like those aldorith mutts."
 
+    show dorian serious at left_char
     dorian "I'll find it."
 
     "Without another word, I turned on my heel, the weight of my mission pressing heavily on my shoulders."
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
-    stop music fadeout 2.0
-    stop audio fadeout 1.5
 
-    pause 2.0
-
-    # Chapter title card — Chapter 3 header
-    show screen chapter_title_screen(
-        "3",
-        "Frostcradle",
-        subtitle="Kingdom of Mjoll — The Cursed Mine",
-        duration=3.0
-    )
-    pause 3.0
-
-    jump chapter_3
+    jump chapter_2_extension
+    # TODO: some audio from ch2 will be at the ch3 file due to some error, deal with it
 
 
 # =============================================================================

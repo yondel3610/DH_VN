@@ -27,7 +27,7 @@
 #     yalign 1.0
 
 # --- Backgrounds: Tianho City ---
-image bg_tianho_city_night:
+image bg_tianho_city_night: 
     "images/Assets/Background/Tianho - night.jpg"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
@@ -135,7 +135,7 @@ image bg_tianho_throne:
 
 # ==============================================================
 # TODO: NOTE: some CGs are transparent pngs
-image cg_blindinglight:
+image cg_blindinglight: # vasily's powers 9when vasily uses flash or blinding light)
     "images/cg/cg_blindinglight_vasily.jpg"
     size (1920, 1080)
     xalign 0.5
@@ -208,7 +208,7 @@ image frostcradle_blizzard: # BG – Icelands in pdf
     xalign 0.5
     yalign 1.0
 
-image frostcradle_no_blizzard:
+image frostcradle_no_blizzard: # BG - Frostcradle - Normal in pdf
     "images/Assets/Background/Frostcradle - No blizzard.png"     
     size (1920, 1080)
     xalign 0.5
@@ -216,13 +216,15 @@ image frostcradle_no_blizzard:
 
 image frostcradle_cabin:
     "images/Assets/Background/Frostcradle - cabin inside.png"         
-    size (1920, 1080)
+    # fit "cover"
+    zoom 0.908
     xalign 0.5
     yalign 1.0
 
 image frostcradle_cabin_on:
     "images/Assets/Background/Frostcradle - lights on -  cabin inside.jpg"         
-    size (1920, 1080)
+    # size (1920, 1080)
+    zoom 0.908
     xalign 0.5
     yalign 1.0
 
@@ -284,13 +286,14 @@ image cg_dorian_hug_elias:
 
 image cg_family_into_light:
     "images/Assets/Illustrations/17 - Elara, Daniel, Sarah, Emily, Lucas walk into the light.png"
-    size (1920, 1080)
+    zoom 0.65
     xalign 0.5
     yalign 1.0
 
 image cg_trio_in_frostcradle:
     "images/Assets/Illustrations/18 , 19 - Yuxuan, Elias, Dorian in Frostcradle.png"
-    size (1920, 1080)
+    # size (1920, 1080)
+    zoom 0.65
     xalign 0.5
     yalign 1.0
 
@@ -301,6 +304,12 @@ image cg_trio_in_frostcradle:
 # ==============================================================
 
 # CG 
+image plain_white: # for dream sequences or talking to the dead
+    "images/cg/plain_white.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image cg_kristin_death:
     "images/Assets/Illustrations/20 - Kristin getting killed.png"
     size (1920, 1080)

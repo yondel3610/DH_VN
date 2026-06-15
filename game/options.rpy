@@ -20,7 +20,7 @@ define config.name = _("Dragon's Heart: demo version")
 # game version docs:
 # [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "dev 1.1.0"
+define config.version = "dev 1.3.0"
 # define config.version = "alpha 1.2.0"
 # define config.version = "demo 1.2.0"
 
