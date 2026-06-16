@@ -2001,6 +2001,7 @@ label ch3_vasily_arrives:
 
     svante  "K-Kristin… No…"
     kristin "B-Brother… I'm sorry… Tell mother I—"
+    show svante normal_angry at left_char
     svante  "Kristin! KRISTIN!"
 
     show vasily alt_think at right_char
@@ -2036,6 +2037,7 @@ label ch3_vasily_arrives:
 
     vasily "A mansion, Dorian. Wealth. Comfort. You don't have to keep running, keep hiding. You've saved me countless times, and I'm here to save you."
     vasily "I mean it, Dorian. You're my friend. Don't ruin everything for one child. Let me help you."
+    $ renpy.save("quick-1") # retry/quick save
     vasily "Well, Dorian? What's it going to be?"
 
     jump ch3_critical_fork
@@ -2068,20 +2070,31 @@ label ch3_critical_fork:
             "Vasily smiled."
 
             vasily "Aldoriths, go inside and kill the prince. Now."
-
+            hide vasily
+            show boy_ald_normal at right_flip with Dissolve(0.2)
             boy_ald_soldier "What? That's it? You're not going to punish this traitor for—"
-            show vasily alt_aggressive at right_char
+            hide boy_ald_normal
+            show vasily alt_aggressive at right_char with Dissolve(0.2)
             vasily "Do it. Now."
+            "The boy faltered, swallowed hard, and then nodded."
+            hide vasily
+            show boy_ald_normal at right_flip with Dissolve(0.2)
             boy_ald_soldier "Yes, sir."
+            hide boy_ald_normal
+            show girl_ald_normal at right_char with Dissolve(0.2)
             girl_ald_soldier "On it, sir!"
+            hide girl_ald_normal
 
-            # show svante at left_char               # PLACEHOLDER
+            show svante normal_angry at right_char with Dissolve(0.2) 
             svante "Leave the prince to me. Kristin… sister… you'll be avenged."
+            hide svante
 
             show vasily alt_normal at right_char
             "Vasily turned to me, his eyes soft."
 
             vasily "You made the right choice, friend. Now let us take care of business. I'm sure you'd rather… not see how the prince will be dealt with."
+            "I didn't respond. I couldn't. Vasily sighed, draping a heavy jacket over my shoulders."
+            vasily "You must be cold. Come on. I had some aldoriths brew you up some tea."
 
             show dorian sad at left_char
             dorian "Thanks, Vasily."
@@ -2094,60 +2107,6 @@ label ch3_critical_fork:
             $ ch3_d5 = "refused"
             $ svante_affection += 1
             stop sound
-
-            show dorian neutral at left_char with Dissolve(0.2)
-            dorian "No, Vasily. I can't do this. I beg you just… take the coin."
-            dorian "I'll return every piece the King gave me for this mission. No harm, no foul. We can both walk away from this."
-
-            show vasily alt_aggressive at right_char
-            vasily "You don't get it, do you? This isn't about the coin, Dorian. It's about loyalty. It's about trust."
-            vasily "The prince needs to die."
-            vasily "You're putting me in a bad spot, old friend. I vouched for you. I said you'd get the job done, no questions asked."
-
-            # show svante at left_char               # PLACEHOLDER
-            svante "That boy — that prince — is the reason my sister is dead! You're protecting a murderer! You're as guilty as he is!"
-
-            show dorian normal_alt_calm at left_char
-            dorian "Look. I beg you. Just take the money. We all can—"
-
-            show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
-            elias "Daddy?"
-
-            show dorian serious at left_char
-            "My heart dropped. I spun around, and there he was — Elias — standing at the entrance of the shack, clutching Tedda tightly. His small face pale, his wide eyes flicking between me and the soldiers."
-
-            dorian "Elias! Get back inside! Now!"
-
-            hide elias
-            show vasily alt_aggressive at right_char
-            "I turned back to Vasily, my hand instinctively moving to the hilt of my blade."
-
-            show dorian neutral at left_char
-            dorian "You see? He's just a child, Vasily. Look at him. Does he look like a killer to you?"
-
-            show vasily alt_aggressive at right_char
-            vasily "The prince needs to die. My loyalty stands with the king."
-
-            boy_ald_soldier  "Long live King Gustav!"
-            girl_ald_soldier "Long live King Gustav!"
-            svante           "L-Long live King Gustav!"
-
-            show dorian dragon_eyes at left_char
-            dorian "Enough!"
-
-            "My shout echoed through the cave, silencing the crowd. I stepped forward, placing myself between Elias and the soldiers."
-
-            show dorian serious at left_char
-            dorian "If you want him, you'll have to go through me."
-
-            show vasily alt_think at right_char
-            vasily "Don't do this, old friend. You're throwing your life away for a child who doesn't even belong to you. Is it even worth it?"
-            show dorian neutral at left_char
-            dorian "Yes. Yes, he is."
-            show vasily alt_aggressive at right_char
-            vasily "So be it."
-
-            hide vasily
             jump ch3_fight_back
 
 # =============================================================================
@@ -2160,48 +2119,63 @@ label ch3_critical_fork:
 
 label ch3_bad_end:
 
-    # scene bg_mjoll_town_normal with fade              # PLACEHOLDER
+    scene bg_mjoll_icelands with fade              
     # play music ost_bad_end_luxury fadein 3.0          # PLACEHOLDER
 
     "Years passed."
     "Mjoll welcomed me back like a long-lost hero."
-
-    # scene bg_mjoll_palace_normal with dissolve        # PLACEHOLDER
-
-    show dorian neutral at left_char with Dissolve(0.2)
-    show vasily alt_normal at right_char with Dissolve(0.2)
+    "Vasily was true to his word—he always was. The mansion he promised became mine, a grand, sprawling estate with lush gardens, gilded halls, and guards at every gate."
+    "Wealth flowed endlessly, and with it came the comforts I'd once dreamed of during those cold, lonely nights in the field."
+    "The missions resumed soon enough. Vasily handpicked each one, ensuring my success and cementing my place as one of King Gustav's most trusted assets."
+    scene mjoll_palace_throne with dissolve       
+    "Vasily visited often. He'd stroll through the gardens with a glass of wine in hand, talking about politics, conquests, or whatever lavish party he was planning next. "
+    "He'd laugh, slap me on the back, and call me his old friend."
+    
+    show dorian serious at left_char
+    show vasily neutral at right_char 
+    with Dissolve(0.2)
     vasily "You've done well for yourself, my friend. Look at you now. Comfortable, respected… untouchable."
+
+    woman_3 "You sure know how to throw a party, sir Dorian!"
+    woman_1 "Maybe you'd like some… company later? *blushes*"
+    dorian "Thanks. See you at the next party."
+
     vasily "Ladies, calm down. This is Dorian, the legendary mercenary of Mjoll you're speaking to!"
+
+    woman_3 "Of course, Count. We know that. That's why we want to be with him."
 
     "But his words rang hollow, like the clinking of glasses in empty halls."
     "I never saw Elias again."
-    "It wasn't hard to imagine where he might've ended up. I stopped asking questions. Stopped wondering. Wondering only made the nights longer."
+    "It wasn't hard to imagine where he might've ended up—locked away in some tower or paraded around as a trophy of Gustav's power."
+    "I stopped asking questions. Stopped wondering. Wondering only made the nights longer."
     "As for Yuxuan? I avoided him entirely."
+    "The thought of facing him, of seeing the disappointment or anger in his eyes, was unbearable."
+    "He didn't deserve an explanation."
+    "Not from me."
     "And Elara…"
     "Would she be proud of me?"
     "I already knew the answer."
 
     "The parties became a regular occurrence, each one more extravagant than the last."
+    "Nobles from across the kingdoms gathered in glittering halls, their laughter echoing off marble walls."
+    "I attended them all, silent and distant, a shadow in the midst of their revelry."
 
-    show dorian neutral at left_char
     vasily "Another grand event next week, my friend. King Gustav will be there. You'll come, won't you?"
     dorian "Of course, Vasily."
+    woman_3 "Ooh sir Dorian! If you wanna have a good time, I know where it's at!"
 
     hide vasily
     hide dorian
-    # scene bg_mjoll_cliffside with fade                # PLACEHOLDER
+    scene frostcradle_blizzard with fade                # PLACEHOLDER
     # stop music fadeout 3.0
 
     show dorian sad at left_char with Dissolve(0.2)
     "One evening, I left the party early."
-    "The wind was bitter, cutting through my coat as I stood at the edge of the cliff. Below, the snow stretched endlessly, a vast, frozen wasteland illuminated by the pale light of the moon."
-    "I stared out at the expanse, my mind swirling with memories I could no longer suppress."
+    "The wind was bitter, cutting through my coat as I stood at the edge of the cliff."
+    "Below, the snow stretched endlessly, a vast, frozen wasteland illuminated by the pale light of the moon."
+    "I stared out at the expanse, my mind swirling with memories I could no longer suppress. Elias's innocent smile. Yuxuan's sarcastic quips."
     "And Elara. Always Elara."
     "I could almost hear her voice, soft and loving, like it used to be when she whispered my name."
-
-    # scene cg_bad_end_cliff with dissolve              # PLACEHOLDER
-    # pause 2.0
-
     "The snow beneath my boots crunched softly as I took a step closer to the edge."
 
     show dorian sad at left_char
@@ -2210,8 +2184,7 @@ label ch3_bad_end:
     "For a moment, everything was silent. The world seemed to hold its breath, waiting."
     "And then I let go."
 
-    hide dorian
-    scene cg_black with fade
+    scene black with fade
     # stop audio
 
     pause 3.0
@@ -2220,7 +2193,7 @@ label ch3_bad_end:
 
     pause 1.0
 
-    return
+    jump game_over
 
 # =============================================================================
 # SECTION 17: LABEL CH3_FIGHT_BACK — GOOD PATH: Draconic Fire Awakens
@@ -2234,171 +2207,239 @@ label ch3_bad_end:
 label ch3_fight_back:
 
     # play music ost_vasily_arrives fadein 0.5          # PLACEHOLDER
+    "I shook my head, stepping back from Vasily's grip, my voice firm but calm as I raised a hand in a gesture of negotiation."
 
-    show dorian serious at left_char with Dissolve(0.2)
-    show vasily alt_aggressive at right_char with Dissolve(0.2)
-    "Vasily raised his hand, an orb of light forming in his palm. He hurled it toward Elias with a flick of his wrist."
+    show dorian serious at left_char
+    show vasily alt_aggressive at right_char 
+    with Dissolve(0.2)
 
-    # play sound sfx_earth_eruption                     # PLACEHOLDER
+    dorian "No, Vasily. I can't do this. I beg you just… take the coin."
+    dorian "I'll return every piece the King gave me for this mission. No harm, no foul. We can both walk away from this."
+    show vasily neutral at right_char
+    "Vasily sighed, shaking his head slowly."
+    vasily "You don't get it, do you? This isn't about the coin, Dorian. It's about loyalty. It's about trust. The King doesn't just want his money's worth—he wants proof that his men are still willing to do what's necessary."
+    vasily "The prince needs to die."
+    "He took a step closer, his voice dropping to a near whisper."
 
-    show dorian normal_alt_confident at left_char
-    "I slammed my hands into the ground, the earth trembling beneath my feet as an earthen wall erupted from the cave floor. The light ball struck it with a deafening explosion."
+    vasily "You're putting me in a bad spot, old friend. I vouched for you. I said you'd get the job done, no questions asked. Do you know what happens to me if you fail?"
 
-    show dorian sad at left_char
-    "Before I could catch my breath, pain tore through my leg as an arrow sank deep into my thigh."
+    "Behind him, the violet haired aldorith let out a sharp, choked sob, his rage boiling over into words."
 
-    dorian "ARGH!"
+    hide vasily 
+    show svante normal_angry at right_char with Dissolve(0.2)
+    svante "That boy—that prince—is the reason my sister is dead! You're protecting a murderer! You're as guilty as he is!"
+    "I kept my stance firm, meeting Vasily's gaze."
 
-    "I stumbled, blood pouring from the wound. I tore the arrow free, the pain white-hot and blinding."
-    "Before I could recover, another arrow whistled through the air."
-    "Time seemed to slow as I saw it — its sharp tip gleaming, its deadly path aimed directly at Elias."
+    dorian "Look. I beg you. Just take the money. We all can-"
+    hide svante
+    show elias first_meet_neutral at right_elias with Dissolve(0.2) 
+    elias "Daddy?"
+    hide elias
 
-    hide dorian
-    hide vasily
-    # play sound sfx_arrow_hit                          # PLACEHOLDER
-    # scene cg_elias_shot with shock_cut                # PLACEHOLDER
-    # pause 0.8
-    # scene bg_frostcradle_exterior with dissolve
+    show dorian normal_alt_tense at left_char
+    "My heart dropped. I spun around, and there he was—Elias—standing at the entrance of the shack, clutching Tedda tightly to his chest."
+    "His small face was pale, his wide eyes flicking between me and the soldiers."
 
-    elias            "Ah!!"
-    boy_ald_soldier  "He's hit! The bastard prince is down!"
-    girl_ald_soldier "Praise be to Enoch! Someone check if he's dead!"
-    boy_ald_soldier  "Positive! The wound is grave — straight through the gut!"
-
-    show dorian angry at left_char with Dissolve(0.2)
+    show dorian angry at left_char
+    "I reached out, panic surging through me."
+    dorian "Elias! Get back inside! Now!"
+    
     show vasily alt_savage at right_char with Dissolve(0.2)
-    dorian "No! Elias! No!"
+    "I turned back to Vasily, my hand instinctively moving to the hilt of my blade."
 
-    "A ragged scream tore from my throat. Vasily's smirk widened as he approached the boy."
+    dorian "You see? He's just a child, Vasily. Look at him. Does he look like a killer to you?"
 
-    vasily "Such is the fate of all who goes against His Highness' wishes."
+    show vasily alt_mad at right_char
+    "Vasily's expression hardened, his eyes narrowing as he studied Elias."
+    vasily "The prince needs to die. My loyalty stands with the king. If the king says he murdered the Queen, then I would swear by Enoch's name that he did it."
+    
+    "Long live King Gustav!"
+    hide vasily
+
+    show svante normal_angry at right_char with Dissolve(0.2)
+    svante "L-Long live King Gustav!"
+    hide svante
+
+    dorian "Enough!"
+    "My shout echoed through the cave, silencing the crowd. I stepped forward, placing myself between Elias and the soldiers."
+
+    show dorian normal_alt_annoyed at left_char
+    dorian "If you want him, you'll have to go through me."
+    show vasily alt_mad at right_char with Dissolve(0.2)
+    "Vasily's eyes narrowed."
+    vasily "Don't do this, old friend. You're throwing your life away for a child who doesn't even belong to you. Is it even worth it?"
+
+    show dorian serious at left_char
+    dorian "Yes. Yes, he is."
+
+    show vasily neutral at right_char
+    "Vasily's hands glew with light. He scoffed."
+    vasily "So be it."
+
+    scene cg_blindinglight with shock_cut
+    "Vasily raised his hand, an orb of light forming in his palm. He hurled it toward Elias with a flick of his wrist, the sphere roaring through the cave like a comet."
+    scene frostcradle_no_blizzard with Dissolve(0.4)
 
     show dorian dragon_eyes at left_char
+    show vasily alt_savage at right_char
+    with Dissolve(0.2)
+    "I slammed my hands into the ground, the earth trembling beneath my feet as an earthen wall erupted from the cave floor."
+    "The light ball struck it with a deafening explosion, the impact sending shards of rock flying in every direction."
+    "Before I could catch my breath, pain tore through my leg as an arrow sank deep into my thigh."
+    show dorian angry at left_char with Dissolve(0.1)
+    dorian "ARGH!!!"
+    "I stumbled, my balance faltering, blood pouring from the wound. Gritting my teeth, I tore the arrow free, the pain white-hot and blinding."
+    "But before I could recover, another arrow whistled through the air."
+    "Time seemed to slow as I saw it—its sharp tip gleaming, its deadly path aimed directly at Elias."
+
+    scene cg_elias_arrow with shock_cut
+    "The arrow struck him."
+
+    elias "AH!!"
+
+    "He crumpled to the ground, his small body going limp, blood pooling beneath him."
+
+    scene frostcradle_no_blizzard with Dissolve(0.3)
+    show boy_ald_normal at left_char
+    show girl_ald_normal at right_char
+    with Dissolve(0.2)
+
+    boy_ald "He's hit! The bastard prince is down!"
+    girl_ald "Praise be to Enoch! Someone check if he's dead!"
+    boy_ald "Positive! The wound is grave—straight through the gut!"
+
+    hide boy_ald_normal
+    hide girl_ald_normal
+    show dorian angry at left_char
+    with Dissolve(0.2)
+
+    dorian "No! Elias! No!"
+    "A ragged scream tore from my throat as I staggered toward him. Vasily's smirk widened as he approached the boy, his hand glowing with that same deadly light."
+    
+    show vasily neutral at right_char with Dissolve(0.2)
+    vasily "Such is the fate of all who goes against His Highness' wishes."
+
+    dorian "Elias!! Elias!!"
+    "I stared at Elias lying there—innocent, bloodied, and helpless."
     dorian "Elias!! Please!!"
 
-    "He didn't respond. His eyes fluttered shut, and the world around me seemed to fade."
+    "He didn't respond. His eyes fluttered shut, and the world around me seemed to fade. All I could hear was the pounding of my heart and Vasily's laughter, cold and mocking."
+    "My vision blurred, tears streaming down my face."
     "And then, I heard it."
 
-    hide dorian
-    hide vasily
-    # scene cg_black with fade                          # PLACEHOLDER
-    # stop music fadeout 1.0
-
-    # show prosperity_dragon at center_char     # PLACEHOLDER — no sprite declared
+    scene black with fade
+    "A voice. Familiar. Deep. Ancient. Unstoppable."
     prosperity_dragon "Never shall it be said that my children are weak. Rise up, Dorian!"
     prosperity_dragon "Do not mourn. Fight!"
 
-    # scene cg_draconic_fire_awakens with flash         # PLACEHOLDER
-    # pause 1.5
-    # play music ost_draconic_awakening fadein 0.5      # PLACEHOLDER
-    # scene bg_frostcradle_exterior with dissolve
-
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
-    "The air around me shifted. Heat radiated outward from my body, intense and suffocating."
+    show screen rage_power
+    with dissolve
+    "The air around me shifted. Heat radiated outward from my body, intense and suffocating. My hands, still trembling, began to glow, flames flickering to life on my fingertips."
     "I looked down at Elias, tears streaking my face, and something inside me shattered. The grief twisted, transformed into something raw and feral."
     "Rage."
+    "They wanted Elias… and they were going to have to pay for it in blood."
+    hide screen rage_power
+    with dissolve
+
+    scene frostcradle_no_blizzard
+    show screen draconic_rage 
+    show dorian dragon_eyes at left_char
+    with Dissolve(0.2)
 
     dorian "You'll pay for this, Vasily… You'll pay for this."
-
-    show vasily alt_shocked at right_char with Dissolve(0.2)
+    "Vasily's smirk faltered. He took a step back, his hand lowering as the fire around me grew, its heat warping the air."
+    
+    show vasily alt_mad at right_char with Dissolve(0.2)
     vasily "D… Draconic fire?! In Enoch's name…"
     vasily "Friend… wait… we can talk about this—"
-
-    hide vasily
-    # play sound sfx_draconic_roar                      # PLACEHOLDER
-
-    # scene cg_battalion_falls with shock_cut           # PLACEHOLDER
-    # pause 2.0
-    # scene bg_frostcradle_aftermath with dissolve      # PLACEHOLDER
-
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
+    "I didn't let him finish."
     "With a roar that shook the cave, I raised my hands, fire erupting in a torrent that roared like a beast unleashed."
+    "It surged toward him, engulfing him completely. His screams were drowned out by the crackling inferno."
 
-    vasily           "Ahhh!! Ahhhh!!!"
-    girl_ald_soldier "What in the name of Enoch—"
-    boy_ald_soldier "C-Charge! Charge!"
+    vasily "Ahhh!! Ahhhh!!!"
+    hide vasily with Dissolve(0.3)
 
-    "They came at me in waves. But I killed them."
-
-    "Female soldier: No!! Ahhh!!!!"
-    "Male soldier: Ahhhh!!!"
-    "Boy Aldorith: Mercy!! Enoch save me!! Ahhh!!"
-    "Girl Aldorith: We're just obeying orders! Don't kill us!! Ahh!!"
-
-    # -------------------------------------------------------------------------
-    # NIKO HEALS ELIAS (raven form — no sprite; narrated only)
-    # -------------------------------------------------------------------------
-
+    show girl_ald_normal at right_char with Dissolve(0.2)
+    girl_ald "What in the name of Enoch—"
+    "The ground beneath her erupted, jagged pillars of molten rock spearing upward. The heat melted the steel of her armor, her body incinerated before she could even cry out."
+    hide girl_ald_normal
+    hide screen draconic_rage
     hide dorian
-    elias      "D-Daddy… I-It hurts… it hurts! *cries*"
-    niko_raven "Shh… hey, hey. Little one. Are you alright?"
-    elias      "N-No! G-Get away! Don't hurt me! *cries*"
-    niko_raven "Hey, hey. Look at me. See? Just a bird. A talking, friendly bird."
-    elias      "A… A bird?"
-    niko_raven "Yes. Talking, friendly, very handsome bird. Came just for you."
-    elias      "It… it hurts… I'm scared… I don't wanna die… *cries*"
-    niko_raven "Now where does it hurt?"
-    elias      "M-My tummy… I-It's cold… it's so cold…"
-    niko_raven "Then hold this. One of my feathers. See? Strong. Safe."
-    niko_raven "Big bird's going to help you. It might tickle, might sting — but I promise, you'll feel better soon. Bird's honor."
-    elias      "*crying*"
-    niko_raven "Wait — what's this? Is this your friend?"
-    elias      "T-Tedda… Her name is Tedda. She's… friend."
-    niko_raven "Tedda, huh? A brave guardian. Good. You hold her tight. You've got her… and now you've got me."
-    elias      "I… I don't wanna die… like Mommy *cries*"
-    niko_raven "Not today. Not while the wind still moves and the roots still breathe. I'm going to patch you up, little prince. I promise. Just breathe with me."
-    elias      "O… Okay."
 
-    # -------------------------------------------------------------------------
-    # SVANTE ALONE
-    # -------------------------------------------------------------------------
+    scene cg_mjoll_massacre with fade
+    # TODO: add intense fight music (massacre)
+    boy_ald "C-Charge! Charge!"
+    "They came at me in waves, arrows flying, swords raised."
+    "But I killed them."
+    "I raised one hand, and the earth quaked. Chasms opened beneath their feet, swallowing them whole."
+    "With the other, I sent firestorms spiraling into their ranks, their screams echoing as they burned alive."
 
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
-    "One by one, they fell. Then… the violet-haired aldorith was the only one left."
+    female_soldier_1 "No!! Ahhh!!!!"
+    male_soldier_1 "Ahhhh!!!"
+    boy_ald "Mercy!! Enoch save me!! Ahhh!!"
+    girl_ald "We're just obeying orders! Don't kill us!! Ahh!!"
+    dorian "..."
 
-    show svante normal_nervous at right_char with Dissolve(0.2)
+    scene black with fade
+    "A raven approached Elias."
+    elias "D-Daddy… I-It hurts… it hurts! *cries*"
+    niko "Shh… hey, hey. Little one. Are you alright?"
+    elias "N-No! G-Get away! Don't hurt me! *cries*"
+    niko "Hey, hey. Look at me. See? Just a bird. A talking, friendly bird."
+    elias "A… A bird?"
+    niko "Yes. Talking, friendly, very handsome bird. Came just for you."
+    elias "It… it hurts… I'm scared… I don't wanna die… *cries*"
+    niko "Now where does it hurt?"
+    elias "M-My tummy… I-It's cold… it's so cold…"
+    niko "Then hold this. One of my feathers. See? Strong. Safe."
+    niko "Big bird's going to help you. It might tickle, might sting—but I promise, you'll feel better soon. Bird's honor."
+    elias "*crying*"
+    niko "Wait—what's this? Is this your friend?"
+    elias "T-Tedda… Her name is Tedda. She's… friend."
+    niko "Tedda, huh? A brave guardian. Good. You hold her tight. You've got her… and now you've got me."
+    elias "I… I don't wanna die… like Mommy *cries*"
+    niko "Not today. Not while the wind still moves and the roots still breathe. I'm going to patch you up, little prince. I promise. Just breathe with me."
+    elias "O…Okay."
+
+    scene black with fade
+
+    # Back to Dorian's massacre aftermath
+    scene frostcradle_no_blizzard with Dissolve(0.6)
+    "One by one, they fell, their bodies consumed by the flames or crushed beneath the earth's fury. The snow outside melted, turning to steam that hissed and billowed around the cave."
+    "Then… the violet haired aldorith was the only one left."
+
+    show svante normal_sad at right_char
+    show dorian normal_alt_annoyed at left_char 
+    with Dissolve(0.2)
     "He fell to his knees, tears streaming down his face, his sword clattering to the ground."
-
-    svante "P-Please! Mercy! I-I didn't mean for this! It wasn't supposed to happen like this! Kristin — she's dead, and now—"
-
+    show svante normal_nervous at right_char
+    svante "P-Please! Mercy! I-I didn't mean for this! It wasn't supposed to happen like this! Kristin—she's dead, and now—"
     "His words dissolved into incoherent sobs as he clutched at the hem of my cloak."
-
-    show dorian dragon_eyes at left_char
     "I raised a hand, fire flickering at my fingertips."
+    dorian "…"
 
-    show svante alt_guilty at right_char
     svante "Please! I believed my sister! But you saw what they did to her! I don't— *crying*"
     svante "I'm sorry! I'm sorry! Please, sir! I—"
 
+    show dorian serious at left_char 
     "The fire in my hand flared, my rage begging for release. I took a step forward, the heat forcing him to crawl backward."
     "And then his foot slipped."
 
-    # play sound sfx_earth_eruption                     # PLACEHOLDER
-    # scene cg_svante_falls with shock_cut              # PLACEHOLDER
-    # pause 0.5
-    # scene bg_frostcradle_aftermath with dissolve      # PLACEHOLDER
-
-    hide svante
     svante "AHHHH!!!"
-
+    scene black with shock_cut
     "The ground beneath him crumbled. He screamed as he fell, his voice cutting off abruptly."
     "Silence."
 
-    # stop music fadeout 2.0
-    # play sound sfx_heartbeat loop                     # PLACEHOLDER
-
-    show dorian sad at left_char with Dissolve(0.2)
-    "I clenched my fists, the flames flickering out, leaving behind only the charred remains of what had been a battalion."
-    "I staggered, the heat around me dying down as exhaustion took hold."
-
-    # stop sound
+    scene bg_frostcradle_cave with Dissolve(0.9)
+    "The cave was still, save for the hiss of steam and the crackle of dying flames."
+    show dorian sad at center with Dissolve(0.2)
+    "I clenched my fists, the flames flickering out, leaving behind only the charred remains of what had been a battalion of soldiers."
+    "I staggered, the heat around me dying down as exhaustion took hold. My legs gave out beneath me, and I crumpled to the ground. My vision blurred, darkness creeping in at the edges."
 
     dorian "Elias…"
     dorian "I'm sorry… I'm so sorry..."
-
-    hide dorian
     "The last of my strength slipped away, and the world around me faded into darkness."
-
+    scene black with fade
     jump ch3_escape
 
 
@@ -2410,38 +2451,36 @@ label ch3_fight_back:
 # Chapter ends with 'jump chapter_4'.
 # =============================================================================
 label ch3_escape:
-
-    scene cg_black with fade
-    # stop audio fadeout 1.5
-
+    scene black
     pause 1.5
-
     "A faint whirring sound pulled me from the void. It was mechanical, distant, but growing louder."
+    # TODO: add robot motor sounds (small motors)
+    "My body felt heavy, as though I were sinking into the earth itself."
+    # stop sound
     "Then I heard a voice, sharp and familiar, cutting through the haze."
 
-    show yuxuan normal_sad at left_char with Dissolve(0.2)
+    scene bg_frostcradle_cave with Dissolve(0.5)
+    show supply_robot sad at left_supply with Dissolve(0.2)
     yuxuan "Dorian! Goodness, what happened here?!"
 
     "I forced my eyes open, just for a moment. A faint hologram flickered before me — Yuxuan's face, distorted by static, but unmistakably horrified."
 
     yuxuan "Prosperity Dragon bless me. I need to get you to safety…. Miss Weng! Call the—"
 
-    hide yuxuan
+    hide supply_robot
     "The bot hovered closer, scanning the scene. I wanted to respond, to explain, but my body betrayed me."
     "My head lolled to the side, and everything went dark again."
 
-    # scene bg_carriage_interior with fade              # PLACEHOLDER
-    # play music ost_escape_carriage fadein 3.0         # PLACEHOLDER
-    # play audio amb_carriage_wheels loop fadein 1.5    # PLACEHOLDER
-
-    show dorian neutral at left_char with Dissolve(0.2)
+    scene black with fade
     "The next time I stirred, the world felt different. Softer. Warmer."
-    "I blinked against the light filtering through the carriage windows, the soft sway of motion beneath me. My head throbbed with a dull ache."
-
+    "I wasn't on the frozen ground anymore. Instead, I was lying in something cushioned, wrapped in thick blankets."
+    "I blinked against the light filtering through the carriage windows, the soft sway of motion beneath me lulling but unfamiliar."
+    "My head throbbed with a dull ache, and when I tried to sit up, a sharp pain shot through my leg, forcing a groan past my lips."
     dorian "Elias…"
-
-    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
     "Panic surged through me until I looked to my side and saw him."
+
+    scene yuxuan_carriage with Dissolve(0.5)
+    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
     "He was there, curled up on the bench across from me, Tedda clutched tightly in his arms. His chest rose and fell with shallow but steady breaths."
 
     show elias first_meet_neutral at right_char_kids

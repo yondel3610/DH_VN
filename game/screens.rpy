@@ -92,6 +92,8 @@ screen say(who, what):
     window:
         id "window"
 
+        add gui.textbox_image xalign 0.5 yalign 1.0
+
         if who is not None:
 
             window:
@@ -124,7 +126,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/assetrip/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -133,7 +135,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/assetrip/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -274,7 +276,7 @@ style choice_button:
     xpadding 50 #extra padding
     ypadding 10
 
-    background Frame("#444444", 10, 10)
+    background Frame("gui/assetrip/choice_idle_background.png", 10, 10)
     hover_background Frame("#666666", 10, 10)
     
 style choice_button_text:

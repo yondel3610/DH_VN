@@ -337,3 +337,58 @@ transform dream_haze:
         linear 1.5 blur 0
     parallel:
         linear 1.5 matrixcolor SaturationMatrix(1.0)
+
+# =========================================
+# DORIAN SPRITE GRADIENT SHIFT
+# to be used for dragon eyes sprite
+
+# show dorian dragon_eyes at left_char with Dissolve(0.3)
+# show dorian dragon_eyes at draconic_rage
+# =========================================
+
+# In transforms.rpy
+transform glow_outline:
+    ease 1.0 alpha 0.6
+    ease 0.5 alpha 0.3
+    ease 1.0 alpha 0.6
+    ease 1.0 alpha 0.6
+    ease 0.5 alpha 0.3
+    ease 1.0 alpha 0.6
+    repeat #with Dissolve(0.1)
+
+# In screens.rpy
+screen draconic_rage():
+    # Glow layer behind the sprite
+    add "dorian dragon_eyes":
+        at glow_outline
+        matrixcolor TintMatrix("#f54f13c1") * BrightnessMatrix(0.3)
+        xalign -0.15
+        yalign 0.3
+        zoom 1.20  # Slightly larger to create outline effect
+        yoffset 40
+        blur 8 
+
+transform fire_pulse:
+    linear 2.0 alpha 0.6
+    linear 1.0 alpha 0.3
+    linear 0.5 alpha 0.8
+    linear 1.0 alpha 0.5
+    repeat
+
+transform fire_pulse_gold:
+    linear 2.0 alpha 0.3
+    linear 1.0 alpha 0.6
+    linear 0.5 alpha 0.2
+    linear 1.0 alpha 0.8
+    repeat
+
+screen rage_power():
+    add "#ff4500":
+        at fire_pulse
+        xsize 1920
+        ysize 1080
+    
+    add "#D4Af37":
+        at fire_pulse_gold
+        xsize 1920
+        ysize 1080
