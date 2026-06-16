@@ -199,6 +199,8 @@ define gui.quick_button_text_selected_color = gui.accent_color
 
 # define gui.navigation_button_width = 250
 
+define gui.textbox_image = "gui/assetrip/textbox.png"
+define gui.namebox_image = "gui/assetrip/namebox.png"
 
 ## Choice Buttons ##############################################################
 ##

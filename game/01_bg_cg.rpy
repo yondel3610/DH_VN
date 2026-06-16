@@ -515,6 +515,12 @@ image underground_magnus:
     xalign 0.5
     yalign 1.0
 
+image yuxuan_carriage:
+    "images/Assets/Background/carriage_visual_novel_bg_by_gin_1994.jpg"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
 image yuxuan_manor:
     "images/Assets/Background/yuxuan manor.png"
     size (1920, 1080)
