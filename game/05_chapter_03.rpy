@@ -2178,13 +2178,11 @@ label ch3_bad_end:
     "I could almost hear her voice, soft and loving, like it used to be when she whispered my name."
     "The snow beneath my boots crunched softly as I took a step closer to the edge."
 
-    show dorian sad at left_char
+    scene black with fade
     dorian "Elara, I'll see you soon."
 
     "For a moment, everything was silent. The world seemed to hold its breath, waiting."
     "And then I let go."
-
-    scene black with fade
     # stop audio
 
     pause 3.0
@@ -2432,7 +2430,7 @@ label ch3_fight_back:
 
     scene bg_frostcradle_cave with Dissolve(0.9)
     "The cave was still, save for the hiss of steam and the crackle of dying flames."
-    show dorian sad at center with Dissolve(0.2)
+    show dorian sad at center_char with Dissolve(0.2)
     "I clenched my fists, the flames flickering out, leaving behind only the charred remains of what had been a battalion of soldiers."
     "I staggered, the heat around me dying down as exhaustion took hold. My legs gave out beneath me, and I crumpled to the ground. My vision blurred, darkness creeping in at the edges."
 
@@ -2480,71 +2478,72 @@ label ch3_escape:
     "Panic surged through me until I looked to my side and saw him."
 
     scene yuxuan_carriage with Dissolve(0.5)
-    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
+    show elias first_meet_neutral at right_elias with Dissolve(0.2)
     "He was there, curled up on the bench across from me, Tedda clutched tightly in his arms. His chest rose and fell with shallow but steady breaths."
-
-    show elias first_meet_neutral at right_char_kids
     elias  "Daddy…"
-    show dorian smile at left_char
+
+    show dorian neutral at left_char with Dissolve(0.2)
     dorian "I'm here, Elias. I'm right here. We're going to be okay."
 
     "I reached out, brushing his hair from his face. Tears welled up in my eyes."
 
     "A voice spoke from outside the carriage."
-
-    show yuxuan normal_happy at left_char with Dissolve(0.2)
+    hide elias
+    show yuxuan normal_happy at right_char with Dissolve(0.2)
     yuxuan "Dorian! You're awake! Praise the Prosperity Dragon!"
 
     "The door creaked open, and Yuxuan stepped inside. For the first time, it wasn't just his hologram from a supply bot. It was him. In the flesh."
     "His smile was as warm and earnest as I remembered from the hologram, but seeing him here, in person, was something else entirely."
     "His robes shimmered with an opulent sheen. Deep crimson fabric. The stitching alone probably cost more than I'd made in the last decade."
+    hide yuxuan
 
-    show elias first_meet_happy at right_char_kids
+    show elias first_meet_happy at right_elias with Dissolve(0.2)
     elias "Daddy, it's him! Mister Yuxuan!"
 
+    hide elias
+    show yuxuan normal_sad at right_char with Dissolve(0.2)
     yuxuan "Thank the Prosperity Dragon I decided to check in. If I hadn't sent the bot when I did…"
-
-    show yuxuan normal_sad at left_char
+    show yuxuan alt_mid_close_eyes at right_char
     "He trailed off, shaking his head."
+    show yuxuan normal_neutral at right_char
 
-    show dorian neutral at left_char
     dorian "Y-Yuxuan."
+    show dorian smile at left_char
+    "My voice cracked, my throat dry as sandpaper."
     dorian "Good to see you in person."
-    show yuxuan normal_happy at left_char
+    show dorian normal_alt_neutral at left_char
+    "Yuxuan's grin widened."
+    show yuxuan normal_happy at right_char
     yuxuan "The pleasure's all mine, Dorian! I'm so happy to finally meet you again!"
 
-    show yuxuan alt_neutral at left_char
-    "He glanced toward the driver."
+    show yuxuan alt_neutral at right_char
+    "He stepped aside, glancing toward the driver."
+    "One of the guards—an older man with silver streaks in his hair—replied without hesitation."
 
-    yuxuan "We're taking you both to Tianho. We'll be hiding there."
+    man_2 "A few hours, Master Yuxuan"
 
     show dorian sad at left_char
     "At the mention of Tianho, something stirred in me. It had been years since I'd set foot there. Elara and my family. It's been a while."
-
-    show elias first_meet_happy at right_char_kids
+    
+    yuxuan "We're taking you both to Tianho. We'll be hiding there."
+    show yuxuan normal_neutral at right_char
+    show dorian serious at left_char
+    "I tried to respond, but my throat was dry, and the words caught. Instead, I nodded, leaning back against the cushions."
+    
+    hide yuxuan 
+    show elias first_meet_happy at right_elias
     "Elias stirred on the bench, his eyelids fluttering open. His gaze met mine, his small hand reaching out."
-
     elias "Daddy… I'm happy you're alright."
 
     show dorian neutral at left_char
     "I took his hand, squeezing it gently."
 
     dorian "I promise, Elias. We'll be okay. I'll protect you. No matter what."
-
-    hide elias
-    hide dorian
-    hide yuxuan
-    # scene cg_escape_carriage with dissolve            # PLACEHOLDER
-    # pause 2.0
-    # scene bg_carriage_interior with dissolve          # PLACEHOLDER
-
-    show dorian neutral at left_char with Dissolve(0.2)
     "The carriage rocked gently as it moved, the muffled sound of hooves against the road."
     "We were alive. We were together."
-    "And for the moment, that was enough."
+    scene black with fade
 
-    hide dorian
-    scene cg_black with fade
+    "And for the moment, that was enough."
     # stop music fadeout 2.0
     # stop audio fadeout 1.5
 

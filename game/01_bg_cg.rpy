@@ -15,6 +15,34 @@
 
 # ==============================================================
 # ==============================================================
+#                       PROLOGUE
+# ==============================================================
+# ==============================================================
+image bg_underground_dim:
+    "images/Assets/Background/Underground Lights Off (1).png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_underground_lit:
+    "images/Assets/Background/Underground.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_underground_red:
+    "images/Assets/Background/Underground Redpng.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image kristin_kneeling:
+    "images/Assets/Illustrations/1 - Kristin Praying.png"
+    fit "cover"
+    xalign 0.5
+    yalign 1.0
+# ==============================================================
+# ==============================================================
 #                       CHAPTER 1
 # ==============================================================
 # ==============================================================
@@ -128,7 +156,7 @@ image bg_tianho_underground_2:
     yalign 1.0
 
 image bg_tianho_throne:
-    "images/Assets/Background/throne.png"
+    # "images/Assets/Background/throne.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -328,6 +356,19 @@ image cg_mjoll_massacre:
     xalign 0.5
     yalign 1.0
 
+image niko_raven:
+    "images/Assets/Illustrations/22.1 - Raven.png"
+    # fit "contain"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image soldiers_charging:
+    "images/Assets/Illustrations/22.2 - SoldiersCharging.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
 image cg_dorian_to_family:
     "images/Assets/Illustrations/23 - Dorian paying respects to his family.jpeg"
     size (1920, 1080)
@@ -509,6 +550,12 @@ image tianho_cemetery_morning_alt:
     xalign 0.5
     yalign 1.0
 
+image tianho_cemetery_night:
+    "images/Assets/Background/Tianho Cemetery Night.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image underground_magnus:
     "images/Assets/Background/Underground - Magnus.jpg"
     size (1920, 1080)
@@ -575,6 +622,12 @@ image hinami_castle_evening:
     xalign 0.5
     yalign 1.0
 
+image kyeonjang_palace:
+    "images/Assets/Background/throne.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image kyeonjang_room:
     "images/Assets/Background/Kyeongjang Room No Blinders 2.png"
     size (1920, 1080)
@@ -587,7 +640,7 @@ image kyeonjang_room_blinders:
     xalign 0.5
     yalign 1.0
 
-image destroyed_land:
+image destroyed_land: # to be used when chung hee appears 
     "images/Assets/Background/Destroyed Land.png"
     size (1920, 1080)
     xalign 0.5
@@ -602,5 +655,21 @@ image cheng_industries_bunk:
 image cheng_industries_bunk_off:
     "images/Assets/Background/Cheng industries bunk - lights off.png"
     size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image yuxuan_carriage:
+    "images/Assets/Background/carriage_visual_novel_bg_by_gin_1994.jpg" # TODO: add credits
+    xalign 0.5
+    yalign 1.0
+    zoom 2.5
+
+image underground_door:
+    "images/Assets/Background/UndergroundDoor.png"
+    xalign 0.5
+    yalign 1.0
+
+image underground_door_scan:
+    "images/Assets/Background/UndergroundDoorScanning.png"
     xalign 0.5
     yalign 1.0

@@ -21,6 +21,8 @@ transform center_char:
     yoffset 40
 
 transform left_flip:
+    xanchor 0.5 # used to invert image
+    xzoom -1.0 # used to invert image
     xalign -0.13  
     yalign 0.3
     zoom 1.17
@@ -337,6 +339,11 @@ transform dream_haze:
         linear 1.5 blur 0
     parallel:
         linear 1.5 matrixcolor SaturationMatrix(1.0)
+
+transform dream_haze_in:
+    blur 10
+    matrixcolor SaturationMatrix(0.5)
+    easein 1.5 alpha 1.0 blur 0 matrixcolor SaturationMatrix(1.0)
 
 # =========================================
 # DORIAN SPRITE GRADIENT SHIFT

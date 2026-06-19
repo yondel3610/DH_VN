@@ -2641,7 +2641,7 @@ label ch1_battle:
             dorian "AHHH!!!"
             feng "DORIAN!!"
             olympia "PALADIN! NO!"
-            scene cg_black with shock_cut
+            scene black with shock_cut
             jump game_over                      # ← HARD GATE: GAME OVER
 
     # play sound sfx_taotie_lava
@@ -2672,7 +2672,7 @@ label ch1_battle:
             feng "DORIAN!!"
             olympia "PALADIN! NO!"
 
-            scene cg_black with shock_cut
+            scene black with shock_cut
             jump game_over                      # ← HARD GATE: GAME OVER
 
         "Channel earth to seal the cracks.":
@@ -2761,7 +2761,7 @@ label ch1_battle:
 # =============================================================================
 
 label game_over:
-    scene cg_black with fade
+    scene black with fade
     stop music fadeout 1.0
     stop audio
     pause 1.0

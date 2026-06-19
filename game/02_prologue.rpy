@@ -17,31 +17,7 @@
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
 
-# --- Backgrounds (with fit to prevent zoom) ---
-image bg_underground_dim:
-    "images/Assets/Background/Underground Lights Off (1).png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_underground_lit:
-    "images/Assets/Background/Underground.png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_underground_red:
-    "images/Assets/Background/Underground Redpng.png"
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image kristin_kneeling:
-    "images/Assets/Illustrations/1 - Kristin Praying.png"
-    fit "cover"
-    xalign 0.5
-    yalign 1.0
-
+# centralized bg/cg file
 
 # TODO: check image folder again, illus and bg
 # --- CG / Event Images (full screen, fit to cover) ---
@@ -57,7 +33,7 @@ image cg_black:
 define audio.amb_underground   = "audio/ambient/amb_underground.ogg" # cave ambience DONE
 
 # =============================================================================
-# SECTION 4: CUSTOM SCREENS (UX FEATURES)
+# SECTION 4: CUSTOM SCREENS (for prl only)
 # =============================================================================
 
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
@@ -98,34 +74,30 @@ label prologue:
     # -------------------------------------------------------------------------
     # OPENING — Silence and darkness
     # -------------------------------------------------------------------------
-
-    scene black
-    with fade
+    scene black with fade
     pause 0.5
-    scene bg_underground_dim
-    with fade
+    
 
     # $ renpy.save(new_slot, extra_info=save_name)
 
     # --- Opening narration ---
-    "Let their spirits pass without suffering. Let their memories remain unspoiled."
-    "Let Your cloak be warm. Let their burdens fall at Your feet, Almighty Enoch."
+    "{i}Let their spirits pass without suffering. Let their memories remain unspoiled.{/i}" 
+    "{i}Let Your cloak be warm. Let their burdens fall at Your feet, Almighty Enoch.{/i}" 
     
     "A young woman with silver hair knelt in the dust and shadow, her fingers cold against the bloodspattered floor."
     "The torchlight flickered against her trembling form. She closed her eyes and spoke softly, her voice barely more than a breath."
-    
-    scene kristin_kneeling with fade
+    scene kristin_kneeling
+    with fade
 
     voice audio.kristin_ald_prl_line1
     kristin "Grant me strength to carry out your will: to lay these bodies to rest with reverence, to honor their passage, and to usher them into your sacred silence."
-    
+    scene bg_underground_lit with fade
     # --- Aldorith soldiers enter ---
     "Two aldorith soldiers stood at the threshold, their faces sharp with impatience, their breath fogging faintly in the chill of the underground."
 
-    show bg_underground_lit with fade
-
     show boy_ald_normal at left_char
     show girl_ald_normal at right_char
+    with Dissolve(0.2)
     
     voice audio.boy_ald_prl_line1
     boy_ald "She's still praying. It's been five minutes."
@@ -141,13 +113,13 @@ label prologue:
     hide boy_ald_normal 
     hide girl_ald_normal
     "Kristin flinched as if struck. She turned, eyes wide, lips pale."
-    
-    show kristin_normal at center_char
+
+    show kristin_normal at center_char with Dissolve(0.2)
 
     voice audio.kristin_ald_prl_line2
     kristin "I was only… I was praying to Lord Enoch."
 
-    show girl_ald_normal at right_char
+    show girl_ald_normal at right_char with Dissolve(0.2)
     #voice audio.girl_ald_prl_
     girl_ald "A prayer that's lasted too long. For minutes, sister. We've listened. Are you certain you're not harboring doubts?"
     
@@ -156,7 +128,7 @@ label prologue:
     voice audio.kristin_ald_prl_line4
     kristin "But… What we did—what happened—was it really right? We killed the queen and her two sons."
     
-    show boy_ald_normal at left_char
+    show boy_ald_normal at left_char with Dissolve(0.2)
     voice audio.boy_ald_prl_line3
     boy_ald "What are you saying? That our Father was wrong?"
     voice audio.kristin_ald_prl_line5
@@ -192,11 +164,11 @@ label prologue:
     boy_ald "That Kristin… soft-hearted as ever."
     #voice audio.girl_ald_prl_line
     girl_ald "She won't last. We both know Father only kept her around to control Svante."
-    
+
     "They moved wordlessly to the bodies, the ritual of burial unfolding with grim familiarity."
     "Cloth unrolled. Blood wiped. Limbs bound with reverent efficiency."
     "Their hands worked swiftly—mechanical, practiced—but there was a flicker of hesitation behind their eyes."
-    
+
     voice audio.boy_ald_prl_line8
     boy_ald "Why do you think Father really wanted them dead?"
     girl_ald "I don't know. And I really don't plan to ask. Best not to chase answers when you're already neck-deep in secrets."
@@ -209,8 +181,8 @@ label prologue:
     boy_ald "A queen. Two princes. Royals of Tianho."
     #voice audio.girl_ald_prl_
     girl_ald "Exactly why we need to hurry. If anyone finds out what's buried down here—before the earth swallows it whole—we're finished."
-    
-    
+
+
     voice audio.boy_ald_prl_line11
     boy_ald "Still… Svante didn't even blink. Just walked in and—"
     #voice audio.girl_ald_prl_
@@ -226,9 +198,7 @@ label prologue:
 
     "A breath passed between them."
     
-    # -------------------------------------------------------------------------
     # TENSION RISES — Something is wrong
-    # -------------------------------------------------------------------------
     "A pressure, subtle at first, then sudden and suffocating, pressed down on the tunnel."
     "The torches guttered, flames trembling like they, too, felt the change."
     
@@ -257,14 +227,14 @@ label prologue:
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
     "The Yaoguai King emerged from the rubble, obsidian-scaled and crowned in bone, the shadows clinging to his form like loyal hounds."
     
-    show yk at center_char with dissolve
+    show yk at center_char with Dissolve(0.5)
     
     voice audio.yk_ald_prl_line1
     yk "You bury corpses… while your own hearts still beat? How generous. More for my yaoguai to feed on."
 
     show girl_ald_normal at right_char 
     show boy_ald_normal at left_char
-    with Dissolve(0.4)
+    with Dissolve(0.2)
 
 
     #voice audio.girl_ald_prl_
@@ -286,12 +256,12 @@ label prologue:
     
     "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
     # scene bg_underground_red with flash
-    show boy_ald_normal at left_char with Dissolve(0.4)
+    show boy_ald_normal at left_char with Dissolve(0.2)
 
     voice boy_ald_prl_line14
     boy_ald "SISTER!!"
     
-    show yk at right_char
+    show yk at right_char with Dissolve(0.2)
 
     voice audio.yk_ald_prl_line2
     yk "Your turn, little one…"
@@ -408,7 +378,8 @@ label prologue_common:
     # -------------------------------------------------------------------------
     # FADE OUT
     # -------------------------------------------------------------------------
-    scene cg_black with fade
+    window show dissolve
+    scene black with fade
     stop audio fadeout 1.5
     
     pause 1.5

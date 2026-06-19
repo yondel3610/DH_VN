@@ -66,10 +66,10 @@ define gui.name_text_font = "DejaVuSans.ttf"
 define gui.interface_text_font = "DejaVuSans.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 30
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 40
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33
@@ -115,7 +115,7 @@ define gui.name_xalign = 0.0
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
-define gui.namebox_width = None
+define gui.namebox_width = 600
 define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
@@ -199,7 +199,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 
 # define gui.navigation_button_width = 250
 
-define gui.textbox_image = "gui/assetrip/textbox.png"
+define gui.textbox_image = "gui/assetrip/textbox_black.png"
 define gui.namebox_image = "gui/assetrip/namebox.png"
 
 ## Choice Buttons ##############################################################

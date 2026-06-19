@@ -241,3 +241,10 @@ define config.quit_action = [
     QuickSave(message="Saved to Quick Save", newest=True),
     Quit(confirm=True)
 ]
+
+
+define _black_with_hide = Pause(0) # placeholder
+label scene_black():
+    window hide dissolve
+    scene black with fade
+    return

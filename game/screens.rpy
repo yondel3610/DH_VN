@@ -99,7 +99,17 @@ screen say(who, what):
             window:
                 id "namebox"
                 style "namebox"
-                text who id "who"
+                # xsize None
+                xfill False
+                xminimum 400
+                xmaximum 650
+                ypos gui.name_ypos
+                ysize gui.namebox_height
+                background Frame("gui/assetrip/namebox.png", gui.namebox_borders, tile=gui.namebox_tile)
+                padding (20, 10, 50, 10)
+                text who id "who":
+                    xalign 0.0
+                    yalign 0.5
 
         text what id "what"
 
@@ -119,24 +129,17 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
-
 style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/assetrip/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/assetrip/textbox_black.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/assetrip/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
+    xpos 300
+    yalign 0.3
 
 style say_label:
     properties gui.text_properties("name", accent=True)
@@ -273,11 +276,11 @@ style choice_button:
     xminimum 1000
     xmaximum None #increase as needed
     xfill False
-    xpadding 50 #extra padding
-    ypadding 10
+    xpadding 75 #extra padding
+    ypadding 25
 
     background Frame("gui/assetrip/choice_idle_background.png", 10, 10)
-    hover_background Frame("#666666", 10, 10)
+    hover_background Frame("gui/assetrip/choice_hover_background.png", 10, 10)
     
 style choice_button_text:
     size 24
@@ -352,9 +355,10 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-            $ _qs = renpy.newest_slot(r"quick-\d+")
-            if _qs is not None:
-                textbutton _("Debug: [_qs]") action NullAction()
+            # FOR TESTING ONLY COMMENT OUT LATER
+            # $ _qs = renpy.newest_slot(r"quick-\d+")
+            # if _qs is not None:
+            #     textbutton _("Debug: [_qs]") action NullAction()
 
             if FileLoadable("quick-1"):
                 textbutton _("Continue") action FileLoad("quick-1")

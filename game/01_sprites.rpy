@@ -219,7 +219,9 @@ image elias first_meet_happy:
 image elias first_meet_sad:
     At("images/Assets/Character Sprites/Elias/Chapter 2 & 3 Only/elias first meet with dorian colored v2 sad.png", sprite_highlight("elias"))
     fit "contain"
+# DO NOT USE ELSEWHERE
 
+# ELIAS SPRITE CH4 AND BEYOND
 # ===============================
 # ELIAS — NORMAL OUTFIT (7 emotions)
 # ===============================
@@ -366,7 +368,7 @@ image yuxuan normal_lying:
     At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono lying.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan normal_normal:
-    At("images/Assets/Character Sprites/ Yuxuan/Normal/cheng yuxuan kimono normal.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono normal.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan normal_sad:
     At("images/Assets/Character Sprites/Cheng Yuxuan/Normal/cheng yuxuan kimono sad.png", sprite_highlight("yuxuan"))
@@ -1041,7 +1043,7 @@ image cyrus:
 image feng_suit:
     At("images/Assets/Character Sprites/paladin feng suit.png", sprite_highlight("feng"))
     fit "contain"
-image pavel:
+image mjoll_pavel:
     At("images/Assets/Character Sprites/pavel colored v2.png", sprite_highlight("mjoll_pavel"))
     fit "contain"
 image qiongqi:
@@ -1086,6 +1088,30 @@ image girl_ald_normal:
     fit "contain"
 image yk:
     At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
+    fit "contain"
+
+image mjoll_male_soldier:
+    At("images/Assets/Character Sprites/ald grunts/male_soldier.png", sprite_highlight("mjoll_male_soldier"))
+    fit "contain"
+
+image mjoll_soldier_1:
+    At("images/Assets/Character Sprites/ald grunts/ald_grunt_1.png", sprite_highlight("mjoll_soldier_1"))
+    fit "contain"
+
+image mjoll_soldier_2:
+    At("images/Assets/Character Sprites/ald grunts/ald_grunt_2.png", sprite_highlight("mjoll_soldier_2"))
+    fit "contain"
+    
+image mjoll_soldier_enby:
+    At("images/Assets/Character Sprites/ald grunts/enby_grunt.png", sprite_highlight("mjoll_soldier_enby"))
+    fit "contain"
+
+image mjoll_soldier_female_1:
+    At("images/Assets/Character Sprites/ald grunts/female_soldier_1.png", sprite_highlight("mjoll_soldier_female_1"))
+    fit "contain"
+
+image mjoll_soldier_female_2:
+    At("images/Assets/Character Sprites/ald grunts/female_soldier_2.png.png", sprite_highlight("mjoll_soldier_female_2"))
     fit "contain"
 
 # =============================================================================

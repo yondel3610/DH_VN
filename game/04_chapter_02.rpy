@@ -162,7 +162,7 @@ label chapter_2:
     # OPENING CARD — "Four years later"
     # -------------------------------------------------------------------------
 
-    scene cg_black with fade                    # PLACEHOLDER — black screen (carry from ch1 end)
+    scene black with fade                    # PLACEHOLDER — black screen (carry from ch1 end)
 
     play music ost_mjoll_theme fadein 3.0       # PLACEHOLDER — cold Mjoll region theme
     play audio amb_mjoll_wind loop fadein 2.0   # PLACEHOLDER — howling wind loop
@@ -764,15 +764,15 @@ label ch2_food_stalls:
 
     hide vasily
     hide dorian
-    show male_soldier_1 at right_char
+    show mjoll_soldier_1 at right_char
     show boy_ald at left_char
     with Dissolve(0.2)            # PLACEHOLDER — Boy Aldorith (straining under crate)
-    male_guard  "Come on! Pick up the pace, will ya? Don't make me bring out the whip!"
+    mjoll_soldier_1  "Come on! Pick up the pace, will ya? Don't make me bring out the whip!"
     boy_ald_spa "Please, sir! We just need a drink!"
-    hide male_soldier_1
-    show female_guard at right_char with Dissolve(0.2)
-    female_guard "You'll get your drink after an hour! Now get back to work!"
-    hide female_guard
+    hide mjoll_soldier_1
+    show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
+    mjoll_soldier_female_1 "You'll get your drink after an hour! Now get back to work!"
+    hide mjoll_soldier_female_1
     hide boy_ald
 
     show vasily alt_think at right_char
@@ -796,22 +796,22 @@ label ch2_food_stalls:
 
             "The guards turn, startled, before recognizing me. One of them straightens up, puffing out his chest."
 
-            show male_soldier_1 at right_char with Dissolve(0.2)
-            male_guard "Stay out of this, mercenary. These children are property of the Crown. They do as they're told."
+            show mjoll_soldier_1 at right_char with Dissolve(0.2)
+            mjoll_soldier_1 "Stay out of this, mercenary. These children are property of the Crown. They do as they're told."
 
             "The vendor watches silently, her hands trembling."
 
             show dorian normal_alt_annoyed at left_char
             dorian "They look half-dead. If you push them any further, they'll collapse."
-            male_guard "Then they collapse. Not our problem their constitution's weak."
+            mjoll_soldier_1 "Then they collapse. Not our problem their constitution's weak."
 
-            hide male_soldier_1
-            show female_guard at right_char with Dissolve(0.2)
-            female_guard "Y-You fool! Th-that mercenary is the Dragon of Gale."
-            hide female_guard
-            show male_soldier_1 at right_char with Dissolve(0.2)
-            male_guard   "What? O-Oh… Um… Sure. Kids, break time!"
-            hide male_soldier_1
+            hide mjoll_soldier_1
+            show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
+            mjoll_soldier_female_1 "Y-You fool! Th-that mercenary is the Dragon of Gale."
+            hide mjoll_soldier_female_1
+            show mjoll_soldier_1 at right_char with Dissolve(0.2)
+            mjoll_soldier_1   "What? O-Oh… Um… Sure. Kids, break time!"
+            hide mjoll_soldier_1
 
             "The two kids immediately run to the vendor to get some water."
 
@@ -1446,15 +1446,15 @@ label ch2_ceremony:
     svante "*coughs*"
     hide svante
 
-    show male_guard at right_char with Dissolve(0.2)
-    male_guard "Shut up, lowlife."
-    hide male_guard
+    show mjoll_soldier_1 at right_char with Dissolve(0.2)
+    mjoll_soldier_1 "Shut up, lowlife."
+    hide mjoll_soldier_1
     show man_3 at right_char with Dissolve(0.2)
     man_3 "Yeah! Show that worthless mutt his place!"
     hide man_3
-    show male_guard at right_char with Dissolve(0.2)
-    male_guard "Wanna beg for my forgiveness?"
-    hide male_guard
+    show mjoll_soldier_1 at right_char with Dissolve(0.2)
+    mjoll_soldier_1 "Wanna beg for my forgiveness?"
+    hide mjoll_soldier_1
 
     show kristin_normal at right_char with Dissolve(0.2)
     kristin "Svante, please!"
@@ -1466,11 +1466,11 @@ label ch2_ceremony:
     "The guard grabbed Svante by his collar, forcing him upright to face me."
     hide svante
 
-    show male_guard at right_char with Dissolve(0.2)
-    male_guard "I hope you like ice water, freak. After this, you and your siblings are done for. The Dragon of Gale will see to it."
+    show mjoll_soldier_1 at right_char with Dissolve(0.2)
+    mjoll_soldier_1 "I hope you like ice water, freak. After this, you and your siblings are done for. The Dragon of Gale will see to it."
 
     "The crowd roared again as Vasily stepped beside me, a smirk tugging at his lips. He is holding out a ball."
-    hide male_guard
+    hide mjoll_soldier_1
     show vasily alt_savage at right_char with Dissolve(0.2)
     vasily "Here. It's Mjollian tradition, my friend. It's just a dunk tank, after all. The water's only cold if you let yourself feel it. They're only aldoriths. Filthy mutts."
     hide vasily
@@ -1552,10 +1552,10 @@ label ch2_ceremony:
             svante "I… t-thank you… I—"
             hide svante
 
-            show male_guard at right_char with Dissolve(0.2)
-            male_guard "Shut up, all of you, mutts!"
+            show mjoll_soldier_1 at right_char with Dissolve(0.2)
+            mjoll_soldier_1 "Shut up, all of you, mutts!"
 
-            hide male_guard
+            hide mjoll_soldier_1
             show kristin_normal at right_char with Dissolve(0.2)
             kristin "Brother!"
 
@@ -1985,7 +1985,7 @@ label game_over_freeze:
 
     pause 2.0
 
-    scene cg_black with fade                    # PLACEHOLDER — pure black
+    scene black with fade                    # PLACEHOLDER — pure black
 
     jump game_over
 
@@ -1999,7 +1999,7 @@ label ch2_common_end:
     # PDF p86-87
     # -------------------------------------------------------------------------
 
-    scene cg_black with fade                    # PLACEHOLDER — black transition
+    scene black with fade                    # PLACEHOLDER — black transition
 
     pause 1.0
 
