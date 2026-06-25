@@ -86,12 +86,11 @@ label prologue:
     
     "A young woman with silver hair knelt in the dust and shadow, her fingers cold against the bloodspattered floor."
     "The torchlight flickered against her trembling form. She closed her eyes and spoke softly, her voice barely more than a breath."
-    scene kristin_kneeling
-    with fade
+    scene kristin_kneeling with fade
 
     voice audio.kristin_ald_prl_line1
     kristin "Grant me strength to carry out your will: to lay these bodies to rest with reverence, to honor their passage, and to usher them into your sacred silence."
-    scene bg_underground_lit with fade
+    scene underground_prl with fade
     # --- Aldorith soldiers enter ---
     "Two aldorith soldiers stood at the threshold, their faces sharp with impatience, their breath fogging faintly in the chill of the underground."
 
@@ -218,10 +217,8 @@ label prologue:
     # YAOGUAI KING ENTRANCE
     # -------------------------------------------------------------------------
     play sound sfx_yaoguai_burst
-    scene bg_underground_lit with flash
-    pause 0.6
+    scene underground_prl with flash
     
-    scene bg_underground_dim with dissolve
     play music ost_yaoguai_theme volume 0.8
     
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
@@ -254,7 +251,7 @@ label prologue:
     #voice audio.girl_ald_prl_
     girl_ald "AHHH!!! NO!!!"
     
-    "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap."
+    "His claws tore through the air and the girl aldorith fell, her body thudding against the stone in a lifeless heap." with hpunch
     # scene bg_underground_red with flash
     show boy_ald_normal at left_char with Dissolve(0.2)
 

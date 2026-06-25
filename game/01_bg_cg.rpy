@@ -30,6 +30,12 @@ image bg_underground_lit:
     xalign 0.5
     yalign 1.0
 
+image underground_prl:
+    "images/Assets/Background/Underground_prologue.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image bg_underground_red:
     "images/Assets/Background/Underground Redpng.png"
     size (1920, 1080)
@@ -264,12 +270,24 @@ image bg_frostcradle_cave: # Inside the Frostcradle in pdf
 
 # # --- Backgrounds: Dorian's Cave ---
 image dorians_cave_on:
-    "images/Assets/Background/dorians_cave_on.png"
+    # "images/Assets/Background/dorians_cave_on.png"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
     yalign 1.0
 
 image dorians_cave_off:
+    # "images/Assets/Background/dorians_cave_off.png"
+    size (1920, 1080) # STANDARD FOR ALL FUTURE BG
+    xalign 0.5
+    yalign 1.0
+
+image lab_cave_on:
+    "images/Assets/Background/dorians_cave_on.png"
+    size (1920, 1080) # STANDARD FOR ALL FUTURE BG
+    xalign 0.5
+    yalign 1.0
+
+image lab_cave_off:
     "images/Assets/Background/dorians_cave_off.png"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
@@ -389,6 +407,12 @@ image cg_svante_save_chung:
 
 image cg_dorian_redirects:
     "images/Assets/Illustrations/28 - Dorian redirects.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_prosperity_dragon:
+    "images/Assets/Illustrations/29 - ProsperityDragon.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -580,7 +604,7 @@ image yuxuan_manor_off:
     xalign 0.5
     yalign 1.0
 
-image yuxuan_lab:
+image yuxuan_lab_hotspring:
     "images/Assets/Background/Yuxuan_s lab - Hot spring.png"
     size (1920, 1080)
     xalign 0.5
@@ -665,11 +689,15 @@ image yuxuan_carriage:
     zoom 2.5
 
 image underground_door:
-    "images/Assets/Background/UndergroundDoor.png"
+    "images/Assets/Background/wmremove-transformed.png"
+    fit "contain"
+    zoom 1.02
     xalign 0.5
     yalign 1.0
 
 image underground_door_scan:
     "images/Assets/Background/UndergroundDoorScanning.png"
+    fit "contain"
+    # zoom 1.1
     xalign 0.5
     yalign 1.0

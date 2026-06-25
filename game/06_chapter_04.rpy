@@ -13,26 +13,6 @@
 # --- Backgrounds: Mjoll Palace ---
 # (already declared in chapter_02.rpy)
 
-# --- Backgrounds: Kyeongjang ---
-# image bg_kyeongjang_palace       = "images/backgrounds/bg_kyeongjang_palace.png"          # PLACEHOLDER
-# image bg_kyeongjang_room         = "images/backgrounds/bg_kyeongjang_room.png"            # PLACEHOLDER
-
-# --- Backgrounds: Tianho ---
-# image bg_tianho_dorian_room      = "images/backgrounds/bg_tianho_dorian_room.png"         # PLACEHOLDER
-# image bg_tianho_memorial_gate    = "images/backgrounds/bg_tianho_memorial_gate.png"       # PLACEHOLDER
-# image bg_tianho_memorial         = "images/backgrounds/bg_tianho_memorial.png"            # PLACEHOLDER
-# image bg_tianho_memorial_2       = "images/backgrounds/bg_tianho_memorial_2.png"          # PLACEHOLDER
-# image bg_empty_battlefield       = "images/backgrounds/bg_empty_battlefield.png"          # PLACEHOLDER
-# image bg_frostcradle_bloodied    = "images/backgrounds/bg_frostcradle_bloodied.png"       # PLACEHOLDER
-# image bg_tianho_underground_1    = "images/backgrounds/bg_tianho_underground_1.png"       # PLACEHOLDER
-
-# --- CGs ---
-# image cg_dorian_family_graves    = "images/cg/cg_dorian_family_graves.png"                # PLACEHOLDER
-# image cg_chung_hee_amulet        = "images/cg/cg_chung_hee_amulet.png"                   # PLACEHOLDER
-# image cg_prosperity_dragon_white = "images/cg/cg_prosperity_dragon_white.png"            # PLACEHOLDER
-# image cg_bomb_bad_end            = "images/cg/cg_bomb_bad_end.png"                       # PLACEHOLDER
-# image cg_draconic_fire_surge     = "images/cg/cg_draconic_fire_surge.png"                # PLACEHOLDER
-
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
@@ -69,7 +49,6 @@
 # default ch4_carriage_qtc1      = ""
 # default ch4_carriage_qtc2      = ""
 # default ch4_draconic_choice    = ""
-
 
 # =============================================================================
 # SECTION 5: label chapter_4
@@ -119,6 +98,7 @@ label chapter_4:
     hide girl_ald_normal
     show mjoll_lars at left_char with Dissolve(0.2)      
     mjoll_lars       "Miss, please. Take a breath. Tell us what happened."
+    hide mjoll_lars
     show girl_ald_normal at left_flip with Dissolve(0.2)
     girl_ald_soldier "Flames… everywhere… He burned them… He burned them all alive!"
     girl_ald_soldier "If I hadn't run… I would have… I would have— I would hav—burned with them! *weeping*"
@@ -1802,8 +1782,8 @@ label ch4_battlefield:
     "The air was thick with the metallic tang of blood, mingled with the acrid stench of burnt earth. It was suffocating. It was familiar."
 
     scene cg_mjoll_massacre
-    show cg_mjoll_massacre at dream_haze_in
-    with None
+    show cg_mjoll_massacre at flashback_filter
+    with Dissolve(0.9)
     pause 1.5
 
     "Too familiar."
@@ -1960,7 +1940,7 @@ label ch4_niko_raven:
 
     show niko normal_base at right_char
     niko "Contrary to popular belief, not every nature channeler hails from Clan Ligaya. My mother is from Clan Kaibig—the sister clan to Ligaya—and my father is from Hamatame, the village of shadows."
-
+    hide niko
     jump ch4_svante_capture
 
 
@@ -1983,41 +1963,49 @@ label ch4_svante_capture:
 
     svante "Please! Let me go! I'm not here to hurt you!"
 
-    show dorian serious at right_char
+    show dorian serious at left_char
     "He writhed against the restraints, his voice trembling. But I didn't let up."
     "I strode toward him."
 
     dorian "You knew something was going to happen here. Start talking. Now."
-
-    show niko normal_serious at left_char with Dissolve(0.2)
     "His breath hitched, his wide eyes darting between me, Niko, and the unconscious man."
-
+    show svante normal_nervous at right_char 
     svante "I... I don't know everything. They didn't tell me much, but—"
-
+    hide svante
+    show niko normal_serious at right_char with Dissolve(0.2)
     niko   "But you were with that lunatic. You and your group tried to drive me and my fellow prophet away! Don't act innocent now."
-
+    hide niko
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "It wasn't like that! I was trying to help you! Please, you have to believe me!"
-
+    hide svante
+    show dorian normal_alt_annoyed at left_char
+    show niko alt_annoyed at right_char with Dissolve(0.2)
     niko   "Help us? By threatening us? You're making this a lot harder for yourself, you know."
-
+    hide niko
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "I wasn't threatening you! I was trying to save you! If you'd stayed, you'd be dead!"
+    show svante normal_sad at right_char
     svante "They'll kill anyone who gets in their way. I… I didn't want to be part of this."
-
+    hide svante
+    show dorian serious at left_char
+    show niko alt_annoyed at right_char with Dissolve(0.2)
     niko   "Then why were you here at all? You could've walked away. Who are you anyway?"
+    hide niko
 
     show svante normal_nervous at right_char with Dissolve(0.2)
     svante "M-My name's Svante, sir. Please don't hurt me. I s-surrender."
     svante "I-I wanted to help him… and you don't understand. I can't just walk away from them! They'd come after me! I—"
 
-    show elias normal_happy at right_char_kids with Dissolve(0.2)
     elias  "Daddy!!"
 
     hide svante
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     "To my utter surprise, Yuxuan and Elias came running towards me. Yuxuan was panting heavily, his hands on his knees as he struggled to catch his breath."
-    "Elias crashed into me clinging to my leg as though his life depended on it. His small body trembled, and when I knelt to pull him into my arms, I could feel his rapid heartbeat against my chest. He was clutching Tedda in his one hand."
+    "Elias crashed into me clinging to my leg as though his life depended on it."
+    "His small body trembled, and when I knelt to pull him into my arms, I could feel his rapid heartbeat against my chest."
+    "He was clutching Tedda in his one hand."
 
-    show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
+    show dorian serious at left_char
     dorian "Yuxuan?! What in Tetrad's name are you doing here?! You should be at the carriage!"
 
     show yuxuan normal_sad at right_char
@@ -2025,11 +2013,13 @@ label ch4_svante_capture:
 
     yuxuan "Dorian, we-we have a problem! There's an army—a whole battalion of Mjoll soldiers—heading this way! We're surrounded!"
 
-    show svante normal_nervous at left_char with Dissolve(0.2)
+    show dorian angry at left_char
     dorian "What?!"
+    hide yuxuan
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "I tried to warn you! You should've run when you had the chance! Now we're all going to die here!"
-
-    show yuxuan normal_sad at right_char
+    hide svante
+    show yuxuan normal_sad at right_char with Dissolve(0.2)
     yuxuan "Dorian, what are we supposed to do? We can't fight them all, but we can't stay here either! We're trapped!"
 
     show dorian normal_alt_annoyed at left_char
@@ -2037,16 +2027,18 @@ label ch4_svante_capture:
 
     show yuxuan normal_neutral at right_char
     yuxuan "Dorian, we're not leaving you behind. We're in this together, no matter what."
-
-    show elias normal_neutral at right_char_kids
+    hide yuxuan
+    show elias normal_neutral at right_char_kids with Dissolve(0.2)
     elias  "Daddy, I wanted to be with you! I won't leave you, daddy!"
 
+    show dorian normal_alt_tense at left_char
     "I groaned and opened my mouth to answer, but the sound of distant boots—hundreds of them—marching in unison filled the cemetery air."
-
+    hide dorian
+    hide elias
     show niko normal_serious at left_char with Dissolve(0.2)
     niko   "Calm down. How many soldiers did you see?"
 
-    show yuxuan normal_sad at right_char
+    show yuxuan normal_sad at right_char with Dissolve(0.2)
     yuxuan "I... I don't know. There were so many of them—it looked like an entire battalion! Maybe more!"
 
     show niko normal_serious at left_char
@@ -2054,31 +2046,36 @@ label ch4_svante_capture:
 
     show yuxuan normal_angry at right_char
     yuxuan "Move where?! I just told you! We're surrounded! Every path out of this cemetery is crawling with Mjoll soldiers!"
-
-    man_1  "We have you surrounded! Surrender now and you might live to see another day. Resist, and you'll meet a swift end!"
-
-    show yuxuan normal_sad at right_char
+    hide niko
+    hide yuxuan
+    show mjoll_male_soldier at center_char with Dissolve(0.2)
+    mjoll_male_soldier  "We have you surrounded! Surrender now and you might live to see another day. Resist, and you'll meet a swift end!"
+    hide mjoll_male_soldier
+    show yuxuan normal_sad at right_char with Dissolve(0.2)
     yuxuan "W-We surrender! Please! Don't hurt us!"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.2)
     "Before he could fully raise his hands, I grabbed his shoulder and yanked him back."
 
     dorian "Yu, no need to surrender."
-
-    show svante normal_nervous at left_char with Dissolve(0.2)
+    hide yuxuan
+    show svante normal_neutral at right_char with Dissolve(0.2)
     svante "He's right! If we surrender, we're as good as dead! They won't let us walk away, not after this. We have to fight or die!"
+    hide svante
+    hide dorian
 
-    man_2  "Come out with your hands up! All of you! We won't ask again!"
+    show mjoll_soldier_enby at center_char with Dissolve(0.2)
+    mjoll_soldier_enby  "Come out with your hands up! All of you! We won't ask again!"
+    hide mjoll_soldier_enby
 
-    show aoi_battle_suit at right_char with Dissolve(0.2)
     "A commanding female voice cut through the voices of the soldiers like a blade."
-
+    show aoi_battle_suit at right_char with Dissolve(0.2)
     aoi    "Back-up has finally arrived, Tian Xun. As for you lot—what took you so long?"
 
     "The soldiers straightened up immediately, some even flinching at her tone."
-
-    man_1     "S-Sorry, mam Aoi! It won't happen again!"
-
+    show mjoll_male_soldier at left_char with Dissolve(0.2)
+    mjoll_male_soldier     "S-Sorry, mam Aoi! It won't happen again!"
+    
     show tian_xun at center_char with Dissolve(0.2)
     tian_xun  "HAHHAHAHA! Oh, but it better not! Because if I have to wait one more agonizing second for a BOOM, I might just detonate myself for fun! My darlings were perfectly timed and they ruined it! THEY RUINED IT!!"
     tian_xun  "I want fireworks! I want limbs flying! I want screams and smoke!"
@@ -2086,21 +2083,23 @@ label ch4_svante_capture:
     show aoi_battle_suit at right_char
     "At the corner of my eye, I saw her. The woman was about Yuxuan's stature. Water circled faintly around her fingers, as if drawn to her by instinct."
     "A water channeler."
+    hide tian_xun
+    hide mjoll_male_soldier
 
+    show mjoll_soldier_female_1 at left_char with Dissolve(0.2)
     mjoll_soldier_female_1 "We were under the impression that the—"
     aoi          "Save your excuses. Kill the target."
     mjoll_soldier_female_1 "What about the others, mam?"
     aoi          "I don't care for them. Just make sure that the target is dealt with. As for the others, dead or alive—it's up to you."
+    show tian_xun at center_char with Dissolve(0.2)
     tian_xun     "NO! KILL THEM! LEAVE NO SURVIVORS! THEY FOILED MY BEAUTIES!"
     tian_xun     "LEAVE NONE! NOT A SINGLE ONE!"
 
-    show tian_xun at center_char
     "A man stormed into view, his movements erratic and exaggerated, his face twisted into an expression of obsessive rage."
 
     tian_xun "My cannons! My beautiful cannons! They ruined everything! Do you know how long it took me to design those? The fuses, the powder, the precision—ruined!"
     "He stomped his foot like a child throwing a tantrum, then pointed a trembling finger in our direction."
     tian_xun "ESPECIALLY THE TARGET!! HE WASTED MY BOMBS!"
-
     show aoi_battle_suit at right_char
     "The lady rolled her eyes. She glanced at him, her expression one of thinly veiled disdain."
 
@@ -2110,71 +2109,89 @@ label ch4_svante_capture:
     aoi      "But enough. Focus on the task at hand. Your tantrum can wait."
     tian_xun "This is not a tantrum, Aoi! NOT A TANTRUM!!"
     tian_xun "I'M GONNA MAKE THEM BOOM… GONNA MAKE THEM ALL GO BOOM… HAHAHA…"
-
-    show svante normal_nervous at left_char
-    "From our vantage point, I could see the soldiers shuffling nervously. Aoi's cold demeanor and Tian Xun's volatile nature were enough to unsettle even seasoned warriors."
-    "I tightened my grip on Yuxuan's shoulder and glanced down at Elias, who clung to my leg."
-
-    svante "They're going to shoot any minute now. Take cover!"
+    hide tian_xun
+    hide aoi_battle_suit
+    hide mjoll_soldier_female_1
 
     show dorian serious at left_char with Dissolve(0.2)
-    "My chest tightened. The unconscious man, barely clinging to life, lay vulnerable on the ground. Thanks to Niko, his condition has improved, but any attack would almost certainly finish him."
+    "From our vantage point, I could see the soldiers shuffling nervously. Aoi's cold demeanor and Tian Xun's volatile nature were enough to unsettle even seasoned warriors."
+    "I tightened my grip on Yuxuan's shoulder and glanced down at Elias, who clung to my leg."
+    show svante normal_nervous at right_char with Dissolve(0.2)
+    svante "They're going to shoot any minute now. Take cover!"
 
+    show dorian normal_alt_tense at left_char 
+    "My chest tightened. The unconscious man, barely clinging to life, lay vulnerable on the ground. Thanks to Niko, his condition has improved, but any attack would almost certainly finish him."
+    
+    hide svante
     show elias normal_sad at right_char_kids
     elias "D-Daddy!"
+    hide elias
 
     show aoi_battle_suit at right_char
     aoi "Ready! Aim! Fire!"
+    hide aoi_battle_suit
+    hide dorian
+    with Dissolve(0.1)
 
     # play sound sfx_arrow_volley                    # PLACEHOLDER
 
-    "In an instant, a volley of arrows darkened the sky, their deadly tips glinting like shards of ice in the pale light. The sound of bowstrings snapping echoed through the cemetery, followed by the sharp whistling of arrows slicing through the air."
+    "In an instant, a volley of arrows darkened the sky, their deadly tips glinting like shards of ice in the pale light."
+    "The sound of bowstrings snapping echoed through the cemetery, followed by the sharp whistling of arrows slicing through the air."
+    show svante normal_angry at center_char with Dissolve(0.2) 
     "Before anyone could react, Svante stepped forward, his arms raised as if commanding the battlefield itself. He furrowed his brow."
-
-    show svante normal_base at left_char
     svante "Everyone, get back!"
+    hide svante
 
     # play sound sfx_metal_barrier                   # PLACEHOLDER
-
+    show cg_svante_save_chung with shock_cut
     "A shimmering metallic sheen erupted from the ground around him, forming a barrier that expanded outward."
     "The arrows struck the gleaming shield with a series of sharp clangs, ricocheting off harmlessly. Sparks flew as the metal deflected each projectile with precision, bending and twisting under Svante's control."
-
-    show elias normal_sad at right_char_kids
+    "Elias continued to tug at my arm."
     elias  "Daddy, get back! Get back!"
 
-    show dorian serious at left_char
     "I pulled him behind me, my heart pounding as I watched Svante deflect every single arrow."
 
-    show yuxuan normal_neutral at right_char with Dissolve(0.2)
     yuxuan "By the Prosperity Dragon… I didn't think anyone could do that."
 
-    show niko normal_base at left_char with Dissolve(0.2)
     niko   "A metal channeller, huh? Interesting…"
 
     "He tilted his head, studying Svante with a sharp gaze."
 
     niko "You don't see that very often around here in Ena."
     "I had heard stories of metal channelers — but I've never seen one before. It was a rare gift."
-
+    "The soldiers and remaining aldoriths hesitated for a moment, stunned by the display of power, but their shock quickly gave way to fury."
     tian_xun     "GRRRR… THAT HANDSOME VIOLET-HAIRED BOY IS HELPING THEM!! CURSE YOU SVANTE!!"
     boy_ald_soldier "S-Svante's helping them!"
-    man_1        "Grr…. You think you can defy us?"
+    mjoll_soldier_1        "Grr…. You think you can defy us?"
     mjoll_soldier_female_1 "He's helping them! That traitor! Father will be angry!"
-    man_2        "Hmph. That means we have to take care of him, then. Second artillery units, ready… aim… fire!"
+    mjoll_soldier_2        "Hmph. That means we have to take care of him, then. Second artillery units, ready… aim… fire!"
+    "The ground shook as the soldiers prepared to launch a second wave of attacks." with hpunch
 
+    hide cg_svante_save_chung with Dissolve(0.25)
+    "Meanwhile, the distinct clatter of hooves thundered in the distance, growing louder with every passing second."
+    show mjoll_helga at right_char
+    show dorian serious at left_char
+    with Dissolve(0.2)
     mjoll_helga "Arrow units! Continue to shoot! Keep firing! Overwhelm them!"
+    hide mjoll_helga
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     "The lady raised her hand once more."
-
+    show dorian angry at left_char
     aoi "Cavalry units! Advance! Run them down!"
 
     "The cavalry surged forward, a wall of armored soldiers mounted on warhorses, their lances glinting under the moonlight. The ground quaked beneath the thunder of hooves."
 
+    show tian_xun at center_char with Dissolve(0.2)
     tian_xun "YES! YES! ATTACK!"
+    hide aoi_battle_suit
+    hide dorian
+    hide tian_xun 
+    with Dissolve(0.1)
 
-    show niko normal_meditate at left_char with Dissolve(0.2)
-    "As I prepared to act, readying my earth channeling to create a defense, Niko stepped forward. He knelt briefly, bowing his head and clasping his hands together as though in prayer. His voice was soft at first, almost a whisper, uttering words."
+    show niko normal_meditate at center_char with Dissolve(0.2)
+    "As I prepared to act, readying my earth channeling to create a defense, Niko stepped forward. He knelt briefly, bowing his head and clasping his hands together as though in prayer."
+    "His voice was soft at first, almost a whisper, uttering words."
 
     niko "Kuroi yami no chikara… watashi no michibikite. Chikara o ataete… Enoch-sama no tame ni."
 
@@ -2182,12 +2199,13 @@ label ch4_svante_capture:
 
     niko "Chikara o ataete… Enoch-sama no tame ni."
 
-    # play sound sfx_shadow_surge                    # PLACEHOLDER
-
+    # TODO: shadow audio
+    hide niko
+    show cg_niko_save_chung with shock_cut
     "A pulse of shadow erupted from his body, snaking through the air like living tendrils. The shadows coiled and writhed, stretching toward the oncoming cavalry with an unnatural speed."
     "As the darkness reached them, it engulfed the soldiers and their horses, twisting around them like black flames."
 
-    man_1        "What the?! Is that the power of the death god?! I don't want to die! I don't want to die!"
+    mjoll_soldier_1 "What the?! Is that the power of the death god?! I don't want to die! I don't want to die!"
     mjoll_lars   "Get a grip, aldoriths! Father will remove all our heads if we return without results!"
     mjoll_helga  "But what should we do, brother?"
 
@@ -2196,41 +2214,38 @@ label ch4_svante_capture:
     mjoll_soldier_female_1 "Ahhh!! Tetrad save me!"
     mjoll_lars   "Ahhh!!"
 
-    show niko normal_serious at left_char
     "The shadows seemed alive, hissing and whispering as they consumed the light around them."
     "Niko stood tall, his figure wreathed in a shroud of creeping shadows."
 
-    show aoi_battle_suit at right_char
-    aoi    "T-The death god?! So, they have a Death God's priest among them… No matter. Regroup and attack again!"
+    aoi "T-The death god?! So, they have a Death God's priest among them… No matter. Regroup and attack again!"
 
     "But her words fell on deaf ears. The soldiers and aldoriths stood frozen, their weapons shaking in trembling hands. Some dropped to their knees, bowing their heads in reverence, as if pleading for forgiveness."
 
-    man_2        "Enoch, please forgive us! *cries* Have mercy on our souls!"
+    mjoll_soldier_2        "Enoch, please forgive us! *cries* Have mercy on our souls!"
     mjoll_soldier_female_1 "We're doomed! He's marked by the Death God Himself!"
     tian_xun     "WHAT?! What in the Prosperity Dragon's radiant name are all of you doing? Get up! Get up if you know what's good for you!"
 
     "The once-organized battalion had devolved into chaos, their fear tangible as they scrambled in disarray."
     "Aoi's frustration boiled over, her composure unraveling as she clenched her fists."
+    hide cg_niko_save_chung with Dissolve(0.1)
 
-    show aoi_battle_suit at right_char
+    show aoi_battle_suit at right_char with Dissolve(0.2)
     aoi "This is preposterous! What kind of power are we dealing with here?!"
-
-    show tian_xun at center_char
+    show tian_xun at left_flip with Dissolve(0.2)
     tian_xun "Preposterous? No, no, my dear Aoi. This is art! This… is genius! HAHAHA!"
-
-    show aoi_battle_suit at right_char
     aoi      "Tian Xun, what are you doing?! We need to regroup, not stand around laughing like a madman!"
 
     tian_xun "Regroup? Oh no, no, no. This isn't the time to fall back, Aoi. This is the time to show them true power. It's time for my masterpiece!"
 
     aoi      "Wait… That's not…"
     tian_xun "YES!! YES!! HAHAHAHAHA!!"
+
     aoi      "You're insane! You can't use that here, Tian Xun! You'll destroy us all!"
     tian_xun "Destroy us? Oh, Aoi, don't be so dramatic. This. Is. Progress! This is the culmination of my Tianho roots, my art! Draconic fire, distilled into its purest, most destructive form!"
 
-    "From beneath his robe, Tian Xun pulled out a small, ornate container. It was carved with intricate dragon motifs that seemed to writhe and twist as the light played over them. A faint, fiery glow seeped from its seams, pulsating like a heartbeat."
+    "From beneath his robe, Tian Xun pulled out a small, ornate container."
+    "It was carved with intricate dragon motifs that seemed to writhe and twist as the light played over them. A faint, fiery glow seeped from its seams, pulsating like a heartbeat."
 
-    show aoi_battle_suit at right_char
     aoi      "Are you daft?! Do you even understand what you're holding?!"
     tian_xun "Legends state that draconic fire can only be channeled by those who are direct descendants of the ancient dragons. The late King Long Shen possessed one… but my father took it before the tragedy. And now, it is mine."
 
@@ -2245,33 +2260,34 @@ label ch4_svante_capture:
     aoi      "Fine… Fine. Do it. Use it."
     tian_xun "Oh, you'll see, Aoi. You'll all see. Prepare my final beauty—the crescendo of my genius! BOOM! BOOM! HAHAHA!"
 
-    show aoi_battle_suit at right_char
     aoi      "I'll get the other battalion of soldiers. Make sure you don't miss this time, okay? You two! Come with me."
 
     mjoll_lars  "Mam!"
     mjoll_helga "Yes, mam."
 
     hide aoi_battle_suit
-    show svante normal_nervous at left_char with Dissolve(0.2)
+    hide tian_xun
+    show svante normal_nervous at right_char
+    show dorian serious at left_char
+    with Dissolve(0.2)
     "Svante turned to us, his form trembling."
-
     svante "Tian Xun… He… He's preparing another bomb!"
-
-    show niko normal_serious at left_char with Dissolve(0.2)
+    hide svante
+    show niko normal_serious at right_char with Dissolve(0.2)
     niko   "He's the lunatic who kicked us out of Tianho, isn't he? Everyone, stay close! The shadows will protect—"
-
-    show svante normal_nervous at left_char
+    hide niko
+    show svante normal_angry at right_char
     svante "No! This isn't just another bomb! He's using his best from his personal collection… it's made of draconic fire!"
 
-    show dorian serious at left_char with Dissolve(0.2)
     dorian "!?"
-
-    show niko normal_serious at left_char
+    hide svante
+    show niko normal_anger at right_char with Dissolve(0.2)
     niko   "Draconic fire?! Are they really that desperate to kill us?!"
     niko   "If they're not careful, they'll blow this entire place to ashes!"
 
-    show dorian serious at left_char
+    show dorian angry at left_char
     "I stepped forward, clutching Elias protectively to my side as my mind raced."
+    show dorian serious at left_char
     "The air grew heavier, a stifling presence of dread pressing down on all of us as we watched Tian Xun. His figure stood atop a platform."
 
     show tian_xun at center_char
@@ -2281,98 +2297,118 @@ label ch4_svante_capture:
     tian_xun "Let your draconic fire consume the unworthy! Burn for me, my deity! BURN FOR GLORY! BURN FOR ART! BOOM! BOOM! HAHAHAHA!"
 
     hide tian_xun
-    "Suddenly, the air around us shifted. A deafening roar erupted from the container as something massive was hurled into the sky. The glowing projectile screamed toward us with terrifying speed, trailing an inferno of searing light and heat."
-    "The ground trembled beneath our feet, and the very air seemed to vibrate with the power of the draconic fire. It wasn't just a bomb—it was a living, breathing entity, roaring with ferocity as it descended toward us."
+    "Suddenly, the air around us shifted. A deafening roar erupted from the container as something massive was hurled into the sky."
+    "The glowing projectile screamed toward us with terrifying speed, trailing an inferno of searing light and heat."
+    "The ground trembled beneath our feet, and the very air seemed to vibrate with the power of the draconic fire." with hpunch
+    "It wasn't just a bomb—it was a living, breathing entity, roaring with ferocity as it descended toward us."
 
+    hide dorian
+    hide niko
+    show tian_xun at center_char
+    with Dissolve(0.2)
     tian_xun "BEHOLD! DRACONIC FIRE! A MASTERPIECE BORN FROM THE PROSPERITY DRAGON!"
 
-    show niko normal_serious at left_char
     "The projectile grew closer, its heat searing even from afar."
-
+    hide tian_xun
+    show niko normal_serious at left_char with Dissolve(0.2)
     niko   "Argh… Everybody! Get down!"
 
-    show svante normal_nervous at left_char with Dissolve(0.2)
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "Almighty Enoch… Please save me…"
+    hide svante 
+    hide niko
 
+    show boy_ald_normal at left_char 
+    show mjoll_soldier_female_1 at right_char
+    with Dissolve(0.2)
     boy_ald_soldier "Let's see how your metal powers save you from this one, Svante, dear brother."
-
     mjoll_soldier_female_1 "Haha! Look at him! He's terrified! The traitor aldorith will die at last!"
+    hide boy_ald_normal
+    hide mjoll_soldier_female_1
 
-    man_1 "He'll die like the snake that he is. Nothing can save him now."
-
+    show mjoll_soldier_1 at left_char
+    show tian_xun at right_char 
+    with Dissolve(0.2)
+    mjoll_soldier_1 "He'll die like the snake that he is. Nothing can save him now."
     tian_xun "DIE!! DIE!! DIE!! ALL FOR THE PROSPERITY DRAGON!!"
 
-    hide niko
-    hide svante
-    hide dorian
     jump ch4_prosperity_dragon
 
 
 # =============================================================================
 # SECTION 19: label ch4_prosperity_dragon
 # =============================================================================
-
 label ch4_prosperity_dragon:
 
-    # scene cg_prosperity_dragon_white with fade     # PLACEHOLDER
+    scene plain_white with shock_cut     # PLACEHOLDER
     # play music ost_prosperity_dragon fadein 0.5    # PLACEHOLDER
 
     "Suddenly, time seemed to stand still. Absolute silence."
-    "I closed my eyes. Is this it?"
+    "I closed my eyes. {i}Is this it?{/i}"
 
-    # show prosperity_dragon at center_char      # PLACEHOLDER — no sprite declared
-    prosperity_dragon "My child…"
+    "{i}My child…{/i}"
+    "My breath hitched. That voice—it was unmistakable."
 
-    show dorian neutral at left_char with Dissolve(0.2)
-    "My breath hitched."
+    dorian "…?"
+    scene cg_prosperity_dragon with shock_cut
+    prosperity_dragon "It has been far too long since you last called upon me. On your own volition."
 
-    prosperity_dragon "It has been far too long since you last called upon me."
-    show dorian neutral at left_char
-    dorian            "…?"
-    prosperity_dragon "Tell me, child, what is it that you desire?"
+    dorian "I…"
 
-    "I swallowed hard."
+    prosperity_dragon "Tell me, child, what is it that you desire? What compels you to reach out to me after so long?"
 
-    show dorian sad at left_char
+    "I swallowed hard, my voice trembling as I replied."
+
     dorian "Please… You know what I need."
-    prosperity_dragon "Speak it! Acknowledge what you seek."
-    prosperity_dragon "I know what burns in your heart. But I will hear it from you, Dorian."
 
-    "I clenched my fists."
+    prosperity_dragon "Speak it! Acknowledge what you seek. Do not make me drag it from your lips like a coward's confession."
+    prosperity_dragon "I know all who carry my blood, all my offspring. I know what burns in your heart. But I will hear it from you, Dorian. Say it with conviction and do not dance around the truth!"
 
-    show dorian neutral at left_char
-    dorian            "I… I need your power. Please… grant me your power again."
+    "I clenched my fists, forcing myself to confront the desperation clawing at my soul."
+    "Elias… Yuxuan… Those who I hold dear."
+    "I want to protect them."
+
+    dorian "I… I need your power. Please… grant me your power again."
+
     prosperity_dragon "My power. How easily you forget, Dorian."
-    prosperity_dragon "You have forgotten who you are! You have forsaken your very essence."
+    prosperity_dragon "You have {i}forgotten{/i} who you are! Ever since your family was torn from you… ever since you've worked as a mercenary in Mjoll… you have turned away from what you were born to be."
+    prosperity_dragon "You have forsaken your very essence. My power is your birthright, and yet you shun it!"
 
-    "The air ignited around me. Small embers flickered to life."
+    "The air ignited around me. Small embers flickered to life, swirling in a growing storm of heat and light. They multiplied rapidly, transforming into a sea of flames that enveloped me."
+    "The heat was blistering, but it didn't burn—it was familiar, like an old friend."
+    "The flames danced in hues of crimson, gold, and orange coiled around my hand."
+    "{i}Just like before.{/i}"
 
-    prosperity_dragon "And then, a memory."
+    "And then, a memory."
 
-    show dorian sad at left_char
-    "The yaoguai king's hand, stained with blood, holding Elara's severed head high."
+    scene cg_elara_children_death with fade
+    "The yaoguai king's hand, stained with blood, holding Elara's severed head high like a trophy. The screams of my children echoed in my ears. The emptiness in their eyes as they lay lifeless before me."
 
-    yk     "The Dragonkin... I've been searching for you."
+    yk "The Dragonkin... I've been searching for you. At last, I've found you."
+
     dorian "Elara… Daniel… Emily… Sarah… Lucas… My family…"
-
+    scene black with fade
     "The flames around me surged. Tears blurred my vision."
-
-    show dorian sad at left_char
-    dorian            "If only… If only I had been strong enough…"
+    dorian "If only… If only I had been strong enough…"
+    scene cg_prosperity_dragon with shock_cut
     prosperity_dragon "Enough!"
-    prosperity_dragon "My blood runs in your veins. You are DRAGONKIN! You only need to accept it!"
+    prosperity_dragon "My blood runs in your veins. My power is your power. You are not weak. You are not broken. You are DRAGONKIN! You only need to accept it—to welcome it as you did before!"
 
     "My hands shook."
+    "Elias… Yuxuan… The ones that I care about…"
 
     dorian "They might be put in danger because of me. I—"
 
-    prosperity_dragon "The bomb… Channel your power, Dorian! Remember yourself. Remember your heritage."
-    prosperity_dragon "Remember who you are."
+    "I could feel the heat. The draconic fire."
+    "The bomb. It was approaching."
 
-    show dorian neutral at left_char
+    $ renpy.save("quick-1")
+    prosperity_dragon "The bomb… Channel your power, Dorian! Take control! Remember yourself. Remember your heritage. Remember who you are."
+    prosperity_dragon "The bomb… Channel your power, Dorian. Remember yourself. Remember your power."
     dorian "I…"
 
-    "The flames surrounding me grew brighter."
+    "The flames surrounding me grew brighter, hotter, more intense."
+    "I close my eyes, my trembling hand hovering over the flames. All of my memories surge forward, each vying for my attention."
 
     $ ch4_draconic_choice = ""
     # play sound sfx_heartbeat loop                 # PLACEHOLDER
@@ -2384,10 +2420,12 @@ label ch4_prosperity_dragon:
             $ ch4_draconic_choice = "tianho"
             $ _choice_timeout = 0
             stop sound
-
-            show dorian sad at left_char
-            "The tragedy of Tianho—the screams, the chaos, the flames engulfing the city."
-            "I saw their faces: desperate, terrified, looking to me as if I were a god who could fix everything."
+            scene bg_tianho_city_on_fire at flashback_filter_enter
+            with fade
+            "The tragedy of Tianho—the screams, the chaos, the flames engulfing the city as people cried out."
+            "I saw their faces: desperate, terrified, looking to me as if I were a god who could fix everything. I wasn't. I was powerless. I failed them."
+            scene tianho_food_stalls_fire at flashback_filter
+            with Dissolve(0.5)
             "The fires consumed the city that day. My hands still carried the ash of that failure."
 
             dorian "I'm sorry… I'm so sorry…"
@@ -2399,9 +2437,9 @@ label ch4_prosperity_dragon:
             $ _choice_timeout = 0
             stop sound
 
-            show dorian sad at left_char
-            "Their laughter echoed in my ears. Elara's warm smile as she held Lucas in her arms."
-
+            "Their laughter echoed in my ears. Elara's warm smile as she held Lucas in her arms. Daniel teaching Emily how to channel her first flame, the two of them bickering playfully as Sarah tried to mediate."
+            "I could see them all so clearly. Elara's hand brushing against my cheek, her voice soft as she whispered to me."
+            scene black with fade
             elara  "You've done enough, love. Just rest. Rest with us."
             dorian "Elara… I wasn't strong enough… I couldn't save you."
 
@@ -2412,9 +2450,10 @@ label ch4_prosperity_dragon:
             $ _choice_timeout = 0
             stop sound
 
-            show dorian sad at left_char
             "Their faces haunted me too. The aldoriths of Mjoll and… how could I forget? Vasily."
+            "My power unleashed recklessly. I only defended myself and Elias but…"
 
+            scene black with shock_cut
             vasily "My friend… How could you kill me?"
             dorian "Vasily… Friend, I… I didn't mean to! Forgive me…"
 
@@ -2425,18 +2464,16 @@ label ch4_prosperity_dragon:
             $ _choice_timeout = 0
             stop sound
 
-            show dorian neutral at left_char
-            "I closed my eyes, letting the voice of the Prosperity Dragon wash over me."
+            "I closed my eyes, letting the voice of the Prosperity Dragon wash over me. The flames burned brighter."
 
             dorian "The Dragon of Gale…"
 
-            "The memories surged like a tidal wave."
-            "But that was before the tragedy."
+            "The memories surged like a tidal wave, crashing into me. The battlefield roared with the echoes of my past victories."
+            "But that was before the tragedy. Before the yaoguai king. Before I failed my family. Before I let the weight of my grief smother my flames."
 
             prosperity_dragon "Rise up, child. Rise, and show them the might of your bloodline!"
 
-            show dorian dragon_eyes at left_char
-            "The flames surged around me, growing wild and untamed."
+            "The flames surged around me, growing wild and untamed, but I didn't flinch. My hands trembled as the memories of Elara and my children flashed before my eyes—their laughter, their warmth, their love."
 
             jump ch4_draconic_fire
 
@@ -2446,27 +2483,22 @@ label ch4_prosperity_dragon:
 # =============================================================================
 
 label ch4_bad_end_bomb:
-
-    show dorian sad at left_char
+    scene cg_prosperity_dragon with Dissolve(0.5)
     "The heat was unbearable. But I felt nothing."
 
     prosperity_dragon "Child… You have forgotten yourself."
+    "The voice rumbled through me, ancient and sorrowful."
     prosperity_dragon "For that, you are lost for eternity. This is where your journey ends. Farewell, Dorian."
-
-    "His voice echoed faintly as the light engulfed me."
+    scene black with fade
+    "His voice echoed faintly as the light engulfed me. The bomb's draconic fire was silent—beautiful, even—as it bloomed in the distance, consuming everything in its path."
     "And then I saw them."
-    "Elara stood there, radiant as ever, her arms outstretched."
 
-    hide dorian
+    scene cg_family_into_light with fade
+    "Elara stood there, radiant as ever, her arms outstretched. Behind her were Daniel, Sarah, Emily, and little Lucas, all smiling at me with the same warmth I had longed to feel again."
     elara  "You've done enough, my heart. Come home now. Rest."
-
-    show dorian sad at left_char with Dissolve(0.2)
-    "Tears streamed down my face as I reached for her."
-
+    "Tears streamed down my face as I reached for her, my heart swelling with relief, with love, with the peace I had craved for so long."
     dorian "I'm so sorry… but I'm here now. I'm home."
 
-    hide dorian
-    # scene cg_bomb_bad_end with fade                # PLACEHOLDER
     # pause 2.0
 
     jump game_over
@@ -2480,192 +2512,203 @@ label ch4_draconic_fire:
 
     # stop music fadeout 0.5
     # play music ost_prosperity_dragon fadein 0.2    # PLACEHOLDER
-
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
+    scene destroyed_land with fade
     "I opened my eyes. The bomb was coming quickly."
+    "The bomb was coming quickly—a monstrous force of destruction hurtling toward us."
+    "The air around it distorted, waves of unbearable heat radiating outward. I could feel it—the core of draconic fire within. Pure energy, raw and chaotic."
     "I stepped forward, raising my hand toward the bomb."
 
-    # scene bg_empty_battlefield with dissolve       # PLACEHOLDER
-
     # play sound sfx_draconic_fire                   # PLACEHOLDER
-
-    "The flames roared, wild and feral, but I felt them bend to my will."
+    scene cg_dorian_redirects with shock_cut
+    "The flames roared, wild and feral, but I felt them bend to my will. My hands twisted, drawing the energy into a vortex. The blazing fire coiled and folded in on itself, condensing into a massive, searing sphere of power."
 
     dorian "Ryyaaahhhhhh!!!"
+    "The energy roared in my hands, a feral, untamed beast. With a surge of power, I flung it toward him, the blazing sphere of draconic fire tearing through the air like a comet, leaving a trail of destruction in its wake."
 
-    hide dorian
-    # scene cg_draconic_fire_surge with shock_cut    # PLACEHOLDER
-    # pause 0.8
-    # scene bg_empty_battlefield with dissolve
-
-    show tian_xun at center_char with Dissolve(0.2)
     tian_xun "HAHAHAHA! YES! YES!!"
-    tian_xun "Prosperity Dragon, witness this moment!"
-    tian_xun "PROSPERITY DRAGON! WITNESS ME! MY FINAL WORK! BOOM! BOOM! HAHAHA—"
+    tian_xun "Prosperity Dragon, witness this moment! Witness your loyal servant's ultimate sacrifice! Let my ashes be your offering! Let this field become your altar! THIS… IS TRUE ART!"
+    tian_xun "PROSPERITY DRAGON! WITNESS ME! MY FINAL WORK! MY GLORIOUS END! BOOM! BOOM! HAHAHA—"
 
-    hide tian_xun
     "The bomb slammed into the ground where Tian Xun stood, detonating with a force that shook the heavens."
-    "His laughter turned to a guttural scream as the fire engulfed him."
-
-    show niko normal_serious at left_char with Dissolve(0.2)
-    vasily           "Ahhh!! Ahhhh!!!"
-    girl_ald_soldier "What in the name of Enoch—"
-
-    "The ground beneath her erupted, jagged pillars of molten rock spearing upward."
-
-    boy_ald_soldier "C-Charge! Charge!"
-
+    "His laughter turned to a guttural scream as the fire engulfed him, the draconic energy tearing his body apart."
     niko "Everyone, get behind my shadows!"
-    show yuxuan normal_neutral at right_char with Dissolve(0.2)
     yuxuan "O-Okay…"
-    niko   "Dorian, you too."
+    niko "Dorian, you too."
+    "Niko's shadows surged around us, forming a protective barrier. I quickly took cover, just in case."
 
-    hide niko
-    hide yuxuan
-    "They came at me in waves. But I killed them."
-
+    "The soldiers surrounding Tian Xun barely had time to scream. The heat hit them first, blistering their skin and igniting their armor."
+    "Their cries turned to guttural wails as the flames engulfed them, reducing them to ash in moments."
+    
     mjoll_pavel  "No!! Impossible!! AHHHH!!!"
-    man_2        "Ahh Ahhh Ahhhhh!!!! Curse you Svanteee!!!"
+    mjoll_soldier_2        "Ahh Ahhh Ahhhhh!!!! Curse you Svanteee!!!"
+    "Some of them dropped their weapons, falling to their knees as if in prayer, their faces contorted in horror and despair."
     mjoll_soldier_female_1 "Ahhhh!!! I don't want to die!!"
-    man_1        "Enoch save meeeee!! AHHHH!!"
+    mjoll_soldier_1        "Enoch save meeeee!! AHHHH!!"
+    "Her voice vanished as the flames swallowed her whole."
+    "Others tried to run, but there was no escape."
 
-    # stop music fadeout 2.0
-
-    show dorian serious at left_char with Dissolve(0.2)
+    scene destroyed_land with fade
+    "The battlefield fell silent, save for the crackling of the flames. The once-proud soldiers of Tian Xun's forces were gone, their remains nothing more than ashes."
     "I stood there, breathing heavily."
 
-    show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    show yuxuan normal_sad at left_char
+    show svante normal_nervous at right_char
+    with Dissolve(0.2)
     yuxuan "Dorian…"
-    show svante normal_nervous at left_char with Dissolve(0.2)
     svante "What the…"
-    show niko normal_base at left_char with Dissolve(0.2)
-    niko   "Merciful Enoch… what did you just do?"
+    hide svante
+    hide yuxuan
 
-    show dorian neutral at right_char
+    show niko alt_tense at center_char with Dissolve(0.2)
+    niko "Merciful Enoch… what did you just do?"
+    hide niko
+
     "I didn't answer. I… didn't know."
-
-    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
     "Elias hugged me even more. Tedda hanging."
-
+    show dorian sad at left_char
+    show elias normal_sad at right_char_kids 
+    with Dissolve(0.2)
     elias "Daddy… is it over?"
-
-    show aoi_battle_suit at right_char with Dissolve(0.2)
+    show dorian serious at left_char
     aoi   "Tian Xun!! No!!"
+    hide elias with Dissolve(0.1)
 
-    hide elias
     "Her voice rang out, raw with fury and disbelief."
-
-    aoi         "You monsters! You dare kill him?! That genius, that visionary!"
+    show aoi_battle_suit at right_char with Dissolve(0.2)
+    aoi         "You monsters! You dare kill him?! That genius, that visionary! He was worth a thousand of you pathetic fools!"
+    hide aoi_battle_suit
+    show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "P-Pavel!! They killed Pavel! No!!"
-
-    show aoi_battle_suit at right_char
-    aoi        "CHARGE! Kill them all! Leave no survivors!"
-    mjoll_lars "Soldiers, kill them!! Kill them all!! Charge!!"
-
+    hide mjoll_helga
+    
+    show aoi_battle_suit at right_char with Dissolve(0.2)
+    "Her eyes gleamed with an almost unhinged fury as she turned to her soldiers."
+    aoi        "CHARGE! Kill them all! Leave no survivors! They will pay for what they've done!"
+    scene soldiers_charging with shock_cut
+    mjoll_lars "Soldiers, kill them!! Kill them all!! Charge!!" with hpunch
     "The ground shook as the battalion surged forward."
 
-    show yuxuan normal_angry at right_char with Dissolve(0.2)
     yuxuan "By the Prosperity Dragon! Another battalion?! Really?! How many soldiers do they even have?!"
-
+    scene destroyed_land with shock_cut
     show dorian serious at left_char with Dissolve(0.2)
     "I turned to Svante."
 
     dorian "How many of you are here?"
 
-    show svante normal_nervous at left_char
+    show svante normal_nervous at right_char with Dissolve(0.2)
     "He pointed at the unconscious man."
 
-    svante "A lot, sir. My father didn't want to take any chances."
-    svante "We can't fight them forever. We're outnumbered ten to one!"
+    svante "A lot, sir. My father didn't want to take any chances. He wanted this man— dead at all costs."
+    svante "We can't fight them forever. We're outnumbered ten to one! We need to do something, and we need to do it now."
+    "Niko stepped forward, shadows pooling at his feet."
+    hide svante
 
-    show niko normal_serious at left_char with Dissolve(0.2)
-    niko "I'll hold them off as long as I can with my shadows."
+    show niko normal_serious at right_char with Dissolve(0.2)
+    niko "I'll hold them off as long as I can with my shadows, but that won't be enough. They'll overwhelm us eventually."
     niko "Any ideas, Dorian? Surely, you've got something else up your sleeve."
+    hide niko
+    hide dorian
+    with Dissolve(0.1)
 
-    show aoi_battle_suit at right_char
+    "The soldiers were closing in fast, their unified march like the rumble of a landslide. Aoi was at the front, water surrounding her."
+    show aoi_battle_suit at right_char with Dissolve(0.2)
     aoi    "You cannot escape! Not even the Prosperity Dragon will save you from my wrath!"
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     dorian "Tsk…"
+    show dorian serious at left_char
+    hide aoi_battle_suit
 
     show yuxuan alt_think at right_char with Dissolve(0.2)
     "Yuxuan approached me."
 
     yuxuan "Dorian, listen. Seeing you creatively use your fire channeling abilities gave me an idea."
+    show yuxuan normal_sad at right_char
+    "He hesitated for only a second before continuing."
+    show yuxuan alt_neutral at right_char
     yuxuan "I don't tell anyone this—like, ever—but I've got an underground lab nearby. It's hidden, secure."
     yuxuan "If you can use your earth powers to dig us a path, I can guide us the rest of the way."
 
-    show dorian neutral at left_char
+    show dorian normal at left_char
     "I arched a brow."
 
     dorian "Of course, I can."
+    hide yuxuan
+    show dorian serious at left_char
+    show niko normal_serious at right_char with Dissolve(0.2)
+    "I turned to Niko, who stood with his shadows coiling protectively around us, their dark tendrils shifting like living sentinels. He met my gaze and gave a curt nod."
 
-    show niko normal_serious at left_char with Dissolve(0.2)
-    "I turned to Niko."
+    niko "If it keeps us alive, we go with his idea. But I'm covering us while we move. No one gets through my shadows."
+    hide niko 
 
-    niko "If it keeps us alive, we go with his idea. But I'm covering us while we move."
-
-    show aoi_battle_suit at right_char
+    show aoi_battle_suit at right_char with Dissolve(0.2)
     aoi        "Lars! Take care of those shadows! Push forward! Kill them all!"
     mjoll_lars "On it, mam! Charge, soldiers!"
 
     "The pounding of their boots grew louder, closer."
+    "There wasn't much time."
+    hide aoi_battle_suit with Dissolve(0.1)
 
-    # play sound sfx_earth_pillar                    # PLACEHOLDER
+    # play sound sfx_earth_pillar
 
-    show dorian normal_alt_confident at left_char
-    "I took a deep breath, slamming my palms into the earth. The ground rumbled and groaned."
+    show dorian normal_alt_calm at left_char
+    "I took a deep breath, slamming my palms into the earth."
+    show dorian dragon_eyes at left_char
+    "The ground rumbled and groaned beneath us as I focused. a wide opening formed, a tunnel descending into the depths below." with vpunch
 
     dorian "Everyone, jump in—now!"
-    show niko normal_base at left_char
+    show niko normal_base at right_char with Dissolve(0.2) 
     niko   "I'll be the last one to jump."
 
-    hide aoi_battle_suit
-    show yuxuan normal_happy at right_char with Dissolve(0.2)
     "Yuxuan didn't hesitate. He leapt in first."
-
+    hide niko
+    show yuxuan normal_neutral at right_char with Dissolve(0.2)
     yuxuan "Come on. I'll catch you."
+    hide yuxuan
 
-    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
-    "Elias clutched Tedda to his chest."
+    show elias alt_neutral at right_char_kids with Dissolve(0.2)
+    "Elias clutched his beloved stuffed animal, Tedda, to his chest as he stood at the edge of the opening."
 
     elias  "Tedda, don't let go!"
-    "Tedda: …"
+    tedda "…"
+    hide elias with Dissolve(0.1)
 
-    show dorian serious at left_char with Dissolve(0.2)
-    "I moved to the edge, hefting the unconscious man over my shoulder."
-
-    show niko normal_base at left_char with Dissolve(0.2)
+    show dorian serious at left_char 
+    "I moved to the edge, hefting the unconscious man over my shoulder. His weight was considerable, but I tightened my grip, refusing to falter."
+    show niko normal_base at right_char with Dissolve(0.2)
     niko   "Be careful with him! He's barely hanging on as it is!"
     show dorian serious at left_char
     dorian "I know. I've got him. Just keep them off us!"
+    hide niko
 
-    show svante normal_nervous at left_char with Dissolve(0.2)
-    "Svante lingered at the edge, uncertainty clouding his features."
-
+    show svante normal_nervous at right_char with Dissolve(0.2)
+    "Svante lingered at the edge, uncertainty clouding his features. He hesitated, torn between the battle raging above and the unknown below."
     dorian "You too. Jump. Now. I'll jump after you."
     svante "I… are you sure— I'm an aldorith I might—"
-    show dorian normal_alt_annoyed at left_char
+    show dorian angry at left_char
     dorian "Dragon's bollocks! Just jump!"
-    svante "O-Okay, sir!"
 
-    hide svante
+    show svante normal_sad at right_char
+    svante "O-Okay, sir!"
+    show dorian serious at left_char
+
+    hide svante with Dissolve(0.1)
     "He jumped, vanishing into the tunnel's depths."
 
-    hide dorian
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
-    "I tightened my hold on the unconscious man and followed."
+    "I tightened my hold on the unconscious man and followed, leaping into the darkness."
 
     yuxuan "That's everyone…You there! It's your turn!"
-    show niko normal_base at left_char with Dissolve(0.2)
+    hide yuxuan
+    show niko normal_base at right_char with Dissolve(0.2)
     niko   "Move over! Shadows, release!"
 
     # play sound sfx_tunnel_seal                     # PLACEHOLDER
 
     hide niko
-    hide yuxuan
-    "As he jumped, the shadows recoiled. I didn't waste a second—I slammed my hands into the dirt, sealing the tunnel shut above us."
+    "As he jumped, the shadows recoiled, pulling away like a collapsing wave. I didn't waste a second—I slammed my hands into the dirt once more, sealing the tunnel shut above us."
+    scene black with shock_cut
     "The battlefield disappeared."
-    "Darkness surrounded us."
+    "Darkness surrounded us. The only sounds were our ragged breaths and the distant echoes of the battle above, muffled by layers of earth."
 
     jump ch4_underground
 
@@ -2675,54 +2718,41 @@ label ch4_draconic_fire:
 # =============================================================================
 
 label ch4_underground:
-
-    scene cg_black with fade
     # play music ost_underground_move fadein 2.0     # PLACEHOLDER
     # play audio amb_tunnel loop fadein 1.5          # PLACEHOLDER
 
-    show yuxuan normal_neutral at left_char with Dissolve(0.2)
-    show niko normal_base at right_char with Dissolve(0.2)
     yuxuan "Is everyone alright?"
     niko   "Shh… Keep your voice down. They're still looking for us."
-
-    show elias first_meet_neutral at right_char_kids with Dissolve(0.2)
     "Above us, we can faintly hear the muffled voices of the soldiers. Elias was about to say something when Yuxuan covered the child's mouth."
 
     mjoll_lars   "Where did they go?! Dammit! They've used the amulet!"
+    "A strangled sob."
+
     mjoll_helga  "Pavel… *cries* Lars, I'm scared…"
-    mjoll_lars   "Calm down, Helga. Aldoriths, search the area for any clues!"
-    man_2        "You heard him, aldoriths! Search every nook and cranny at the cemetery!"
+    mjoll_lars   "Calm down, Helga. We'll find them. Aldoriths, search the area for any clues!"
+    mjoll_soldier_2        "You heard him, aldoriths! Search every nook and cranny at the cemetery!"
     mjoll_soldier_female_1 "Sir yes, sir!"
 
     "And then—"
 
-    show aoi_battle_suit at right_char with Dissolve(0.2)
     aoi "Ti… Tian Xun…"
 
-    hide aoi_battle_suit
     "A pause."
     "Then, a bloodcurdling scream."
 
     aoi "TIAN XUN!!"
 
-    show svante normal_nervous at left_char with Dissolve(0.2)
-    show niko normal_base at right_char with Dissolve(0.2)
     "And as if the heavens themselves mourned, the sky split open, unleashing a torrential downpour."
-
+    # TODO: add rain audio (short)
+    "Raindrops hammered against the earth."
     svante "It's raining now."
-    niko   "Good. That way they can't hear us moving."
 
-    hide svante
-    hide niko
-    hide yuxuan
-    hide elias
     "I looked around. Darkness engulfed us, thick and suffocating. But then—"
 
-    # scene bg_tianho_underground_1 with dissolve    # PLACEHOLDER
+    scene bg_underground_dim with dissolve    # PLACEHOLDER
 
-    show elias first_meet_happy at right_char_kids with Dissolve(0.2)
     "A soft glow flickered to life, illuminating Elias's small frame. He clutched a delicate, flower-shaped flashlight in his tiny hands."
-
+    show elias alt_joy at right_char_kids with Dissolve(0.2)
     elias "Nice going, Tedda. The flashlight is helping."
 
     show dorian neutral at left_char with Dissolve(0.2)
@@ -2730,22 +2760,20 @@ label ch4_underground:
 
     dorian "Are you hurt? Injured?"
 
-    show elias first_meet_happy at right_char_kids
+    show elias normal_happy at right_char_kids
     "Elias smiled and shook his head."
 
     elias  "We're fine, Daddy."
+    hide elias
 
-    show svante normal_nervous at left_char with Dissolve(0.2)
+    show svante normal_nervous at right_char with Dissolve(0.2)
     svante "I-I really can't believe it… We made it. We actually made it."
     svante "Thank you… Thank you, sir! I could kiss your fee—"
+    hide svante
 
-    show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    show yuxuan alt_close_eyes at right_char with Dissolve(0.2)
     yuxuan "We're not out of danger yet. Everyone, stay close. Keep that light steady—we're moving now."
 
-    hide dorian
-    hide yuxuan
-    hide svante
-    hide elias
     scene cg_black with fade
     # stop music fadeout 2.0
     # stop audio fadeout 1.5

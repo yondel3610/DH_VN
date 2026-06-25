@@ -399,3 +399,40 @@ screen rage_power():
         at fire_pulse_gold
         xsize 1920
         ysize 1080
+
+# =========================================
+# Flashback filter
+# =========================================
+transform flashback_filter:
+    matrixcolor SaturationMatrix(0.0) * TintMatrix("#d4c4a0")
+    blur 3
+    xalign 0.5
+    yalign 0.5
+
+transform flashback_filter_enter:
+    matrixcolor SaturationMatrix(1.0) * TintMatrix("#ffffff")
+    blur 0
+    ease 1.0 matrixcolor SaturationMatrix(0.0) * TintMatrix("#d4c4a0")
+    ease 1.0 blur 3
+
+transform flashback_filter_exit:
+    matrixcolor SaturationMatrix(0.0) * TintMatrix("#d4c4a0")
+    blur 3
+    ease 1.0 matrixcolor SaturationMatrix(1.0) * TintMatrix("#ffffff")
+    ease 1.0 blur 0
+
+image floating_note:
+    "images/Assets/Illustrations/30 - NikoPamphalet.png"
+    xalign 0.5
+    yalign 0.5
+    
+transform note_pop:
+    xalign 0.5
+    yalign 0.3
+    zoom 0.6
+    alpha 0.0
+    ease 0.6 zoom 1.0 alpha 1.0
+    ease 0.4 zoom 1.0
+
+
+

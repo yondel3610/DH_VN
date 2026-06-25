@@ -90,7 +90,7 @@ default ch4_yuxuan_interrupted = False
 default ch4_chunghee_choice    = ""
 default ch4_carriage_qtc1      = ""
 default ch4_carriage_qtc2      = ""
-default ch4_draconic_choice    = ""
+default ch4_draconic_choice    = "family"
 
 # =============================================================================
 # CHAPTER 5 CHOICES

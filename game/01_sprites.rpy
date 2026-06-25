@@ -21,22 +21,6 @@
 #   show dorian underwear serious
 # =============================================================================
 
-# Character list folders from assets:
-# dorian
-# yuxuan
-# elias
-# vasily
-# hyon chung-hee
-# magnus
-# niko
-# supply robot
-# roboto
-# svante
-# tim
-# weng
-# other chars folder (added)
-# single sprites from upper dir
-
 # TODO: fix file path
 # =============================================================================
 # DORIAN — NORMAL OUTFIT (7 emotions)
@@ -931,7 +915,7 @@ image weng angry:
 image weng happy:
     At("images/Assets/Character Sprites/Weng/Normal/weng base happy.png", sprite_highlight("weng"))
     fit "contain"
-image weng nsad:
+image weng sad:
     At("images/Assets/Character Sprites/Weng/Normal/weng base sad.png", sprite_highlight("weng"))
     fit "contain"
 image weng serious:
@@ -976,6 +960,121 @@ image weng sleepwear:
 image weng ceremonial:
     At("images/Assets/Character Sprites/Weng/Tianho Ceremonial/weng robe.png", sprite_highlight("weng"))
     fit "contain"
+
+# =============================================================================
+# TIM - All Sprite Variants
+# =============================================================================
+
+# =============================================================================
+# TIM — NORMAL OUTFIT
+# =============================================================================
+image tim angry:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth angry.png", sprite_highlight("tim"))
+    fit "contain"
+image tim happy:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth happy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sad:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth sad.png", sprite_highlight("tim"))
+    fit "contain"
+image tim shy:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth shy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim think:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth thinking.png", sprite_highlight("tim"))
+    fit "contain"
+image tim normal:
+    At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth.png", sprite_highlight("tim"))
+    fit "contain"
+
+# ===============================
+# TIM — NORMAL ALT POSES
+# ===============================
+image tim alt_annoyed:
+    At("images/Assets/Character Sprites/Tim/Normal - Alternative Pose/tim new pose annoyed.png", sprite_highlight("tim"))
+    fit "contain"
+image tim alt_nervous:
+    At("images/Assets/Character Sprites/Tim/Normal - Alternative Pose/tim new pose nervous.png", sprite_highlight("tim"))
+    fit "contain"
+image tim alt_pumped:
+    At("images/Assets/Character Sprites/Tim/Normal - Alternative Pose/tim new pose pump up.png", sprite_highlight("tim"))
+    fit "contain"
+image tim alt_serious:
+    At("images/Assets/Character Sprites/Tim/Normal - Alternative Pose/tim new pose serious.png", sprite_highlight("tim"))
+    fit "contain"
+image tim alt_normal:
+    At("images/Assets/Character Sprites/Tim/Normal - Alternative Pose/tim new pose.png", sprite_highlight("tim"))
+    fit "contain"
+
+# ===============================
+# TIM — SLEEPWEAR
+# ===============================
+image tim sleepwear_angry:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama angry.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sleepwear_happy:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama happy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sleepwear_sad:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama sad.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sleepwear_shy:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama shy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sleepwear_think:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama thinking.png", sprite_highlight("tim"))
+    fit "contain"
+image tim sleepwear_normal:
+    At("images/Assets/Character Sprites/Tim/Sleepwear/kid boy pajama.png", sprite_highlight("tim"))
+    fit "contain"
+
+# ===============================
+# TIM — TIANHO CEREMONIAL
+# ===============================
+image tim ceremonial_angry:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green angry.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_happy:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green happy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_sad:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green sad.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_shy:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green shy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_think:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green thinking.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_green:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe green.png", sprite_highlight("tim"))
+    fit "contain"
+image tim ceremonial_white:
+    At("images/Assets/Character Sprites/Tim/Tianho Ceremonial/kid boy robe.png", sprite_highlight("tim"))
+    fit "contain"
+
+# ===============================
+# TIM — UNDERWEAR
+# ===============================
+image tim underwear_angry:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base emotions angry.png", sprite_highlight("tim"))
+    fit "contain"
+image tim underwear_happy:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base emotions happy.png", sprite_highlight("tim"))
+    fit "contain"
+image tim underwear_sad:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base emotions sad.png", sprite_highlight("tim"))
+    fit "contain"
+image tim underwear_shy:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base emotions angry.png", sprite_highlight("tim"))
+    fit "contain"
+image tim underwear_think:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base emotions thinking.png", sprite_highlight("tim"))
+    fit "contain"
+image tim underwear_normal:
+    At("images/Assets/Character Sprites/Tim/Underwear/kid boy base.png", sprite_highlight("tim"))
+    fit "contain"
+
 
 # TODO: fix file path
 # =============================================================================
