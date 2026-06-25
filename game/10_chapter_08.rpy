@@ -2,107 +2,17 @@
 #  Dragon's Heart: The Crimson Rebirth
 #  FILE:  chapter_08.rpy
 #  SCENE: CHAPTER 8 — Behind the Sealed Door
-#
-#  CONTENTS:
-#    Section 1  — Character Definitions (new only)
-#    Section 2  — Image Declarations
-#    Section 3  — Audio Declarations
-#    Section 4  — Game Variables
-#    Section 5  — label chapter_8          (Ch7 bridge / lab door / tunnel walk)
-#    Section 6  — label ch8_door_chamber   (Yuxuan reveal / Roboto glitch)
-#    Section 7  — label ch8_impostor       (Chung-hee reveals Yuxuan is yaoguai)
-#    Section 8  — label ch8_open_door      (How to open the door — 4 choices)
-#    Section 9  — label ch8_inside_door    (Inside the sealed chamber / bridge)
-#    Section 10 — label ch8_corpse         (Kyeongjang soldier / letter choice)
-#    Section 11 — label ch8_letter_common  (Button / six paintings puzzle)
-#    Section 12 — label ch8_paintings      (Six paintings + dialogue)
-#    Section 13 — label ch8_painting_order (Touch order puzzle — 4 options)
-#    Section 14 — label ch8_magnus_found   (Magnus in ice / freed / awakens)
-#    Section 15 — label ch8_magnus_battle  (Battle QTCs: wing tracker)
-#    Section 16 — label ch8_magnus_end     (IF wing < 3 = GAME OVER / IF >= 3 = proceed)
-#    Section 17 — label ch8_magnus_peace   (Chung-hee breaks through / Magnus calms)
-#    Section 18 — label ch8_walk_back      (Return to lab / Magnus collapses / sleep)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch8_name (all lowercase, underscores only)
-#
-#  TRACKER SUMMARY:
-#    wing_tracker : starts at 0; each correct battle QTC = +1 wing
-#                   QTC lantern stands (+1) / dodge+counter (+1) / earth anchor (+1) / reason (+1)
-#                   IF wing >= 3 → ch8_magnus_peace; IF wing < 3 → GAME OVER
-#
-#  AFFINITY TRACKERS (door opening choice):
-#    niko_affection     : +1 Choice 1 (Niko's suggestion)
-#    svante_affection   : +1 Choice 2 (Svante's suggestion)
-#    yuxuan_affection   : +1 Choice 3 (Yuxuan's suggestion)
-#    chunghee_affection : +1 Choice 4 (Chung-hee's suggestion)
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line needing a real asset.
 ###############################################################################
-
 
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
 # moved to compiled file
 
-# Note: magnus, yaoguai_king, feng, aoi, svante, niko, chung_hee, yuxuan, weng, tim, tedda,
-#       roboto, gao, jiang, elias, dorian, vasily already defined in prior chapters.
-
-
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
-
-image bg_underground_door       = "images/backgrounds/bg_underground_door.png"           # PLACEHOLDER
-# (reused from ch5 — polished metal door, no handles, lab tunnel entrance)
-
-image bg_tianho_underground_2   = "images/backgrounds/bg_tianho_underground_2.png"       # PLACEHOLDER
-# (reused from ch5 — refined underground passage with electric lights)
-
-image bg_underground_the_door   = "images/backgrounds/bg_underground_the_door.png"       # PLACEHOLDER
-# Vast domed chamber — stone door with Prosperity Dragon carved in breathtaking detail
-
-image bg_inside_sealed_door     = "images/backgrounds/bg_inside_sealed_door.png"         # PLACEHOLDER
-# Vast cavern, bottomless chasm around perimeter, narrow stone bridge to central platform
-
-image bg_cheng_bunker           = "images/backgrounds/bg_cheng_bunker.png"               # PLACEHOLDER
-# (reused from ch7)
-
-image bg_lab_bedroom_normal     = "images/backgrounds/bg_lab_bedroom_normal.png"         # PLACEHOLDER
-# (reused from ch6)
-
-# --- CGs ---
-image cg_magnus_ice             = "images/cg/cg_magnus_ice.png"                          # PLACEHOLDER
-# Magnus entombed in crystal-clear ice, great feathered wings curled around body, serene yet haunting
-
-image cg_magnus_awakens         = "images/cg/cg_magnus_awakens.png"                      # PLACEHOLDER
-# Magnus exploding free from ice, wings spread, white eyes blazing, golden veins of divine energy
-
-image cg_magnus_rage            = "images/cg/cg_magnus_rage.png"                         # PLACEHOLDER
-# Magnus hovering above platform, bathed in golden celestial light, wings at full span
-
-image cg_painting_1             = "images/cg/cg_painting_1.png"                          # PLACEHOLDER
-# The Loom's Whisper — celestial void, radiant hands sculpting a half-formed woman
-
-image cg_painting_2             = "images/cg/cg_painting_2.png"                          # PLACEHOLDER
-# Chains of Choice — divine woman stepping from throne, golden chains, man with candle
-
-image cg_painting_3             = "images/cg/cg_painting_3.png"                          # PLACEHOLDER
-# Thrones of the Eternal — four celestial beings on thrones, golden sun above
-
-image cg_painting_4             = "images/cg/cg_painting_4.png"                          # PLACEHOLDER
-# Wrath — woman on burning throne, single tear, golden banners torn
-
-image cg_painting_5             = "images/cg/cg_painting_5.png"                          # PLACEHOLDER
-# Tragedy — winged man with severed head, kneeling divine woman, stormy heavens
-
-image cg_painting_6             = "images/cg/cg_painting_6.png"                          # PLACEHOLDER
-# When the Stars Watched — bard plays lute, divine woman watches from garden edge
-
+# moved to compiled file
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS

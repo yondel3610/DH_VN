@@ -421,6 +421,8 @@ screen main_menu():
     tag menu
     add gui.main_menu_background
 
+    on "show" action With(fade)
+
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"

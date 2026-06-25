@@ -22,12 +22,22 @@ label splashscreen:
     hide text with dissolve
     with Pause(1)
 
-    show text "PLACEHOLDER FOR DH LOGO" with dissolve
+    show dh_logo with dissolve
     with Pause(1.5)
 
-    hide text with dissolve
+    hide dh_logo with dissolve
     with Pause(1)
+
+    with Dissolve(0.3)
     return
+
+image dh_logo:
+    "gui/dh_logo.png"
+    xalign 0.5
+    yalign 0.5
+    fit "contain"
+    zoom 0.75
+    ease 1.5 zoom .87
 
 init python:
     if persistent.save_counter is None:

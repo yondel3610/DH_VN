@@ -2217,53 +2217,62 @@ label ch5_return_to_lab:
     scene lab_cave_on with dissolve
 
     show weng happy at right_flip 
-    show svante normal_neutral
+    show svante normal_neutral at left_char
     with Dissolve(0.2)
     weng "Ah, you're awake! That's good to see. You must be starving."
     weng "Proper introductions are in order. I'm Cai Weng, Master Yuxuan's assistant. It's a pleasure to meet you, young man."
 
+    show svante normal_sad at left_char
     "He blinked, as if taken aback by the kindness in her voice. He looked at me, and then back to her."
 
-    show svante normal_neutral at right_char with Dissolve(0.2)
+    show svante normal_neutral at left_char with Dissolve(0.2)
     svante "I… Yes. Thank you, m-mam. My name's Svante. Svante Nordstrom. I-I'm so glad to meet you."
+
+    show weng normal at right_flip
     weng "Dinner is ready. Please have a seat, gentlemen and I'll be serving you up the food."
     weng "I hope you like haugensoppa. I made it just for you."
-    show svante normal_happy at right_char
+    show svante normal_happy at left_char
     svante "Haugensoppa? You… know Mjoll cuisine?"
     weng "Oh, I've had my fair share of travelers from the North. You lot love your root vegetable stews."
 
     "Svante opened his mouth, perhaps to ask more, but before he could reply—"
     "A sudden burst of tiny, hurried footsteps came from the hallway."
-
+    scene cg_tim_and_elias with fade
     tim "Elias, you're going too slow! Dinner's about to start!"
-
-    show elias normal_neutral at right_char_kids with Dissolve(0.2)
     elias "I'm carrying Tedda and my book! It's a little heavy!"
 
     "Tim marched into the room first, his small arms wrapped around a thick, leather-bound book far too large for someone his age. The title was embossed in gold: {i}Tianho's Ancient Dynasties.{/i}"
     "Elias followed closely behind, but instead of a weighty tome, he proudly clutched a children's coloring book, its cover splashed with bright rainbows and smiling animals. Perched lazily on top was Tedda."
     "Tim sighed dramatically, adjusting his glasses."
+    scene lab_cave_on with fade
 
-    tim "Elias, I told you to pick something educational."
+    show tim alt_pumped at left_char_kids 
     show elias normal_happy at right_char_kids
+    with Dissolve(0.2)
+    tim "Elias, I told you to pick something educational."
     elias "This one had colors, Tim! It's got rainbows! They're educational."
     tim "Rainbows are not educational, Elias."
 
     "Elias gasped as he spotted Svante. His eyes widened with delight."
-
+    show elias normal_lying at right_char_kids
     elias "Look! It's the pink haired guy! He's awake!"
+    show tim alt_normal at left_char_kids
     tim "Huh? He's not pink haired, Elias! It's violet!"
+    show elias normal_evil at right_char_kids
     elias "Tim, pink and violet are the same. Right, Tedda?"
+    show tim alt_annoyed at left_char_kids
     tim "What?! They're completely different colors. Right, Miss Weng?"
-    show svante normal_neutral at right_char
+    show svante normal_base at center_char with Dissolve(0.2)
     svante "Actually… my hair is violet. It's not really pink."
     tim "HA! It's violet! See, Elias? See? I win! HAHA—"
     weng "Tim, quit it. You're embarrassing me in front of Sir Burnham and Sir Nordstrom. Now be a good boy and help me serve dinner."
 
+    show tim shy at left_char_kids
     "Tim huffed but did as he was told, setting his book down carefully before moving to grab a stack of bowls."
-
-    hide elias
     hide svante
+    hide tim
+    hide elias
+    with Dissolve(0.1)
     jump ch5_chung_wakes
 
 
@@ -2278,8 +2287,8 @@ label ch5_chung_wakes:
     # play audio amb_kitchen loop fadein 1.5      # PLACEHOLDER — kitchen ambient
 
     show dorian neutral at left_char with Dissolve(0.2)
-    show elias normal_neutral at right_char_kids with Dissolve(0.2)
     dorian "Elias, why did you even bring all of those—"
+    show dorian serious at left_char
 
     "I felt something. A shift in the air."
     "A presence."
@@ -2287,49 +2296,54 @@ label ch5_chung_wakes:
     "The once-unconscious man was now floating. His feet hovered barely above the ground, the air around him rippling like disturbed water."
     "Then, his head bowed slightly. A voice entered our minds."
 
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
+    show chunghee normal_neutral at right_char with Dissolve(0.2)
     chung_hee "You must be the ones who rescued me. Thank you."
 
     "The room fell into an eerie silence."
-
     "We were all seated at the long table—me, Yuxuan, Niko, Svante, and the once-unconscious man. Roboto hummed softly as it moved around the table, methodically placing glasses of water in front of each of us."
 
-    show roboto happy at right_robot with Dissolve(0.2)
+    show roboto happy at center_robot with Dissolve(0.2)
     roboto "One for you… One for you…"
     roboto "Would you prefer ice cold or lukewarm, Sir Niko?"
-
+    hide chunghee
     show niko normal_base at right_char with Dissolve(0.2)
     niko   "Ice cold. Thanks."
 
     "Then—the voice returned. Not spoken aloud, but entering our minds like a gentle ripple through still water."
-
+    hide niko
+    hide roboto
+    show niko normal_base at right_char
     show chunghee normal_neutral at center_char
+    with Dissolve(0.2)
     chung_hee "Once again, I wish to express my deepest gratitude. Words alone cannot convey how much I owe you."
     chung_hee "If not for you, I would have met a terrible fate."
     show dorian neutral at left_char
     dorian    "Don't mention it."
-    show niko normal_base at right_char
     niko      "And you don't need to be so formal. You don't have to use mind channeling all the time—we can understand you just fine if you speak normally."
 
     "There was a pause."
 
     show chunghee normal_neutral at center_char
     chung_hee "Forgive me. I can only communicate through mind channeling. I hope it is not of any inconvenience to you."
-    show yuxuan normal_neutral at center_char with Dissolve(0.2)
+    hide niko
+    show yuxuan normal_neutral at right_char with Dissolve(0.2)
     yuxuan    "Really? Why not?"
     show chunghee normal_neutral at center_char
     chung_hee "I was born unable to speak. Nor hear. This is the only way I can make myself understood."
-    show niko normal_base at right_char
+    hide yuxuan
+    show niko normal_base at right_char with Dissolve(0.2)
     niko      "So you're a deaf-mute… and you're using your channeling abilities to expand your senses. That's impressive."
     show dorian neutral at left_char
     dorian    "I respect that."
     show niko normal_smile at right_char
     niko      "I actually know a little bit of sign language. My brother and I studied it so we can translate for the Emperor of Kyeongjang's son—he's also a deaf-mute."
+    hide niko
     show svante normal_neutral at right_char with Dissolve(0.2)
     svante    "The son of the Emperor of Kyeongjang's a deaf-mute? Poor guy."
     show chunghee normal_neutral at center_char
     chung_hee "You know my father?"
-    show niko normal_base at right_char
+    hide svante
+    show niko normal_serious at right_char with Dissolve(0.2)
     niko      "Father?"
     show chunghee normal_neutral at center_char
     chung_hee "Yes, you've heard correctly. My name is Hyon Chung-hee. Son of Emperor Hyon Min-joon. And the Emperor of Kyeongjang."
@@ -2341,60 +2355,72 @@ label ch5_chung_wakes:
     dorian    "?!"
     show niko normal_base at right_char
     niko      "?!"
+    hide niko
     show svante normal_nervous at right_char
     svante    "?!"
 
     "Niko inhaled sharply, his eyes darting toward me as if to confirm that we had all heard the same thing."
     "Svante's entire body tensed, his expression a mixture of disbelief and caution. Even Weng, who had spent the past hour focused solely on her cooking, froze mid-motion."
     "Tim, who had been carefully placing spoons on the table, accidentally dropped one. The clatter was deafening in the silence."
-
-    show elias normal_happy at right_char_kids
+    hide chunghee
+    hide svante
+    show elias normal_happy at right_char_kids with Dissolve(0.2)
     "Only Elias remained blissfully unaware, still coloring, his small voice humming a made-up tune."
 
     elias "La la la la..."
     tedda "..."
+    hide elias
 
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_lying at right_char with Dissolve(0.2)
     yuxuan "T-The Emperor?!"
+    hide yuxuan 
+    show weng alt_nervous at right_flip with Dissolve(0.2)
     weng   "By the stars…"
+    hide weng 
+    show yuxuan normal_normal at right_char with Dissolve(0.2)
+
 
     "I leaned back slightly, watching the man—the Emperor—carefully."
+    show chunghee alt_neutral at center_char with Dissolve(0.2)
     "His expression did not waver. He did not fidget, nor did he show any trace of uncertainty."
 
     show dorian serious at left_char
     dorian    "You must be joking. The Emperor of Kyeongjang is dead."
-    show chunghee normal_neutral at center_char
+    show chunghee alt_neutral at center_char
     chung_hee "Yes, my Father, Emperor Min-joon and my mother passed away during their time in Tianho."
     chung_hee "In the wake of their passing, I was named their successor. I am the Emperor now."
-
+    
+    show chunghee normal_sad at center_char
     "He exhaled slowly."
 
+    show chunghee alt_neutral at center_char
     chung_hee "But as for me. I am alive and well. Thanks to all of your combined efforts."
 
+    show dorian normal_alt_calm at left_char
     "I blinked."
     "Silence stretched across the room, thick and suffocating. No one spoke. No one moved."
     "Then—"
 
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at right_char
+    show dorian serious at left_char
     "Yuxuan burst out laughing."
 
     yuxuan "HAHAHAHAHAHA!"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at right_char
     yuxuan "Pfft—alright, that's it. I've officially lost my mind because of that damn propulsion system. This is a dream. A really weird, stress-induced dream."
-
     "He waved a hand in front of his face dramatically."
-
     yuxuan "I mean, let's think about this logically. What are the odds that the actual Emperor of Kyeongjang would be sitting at my dinner table, in my secret underground lab, eating my food?"
 
     "He turned to Weng, looking utterly amused."
 
     yuxuan "Come on, Miss Weng. Pinch me. Maybe I'll wake up in my office, face-first in a pile of paperwork."
-
+    hide yuxuan
+    show weng alt_close_eyes_nervous at right_flip with Dissolve(0.2)
     "Weng let out a long, suffering sigh, pressing her fingers against her temples."
 
     weng "Master Yuxuan… Are you sure?"
-
-    show niko normal_smile at right_char
+    hide weng
+    show niko normal_smile at right_char with Dissolve(0.2)
     "Niko chuckled, shaking his head."
 
     niko "Well, I didn't exactly expect to be dining with the owner of Cheng Industries at his 'secret laboratory' either, let alone with an elderly lady as his personal maid… but here we are."
@@ -2411,10 +2437,12 @@ label ch5_chung_wakes:
     niko "A talking robot with a mind of its own. And—"
 
     # play sound sfx_roboto_crash                 # PLACEHOLDER — Roboto crash SFX
-
-    show roboto error at right_robot
+    hide chunghee
+    show roboto error at center_robot with Dissolve(0.2)
     roboto "R-R-R-R-R-R-R-ooooooo- *crashes*"
-    show roboto happy at right_robot
+    hide roboto
+    show chunghee alt_neutral at center_char with Dissolve(0.2)
+    show niko normal_ignore at right_char
     niko "Right. Moving on."
     niko "A green-haired toddler who, for some reason, spends his free time reading damn bibliographies instead of playing with toys."
 
@@ -2422,13 +2450,15 @@ label ch5_chung_wakes:
 
     tim "Hnn…"
     niko "A crossdressing toddler who just so happens to be the crown Prince of Mjoll and carries around a smelly ragdoll named 'Tedda.'"
-
-    show elias normal_happy at right_char_kids
+    hide niko
+    show elias normal_happy at right_char_kids with Dissolve(0.2)
     "Elias suddenly giggled, completely unaware of the tension in the air. He held up his coloring book, showing it off proudly."
 
     elias "Look! Wainbow, daddy!"
+    hide elias
+    show tim alt_nervous at right_char_kids with Dissolve(0.2)
     tim   "Not now, Elias. The grown-ups are talking."
-
+    hide tim
     show niko normal_base at right_char
     niko  "And you have me. A Prophet of the death god, Enoch, who happens to be his Chosen."
 
@@ -2437,14 +2467,14 @@ label ch5_chung_wakes:
     niko "So tell me, Yuxuan—are you really that surprised that the man sitting with us is the Emperor of Kyeongjang?"
 
     "Yuxuan stared at him for a moment, then exhaled, shaking his head."
-
-    show yuxuan normal_neutral at center_char
+    hide niko
+    show yuxuan normal_neutral at right_char with Dissolve(0.2)
     yuxuan "You make a fair point."
     weng   "You're such an open-minded and understanding person, Master Yuxuan. The pinnacle of open-mindedness!"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at right_char
     yuxuan "Aww thank you, Miss Weng! Well, I am a veryyyyy understanding man, so—"
 
-    show dorian sad at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.2)
     "I buried my face in my palms."
 
     show chunghee normal_neutral at center_char
@@ -3554,13 +3584,6 @@ label ch5_divine_weapon:
     "Reluctantly, I reached forward."
     "The moment my fingers made contact—"
 
-    hide dorian
-    hide yuxuan
-    hide niko
-    hide svante
-    hide roboto
-    hide elias
-    hide chunghee
     jump ch5_amulet_vision
 
 

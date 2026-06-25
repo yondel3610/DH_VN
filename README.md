@@ -4,7 +4,6 @@
 
 ---
 
-
 **Dragon's Heart: The Crimson Rebirth** 
 **Genre:** Fantasy / Drama / Romance (multi-route)  
 **Engine:** Ren'Py 8.5+  
@@ -17,10 +16,6 @@
 
 ---
 
-## Features
-
----
-
 ## Installation & Running
 
 ### From Source (Development)
@@ -28,7 +23,7 @@
 1. Install [Ren'Py SDK](https://www.renpy.org/latest.html)
 2. Clone this repository:
    ```bash
-   git clone https://github.com/yondel3610/Dragon-s-Heart-VN.git
+   git clone https://github.com/yondel3610/DH_VN.git
    ```
 3. Open Ren'Py Launcher
 4. Click "Add Project" and navigate to the project folder
@@ -83,9 +78,6 @@ renpy.exe /path/to/project
 
 ### Voice Acting
 [To be added]
-
-### Programming
-
 
 ### Special Thanks sections
 

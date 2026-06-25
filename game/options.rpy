@@ -20,7 +20,7 @@ define config.name = _("Dragon's Heart: demo version")
 # game version docs:
 # [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "dev 1.3.0"
+define config.version = "dev 1.8.3"
 # define config.version = "alpha 1.2.0"
 # define config.version = "demo 1.2.0"
 
@@ -145,7 +145,7 @@ define config.save_directory = "dh_prologuever001-1774120515"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/Dragon's Heart - Logo.png"
 
 
 ## Build configuration #########################################################

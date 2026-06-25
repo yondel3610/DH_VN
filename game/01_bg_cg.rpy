@@ -587,7 +587,7 @@ image underground_magnus:
     yalign 1.0
 
 image yuxuan_carriage:
-    "images/Assets/Background/carriage_visual_novel_bg_by_gin_1994.jpg"
+    "images/Assets/Background/carriage_visual_novel_bg_by_gin_1994.jpg" # image taken online | placeholder unless no art is given
     fit "contain"
     xalign 0.5
     yalign 1.0

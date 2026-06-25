@@ -23,21 +23,10 @@
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
 # All characters who speak in Chapter 1.
-# Move all character defines to a shared characters.rpy once you have
-# more than one chapter file — Ren'Py loads all .rpy files in /game/ together,
-# so a single characters.rpy visible to every chapter is best practice.
-
-# Characters already defined in prologue.rpy (yk, boy_ald, girl_ald, kristin)
-# are NOT redefined here. Ren'Py will load both files simultaneously.
-# =============================================================================
-
 # compiled character definitions
 
 # =============================================================================
-# SECTION 2: IMAGE DECLARATIONS + BACKGROUND/SPRITE GUIDE
-# =============================================================================
-# PLACEHOLDER: Replace all path strings with real asset paths.
-# All paths are relative to the /game/ folder.
+# SECTION 2: IMAGE DECLARATIONS + BACKGROUND/SPRITE
 # =============================================================================
 # added to 01_bg_cg.rpy | centralized bg images file
 
@@ -45,8 +34,6 @@
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
 # All audio used in Chapter 1.
-# Format: define audio.name = "path/to/file.ogg"
-# PLACEHOLDER: Replace each path with your real .ogg file.
 # =============================================================================
 # TODO: fix audio
 
