@@ -1,11 +1,7 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  prologue.rpy
 #  SCENE: PROLOGUE — Tianho Underground
 #
-#  ENHANCED VERSION with Complete UX Features
-#  Includes: Skip functionality, rollback protection, accessibility options,
-#  save/load compatibility, auto-forward, and text speed controls.
 ###############################################################################
 
 # =============================================================================

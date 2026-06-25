@@ -1,28 +1,9 @@
-# The use of ClaudeCode and Deepseek V3 are stricly for formatting and debugging purposes
+# The use of ClaudeCode and Deepseek V4 are stricly for formatting and debugging purposes
 # AI has been used to make production and documentation faster, not to make the whole thing itself
-
-#  CONTENTS:
-#    Section 1  — Character Definitions (Chapter 1 cast)
-#    Section 2  — Image Declarations   (all BGs and CGs)
-#    Section 3  — Audio Declarations   (all music and SFX)
-#    Section 4  — Game Variables       (affection, trackers, visit flags)
-#    Section 5  — label chapter_1      (Dorian's Room opening)
-#    Section 6  — label ch1_city       (repeatable city exploration menu)
-#    Section 7  — City sub-scenes      (Deng / Fanrong / Xiangli / Zhong)
-#    Section 8  — label ch1_common_fireworks  (city convergence + return to inn)
-#    Section 9  — label ch1_castle_morning    (next morning — castle & auditions)
-#    Section 10 — label ch1_auditions         (D2 — Niko/Kaito)
-#    Section 11 — label ch1_long_shen         (D3 — Cyrus during address)
-#    Section 12 — label ch1_ceremony          (Emperor arrival + feast)
-#    Section 13 — label ch1_elara_chat        (D4 — Elara chat at inn after party)
-#    Section 14 — label ch1_battle            (D5–D10 — castle battle)
-#    Section 15 — label game_over             (shared GAME OVER screen)
-#    Section 16 — label ch1_common_end        (post-battle + Yaoguai King)
 
 # =============================================================================
 # SECTION 1: CHARACTER DEFINITIONS
 # =============================================================================
-# All characters who speak in Chapter 1.
 # compiled character definitions
 
 # =============================================================================
@@ -60,14 +41,9 @@ define audio.ost_tragedy = "audio/sfx and ost/01_ch1/ost/ost_tragedy.ogg"
 # =============================================================================
 # SECTION 4: GAME VARIABLES
 # =============================================================================
-# 
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_1 — Opening (Dorian's Room)
-# =============================================================================
-# Entry point. Jumped to from prologue.rpy via 'jump chapter_1'.
-# Scene: Tianho hotel room, evening. Dorian watches the city with binoculars.
-# Elara drags him out to the lantern markets.
 # =============================================================================
 
 label chapter_1:

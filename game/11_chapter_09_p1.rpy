@@ -1,45 +1,7 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_09_p1.rpy
-#  SCENE: CHAPTER 9 PART 1 — Morning to Pre-Hot Spring
-#
-#  CONTENTS:
-#    Section 1  — Character Definitions (NEW for Chapter 9)
-#    Section 2  — Image Declarations
-#    Section 3  — Audio Declarations
-#    Section 4  — Game Variables
-#    Section 5  — label chapter_9            (Lab Bedroom — morning wake)
-#    Section 6  — label ch9_elias_choice     (Choice: Stay with Elias or check Magnus)
-#    Section 7  — label ch9_common           (Common — lab hallway / kitchen)
-#    Section 8  — label ch9_lab_choices      (Lab living room — four activity choices)
-#    Section 9  — label ch9_library          (Library — Chung-hee reading / Chung choices)
-#    Section 10 — label ch9_library_common   (Library CommonCommon — poem / Weng visit)
-#    Section 11 — label ch9_bedroom_yuxuan   (Bedroom — Yuxuan visit / snacks)
-#    Section 12 — label ch9_tavern           (Tianho tavern — Niko / Aoi encounter)
-#    Section 13 — label ch9_kitchen_help     (Kitchen — help with cooking / Magnus/Svante)
-#    Section 14 — label ch9_kitchen_common   (Kitchen CommonCommon — after cooking)
-#    Section 15 — label ch9_outfit_gather    (Lab — everyone gathers for outfits)
-#    Section 16 — label ch9_pre_hotspring    (End of Part 1 — Roboto leads to hot spring)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch9_name (all lowercase, underscores only)
-#    game variables  — yuxuan_affection, niko_affection, etc.
-#    NO SPACES in any tag, label, variable, or image name.
-#
 #  POV NOTE:
 #    All sections are Dorian's POV.
-#
-#  TRACKER SUMMARY:
-#    chunghee_affection : +1 library (let him be) / -1 press further
-#    yuxuan_affection   : +1 bedroom choice 1 (eat with Yuxuan)
-#    niko_affection     : +1 eat with Niko
-#    svante_affection   : +1 ask about woman in photo
-#    magnus_affection   : +1 join singing / +1 story yes
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line that needs a real asset.
 ###############################################################################
 
 
@@ -47,31 +9,9 @@
 # SECTION 1: CHARACTER DEFINITIONS (NEW FOR CHAPTER 9)
 # =============================================================================
 
-# define huli_jing   = Character("Huli Jing",    color="#f0c040")  # Amber gold — nine-tailed fox spirit
-# define fynn        = Character("Fynn",          color="#cd5c5c")  # Muted red — the zealot, Mjoll
-# define katashi     = Character("Katashi",       color="#8b7355")  # Earth brown — the fisherman, Hinami
-# define emi         = Character("Emi",           color="#f9a8d4")  # Soft pink — Katashi's daughter
-# define seorin      = Character("Seorin",        color="#a8d8ea")  # Pale blue — the alchemist, Kyeongjang
-# define feng        = Character("Paladin Feng",  color="#ff8c00")  # Orange — Dorian's best friend, emcee
-# define soldier_gao = Character("Soldier Gao",   color="#a0a0a0")  # Grey — Dorian's old soldier
-
-# Characters in use this chapter (already defined in earlier chapters):
-# dorian, elias, magnus, yuxuan, niko, svante, chung_hee, weng, tim, tedda_alive, roboto
-# door_voice, vendor, man_1, man_2, woman_1, woman_2, aoi, prosperity_dragon, elara
-
-
 # =============================================================================
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
-
-image bg_tianho_food_stalls_day  = "images/backgrounds/bg_tianho_food_stalls_day.png"      # PLACEHOLDER
-# Tianho food stall row — daytime, colorful vendor carts, festival crowds
-
-image bg_library                 = "images/backgrounds/bg_library.png"                     # PLACEHOLDER
-# Yuxuan's vast underground library — mahogany shelves, floating lanterns, giant hourglass
-
-image bg_tianho_post_tragedy_day = "images/backgrounds/bg_tianho_post_tragedy_day.png"     # PLACEHOLDER
-# Tianho streets — daytime, anniversary festival crowds, vendor stalls
 
 
 # =============================================================================
@@ -79,17 +19,9 @@ image bg_tianho_post_tragedy_day = "images/backgrounds/bg_tianho_post_tragedy_da
 # =============================================================================
 
 define audio.ost_ch9_morning     = "audio/music/ost_ch9_morning.ogg"        # PLACEHOLDER
-# Gentle, warm — morning wake-up in the lab bedroom
-
 define audio.ost_ch9_kitchen     = "audio/music/ost_ch9_kitchen.ogg"        # PLACEHOLDER
-# Lively, homey — kitchen prep with Magnus and Svante
-
 define audio.ost_ch9_library     = "audio/music/ost_ch9_library.ogg"        # PLACEHOLDER
-# Quiet, contemplative — Yuxuan's library atmosphere
-
 define audio.ost_ch9_tavern      = "audio/music/ost_ch9_tavern.ogg"         # PLACEHOLDER
-# Tianho street festival atmosphere — distant drums, flutes
-
 define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"        # PLACEHOLDER
 define audio.amb_tianho_festival = "audio/ambient/amb_tianho_festival.ogg"  # PLACEHOLDER
 define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PLACEHOLDER
@@ -97,16 +29,6 @@ define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PL
 # =============================================================================
 # SECTION 4: GAME VARIABLES
 # =============================================================================
-
-# default ch9_elias_choice   = ""      # "stay" or "rush"
-# default ch9_lab_choice     = ""      # "library" "bedroom" "tavern" or "kitchen"
-# default ch9_chung_pressed  = False
-# default ch9_yuxuan_ate     = False
-# default ch9_niko_ate       = False
-# default ch9_svante_photo   = False
-# default ch9_magnus_song    = False
-# default ch9_story_promised = False
-
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_9 — Lab Bedroom Morning Wake

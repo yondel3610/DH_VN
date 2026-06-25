@@ -421,7 +421,7 @@ screen main_menu():
     tag menu
     add gui.main_menu_background
 
-    on "show" action With(fade)
+    # on "show" action With(fade)
 
     ## This empty frame darkens the main menu.
     frame:
@@ -430,7 +430,6 @@ screen main_menu():
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
-
     if gui.show_name:
 
         vbox:

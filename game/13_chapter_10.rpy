@@ -1,54 +1,7 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_10.rpy
 #  SCENE: CHAPTER 10 — The Yaoguai King's Deal
-#
-#  CONTENTS:
-#    Section 1  — Image Declarations
-#    Section 2  — Audio Declarations
-#    Section 3  — Game Variables
-#    Section 4  — label chapter_10              (Dream — Prosperity Dragon / Yaoguai King deal)
-#    Section 5  — label ch10_deal_choice        (Choice: Accept / Refuse / Consult)
-#    Section 6  — label ch10_bad_end_accept     (BAD ENDING — accepted the deal)
-#    Section 7  — label ch10_refuse             (Choice 2: Refuse — wake up)
-#    Section 8  — label ch10_consult            (Choice 3: Consult Dragon — story of Zhan)
-#    Section 9  — label ch10_common_wake        (Common — wake up / storage room cameo / alert)
-#    Section 10 — label ch10_departure          (Underground door — goodbye to Weng/kids)
-#    Section 11 — label ch10_route_farewell     (Route-specific farewell monologues)
-#    Section 12 — label ch10_sealed_door        (Sealed door — Yaoguai King / vision)
-#    Section 13 — label ch10_vision_rulers      (Vision — rulers' meeting 5 years ago)
-#    Section 14 — label ch10_boss_fight_1       (Boss fight round 1 — first timed choice)
-#    Section 15 — label ch10_boss_fight_2       (Boss fight round 2 — spirits wave)
-#    Section 16 — label ch10_boss_fight_3       (Boss fight round 3 — cyclone)
-#    Section 17 — label ch10_boss_outcome       (Different outcomes — YKing score gate)
-#    Section 18 — label ch10_bad_end_fight      (BAD END — YKing < 3)
-#    Section 19 — label ch10_boss_good          (YKing >= 3 — illusion of Elara / rescue)
-#    Section 20 — label ch10_rescue_yuxuan      (ROUTE: Yuxuan rescues Dorian)
-#    Section 21 — label ch10_rescue_chunghee    (ROUTE: Chung-hee rescues Dorian)
-#    Section 22 — label ch10_rescue_svante      (ROUTE: Svante rescues Dorian)
-#    Section 23 — label ch10_rescue_niko        (ROUTE: Niko rescues Dorian)
-#    Section 24 — label ch10_rescue_magnus      (ROUTE: Magnus rescues Dorian)
-#    Section 25 — label ch10_tianho_battle      (Tianho — Gao/Jiang / Feng gate)
-#    Section 26 — label ch10_tianho_aoi         (Tianho — Aoi gate / Babala)
-#    Section 27 — label ch10_epilogue           (Prosperity Dragon narration / kitchen / sail to Hinami)
-#    Section 28 — label ch10_credits_scene      (End credits scene — Gustav / Cyrus)
-#    Section 29 — label ch10_bad_end_credits    (GAME OVER / BAD END credits)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name
-#    label names     — ch10_name (all lowercase, underscores)
-#    game variables  — yking_score, feng_score, aoi_score
-#    NO SPACES in any tag, label, variable, or image name.
-#
-#  TRACKER SUMMARY:
-#    love_route_locked  — carried from ch9 ("yuxuan"/"niko"/"svante"/"chunghee"/"magnus")
-#    yking_score        — +1 per correct timed choice (max 3) — gates good/bad ending
-#    feng_score         — +1 if Feng was alerted in ch10 (Gao/Jiang live gate)
-#    aoi_score          — +1 if Aoi was in Tianho (Aoi gate)
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line that needs a real asset.
+
 ###############################################################################
 
 
@@ -56,104 +9,33 @@
 # SECTION 1: IMAGE DECLARATIONS
 # =============================================================================
 
-image bg_white_screen            = "images/backgrounds/bg_white_screen.png"               # PLACEHOLDER
-# Pure white — dream void
-
-image bg_tropical_cameo          = "images/backgrounds/bg_tropical_cameo.png"             # PLACEHOLDER
-# A Tropical Christmas crossover scene — warm colours
-
-image bg_storage_room            = "images/backgrounds/bg_storage_room.png"               # PLACEHOLDER
-# Yuxuan's storage room — shelves, boxes, soft warm light
-
-image bg_tianho_underground_2    = "images/backgrounds/bg_tianho_underground_2.png"       # PLACEHOLDER
-# Underground path below Tianho — stone walls, torchlight
-
-image bg_underground_door        = "images/backgrounds/bg_underground_door.png"           # (reuse ch9)
-# Lab exit door, Jinyan steel, glowing etchings
-
-image bg_sealed_door_inside      = "images/backgrounds/bg_sealed_door_inside.png"         # PLACEHOLDER
-# Interior of the sealed chamber — cracked ice platform, broken etchings
-
-image bg_sealed_door_no_color    = "images/backgrounds/bg_sealed_door_no_color.png"       # PLACEHOLDER
-# Same sealed chamber, desaturated — flashback vision
-
-image bg_mjoll_palace            = "images/backgrounds/bg_mjoll_palace.png"               # PLACEHOLDER
-# Mjoll palace interior — stone walls, iron torches
-
-image bg_underground_door_no_col = "images/backgrounds/bg_underground_door_no_color.png"  # PLACEHOLDER
-# Lab door exterior, desaturated — flashback continuation
-
-image bg_cheng_entrance_night    = "images/backgrounds/bg_cheng_entrance_night.png"       # PLACEHOLDER
-# Cheng Industries entrance — night, torchlight, smoke
-
-image bg_tianho_night            = "images/backgrounds/bg_tianho_night.png"               # PLACEHOLDER
-# Tianho streets at night — scattered fires, fleeing people
-
-image bg_tianho_food_stalls_night = "images/backgrounds/bg_tianho_food_stalls_night.png"  # PLACEHOLDER
-# Tianho food stall row — night, yaoguai attack aftermath
-
-image bg_overlooking_tianho      = "images/backgrounds/bg_overlooking_tianho.png"         # PLACEHOLDER
-# Aerial view of Tianho at dawn — calm after battle
-
-image bg_empty_battlefield       = "images/backgrounds/bg_empty_battlefield.png"          # PLACEHOLDER
-# Muddy trail, storm clouds — Gustav's carriage
-
-image cg_yaoguai_king_dream      = "images/cg/cg_yaoguai_king_dream.png"                 # PLACEHOLDER
-# Yaoguai King in dream space — clawed hand raised, legions behind him
-
-image cg_elara_illusion          = "images/cg/cg_elara_illusion.png"                     # PLACEHOLDER
-# Elara illusion — glowing, smiling, hand outstretched
-
-
 # =============================================================================
 # SECTION 2: AUDIO DECLARATIONS
 # =============================================================================
 
-define audio.ost_ch10_dream      = "audio/music/ost_ch10_dream.ogg"         # PLACEHOLDER
-# Ethereal, soft — Prosperity Dragon dream voice
-
-define audio.ost_ch10_yaoguai_deal = "audio/music/ost_ch10_yaoguai_deal.ogg" # PLACEHOLDER
-# Menacing, dread — Yaoguai King's ultimatum
-
-define audio.ost_ch10_bad_end    = "audio/music/ost_ch10_bad_end.ogg"       # PLACEHOLDER
-# Tragic, fading — bad ending music
-
-define audio.ost_ch10_alert      = "audio/music/ost_ch10_alert.ogg"         # PLACEHOLDER
-# Urgent, tense — yaoguai attack begins
-
-define audio.ost_ch10_boss       = "audio/music/ost_ch10_boss.ogg"          # PLACEHOLDER
-# Epic, driving — Yaoguai King boss fight
-
-define audio.ost_ch10_rescue     = "audio/music/ost_ch10_rescue.ogg"        # PLACEHOLDER
-# Triumphant, emotional — partner rescue moment
-
-define audio.ost_ch10_aftermath  = "audio/music/ost_ch10_aftermath.ogg"     # PLACEHOLDER
-# Warm, hopeful — epilogue / kitchen scene
-
-define audio.ost_ch10_credits    = "audio/music/ost_ch10_credits.ogg"       # PLACEHOLDER
-# Ominous, teasing — end credits Gustav scene
-
-define audio.sfx_electric_net    = "audio/sfx/sfx_electric_net.ogg"         # PLACEHOLDER
-define audio.sfx_megaboom        = "audio/sfx/sfx_megaboom.ogg"             # PLACEHOLDER
-define audio.sfx_psychic_chains  = "audio/sfx/sfx_psychic_chains.ogg"       # PLACEHOLDER
-define audio.sfx_metal_blades    = "audio/sfx/sfx_metal_blades.ogg"         # PLACEHOLDER
-define audio.sfx_shadow_burst    = "audio/sfx/sfx_shadow_burst.ogg"         # PLACEHOLDER
-define audio.sfx_divine_lance    = "audio/sfx/sfx_divine_lance.ogg"         # PLACEHOLDER
-define audio.sfx_yaoguai_roar    = "audio/sfx/sfx_yaoguai_roar.ogg"        # PLACEHOLDER
-define audio.sfx_draconic_fire   = "audio/sfx/sfx_draconic_fire.ogg"        # PLACEHOLDER
-define audio.sfx_claws           = "audio/sfx/sfx_claws.ogg"                # PLACEHOLDER
-define audio.sfx_carriage_rumble = "audio/sfx/sfx_carriage_rumble.ogg"      # PLACEHOLDER
-define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"         # PLACEHOLDER (reuse)
-
+# define audio.ost_ch10_dream      = "audio/music/ost_ch10_dream.ogg"         # PLACEHOLDER
+# define audio.ost_ch10_yaoguai_deal = "audio/music/ost_ch10_yaoguai_deal.ogg" # PLACEHOLDER
+# define audio.ost_ch10_bad_end    = "audio/music/ost_ch10_bad_end.ogg"       # PLACEHOLDER
+# define audio.ost_ch10_alert      = "audio/music/ost_ch10_alert.ogg"         # PLACEHOLDER
+# define audio.ost_ch10_boss       = "audio/music/ost_ch10_boss.ogg"          # PLACEHOLDER
+# define audio.ost_ch10_rescue     = "audio/music/ost_ch10_rescue.ogg"        # PLACEHOLDER
+# define audio.ost_ch10_aftermath  = "audio/music/ost_ch10_aftermath.ogg"     # PLACEHOLDER
+# define audio.ost_ch10_credits    = "audio/music/ost_ch10_credits.ogg"       # PLACEHOLDER
+# define audio.sfx_electric_net    = "audio/sfx/sfx_electric_net.ogg"         # PLACEHOLDER
+# define audio.sfx_megaboom        = "audio/sfx/sfx_megaboom.ogg"             # PLACEHOLDER
+# define audio.sfx_psychic_chains  = "audio/sfx/sfx_psychic_chains.ogg"       # PLACEHOLDER
+# define audio.sfx_metal_blades    = "audio/sfx/sfx_metal_blades.ogg"         # PLACEHOLDER
+# define audio.sfx_shadow_burst    = "audio/sfx/sfx_shadow_burst.ogg"         # PLACEHOLDER
+# define audio.sfx_divine_lance    = "audio/sfx/sfx_divine_lance.ogg"         # PLACEHOLDER
+# define audio.sfx_yaoguai_roar    = "audio/sfx/sfx_yaoguai_roar.ogg"        # PLACEHOLDER
+# define audio.sfx_draconic_fire   = "audio/sfx/sfx_draconic_fire.ogg"        # PLACEHOLDER
+# define audio.sfx_claws           = "audio/sfx/sfx_claws.ogg"                # PLACEHOLDER
+# define audio.sfx_carriage_rumble = "audio/sfx/sfx_carriage_rumble.ogg"      # PLACEHOLDER
+# define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"         # PLACEHOLDER (reuse)
 
 # =============================================================================
 # SECTION 3: GAME VARIABLES
 # =============================================================================
-
-# default yking_score  = 0    # +1 per correct timed choice, max 3 — gates good/bad ending
-# default feng_score   = 0    # +1 if Feng alerted and arrived
-# default aoi_score    = 0    # +1 if Aoi was present in Tianho
-
 
 # =============================================================================
 # SECTION 4: LABEL CHAPTER_10 — Dream: Prosperity Dragon / Yaoguai King Deal

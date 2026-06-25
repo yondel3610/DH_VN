@@ -1,84 +1,11 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_09_p2.rpy
 #  SCENE: CHAPTER 9 PART 2 — Hot Spring to End of Chapter
-#
-#  CONTENTS:
-#    Section 1  — Image Declarations (new for Part 2)
-#    Section 2  — Audio Declarations (new for Part 2)
-#    Section 3  — Game Variables (new for Part 2)
-#    Section 4  — label chapter_09_p2        (Hot Spring — Magnus / Yuxuan entry)
-#    Section 5  — label ch9_huli_jing        (Hot Spring — Huli Jing appears)
-#    Section 6  — label ch9_judgment_mjoll   (Illusion: Mjoll — Fynn Hjorth trial)
-#    Section 7  — label ch9_judgment_hinami  (Illusion: Hinami — Katashi Morita trial)
-#    Section 8  — label ch9_judgment_kyeong  (Illusion: Kyeongjang — Seorin Im trial)
-#    Section 9  — label ch9_judgments_back   (Common — back to hot spring)
-#    Section 10 — label ch9_huli_reward_low  (IF approval < 3 — fox leaves without reward)
-#    Section 11 — label ch9_huli_reward_high (IF approval >= 3 — fox grants question)
-#    Section 12 — label ch9_huli_love        (Love route choice)
-#    Section 13 — label ch9_huli_exit        (CommonCommonCommon — fox farewell / FWOOMP)
-#    Section 14 — label ch9_stuffed_fox_exit (Common — darkness / toy / everyone pops out)
-#    Section 15 — label ch9_kids_spring      (Hot Spring — kids POV / Tim / Huli Jing)
-#    Section 16 — label ch9_fox_toy          (Elias opens fox toy)
-#    Section 17 — label ch9_spring_end       (Common — untangled / bathing / hilltop prep)
-#    Section 18 — label ch9_hilltop          (Hill — ceremony / Aoi / lanterns)
-#    Section 19 — label ch9_lantern_kids     (Lantern release — Elias launches lantern)
-#    Section 20 — label ch9_route_yuxuan     (ROUTE: Yuxuan lantern scene)
-#    Section 21 — label ch9_route_chunghee   (ROUTE: Chung-hee lantern scene)
-#    Section 22 — label ch9_route_svante     (ROUTE: Svante lantern scene)
-#    Section 23 — label ch9_route_niko       (ROUTE: Niko lantern scene)
-#    Section 24 — label ch9_route_magnus     (ROUTE: Magnus lantern scene)
-#    Section 25 — label ch9_end              (Common ending — sparklers / going home)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch9_name (all lowercase, underscores only)
-#    NO SPACES in any tag, label, variable, or image name.
-#
-#  TRACKER SUMMARY:
-#    huli_jing_approval : +1 per exile judgment (max 3) — gates reward
-#    chunghee_affection : +1 ch9 flan question (choice 4 of reward)
-#    love_route_locked  : set to "yuxuan" / "niko" / "svante" / "chunghee" / "magnus"
-#    yuxuan_affection   : +++ Yuxuan / +1 "They'd be proud of you"
-#    niko_affection     : +++ Niko
-#    svante_affection   : +++ Svante
-#    chunghee_affection : +++ Chung-hee
-#    magnus_affection   : ++++ Magnus
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line that needs a real asset.
 ###############################################################################
-
 
 # =============================================================================
 # SECTION 1: IMAGE DECLARATIONS
 # =============================================================================
-
-image bg_hot_spring              = "images/backgrounds/bg_hot_spring.png"                  # PLACEHOLDER
-# Natural underground hot spring — glowing fungi, steam, lanterns on cavern walls
-
-image bg_mjoll_town_square       = "images/backgrounds/bg_mjoll_town_square.png"           # PLACEHOLDER
-# Mjoll town square — snow, stone buildings, iron gates, grey sky
-
-image bg_hinami                  = "images/backgrounds/bg_hinami.png"                      # PLACEHOLDER
-# Hinami cliffside — blue sky, crashing waves below, salt-laced wind
-
-image bg_kyeongjang_palace       = "images/backgrounds/bg_kyeongjang_palace.png"           # (reuse from ch4)
-# Kyeongjang palace courtyard — pagodas, gold leaf rooftops, pale sky
-
-image bg_hill_memorial_night     = "images/backgrounds/bg_hill_memorial_night.png"         # PLACEHOLDER
-# Hilltop overlooking Tianho Memorial — indigo sky, lanterns glowing below
-
-image cg_huli_jing_spring        = "images/cg/cg_huli_jing_spring.png"                    # PLACEHOLDER
-# Huli Jing perched on spring rock — nine tails spread, golden eyes, steam around her
-
-image cg_elara_xianlun           = "images/cg/cg_elara_xianlun.png"                       # PLACEHOLDER
-# Elara, Daniel, Emily, Sarah, Lucas beneath the golden gate of Xianlun
-
-image cg_aoi_performance         = "images/cg/cg_aoi_performance.png"                     # PLACEHOLDER
-# Aoi in indigo kimono, holographic sea and dragon rising behind her
-
 
 # =============================================================================
 # SECTION 2: AUDIO DECLARATIONS
@@ -92,24 +19,17 @@ define audio.ost_judgment_kyeong = "audio/music/ost_judgment_kyeong.ogg"    # PL
 define audio.ost_ch9_ceremony    = "audio/music/ost_ch9_ceremony.ogg"       # PLACEHOLDER
 define audio.ost_ch9_lanterns    = "audio/music/ost_ch9_lanterns.ogg"       # PLACEHOLDER
 define audio.ost_ch9_fireworks   = "audio/music/ost_ch9_fireworks.ogg"      # PLACEHOLDER
-
 define audio.sfx_huli_fwoomp     = "audio/sfx/sfx_huli_fwoomp.ogg"         # PLACEHOLDER
 define audio.sfx_judgment_chains = "audio/sfx/sfx_judgment_chains.ogg"     # PLACEHOLDER
 define audio.sfx_firework_boom   = "audio/sfx/sfx_firework_boom.ogg"       # PLACEHOLDER
 define audio.sfx_sparklers       = "audio/sfx/sfx_sparklers.ogg"           # PLACEHOLDER
 define audio.sfx_cheng_jingle    = "audio/sfx/sfx_cheng_jingle.ogg"        # PLACEHOLDER
-
 define audio.amb_hot_spring      = "audio/ambient/amb_hot_spring.ogg"      # PLACEHOLDER
 define audio.amb_hilltop_night   = "audio/ambient/amb_hilltop_night.ogg"   # PLACEHOLDER
-
 
 # =============================================================================
 # SECTION 3: GAME VARIABLES
 # =============================================================================
-
-# default huli_jing_approval  = 0     # +1 per exile judgment, max 3
-# default love_route_locked   = ""    # "yuxuan" "niko" "svante" "chunghee" "magnus"
-
 
 # =============================================================================
 # SECTION 4: LABEL CHAPTER_09_P2 — Hot Spring

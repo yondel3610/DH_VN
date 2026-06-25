@@ -1,47 +1,6 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_06_sprites_annotated.txt
-#  NOTES:
-#    — All audio, BG, and CG lines are commented out where marked PLACEHOLDER
-#    — Sprite show/hide calls added per the rules discussed
-#    — Existing comments left unchanged
-#    — Timed QTC syntax (_choice_timeout) applied to D1–D5 timed menus
-#
-#  SPRITES NOT AVAILABLE (dialogue only, no show/hide):
-#    tim             — no sprite declared
-#    weng            — no sprite declared (used only off-screen this chapter)
-#    lab_door        — no sprite (expected, it's a door)
-#    hundun          — no positioned character sprite (only an illustrative image)
-#    yg (Yaoguai)    — no positioned character sprite (only an illustrative image)
-#    minjoon_illusion — no sprite declared for Emperor Min-joon
-#
-#  SPRITE NAME USED FOR:
-#    chung_hee        — chunghee normal_neutral (base) and variants
-#    vasily_illusion  — vasily neutral / alt_* variants
-#    gustav_illusion  — king_gustav (single sprite, no emotion variants)
-#    olympia_illusion — olympia (single sprite, no emotion variants)
-#    tedda_alive      — tedda_human (single sprite, no emotion variants)
-#    feng             — feng_suit (single sprite, no emotion variants)
-#    aoi              — aoi_base / aoi_battle_suit
-#    gao              — soldier_gao
-#    jiang            — soldier_jiang
-#
-#  BG SUBSTITUTIONS (placeholder names not declared in BG file; closest real
-#  asset noted as a comment beside each commented-out PLACEHOLDER line):
-#    bg_lab_bedroom              → spare_room
-#    bg_yuxuan_lab_dim           → cheng_industries_bunk_off
-#    bg_tianho_overlooking_night → bg_tianho_city_night
-#    bg_tianho_post_tragedy_night → bg_tianho_city_on_fire (closest ruin-state asset)
-#    bg_cheng_store_entrance_night → bg_tianho_city_night
-#    bg_tianho_dorians_room      → no asset declared, left commented only
-#    bg_tianho_food_stalls_fire  → tianho_food_stalls_fire
-#    bg_mjoll_palace_throne      → mjoll_palace_throne
-#    bg_mjoll_square_festive     → bg_mjoll_icelands (closest Mjoll exterior)
-#    bg_frostcradle_ice          → frostcradle_blizzard
-#    cg_hundun_form              → no asset declared, left commented only
-#    cg_feng_arrives             → cg_feng_aoi
 ###############################################################################
-
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_6 — Lab Bedroom / Dorian Wakes

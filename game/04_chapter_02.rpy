@@ -1,48 +1,6 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_02.rpy
 #  SCENE: CHAPTER 2 — Four Years Later: Mjoll, Mercenary Life & the Blizzard
-#
-#  CONTENTS:
-#    Section 1  — Character Definitions
-#    Section 2  — Image Declarations  (backgrounds, CGs, sprites)
-#    Section 3  — Audio Declarations  (music, SFX, ambient)
-#    Section 4  — Game Variables      (trackers, flags, choice records)
-#    Section 5  — label chapter_2     (opening — Icelands / Qiongqi hunt)
-#    Section 6  — label ch2_palace    (Mjoll Palace — Gustav's court)
-#    Section 7  — label ch2_cave      (Dorian's cave — grief / dinner)
-#    Section 8  — label ch2_square_intro  (Town Square — pre-festival setup)
-#    Section 9  — label ch2_freetime  (D2 — four-option free time menu)
-#    Section 10 — Free time sub-scenes
-#                   ch2_food_stalls   (food stalls + D2a: confront or ignore)
-#                   ch2_fortune       (Babala + D2b: family or companions)
-#                   ch2_spa           (spa + D2c: do nothing or punish)
-#                   ch2_rest          (rest with Vasily)
-#    Section 11 — label ch2_common_freetime  (free time convergence)
-#    Section 12 — label ch2_ceremony  (celebration + D1: dunk tank)
-#    Section 13 — label ch2_frost_oni (Frost Oni battle — D4, D5, D6 QTCs)
-#    Section 14 — label game_over_freeze     (shared GAME OVER screen — ICE freeze)
-#    Section 15 — label ch2_common_end  (post-battle + Yuxuan letter + D3)
-#    Section 16 — label ch2_castle_briefing  (assassination mission briefing)
-#    Section 17 — label ch2_questions (optional questions to Vasily)
-#
-#  NAMING CONVENTIONS (enforced throughout)
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch2_name (all lowercase, underscores only)
-#    game variables  — svante_affection, ice_tracker, yuxuan_affection, etc.
-#    NO SPACES in any tag, label, variable, or image name.
-#
-#  TRACKER SUMMARY:
-#    svante_affection : +1 if D1 = Pretend to miss (dunk tank)
-#    ice_tracker      : +1 per wrong Frost Oni QTC answer; >=2 = GAME OVER
-#    yuxuan_affection : +1 if D3 = Write warm response
-#
-#  HARD GATE:
-#    D6 (frost cloud) wrong answer when ice_tracker >= 2 -> GAME OVER
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line that needs a real asset.
 ###############################################################################
 
 

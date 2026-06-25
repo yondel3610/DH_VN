@@ -1,62 +1,6 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_05.rpy
 #  SCENE: CHAPTER 5 — Cheng Industries
-#
-#  CONTENTS:
-#    Section 1  — Character Definitions (NEW for Chapter 5)
-#    Section 2  — Image Declarations
-#    Section 3  — Audio Declarations
-#    Section 4  — Game Variables
-#    Section 5  — label chapter_5            (Underground — tunnel walk)
-#    Section 6  — label ch5_lab_entrance     (Underground 2 — lab passage)
-#    Section 7  — label ch5_yuxuan_lab       (Yuxuan's Laboratory — entry)
-#    Section 8  — label ch5_spare_room       (Lab Bedroom — Chung-hee stabilized)
-#    Section 9  — label ch5_niko_choices     (Choices: talking with Niko)
-#    Section 10 — label ch5_niko_common      (Common — Niko faith / Tianho memory)
-#    Section 11 — label ch5_living_room      (Lab Main Room — Elias and Tim)
-#    Section 12 — label ch5_storage_room     (Storage Room — Svante interrogation)
-#    Section 13 — label ch5_svante_choices   (Choices: questioning Svante)
-#    Section 14 — label ch5_svante_common    (Common — Svante freed)
-#    Section 15 — label ch5_dinner_setup     (Lab Main Room — dinner preparation)
-#    Section 16 — label ch5_food_choice      (Choice: cuisine selection)
-#    Section 17 — label ch5_nap              (Lab — Dorian naps, Weng intro)
-#    Section 18 — label ch5_chung_wakes      (Kitchen — Chung-hee arrives at dinner)
-#    Section 19 — label ch5_roboto_witness   (Choice: Roboto witness)
-#    Section 20 — label ch5_food_moonlit     (IF Moonlit Noodles)
-#    Section 21 — label ch5_food_truffle     (IF Imperial Truffle Roast)
-#    Section 22 — label ch5_food_hotpot      (IF Fisherman's Hotpot)
-#    Section 23 — label ch5_food_lamb        (IF Mjollian Mead-Braised Lamb)
-#    Section 24 — label ch5_food_common      (Food common — Roboto dish for Chung-hee)
-#    Section 25 — label ch5_dinner_talk      (Dinner — Gustav choice / Chung reveals plan)
-#    Section 26 — label ch5_divine_weapon    (Chung reveals Divine Weapon / Cheonmyeong Gyeol)
-#    Section 27 — label ch5_amulet_vision    (Dorian touches amulet — vision sequence)
-#    Section 28 — label ch5_magnus_choices   (White screen — Magnus choices)
-#    Section 29 — label ch5_magnus_common    (Magnus common — void breaks)
-#    Section 30 — label ch5_nightmare        (Yaoguai King nightmare — end of chapter)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch5_name (all lowercase, underscores only)
-#    game variables  — chunghee_affection, yuxuan_affection, etc.
-#    NO SPACES in any tag, label, variable, or image name.
-#
-#  POV NOTE:
-#    All sections are Dorian's POV unless otherwise noted.
-#
-#  TRACKER SUMMARY:
-#    yuxuan_affection   : +1 ch5 food choice Tianho / +1 Roboto choice 2 (No)
-#    niko_affection     : +1 Roboto choice 1 (Yes) / +1 food choice Hinami
-#    chunghee_affection : +1 ch5 D(Chung) inspiring choice / -1 naïve choice
-#    svante_affection   : +1 food choice Mjoll
-#
-#  FOOD TRACKER:
-#    ch5_food_choice : "tianho" "gale" "hinami" or "mjoll"
-#    ch5_food_unlocked : name of dish added to journal
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line that needs a real asset.
 ###############################################################################
 
 
@@ -70,52 +14,7 @@
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
 
-# # --- Backgrounds: Underground ---
-# image bg_tianho_underground_2    = "images/backgrounds/bg_tianho_underground_2.png"        # PLACEHOLDER
-# # Refined underground passage — electric lights on earthen walls, warm glow
-
-# image bg_underground_door        = "images/backgrounds/bg_underground_door.png"            # PLACEHOLDER
-# # Large polished metal door — no handles, no keyholes, gleaming under artificial light
-
-# # --- Backgrounds: Yuxuan's Lab ---
-# image bg_yuxuan_lab              = "images/backgrounds/bg_yuxuan_lab.png"                  # PLACEHOLDER
-# # Spacious lab interior — sleek furniture, shelves of books/blueprints, wall screens
-
-# image bg_yuxuan_lab_dim          = "images/backgrounds/bg_yuxuan_lab_dim.png"              # PLACEHOLDER
-# # Same as above but with dimmed warm lighting — evening atmosphere
-
-# image bg_lab_bedroom             = "images/backgrounds/bg_lab_bedroom.png"                 # PLACEHOLDER
-# # Well-furnished spare room — soft lighting, lone bed in corner, wooden chair beside it
-
-# image bg_lab_storage             = "images/backgrounds/bg_lab_storage.png"                 # PLACEHOLDER
-# # Dim storage room — single candle, cold stone floor, stale air
-
-# image bg_kitchen                 = "images/backgrounds/bg_kitchen.png"                     # PLACEHOLDER
-# # Lab kitchen and dining area — long table, warm light, Weng's cookpot on stove
-
-# # --- Backgrounds: Vision/Nightmare Sequences ---
-# image bg_white_screen            = "images/backgrounds/bg_white_screen.png"                # PLACEHOLDER
-# # Endless white void — no floor, no sky
-
-# image bg_sealed_door             = "images/backgrounds/bg_sealed_door.png"                 # PLACEHOLDER
-# # Underground chamber — crumbling stone, torchlight, blood on floor
-
-# image bg_tianho_on_fire          = "images/backgrounds/bg_tianho_on_fire.png"              # PLACEHOLDER
-# # Tianho city proper engulfed in flames — screaming crowds, smoke billowing
-
-# # --- CGs ---
-# image cg_dorian_amulet_vision    = "images/cg/cg_dorian_amulet_vision.png"                 # PLACEHOLDER
-# # Dorian convulsing as green amulet light engulfs him at the dinner table
-
-# image cg_magnus_void             = "images/cg/cg_magnus_void.png"                          # PLACEHOLDER
-# # Magnus in white void — wings spread, golden eyes urgent, reaching toward Dorian
-
-# image cg_minjoon_dying           = "images/cg/cg_minjoon_dying.png"                        # PLACEHOLDER
-# # Emperor Min-joon and Empress Seo-yeon dying together, amulet in hand, underground
-
-# image cg_yaoguai_nightmare       = "images/cg/cg_yaoguai_nightmare.png"                    # PLACEHOLDER
-# # Yaoguai King looming over chained Elara and children — Dorian restrained in foreground
-
+# compiled bg and cg definitions
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
@@ -123,52 +22,33 @@
 
 # --- Music ---
 # define audio.ost_tunnel_move     = "audio/music/ost_tunnel_move.ogg"        # PLACEHOLDER
-# # Tense yet quiet — underground movement, dripping water
-
 # define audio.ost_cheng_lab       = "audio/music/ost_cheng_lab.ogg"          # PLACEHOLDER
-# # Warm, curious — inside Yuxuan's underground lab
-
 # define audio.ost_niko_faith      = "audio/music/ost_niko_faith.ogg"         # PLACEHOLDER
-# # Quiet and somber — Niko explaining Enoch and the Prophets
-
 # define audio.ost_svante_talk     = "audio/music/ost_svante_talk.ogg"        # PLACEHOLDER
-# # Low tension — Svante interrogation in storage room
-
 # define audio.ost_dinner_warm     = "audio/music/ost_dinner_warm.ogg"        # PLACEHOLDER
-# # Warm, light — dinner scene with the full group
-
 # define audio.ost_chung_reveal    = "audio/music/ost_chung_reveal.ogg"       # PLACEHOLDER
-# # Tense — Chung-hee's revelation about Gustav and the Divine Weapon
-
 # define audio.ost_amulet_vision   = "audio/music/ost_amulet_vision.ogg"      # PLACEHOLDER
-# # Ethereal — amulet contact, Dorian's vision
-
 # define audio.ost_magnus_void     = "audio/music/ost_magnus_void.ogg"        # PLACEHOLDER
-# # Strange, otherworldly — white void with Magnus
-
 # define audio.ost_minjoon_memory  = "audio/music/ost_minjoon_memory.ogg"     # PLACEHOLDER
-# # Tragic — Min-joon and Seo-yeon dying in the underground chamber
-
 # define audio.ost_nightmare       = "audio/music/ost_nightmare.ogg"          # PLACEHOLDER
-# # Horror — Yaoguai King nightmare sequence
 
 # --- Sound Effects ---
-define audio.sfx_earth_open      = "audio/sfx/sfx_earth_open.ogg"           # PLACEHOLDER
-define audio.sfx_door_scan       = "audio/sfx/sfx_door_scan.ogg"            # PLACEHOLDER
-define audio.sfx_door_chime      = "audio/sfx/sfx_door_chime.ogg"           # PLACEHOLDER
-define audio.sfx_door_open       = "audio/sfx/sfx_door_open.ogg"            # PLACEHOLDER
-define audio.sfx_roboto_beep     = "audio/sfx/sfx_roboto_beep.ogg"          # PLACEHOLDER
-define audio.sfx_roboto_crash    = "audio/sfx/sfx_roboto_crash.ogg"         # PLACEHOLDER
-define audio.sfx_amulet_vision   = "audio/sfx/sfx_amulet_vision.ogg"        # PLACEHOLDER
-define audio.sfx_void_crack      = "audio/sfx/sfx_void_crack.ogg"           # PLACEHOLDER
-define audio.sfx_chains          = "audio/sfx/sfx_chains.ogg"               # PLACEHOLDER
-define audio.sfx_sleep_powder    = "audio/sfx/sfx_sleep_powder.ogg"         # PLACEHOLDER
+# define audio.sfx_earth_open      = "audio/sfx/sfx_earth_open.ogg"           # PLACEHOLDER
+# define audio.sfx_door_scan       = "audio/sfx/sfx_door_scan.ogg"            # PLACEHOLDER
+# define audio.sfx_door_chime      = "audio/sfx/sfx_door_chime.ogg"           # PLACEHOLDER
+# define audio.sfx_door_open       = "audio/sfx/sfx_door_open.ogg"            # PLACEHOLDER
+# define audio.sfx_roboto_beep     = "audio/sfx/sfx_roboto_beep.ogg"          # PLACEHOLDER
+# define audio.sfx_roboto_crash    = "audio/sfx/sfx_roboto_crash.ogg"         # PLACEHOLDER
+# define audio.sfx_amulet_vision   = "audio/sfx/sfx_amulet_vision.ogg"        # PLACEHOLDER
+# define audio.sfx_void_crack      = "audio/sfx/sfx_void_crack.ogg"           # PLACEHOLDER
+# define audio.sfx_chains          = "audio/sfx/sfx_chains.ogg"               # PLACEHOLDER
+# define audio.sfx_sleep_powder    = "audio/sfx/sfx_sleep_powder.ogg"         # PLACEHOLDER
 
-# --- Ambient ---
-define audio.amb_tunnel_drip     = "audio/ambient/amb_tunnel_drip.ogg"      # PLACEHOLDER
-define audio.amb_lab_hum         = "audio/ambient/amb_lab_hum.ogg"          # PLACEHOLDER
-define audio.amb_rain_muffled    = "audio/ambient/amb_rain_muffled.ogg"     # PLACEHOLDER
-define audio.amb_kitchen         = "audio/ambient/amb_kitchen.ogg"          # PLACEHOLDER
+# # --- Ambient ---
+# define audio.amb_tunnel_drip     = "audio/ambient/amb_tunnel_drip.ogg"      # PLACEHOLDER
+# define audio.amb_lab_hum         = "audio/ambient/amb_lab_hum.ogg"          # PLACEHOLDER
+# define audio.amb_rain_muffled    = "audio/ambient/amb_rain_muffled.ogg"     # PLACEHOLDER
+# define audio.amb_kitchen         = "audio/ambient/amb_kitchen.ogg"          # PLACEHOLDER
 
 
 # =============================================================================

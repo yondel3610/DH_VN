@@ -1,40 +1,6 @@
 ###############################################################################
 #  Dragon's Heart: The Crimson Rebirth
-#  FILE:  chapter_07.rpy
 #  SCENE: CHAPTER 7 — The Seal and the Winged Man
-#
-#  CONTENTS:
-#    Section 1  — Character Definitions (new only)
-#    Section 2  — Image Declarations
-#    Section 3  — Audio Declarations
-#    Section 4  — Game Variables
-#    Section 5  — label chapter_7          (White void / Magnus dream / wakeup)
-#    Section 6  — label ch7_dream_debrief  (Bunker — dream debrief with group)
-#    Section 7  — label ch7_waiting        (Choices: spend time while waiting)
-#    Section 8  — label ch7_svante_time    (Choice 1 — +2 Svante)
-#    Section 9  — label ch7_niko_time      (Choice 2 — +2 Niko)
-#    Section 10 — label ch7_chunghee_time  (Choice 3 — +2 Chung-hee)
-#    Section 11 — label ch7_yuxuan_time    (Choice 4 — +2 Yuxuan)
-#    Section 12 — label ch7_waiting_common (Common — more wounded arrive / Feng)
-#    Section 13 — label ch7_feng_niko_clash (Feng vs Niko tension / Aoi arrives)
-#    Section 14 — label ch7_drink_choice   (D: Drink with Feng or refuse)
-#    Section 15 — label ch7_drink_common   (Common — Weng + Tim arrive / depart)
-#
-#  NAMING CONVENTIONS:
-#    image tags      — bg_name, cg_name, character_name emotion
-#    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
-#    label names     — ch7_name (all lowercase, underscores only)
-#
-#  TRACKER SUMMARY:
-#    svante_affection   : +2 Choice 1 (spend time with Svante)
-#    niko_affection     : +2 Choice 2 (help Niko) / +1 refuse drink
-#    chunghee_affection : +2 Choice 3 (look for Chung-hee)
-#    yuxuan_affection   : +2 Choice 4 (check supplies with Yuxuan)
-#    svante_affection   : +1 drink with Feng / aoi_affection +1 both options
-#    feng_affection     : +1 drink with Feng
-#
-#  PLACEHOLDER PATHS:
-#    Search "# PLACEHOLDER" to find every line needing a real asset.
 ###############################################################################
 
 # =============================================================================
@@ -47,49 +13,22 @@
 # SECTION 2: IMAGE DECLARATIONS
 # =============================================================================
 
-image bg_cheng_bunker          = "images/backgrounds/bg_cheng_bunker.png"              # PLACEHOLDER
-# Underground bunker — dimly lit, makeshift beds, lanterns, wounded soldiers
-
-image bg_white_screen          = "images/backgrounds/bg_white_screen.png"              # PLACEHOLDER
-# (reused from ch5) — white void, Magnus cavern dream
-
-image bg_cheng_industries_entrance_night = "images/backgrounds/bg_cheng_industries_entrance_night.png"  # PLACEHOLDER
-# (reused from ch6) — storefront entrance at night
-
-
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
-
-define audio.ost_ch7_dream     = "audio/music/ost_ch7_dream.ogg"         # PLACEHOLDER
-# Urgent, fracturing — Magnus screaming, seal weakening
-
-define audio.ost_ch7_bunker    = "audio/music/ost_ch7_bunker.ogg"         # PLACEHOLDER
-# Quiet, tense — underground bunker, aftermath of battle
-
-define audio.ost_ch7_warm      = "audio/music/ost_ch7_warm.ogg"           # PLACEHOLDER
-# Warm, subdued — character time scenes
-
-define audio.ost_ch7_feng_clash = "audio/music/ost_ch7_feng_clash.ogg"    # PLACEHOLDER
-# Tense — Feng vs Niko confrontation
-
-define audio.ost_ch7_drink     = "audio/music/ost_ch7_drink.ogg"          # PLACEHOLDER
-# Relaxed, post-battle — Feng's drinking scene
-
-define audio.sfx_hologram      = "audio/sfx/sfx_hologram.ogg"             # PLACEHOLDER
-define audio.sfx_blue_flames   = "audio/sfx/sfx_blue_flames.ogg"          # PLACEHOLDER
-define audio.sfx_wine_pop      = "audio/sfx/sfx_wine_pop.ogg"             # PLACEHOLDER
-define audio.amb_bunker        = "audio/ambient/amb_bunker.ogg"            # PLACEHOLDER
+# define audio.ost_ch7_dream     = "audio/music/ost_ch7_dream.ogg"         # PLACEHOLDER
+# define audio.ost_ch7_bunker    = "audio/music/ost_ch7_bunker.ogg"         # PLACEHOLDER
+# define audio.ost_ch7_warm      = "audio/music/ost_ch7_warm.ogg"           # PLACEHOLDER
+# define audio.ost_ch7_feng_clash = "audio/music/ost_ch7_feng_clash.ogg"    # PLACEHOLDER
+# define audio.ost_ch7_drink     = "audio/music/ost_ch7_drink.ogg"          # PLACEHOLDER
+# define audio.sfx_blue_flames   = "audio/sfx/sfx_blue_flames.ogg"          # PLACEHOLDER
+# define audio.sfx_wine_pop      = "audio/sfx/sfx_wine_pop.ogg"             # PLACEHOLDER
+# define audio.amb_bunker        = "audio/ambient/amb_bunker.ogg"            # PLACEHOLDER
 
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES
 # =============================================================================
-
-# default ch7_d1_choice         = ""    # "svante"/"niko"/"chunghee"/"yuxuan"
-# default ch7_drink_choice      = ""    # "drink"/"refuse"
-# default feng_affection        = 0
-# default aoi_affection         = 0
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_7 — White Void / Magnus Dream / Wake Up
