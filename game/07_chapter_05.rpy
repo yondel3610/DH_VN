@@ -1095,120 +1095,12 @@ label ch5_living_room:
 # SECTION 12: LABEL CH5_STORAGE_ROOM — Svante Interrogation
 # =============================================================================
 
-label ch5_storage_room:
-    stop music fadeout 1.5
-    # [COMMENT: bg_lab_storage — dim storage room, single candle, cold stone]
-    # scene bg_lab_storage with dissolve          # PLACEHOLDER — lab storage room
-
-    # play music ost_svante_talk fadein 1.5       # PLACEHOLDER — low tension theme
-
-    "I stepped into the storage room, my movements silent against the cold stone floor. The dim flicker of a single candle cast long shadows across the walls, stretching and shifting with the flame's uncertain dance."
-    "Unlike the other rooms, the air was stale, thick with dust and the faint scent of damp stone."
-    "Then I heard it."
-    "A voice—low, trembling—whispering desperate words into the dark."
-
-    svante "Mighty Enoch… Please… *tears* Your servant is afraid…"
-
-    "I stood still, just inside the doorway. He hadn't noticed me. Not yet."
-
-    svante "I know I have strayed, I know I have sinned... I never meant to question Father. I never meant to doubt him."
-
-    "He paused, sniffling."
-
-    svante "I— I betrayed our sacred law. I know I should never have doubted Father... I know my place. But… Kristin…"
-    svante "But… what if…"
-    svante "What if Kristin was right all along?"
-
-    "He swallowed hard, his words now coming in ragged, pleading bursts."
-
-    svante "My Lord Enoch, please... *crying* Please don't abandon me. Not now, not when the monster is near."
-    svante "My mother needs me… She's the only family I have left, my Lord. Please help me…"
-    svante "I… I don't know what to do anymore. I'm so sorry. I feel so lost and broken. Please, mighty Enoch, show me mercy."
-
-    "His fingers twitched uselessly, bound and helpless against the wall. The sheen of Jinshen steel caught the dim candlelight, the cuffs glinting like an executioner's blade. I recognized them instantly."
-    "Good. That way, I wouldn't have to worry about his channeling."
-    "I took a single step forward."
-    "His breath hitched. His head snapped up so fast I thought he'd hurt himself."
-
-    show svante normal_nervous at right_char with Dissolve(0.2)
-    show dorian normal_alt_neutral at left_char with Dissolve(0.2)
-    svante "No… No, no, no… Please—please, no…"
-    dorian "Calm down. I just want to ask you a few things."
-    show svante normal_sad at right_char
-    svante "Sir… I beg you. Please let me go! *crying* I have a mother! She's sick. She's the only family that I have left!"
-    svante "No… No, no, no… Don't hurt me! I beg you! Please—please, no—"
-
-    "I heard his stomach rumble."
-
-    show dorian neutral at left_char
-    dorian "You must be starving. Here, I just need to—"
-    show svante normal_nervous at right_char
-    svante "I… Is that it, sir? I-If you wish to spare me, Please, you don't have to feed me."
-    svante "Please. I'll eat morsels from the garbage if I have to. Just please let me live!"
-
-    "I rolled my eyes."
-
-    show dorian normal_alt_annoyed at left_char
-    dorian "ARE YOU GOING TO CALM DOWN OR NOT?!"
-
-    "Silence. He stopped struggling. But I can see him trembling a bit."
-
-    show svante normal_sad at right_char
-    svante "*crying*"
-    show dorian neutral at left_char
-    dorian "No one needs to die today. I just need to ask you a few questions. Calm down."
-    show svante normal_nervous at right_char
-    svante "Y-Yes, sir…"
-
-    "I took a deep breath."
-
-    show dorian serious at left_char
-    dorian "Let's start with the obvious. Why does Mjoll want the man that we saved dead?"
-
-    "Svante hesitated, his fingers twitching against the cuffs. His gaze flickered toward the floor, avoiding mine."
-
-    show svante normal_nervous at right_char
-    svante "I—I don't know everything, sir. I swear it. But..."
-    svante "Father said that the man we were supposed to kill… cursed him."
-    show dorian serious at left_char
-    dorian "Cursed him?"
-
-    "My eyes widened."
-
-    show svante normal_nervous at right_char
-    svante "That's what he told us. That the man— he was some kind of heretic and is an enemy of Mjoll."
-    show dorian neutral at left_char
-    dorian "And you believe him?"
-
-    "A brief silence erupted between us."
-
-    show svante normal_sad at right_char
-    svante "No… I think he's… lying…"
-    svante "Because he's lied before… with the Elias incident. He told everyone that it was Elias who killed his own mother."
-    svante "My sister Kristin… she accompanied the two prophets as they examined Queen Ekaterina's body."
-    svante "The fingerprints on the knife belonged to Father himself. But still, he tried to pin the blame on Elias..."
-    svante "I was the only person my sister talked to about this. At first, I got mad at her for doubting Father but after her death, I… I started to wonder."
-    svante "What if she was right?"
-    show dorian neutral at left_char
-    dorian "So you think the man you were sent to kill today… was innocent?"
-    show svante normal_nervous at right_char
-    svante "Y-Yes, sir."
-
-    "I nodded. That was brave of him to say. For an aldorith, it would have been a death sentence."
-
-    svante "Do you have any more questions, sir?"
-
-    jump ch5_svante_choices
-
-
 # =============================================================================
 # SECTION 13: LABEL CH5_SVANTE_CHOICES — Questioning Svante
 # =============================================================================
 
 label ch5_svante_choices:
-
     menu:
-
         "Why were you the only aldorith spared by this man?":
 
             show dorian neutral at left_char
@@ -1399,74 +1291,14 @@ label ch5_svante_common:
 # =============================================================================
 # SECTION 15: LABEL CH5_DINNER_SETUP — Before Dinner / Tim and Elias
 # =============================================================================
-
-label ch5_dinner_setup:
-
-    # [COMMENT: bg_yuxuan_lab — lab main room]
-    # scene bg_yuxuan_lab with dissolve           # PLACEHOLDER — lab main room
-
-    "As Svante and I stepped into the main room, the warm scent of spices and simmering broth filled the air. The rich aroma of slow-cooked meats and fragrant herbs curled through the space."
-    "Weng was still by the stove, stirring a pot with practiced ease. The moment her gaze landed on Svante, she set down her spoon and wiped her hands on her apron, stepping forward with a welcoming smile."
-
-    weng "Ah, you're awake! That's good to see. You must be starving."
-    weng "Proper introductions are in order. I'm Cai Weng, Master Yuxuan's assistant. It's a pleasure to meet you, young man."
-
-    "He blinked, as if taken aback by the kindness in her voice. He looked at me, and then back to her."
-
-    show svante normal_neutral at right_char with Dissolve(0.2)
-    svante "I… Yes. Thank you, m-mam. My name's Svante. Svante Nordstrom. I-I'm so glad to meet you."
-    weng   "Dinner is ready. Please have a seat, gentlemen and I'll be serving you up the food."
-    weng   "I hope you like haugensoppa. I made it just for you."
-    show svante normal_happy at right_char
-    svante "Haugensoppa? You… know Mjoll cuisine?"
-    weng   "Oh, I've had my fair share of travelers from the North. You lot love your root vegetable stews."
-
-    "Svante opened his mouth, perhaps to ask more, but before he could reply—"
-    "A sudden burst of tiny, hurried footsteps came from the hallway."
-
-    tim   "Elias, you're going too slow! Dinner's about to start!"
-
-    show elias normal_neutral at right_char_kids with Dissolve(0.2)
-    elias "I'm carrying Tedda and my book! It's a little heavy!"
-
-    "Tim marched into the room first, his small arms wrapped around a thick, leather-bound book far too large for someone his age. The title was embossed in gold: 'Tianho's Ancient Dynasties.'"
-    "Elias followed closely behind, but instead of a weighty tome, he proudly clutched a children's coloring book, its cover splashed with bright rainbows and smiling animals. Perched lazily on top was Tedda."
-    "Tim sighed dramatically, adjusting his glasses."
-
-    tim   "Elias, I told you to pick something educational."
-    show elias normal_happy at right_char_kids
-    elias "This one had colors, Tim! It's got wainbows! They're edumecational."
-    tim   "Rainbows are not educational, Elias."
-
-    "Elias gasped as he spotted Svante. His eyes widened with delight."
-
-    show elias normal_happy at right_char_kids
-    elias "Look! It's the pink haired guy! He's awake!"
-    tim   "Huh? He's not pink haired, Elias! It's violet!"
-    elias "Tim, pink and violet are the same. Right, Tedda?"
-    tedda "..."
-    tim   "What?! They're completely different colors. Right, Miss Weng?"
-    show svante normal_neutral at right_char
-    svante "Actually… my hair is violet. It's not really pink."
-    tim   "HA! It's violet! See, Elias? See? I win! HAHA—"
-    weng  "Tim, quit it. You're embarrassing me in front of Sir Burnham and Sir Nordstrom. Now be a good boy and help me serve dinner."
-
-    "Tim huffed but did as he was told, setting his book down carefully before moving to grab a stack of bowls."
-
-    hide elias
-    hide svante
-    jump ch5_nap
-
+# OMITTED
 
 # =============================================================================
 # SECTION 16: LABEL CH5_FOOD_CHOICE — Cuisine Selection
 # =============================================================================
-
 label ch5_food_choice:
-
     # play music ost_cheng_lab fadein 1.0         # PLACEHOLDER — warm lab theme
     menu:
-
         "A dish from Tianho.":
             $ ch5_food_choice = "tianho"
             $ yuxuan_affection += 1             # +1 Yuxuan affection
@@ -2356,13 +2188,13 @@ label ch5_chung_wakes:
 
     show dorian normal_alt_calm at left_char with Dissolve(0.2)
     "I buried my face in my palms."
-
+    show dorian serious at left_char
     show chunghee normal_neutral at center_char
     chung_hee "I see. You are all… quite the interesting group."
 
     "Chung-hee's expression remained unreadable. Svante suddenly spoke up, his voice quiet but firm."
-
-    show svante normal_neutral at right_char
+    hide yuxuan
+    show svante normal_neutral at right_char with Dissolve(0.2)
     svante "If I may… I believe His Majesty is telling the truth."
 
     "A hush settled over the group. Svante's eyes were downcast."
@@ -2379,44 +2211,48 @@ label ch5_chung_wakes:
     show chunghee normal_neutral at center_char
     "Chung-hee regarded him for a long moment, expression unreadable."
     "Then—he gave a small, approving nod."
-
+    show chunghee alt_wink at center_char
     chung_hee "Thank you."
-
+    show chunghee normal_neutral at center_char
     "The Emperor of Kyeongjang… No, Emperor Min-joon's son."
     "A thousand questions swirled in my mind. Questions about the past. About the Tragedy of Tianho. About why he was targeted. About why he was here."
     "But before I could voice a single thought—"
     "Weng sat the first dish down."
 
     "Her voice was warm and full of praise as she placed a steaming bowl in front of Yuxuan."
-
+    hide svante
+    hide chunghee
+    show weng normal at right_flip
+    with Dissolve(0.2)
     weng "Dragonfire curry for the incredibly intelligent, devilishly handsome, and world-renowned genius that is Master Yuxuan."
-
-    show yuxuan normal_happy at center_char
+    # TODO: FOOD10
     "Yuxuan lit up like a child on his birthday."
-
+    show dorian neutral at left_char
+    show yuxuan normal_happy at center_char with Dissolve(0.2)
     yuxuan "Miss Weng! You shouldn't have! My precious dragonfire curry! Oh, how I've missed you!"
 
     "He clasped his hands together dramatically."
     "Meanwhile, Roboto whirred into view, carefully balancing trays of food."
+    hide weng
+    # end food 10
 
-    show roboto happy at right_robot
+    show roboto happy at right_robot with Dissolve(0.2)
     roboto "Robotoooo is ready to s-s-s-serve~ F-f-food is ready~"
-    show niko normal_base at right_char
+    hide roboto
+    show niko normal_base at right_char with Dissolve(0.2)
     niko   "The robot shouldn't be allowed to serve food. It might crash again."
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_angry at center_char
     yuxuan "You're the only one who thinks that, Niko. Roboto is a technological marvel and- IT. DOES. NOT. CRASH."
 
     "Niko's eyes blinked."
-
-    show niko normal_ignore at right_char
+    show niko normal_ignore at right_char 
     niko   "Yuxuan, I mean no disrespect to Roboto. It's amazing. But a while ago it almost crashed and brought down a jar filled with water in it."
-    show yuxuan alt_neutral at center_char
+    show yuxuan normal_lying at center_char
     yuxuan "Why I never!"
     show niko normal_base at right_char
     niko   "Dorian was there. He'll be our witness. Dorian, it's true right?"
 
     jump ch5_roboto_witness
-
 
 # =============================================================================
 # SECTION 19: LABEL CH5_ROBOTO_WITNESS — Roboto Stumble Testimony
@@ -2435,25 +2271,23 @@ label ch5_roboto_witness:
             niko   "There you have it."
 
             # play sound sfx_roboto_beep          # PLACEHOLDER — Roboto beep SFX
-
-            show roboto bad_mood at right_robot
+            hide yuxuan
+            show roboto bad_mood at center_robot with Dissolve(0.2)
             roboto "M-m-m-master Dorian is c-c-correct! I was transporting water, but my sensors momentarily overloaded. Sir Niko was able to assist me."
-            show yuxuan alt_think at center_char
+            hide roboto
+            show yuxuan alt_think at center_char with Dissolve(0.2)
             yuxuan "Oh… Maybe some recalibration is in order. Can't have my masterpiece faltering under pressure."
-
             "Roboto blinked rapidly, its mechanical eyes adjusting."
-
-            show roboto happy at right_robot
+            hide yuxuan
+            show roboto happy at center_robot
             roboto "C-c-confirmed! Roboto will undergo recalibration!"
-
-            show yuxuan normal_neutral at center_char
+            hide roboto
+            show yuxuan normal_neutral at center_char with Dissolve(0.2)
             "Yuxuan sighed, adjusting his glasses."
 
             yuxuan "Great. Now I feel guilty. Roboto, remind me to run diagnostics later."
 
             # play sound sfx_roboto_beep          # PLACEHOLDER — Roboto beep SFX
-
-            show roboto happy at right_robot
             roboto "Reminder set! Diagnostics will begin at 20:00 hours!"
 
         "No. Roboto had it all under control.":
@@ -2466,11 +2300,11 @@ label ch5_roboto_witness:
             dorian "No, Roboto had it under control."
 
             # play sound sfx_roboto_beep          # PLACEHOLDER — Roboto beep SFX
-
-            show roboto happy at right_robot
+            hide yuxuan
+            show roboto happy at center_robot with Dissolve(0.2)
             roboto "D-d-data inconclusive. Roboto must recalibrate!!"
-
-            show yuxuan normal_happy at center_char
+            hide roboto
+            show yuxuan normal_happy at center_char with Dissolve(0.2)
             "Yuxuan's expression brightened, and he gave me a satisfied nod."
 
             yuxuan "Thank you, Dorian. At least someone here has good judgment."
@@ -2481,30 +2315,35 @@ label ch5_roboto_witness:
             niko   "Oh, for the love of—"
             show yuxuan alt_smile at center_char
             yuxuan "Let this be a lesson, Niko. One should never question the technological marvel that is Roboto."
-
-    show roboto happy at right_robot
+    hide dorian
+    hide yuxuan
+    hide niko
+    with Dissolve(0.1)
     "Roboto whirred smoothly across the room, carefully placing each dish in front of us."
-
+    show roboto happy at center_robot with Dissolve(0.2)
     roboto "Here is your f-f-f-food, Your Majesty. We lack information on Kyeongjang cuisine, but we have prepared a special dish from Gale."
 
     "As Roboto spoke, its small monitor flickered to life, displaying a video of hand signs."
 
-    show roboto happy at right_robot
+    show roboto happy at center_robot
     roboto "T-T-This is called mountain herb stew along with a plate of sautéed highland greens."
     roboto "Cooked with garlic and a drizzle of fragrant mountain oil. Enjoy, Your Highness!"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char 
+    show dorian neutral at left_char
+    with Dissolve(0.2)
     "Chung-hee's expression softened slightly. He raised his hands and responded with hand signs of his own."
     "Roboto paused for a moment before beeping happily."
 
-    show roboto happy at right_robot
+    show roboto happy at center_robot
     roboto "A-A-A-Affirmative! I will not call you Your Majesty. T-t-thank you, Sir Chung-hee!"
-
-    show niko alt_tense at right_char
+    hide chunghee
+    show niko alt_tense at right_char with Dissolve(0.2)
     "Niko and Yuxuan paused, exchanging glances."
 
     niko   "Roboto knows sign language?"
-    show yuxuan normal_neutral at center_char
+    hide roboto
+    show yuxuan normal_neutral at center_char with Dissolve(0.2)
     yuxuan "I programmed Roboto to recognize multiple languages, but I don't remember programming sign language. Fascinating…"
     weng   "As is expected from our amazing and very talented inventor, Master Yuxuan!"
     show yuxuan alt_smile at center_char
@@ -2512,10 +2351,11 @@ label ch5_roboto_witness:
     show niko normal_ignore at right_char
     niko   "Oh brother."
 
-    show niko normal_base at right_char
+    show niko alt_irritate at right_char
     "Niko rolled his eyes, picked up his chopsticks and started eating."
+    hide yuxuan
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee picked up his chopsticks, taking a bite of the stew. For the first time since arriving, he looked almost… at ease."
 
     # Branch on food choice
@@ -2529,7 +2369,6 @@ label ch5_roboto_witness:
         jump ch5_food_lamb
     else:
         jump ch5_food_common
-
 
 # =============================================================================
 # SECTION 20: LABEL CH5_FOOD_MOONLIT — IF Moonlit Noodles (Tianho)
@@ -2746,14 +2585,16 @@ label ch5_food_truffle:
 label ch5_food_hotpot:
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
+    hide niko
+    hide chunghee
     show roboto happy at right_robot
+    with Dissolve(0.2)
     roboto "A dish fit for a traveler of tides and a seeker of shadows! Presenting your Fisherman's Hotpot, M-M-Master D-D-Dorian—crafted with the heart of the sea and the soul of the island itself!"
 
     show dorian neutral at left_char
     dorian "Thank you, Roboto. It looks delicious."
-
-    show niko normal_base at right_char
+    hide roboto
+    show niko normal_base at right_char with Dissolve(0.2)
     "As I took the first sip of the miso broth, the rich umami flavor spread over my tongue, warming me instantly. The fresh seafood, barely touched by the heat, still had that ocean-bright taste, balanced perfectly with the mild tofu and tender greens."
     "Beside me, Niko had his head bowed, hands loosely clasped."
 
@@ -2867,18 +2708,18 @@ label ch5_food_hotpot:
 # =============================================================================
 # SECTION 23: LABEL CH5_FOOD_LAMB — IF Mjollian Mead-Braised Lamb (Mjoll)
 # =============================================================================
-
 label ch5_food_lamb:
-
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
+    hide niko
+    hide chunghee
     show roboto happy at right_robot
+    with Dissolve(0.2)
     roboto "Behold! A meal fit for a warrior! A dish crafted for the strong and the steadfast—M-M-Master D-D-Dorian, your Mjollian Mead-Braised Lamb awaits!"
 
     "I stared down at the plate in front of me. Thick, spiced mead sauce clung to the slow-braised lamb shank, its aroma warm and heady. Beside it, a dense slice of black rye bread and a small dish of herbed butter sat neatly on the tray."
     "It looked rich—very rich. Heavy. Nothing like the plain food I usually ate."
-
-    show svante normal_neutral at right_char
+    hide roboto
+    show svante normal_neutral at right_char with Dissolve(0.2)
     svante "Have you eaten that before, Sir Dorian? Back in Mjoll?"
     show dorian neutral at left_char
     dorian "I… don't remember eating this. I usually just made something easy—stews, boiled potatoes, whatever was quick."
@@ -2923,8 +2764,7 @@ label ch5_food_lamb:
     svante "No, no, no! I apologize, sir, I—"
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
-    show roboto happy at right_robot
+    show roboto happy at center_robot with Dissolve(0.2)
     roboto "M-m-m-my sensors indicate that M-M-Master Dorian is just fooling around."
     show svante normal_nervous at right_char
     svante "Oh, um… S-Sorry…"
@@ -2933,19 +2773,26 @@ label ch5_food_lamb:
     "I shrugged, took my chopsticks, and went to eating."
 
     "A few minutes after I started eating, Weng approached, setting down another dish with practiced ease."
+    hide svante
+    hide dorian
+    hide roboto
+    show weng normal at right_flip
+    show tim happy at left_char_kids
+    with Dissolve(0.2)
 
     weng "Here are some Tianho dumplings I prepared. Extra portions."
     tim  "Yay! Elias, you need to try these!"
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    show roboto happy at right_robot
+    show roboto happy at center_robot with Dissolve(0.2)
     roboto "Tianho dumplings—suitable for any occasion!"
 
     "She then placed a fresh pot of tea in the center of the table, steam curling elegantly from its spout."
 
     weng   "And some tea. Freshly brewed from tea leaves from Tianho. I hope you like it."
-    show yuxuan normal_happy at center_char
+    hide roboto
+    show yuxuan normal_happy at center_char with Dissolve(0.2)
     yuxuan "The teacup looks beautiful, Miss Weng!"
     tim    "We got it yesterday from a bargain store, Master Yuxuan!"
     weng   "Now, everyone grab a cup and I'll pour you some."
@@ -3039,7 +2886,6 @@ label ch5_food_common:
     hide yuxuan
     hide dorian
     jump ch5_chung_wakes
-
 
 # =============================================================================
 # SECTION 25: LABEL CH5_DINNER_TALK — Gustav Choice / Dinner Conversation

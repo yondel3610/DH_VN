@@ -16,10 +16,10 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Temer's Studio presents..." with Dissolve(1)
+    show temers_studio with Dissolve(1)
     with Pause(1.5)
 
-    hide text with dissolve
+    hide temers_studio with dissolve
     with Pause(1)
 
     show dh_logo with dissolve
@@ -30,6 +30,15 @@ label splashscreen:
 
     with Dissolve(0.3)
     return
+
+image temers_studio:
+    "gui/Temers_Studio_Logo-removebg-preview.png"
+    xalign 0.5
+    yalign 0.5
+    fit "contain"
+    zoom 0.90
+
+
 
 image dh_logo:
     "gui/dh_logo.png"

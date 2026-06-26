@@ -26,8 +26,9 @@ image cg_black:
 # =============================================================================
 # TODO: file paths
 # --- Ambient ---
-define audio.amb_underground   = "audio/ambient/amb_underground.ogg" # cave ambience DONE
-
+define audio.amb_underground   = "audio/sfx and ost/00_prologue/amb/Cave.ogg" # cave ambience DONE
+define audio.sfx_yaoguai_burst = "audio/sfx and ost/00_prologue/sfx/sfx_yg_burst.ogg"
+define audio.ost_yaoguai_theme = "audio/sfx and ost/00_prologue/sfx/yg_king_theme.ogg"
 # =============================================================================
 # SECTION 4: CUSTOM SCREENS (for prl only)
 # =============================================================================
@@ -319,8 +320,6 @@ label prologue_choice_dash:
     voice boy_ald_prl_line18
     boy_ald "Come on… Come on…"
     
-    show yk at center_char
-
     voice audio.yk_ald_prl_line3
     yk "Running away from me? Pathetic."
     
@@ -331,9 +330,7 @@ label prologue_choice_dash:
     scene bg_underground_red with flash
     pause 0.4
     scene bg_underground_red with dissolve
-    
     jump prologue_common
-
 
 # =============================================================================
 # SECTION 8: COMMON ENDING

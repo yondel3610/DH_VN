@@ -24,4 +24,6 @@ GAME VARIABLES:
 MISC:
 01_shattared_glass.rpy - EFFECT MADE BY MAURIMO (add credit)
 01auto-highlights.rpy - credit Daniel Westfall
+some assets from the previous demo (hence the art style differences) were scraped using AssetRipper (demo ver was made with unity)
+Dorian's Room  - by linxuelian.itch.io
 

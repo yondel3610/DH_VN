@@ -123,7 +123,8 @@ All assets follow these conventions:
 - Breaking changes between versions may break old saves
 
 ### Known Issues
+- save files and the continue function (to be fixed)
 
 ---
 
-*Last Updated: April 2026*
+*Last Updated: June 2026*

@@ -416,12 +416,17 @@ style navigation_button_text:
 # https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
     ## This ensures that any other menu screen is replaced.
-    tag menu
-    add gui.main_menu_background
 
+    # on "show" action Function(cycle_main_menu_bg)
     # on "show" action With(fade)
+
+    default bg_index = 0
+    default bgs = ["gui/main_menu_1.png", "gui/main_menu_2.png", "gui/main_menu_3.png"]
+
+    add bgs[bg_index]
+
+    timer 6.0 action [SetScreenVariable("bg_index", (bg_index + 1) % 3), With(dissolve)] repeat True
 
     ## This empty frame darkens the main menu.
     frame:
@@ -482,7 +487,7 @@ style main_menu_version:
 screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     style_prefix "game_menu"
     if main_menu:
-        add gui.main_menu_background
+        add gui.game_menu_background
     else:
         add gui.game_menu_background
     frame:
@@ -549,7 +554,6 @@ style return_button_text is navigation_button_text
 style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
-
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
@@ -648,13 +652,13 @@ screen game_over_screen():
 style game_over_text:
     color "#ffffff"
     size 32
-    font "DejaVuSans.ttf"   # TODO: replace with your actual font path
+    font "baskvl.ttf"   # TODO: replace with your actual font path
 
 style game_over_button is button_text:
     color "#ffffff"
     hover_color "#ffcc00"
     size 28
-    font "DejaVuSans.ttf"   # TODO: replace with your actual font path
+    font "baskvl.ttf"   # TODO: replace with your actual font path
 
 # About screen ################################################################
 #
