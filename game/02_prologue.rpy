@@ -26,9 +26,7 @@ image cg_black:
 # =============================================================================
 # TODO: file paths
 # --- Ambient ---
-define audio.amb_underground   = "audio/sfx and ost/00_prologue/amb/Cave.ogg" # cave ambience DONE
-define audio.sfx_yaoguai_burst = "audio/sfx and ost/00_prologue/sfx/sfx_yg_burst.ogg"
-define audio.ost_yaoguai_theme = "audio/sfx and ost/00_prologue/sfx/yg_king_theme.ogg"
+
 # =============================================================================
 # SECTION 4: CUSTOM SCREENS (for prl only)
 # =============================================================================
@@ -193,7 +191,8 @@ label prologue:
     girl_ald "And you should remember that."
 
     "A breath passed between them."
-    
+
+    play sound ost_tension_short
     # TENSION RISES — Something is wrong
     "A pressure, subtle at first, then sudden and suffocating, pressed down on the tunnel."
     "The torches guttered, flames trembling like they, too, felt the change."
@@ -203,7 +202,6 @@ label prologue:
     voice boy_ald_prl_line12
     boy_ald "D-Do you feel that?"
     
-    pause 0.8
     
     "A shriek—deep, guttural, wrong—ripped through the silence."
     
@@ -213,10 +211,11 @@ label prologue:
     # -------------------------------------------------------------------------
     # YAOGUAI KING ENTRANCE
     # -------------------------------------------------------------------------
+
     play sound sfx_yaoguai_burst
     scene underground_prl with flash
     
-    play music ost_yaoguai_theme volume 0.8
+    play music yaoguai_theme volume 0.8
     
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
     "The Yaoguai King emerged from the rubble, obsidian-scaled and crowned in bone, the shadows clinging to his form like loyal hounds."

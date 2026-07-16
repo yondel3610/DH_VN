@@ -54,11 +54,17 @@ image kristin_kneeling:
 # ==============================================================
 
 # --- Backgrounds: Dorian's Room and Hotel ---
-# image dorians_room:
-#     "images/Assets/Background/bg_tianho_dorians_room.png"
-#     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
-#     xalign 0.5
-#     yalign 1.0
+image bg_dorians_room:
+    "images/dorian_room/0F_DAY_WALL.jpg"
+    size (1920, 1080) # STANDARD FOR ALL FUTURE BG
+    xalign 0.5
+    yalign 1.0
+
+image bg_dorians_room_off:
+    "images/dorian_room/0F_EVENING_WALL.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
 
 # --- Backgrounds: Tianho City ---
 image bg_tianho_city_night: 
@@ -352,6 +358,12 @@ image cg_trio_in_frostcradle:
 # CG 
 image plain_white: # for dream sequences or talking to the dead
     "images/cg/plain_white.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image vasily_attack:
+    "images/Assets/Illustrations/10 - vasily attack.jpg"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0

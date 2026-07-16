@@ -114,7 +114,7 @@ label chapter_2:
         centered "Thank you for playing the demo\n\nThe full version continues here."
         pause 2.0
         $ MainMenu(confirm=False)()
-        
+
     $ save_name = "Chapter 2"
     # -------------------------------------------------------------------------
     # OPENING CARD — "Four years later"
@@ -146,6 +146,7 @@ label chapter_2:
 
     # show dorian sad at left_char with Dissolve(0.2)
     show mjoll_pavel at right_char with Dissolve(0.2)
+    voice audio.pavel_ch2_line1
     mjoll_pavel "Merciful Enoch, it's freezing. Why does it have to be this cold?"
     show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "Quit complaining, Pavel. We've got bigger things to worry about. You know what this beast did to that caravan last week."
@@ -159,15 +160,19 @@ label chapter_2:
     "Their voices lower, but I can still hear them."
 
     show mjoll_lars at right_char with Dissolve(0.2)
+    voice audio.lars_ch2_line2
     mjoll_lars  "Hey... is that him? The Dragon of Gale?"
     show mjoll_pavel at left_char with Dissolve(0.2)
+    voice audio.pavel_ch2_line2
     mjoll_pavel "No way. He's not... The Dragon of Gale wouldn't be out here with us."
     hide mjoll_lars
     show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "Wait… Enoch above… it really is him. I heard he lost his entire family. Wife and kids... all of them gone."
+    voice audio.pavel_ch2_line3
     mjoll_pavel "No wonder he looks dejected. What kind of man comes back from something like that?"
     hide mjoll_helga
     show mjoll_lars at right_char with Dissolve(0.2)
+    voice audio.lars_ch2_line3
     mjoll_lars  "Shut up. He'll hear you!"
     hide mjoll_lars
     hide mjoll_pavel
@@ -176,6 +181,7 @@ label chapter_2:
     show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily "Eyes forward. Lose focus out here, start thinking about the wrong things and you'll be nothing but meat for the beasts. Do I make myself clear?"
     show mjoll_lars at left_char with Dissolve(0.2)
+    voice audio.lars_ch2_line4
     mjoll_lars "Sir!"
 
     hide vasily
@@ -186,11 +192,13 @@ label chapter_2:
     "Something was off. Too quiet, too still. The wind carried a foul, metallic scent—blood. I stopped in my tracks and raised a hand."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
+    voice audio.dorian_ch2_line1
     dorian "We're here."
 
     "The mercenaries stiffened, their chatter ceasing immediately. They looked around nervously, hands shaking as they start gripping their weapons."
 
     show mjoll_lars at right_char with Dissolve(0.2)
+    voice audio.lars_ch2_line5
     mjoll_lars "Umm… where?"
 
     "Silence."
@@ -200,7 +208,7 @@ label chapter_2:
     "Then it came."
     # TODO: add growl sfx
     "A low, guttural growl rumbled through the frozen wilderness, vibrating the ground beneath us. The snow swirled as if alive, the wind howling in response to the beast's presence."
-    
+
     # play sound sfx_qiongqi_roar                 # PLACEHOLDER — Qiongqi roar SFX
     scene cg_qiongqi_fight with shock_cut      # PLACEHOLDER — cg_qiongqi_charge
     play music ost_qiongqi_hunt fadein 0.5      # PLACEHOLDER — hunt battle music
@@ -218,15 +226,16 @@ label chapter_2:
 
     show mjoll_lars at left_char with Dissolve(0.2)
     "One mercenary swung his sword wildly, only for the beast to swat him aside like a doll, sending him crashing into the snow. Another let loose an arrow that bounced harmlessly off the Qiongqi's thick hide."
+    voice audio.lars_ch2_line6
     mjoll_lars  "AHHH!!"
     hide mjoll_lars
 
-    show mjoll_helga at left_char with Dissolve(0.2)   
+    show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "My arrows aren't working! Use your shield, Lars!"
     hide mjoll_helga
 
     "The beast lunged at the third mercenary, its claws slicing through his shield as though it were parchment."
-    
+
     show dorian serious at left_char with Dissolve(0.2)
     "I thrust my arms toward the ground. Pillars of jagged earth erupted from beneath the Qiongqi, slamming into its underbelly and knocking it off balance."
     play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
@@ -240,7 +249,7 @@ label chapter_2:
     "It rose, furious—its mouth split open unnaturally wide as it released another piercing howl."
 
     qiongqi "RAAAAAHHHHHHHRRGHHHH!!!"
-    
+
     # show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily "Dorian! It's coming for you!"
 
@@ -254,6 +263,7 @@ label chapter_2:
 
     # show qiongqi at center_qq with Dissolve(0.2)
     qiongqi "RAAAAAHH!! RAAAHHH!!"
+    voice audio.lars_ch2_line7
     mjoll_lars  "Helga, your bow! Hit it on its shoulder!"
 
     "One of the Mjoll soldiers managed to shoot an arrow, and by some stroke of luck—or desperation—it embedded itself in the Qiongqi's shoulder. The beast howled, thrashing violently, but it only seemed angrier."
@@ -270,11 +280,11 @@ label chapter_2:
     hide vasily
     scene frostcradle_blizzard with shock_cut
     show vasily alt_aggressive at left_char
-    show qiongqi at right_qq 
+    show qiongqi at right_qq
     with Dissolve(0.2)
     vasily "Now, friend!"
     hide vasily
-    
+
     show dorian dragon_eyes at left_char with Dissolve(0.2)
     "I didn't hesitate. Summoning a massive portion of earth, I brought a jagged spike of stone hurtling up beneath the Qiongqi's chest, impaling it."
     play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
@@ -288,20 +298,24 @@ label chapter_2:
     "The monstrous shrieking was cut short. The Qiongqi twitched once… then went still."
     "Dead."
     stop music fadeout 2.0
-    
+
     show dorian normal_alt_annoyed at left_char
     show mjoll_pavel at right_char with Dissolve(0.2)
+    voice audio.pavel_ch2_line5
     mjoll_pavel "He… he literally could have just done this without us."
     hide mjoll_pavel
     show mjoll_lars at right_char with Dissolve(0.2)
+    voice audio.lars_ch2_line8
     mjoll_lars  "He really is… the Dragon…"
     hide mjoll_lars
 
     "I stood over it, my breath steady, my gaze cold."
 
     show dorian serious at left_char
+    voice audio.dorian_ch2_line2
     dorian "Cut off its head. Now."
     show mjoll_lars at right_char with Dissolve(0.2)
+    voice audio.lars_ch2_line9
     mjoll_lars "Yes, sir."
 
     "He nodded quickly, drawing his blade and stepping toward the corpse."
@@ -316,6 +330,7 @@ label chapter_2:
 
     hide vasily
     show dorian sad at left_char with Dissolve(0.2)
+    voice audio.dorian_ch2_line3
     dorian "Time to go back."
 
     # hide characters here, only bg
@@ -346,9 +361,9 @@ label ch2_palace:
     show dorian sad at left_char with Dissolve(0.2)
     "We enter the throne room; the smell of incense hangs thick in the air. A group of Aldoriths knelt on the cold stone floor, their heads bowed low."
     "At the far end of the room, King Gustav Nordstrom sat upon his gilded throne, his face as hard as the icy mountains that surrounded Mjoll. Beside him, Queen Ekaterina Drakos sat, her dark eyes gleaming."
-    
+
     hide dorian
-    show king_gustav at right_char 
+    show king_gustav at right_char
     show vasily neutral at left_char
     with Dissolve(0.2)
     vasily "Enoch above. Another punishment?"
@@ -356,31 +371,39 @@ label ch2_palace:
 
     hide vasily
     show svante normal_nervous at left_char with Dissolve(0.2)
+    voice audio.svante_ch2_line1
     svante "Please, Father! I beg you! I didn't mean to—"
+    voice audio.gustav_ch2_line1
     king_gustav "You dare speak to me that way, boy? You've been given every chance to prove your worth, and yet you continue to disappoint me."
 
     "The queen leaned forward, her voice a venomous whisper."
     hide svante
 
     show queen_ekaterina at left_char with Dissolve(0.2)
+    # no voice audio.queen_ekaterina_ch2
     queen_ekaterina "Svante should be grateful, Your Highness. Without your guidance, he'd be no better than a stray mutt."
     hide queen_ekaterina
     show kristin_normal at left_char with Dissolve(0.2)             # PLACEHOLDER — Kristin sprite
+    voice audio.kristin_ch2_line1
     kristin         "Quiet, Svante. You'll only make it worse for us. Please…"
     hide kristin_normal
     show boy_ald_normal at left_char with Dissolve(0.2)                # PLACEHOLDER — boy_ald sprite
+    voice audio.boy_ald_ch2_line1
     boy_ald         "Worse? What more can he take from us that he hasn't already?"
     hide boy_ald_normal
     "I step closer and into the throne room, the soldiers following at a distance, the Qiongqi's head dripping blood onto the pristine marble floor."
 
     # show dorian serious at left_char with Dissolve(0.2)
+    voice audio.gustav_ch2_line2
     king_gustav "Enough! That goes for all of you. If you disobey, you will be beheaded like your brothers and sisters. IS THAT CLEAR? You are nothing without my name. Nothing!"
     "Yes, Father."
 
     show queen_ekaterina at left_char with Dissolve(0.2)
+    voice audio.queen_ekaterina_ch2_line1
     queen_ekaterina "Svante speaks like he's a prince, but look at him—groveling like the dog he is."
     hide queen_ekaterina
     show svante normal_nervous at left_char with Dissolve(0.2)
+    voice audio.svante_ch2_line2
     svante "I… I'm sorry, Father… Please forgive me… I—"
     hide svante
     hide king_gustav
@@ -389,25 +412,32 @@ label ch2_palace:
     "I step forward then, the Qiongqi's head swinging in my grasp, its blood dripping onto the pristine marble floor. The sound of the impact silences the room."
     "The Aldoriths freeze, their wide eyes darting to me."
     show boy_ald_normal at right_flip with Dissolve(0.2)                # PLACEHOLDER — boy_ald sprite
+    voice audio.boy_ald_ch2_line3
     boy_ald "It's him…"
     hide boy_ald_normal
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch2_line3
     svante  "The Dragon of Gale…"
     hide svante
     show king_gustav at right_char with Dissolve(0.2)
+    voice audio.gustav_ch2_line3
     king_gustav "Ah, Dorian. You've returned. Efficient as always. What news of the beast?"
 
     "I drop the Qiongqi's head unceremoniously onto the floor."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line4
     dorian "The beast is dead. Your kingdom is safe, for now. My payment."
 
     "The king gestures lazily, and a servant scurries forward, pressing a heavy pouch of gold into my hand. I take it without ceremony, glancing briefly at Vasily."
 
+    voice audio.dorian_ch2_line5
     dorian "Thanks."
+    voice audio.gustav_ch2_line4
     king_gustav     "This particular Qiongqi has terrorized these lands for a month now, devouring livestock, destroying villages, and killing many of my subjects. The people of Mjoll will sleep easier tonight thanks to you."
     hide king_gustav
     show queen_ekaterina at right_flip with Dissolve(0.2)
+    voice audio.queen_ekaterina_ch2_line2
     queen_ekaterina "You've done this kingdom a great service. And for that, we shall show our gratitude."
     hide queen_ekaterina
 
@@ -415,28 +445,34 @@ label ch2_palace:
     vasily "You've done what no one else could, Dorian. The King wants to make a spectacle of this victory, a display of his generosity to the people. He'll reward you handsomely if you make an appearance tomorrow."
 
     show dorian serious at left_char
+    voice audio.dorian_ch2_line6
     dorian "Tomorrow?"
     vasily "Yes, tomorrow. There'll be a celebration for the people. They wanted to celebrate your slaying of the Qiongqi."
 
     "I glance down at the bloodied pouch of gold in my hand."
 
     show dorian normal_alt_calm at left_char
+    voice audio.dorian_ch2_line7
     dorian "I'll be there."
     show dorian serious at left_char
     "As I turn to leave, I hear the Aldoriths' voices behind me, trembling and desperate."
     hide dorian
     hide vasily
-    show king_gustav at right_char 
+    show king_gustav at right_char
     show svante normal_nervous at left_char
     with Dissolve(0.2)
+    voice audio.svante_ch2_line4
     svante  "Father, please, I only sought to prove my loyalty! Give me another chance!"
     hide svante
     show kristin_normal at left_char with Dissolve(0.2)                # PLACEHOLDER — Kristin sprite
+    voice audio.kristin_ch2_line2
     kristin "We'll do anything—just let us stay by your side!"
     hide kristin
+    voice audio.gustav_ch2_line5
     king_gustav "You've embarrassed me for the last time. Guards, take them to the dungeon. Perhaps some time in the dark will teach you the value of obedience."
     hide king_gustav
     show queen_ekaterina at right_flip with Dissolve(0.2)
+    voice audio.queen_ekaterina_ch2_line3
     queen_ekaterina "They're lucky they didn't end up like the others. You're far too kind, my love."
     hide queen_ekaterina
     hide kristin_normal
@@ -447,10 +483,11 @@ label ch2_palace:
 
     "Vasily catches up to me as I leave the palace, the snow crunching beneath our boots."
 
-    show dorian serious at left_char 
+    show dorian serious at left_char
     show vasily alt_normal at right_char
     with Dissolve(0.2)
     vasily "Dorian, look. You don't have to come tomorrow, you know. But the King won't forget if you don't. And neither will the people."
+    voice audio.dorian_ch2_line8
     dorian "Let them remember what they want. I just want my gold."
 
     "Vasily places a hand on my shoulder."
@@ -490,17 +527,23 @@ label ch2_cave:
 
     # These lines are ghost-voices from memory — no sprites for family here
     # sad dorian sprite
+    voice audio.elara_ch2_line1
     elara  "Kids, come on. Haven't your father and I taught you some table manners?"
+    voice audio.lucas_ch2_line1
     lucas  "Mom, can we go play in the snow after this?"
     emily  "Mmm the stew tastes good, Dad!"
+    voice audio.daniel_ch2_line1
     daniel "Stop sucking up to dad, Emily!"
+    voice audio.sarah_ch2_line1
     sarah  "Guys, stop moving! You'll get food all over my sketchbook!"
+    voice audio.elara_ch2_line2
     elara  "Aren't they adorable, Dorian? I miss you, my heart."
 
     # PDF p64
     "I see their smile, the way they always knew how to make this cold, harsh world feel warm."
     "The fire crackles and I eat slowly, savoring down very bite, even as the food grows colder."
 
+    voice audio.dorian_ch2_line9
     dorian "I'm sorry… I wasn't there. I should've been there. I…"
 
     "I ball up my fist and continue eating. After I finished my meal, I head back to my bedroll."
@@ -508,7 +551,7 @@ label ch2_cave:
     scene black with fade
     "I close my eyes, letting the weight of exhaustion pull me under. Tomorrow will come, and with it, another mission, another royal errand, another reason to keep moving."
 
-    
+
     stop music fadeout 2.0
     stop audio fadeout 1.0
 
@@ -544,6 +587,7 @@ label ch2_square_intro:
     "I fold my arms, shrugging slightly."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.2)
+    voice audio.dorian_ch2_line10
     dorian "Why wouldn't I be?"
     vasily "Oh, silly me. When have you not been early? You'd show up to your own funeral two hours in advance just to make sure everything's running smoothly."
 
@@ -552,6 +596,7 @@ label ch2_square_intro:
     show vasily alt_think at right_char
     vasily "The event doesn't start for another two hours, you know."
     show dorian neutral at left_char
+    voice audio.dorian_ch2_line11
     dorian "I'm aware. Just wanted to check the area."
 
     "He raises an eyebrow but doesn't press further. Instead, he gestures to the booths around us."
@@ -564,14 +609,16 @@ label ch2_square_intro:
     vasily "…the presentation of the Qiongqi's head. It'll be the centerpiece."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line12
     dorian "Don't you think it's a little extravagant?"
     vasily "You know His Highness. Also, the people need something to rally around. After everything that's happened, a little morale boost goes a long way."
-    
+
     show dorian sad at left_char
     "I stay silent, my gaze drifting across the square. Children laugh as they chase each other around the booths. Adults are happily chatting with each other as the snow lightly falls."
 
     vasily "You should get some rest, Dorian. Come back when the festivities start. You've done your part."
     show dorian serious at left_char
+    voice audio.dorian_ch2_line13
     dorian "I'm fine."
 
     "He sighs, muttering something under his breath."
@@ -587,6 +634,7 @@ label ch2_square_intro:
 
     "I glance at him, raising a brow."
 
+    voice audio.dorian_ch2_line14
     dorian "What?"
 
     "He folds his arms and smirks."
@@ -597,12 +645,14 @@ label ch2_square_intro:
     "I scoff, shaking my head."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line15
     dorian "Not interested."
     vasily "Dorian, come on. When's the last time you did something remotely enjoyable? When's the last time you had fun?"
 
     "I narrow my eyes at him."
 
     show dorian sad at left_char
+    voice audio.dorian_ch2_line16
     dorian "Every night. When I spend my time with my family."
 
     "He nudges my shoulder gently."
@@ -613,6 +663,7 @@ label ch2_square_intro:
     "I raise a skeptical brow."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line17
     dorian "How?"
 
     show vasily alt_normal at right_char
@@ -621,6 +672,7 @@ label ch2_square_intro:
     "I let out a slow breath, crossing my arms as I mull it over."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch2_line18
     dorian "Fine. Let's get this over with."
     show vasily alt_savage at right_char
     vasily "That's the spirit, friend!"
@@ -689,6 +741,7 @@ label ch2_food_stalls:
 
     vasily "Ah, here we go, Dorian. Mjollian cuisine is second to none. Let me guess, you haven't eaten anything decent in weeks."
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line19
     dorian "Hmph."
 
     "I grunt in response, but my stomach betrays me with a growl. He smirks and gestures toward a booth with a large cast iron cauldron."
@@ -709,6 +762,7 @@ label ch2_food_stalls:
     "I take a bite. The smoky, savory flavor of the sturgeon hits me first, followed by the earthiness of the parsnips and turnips. The bread, soaked in the stew, is soft yet hearty. It's... surprisingly good."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch2_line20
     dorian "It's… *groans*"
     show vasily alt_normal at right_char
     vasily "See? I told you. Nothing like food to make life a little less bleak."
@@ -726,9 +780,11 @@ label ch2_food_stalls:
     show boy_ald at left_char
     with Dissolve(0.2)            # PLACEHOLDER — Boy Aldorith (straining under crate)
     mjoll_soldier_1  "Come on! Pick up the pace, will ya? Don't make me bring out the whip!"
+    voice audio.boy_ald_ch2_line4
     boy_ald_spa "Please, sir! We just need a drink!"
     hide mjoll_soldier_1
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
+    voice audio.femaleguard_ch2_line1
     mjoll_soldier_female_1 "You'll get your drink after an hour! Now get back to work!"
     hide mjoll_soldier_female_1
     hide boy_ald
@@ -750,6 +806,7 @@ label ch2_food_stalls:
             show dorian serious at left_char with Dissolve(0.2)
             "I clench my fists, stepping toward the guards as they bark orders at the two kids."
 
+            voice audio.dorian_ch2_line21
             dorian "Let them rest. They're just kids."
 
             "The guards turn, startled, before recognizing me. One of them straightens up, puffing out his chest."
@@ -760,11 +817,13 @@ label ch2_food_stalls:
             "The vendor watches silently, her hands trembling."
 
             show dorian normal_alt_annoyed at left_char
+            voice audio.dorian_ch2_line22
             dorian "They look half-dead. If you push them any further, they'll collapse."
             mjoll_soldier_1 "Then they collapse. Not our problem their constitution's weak."
 
             hide mjoll_soldier_1
             show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
+            audio.femaleguard_ch2_line2
             mjoll_soldier_female_1 "Y-You fool! Th-that mercenary is the Dragon of Gale."
             hide mjoll_soldier_female_1
             show mjoll_soldier_1 at right_char with Dissolve(0.2)
@@ -801,6 +860,7 @@ label ch2_food_stalls:
     vasily "This place… It survives because of the system. The King and Queen, for all their flaws, keep the kingdom standing."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line23
     dorian "You really believe that?"
 
     "Vasily doesn't answer immediately."
@@ -830,13 +890,15 @@ label ch2_fortune:
     show vasily alt_normal at right_char
     with Dissolve(0.2)
     "Vasily nudges me toward the dimly lit booth draped in heavy, violet curtains. A crooked, hastily-painted sign outside reads: 'Babala: Your Fate Awaits.'"
-    
+
     vasily "Oh she's back in town!"
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line24
     dorian "Really? Who?"
     show vasily alt_aggressive at right_char
     vasily "Babala. She's a fortuneteller. They say she never misses with her fortunes. I'd say it's worth a try. She's—"
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line25
     dorian "Not interested."
     show vasily alt_normal at right_char
     vasily "Come on, Dorian. I'd say it's worth a try."
@@ -844,6 +906,7 @@ label ch2_fortune:
     "I glare at him."
 
     show dorian serious at left_char
+    voice audio.dorian_ch2_line26
     dorian "Fortunes are just words to me, Vasily. Nothing more."
     show vasily alt_savage at right_char
     vasily "Words have power, you know. Besides, maybe she'll tell you about your love life. Don't you think it's time to move on?"
@@ -851,12 +914,14 @@ label ch2_fortune:
     "I stop in my tracks, the air around us growing cold."
 
     show dorian angry at left_char
+    voice audio.dorian_ch2_line27
     dorian "I will never remarry, Vasily. Don't bring that up again."
 
     "The fortune teller, a middle-aged woman, with white eyes, peeks out from the curtains, chuckling softly."
     show dorian normal_alt_annoyed at left_char
     hide vasily
     show babala at right_char with Dissolve(0.2)
+    voice audio.babala_ch2_line1
     babala "Haha. You are as stubborn as the stone you channel, Dragon of Gale. But even the hardest stone cracks in time."
 
     "Vasily laughs, patting my shoulder."
@@ -866,6 +931,7 @@ label ch2_fortune:
     "We step inside. The booth is small but warm, the scent of incense hanging in the air. A crystal orb glows faintly on the table, and behind it sits Babala."
     "She looks up, her lips curling into a knowing smile."
     show dorian serious at left_char
+    voice audio.babala_ch2_line2
     babala "The Dragon of Gale. I wondered when you'd visit me."
     hide babala
     show vasily alt_savage at right_char with Dissolve(0.2)
@@ -873,24 +939,31 @@ label ch2_fortune:
     # v laugh 043
     hide vasily
     show babala at right_char with Dissolve(0.2)
+    voice audio.babala_ch2_line3
     babala "*laughing* Your friend has a sharp tongue."
 
     "I glare at Vasily, but Babala's chuckle draws my attention back to her."
+    voice audio.babala_ch2_line4
     babala "Sit, child of fire. Let the Weaver guide us."
     "I hesitate before sitting across from her. Her gaze turns distant as she places her hands on the crystal orb."
 
+    voice audio.babala_ch2_line5
     babala "The Weaver… the one who spun the first threads of existence. From the void, she created the Tetrad—four immortal beings who shaped the world."
+    voice audio.babala_ch2_line6
     babala "Together, they wove the earths, the waters, the heavens, and all life. But it is the Weaver who holds all fates in their loom."
 
     "Her voice takes on a reverent tone, and for a moment, the air feels heavier."
 
+    voice audio.babala_ch2_line7
     babala "And now, she weaves your threads, Dragon of Gale."
 
     show dorian sad at left_char
+    voice audio.dorian_ch2_line28
     dorian "Th-that's great, I guess."
     show dorian serious at left_char
     "The crystal orb flickers, and a faint swirl of smoke begins to rise. Babala's eyes widen slightly, and her lips curl into a smile."
 
+    voice audio.babala_ch2_line8
     babala "Normally, I allow people to ask one question, but for you, Dragon, I will permit two. Fate bends itself for those who walk in its shadow."
     hide babala
     show vasily alt_think at right_char with Dissolve(0.2)
@@ -899,13 +972,16 @@ label ch2_fortune:
     "Babala doesn't answer him. The swirling smoke grows, curling around me like an embrace. It feels strangely comforting, and I instinctively close my eyes."
     hide vasily
     show babala at right_char with Dissolve(0.2)
+    voice audio.babala_ch2_line9
     babala "Don't fight it, Dragon. Open your heart to me."
 
     "She leans forward, her voice dropping to a whisper."
 
+    voice audio.babala_ch2_line10
     babala "Do not fight it, Dragon. Let your heart guide your words to the Weaver's threads. Ask me anything you wish to know."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line29
     dorian "Anything, huh?"
 
     # -----------------------------------------------------------------------
@@ -916,40 +992,49 @@ label ch2_fortune:
             $ ch2_babala_asked_family = True
 
             show dorian sad at left_char
+            voice audio.dorian_ch2_line30
             dorian "I want to know how is my family doing."
 
             "Babala's expression softens, and the crystal orb flares with light."
 
+            voice audio.babala_ch2_line11
             babala "Your family… they have passed on to Tianlun, the Eternal Realm of Peace. Elara cradles your children in her arms, and their laughter echoes through fields of gold."
+            voice audio.babala_ch2_line12
             babala "Daniel. Emily. Sarah. Lucas. They are at peace, Dorian. But they watch over you still, their love woven into your every step."
 
             "My throat tightens, and I can barely speak."
 
             show dorian neutral at left_char
+            voice audio.dorian_ch2_line31
             dorian "They're… happy?"
+            voice audio.babala_ch2_line13
             babala "Happier than you can imagine. But they long for you to find your peace as well."
 
             "Vasily places a hand on my shoulder, his usual teasing replaced with quiet support."
 
             show dorian sad at left_char
+            voice audio.dorian_ch2_line32
             dorian "Elara…"
 
+            voice audio.babala_ch2_line14
             babala "But the threads of fate are not yet finished. We must look to the future."
             hide babala
             show vasily alt_think at right_char with Dissolve(0.2)
             vasily "I think Dorian's had enough—"
             hide vasily
             show babala at right_char with Dissolve(0.2)
-            
+
             # TODO: add audio
             # Thunder — the orb blazes, Babala transforms into the vessel of prophecy
             # play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
-    
+
+            voice audio.babala_ch2_line15
             babala "Before your time is up, you will hold another daughter in your arms. She will bring you peace, Dragon. A second chance at family, a chance to heal what was broken."
             show dorian serious at left_char
             "Another daughter? How could I even think of raising another child after what happened to Elara and the kids?"
 
             show dorian neutral at left_char
+            voice audio.dorian_ch2_line33
             dorian "That'll be impossible since I'll never remarry but, thank you."
 
             "The booth grows colder as her voice rises."
@@ -959,24 +1044,29 @@ label ch2_fortune:
             show dorian neutral at left_char
             "My thoughts drift to the others—Paladin Feng, Paladin Cyrus, Empress Olympia, the soldiers who stood beside me during the Tragedy of Tianho."
 
+            voice audio.dorian_ch2_line34
             dorian "I want to know… how are my past companions?"
 
+            voice audio.babala_ch2_line19
             babala "Your companions remain strong. Paladin Feng heals slowly but surely; his resolve is unbroken. Empress Olympia rebuilds what was lost, her strength inspiring those around her."
+            voice audio.babala_ch2_line20
             babala "Paladin Cyrus has moved on… As for Count Vasily…"
             hide babala
             show vasily neutral at right_char
             vasily "You do realize I'm standing right here, don't you?"
 
             "She glances at him, a smirk tugging at her lips."
-            
+
             hide vasily
             show babala at right_char with Dissolve(0.2)
+            voice audio.babala_ch2_line21
             babala "He frets over you more than he lets on."
             hide babala
             show vasily alt_aggressive at right_char
             vasily "I do not fret."
             hide vasily
             show babala at right_char with Dissolve(0.2)
+            voice audio.babala_ch2_line22
             babala "But the threads of fate do not end here. We must look to the future."
             hide babala
             show vasily alt_think at right_char
@@ -994,12 +1084,15 @@ label ch2_fortune:
     # PDF p71-72 (family) / p72-73 (companions)
     # -----------------------------------------------------------------------
 
+    voice audio.babala_ch2_line23
     babala "I see you surrounded by five figures. Five men, each unique and powerful. They will walk beside you, bound by loyalty and something deeper. Together, you will face the storm that looms ahead."
+    voice audio.babala_ch2_line24
     babala "Beware, Dragon. A great calamity will strike Ena, and only you and your companions may stand against it. The Weaver's threads will guide you, but the path will not be easy."
 
     "The light fades, and Babala slumps in her chair, panting."
 
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.babala_ch2_line25
     babala "*pants* You're welcome."
     hide babala
 
@@ -1013,6 +1106,7 @@ label ch2_fortune:
 
     "I shake my head, the weight of Babala's words pressing heavily on my chest."
 
+    voice audio.dorian_ch2_line35
     dorian "Let's move on, Vasily."
 
     hide dorian
@@ -1039,13 +1133,14 @@ label ch2_spa:
     "The spa's grand facade rises before us, smoke wafting from its chimneys."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line36
     dorian "Maybe the spa would be a good idea."
     show vasily alt_savage at right_char
     vasily "A spa? Hmm I love it! Perfect!"
 
     "We step into the spa, the warmth of the heated pools doing little to thaw the chill in my chest. The nobles recline in luxurious pools while aldorith attendants bustle about, their eyes downcast, their bodies worn thin from endless labor."
     "A young aldorith boy, looking no older than ten, struggles with a heavy bucket of steaming water, his hands trembling from the heat. He stumbles, spilling water onto his arm. His face contorts in pain, but he quickly bows his head, attempting to clean the mess with his sleeve."
-    hide vasily 
+    hide vasily
     show girl_ald_spa at right_char_kids with Dissolve(0.2)       # PLACEHOLDER — girl aldorith sprite
     girl_ald_spa "Brother! Let me help you!"
 
@@ -1057,6 +1152,7 @@ label ch2_spa:
     noblewoman  "Disgusting, clumsy brat! Do you think I pay for this kind of incompetence?"
     hide noblewoman
     show boy_ald_spa at right_char_kids with Dissolve(0.2)        # PLACEHOLDER — boy aldorith sprite
+    voice audio.boy_ald_ch2_line5
     boy_ald_spa "I-I'm sorry, mam! I didn't mean to—"
 
     "She lashes out with her fan, striking the boy across the face. The sound echoes through the room. He flinches but doesn't cry out."
@@ -1069,10 +1165,12 @@ label ch2_spa:
     vasily "I know what you're thinking. But don't. This place… It's not Gale. And it's not Tianho."
 
     show dorian sad at left_char
+    voice audio.dorian_ch2_line37
     dorian "Tianho. As if I could forget."
     show vasily alt_normal at right_char
     vasily "You think I don't remember, too? I lost people there. You weren't the only one who—"
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line38
     dorian "Don't. Besides, I don't care. These kids... they're not my problem."
     show dorian serious at left_char
 
@@ -1094,6 +1192,7 @@ label ch2_spa:
 
     hide noblewoman
     show boy_ald_spa at right_char_kids           # PLACEHOLDER — boy aldorith sprite
+    voice audio.boy_ald_ch2_line6
     boy_ald_spa  "Mam, I-I… *crying*"
     hide boy_ald_spa
     show girl_ald_spa at right_char_kids with Dissolve(0.2)    # PLACEHOLDER — girl aldorith sprite
@@ -1121,16 +1220,20 @@ label ch2_spa:
 
             show vasily alt_think at right_char with Dissolve(0.2)
             vasily "Come on. Let's get out of here."
+
+            voice audio.dorian_ch2_line40
             dorian "…"
 
             hide vasily
             show boy_ald_spa at right_char_kids with Dissolve(0.2)
+            voice audio.boy_ald_ch2_line7
             boy_ald_spa "Mam, please. We'll do anything… Please! *crying*"
             hide boy_ald_spa
             show noblewoman at right_char with Dissolve(0.2)     # PLACEHOLDER — Noblewoman sprite
             noblewoman  "Get your filthy hands off my feet! Come dawn, you'll hang like the worthless scum you are. And I'll laugh as your bodies sway in the wind."
 
             show dorian normal_alt_annoyed at left_char
+            voice audio.dorian_ch2_line41
             dorian "Scum…"
 
             "I force myself to walk away."
@@ -1161,6 +1264,7 @@ label ch2_spa:
             show dorian serious at left_char
             "I walk away."
 
+            voice audio.dorian_ch2_line42
             dorian "Like I said, Vasily, I don't care."
 
     hide dorian
@@ -1174,6 +1278,7 @@ label ch2_spa:
     "My interest in the place has completely faded."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line43
     dorian "Maybe we should try someplace else."
 
     "Vasily glances at me, his expression unreadable for a moment, before giving a small nod."
@@ -1202,12 +1307,14 @@ label ch2_rest:
     "It's a simple structure—a cozy area reserved for the royal advisor to escape the noise and chaos. Cushioned seats and thick, fur-lined blankets are arranged beneath the canopy."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line44
     dorian "You keep telling me I need to relax. Why don't you take your own advice for once?"
 
     show vasily alt_think at right_char
     vasily "Relax? In the middle of the square? You must be joking."
 
     show dorian normal_alt_confident at left_char
+    voice audio.dorian_ch2_line45
     dorian "You have your own private area over there. No one will bother us. You look like you haven't slept in days, Vasily."
 
     show vasily alt_normal at right_char
@@ -1224,6 +1331,7 @@ label ch2_rest:
     "I close my eyes, letting the rare stillness seep into my bones."
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line46
     dorian "You know the king. He never stops bitc—"
 
     show vasily alt_savage at right_char
@@ -1244,6 +1352,7 @@ label ch2_rest:
     vasily "Alright, Dorian. I'll admit it—you were right. I needed that."
 
     show dorian normal_alt_confident at left_char
+    voice audio.dorian_ch2_line47
     dorian "Told ya."
 
     "He pauses."
@@ -1253,6 +1362,7 @@ label ch2_rest:
     # vasily 049
 
     show dorian normal_alt_calm at left_char
+    voice audio.dorian_ch2_line48
     dorian "I agree. Rest is a moment I don't take for granted."
 
     return
@@ -1285,12 +1395,14 @@ label ch2_common_freetime:
     show vasily alt_think at right_char
     vasily "There it is. Your hard work on full display. The people will talk about this for years. They'll honor you in the grand Mjollian tradition. It's my favorite part of these ceremonies."
 
+    voice audio.dorian_ch2_line49
     dorian "*yawns* I wanted to go back to sleep."
 
     show vasily alt_normal at right_char
     vasily "You'll get more sleep AFTER the ceremony."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line50
     dorian "Besides, didn't you help bringing down that thing? We also had three other soldiers with us. Helga, Lars… And, I forgot the name of the last one."
 
     show vasily alt_think at right_char
@@ -1338,13 +1450,14 @@ label ch2_ceremony:
     hide kristin_normal
     hide boy_ald_normal
 
-    show dorian neutral at left_char 
+    show dorian neutral at left_char
     show vasily alt_savage at right_char
     with Dissolve(0.2)
 
     vasily "Ah… my favorite tradition. The dunk tanks."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch2_line51
     dorian "Favorite?"
 
     "The man with the violet hair was a standout. His shirt was thin and tattered, barely enough to protect him from the biting wind."
@@ -1364,43 +1477,50 @@ label ch2_ceremony:
     woman_2 "Dunk them all! Teach those mutts their place!"
 
     show kristin_normal at left_char with Dissolve(0.2)
+    voice audio.kristin_ch2_line3
     kristin "*cries* They're… they're so cruel…"
 
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch2_line5
     svante "Hey, Kristin. Don't cry. You're making it easier for them."
 
     "The herald pointed dramatically at the violet-haired aldorith."
     hide svante
     hide kristin_normal
-    
+
     show herald at center_char with Dissolve(0.2)
     herald "And for our first dunk, we have Svante—the metal channeling aldorith! Dragon of Gale, the first throw is yours!"
     hide herald
 
-    show dorian normal_alt_annoyed at left_char 
+    show dorian normal_alt_annoyed at left_char
     show svante normal_sad at right_char
     with Dissolve(0.2)
     "I glanced up at Svante. He met my gaze with his piercing violet eyes."
-    show dorian serious at left_char 
+    show dorian serious at left_char
 
+    voice audio.svante_ch2_line6
     svante "Of course it's me…"
     "A younger aldorith, a girl with silver hair, whispered frantically to him."
 
     hide svante
     show kristin_normal at right_char with Dissolve(0.2)
+    voice audio.kristin_ch2_line4
     kristin "Svante, brother, please. Don't provoke them. We—"
 
     "The words barely left her mouth before a guard struck her with the blunt end of his spear."
 
+    voice audio.kristin_ch2_line5
     kristin "Ahhh!!"
 
     hide kristin_normal
     show svante normal_angry at right_char with Dissolve(0.2)
+    voice audio.svante_ch2_line7
     svante "Hey! Don't lay a finger on her! I swear—"
 
     "Another slap from the guard silenced him, followed by a harsh blow to his stomach. Svante doubled over, coughing violently as the crowd cheered."
 
     show svante normal_nervous at right_char
+    voice audio.svante_ch2_line8
     svante "*coughs*"
     hide svante
 
@@ -1415,10 +1535,12 @@ label ch2_ceremony:
     hide mjoll_soldier_1
 
     show kristin_normal at right_char with Dissolve(0.2)
+    voice audio.kristin_ch2_line6
     kristin "Svante, please!"
-    
+
     hide kristin_normal
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch2_line9
     svante "*coughs* I… I'm sorry."
 
     "The guard grabbed Svante by his collar, forcing him upright to face me."
@@ -1442,8 +1564,10 @@ label ch2_ceremony:
     svante "…"
 
     show dorian sad at left_char
+    voice audio.dorian_ch2_line52
     dorian "…"
 
+    voice audio.svante_ch2_line10
     svante "Just do it. Get it over with."
     "The crowd jeered, their shouts urging me to take the shot. Vasily stood beside me."
 
@@ -1463,11 +1587,13 @@ label ch2_ceremony:
             # play sound sfx_dunk_splash          # PLACEHOLDER — dunk splash SFX
 
             show svante normal_angry at right_char
+            voice audio.svante_ch2_line11
             svante "*panting*"
 
             "The crowd roared with laughter."
 
             show kristin_normal at left_char
+            voice audio.kristin_ch2_line7
             kristin "B-Brother!"
 
             man_3 "Look at him squirm!"
@@ -1485,16 +1611,18 @@ label ch2_ceremony:
 
             "I raised my arm, aimed, and threw the ball—but it went wide, striking the wood of the tank instead. The crowd groaned in disappointment, their laughter fading into murmurs."
 
-            hide svante 
+            hide svante
             show herald at right_char with Dissolve(0.2)
             herald "A miss? Well, no matter! The Dragon of Gale may try again!"
 
             show dorian normal_alt_annoyed at left_char
+            voice audio.dorian_ch2_line53
             dorian "I won't throw another."
 
             herald "But it's tradition! The dunking cannot proceed without the first shot!"
 
             show dorian serious at left_char
+            voice audio.dorian_ch2_line54
             dorian "Then there will be no dunking."
 
             "The crowd booed, their shouts becoming increasingly hostile. Vasily looked at me, his face an odd mix of amusement and disbelief."
@@ -1507,6 +1635,7 @@ label ch2_ceremony:
 
             hide vasily
             show svante alt_base at right_char with Dissolve(0.2)
+            voice audio.svante_ch2_line12
             svante "I… t-thank you… I—"
             hide svante
 
@@ -1515,18 +1644,22 @@ label ch2_ceremony:
 
             hide mjoll_soldier_1
             show kristin_normal at right_char with Dissolve(0.2)
+            voice audio.kristin_ch2_line8
             kristin "Brother!"
 
             hide kristin_normal
             show svante normal_happy at right_char with Dissolve(0.2)
+            voice audio.svante_ch2_line13
             svante "Kristin!"
             hide svante
 
             show boy_ald_normal at right_flip with Dissolve(0.2)
+            voice audio.boy_ald_ch2_line3
             boy_ald "Wait, so does that mean…"
             hide boy_ald_normal
 
             show svante normal_base at right_char with Dissolve(0.2)
+            voice audio.svante_ch2_line14
             svante "Thank you…"
 
             "Svante, though shivering, straightened his posture slightly, his violet eyes locked onto me until he is escorted out by the guards."
@@ -1563,7 +1696,7 @@ label ch2_frost_oni:
 
     "Before anyone could answer, a bone-chilling wind swept through the square. The air seemed to freeze in place, heavy and sharp like needles against the skin."
     "Then, out of the frost-laden mist, they appeared."
-    
+
     # TODO: add sfx
     # play sound sfx_ice_crack                    # PLACEHOLDER — ice crack SFX
 
@@ -1608,6 +1741,7 @@ label ch2_frost_oni:
     kristin "Brother! Svante! Run!"
 
     show svante normal_angry at right_char with Dissolve(0.2)
+    voice audio.svante_ch2_line15
     svante "Let's get out of here, Kristin!"
 
     "I could see him hesitate, his fists clenching, but he eventually turned and fled with the others."
@@ -1622,6 +1756,7 @@ label ch2_frost_oni:
     vasily "What in Tetrad's name are these?"
 
     show dorian dragon_eyes at left_char
+    voice audio.dorian_ch2_line55
     dorian "I don't know."
 
     "I raised my hands, channeling earth and wind. The ground around me shifted, sharp pillars of stone erupting to block the ice beings' path."
@@ -1648,7 +1783,7 @@ label ch2_frost_oni:
     "The ice beings let out a bone-chilling screech, their forms twisting as they began to converge on us. My heart pounded, but I stood my ground."
     hide vasily
 
-    show dorian serious at left_char 
+    show dorian serious at left_char
     show frost_oni at right_char
     with Dissolve(0.2)
     frost_oni "Graaaaa!!"
@@ -1690,8 +1825,9 @@ label ch2_frost_oni:
             elif ice_tracker >= 3:
                 show dorian angry at left_char_ice_3
                 show frost_masked_angry at frost_overlay_3
-        
+
             # TODO: add freezing ice sfx
+            voice audio.dorian_ch2_line56
             dorian "Ahhh!!"
             hide frost_oni
             show vasily alt_aggressive at right_char with Dissolve(0.2)
@@ -1724,8 +1860,9 @@ label ch2_frost_oni:
             "I sent a gust of wind toward it, but it barely slowed the creature down. Its icy claws raked across my arm, freezing my flesh."
             "I bit back a scream, but the pain was almost too much."
 
-            
 
+
+            voice audio.dorian_ch2_line57
             dorian "Ahhh!! Crap!!"
             vasily "Dorian!!"
 
@@ -1758,7 +1895,7 @@ label ch2_frost_oni:
     elif ice_tracker >= 3:
         show dorian serious at left_char_ice_3 with Dissolve(0.7)
         show frost_masked_angry at frost_overlay_3
-    else: 
+    else:
         show dorian serious at left_char
 
     show vasily neutral at right_char
@@ -1766,7 +1903,8 @@ label ch2_frost_oni:
     vasily "Brr… It's getting colder…"
     hide vasily
 
-    show babala at right_char with Dissolve(0.2)       
+    show babala at right_char with Dissolve(0.2)
+    voice audio.babala_ch2_line26
     babala "Hey! Do you boys need some help? I can help you!"
 
     # =====================================================================
@@ -1775,7 +1913,7 @@ label ch2_frost_oni:
     # =====================================================================
     $ _choice_timeout = 5.0
     menu:
-        "Use wind to disperse the frost before it gathers. Allow Babala to help.":  # CORRECT — no ICE 
+        "Use wind to disperse the frost before it gathers. Allow Babala to help.":  # CORRECT — no ICE
             $ _choice_timeout = 0
             $ ch2_qtc6 = "wind_babala"
             stop sound
@@ -1783,14 +1921,16 @@ label ch2_frost_oni:
             # play sound sfx_wind_blast           # PLACEHOLDER
             hide babala
             show dorian dragon_eyes at left_char
-            show frost_oni at right_char 
+            show frost_oni at right_char
             with Dissolve(0.2)
             "I called on the wind, forcing it into a violent cyclone that tore through the frost cloud. The creature let out a shriek of frustration as its attack dissipated, leaving it vulnerable."
 
+            voice audio.dorian_ch2_line58
             dorian "Now!"
             hide frost_oni
-            show babala at right_char with Dissolve(0.2)    
-            babala "*gibberish* Taste the wrath of the Weaver!"   
+            show babala at right_char with Dissolve(0.2)
+            voice audio.babala_ch2_line27
+            babala "*gibberish* Taste the wrath of the Weaver!"
 
             # play sound sfx_vine_attack          # PLACEHOLDER — vine attack SFX
             hide babala
@@ -1803,7 +1943,8 @@ label ch2_frost_oni:
             with Dissolve(0.2)
             vasily "Wow."
             hide vasily
-            show babala at right_char with Dissolve(0.2)    
+            show babala at right_char with Dissolve(0.2)
+            voice audio.babala_ch2_line28
             babala "You're welcome, Dragon."
 
         "Channel earth to create a spike and impale it. Don't allow her.":   # WRONG — +1 ICE
@@ -1824,6 +1965,7 @@ label ch2_frost_oni:
             elif ice_tracker >= 3:
                 show dorian angry at left_char_ice_3 with Dissolve(0.7)
                 show frost_masked_angry at frost_overlay_3
+            voice audio.dorian_ch2_line59
             dorian "Gaaah!"
             babala "Dragon!"
             hide babala
@@ -1844,11 +1986,13 @@ label ch2_frost_oni:
         with Dissolve(0.2)
         vasily "D-Dorian! Your skin!"
 
+        voice audio.dorian_ch2_line60
         dorian "C-Cold…"
 
         "I fell to my knees, frost spreading across my body as the ice takes hold of me. The cold consumed me, dragging me into darkness."
         hide vasily
-        show babala at right_char with Dissolve(0.2)    
+        show babala at right_char with Dissolve(0.2)
+        voice audio.babala_ch2_line29
         babala "Dragon! No!"
         hide babala
         show vasily alt_mad at right_char with Dissolve(0.2)
@@ -1868,6 +2012,7 @@ label ch2_frost_oni:
         vasily "You did it, Dorian. You saved them… or what's left of them."
 
         show dorian normal_alt_calm at left_char
+        voice audio.dorian_ch2_line61
         dorian "What are those things?"
         show dorian serious at left_char
 
@@ -1889,27 +2034,34 @@ label ch2_frost_oni:
         "The remaining guards approached cautiously, inspecting the shattered remnants of the ice beings scattered across the bloodied square."
 
         show babala at right_char with Dissolve(0.2)
+        voice audio.babala_ch2_line30
         babala "This… This is no ordinary attack. The Weaver's threads are tightening around us."
 
         "She bent low to inspect one of the larger shards of ice, her fingers brushing the jagged surface. A faint glow pulsed under her touch."
 
+        voice audio.babala_ch2_line31
         babala "Yes… the pieces of the Weaver's plan are in motion. You, Dragon of Gale, must steel yourself. For the storms that come will not spare anyone—not kings, not queens, not even you."
 
         show dorian normal_alt_annoyed at left_char
+        voice audio.dorian_ch2_line62
         dorian "The Weaver? What does this have to do with the gods?"
 
+        voice audio.babala_ch2_line32
         babala "You will find out in due time. For now, my work for you is already done."
 
         "She straightened—well, as much as her hunched back would allow—and let out a dry, croaking laugh. Then, as she turned to shuffle away, her back cracked audibly."
 
+        voice audio.babala_ch2_line33
         babala "Ahhh!"
 
         show dorian normal_alt_neutral at left_char
+        voice audio.dorian_ch2_line63
         dorian "A-Are you alright?"
 
         "She waved me off, scowling."
 
         show babala at right_char
+        voice audio.babala_ch2_line34
         babala "Tch! Damned Weaver and your threads! Snagged me good, you meddling hag!"
 
         "She spat on the ground, muttering curses under her breath."
@@ -1919,6 +2071,7 @@ label ch2_frost_oni:
         "I looked back at the shattered remains of the ice beings, their glow still faintly pulsing in the twilight."
 
         show dorian normal_alt_tense at left_char
+        voice audio.dorian_ch2_line64
         dorian "What are these monsters?"
 
         jump ch2_common_end
@@ -1987,8 +2140,9 @@ label ch2_common_end:
 
     show dorian sad at left_char with Dissolve(0.2)
 
-    # [COMMENT: the fire crackled softly] 
+    # [COMMENT: the fire crackled softly]
     # TODO: add sfx
+    voice audio.dorian_ch2_line65
     dorian "Elara… Kids… I'm home."
 
     elara  "…"
@@ -1997,20 +2151,24 @@ label ch2_common_end:
     daniel "…"
     emily  "…"
 
+    voice audio.dorian_ch2_line66
     dorian "Happy birthday, Sarah. I have a surprise for you."
 
     "I set the bag of food down near the fire, letting the warmth seep into my bones."
     "I pulled out a small, cheap toy from my coat—a makeshift knit doll with one eye missing, the stitches frayed and uneven."
     "It wasn't much. I'd bought it from a street vendor for one gold, a pittance."
 
+    voice audio.dorian_ch2_line67
     dorian "Tedda. That's her name. She's not much to look at, but I thought… I thought she'd make you smile."
 
     sarah "…"
+    voice audio.elara_ch2_line3
     elara "I'm sure she would have loved it, Dorian…"
 
     "My hands trembled as I placed it on a small wooden shelf near the fire, beside a collection of toys."
     "Emily's ribbon that I bought for her, Lucas's slingshot, Daniel's carved wooden horse. Elara's scarf that I bought for her for our anniversary."
 
+    voice audio.dorian_ch2_line68
     dorian "Happy birthday, sweetheart. I miss you."
 
     sarah  "…"
@@ -2020,11 +2178,14 @@ label ch2_common_end:
 
     "I stayed there, staring into the fire, as the night stretched on."
 
+    voice audio.elara_ch2_line4
     elara "My heart, did you check the mail?"
 
     "I blinked, looking up."
 
+    voice audio.elara_ch2_line5
     elara "You always forget the mail. Can you check?"
+    voice audio.dorian_ch2_line69
     dorian "The mail, my heart?"
 
     "She nodded, her smile unwavering."
@@ -2038,41 +2199,52 @@ label ch2_common_end:
     "Inside was a letter, written in neat, flowing characters."
 
     hide dorian
-    
+
     # TODO: play paper sfx
     call screen cheng_letter with fade
 
     show dorian serious at left_char with Dissolve(0.2)
 
+    voice audio.dorian_ch2_line70
     dorian "Yuxuan… Cheng Yuxuan… I don't recall anyone with that name."
 
     "The name didn't immediately strike a chord, but I felt like I heard it from somewhere before."
 
+    voice audio.elara_ch2_line6
     elara  "You saved him from the fire, remember?"
+    voice audio.daniel_ch2_line2
     daniel "Yeah! Remember when you lifted that beam like it was nothing? It was so cool!"
     show dorian normal_alt_calm at left_char
 
     "I closed my eyes, the image of Tianho's flames flashing behind my eyelids. The man I saved from the burning building."
     "I sighed, folding the letter carefully and setting it aside."
 
+    voice audio.elara_ch2_line7
     elara  "You should write back to him."
 
     show dorian sad at left_char
+    voice audio.dorian_ch2_line71
     dorian "I don't have time for this, my heart. You know that."
 
     emily  "Don't lie, Dad. We know you're not doing anything important. You're just sitting here, talking to us."
 
+    voice audio.dorian_ch2_line72
     dorian "But—"
 
+    voice audio.elara_ch2_line8
     elara  "Oh, don't be stubborn. Writing back won't kill you. Besides, it might be good to talk to someone new for a change. You can't spend all your time with Vasily—or just us."
 
+    voice audio.sarah_ch2_line2
     sarah  "Yeah, dad! Think of it as my birthday gift!"
+    voice audio.daniel_ch2_line3
     daniel "My late birthday gift too, dad!"
     emily  "Mine too!"
+    voice audio.lucas_ch2_line2
     lucas  "Don't forget mine, dad!"
 
     "I sighed again."
 
+    voice audio.dorian_ch2_line73
     dorian "Fine…"
 
     "I reached for the old pen Vasily had given me weeks ago and pulled out a sheet of parchment."
@@ -2098,7 +2270,9 @@ label ch2_common_end:
 
             "Lastly, I placed the address written on Yuxuan's letter. When I finished, I let the ink dry."
 
+            voice audio.dorian_ch2_line74
             dorian "There. Happy?"
+            voice audio.elara_ch2_line9
             elara  "Once you send it to the postman, I'll be very happy."
 
         "Write a distant response.":
@@ -2109,14 +2283,20 @@ label ch2_common_end:
             "Cheng Yuxuan,"
             "I am glad to hear you are doing well. I don't have time for travel at the moment. Best of luck to you in Tianho."
 
+            voice audio.dorian_ch2_line74
             dorian "There. Happy?"
+            voice audio.sarah_ch2_line3
             sarah  "Dad, that's such a cold letter."
+            voice audio.lucas_ch2_line3
             lucas  "Even colder than this weather!"
+            voice audio.elara_ch2_line10
             elara  "How are you supposed to make new friends if you write like that?"
 
             "I groaned, grabbing the letter again. With a grumble, I scratched out 'don't' in the second sentence, leaving a messy strikethrough."
 
+            voice audio.dorian_ch2_line75
             dorian "There. I fixed it. Happy?"
+            voice audio.elara_ch2_line11
             elara  "You're impossible, you know that?"
 
     show dorian serious at left_char
@@ -2134,12 +2314,14 @@ label ch2_common_end:
 
     "I narrowed my eyes, my heart sinking at the grim tone of his voice."
 
+    voice audio.dorian_ch2_line76
     dorian    "What happened?"
     messenger "I'm not permitted to say. But the royal advisor insists you come at once."
 
     "Vasily."
     "I stepped forward."
 
+    voice audio.dorian_ch2_line77
     dorian "Let's go."
 
     "The messenger nodded, and we began the trek back to Mjoll."
@@ -2162,6 +2344,7 @@ label ch2_castle_briefing:
     messenger "C-C-Cold… Cold…"
 
     show dorian normal_alt_neutral at left_char
+    voice audio.dorian_ch2_line78
     dorian "Are you alright? Are you still cold?"
 
     messenger "A l-little.."
@@ -2178,6 +2361,7 @@ label ch2_castle_briefing:
     hide girl_ald_normal
 
     show boy_ald_normal at right_flip with Dissolve(0.2)
+    voice audio.boy_ald_ch2_line4
     boy_ald "I know… But we don't have a choice."
     hide boy_ald_normal
 
@@ -2185,10 +2369,12 @@ label ch2_castle_briefing:
     messenger "Paladin… Count Vasily is over there. If you'll excuse me, I'll—"
 
     show dorian serious at left_char
+    voice audio.dorian_ch2_line79
     dorian "Wait—"
 
     "I pulled the folded letter from my pocket and handed him a few coins."
 
+    voice audio.dorian_ch2_line80
     dorian "Please take this to Cheng Yuxuan."
 
     "The young man nodded, his face still flushed from the cold. Without another word, he bolted back out into the storm."
@@ -2216,8 +2402,10 @@ label ch2_castle_briefing:
 
     hide niko
     show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
+    voice audio.dorian_ch2_line81
     dorian "What in Tetrad's name happened to you?"
     vasily "You've seen what's happening outside. It's getting colder by the minute."
+    voice audio.dorian_ch2_line82
     dorian "I meant your face, Vasily."
     show dorian serious at left_char
 
@@ -2238,6 +2426,7 @@ label ch2_castle_briefing:
     show dorian serious at left_char
     "I clenched my fists, the weight of his words settling like a stone in my chest."
 
+    voice audio.dorian_ch2_line83
     dorian "And no one knows what's causing it?"
 
     show vasily alt_think at right_char
@@ -2250,6 +2439,7 @@ label ch2_castle_briefing:
     niko "The death god's power lingers, though it is not as strong as it once was. Its source is concentrated in a desolate place west of here. An abandoned mine known as Frostcradle."
 
     show dorian normal_alt_tense at left_char
+    voice audio.dorian_ch2_line84
     dorian "The Tragedy of Tianho? You're saying this storm is connected to that?"
     show dorian serious at left_char
 
@@ -2264,11 +2454,9 @@ label ch2_castle_briefing:
 
     show svante normal_sad at right_char with Dissolve(0.2)
     svante "I... I saw what happened to them. My brothers, my sisters... they went west, into that cursed place. When they didn't return, I volunteered to go after them."
-
     "He paused, his voice trembling as he continued."
 
     svante "They were impaled with ice. That's not all… their bodies were frozen solid. Twisted. The cold... it didn't just kill them. It consumed them."
-
     "He swallowed hard, his violet eyes glistening."
 
     svante "T-They… They were my family…"
@@ -2282,6 +2470,7 @@ label ch2_castle_briefing:
     show dorian serious at left_char
     "I stared at him, my jaw tightening."
 
+    voice audio.dorian_ch2_line85
     dorian "What's the mission?"
 
     "Vasily's gaze darkened, and for a moment, he hesitated."
@@ -2293,6 +2482,7 @@ label ch2_castle_briefing:
     vasily "You are to kill the Prince Elias Drakos."
 
     show dorian normal_alt_confident at left_char
+    voice audio.dorian_ch2_line86
     dorian "Fine. But I want to be paid upfront."
 
     "Vasily didn't hesitate. He smiled and snapped his fingers with crisp authority. Svante reached to his belt, unclipping a leather pouch heavy with coin. It clinked as he approached, the weight unmistakable."
@@ -2306,8 +2496,9 @@ label ch2_castle_briefing:
     show dorian normal_alt_neutral at left_char
     "I took the pouch, feeling the satisfying heft of it before slipping it into my pocket. The room remained quiet, save for the occasional hiss of the fire."
 
+    voice audio.dorian_ch2_line87
     dorian "I have questions."
-    
+
     hide svante
     show vasily alt_think at right_char with Dissolve(0.2)
     vasily "Ask. But make it quick. Time isn't on our side."
@@ -2329,13 +2520,14 @@ label ch2_questions:
     menu:
         "Where's the king and queen?" if not ch2_asked_king_queen:
             $ ch2_asked_king_queen = True
-            
+
             show dorian normal_alt_neutral at left_char
             show vasily alt_think at right_char
-            
+
             "I glanced around the hall, my eyes drawn to the twin thrones at the head of the room. Both were empty, their gilded frames casting long shadows in the dim light."
 
             show dorian normal_alt_annoyed at left_char
+            voice audio.dorian_ch2_line88
             dorian "Where's King Gustav?"
 
             show vasily alt_mad at right_char
@@ -2347,6 +2539,7 @@ label ch2_questions:
             "His voice was tight, as though every word cost him. I noticed the way his hand trembled slightly as he spoke."
 
             show dorian serious at left_char
+            voice audio.dorian_ch2_line89
             dorian "And the queen? What of Queen Ekaterina?"
             vasily "?!"
 
@@ -2354,13 +2547,16 @@ label ch2_questions:
 
             hide vasily
             show svante normal_sad at right_char with Dissolve(0.2)
+            voice audio.svante_ch2_line17
             svante "She's dead, sir."
 
             "The words hung heavy in the air, like a stone dropped into a silent pond."
 
+            voice audio.dorian_ch2_line90
             dorian "What?!"
 
             show svante normal_nervous at right_char
+            voice audio.svante_ch2_line18
             svante "We found her in her chambers... with a knife in her heart. Father saw everything."
 
             "I stared at him, my mind struggling to process the words. Queen Ekaterina, dead? It didn't feel real. The room felt colder. I clenched my fists."
@@ -2374,6 +2570,7 @@ label ch2_questions:
             "I didn't care about them, not really, but the idea of her being gone was unsettling in a way I couldn't quite shake."
 
             show dorian normal_alt_tense at left_char
+            voice audio.dorian_ch2_line91
             dorian "I don't… I don't understand. The queen is dead? When did this happen?"
             hide niko
 
@@ -2386,11 +2583,13 @@ label ch2_questions:
             vasily "We couldn't even do the funeral because of the trade routes."
 
             show dorian serious at left_char
+            voice audio.dorian_ch2_line92
             dorian "Trade routes?"
 
             show vasily neutral at right_char
             vasily "Her final wish was to be buried in Hinami. A water burial. But the frozen routes make it impossible to transport her body there."
 
+            voice audio.dorian_ch2_line93
             dorian "A Hinami burial? I didn't know Queen Ekaterina had Hinami blood."
 
             show vasily alt_normal at right_char
@@ -2399,6 +2598,7 @@ label ch2_questions:
             "Queen Ekaterina has Hinami blood… Who knew?"
 
             show dorian normal_alt_calm at left_char
+            voice audio.dorian_ch2_line94
             dorian "Well. I suppose even queens aren't untouchable."
 
             "Vasily shot me a sharp look, but he didn't argue. Instead, he turned away, his shoulders slumping."
@@ -2418,6 +2618,7 @@ label ch2_questions:
             "Elias. The name wasn't familiar."
 
             show dorian normal_alt_annoyed at left_char
+            voice audio.dorian_ch2_line95
             dorian "Who's this Elias? This is the first I've heard of him."
             "Vasily's shoulders tensed, and he let out a heavy sigh."
 
@@ -2427,6 +2628,7 @@ label ch2_questions:
             "I frowned, confused. In all my four years of working as a mercenary here, I'd never heard of any crown prince."
 
             show dorian normal_alt_tense at left_char
+            voice audio.dorian_ch2_line96
             dorian "A crown prince? Since when? All I know are the aldoriths who have claim to the throne."
             show dorian serious at left_char
 
@@ -2481,6 +2683,7 @@ label ch2_questions:
             show dorian normal_alt_neutral at left_char
             show vasily alt_think at right_char
 
+            voice audio.dorian_ch2_line97
             dorian "I might need supplies if I'm to set out for Frostcradle."
 
             show vasily alt_mad at right_char
@@ -2494,7 +2697,7 @@ label ch2_questions:
 
             show svante normal_nervous at right_char with Dissolve(0.2)
             svante "According to the scouts, even the peasants are feeling the cold, sir. It's getting harder to make trades, and even harder to get shipments in."
-            hide svante 
+            hide svante
 
             show vasily neutral at right_char with Dissolve(0.2)
             vasily "I don't know how much longer we can last with what we have. We've sent requests to the outer regions, but even the merchants are afraid to travel these roads now."
@@ -2570,6 +2773,7 @@ label ch2_questions:
             show dorian normal_alt_confident at left_char
             "I straightened, meeting his gaze with a nod."
 
+            voice audio.dorian_ch2_line98
             dorian "Got it."
 
             jump ch2_questions
@@ -2579,6 +2783,7 @@ label ch2_questions:
 
             "I exhaled sharply, watching my breath curl into the frigid air like smoke."
 
+            voice audio.dorian_ch2_line99
             dorian "That's enough questions."
 
             show vasily alt_normal at right_char
@@ -2603,6 +2808,7 @@ label ch2_end:
     vasily "Take care, Dorian. I wouldn't want you to end up like those aldorith mutts."
 
     show dorian serious at left_char
+    voice audio.dorian_ch2_line100
     dorian "I'll find it."
 
     "Without another word, I turned on my heel, the weight of my mission pressing heavily on my shoulders."
@@ -2610,6 +2816,642 @@ label ch2_end:
 
     jump chapter_2_extension
     # TODO: some audio from ch2 will be at the ch3 file due to some error, deal with it
+
+label chapter_2_extension:
+    scene frostcradle_blizzard with fade
+    
+    # play music ost_frostcradle_approach fadein 2.0    # PLACEHOLDER
+    # play audio amb_frostcradle_wind loop fadein 1.5   # PLACEHOLDER
+
+    show dorian serious at left_char with Dissolve(0.2)
+    "The wind howled like a living thing as I trudged westward. Each step was a battle against the biting cold that seeped through every layer of clothing I wore."
+    "My boots crunched against the frost-bitten ground, the sound muffled by the relentless storm."
+    "If it wasn't for my fire channeling gift, I would have frozen by now."
+    "The snow grew deeper as I climbed higher, the jagged peaks of the Iceclaw Pass looming in the distance."
+
+    # Family ghost-voices — no sprites; they exist only as warmth in Dorian's mind
+    elara "We're almost there, my heart. Let's keep moving."
+    lucas "Let's go, dad! We're almost at the Frost… Frostcray—"
+    emily "It's Frostcradle, Lucas."
+
+    show dorian normal_alt_calm at left_char
+    "I adjusted my pack and pressed on."
+    "It felt like hours. The further I went, the quieter the world became."
+    show dorian serious at left_char
+    "Then, I saw it."
+
+    scene frostcradle_no_blizzard with dissolve       # PLACEHOLDER
+
+    sarah "Look, daddy! The Frostcradle!"
+    lucas "It… doesn't look like a cradle."
+    emily "Maybe it's just a metaphor, Lucas."
+    elara "Dorian… are you ready?"
+
+    "I nodded, taking a deep breath."
+
+    jump ch2_mine
+
+
+# =============================================================================
+# SECTION 6: LABEL CH3_MINE — Entering the Mine / Bodies
+# =============================================================================
+# Dorian enters and finds the frozen corpses of all who tried to reach Elias.
+# The Yuki-onna is first seen and speaks. Battle begins.
+# =============================================================================
+
+label ch2_mine:
+
+    scene bg_frostcradle_cave with fade       # PLACEHOLDER
+
+    show dorian serious at left_char with Dissolve(0.2)
+    "I entered the mine, and it was as silent as a graveyard."
+    "The first body I found wasn't whole."
+    "An aldorith. His hair was frozen to the icy floor, his body contorted unnaturally. Jagged shards of ice jutted through his chest and limbs like stakes."
+    "His eyes were wide open, clouded over with frost, his face twisted into a silent scream."
+
+    show dorian sad at left_char
+    elara "It's cruel, my heart… Who would do such a thing…"
+    show dorian serious at left_char
+    "Further inside, it became worse."
+    "A soldier, frozen mid-run, his arm outstretched toward something — or someone. His other arm was embedded in a wall of ice."
+    "I could see his teeth through his partially frozen, shattered cheek, his mouth frozen wide as though he had been begging for mercy."
+
+    daniel "Dad… Be brave. Like you taught me."
+    show dorian normal_alt_neutral at left_char
+    dorian "I will, Daniel. Thank you."
+    sarah  "Go, dad! Go!"
+
+    show dorian serious at left_char
+    "I swallowed hard, shaking my head. I balled up my fists, the leather gloves worn and familiar."
+    "I pushed forward, every step crunching against frost and ice. I found more bodies."
+    "Mercenaries this time. One hung suspended from the ceiling, impaled by an icicle that had burst through his abdomen."
+
+    emily  "Dad… Last chance. Do you really want to go this far?"
+    dorian "We're here now, Emily. No turning back."
+
+    "The words echoed in the cavern, bouncing off the icy walls. For a moment, even the voices of my family fell silent."
+    "And then I heard her. And saw her."
+    hide dorian
+
+    # play sfx sfx_yuki_scream                          # PLACEHOLDER
+    # scene bg_frostcradle_interior with dissolve
+    show yuki_onna at center_yo, silhouette with Dissolve(0.2)
+    yuki_onna "Leave… now…"
+
+    "I turned toward the voice. She wasn't human."
+
+    "Translucent skin, pale as fresh snow, glowed faintly in the darkness. Frost trailed from her bare feet, spreading like veins over the ground."
+
+    yuki_onna "Like ice, life is very fragile… I told you… Leave…"
+
+    "The cold thickened, pressing against my lungs, numbing my fingers even as I summoned my fire to fight it off. The flames sputtered faintly."
+
+    yuki_onna "Again… Leave… now…"
+
+    show dorian angry at left_char
+    show yuki_onna at right_yo, silhouette_yo_right
+    with Dissolve(0.2)
+    dorian    "Who are you?!"
+
+    "She didn't answer. Instead, she stepped closer, her form gliding across the icy terrain as though she were weightless."
+    "Then I felt it. The death god's energy radiating from her, sharp and suffocating, like a thousand needles pressing into my skin."
+
+    elara     "Dorian, be careful."
+    show dorian serious at left_char
+    dorian    "I will."
+
+    "And the flames around me surged brighter."
+    hide dorian
+    show yuki_onna at right_yo, silhouette_reveal with Dissolve(0.2)
+    yuki_onna "One last chance… Leave now… or die…"
+
+    jump ch2_yuki_boss
+
+
+# =============================================================================
+# SECTION 7: LABEL CH3_YUKI_BOSS — Yuki-onna Boss Fight (D1–D4 QTCs)
+# =============================================================================
+# Four timed choices. yuki_tracker accumulates on wrong answers.
+# D4 wrong answer = instant GAME OVER.
+# D4 correct but yuki_tracker >= 2 = GAME OVER (frost too deep to survive).
+#
+# QTC NOTE: All menus are standard 'menu:' blocks for playtesting.
+# Replace with 'call screen timed_choice([...])' once the QTE UI is ready.
+# =============================================================================
+
+label ch2_yuki_boss:
+
+    # scene bg_frostcradle_boss_arena with dissolve     # PLACEHOLDER
+    # play music ost_yuki_onna_battle fadein 1.0        # PLACEHOLDER
+    yuki_onna "Leave us!"
+    elara "My heart, use your fire!"
+
+    scene cg_dorian_vs_yuki with shock_cut
+    $ renpy.save("quick-1")
+    "She moved again, her form darting across the battlefield like a specter, each step leaving trails of ice and frost."
+    "The spirit raised her hand, summoning a massive wall of ice to block my path."
+
+    # play sound sfx_heartbeat loop                     # PLACEHOLDER
+
+    # =====================================================================
+    # D1 — TIMED QTC: Ice Wall
+    # =====================================================================
+
+    $ _choice_timeout = 5.0
+    menu:
+        "Circle around the ice wall and melt the edges with fire bursts.":
+            $ ch3_d1 = "fire_circle"
+            $ _choice_timeout = 0
+            scene bg_frostcradle_cave with shock_cut
+            stop sound
+
+            # play sound sfx_fire_burst                 # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char
+            show yuki_onna at right_yo
+            with Dissolve(0.2)
+            "I focus my fire, melting a narrow passage through the edge of the wall. The flames hold, and I step through before the frost can overwhelm me."
+
+            elara     "Good, my heart. Be quick, but don't waste your strength."
+            yuki_onna "I told you to leave!"
+
+        "Try to smash through the ice wall with brute force.":
+            $ ch3_d1 = "smash"
+            $ yuki_tracker += 1
+            $ _choice_timeout = 0
+            stop sound
+            scene bg_frostcradle_cave with shock_cut
+            # play sound sfx_ice_wall_crash             # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char 
+            show yuki_onna at right_yo
+            with Dissolve(0.2)
+            "I swing my fist, but the wall's frost shoots up my sword and numbs my arm. The ice cracks, but the spirit's frost engulfs my legs."
+
+            show dorian angry at left_char
+            dorian    "Ahh!!"
+            yuki_onna "You should have left… Now you will die!"
+            emily     "Dad! Quickly! Thaw the ice out!"
+
+    # D1 converge
+    # play sound sfx_heartbeat loop                     # PLACEHOLDER
+    show dorian serious at left_char
+    yuki_onna "What's the matter? Are you cold?"
+
+    elara  "She's bound to this place. Her strength fades when she's far from her ice. Force her to move."
+    daniel "Go to the rocks, dad!"
+
+    "The spirit glided toward me, the frost beneath her feet thickening with every step."
+
+    yuki_onna "Die!!"
+
+    # =====================================================================
+    # D2 — TIMED QTC: Lure to rocks
+    # =====================================================================
+
+    $ _choice_timeout = 5.0
+    menu:
+
+        "Lure her toward the rocky terrain.":
+            $ ch3_d2 = "lure"
+            $ _choice_timeout = 0
+            stop sound
+
+            show dorian dragon_eyes at left_char
+            "I retreat, leading her toward the jagged rocks at the edge of the clearing. Her frost spread slower over the uneven ground, and the ice beneath her faltered, cracks forming in the once-seamless sheet."
+
+            yuki_onna "You… You…"
+            show dorian serious at left_char
+
+            "She breathes on the rocky terrain, ice forming on the surface. Her breath clouds the air as she struggles to push forward."
+
+            show dorian angry at left_char
+            dorian "What the…"
+            lucas  "She's freezing the area, dad. Be on your guard!"
+
+        "Stand your ground and overpower her frost with fire.":
+            $ ch3_d2 = "stand"
+            $ yuki_tracker += 1
+            $ _choice_timeout = 0
+            stop sound
+
+            # play sound sfx_frost_crawl                # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char
+            "I plant my feet and summon flames, pushing them outward in a desperate attempt to hold her frost at bay. But her power surges, the frost intensifying faster than I could burn it back."
+            "The ground turns to slick ice, and I slip, leaving myself open. Her claws slash through my armor, raking across my side."
+
+            show dorian angry at left_char
+            dorian    "Ahh!!"
+            yuki_onna "This will be your end…"
+
+    # D2 converge
+    stop sound
+
+    "The yuki-onna's icy presence grows stronger. With a flick of her wrist, dozens of jagged ice spears materialize around her, glimmering like frozen starlight."
+
+    yuki_onna "You'll die alongside those who are foolish enough to come here!"
+
+    # play sound sfx_ice_spear_launch                   # PLACEHOLDER
+    # play sound sfx_heartbeat loop                     # PLACEHOLDER
+
+    elara "Dorian, don't panic! Try to dodge and look for the gaps. Use your fire wisely!"
+
+    # =====================================================================
+    # D3 — TIMED QTC: Fire wall vs dodge burst
+    # =====================================================================
+
+    $ _choice_timeout = 5.0
+    menu:
+
+        "Raise a wall of fire to block all the spears at once.":
+            $ ch3_d3 = "fire_wall"
+            $ yuki_tracker += 1
+            $ _choice_timeout = 0
+            stop sound
+
+            # play sound sfx_fire_blast                 # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char with Dissolve(0.2)
+            "The ice spears shatter against the flames, but the fragments rain down like shards of glass, slicing into my armor. The frost burns as it touches my skin."
+
+            yuki_onna "Give in to the cold…"
+            show dorian angry at left_char
+            dorian    "Never!"
+
+        "Dodge swiftly and use a burst of fire to deflect the closest spears.":
+            $ ch3_d3 = "dodge_burst"
+            $ _choice_timeout = 0
+            stop sound
+
+            # play sound sfx_fire_burst                 # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char with Dissolve(0.2)
+            "I roll to the side, summoning a controlled burst of fire to melt the nearest shards. The heat pushes back the frost, giving me just enough space to avoid the worst of her attack."
+
+            show dorian serious at left_char 
+            elara "Good, but stay alert! She won't stop with just one attack."
+            emily "Dad, take care, please!"
+
+    # D3 converge
+    stop sound
+
+    "She raised her hands, frost swirling around her as she summoned a massive spike of ice, its jagged surface glowing with an unnatural light."
+
+    yuki_onna "You… will… die!!"
+    show dorian angry at left_char
+
+    elara "She's channeling her energy. Don't hesitate—stop her now!"
+    sarah "Use your fire, dad!"
+    lucas "Do it, dad!"
+
+    yuki_onna "Farewell…"
+
+    # play sound sfx_heartbeat loop                     # PLACEHOLDER
+
+    # =====================================================================
+    # D4 — TIMED QTC: Dodge = instant GAME OVER / Fire blast = check YUKI
+    # =====================================================================
+
+    $ _choice_timeout = 5.0
+    menu:
+
+        "Try to dodge the spear.":
+            $ ch3_d4 = "dodge"
+            $ _choice_timeout = 0
+            stop sound
+
+            # play sound sfx_frost_crawl                # PLACEHOLDER
+
+            show dorian dragon_eyes at left_char with Dissolve(0.2)
+            "I dive to the side, but the spear grazes my shoulder. Frost spreads instantly, freezing my flesh in a searing burst of pain."
+            show dorian angry at left_char
+            dorian "Argh—!"
+
+            "The frost continues to crawl up my arm, encasing me in ice. I struggle to move, but the cold is overwhelming."
+
+            hide dorian
+            # scene cg_dorian_frozen_ch3 with fade      # PLACEHOLDER
+            # stop music fadeout 1.0
+            # stop audio fadeout 1.0
+
+            yuki_onna "Like ice, life is very fragile. You should have known before coming here."
+            yuki_onna "I told you to leave… And you refused…"
+            yuki_onna "Now you will die in frost… Like them…"
+
+            "The frost consumes me entirely, and the last thing I feel is the crushing weight of ice."
+
+            jump game_over                              # ← HARD GATE: instant GAME OVER
+
+        "Channel all your fire energy into a focused blast, aiming directly at the spear.":
+            $ ch3_d4 = "fire_blast"
+            $ _choice_timeout = 0
+            stop sound
+            # play sound sfx_fire_blast                 # PLACEHOLDER
+            show dorian dragon_eyes at left_char 
+            "I plant my feet, channeling every ounce of fire I have into a concentrated beam aimed directly at the spear."
+            "The flames roar to life, colliding with the ice mid-air. The spear melts instantly, the water hissing into steam."
+
+            yuki_onna "No!!"
+
+    # POST-D4 CONVERGENCE — YUKI TRACKER CHECK
+
+    if yuki_tracker >= 2:
+
+        # play sound sfx_frost_crawl                    # PLACEHOLDER
+        # scene cg_dorian_frozen_ch3 with fade          # PLACEHOLDER
+        # stop music fadeout 1.0
+        # stop audio fadeout 1.0
+
+        scene black with fade
+        dorian "Argh—!"
+
+        "The frost continues to crawl up my arm, encasing me in ice. I struggle to move, but the cold is overwhelming."
+
+        show yuki_onna at center_yo
+
+        yuki_onna "Like ice, life is very fragile. You should have known before coming here."
+
+        "The frost consumes me entirely, and the last thing I feel is the crushing weight of ice."
+
+        pause 1.0
+
+        jump game_over                                  # ← YUKI overflow: GAME OVER
+
+    else:
+
+        # play sound sfx_fire_blast                     # PLACEHOLDER
+
+        # scene cg_yuki_onna_shatter with flash         # PLACEHOLDER
+        # pause 1.0
+        # scene bg_frostcradle_interior with dissolve
+
+        # stop music fadeout 2.0
+
+        hide yuki_onna
+        show dorian serious at left_char
+        with Dissolve(0.2)
+        "Her icy form flickers and cracks, her strength waning as the fire consumes her energy."
+
+        elara     "You did it, my heart!"
+        yuki_onna "AHHH!!"
+
+        "The yuki-onna lets out a piercing wail before shattering into a flurry of snowflakes. The frost in the air dissipates, leaving only the warmth of my flames behind."
+        "Her form dissolves into a cascade of glittering snowflakes, drifting through the air. They swirl ahead of me, shimmering faintly in the darkness of the Frostcradle."
+
+        scene bg_frostcradle_cave with Dissolve(0.8)
+        elara "Follow her, Dorian. There's something she wants to show you."        
+
+        "The snowflakes drifted into a tunnel, leading deeper into the mine. My fists tightened as I followed cautiously."
+
+        jump ch2_truth
+
+
+# =============================================================================
+# SECTION 8: LABEL CH3_TRUTH — Elias Found / Ekaterina's Ghost Vision
+# =============================================================================
+# The shack. Elias attacks Dorian with kitchen objects. The amulet is touched.
+# Vision: Queen Ekaterina reveals the full truth — Gustav, Vasily, the sacrifice.
+# Returns to the shack with Elias asleep.
+# =============================================================================
+
+label ch2_truth:
+
+    scene frostcradle_cabin with fade                 # PLACEHOLDER
+    # play music ost_ekaterina_truth fadein 2.0         # PLACEHOLDER
+    # play audio amb_shack_fire loop fadein 1.5         # PLACEHOLDER
+
+    "Eventually, I emerged into a small chamber carved into the rock. At its center was a crude, weathered shack."
+    "The snowflakes glided toward it, their light dimming as they disappeared through the cracks in the wood."
+    show dorian serious at left_char with Dissolve(0.2)
+    "I pushed the door open with one hand, the other ready in case of an ambush."
+    scene frostcradle_cabin_on with Dissolve(0.5)
+    "The inside was warmer than I expected, lit by the flickering glow of a small lantern. Supplies were scattered haphazardly."
+    "And then, something hit me. Hard."
+
+    "A wooden block collided with my shoulder."
+
+    show dorian serious at left_char with Dissolve(0.2)
+    dorian "Argh! Hey!"
+    "A toddler. Probably three years old. Barely the size of Lucas, crouched in the corner."
+    "His face pale, his eyes wide with fear, his tiny hands clutching a wooden spoon."
+
+    show elias first_meet_sad at right_elias with Dissolve(0.2)
+    elias "Go away! Go away!"
+
+    "The toddler let out a frightened cry as the spoon flew through the air, bouncing harmlessly off my chest."
+    "I blinked, utterly dumbfounded, as he grabbed the next available object — a dented tin cup — and launched it."
+
+    show dorian normal_alt_annoyed at left_char
+    dorian "Seriously?"
+
+    "The cup clattered to the floor, and I exhaled sharply, lowering my hands."
+    show dorian serious at left_char
+    dorian "Hey! Calm down!"
+
+    "I took a step forward. He grabbed a small tin plate and flung it."
+
+    show dorian angry at left_char
+    dorian "Enough!"
+
+    "I lunged forward, catching his wrist mid-throw. He screamed."
+
+    show elias first_meet_crying at right_elias
+    elias "Let me go! Let me go!"
+
+    show dorian neutral at left_char
+    dorian "Stop. I'm not going to hurt you."
+
+    elias "Let me go! *crying*"
+
+    "Something stirred a pang of unease in my chest. I looked closer, scanning him for any sign of the death god's energy. Nothing. Not on him, at least."
+    "That's when I noticed the amulet hanging around his neck, faintly glowing with a sinister light. The energy practically oozed from it, but the toddler himself… He wasn't the source."
+
+    show dorian normal_alt_calm at left_char
+    dorian "What's your name, kid?"
+    show dorian normal_alt_neutral at left_char
+
+
+    show elias first_meet_crying at right_elias
+    elias "*sobbing* E-Elias…"
+
+    dorian "You're Elias Drakos?"
+
+    "The toddler nodded weakly, his small frame sagging under the weight of his fear and exhaustion."
+
+    show dorian normal_alt_calm at left_char
+    "This can't be right. This is the killer?"
+    show dorian normal_alt_neutral at left_char
+
+    dorian "Alright, Elias. You're tired. Let's get you some rest."
+
+    show elias first_meet_crying at right_elias
+    elias  "N-No! You'll hurt me!"
+
+    show dorian neutral at left_char
+    dorian "If I wanted to hurt you, I'd have done it already. Now sit."
+
+    "He hesitated before collapsing onto the straw bed, his body too weary to fight anymore."
+
+    dorian "Good. Now sleep."
+
+    hide elias
+    "Elias curled up, his small hands clutching the amulet tightly. Within moments, his breathing evened out."
+    "I sat next to his bed, watching him in silence. My mind swirled with questions."
+
+    "I reached out and touched the amulet."
+
+    # play sound sfx_amulet_surge                       # PLACEHOLDER
+
+    show dorian normal_alt_tense at left_char with Dissolve(0.2)
+    "The instant my fingers grazed its cold surface, a surge of power slammed through me, like a tidal wave of energy crashing against my very soul. My vision blurred, and my knees buckled."
+
+    dorian "What the—?!"
+
+    # -------------------------------------------------------------------------
+    # AMULET VISION — Magnus's desperate call
+    # -------------------------------------------------------------------------
+
+    hide dorian
+    # scene bg_white_void with flash                    # PLACEHOLDER
+    # play sound sfx_thunder_vision                     # PLACEHOLDER
+
+    scene cg_blindinglight with shock_cut
+    "Then came the light. Blinding, searing. It pierced my mind like a dagger, splintering into a kaleidoscope of fractured images."
+    "A man with massive wings, his face obscured, his voice a thunderous whisper that echoed in my skull."
+
+    magnus "Help!"
+    magnus "Come…"
+    magnus "To Tianho…"
+    magnus "NOW!"
+    magnus "AAHHHH!!!"
+
+    scene frostcradle_cabin with shock_cut
+    "I recoiled, clutching my head as an unbearable headache tore through me. The pain was sharp, relentless, as if my skull were being split open."
+    "And then... silence."
+
+    scene plain_white with Dissolve(0.4)
+    "When I opened my eyes, she stood before me. Queen Ekaterina Drakos."
+
+    show queen_ekaterina at right_ghost_flip with Dissolve(0.2)
+    "She stood before me, her figure ethereal and shimmering. Snow swirled around her ghostly figure."
+
+    ekaterina_ghost "Dragon of Gale. It's time you learned the truth."
+
+    show dorian serious at left_char with Dissolve(0.2)
+    dorian          "Queen Ekaterina… what is this? What's happening?"
+
+    "She raised her hand, the air around us growing colder."
+
+    ekaterina_ghost "All of this is because of the amulet Elias is wearing."
+    ekaterina_ghost "Vasily... my Vasily... was his loyal hand, aiding him in his research."
+    
+    show dorian normal_alt_tense at left_char
+    "My stomach turned at the name. Vasily? This didn't make sense."
+    show dorian serious at left_char
+
+    scene bg_mjoll_palace_throne_lightsoff with dissolve        # PLACEHOLDER
+    "The vision shifted, the frost around us shimmering as scenes played out before my eyes. Queen Ekaterina clutching a young todder's hand - Elias, I realized—as they stumbled upon Gustav in his study."
+    "The amulet lay on the table before him, glowing with an eerie, cursed light that seemed to warp the air around it."
+    "Gustav's eyes were wild, frantic, as he muttered to himself about divine weapons hidden beneath Tianho."
+
+    show queen_ekaterina at right_ghost_flip with Dissolve(0.2)
+    ekaterina_ghost "The night before the ceremony, I had Elias with me. Elias wanted to hug his father because it was his birthday — but we stumbled upon Gustav in his study, hunched over the amulet, its cursed light glowing in the dark. Vasily was with him."
+    ekaterina_ghost "I heard him speaking of a divine weapon underneath Tianho and how he would use it to subjugate the land. And then he saw us — he was frantic, shouting, desperate. He saw me and screamed at me to leave."
+
+    "The vision shifted. I saw her clutching Elias's tiny hand, rushing through dimly lit corridors. Vasily caught up to them, his face pale with dread."
+
+    show dorian serious at left_char with Dissolve(0.2)
+    dorian          "You stole the amulet? Why?"
+    ekaterina_ghost "I didn't want Mjoll to suffer the same fate as Tianho. Whatever Gustav is planning, I don't want any part of it."
+    hide dorian 
+    hide queen_ekaterina
+
+    scene mjoll_palace_throne with fade
+    show vasily alt_aggressive at right_char
+    show queen_ekaterina at left_char
+    with Dissolve(0.2)
+
+    vasily          "What have you done, Ekaterina?! The king is furious! He wants both of your heads!"
+
+    dorian          "Vasily?"
+    ekaterina_ghost "Vasily... my secret lover. Elias's true father. Not Gustav. He begged me to flee, but there was no escaping Gustav's wrath. Not for me. Not for my son."
+    ekaterina_ghost "I knew the power of our militia. I knew there was no escape. Gustav's militia would hunt us to the ends of the earth."
+    ekaterina_ghost "I lashed out at him. 'Why bring Elias into this?! He's innocent!' But Vasily had no answers. He promised to plead with the king, but I knew better."
+    
+    scene bg_mjoll_palace_throne_lightsoff
+    show queen_ekaterina at left_char 
+    with Dissolve(0.2)
+
+    ekaterina_ghost "That night, I made my choice. I recalled an old chant from Hinami, one my mother taught me — a chant that could transform a soul into something eternal. Something powerful. But it required death."
+    ekaterina_ghost "I waited until Vasily was with you during the ceremony."
+
+    scene black with fade
+    dorian          "You… killed yourself."
+
+    show queen_ekaterina at center_char with Dissolve(0.2)
+    ekaterina_ghost "Yes, I took my blade and plunged it into my heart, praying the chant would work. My spirit became one with the cold, with the storm. I became what you see now — a guardian of frost."
+    hide queen_ekaterina
+    show yuki_onna at center_yo
+    with Dissolve(0.4)
+    " "
+
+    scene frostcradle_no_blizzard with fade
+    "The vision flickered again. I saw her as she was now, icy and regal, cradling a terrified Elias in her spectral arms."
+
+    yuki_onna "I took him to the abandoned mine, Frostcradle. I thought I could protect him here, away from Gustav, away from the militia."
+    yuki_onna "The amulet amplified my abilities. I had Elias wear it so I can draw from its power."
+    yuki_onna "Those who came near... those who sought to harm him... I killed them. I froze them. Mercenaries, soldiers, Aldoriths — they all fell to protect my son."
+
+    show dorian serious at left_char
+    show yuki_onna at right_yo
+    with Dissolve(0.2)
+    dorian    "So the bodies I saw earlier were—"
+    yuki_onna "Yes. All who sought to harm my child."
+    yuki_onna "My child… Elias."
+
+    scene bg_frostcradle_cave with fade
+    show dorian serious at left_char
+    show yuki_onna at right_yo
+    with Dissolve(0.2)
+    yuki_onna "My power is waning. Soon, I'll be nothing but a memory in the wind. But before I fade, I'll create one last blizzard — one so fierce, no one will ever come near Elias again."
+
+    "The air around us grew colder, her form flickering like a dying flame."
+
+    show dorian angry at left_char
+    dorian    "You'd doom the people of Mjoll to starvation and death just to save one child?!"
+    yuki_onna "I DON'T CARE. You've seen how they wish to kill my child. I heard you were a father once, Dorian. Wouldn't you do the same for your children?"
+    show dorian sad at left_char
+    dorian    "I—"
+    show dorian serious at left_char
+
+    "Her voice broke, and for the first time, I saw tears coming out of her eyes."
+    scene cg_yuki_cry with Dissolve(0.9)
+
+    ekaterina_ghost "*weeping* My Elias… Now that I'm gone… I don't know what will become of him…"
+    ekaterina_ghost "I know I've done terrible things. But please, Dorian... I have nothing left to give. No treasure, no kingdom, no legacy."
+    ekaterina_ghost "Please. I beg you, Dorian. Save him. Protect my son. I couldn't in life, but maybe... maybe you can."
+
+    "She wept in silence for what seemed like hours."
+
+    ekaterina_ghost "Elias… my child… forgive me…"
+
+    "And then she was gone."
+
+    scene frostcradle_cabin_on with shock_cut                 # PLACEHOLDER
+    # stop music fadeout 2.0
+    show dorian serious at left_char with Dissolve(0.2)
+    "The vision faltered. I was back in the room, staring at the sleeping toddler and the glowing amulet around his neck. Ekaterina's words echoed in my ears."
+    "Save him. Protect him."
+    "I looked down at Elias, his tiny chest rising and falling."
+    "I feel… light. My body feels heavy. I fall on the floor."
+
+    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    stop music fadeout 2.0
+    stop audio fadeout 1.5
+
+    pause 2.0
+    jump ch3_elias_questions
 
 
 # =============================================================================

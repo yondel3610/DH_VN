@@ -2229,13 +2229,6 @@ label ch6_end:
         duration=3.0
     )
     pause 3.0
-
-    # 'jump chapter_7' — must exist in chapter_07.rpy
-    # Stub file:
-    #   label chapter_7:
-    #       "Chapter 7 coming soon."
-    #       return
-
     jump chapter_7
 
 

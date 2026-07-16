@@ -965,9 +965,9 @@ image weng ceremonial:
 # TIM - All Sprite Variants
 # =============================================================================
 
-# =============================================================================
+# ===============================
 # TIM — NORMAL OUTFIT
-# =============================================================================
+# ===============================
 image tim angry:
     At("images/Assets/Character Sprites/Tim/Normal/kid boy cloth angry.png", sprite_highlight("tim"))
     fit "contain"

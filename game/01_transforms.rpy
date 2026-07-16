@@ -98,6 +98,12 @@ transform left_char_kids:
     zoom 1.30
     yoffset 40
 
+transform center_char_kids:
+    xalign 0.5
+    yalign 0.8
+    zoom 1.30
+    yoffset 40
+
 
 # used for elias sprites
 transform right_elias:
@@ -328,6 +334,8 @@ transform right_ghost:
 # =========================================
 # HAZY DREAM
 # for dream sequences
+# use case:
+# show magnus alt_shocked at center_char, dream_haze
 # =========================================
 transform dream_haze: 
     alpha 0.0
@@ -435,4 +443,41 @@ transform note_pop:
     ease 0.4 zoom 1.0
 
 
+# =======================================================================================================
+#                                   IMMERSIVE PARTICLES VFX
+# =======================================================================================================
 
+image fireflies = CreateFlutterParticles(
+    "images/ImmersiveParticleVFX/feniks snow dust fireflies rain/firefly1.png",
+    amount=25,
+    particle_size=(8, 8),
+    xspeed=(-15, 15),
+    yspeed=(-10, 5),
+    flutter_width=100,
+    flutter_height=50,
+    flutter_xtime=(8, 12),    # Slow horizontal flutter
+    flutter_ytime=(5, 8),     # Faster vertical flutter
+    lifetime=(4.0, 8.0),      # How long each firefly lives
+    start_anywhere=True,      # Starts fireflies across the screen
+    distribution="gaussian",  # More fireflies in the middle
+    mask_borders=(30, 30)
+)
+
+image snow_falling = CreateFlutterParticles(
+    "images/ImmersiveParticleVFX/feniks snow dust fireflies rain/snow1.webp", 
+    amount=75,          # Number of snowflakes
+    xspeed=(-30, 30),    # Horizontal speed range
+    yspeed=(50, 120),    # Vertical speed range
+    particle_size=(5, 5),# Size of each snowflake
+    fast=True,           # Start with all particles visible
+    xysize=(1920, 1080), # Area for particles (use screen size)
+    mask_borders=(50, 50) # Soft fade at the edges
+)
+
+image snow_blizzard_1 = CreateFlutterParticles(
+    image=Transform("snow1", xsize=7, fit="contain", alpha=0.4), particle_size=7,
+    amount=500, fast=True,
+    xysize=(config.screen_width, 650), mask_borders=(0, 0, 0, 100),
+    xspeed=(-10, 10), yspeed=(60, 100),
+    flutter_width=50, flutter_xtime=(6, 10)
+)

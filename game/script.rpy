@@ -38,8 +38,6 @@ image temers_studio:
     fit "contain"
     zoom 0.90
 
-
-
 image dh_logo:
     "gui/dh_logo.png"
     xalign 0.5
@@ -59,6 +57,7 @@ label start:
     # $ new_slot = "1-" + str(persistent.save_counter)
     # $ persistent.save_list.append({"slot": new_slot, "num": persistent.save_counter})
     # $ renpy.save_persistent()
+    stop music fadeout 1.0
     $ save_name = "Prologue"
     jump prologue
 

@@ -98,652 +98,6 @@
 # His family's ghost-voices accompany him as comfort.
 # =============================================================================
 
-label chapter_2_extension:
-    scene frostcradle_blizzard with fade
-    
-    # play music ost_frostcradle_approach fadein 2.0    # PLACEHOLDER
-    # play audio amb_frostcradle_wind loop fadein 1.5   # PLACEHOLDER
-
-    show dorian serious at left_char with Dissolve(0.2)
-    "The wind howled like a living thing as I trudged westward. Each step was a battle against the biting cold that seeped through every layer of clothing I wore."
-    "My boots crunched against the frost-bitten ground, the sound muffled by the relentless storm."
-    "If it wasn't for my fire channeling gift, I would have frozen by now."
-    "The snow grew deeper as I climbed higher, the jagged peaks of the Iceclaw Pass looming in the distance."
-
-    # Family ghost-voices — no sprites; they exist only as warmth in Dorian's mind
-    elara "We're almost there, my heart. Let's keep moving."
-    lucas "Let's go, dad! We're almost at the Frost… Frostcray—"
-    emily "It's Frostcradle, Lucas."
-
-    show dorian normal_alt_calm at left_char
-    "I adjusted my pack and pressed on."
-    "It felt like hours. The further I went, the quieter the world became."
-    show dorian serious at left_char
-    "Then, I saw it."
-
-    scene frostcradle_no_blizzard with dissolve       # PLACEHOLDER
-
-    sarah "Look, daddy! The Frostcradle!"
-    lucas "It… doesn't look like a cradle."
-    emily "Maybe it's just a metaphor, Lucas."
-    elara "Dorian… are you ready?"
-
-    "I nodded, taking a deep breath."
-
-    jump ch2_mine
-
-
-# =============================================================================
-# SECTION 6: LABEL CH3_MINE — Entering the Mine / Bodies
-# =============================================================================
-# Dorian enters and finds the frozen corpses of all who tried to reach Elias.
-# The Yuki-onna is first seen and speaks. Battle begins.
-# =============================================================================
-
-label ch2_mine:
-
-    scene bg_frostcradle_cave with fade       # PLACEHOLDER
-
-    show dorian serious at left_char with Dissolve(0.2)
-    "I entered the mine, and it was as silent as a graveyard."
-    "The first body I found wasn't whole."
-    "An aldorith. His hair was frozen to the icy floor, his body contorted unnaturally. Jagged shards of ice jutted through his chest and limbs like stakes."
-    "His eyes were wide open, clouded over with frost, his face twisted into a silent scream."
-
-    show dorian sad at left_char
-    elara "It's cruel, my heart… Who would do such a thing…"
-    show dorian serious at left_char
-    "Further inside, it became worse."
-    "A soldier, frozen mid-run, his arm outstretched toward something — or someone. His other arm was embedded in a wall of ice."
-    "I could see his teeth through his partially frozen, shattered cheek, his mouth frozen wide as though he had been begging for mercy."
-
-    daniel "Dad… Be brave. Like you taught me."
-    show dorian normal_alt_neutral at left_char
-    dorian "I will, Daniel. Thank you."
-    sarah  "Go, dad! Go!"
-
-    show dorian serious at left_char
-    "I swallowed hard, shaking my head. I balled up my fists, the leather gloves worn and familiar."
-    "I pushed forward, every step crunching against frost and ice. I found more bodies."
-    "Mercenaries this time. One hung suspended from the ceiling, impaled by an icicle that had burst through his abdomen."
-
-    emily  "Dad… Last chance. Do you really want to go this far?"
-    dorian "We're here now, Emily. No turning back."
-
-    "The words echoed in the cavern, bouncing off the icy walls. For a moment, even the voices of my family fell silent."
-    "And then I heard her. And saw her."
-    hide dorian
-
-    # play sfx sfx_yuki_scream                          # PLACEHOLDER
-    # scene bg_frostcradle_interior with dissolve
-    show yuki_onna at center_yo, silhouette with Dissolve(0.2)
-    yuki_onna "Leave… now…"
-
-    "I turned toward the voice. She wasn't human."
-
-    "Translucent skin, pale as fresh snow, glowed faintly in the darkness. Frost trailed from her bare feet, spreading like veins over the ground."
-
-    yuki_onna "Like ice, life is very fragile… I told you… Leave…"
-
-    "The cold thickened, pressing against my lungs, numbing my fingers even as I summoned my fire to fight it off. The flames sputtered faintly."
-
-    yuki_onna "Again… Leave… now…"
-
-    show dorian angry at left_char
-    show yuki_onna at right_yo, silhouette_yo_right
-    with Dissolve(0.2)
-    dorian    "Who are you?!"
-
-    "She didn't answer. Instead, she stepped closer, her form gliding across the icy terrain as though she were weightless."
-    "Then I felt it. The death god's energy radiating from her, sharp and suffocating, like a thousand needles pressing into my skin."
-
-    elara     "Dorian, be careful."
-    show dorian serious at left_char
-    dorian    "I will."
-
-    "And the flames around me surged brighter."
-    hide dorian
-    show yuki_onna at right_yo, silhouette_reveal with Dissolve(0.2)
-    yuki_onna "One last chance… Leave now… or die…"
-
-    jump ch2_yuki_boss
-
-
-# =============================================================================
-# SECTION 7: LABEL CH3_YUKI_BOSS — Yuki-onna Boss Fight (D1–D4 QTCs)
-# =============================================================================
-# Four timed choices. yuki_tracker accumulates on wrong answers.
-# D4 wrong answer = instant GAME OVER.
-# D4 correct but yuki_tracker >= 2 = GAME OVER (frost too deep to survive).
-#
-# QTC NOTE: All menus are standard 'menu:' blocks for playtesting.
-# Replace with 'call screen timed_choice([...])' once the QTE UI is ready.
-# =============================================================================
-
-label ch2_yuki_boss:
-
-    # scene bg_frostcradle_boss_arena with dissolve     # PLACEHOLDER
-    # play music ost_yuki_onna_battle fadein 1.0        # PLACEHOLDER
-    yuki_onna "Leave us!"
-    elara "My heart, use your fire!"
-
-    scene cg_dorian_vs_yuki with shock_cut
-    $ renpy.save("quick-1")
-    "She moved again, her form darting across the battlefield like a specter, each step leaving trails of ice and frost."
-    "The spirit raised her hand, summoning a massive wall of ice to block my path."
-
-    # play sound sfx_heartbeat loop                     # PLACEHOLDER
-
-    # =====================================================================
-    # D1 — TIMED QTC: Ice Wall
-    # =====================================================================
-
-    $ _choice_timeout = 5.0
-    menu:
-        "Circle around the ice wall and melt the edges with fire bursts.":
-            $ ch3_d1 = "fire_circle"
-            $ _choice_timeout = 0
-            scene bg_frostcradle_cave with shock_cut
-            stop sound
-
-            # play sound sfx_fire_burst                 # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char
-            show yuki_onna at right_yo
-            with Dissolve(0.2)
-            "I focus my fire, melting a narrow passage through the edge of the wall. The flames hold, and I step through before the frost can overwhelm me."
-
-            elara     "Good, my heart. Be quick, but don't waste your strength."
-            yuki_onna "I told you to leave!"
-
-        "Try to smash through the ice wall with brute force.":
-            $ ch3_d1 = "smash"
-            $ yuki_tracker += 1
-            $ _choice_timeout = 0
-            stop sound
-            scene bg_frostcradle_cave with shock_cut
-            # play sound sfx_ice_wall_crash             # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char 
-            show yuki_onna at right_yo
-            with Dissolve(0.2)
-            "I swing my fist, but the wall's frost shoots up my sword and numbs my arm. The ice cracks, but the spirit's frost engulfs my legs."
-
-            show dorian angry at left_char
-            dorian    "Ahh!!"
-            yuki_onna "You should have left… Now you will die!"
-            emily     "Dad! Quickly! Thaw the ice out!"
-
-    # D1 converge
-    # play sound sfx_heartbeat loop                     # PLACEHOLDER
-    show dorian serious at left_char
-    yuki_onna "What's the matter? Are you cold?"
-
-    elara  "She's bound to this place. Her strength fades when she's far from her ice. Force her to move."
-    daniel "Go to the rocks, dad!"
-
-    "The spirit glided toward me, the frost beneath her feet thickening with every step."
-
-    yuki_onna "Die!!"
-
-    # =====================================================================
-    # D2 — TIMED QTC: Lure to rocks
-    # =====================================================================
-
-    $ _choice_timeout = 5.0
-    menu:
-
-        "Lure her toward the rocky terrain.":
-            $ ch3_d2 = "lure"
-            $ _choice_timeout = 0
-            stop sound
-
-            show dorian dragon_eyes at left_char
-            "I retreat, leading her toward the jagged rocks at the edge of the clearing. Her frost spread slower over the uneven ground, and the ice beneath her faltered, cracks forming in the once-seamless sheet."
-
-            yuki_onna "You… You…"
-            show dorian serious at left_char
-
-            "She breathes on the rocky terrain, ice forming on the surface. Her breath clouds the air as she struggles to push forward."
-
-            show dorian angry at left_char
-            dorian "What the…"
-            lucas  "She's freezing the area, dad. Be on your guard!"
-
-        "Stand your ground and overpower her frost with fire.":
-            $ ch3_d2 = "stand"
-            $ yuki_tracker += 1
-            $ _choice_timeout = 0
-            stop sound
-
-            # play sound sfx_frost_crawl                # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char
-            "I plant my feet and summon flames, pushing them outward in a desperate attempt to hold her frost at bay. But her power surges, the frost intensifying faster than I could burn it back."
-            "The ground turns to slick ice, and I slip, leaving myself open. Her claws slash through my armor, raking across my side."
-
-            show dorian angry at left_char
-            dorian    "Ahh!!"
-            yuki_onna "This will be your end…"
-
-    # D2 converge
-    stop sound
-
-    "The yuki-onna's icy presence grows stronger. With a flick of her wrist, dozens of jagged ice spears materialize around her, glimmering like frozen starlight."
-
-    yuki_onna "You'll die alongside those who are foolish enough to come here!"
-
-    # play sound sfx_ice_spear_launch                   # PLACEHOLDER
-    # play sound sfx_heartbeat loop                     # PLACEHOLDER
-
-    elara "Dorian, don't panic! Try to dodge and look for the gaps. Use your fire wisely!"
-
-    # =====================================================================
-    # D3 — TIMED QTC: Fire wall vs dodge burst
-    # =====================================================================
-
-    $ _choice_timeout = 5.0
-    menu:
-
-        "Raise a wall of fire to block all the spears at once.":
-            $ ch3_d3 = "fire_wall"
-            $ yuki_tracker += 1
-            $ _choice_timeout = 0
-            stop sound
-
-            # play sound sfx_fire_blast                 # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
-            "The ice spears shatter against the flames, but the fragments rain down like shards of glass, slicing into my armor. The frost burns as it touches my skin."
-
-            yuki_onna "Give in to the cold…"
-            show dorian angry at left_char
-            dorian    "Never!"
-
-        "Dodge swiftly and use a burst of fire to deflect the closest spears.":
-            $ ch3_d3 = "dodge_burst"
-            $ _choice_timeout = 0
-            stop sound
-
-            # play sound sfx_fire_burst                 # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
-            "I roll to the side, summoning a controlled burst of fire to melt the nearest shards. The heat pushes back the frost, giving me just enough space to avoid the worst of her attack."
-
-            show dorian serious at left_char 
-            elara "Good, but stay alert! She won't stop with just one attack."
-            emily "Dad, take care, please!"
-
-    # D3 converge
-    stop sound
-
-    "She raised her hands, frost swirling around her as she summoned a massive spike of ice, its jagged surface glowing with an unnatural light."
-
-    yuki_onna "You… will… die!!"
-    show dorian angry at left_char
-
-    elara "She's channeling her energy. Don't hesitate—stop her now!"
-    sarah "Use your fire, dad!"
-    lucas "Do it, dad!"
-
-    yuki_onna "Farewell…"
-
-    # play sound sfx_heartbeat loop                     # PLACEHOLDER
-
-    # =====================================================================
-    # D4 — TIMED QTC: Dodge = instant GAME OVER / Fire blast = check YUKI
-    # =====================================================================
-
-    $ _choice_timeout = 5.0
-    menu:
-
-        "Try to dodge the spear.":
-            $ ch3_d4 = "dodge"
-            $ _choice_timeout = 0
-            stop sound
-
-            # play sound sfx_frost_crawl                # PLACEHOLDER
-
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
-            "I dive to the side, but the spear grazes my shoulder. Frost spreads instantly, freezing my flesh in a searing burst of pain."
-            show dorian angry at left_char
-            dorian "Argh—!"
-
-            "The frost continues to crawl up my arm, encasing me in ice. I struggle to move, but the cold is overwhelming."
-
-            hide dorian
-            # scene cg_dorian_frozen_ch3 with fade      # PLACEHOLDER
-            # stop music fadeout 1.0
-            # stop audio fadeout 1.0
-
-            yuki_onna "Like ice, life is very fragile. You should have known before coming here."
-            yuki_onna "I told you to leave… And you refused…"
-            yuki_onna "Now you will die in frost… Like them…"
-
-            "The frost consumes me entirely, and the last thing I feel is the crushing weight of ice."
-
-            jump game_over                              # ← HARD GATE: instant GAME OVER
-
-        "Channel all your fire energy into a focused blast, aiming directly at the spear.":
-            $ ch3_d4 = "fire_blast"
-            $ _choice_timeout = 0
-            stop sound
-            # play sound sfx_fire_blast                 # PLACEHOLDER
-            show dorian dragon_eyes at left_char 
-            "I plant my feet, channeling every ounce of fire I have into a concentrated beam aimed directly at the spear."
-            "The flames roar to life, colliding with the ice mid-air. The spear melts instantly, the water hissing into steam."
-
-            yuki_onna "No!!"
-
-    # POST-D4 CONVERGENCE — YUKI TRACKER CHECK
-
-    if yuki_tracker >= 2:
-
-        # play sound sfx_frost_crawl                    # PLACEHOLDER
-        # scene cg_dorian_frozen_ch3 with fade          # PLACEHOLDER
-        # stop music fadeout 1.0
-        # stop audio fadeout 1.0
-
-        scene black with fade
-        dorian "Argh—!"
-
-        "The frost continues to crawl up my arm, encasing me in ice. I struggle to move, but the cold is overwhelming."
-
-        show yuki_onna at center_yo
-
-        yuki_onna "Like ice, life is very fragile. You should have known before coming here."
-
-        "The frost consumes me entirely, and the last thing I feel is the crushing weight of ice."
-
-        pause 1.0
-
-        jump game_over                                  # ← YUKI overflow: GAME OVER
-
-    else:
-
-        # play sound sfx_fire_blast                     # PLACEHOLDER
-
-        # scene cg_yuki_onna_shatter with flash         # PLACEHOLDER
-        # pause 1.0
-        # scene bg_frostcradle_interior with dissolve
-
-        # stop music fadeout 2.0
-
-        hide yuki_onna
-        show dorian serious at left_char
-        with Dissolve(0.2)
-        "Her icy form flickers and cracks, her strength waning as the fire consumes her energy."
-
-        elara     "You did it, my heart!"
-        yuki_onna "AHHH!!"
-
-        "The yuki-onna lets out a piercing wail before shattering into a flurry of snowflakes. The frost in the air dissipates, leaving only the warmth of my flames behind."
-        "Her form dissolves into a cascade of glittering snowflakes, drifting through the air. They swirl ahead of me, shimmering faintly in the darkness of the Frostcradle."
-
-        scene bg_frostcradle_cave with Dissolve(0.8)
-        elara "Follow her, Dorian. There's something she wants to show you."        
-
-        "The snowflakes drifted into a tunnel, leading deeper into the mine. My fists tightened as I followed cautiously."
-
-        jump ch2_truth
-
-
-# =============================================================================
-# SECTION 8: LABEL CH3_TRUTH — Elias Found / Ekaterina's Ghost Vision
-# =============================================================================
-# The shack. Elias attacks Dorian with kitchen objects. The amulet is touched.
-# Vision: Queen Ekaterina reveals the full truth — Gustav, Vasily, the sacrifice.
-# Returns to the shack with Elias asleep.
-# =============================================================================
-
-label ch2_truth:
-
-    scene frostcradle_cabin with fade                 # PLACEHOLDER
-    # play music ost_ekaterina_truth fadein 2.0         # PLACEHOLDER
-    # play audio amb_shack_fire loop fadein 1.5         # PLACEHOLDER
-
-    "Eventually, I emerged into a small chamber carved into the rock. At its center was a crude, weathered shack."
-    "The snowflakes glided toward it, their light dimming as they disappeared through the cracks in the wood."
-    show dorian serious at left_char with Dissolve(0.2)
-    "I pushed the door open with one hand, the other ready in case of an ambush."
-    scene frostcradle_cabin_on with Dissolve(0.5)
-    "The inside was warmer than I expected, lit by the flickering glow of a small lantern. Supplies were scattered haphazardly."
-    "And then, something hit me. Hard."
-
-    "A wooden block collided with my shoulder."
-
-    show dorian serious at left_char with Dissolve(0.2)
-    dorian "Argh! Hey!"
-    "A toddler. Probably three years old. Barely the size of Lucas, crouched in the corner."
-    "His face pale, his eyes wide with fear, his tiny hands clutching a wooden spoon."
-
-    show elias first_meet_sad at right_elias with Dissolve(0.2)
-    elias "Go away! Go away!"
-
-    "The toddler let out a frightened cry as the spoon flew through the air, bouncing harmlessly off my chest."
-    "I blinked, utterly dumbfounded, as he grabbed the next available object — a dented tin cup — and launched it."
-
-    show dorian normal_alt_annoyed at left_char
-    dorian "Seriously?"
-
-    "The cup clattered to the floor, and I exhaled sharply, lowering my hands."
-    show dorian serious at left_char
-    dorian "Hey! Calm down!"
-
-    "I took a step forward. He grabbed a small tin plate and flung it."
-
-    show dorian angry at left_char
-    dorian "Enough!"
-
-    "I lunged forward, catching his wrist mid-throw. He screamed."
-
-    show elias first_meet_crying at right_elias
-    elias "Let me go! Let me go!"
-
-    show dorian neutral at left_char
-    dorian "Stop. I'm not going to hurt you."
-
-    elias "Let me go! *crying*"
-
-    "Something stirred a pang of unease in my chest. I looked closer, scanning him for any sign of the death god's energy. Nothing. Not on him, at least."
-    "That's when I noticed the amulet hanging around his neck, faintly glowing with a sinister light. The energy practically oozed from it, but the toddler himself… He wasn't the source."
-
-    show dorian normal_alt_calm at left_char
-    dorian "What's your name, kid?"
-    show dorian normal_alt_neutral at left_char
-
-
-    show elias first_meet_crying at right_elias
-    elias "*sobbing* E-Elias…"
-
-    dorian "You're Elias Drakos?"
-
-    "The toddler nodded weakly, his small frame sagging under the weight of his fear and exhaustion."
-
-    show dorian normal_alt_calm at left_char
-    "This can't be right. This is the killer?"
-    show dorian normal_alt_neutral at left_char
-
-    dorian "Alright, Elias. You're tired. Let's get you some rest."
-
-    show elias first_meet_crying at right_elias
-    elias  "N-No! You'll hurt me!"
-
-    show dorian neutral at left_char
-    dorian "If I wanted to hurt you, I'd have done it already. Now sit."
-
-    "He hesitated before collapsing onto the straw bed, his body too weary to fight anymore."
-
-    dorian "Good. Now sleep."
-
-    hide elias
-    "Elias curled up, his small hands clutching the amulet tightly. Within moments, his breathing evened out."
-    "I sat next to his bed, watching him in silence. My mind swirled with questions."
-
-    "I reached out and touched the amulet."
-
-    # play sound sfx_amulet_surge                       # PLACEHOLDER
-
-    show dorian normal_alt_tense at left_char with Dissolve(0.2)
-    "The instant my fingers grazed its cold surface, a surge of power slammed through me, like a tidal wave of energy crashing against my very soul. My vision blurred, and my knees buckled."
-
-    dorian "What the—?!"
-
-    # -------------------------------------------------------------------------
-    # AMULET VISION — Magnus's desperate call
-    # -------------------------------------------------------------------------
-
-    hide dorian
-    # scene bg_white_void with flash                    # PLACEHOLDER
-    # play sound sfx_thunder_vision                     # PLACEHOLDER
-
-    scene cg_blindinglight with shock_cut
-    "Then came the light. Blinding, searing. It pierced my mind like a dagger, splintering into a kaleidoscope of fractured images."
-    "A man with massive wings, his face obscured, his voice a thunderous whisper that echoed in my skull."
-
-    magnus "Help!"
-    magnus "Come…"
-    magnus "To Tianho…"
-    magnus "NOW!"
-    magnus "AAHHHH!!!"
-
-    scene frostcradle_cabin with shock_cut
-    "I recoiled, clutching my head as an unbearable headache tore through me. The pain was sharp, relentless, as if my skull were being split open."
-    "And then... silence."
-
-    scene plain_white with Dissolve(0.4)
-    "When I opened my eyes, she stood before me. Queen Ekaterina Drakos."
-
-    show queen_ekaterina at right_ghost_flip with Dissolve(0.2)
-    "She stood before me, her figure ethereal and shimmering. Snow swirled around her ghostly figure."
-
-    ekaterina_ghost "Dragon of Gale. It's time you learned the truth."
-
-    show dorian serious at left_char with Dissolve(0.2)
-    dorian          "Queen Ekaterina… what is this? What's happening?"
-
-    "She raised her hand, the air around us growing colder."
-
-    ekaterina_ghost "All of this is because of the amulet Elias is wearing."
-    ekaterina_ghost "Vasily... my Vasily... was his loyal hand, aiding him in his research."
-    
-    show dorian normal_alt_tense at left_char
-    "My stomach turned at the name. Vasily? This didn't make sense."
-    show dorian serious at left_char
-
-    scene bg_mjoll_palace_throne_lightsoff with dissolve        # PLACEHOLDER
-    "The vision shifted, the frost around us shimmering as scenes played out before my eyes. Queen Ekaterina clutching a young todder's hand - Elias, I realized—as they stumbled upon Gustav in his study."
-    "The amulet lay on the table before him, glowing with an eerie, cursed light that seemed to warp the air around it."
-    "Gustav's eyes were wild, frantic, as he muttered to himself about divine weapons hidden beneath Tianho."
-
-    show queen_ekaterina at right_ghost_flip with Dissolve(0.2)
-    ekaterina_ghost "The night before the ceremony, I had Elias with me. Elias wanted to hug his father because it was his birthday — but we stumbled upon Gustav in his study, hunched over the amulet, its cursed light glowing in the dark. Vasily was with him."
-    ekaterina_ghost "I heard him speaking of a divine weapon underneath Tianho and how he would use it to subjugate the land. And then he saw us — he was frantic, shouting, desperate. He saw me and screamed at me to leave."
-
-    "The vision shifted. I saw her clutching Elias's tiny hand, rushing through dimly lit corridors. Vasily caught up to them, his face pale with dread."
-
-    show dorian serious at left_char with Dissolve(0.2)
-    dorian          "You stole the amulet? Why?"
-    ekaterina_ghost "I didn't want Mjoll to suffer the same fate as Tianho. Whatever Gustav is planning, I don't want any part of it."
-    hide dorian 
-    hide queen_ekaterina
-
-    scene mjoll_palace_throne with fade
-    show vasily alt_aggressive at right_char
-    show queen_ekaterina at left_char
-    with Dissolve(0.2)
-
-    vasily          "What have you done, Ekaterina?! The king is furious! He wants both of your heads!"
-
-    dorian          "Vasily?"
-    ekaterina_ghost "Vasily... my secret lover. Elias's true father. Not Gustav. He begged me to flee, but there was no escaping Gustav's wrath. Not for me. Not for my son."
-    ekaterina_ghost "I knew the power of our militia. I knew there was no escape. Gustav's militia would hunt us to the ends of the earth."
-    ekaterina_ghost "I lashed out at him. 'Why bring Elias into this?! He's innocent!' But Vasily had no answers. He promised to plead with the king, but I knew better."
-    
-    scene bg_mjoll_palace_throne_lightsoff
-    show queen_ekaterina at left_char 
-    with Dissolve(0.2)
-
-    ekaterina_ghost "That night, I made my choice. I recalled an old chant from Hinami, one my mother taught me — a chant that could transform a soul into something eternal. Something powerful. But it required death."
-    ekaterina_ghost "I waited until Vasily was with you during the ceremony."
-
-    scene black with fade
-    dorian          "You… killed yourself."
-
-    show queen_ekaterina at center_char with Dissolve(0.2)
-    ekaterina_ghost "Yes, I took my blade and plunged it into my heart, praying the chant would work. My spirit became one with the cold, with the storm. I became what you see now — a guardian of frost."
-    hide queen_ekaterina
-    show yuki_onna at center_yo
-    with Dissolve(0.4)
-    " "
-
-    scene frostcradle_no_blizzard with fade
-    "The vision flickered again. I saw her as she was now, icy and regal, cradling a terrified Elias in her spectral arms."
-
-    yuki_onna "I took him to the abandoned mine, Frostcradle. I thought I could protect him here, away from Gustav, away from the militia."
-    yuki_onna "The amulet amplified my abilities. I had Elias wear it so I can draw from its power."
-    yuki_onna "Those who came near... those who sought to harm him... I killed them. I froze them. Mercenaries, soldiers, Aldoriths — they all fell to protect my son."
-
-    show dorian serious at left_char
-    show yuki_onna at right_yo
-    with Dissolve(0.2)
-    dorian    "So the bodies I saw earlier were—"
-    yuki_onna "Yes. All who sought to harm my child."
-    yuki_onna "My child… Elias."
-
-    scene bg_frostcradle_cave with fade
-    show dorian serious at left_char
-    show yuki_onna at right_yo
-    with Dissolve(0.2)
-    yuki_onna "My power is waning. Soon, I'll be nothing but a memory in the wind. But before I fade, I'll create one last blizzard — one so fierce, no one will ever come near Elias again."
-
-    "The air around us grew colder, her form flickering like a dying flame."
-
-    show dorian angry at left_char
-    dorian    "You'd doom the people of Mjoll to starvation and death just to save one child?!"
-    yuki_onna "I DON'T CARE. You've seen how they wish to kill my child. I heard you were a father once, Dorian. Wouldn't you do the same for your children?"
-    show dorian sad at left_char
-    dorian    "I—"
-    show dorian serious at left_char
-
-    "Her voice broke, and for the first time, I saw tears coming out of her eyes."
-    scene cg_yuki_cry with Dissolve(0.9)
-
-    ekaterina_ghost "*weeping* My Elias… Now that I'm gone… I don't know what will become of him…"
-    ekaterina_ghost "I know I've done terrible things. But please, Dorian... I have nothing left to give. No treasure, no kingdom, no legacy."
-    ekaterina_ghost "Please. I beg you, Dorian. Save him. Protect my son. I couldn't in life, but maybe... maybe you can."
-
-    "She wept in silence for what seemed like hours."
-
-    ekaterina_ghost "Elias… my child… forgive me…"
-
-    "And then she was gone."
-
-    scene frostcradle_cabin_on with shock_cut                 # PLACEHOLDER
-    # stop music fadeout 2.0
-    show dorian serious at left_char with Dissolve(0.2)
-    "The vision faltered. I was back in the room, staring at the sleeping toddler and the glowing amulet around his neck. Ekaterina's words echoed in my ears."
-    "Save him. Protect him."
-    "I looked down at Elias, his tiny chest rising and falling."
-    "I feel… light. My body feels heavy. I fall on the floor."
-
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
-    stop music fadeout 2.0
-    stop audio fadeout 1.5
-
-    pause 2.0
-
-    # Chapter title card — Chapter 3 header
-    show screen chapter_title_screen(
-        "3",
-        "Frostcradle",
-        subtitle="Kingdom of Mjoll",
-        duration=3.0
-    )
-    pause 3.0
-
-    jump ch3_elias_questions
-
 # =============================================================================
 # SECTION 9: LABEL CH3_ELIAS_QUESTIONS — Optional Questions to Elias
 # =============================================================================
@@ -1017,6 +371,7 @@ label ch3_blizzard_trapped:
     "Elias barely acknowledged me, too absorbed in savoring every bite of his stew. I shook my head and stepped toward the entrance of the shack, the sound of the blizzard growing louder with every step."
 
     scene frostcradle_blizzard with dissolve
+    show snow_blizzard_1
 
     "Pushing open the rough wooden door, I made my way to the mining entrance. The icy wind hit me like a wall, cutting through my cloak and stinging my face."
     "Snow swirled violently, making it impossible to see more than a few feet ahead."
@@ -1812,7 +1167,7 @@ label ch3_breakfast:
     "Heart pounding, I scrambled to my feet, careful not to wake Elias, who was still curled up with Tedda by the fire. Moving swiftly, I made my way to the cave entrance."
 
     scene frostcradle_no_blizzard with fade
-
+    show snow_blizzard_1
     "Snow stretched endlessly in every direction. But the storm—after what felt like an eternity—had finally stopped."
     "I could see the surroundings again: jagged rocks, distant trees buried under layers of frost, and the faint outline of mountains in the far distance."
     "Relief washed over me, and I turned, ready to hurry back to the shack and tell Elias the good news. But as I stepped forward, a voice stopped me in my tracks."
@@ -1989,6 +1344,7 @@ label ch3_vasily_arrives:
     "The blade struck her before she could finish. She crumpled to the ground, her blood pooling in the snow."
 
     scene frostcradle_no_blizzard with fade
+    show snow_blizzard_1
     boy_ald_soldier "Done, sir."
     show vasily alt_aggressive at right_char with Dissolve(0.2)
     vasily          "Any more aldoriths willing to share their dissenting opinion?"
@@ -2119,7 +1475,8 @@ label ch3_critical_fork:
 
 label ch3_bad_end:
 
-    scene bg_mjoll_icelands with fade              
+    scene bg_mjoll_icelands with fade
+    show snow_blizzard_1
     # play music ost_bad_end_luxury fadein 3.0          # PLACEHOLDER
 
     "Years passed."
@@ -2167,6 +1524,7 @@ label ch3_bad_end:
     hide vasily
     hide dorian
     scene frostcradle_blizzard with fade                # PLACEHOLDER
+    show snow_blizzard_1
     # stop music fadeout 3.0
 
     show dorian sad at left_char with Dissolve(0.2)
@@ -2274,17 +1632,16 @@ label ch3_fight_back:
     "Vasily's hands glew with light. He scoffed."
     vasily "So be it."
 
-    scene cg_blindinglight with shock_cut
+    scene vasily_attack with shock_cut
     "Vasily raised his hand, an orb of light forming in his palm. He hurled it toward Elias with a flick of his wrist, the sphere roaring through the cave like a comet."
+    "I slammed my hands into the ground, the earth trembling beneath my feet as an earthen wall erupted from the cave floor." with hpunch
+    "The light ball struck it with a deafening explosion, the impact sending shards of rock flying in every direction."
     scene frostcradle_no_blizzard with Dissolve(0.4)
-
+    show snow_blizzard_1
+    "Before I could catch my breath, pain tore through my leg as an arrow sank deep into my thigh."
     show dorian dragon_eyes at left_char
     show vasily alt_savage at right_char
     with Dissolve(0.2)
-    "I slammed my hands into the ground, the earth trembling beneath my feet as an earthen wall erupted from the cave floor."
-    "The light ball struck it with a deafening explosion, the impact sending shards of rock flying in every direction."
-    "Before I could catch my breath, pain tore through my leg as an arrow sank deep into my thigh."
-    show dorian angry at left_char with Dissolve(0.1)
     dorian "ARGH!!!"
     "I stumbled, my balance faltering, blood pouring from the wound. Gritting my teeth, I tore the arrow free, the pain white-hot and blinding."
     "But before I could recover, another arrow whistled through the air."
@@ -2298,6 +1655,7 @@ label ch3_fight_back:
     "He crumpled to the ground, his small body going limp, blood pooling beneath him."
 
     scene frostcradle_no_blizzard with Dissolve(0.3)
+    show snow_blizzard_1
     show boy_ald_normal at left_char
     show girl_ald_normal at right_char
     with Dissolve(0.2)
@@ -2403,6 +1761,7 @@ label ch3_fight_back:
 
     # Back to Dorian's massacre aftermath
     scene frostcradle_no_blizzard with Dissolve(0.6)
+    show snow_blizzard_1
     "One by one, they fell, their bodies consumed by the flames or crushed beneath the earth's fury. The snow outside melted, turning to steam that hissed and billowed around the cave."
     "Then… the violet haired aldorith was the only one left."
 

@@ -2381,7 +2381,7 @@ label ch4_prosperity_dragon:
 
     "And then, a memory."
 
-    scene cg_elara_children_death with fade
+    scene cg_elara_children_death at flashback_filter_enter
     "The yaoguai king's hand, stained with blood, holding Elara's severed head high like a trophy. The screams of my children echoed in my ears. The emptiness in their eyes as they lay lifeless before me."
 
     yk "The Dragonkin... I've been searching for you. At last, I've found you."

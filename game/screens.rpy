@@ -421,6 +421,9 @@ screen main_menu():
     # on "show" action Function(cycle_main_menu_bg)
     # on "show" action With(fade)
 
+    # on "show" action Play("music", audio.main_menu_music, fadein=2.0, loop=True)
+    # on "hide" action Stop("music", fadeout=2.0)
+
     default bg_index = 0
     default bgs = ["gui/main_menu_1.png", "gui/main_menu_2.png", "gui/main_menu_3.png"]
 
@@ -952,6 +955,9 @@ init python:
 
 # Apply saved volume on game start
 label after_load:
+    stop music fadeout 1.0
+    return
+
     if persistent.main_volume is not None:
         $ apply_main_volume(persistent.main_volume)
     return
