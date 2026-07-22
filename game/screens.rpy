@@ -459,7 +459,7 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
-    background "gui/overlay/main_menu.png"
+    background "gui/overlay/main_menu3.png"
 
 style main_menu_vbox:
     xalign 1.0

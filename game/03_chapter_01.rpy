@@ -67,9 +67,13 @@ label chapter_1:
     show dorian sad at left_char
     "I turn to face her, sighing as I pocket my binoculars. She's leaning against the doorframe, arms crossed, a wry smile playing on her lips."
 
+    
     voice audio.elara_ch1_line4
-    elara "You've been standing there long enough to memorize every single detail of the city. Meanwhile, the children are pestering me about seeing the nighttime lantern markets."
+    elara "You've been standing there long enough to memorize every single detail of the city."
     voice audio.elara_ch1_line5
+    elara "Meanwhile, the children are pestering me about seeing the nighttime lantern markets."
+
+    voice audio.elara_ch1_line6
     elara "I would very much like my HUSBAND to take me there as soon as possible before he vanishes to work tomorrow."
 
     "I sigh, turning back to the view."
@@ -80,7 +84,7 @@ label chapter_1:
 
     "She sighs."
 
-    voice audio.elara_ch1_line6
+    voice audio.elara_ch1_line7
     elara "I know, Dorian. I know how important it is. The entire world will be watching as Kyeongjang's emperor makes his first public appearance in centuries."
 
     show dorian serious at left_char
@@ -93,24 +97,26 @@ label chapter_1:
 
     "Elara steps closer, her soft smile returning. She reaches up and brushes her fingertips against my cheek."
 
-    voice audio.elara_ch1_line7
-    elara "And you, sir Dorian. You're part of that perfection, aren't you? The Dragon of Gale, second only to the High Paladin himself. You'll make sure it all goes smoothly, like you always do."
+    voice audio.elara_ch1_line8
+    elara "And you, sir Dorian. You're part of that perfection, aren't you?"
+    voice audio.elara_ch1_line9
+    elara "The Dragon of Gale, second only to the High Paladin himself. You'll make sure it all goes smoothly, like you always do."
 
     show dorian neutral at left_char
     "I manage a faint smile, but the tension in my chest doesn't ease. She notices, of course. She always does."
 
-    voice audio.elara_ch1_line8
+    voice audio.elara_ch1_line10
     elara "But, my heart. That's tomorrow. Tomorrow is for the world, the king and the empress and the emperor and their grand, history-altering plans. But tonight?"
 
     "She steps even closer, giving my cheek a kiss."
 
-    voice audio.elara_ch1_line9
+    voice audio.elara_ch1_line11
     elara "Tonight, you're not the Dragon of Gale. You're not a paladin. You're my husband. And the father of four wonderful, slightly rambunctious children who are dying to explore this incredible city."
 
     show dorian sad at left_char
     voice audio.dorian_ch1_line5
     dorian "But, my heart…"
-    voice audio.elara_ch1_line10
+    voice audio.elara_ch1_line12
     elara "No excuses, my heart. You've been working tirelessly ever since we left Gale. Tonight is for us. For me. For the kids who adore their father. For a family that rarely gets days like this together."
 
     show dorian neutral at left_char
@@ -120,8 +126,7 @@ label chapter_1:
     dorian "Alright, my heart. You win."
 
     "She returns my kiss, but only briefly as she quickly pulls away. She grabs my hand and pulls me toward the door, her laughter filling the balcony."
-
-    voice audio.elara_ch1_line11
+    voice audio.elara_ch1_line13
     elara "Come on, Dragon of Gale. The lantern markets won't wait, and neither will the kids!"
 
     # -------------------------------------------------------------------------
@@ -131,9 +136,9 @@ label chapter_1:
     # -------------------------------------------------------------------------
     scene bg_tianho_city_night with dissolve
 
-    play music ost_tianho_festival volume 0.8
+    play music ost_tianho_festival volume 0.5
     #play audio amb_festival_crowd loop fadein 1.5  # PLACEHOLDER — crowd ambient loop
-
+    
     "The moment we step out into the street, the kids swarm us, buzzing with excitement."
 
     show lucas at right_char_kids
@@ -151,7 +156,7 @@ label chapter_1:
 
     hide lucas
     show elara at right_char
-    voice audio.elara_ch1_line12
+    voice audio.elara_ch1_line14
     elara "Sarah… Sarah… Honey. *snaps her fingers* Your father is here."
 
     hide elara
@@ -177,7 +182,7 @@ label chapter_1:
 
     hide dorian
     show elara at left_char
-    voice audio.elara_ch1_line13
+    voice audio.elara_ch1_line15
     elara "But stay close to your father and me. Tianho may be beautiful, but—"
 
     hide daniel
@@ -195,17 +200,18 @@ label chapter_1:
 
     "Elara sighs and kisses Sarah on her forehead."
 
-    voice audio.elara_ch1_line14
+    voice audio.elara_ch1_line16
     elara "Alright, alright. Let's go see them. But remember, no pretending to be dragons."
 
     hide sarah
+    voice audio.sarah_ch1_line4
     "Yes, mom. (in unison)"
 
     "With that, the children take off ahead of us, their chatter and laughter blending into the sounds of the city."
     "Elara walks beside me and I hold her hand."
 
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line15
+    voice audio.elara_ch1_line17
     elara "So, where should we go first?"
 
     show dorian normal at left_char with Dissolve(0.2)
@@ -215,7 +221,7 @@ label chapter_1:
 
     "Elara nods, her eyes sparkling with the same excitement I see in the children."
 
-    voice audio.elara_ch1_line16
+    voice audio.elara_ch1_line18
     elara "Sounds like a plan. But don't think you're getting off easy, Dragon of Gale. You're carrying the bags."
 
     voice audio.dorian_ch1_line10
@@ -228,7 +234,7 @@ label chapter_1:
 
     "I glance at Elara, who's watching the children with an amused smile as they eagerly debate where to go first. She meets my eyes and tilts her head slightly."
 
-    voice audio.elara_ch1_line17
+    voice audio.elara_ch1_line19
     elara "Well, my heart, you're the Father. What'll it be? The kids can't wait."
     hide elara
     show lucas at right_char_kids with Dissolve(0.2)
@@ -281,6 +287,7 @@ label ch1_city:
 label ch1_city_deng:
 
     scene bg_tianho_deng_blossom with dissolve  # PLACEHOLDER — Deng Blossom Avenue
+    show fireflies
     "We turn toward Deng Blossom Avenue, a decision met with a satisfied hum from Sarah and nods of approval from the others."
     "The moment we step onto the avenue, lanterns — hundreds, perhaps thousands of them — float effortlessly in the air, their glow soft and ethereal."
     "They seem alive, swaying gently as though in sync with the faint breeze that carries the sweet scent of lotus blossoms and jasmine."
@@ -296,7 +303,7 @@ label ch1_city_deng:
     hide lucas
 
     show elara at right_char
-    voice audio.elara_ch1_line18
+    voice audio.elara_ch1_line20
     elara "It's breathtaking."
     show dorian smile at left_char with Dissolve(0.2)
     voice audio.dorian_ch1_line11
@@ -307,9 +314,9 @@ label ch1_city_deng:
 
     hide elara
     show sarah at right_char_kids
-    voice audio.sarah_ch1_line4
-    sarah "Oh gosh! This is so beautiful! The colors… I need to get the colors just right!"
     voice audio.sarah_ch1_line5
+    sarah "Oh gosh! This is so beautiful! The colors… I need to get the colors just right!"
+    voice audio.sarah_ch1_line6
     sarah "But how do I even start? The reds aren't just red—they're ruby, garnet, scarlet—oh, this is impossible!"
 
     show dorian normal_alt_neutral at left_char
@@ -358,7 +365,7 @@ label ch1_city_deng:
     daniel "That's a stupid question, Emily! Dad's the strongest!"
     hide daniel
     show elara at right_char
-    voice audio.elara_ch1_line19
+    voice audio.elara_ch1_line21
     elara "Shh! Daniel, watch your words or you'll be heading back to our room at the inn!"
 
     "All of us watch intently as the last lantern disappears into the robes of the fire channelers."
@@ -372,14 +379,15 @@ label ch1_city_deng:
     hide elara
     hide dorian
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line6
+    voice audio.sarah_ch1_line7
     sarah "I'm done!"
     # hide sarah
     show daniel at left_char_kids with Dissolve(0.2)
     voice audio.daniel_ch1_line6
     daniel "Really? Lemme see!"
-    voice audio.sarah_ch1_line7
+    voice audio.sarah_ch1_line8
     sarah "Later, Daniel! I'll show it once I place some finishing touches! *giggles*"
+    voice audio.daniel_ch1_line7 
     hide daniel
     hide sarah
     show lucas at right_char_kids with Dissolve(0.2)
@@ -400,12 +408,12 @@ label ch1_city_fanrong:
     "Brightly colored dragons — red, gold, and violet — twist and coil through the crowd, their movements fluid yet deliberate, each step in perfect harmony with the beat of the music."
     scene bg_tianho_fanrong_square with dissolve  # PLACEHOLDER — Fanrong Dragon Square
     show lucas at right_char_kids
-    voice audio.lucas_ch1_line6
+    voice lucas_ch1_line6
     lucas "Look at them, Dad! It's a real dragon!"
 
     hide lucas
     show sarah at right_char_kids
-    voice audio.sarah_ch1_line8
+    voice audio.sarah_ch1_line9
     sarah "Mom! Dad! It's the Prosperity Dragon!"
 
     show dorian serious at left_char
@@ -426,7 +434,7 @@ label ch1_city_fanrong:
     voice audio.dorian_ch1_line17
     dorian "Careful, kids. You'll wear yourselves out before we even explore the rest of the city."
     show daniel at right_char_kids
-    voice audio.daniel_ch1_line7
+    voice audio.daniel_ch1_line8
     daniel "I never get tired, Dad."
     hide daniel
     show emily at right_char_kids
@@ -434,6 +442,7 @@ label ch1_city_fanrong:
     hide emily
 
     "As we step closer to the rehearsal, I notice some of the dragon dancers stealing glances in our direction. Whispers ripple through their group, and I catch snippets of their murmurs."
+
 
     performers "It's him… The Dragon of Gale…"
     performers "Is he watching us? Oh no, my steps are all wrong!"
@@ -471,14 +480,14 @@ label ch1_city_fanrong:
     emily "Roaaarr!!! Look, Dad! I can do it too!"
     hide emily
     show daniel at right_char_kids
-    voice audio.daniel_ch1_line8
+
+    voice audio.daniel_ch1_line9
     daniel "I could totally play the drums better than that guy."
     hide daniel
-
     show elara at right_char
     "Elara says gently, placing a hand on my arm."
 
-    voice audio.elara_ch1_line20
+    voice audio.elara_ch1_line22
     elara "Kids, calm down. My heart, maybe we should move on before they start asking to join the rehearsal."
     voice audio.dorian_ch1_line20
     dorian "Alright, let's head somewhere else."
@@ -494,7 +503,7 @@ label ch1_city_fanrong:
     show elara at right_char
     "As we walk away, Elara links her arm through mine."
 
-    voice audio.elara_ch1_line21
+    voice audio.elara_ch1_line23
     elara "That was nice of you, you know. Giving them a little confidence boost."
     show dorian normal at left_char
     voice audio.dorian_ch1_line22
@@ -516,7 +525,7 @@ label ch1_city_xiangli:
     "My family surges ahead, the kids' excitement pulling me along like a tide. Lanterns strung overhead illuminate the bustling food stalls, casting everything in a warm, golden glow."
     scene bg_tianho_xiangli_stalls with dissolve  # PLACEHOLDER — Xiangli food stalls
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line22
+    voice audio.elara_ch1_line24
     elara "Come on, Dorian. Even you can't resist this."
     hide elara
     show lucas at right_char_kids with Dissolve(0.2)
@@ -544,17 +553,17 @@ label ch1_city_xiangli:
     emily "I want some! I want some!"
     hide emily
     show daniel at left_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line9
+    voice audio.daniel_ch1_line10
     daniel "Hey! I'm older than you, Lucas! I should have one before you!"
     hide daniel
     "Sarah closes her sketchbook and quickly grabs a seat."
     show sarah at left_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line9
+    voice audio.sarah_ch1_line10
     sarah "I suppose having one won't hurt me."
     hide sarah
 
     show elara at left_char with Dissolve(0.2)
-    voice audio.elara_ch1_line23
+    voice audio.elara_ch1_line25
     elara "I'll be getting seconds hehe. You know me, my heart."
     hide elara
     show dorian normal_alt_neutral at left_char with Dissolve(0.2)
@@ -582,14 +591,14 @@ label ch1_city_xiangli:
     lucas "Ow! Ow! It's hot! Hot hot hot!"
     hide lucas
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line24
+    voice audio.elara_ch1_line26
     elara "Lucas. It's the fifth time this month you burnt your tongue!"
     hide elara
     show emily at right_char_kids with Dissolve(0.2)
     emily "Haha! Lucas burnt his tongue again!"
     hide emily
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line10
+    voice audio.sarah_ch1_line11
     sarah "Emily, you're one to talk! You kept burning your tongue last year!"
     hide sarah
     # [FOOD2 — Dragon Heart Soup (lóng xīn tāng): deep red spicy broth, dragon scale dumplings]
@@ -601,13 +610,13 @@ label ch1_city_xiangli:
     show daniel at right_char_kids with Dissolve(0.2)
     "Daniel grabs a bowl immediately, his cheeks flushing pink as the heat hits his tongue."
 
-    voice audio.daniel_ch1_line10
+    voice audio.daniel_ch1_line11
     daniel "This is so spicy! Mom, try it!"
 
     "He shoves the bowl toward Elara, who takes a dainty sip."
     hide daniel
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line25
+    voice audio.elara_ch1_line27
     elara "Wow, that has a kick."
 
     # [COMMENT: FOOD3 — Bamboo Crystal Cakes (zhū yè píng gāo): translucent jelly squares with fruit]
@@ -616,7 +625,7 @@ label ch1_city_xiangli:
     hide elara
 
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line11
+    voice audio.sarah_ch1_line12
     sarah "Oh my! It's like eating a jewel!"
     show dorian normal at left_char
     "Just as I'm starting to enjoy myself, a voice breaks through the din of the market."
@@ -635,7 +644,7 @@ label ch1_city_xiangli:
     lucas  "Cool! A soldier! Hello—"
     hide lucas
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line26
+    voice audio.elara_ch1_line28
     elara  "Not now, sweetie. Finish your skewer."
     hide elara
     show male_soldier_1 at right_char with Dissolve(0.2)
@@ -652,6 +661,7 @@ label ch1_city_xiangli:
     "The third soldier, younger and clearly nervous, clears his throat."
     hide male_soldier_2
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch1_line1
     gao "Paladin, we were hoping you might join us for a quick assessment. Your presence would be... reassuring."
 
     "I feel Elara's eyes on me, and when I glance her way, she's arching a single eyebrow."
@@ -671,12 +681,12 @@ label ch1_city_xiangli:
     hide male_soldier_1
 
     show daniel at right_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line11
+    voice audio.daniel_ch1_line12
     daniel "Paladin Dorian, sir!"
     show dorian neutral at left_char
     hide daniel
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line27
+    voice audio.elara_ch1_line29
     elara  "Oh, Daniel. You'll make a fine soldier one day."
     show dorian normal at left_char
     voice audio.dorian_ch1_line30
@@ -699,7 +709,7 @@ label ch1_city_zhong:
     "As we walk further, Daniel suddenly stops, eyes lighting up as he points to a large wooden sign adorned with intricate calligraphy:"
     "'EXHIBIT OF FUTURE INNOVATIONS - INSPIRED BY THE KYEONGJANG EMPIRE!'"
     show daniel at right_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line12
+    voice audio.daniel_ch1_line13
     daniel "The Empire of Kyeongjang?"
 
     show dorian neutral at left_char with Dissolve(0.2)
@@ -711,11 +721,11 @@ label ch1_city_zhong:
 
     voice audio.dorian_ch1_line32
     dorian "They're longing for a chance to showcase their technological advancement to the Emperor."
-    voice audio.daniel_ch1_line13
+    voice audio.daniel_ch1_line14
     daniel "Tetrad above! We have to see it, dad! Think of all the science we can see!"
     hide daniel
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line12
+    voice audio.sarah_ch1_line13
     sarah  "Hey! I thought you hated science!"
     hide sarah
     show lucas at right_char_kids with Dissolve(0.2)
@@ -723,11 +733,11 @@ label ch1_city_zhong:
     lucas  "Yeah! Remember the time you called me a dork for picking up a science book?"
     hide lucas
     show daniel at right_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line14
+    voice audio.daniel_ch1_line15
     daniel "I, um… Well…"
     hide daniel
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line28
+    voice audio.elara_ch1_line30
     elara  "All right, kids. Settle down. Let's just look at the exhibits."
     hide dorian
     hide elara
@@ -777,7 +787,6 @@ label ch1_city_zhong:
     voice audio.roboto_ch1_line2
     roboto "W-w-w-why did the chicken from Tianho c-c-crossed the road?"
     show man_1 at left_char with Dissolve(0.2)
-    voice audio.man1_ch1_line1
     man_1  "Oh I love these types of jokes! Why?"
     voice audio.roboto_ch1_line3
     roboto "*weird robotic noises* I-I-I-I— Error… Error… T-T-T-…"
@@ -787,11 +796,11 @@ label ch1_city_zhong:
     "Daniel couldn't help but snort. He whispers to Sarah."
 
     show daniel at left_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line15
+    voice audio.daniel_ch1_line16
     daniel "Maybe it's speaking in Kyeongjangese?"
     hide daniel
     show sarah at left_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line13
+    voice audio.sarah_ch1_line14
     sarah  "Pfttt… Hahaha!"
     hide sarah
 
@@ -806,7 +815,6 @@ label ch1_city_zhong:
     "He presses another button, and Roboto's screen suddenly flashes a random image of a fish before its voice returns."
     hide yuxuan
     show man_1 at left_char with Dissolve(0.2)
-    voice audio.man1_ch1_line2
     man_1  "A fish? What gives?!"
     voice audio.roboto_ch1_line4
     roboto "T-To get to the o-o-other s-s-s-s-s…. ERROR… ERROR… sideeee…. S-s-s-s-s— *glitches*"
@@ -833,7 +841,7 @@ label ch1_city_zhong:
     show roboto error at right_robot
     hide yuxuan
     show daniel at left_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line16
+    voice audio.daniel_ch1_line17
     daniel "I… I think it's dead."
     hide daniel
     show emily at left_char_kids with Dissolve(0.2)
@@ -841,11 +849,10 @@ label ch1_city_zhong:
     hide emily
     show sarah at left_char_kids with Dissolve(0.2)
     "Sarah, ever the artist, sketches the fallen Roboto in her book with exaggerated arms and legs."
-    voice audio.sarah_ch1_line14
+    voice audio.sarah_ch1_line15
     sarah "Very interesting…"
     hide sarah
     show man_1 at left_char with Dissolve(0.2)
-    voice audio.man1_ch1_line3
     man_1  "Aww brother this guy stinks!"
     hide man_1
     show woman_1 at left_char with Dissolve(0.2)
@@ -869,38 +876,38 @@ label ch1_city_zhong:
     show elara at right_char with Dissolve(0.2)
     "Elara's sharp elbow finds its way to my ribs."
 
-    voice audio.elara_ch1_line29
+    voice audio.elara_ch1_line31
     elara  "Dorian! That's so mean! What if he actually succeeds one day?"
 
     "I glance at her, raising a brow. I point to the detached arms near Lucas' feet."
 
     voice audio.dorian_ch1_line34
     dorian "My heart, do you actually think that this is deserving of the Emperor's presence?"
-    voice audio.elara_ch1_line30
+    voice audio.elara_ch1_line32
     elara  "Well, I—"
     show dorian normal_alt_neutral at left_char
     voice audio.dorian_ch1_line35
     dorian "The Emperor of Kyeongjang would only entertain the most brilliant minds. That's why we made this exhibit."
-    voice audio.elara_ch1_line31
+    voice audio.elara_ch1_line33
     elara  "Hmph. You really shouldn't underestimate people like him, Dorian. Ambition can surprise you."
     voice audio.dorian_ch1_line36
     dorian "You're not wrong, but sometimes ambition needs a little… refinement."
-    voice audio.elara_ch1_line32
+    voice audio.elara_ch1_line34
     elara  "And sometimes, it just needs a little time."
     hide dorian
 
     # hide elara
     show sarah at left_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line15
+    voice audio.sarah_ch1_line16
     sarah  "I kinda feel bad for him."
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line33
+    voice audio.elara_ch1_line35
     elara  "Me too, sweetie."
     hide sarah
     show emily at left_char_kids with Dissolve(0.2)
     emily  "Hey Sarah. Maybe you should draw a better version of Roboto for him. He clearly needs help."
     hide emily
-    voice audio.elara_ch1_line34
+    voice audio.elara_ch1_line36
     elara  "Emily. Be nice."
     show lucas at left_char_kids with Dissolve(0.2)
     voice audio.lucas_ch1_line16
@@ -915,7 +922,7 @@ label ch1_city_zhong:
     show dorian normal_alt_neutral at left_char
     voice audio.dorian_ch1_line38
     dorian "Alright, my heart. We've had our fill. Shall we head back to the inn?"
-    voice audio.elara_ch1_line35
+    voice audio.elara_ch1_line37
     elara  "Of course, my heart."
 
     jump ch1_common_fireworks
@@ -937,7 +944,7 @@ label ch1_common_fireworks:
 
     show elara at right_char with Dissolve(0.2)
     show dorian neutral at left_char with Dissolve(0.2)
-    voice audio.elara_ch1_line36
+    voice audio.elara_ch1_line38
     elara "What is it? Is something wrong?"
 
     "I glance up at the dark sky, and smiled at her."
@@ -953,7 +960,7 @@ label ch1_common_fireworks:
     show daniel at right_char_kids
     with Dissolve(0.2)
     emily "Fireworks? Really?"
-    voice audio.daniel_ch1_line17
+    voice audio.daniel_ch1_line18
     daniel "Now, dad? I wanna see!"
     hide emily
     hide daniel
@@ -976,7 +983,7 @@ label ch1_common_fireworks:
     with Dissolve(0.2)
     voice audio.lucas_ch1_line18
     lucas "Whoa! Did you see that? That one looked like a dragon!"
-    voice audio.daniel_ch1_line18
+    voice audio.daniel_ch1_line19
     daniel "Pft. No it doesn't, Lucas."
     hide daniel
     show emily at right_char_kids with Dissolve(0.2)
@@ -987,7 +994,7 @@ label ch1_common_fireworks:
     show elara at right_char
     show dorian normal at left_char
     with Dissolve(0.2)
-    voice audio.elara_ch1_line37
+    voice audio.elara_ch1_line39
     elara "They really go all out here, don't they?"
     voice audio.dorian_ch1_line40
     dorian "Well, with such a momentous occasion tomorrow, we can't afford to."
@@ -998,12 +1005,12 @@ label ch1_common_fireworks:
 
     hide elara
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line16
+    voice audio.sarah_ch1_line17
     sarah "I think I got it."
 
     "She holds up her page to show a hastily drawn but striking depiction of the fireworks."
 
-    voice audio.sarah_ch1_line17
+    voice audio.sarah_ch1_line18
     sarah "I think I'll call it: The resplendence of fireworks."
     hide sarah
     show emily at right_char_kids with Dissolve(0.2)
@@ -1013,11 +1020,11 @@ label ch1_common_fireworks:
     voice audio.dorian_ch1_line41
     dorian "Haha. Looks good, Sarah."
     show daniel at right_char_kids with Dissolve(0.2)
-    voice audio.daniel_ch1_line19
+    voice audio.daniel_ch1_line20
     daniel "It looks like a bunch of bull—"
     hide daniel
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line38
+    voice audio.elara_ch1_line40
     elara "Daniel, be nice."
 
     "As the crowd starts to disperse, we gather the children and head back toward the inn."
@@ -1025,18 +1032,19 @@ label ch1_common_fireworks:
     hide elara
     hide dorian
     scene bg_dorians_room with fade      # PLACEHOLDER — Dorian's hotel room, evening
+    stop music fadeout 1.0
 
     "By the time we reach the inn, the kids are noticeably calmer. Elara ushers them inside, and one by one, they begin to settle."
     "Lucas and Emily curl up together, still whispering about the dragons they hope to see tomorrow. Daniel sits by the window for a moment, staring out at the now-still city before finally joining his siblings."
     "Sarah places her sketchbook neatly by her side before lying down with a satisfied sigh."
 
     show sarah at right_char_kids with Dissolve(0.2)
-    voice audio.sarah_ch1_line18
+    voice audio.sarah_ch1_line19
     sarah "Good night mom. Good night dad. *yawns* Today… was amazing."
     hide sarah
 
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line39
+    voice audio.elara_ch1_line41
     elara "Good night, babies. See you tomorrow."
 
     show lucas at left_char_kids with Dissolve(0.2)
@@ -1047,11 +1055,11 @@ label ch1_common_fireworks:
     "She smiles and turns to me."
 
     show dorian neutral at left_char with Dissolve(0.2)
-    voice audio.elara_ch1_line40
+    voice audio.elara_ch1_line42
     elara "They'll remember this night forever."
     voice audio.dorian_ch1_line42
     dorian "So will I. Thank you, my heart. I needed this."
-    voice audio.elara_ch1_line41
+    voice audio.elara_ch1_line43
     elara "*yawns* We better get back to bed. Want me to brew ourselves some hot tea before going to bed?"
     voice audio.dorian_ch1_line43
     dorian "Gladly."
@@ -1078,6 +1086,7 @@ label ch1_common_fireworks:
     "Then, I see him."
 
     scene bg_tianho_city_night_sleeping with fade
+    play music audio.ost_dream_dragon
 
     # show prosperity_dragon on balcony — Prosperity Dragon sprite on balcony
     # cg_prosperity_dragon_balcony here — dragon on the balcony overlooking Tianho
@@ -1089,68 +1098,74 @@ label ch1_common_fireworks:
     "I rise quietly, careful not to wake Elara, and step toward the open balcony."
     "His gaze is fixed on the city below. The lantern-lit streets and winding waterways of Tianho stretch out before us like a dream."
 
+    voice audio.dorian_ch1_line44
+    dorian "Beautiful, isn't it?"
     voice audio.prosperity_dragon_ch1_line1
-    prosperity_dragon "Very. Tianho never ceases to amaze me. Beauty, prosperity... it lives in every corner of this place."
+    prosperity_dragon "Very. Tianho never ceases to amaze me."
+    voice audio.prosperity_dragon_ch1_line2
+    prosperity_dragon "Beauty, prosperity... it lives in every corner of this place."
 
     "As he turns to face me fully, his claws click softly against the wooden floor."
 
-    voice audio.prosperity_dragon_ch1_line2
+    voice audio.prosperity_dragon_ch1_line3
     prosperity_dragon "I felt I needed to talk to you."
 
     "His gaze flicked briefly to Elara, then back to me."
 
     show dorian sleepware_serious at left_char with Dissolve(0.2)
+    voice audio.dorian_ch1_line45
     dorian "What is it? Is it about tomorrow?"
 
     "He pauses, and the silence stretches. The hum of energy around him grows faintly louder, like a distant pulse."
 
-    voice audio.prosperity_dragon_ch1_line3
+    voice audio.prosperity_dragon_ch1_line4
     prosperity_dragon "Dorian. You must promise me something."
 
     "I frown, unease curling in my gut"
 
     show dorian sleepware_serious at left_char
-    voice audio.dorian_ch1_line44
+    voice audio.dorian_ch1_line46
     dorian "Promise you what?"
 
     "His energy shifts, intensifying. Small sparks ripple around him, dancing in the air before dissipating."
-
-    voice audio.prosperity_dragon_ch1_line4
-    prosperity_dragon "Promise me that no matter what happens, you will not lose connection with me. You will not lose yourself."
+    voice audio.prosperity_dragon_ch1_line5
+    prosperity_dragon "Promise me that no matter what happens you will not lose connection with me."
+    voice audio.prosperity_dragon_ch1_line6
+    prosperity_dragon "You will not lose yourself."
     show dorian sleepware_serious at left_char
-    voice audio.dorian_ch1_line45
+    voice audio.dorian_ch1_line47
     dorian "What are you talking about? You're not making sense. Is something wrong?"
 
     "His energy grows stronger. Sparks fly around him."
 
-    voice audio.prosperity_dragon_ch1_line5
+    voice audio.prosperity_dragon_ch1_line7
     prosperity_dragon "There are things I cannot say, Dorian. Things even I, with all my power, am forbidden to interfere with."
 
     "The hum grows louder now, his form brighter, casting shadows that flicker like flames."
 
-    voice audio.prosperity_dragon_ch1_line6
+    voice audio.prosperity_dragon_ch1_line8
     prosperity_dragon "But you must trust me. There will come a time when you feel like all is lost. In that moment, you must hold on to who you are—and hold on to me."
 
     show dorian sleepware_sad at left_char
-    voice audio.dorian_ch1_line46
+    voice audio.dorian_ch1_line48
     dorian "You're not making this any easier."
 
     "His massive head lowers until we are eye-to-eye, his breath warm against my face."
 
-    voice audio.prosperity_dragon_ch1_line7
+    voice audio.prosperity_dragon_ch1_line9
     prosperity_dragon "The Weaver's threads of fate bind even me. All I can do is remind you of what matters. Your connection to me, to the fire that burns within you, is your anchor."
-    voice audio.prosperity_dragon_ch1_line8
+    voice audio.prosperity_dragon_ch1_line10
     prosperity_dragon "Do not sever it, Dorian. No matter what."
 
     "He pulls back, his towering form retreating into the shadows."
 
-    voice audio.prosperity_dragon_ch1_line9
+    voice audio.prosperity_dragon_ch1_line11
     prosperity_dragon "Dawn is coming. I must go. But remember, Dorian—promise me."
 
     "His words linger in the air as his body begins to shimmer, his form dissolving into a cascade of molten light. The warmth he leaves behind clings to the air, fading as quickly as it came."
-
+    stop music fadeout 2.5
     show dorian sleepware_serious at left_char
-    voice audio.dorian_ch1_line47
+    voice audio.dorian_ch1_line49
     dorian "What? Wait, I—"
 
     hide dorian
@@ -1180,6 +1195,7 @@ label ch1_castle_morning:
     with Dissolve(0.2)
     voice audio.jiang_ch1_line1
     jiang "Paladin! Paladin Dorian! Wake up, sir!"
+    voice audio.gao_ch1_line2
     gao   "Jiang, you're too loud! You're going to give the Paladin a heart attack before he even gets up!"
     voice audio.jiang_ch1_line2
     jiang "Well, you weren't helping when you spilled hot coffee on the way here, were you, Gao? You're practically useless!"
@@ -1192,6 +1208,7 @@ label ch1_castle_morning:
 
     "The soldiers freeze, their backs stiffening as though turned to stone. Soldier Gao, who just moments ago seemed on the verge of nervous collapse, spins on his heel and salutes so sharply he nearly hits himself in the face."
 
+    voice audio.gao_ch1_line3
     gao "P-P-Paladin Cyrus! Sir! I-I was just—"
     voice audio.cyrus_ch1_line2
     cyrus "Spit it out, boy! I haven't the time to decipher your blubbering!"
@@ -1200,6 +1217,7 @@ label ch1_castle_morning:
 
     "Gao swallows hard, his voice barely above a whisper."
 
+    voice audio.gao_ch1_line4
     gao "I… I'm sorry, sir…"
 
     "I decide it's time to intervene before Cyrus verbally flattens them both."
@@ -1210,7 +1228,7 @@ label ch1_castle_morning:
     show dorian sleepware_neutral at left_char
     show cyrus at right_char
     with Dissolve(0.2)
-    voice audio.dorian_ch1_line48
+    voice audio.dorian_ch1_line50
     dorian "Enough, Cyrus. They were only doing their job — clumsily, I'll admit, but well-intentioned. Let it go."
 
     "Cyrus narrows his eyes at me, clearly annoyed."
@@ -1218,7 +1236,7 @@ label ch1_castle_morning:
     voice audio.cyrus_ch1_line3
     cyrus "Your leniency is why discipline among the ranks is slipping, Dorian. Soldiers like these will never survive the battlefield if they can't even handle a simple morning task."
     show dorian sleepware_serious at left_char
-    voice audio.dorian_ch1_line49
+    voice audio.dorian_ch1_line51
     dorian "Berating them further isn't going to change anything."
     voice audio.cyrus_ch1_line4
     cyrus "Fine. But don't let this happen again, Dorian. The Emperor's procession waits for no one — not even the Dragon of Gale and his soldiers."
@@ -1233,9 +1251,9 @@ label ch1_castle_morning:
     with Dissolve(0.2)
     voice audio.cyrus_ch1_line5
     cyrus "The Emperor of Kyeongjang will be arriving shortly. His appearance has been meticulously planned. Extravagance is expected."
-    voice audio.dorian_ch1_line50
+    voice audio.dorian_ch1_line52
     dorian "We got that covered, Cyrus. Every single guard and soldier have been stationed on all locations of the city."
-    voice audio.dorian_ch1_line51
+    voice audio.dorian_ch1_line53
     dorian "We secured the area from the Qiaxing Square to the Xiangli Centre. Guarded by trained fire, wind and earth channelers from Tianho, Gale and Mjoll."
 
     "Soldier Gao and Soldier Jiang exchange nervous glances behind him, clearly on edge."
@@ -1249,24 +1267,25 @@ label ch1_castle_morning:
     "Most of them clutch documents, some carrying small tokens or gifts."
     hide dorian
     show soldier_gao at left_char with Dissolve(0.2)
+    voice audio.gao_ch1_line5
     gao "What's with the line, sir?"
 
     voice audio.cyrus_ch1_line6
     cyrus "They're here to apply for the position of a sign language interpreter for the Emperor of Kyeongjang's son. The lad's deaf mute, and the Emperor insists on finding the very best for him."
     hide soldier_gao
     show dorian normal_alt_neutral at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line52
+    voice audio.dorian_ch1_line54
     dorian "There's no need to prolong this. My men already found someone qualified — his name is Jiyo. He's more than capable to serve the son for the night."
 
     voice audio.cyrus_ch1_line7
     cyrus "Jiyo? You're suggesting a convict, Dorian. A man with a criminal record to serve the Emperor's son?"
-    voice audio.dorian_ch1_line53
+    voice audio.dorian_ch1_line55
     dorian "He's served his time and turned his life around. He's an exceptional signer, far better than most of these applicants. My men vetted him thoroughly."
 
     voice audio.cyrus_ch1_line8
     cyrus "Clearly, your men need to learn what 'thorough' means. A man's past cannot be ignored so easily, not when it concerns the imperial family."
     show dorian normal_alt_annoyed at left_char
-    voice audio.dorian_ch1_line54
+    voice audio.dorian_ch1_line56
     dorian "Are you questioning my men's judgment or mine, Cyrus?"
 
     "Before Cyrus can respond, a commotion breaks out near the front of the line. A woman falls to her knees, clutching the hem of a guard's armor. Her face is streaked with tears, her voice desperate."
@@ -1297,7 +1316,7 @@ label ch1_castle_morning:
     show dorian normal_alt_calm at left_char
     show cyrus at right_char
     with Dissolve(0.2)
-    voice audio.dorian_ch1_line55
+    voice audio.dorian_ch1_line57
     dorian "Your people are quick to dismiss, Cyrus. Not everyone's past defines them. Sometimes all they need is a second chance."
     show dorian normal_alt_annoyed at left_char
     voice audio.cyrus_ch1_line9
@@ -1310,7 +1329,7 @@ label ch1_castle_morning:
     cyrus  "Prestigious doesn't even begin to cover it. Whoever is chosen will not only serve the royal family of Kyeongjang. It's a chance to rise far above their station."
     hide soldier_jiang
     show dorian normal_alt_neutral at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line56
+    voice audio.dorian_ch1_line58
     dorian "And chances are, if they like their service, they might take the person to live with them in Kyeongjang."
     voice audio.cyrus_ch1_line11
     cyrus  "Imagine living in an empire that lives only in legends. Gah! The dream! One can—"
@@ -1335,16 +1354,20 @@ label ch1_auditions:
     show niko normal_base at left_char
     show cyrus at right_char
     with Dissolve(0.25)
+    voice audio.niko_ch1_line1
     niko "Honored officials, my name is Niko Tsukumo, a doctor from the village of Hamatame. This is my younger brother, Kaito."
+    voice audio.niko_ch1_line2
     niko "He is here to apply for the role of interpreter for the Imperial Son. Kaito is fluent in sign language and possesses exceptional skill."
 
     "Kaito bows deeply, his hands trembling slightly as he unfolds a scroll of qualifications."
 
+    voice audio.kaito_ch1_line1
     kaito "G-good morning. It's an honor to be here. I am prepared to demonstrate my abilities."
 
     "For a brief moment, a hush falls over the courtyard."
 
     show niko normal_smile at left_char
+    voice audio.niko_ch1_line3
     niko "You got this, Kaito. Remember what we practiced."
 
     "Before either man can say more, Cyrus raises a hand, his face hardening like stone."
@@ -1354,15 +1377,14 @@ label ch1_auditions:
     "The two men exchange a glance, confusion flickering across their faces. Niko's expression tightens."
 
     show niko normal_serious at left_char
+    voice audio.niko_ch1_line4
     niko "Paladin, with respect — may I ask why?"
     voice audio.cyrus_ch1_line13
     cyrus "Do you think I am ignorant of who you are, Tsukumo? Or of who your brother is? Do you think your false civility cloaks who you truly are?"
+    voice audio.niko_ch1_line5
     niko "If you know who we are, then you must also know that we have done nothing wrong. My brother seeks only to serve."
     voice audio.cyrus_ch1_line14
-    cyrus "You are prophets of the death god, are you not? The one whose disciples are forbidden to save a dying man — even if he begs for breath."
-
-    voice audio.cyrus_ch1_line15
-    cyrus "You let children bleed out on cold stone if it is 'their time.' You would stand silent as plague takes a village, all in the name of some sacred death. And now you want to 'serve' the palace?"
+    cyrus "You are prophets of the death god, are you not? The one whose disciples are forbidden to save a dying man — even if he begs for breath. You let children bleed out on cold stone if it is 'their time.' You would stand silent as plague takes a village, all in the name of some sacred death. And now you want to 'serve' the palace?"
     "A murmur ripples through the line of applicants, and a few people take a cautious step back."
 
     hide niko
@@ -1380,6 +1402,7 @@ label ch1_auditions:
 
     show niko normal_base at left_char with Dissolve(0.2)
     kaito "B-Brother…"
+    voice audio.niko_ch1_line6
     niko  "Yes. We serve Enoch. But we do not bring death. We offer peace to those whose time has come. We comfort. We do not decide. That is not our place."
 
     "Cyrus' lips curl into a sneer."
@@ -1394,11 +1417,12 @@ label ch1_auditions:
     man_3 "They worship death. That's all you need to know. Get them out of here before misfortune falls on all of us!"
     hide man_3
     show man_1 at left_char with Dissolve(0.2)
-    voice audio.man1_ch1_line4
+    voice man1_ch1_line1
     man_1 "Please! Let them out!"
     hide man_1
 
     show niko normal_serious at left_char with Dissolve(0.2)
+    voice audio.niko_ch1_line7
     niko "We came to serve. Not to interfere, not to harm. My brother only asks for a chance to interpret — not to pass judgment on life or death."
     voice audio.cyrus_ch1_line16
     cyrus "Spare me your platitudes, Tsukumo. Prophets of Enoch have no place in this court. Your kind are lunatics — worshippers of a barbaric, ritualistic god who revels in death and despair."
@@ -1416,6 +1440,7 @@ label ch1_auditions:
     female_guard "You want to help? Then prove you're not a coward hiding behind your god's silence. Face me in a duel to the death!"
     hide female_guard
     show soldier_gao at left_char with Dissolve(0.2)
+    voice audio.gao_ch1_line6
     gao "Th-that won't be necessary, ma'am! We're here to evaluate — not shed blood!"
     hide soldier_gao
 
@@ -1439,7 +1464,7 @@ label ch1_auditions:
             "Before the female guard can step forward, I raise a hand, silencing her with a sharp look."
 
             show dorian normal_alt_annoyed at left_char
-            voice audio.dorian_ch1_line57
+            voice audio.dorian_ch1_line59
             dorian "Enough."
 
             "I step forward, positioning myself between the guards and the brothers."
@@ -1455,18 +1480,19 @@ label ch1_auditions:
             "I turn to him, meeting his glare."
 
             show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
-            voice audio.dorian_ch1_line58
+            voice audio.dorian_ch1_line60
             dorian "Do I? Or is it you who's letting personal prejudice blind you? They came to prove their worth, not to be humiliated. I won't allow any violence to be inflicted upon innocents in my presence."
 
             "Cyrus glares at me, his fists tightening at his sides."
 
-            voice audio.cyrus_ch1_line19
+            voice audio.cyrus_ch1_line18
             cyrus "'Innocents'?! Have you lost your bloody mind, Dorian? You really believe these barbarians are innocent? May I remind you that they serve the death god Enoch? Tsukumo is a chosen of the Death God! He and his brother are part of the prophets!"
             hide cyrus
             show niko normal_serious at right_char with Dissolve(0.2)
+            voice audio.niko_ch1_line8
             niko  "We've harmed no one. Let Lord Enoch himself bear witness to that."
             show dorian serious at left_char
-            voice audio.dorian_ch1_line59
+            voice audio.dorian_ch1_line61
             dorian "Leave them be, Cyrus. I won't ask again."
 
             "Cyrus scoffs and finally steps back, though it's clear he does so grudgingly."
@@ -1480,13 +1506,17 @@ label ch1_auditions:
 
             hide cyrus
             show niko normal_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch1_line9
             niko "We'll leave on our own. We don't need your escort."
             kaito "Yeah! K-Keep your damned position!"
+            voice audio.niko_ch1_line10
             niko "I held out hope that you people would be different. The truth will reveal itself in time. Until then, I wish you peace."
+            voice audio.niko_ch1_line11
             niko "Let's go brother. We're too good for this place."
 
             hide niko
             show man_1 at right_char with Dissolve(0.2)
+            voice man1_ch1_line2    
             man_1 "Get out of here before I crack your skull with this rock!"
             hide man_1
             show soldier_jiang at right_char with Dissolve(0.2)
@@ -1497,6 +1527,7 @@ label ch1_auditions:
             "The brothers ignore him, their dignity intact despite the hostility. Just before they disappear into the crowd, Niko turns back, his gaze locking with mine. His expression softens, and he dips his head slightly."
 
             show niko normal_smile at right_char with Dissolve(0.2)
+            voice audio.niko_ch1_line12
             niko "Thank you, Paladin. I do not know your name but I know that few would risk standing against their peers. You have my respect."
 
             "As the brothers vanish from sight, Cyrus scoffs, his expression sour with contempt."
@@ -1508,7 +1539,7 @@ label ch1_auditions:
             "I turn to Cyrus, my voice low and firm."
 
             show dorian neutral at left_char with Dissolve(0.2)
-            voice audio.dorian_ch1_line60
+            voice audio.dorian_ch1_line62
             dorian "Fair enough. But don't mistake my actions for siding with anyone, Cyrus. I act for justice, not for prejudice."
 
         # -----------------------------------------------------------------------
@@ -1522,6 +1553,7 @@ label ch1_auditions:
             show dorian normal_alt_tense at left_char with Dissolve(0.2)
             hide niko
             show soldier_gao at right_char with Dissolve(0.2)
+            voice audio.gao_ch1_line7
             gao "P-Paladin Cyrus, think of the time being wasted on these, um…"
             hide soldier_gao
             show soldier_jiang at right_char with Dissolve(0.2)
@@ -1529,6 +1561,7 @@ label ch1_auditions:
             jiang "Lunatics. They're lunatics."
             hide soldier_jiang
             show soldier_gao at right_char with Dissolve(0.2)
+            voice audio.gao_ch1_line8
             gao "J-Jiang! Stop it!"
             hide soldier_gao
 
@@ -1546,7 +1579,9 @@ label ch1_auditions:
             hide female_guard
 
             show niko normal_sad at right_char with Dissolve(0.2)
+            voice audio.kaito_ch1_line6
             kaito "You people are awful."
+            voice audio.niko_ch1_line13
             niko  "I expected more from all of you. May Enoch have mercy on your souls. Let's go Kaito."
             hide niko
             show cyrus at right_char with Dissolve(0.2)
@@ -1594,12 +1629,13 @@ label ch1_long_shen:
     jiang "Y-Y-Yes, sir!"
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch1_line9
     gao   "O-O-On it, sir!"
     hide soldier_gao
     show dorian normal_alt_neutral at left_char
     show cyrus at right_char
     with Dissolve(0.25)
-    voice audio.dorian_ch1_line61
+    voice audio.dorian_ch1_line63
     dorian "Cyrus. Calm down, old man. You're scaring the soldiers."
     hide dorian
     hide cyrus
@@ -1624,7 +1660,7 @@ label ch1_long_shen:
     with Dissolve(0.25)
     voice audio.olympia_ch1_line1
     olympia "Paladin Dorian. Paladin Cyrus."
-    voice audio.dorian_ch1_line62
+    voice audio.dorian_ch1_line64
     dorian  "Your Grace."
     hide dorian
     show cyrus at left_char with Dissolve(0.2)
@@ -1651,7 +1687,9 @@ label ch1_long_shen:
     hide cyrus
     hide olympia
     show king_long_shen at center_char with Dissolve(0.2)
+    voice audio.shen_ch1_line1
     long_shen "My loyal subjects, noble guests, and esteemed allies. Tonight, we stand on the precipice of a historic union. Together, our empires shall forge a bond unbroken by time or trials, a testament to the enduring power of unity."
+    voice audio.shen_ch1_line2
     long_shen "Let tonight's gathering be remembered not merely as a meeting of monarchs but as the dawn of an era. An era where our peoples prosper side by side, bound by mutual respect and unwavering friendship. We —"
     hide king_long_shen with Dissolve(0.2)
 
@@ -1661,18 +1699,18 @@ label ch1_long_shen:
     show dorian normal_alt_neutral at left_char
     with Dissolve(0.2)
     feng   "Dorian. How are you holding up? You look like you haven't slept a wink."
-    voice audio.dorian_ch1_line63
+    voice audio.dorian_ch1_line65
     dorian "Managing. You know how it is — no rest for the weary."
     feng   "You're telling me. Yesterday, my wife dragged me all around the city. Said she needed to find 'the perfect gift' for tonight's feast."
-    voice audio.dorian_ch1_line64
+    voice audio.dorian_ch1_line66
     dorian "You tell me. Elara did the same. Something about 'immersing ourselves in Tianho's culture.' My legs still ache from all the walking. But, yeah. I had fun. The kids had fun as well."
     show dorian normal_alt_confident at left_char
     feng   "Kids, huh? You've got no excuse then."
     show dorian normal_alt_neutral at left_char
-    voice audio.dorian_ch1_line65
+    voice audio.dorian_ch1_line67
     dorian "Where did you go? Too bad we didn't bump into each other. I would have loved for you to meet my kids."
     feng   "Zhuo Yin! Man, you should have been there! Her Grace the Empress also got me coupons for the all-you-can-eat! It was fantastic!"
-    voice audio.dorian_ch1_line66
+    voice audio.dorian_ch1_line68
     dorian "Wait… coupons? She didn't give me any. I'm starting to think you're the favorite Paladin."
 
     "Before Feng could reply, Paladin Cyrus storms over, his weathered face flushed with irritation."
@@ -1704,6 +1742,7 @@ label ch1_long_shen:
             hide dorian
             hide feng_suit
             show king_long_shen at center_char with Dissolve(0.25)
+            voice audio.shen_ch1_line3
             long_shen "Together, our nations will stand as a beacon of unity…"
 
             "Cyrus shoots me a sideways glance and gives the faintest of approving nods, as if my silence was a small victory for him. I roll my eyes but hold my tongue."
@@ -1727,7 +1766,7 @@ label ch1_long_shen:
             "I narrow my eyes at Cyrus, my patience with his nagging finally snapping."
 
             show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
-            voice audio.dorian_ch1_line67
+            voice audio.dorian_ch1_line69
             dorian "Shut up, old man. You've been yelling all day — take a break before you keel over."
 
             "Feng snorts beside me, clearly amused, while Cyrus' face flushes an even deeper shade of crimson."
@@ -1735,17 +1774,17 @@ label ch1_long_shen:
             show feng_suit at right_char with Dissolve(0.2)
             feng "Pft— Hahahaha!"
             show dorian normal_alt_neutral at left_char with Dissolve(0.2)
-            voice audio.dorian_ch1_line68
+            voice audio.dorian_ch1_line70
             dorian "You heard me. Save the theatrics for the soldiers, Cyrus. It's not like the King will notice if I miss one line of his speech."
             voice audio.cyrus_ch1_line29
             cyrus "I-well… Tsk…"
             feng "Dorian's right, Cyrus. We're all tired, and honestly, you yelling at us isn't helping your blood pressure. Maybe you should sit down for a minute before you pop a vein."
-            voice audio.dorian_ch1_line69
+            voice audio.dorian_ch1_line71
             dorian "Just loosen up, will you?"
 
             "The look on Cyrus' face is priceless. He opens his mouth to retort but snaps it shut again, storming off with a muttered string of curses. Qi Feng and I exchange a triumphant grin."
 
-            hide cyrus
+            hide cyrus with Dissolve(0.1)
             feng "That was bold. I didn't think you had it in you."
 
 
@@ -1787,16 +1826,18 @@ label ch1_ceremony:
     scene bg_tianho_city_night
     with fade
     "When he speaks, his voice is deep and resonant, carrying effortlessly across the courtyard."
-
+    voice audio.minjoon_ch1_line1
     emperor_minjoon "People of Tianho. My name is Hyon Min-joon, and I am the Emperor of Kyeongjang."
-    emperor_minjoon "Let this meeting be a testament to what can be achieved when wisdom prevails over conflict, when unity triumphs over division."
-    emperor_minjoon "The bond we forge tonight will guide our empires into an era of unparalleled peace and prosperity."
+    voice audio.minjoon_ch1_line2
+    emperor_minjoon "Let this meeting be a testament to what can be achieved when wisdom prevails over conflict, when unity triumphs over division. The bond we forge tonight will guide our empires into an era of unparalleled peace and prosperity."
 
     "The Emperor pauses, his gaze sweeping over the crowd again, then rests briefly on the Empress, who gives him a slight nod of encouragement."
 
+    voice audio.minjoon_ch1_line3
     emperor_minjoon "Together, we will shape a future that honors our past and secures the well-being of generations to come. Let us begin."
 
     "As he finishes, he steps forward to meet Empress Olympia and the King of Tianho. The three rulers exchange formal bows before clasping hands in a gesture of unity."
+    play music audio.ost_tianho_emperor volume 0.6
     "The crowd erupts into applause, the sound reverberating through the courtyard like a thunderous wave."
     # add crowd applause sfx
     "I give the signal, and the courtyard springs to life. The musicians begin their symphony, a vibrant blend of drums, strings, and flutes."
@@ -1816,8 +1857,8 @@ label ch1_ceremony:
     "Fire channelers perform a dazzling routine in the center, conjuring fiery dragons that swirl and dissolve into embers, earning applause from the crowd."
     "I stand at the edge of the gathering, my hand resting on the hilt of my sword, my thoughts far from the revelry."
     "The dragon's cryptic words in my dream earlier still weigh heavily on my mind."
+    stop music fadeout 2.0
 
-    voice audio.prosperity_dragon_ch1_line10
     prosperity_dragon "There will come a time when you feel like all is lost. In that moment, you must hold on to who you are — and hold on to me."
 
     "I scan the room until my gaze lands on Feng, effortlessly charming a group of nobles with his jokes."
@@ -1829,13 +1870,14 @@ label ch1_ceremony:
     woman_1 "Hahaha! Paladin Feng, that's hilarious!"
     hide woman_1
     show man_1 at left_char with Dissolve(0.2)
+    voice man1_ch1_line3
     man_1 "That is so funny! Haha! One more, good sir!"
     hide man_1
 
     "I shake my head, a faint smile tugging at my lips despite myself, and approach Feng."
 
     show dorian serious at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line70
+    voice audio.dorian_ch1_line72
     dorian "Feng… Can I have a word with you?"
     feng "Dorian? Oh sure, man!"
 
@@ -1844,17 +1886,16 @@ label ch1_ceremony:
     show dorian neutral at left_char
     feng  "What's up? You look like you've been chewing on a rock all night."
     show dorian sad at left_char
-    voice audio.dorian_ch1_line71
+    voice audio.dorian_ch1_line73
     dorian "Feng, I need to leave. I need to be with Elara and the kids. Something doesn't feel right, and I can't shake it off."
-
     "Feng turns to me, his usual relaxed grin softening as he studies my face."
 
     feng  "Really? The party's just about to start! They haven't even brought out the roasted pig yet!"
-    voice audio.dorian_ch1_line72
+    voice audio.dorian_ch1_line74
     dorian "I'll pass… I just have this feeling, you know?"
     feng  "You're as tense as a bowstring, Dorian. Alright, I'll cover for you. Enjoy your time with your family. If anyone asks, I'll tell them you're handling some critical duty."
     show dorian normal at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line73
+    voice audio.dorian_ch1_line75
     dorian "Thanks, Feng. You're the best."
     feng  "I know. Now go before I change my mind. And before Cyrus catches you."
     hide dorian
@@ -1885,28 +1926,28 @@ label ch1_elara_chat:
     show elara at right_char
     show dorian neutral at left_char
     with Dissolve(0.2)
-    voice audio.elara_ch1_line42
+    voice audio.elara_ch1_line44
     elara "You're back early, my heart. How was the celebration?"
     show dorian normal at left_char
-    voice audio.dorian_ch1_line74
+    voice audio.dorian_ch1_line76
     dorian "I didn't want to stay. I'd rather be here — with all of you."
     show dorian neutral at left_char
     "She rises and steps toward me, her arms wrapping around me in a gentle embrace. The weight of the day slips away as I hold her close."
     "I glance at the bed where Sarah clutches her sketchpad even in sleep, and Daniel, Lucas, and Emily are nestled together under the blankets."
 
-    voice audio.elara_ch1_line43
+    voice audio.elara_ch1_line45
     elara "Let me pour you some water."
 
     "After a moment, she pulls away and pours me a glass of chilled water from the jug on the table, handing it to me with a knowing smile."
 
-    voice audio.elara_ch1_line44
+    voice audio.elara_ch1_line46
     elara "The kids ran wild through Tianho again today. Sarah's got her eye on this little porcelain doll in the market. She says she wants to name it 'Tedda,' of all things."
-    voice audio.elara_ch1_line45
+    voice audio.elara_ch1_line47
     elara "Lucas, of course, won't stop teasing her about it. Said he'd steal it and make it a pirate instead. They were chasing each other for hours."
 
     "She laughed softly, the sound delicate as windchimes. I took a slow sip from the glass, chuckling through a yawn."
 
-    voice audio.elara_ch1_line46
+    voice audio.elara_ch1_line48
     elara "How's work? Any interesting stories you wanna tell me?"
 
     jump ch1_elara_topic_menu
@@ -1919,25 +1960,25 @@ label ch1_elara_topic_menu:
             $ elara_talked_cyrus = True
 
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line75
+            voice audio.dorian_ch1_line77
             dorian "Cyrus barked at nearly everyone today. Even the flagbearers weren't spared."
-            voice audio.elara_ch1_line47
+            voice audio.elara_ch1_line49
             elara  "Well, what's new? He's an old man who doesn't know the meaning of 'relax.'"
             show dorian smile at left_char
-            voice audio.dorian_ch1_line76
+            voice audio.dorian_ch1_line78
             dorian "Pft… haha! Elara! But… you're not wrong. One of the younger soldiers nearly dropped his spear when Cyrus got in his face. I had to step in before he made the poor kid cry."
-            voice audio.elara_ch1_line48
+            voice audio.elara_ch1_line50
             elara  "You've always had a softer touch with people. Cyrus… well, he's been that way for as long as I've known him."
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line77
+            voice audio.dorian_ch1_line79
             dorian "Feng and I tried to get him to calm down, but you know how he is. He even berated us for talking while the King of Tianho was giving his address."
 
             "Elara reaches for her water and downs it all in one go."
 
-            voice audio.elara_ch1_line49
+            voice audio.elara_ch1_line51
             elara "You and Feng will be the end of that poor man. But you need someone like Cyrus around — someone to keep you in line."
             show dorian smile at left_char
-            voice audio.dorian_ch1_line78
+            voice audio.dorian_ch1_line80
             dorian "Maybe. Or maybe we just like riling him up."
 
             jump ch1_elara_topic_menu
@@ -1947,19 +1988,19 @@ label ch1_elara_topic_menu:
             $ elara_talked_feng = True
 
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line79
-            dorian "So… Feng was in rare form tonight. You'd think he was the Emperor himself with how he was strutting around. He had everyone in stitches at the party."
-            voice audio.elara_ch1_line50
-            elara  "That doesn't surprise me. He loves these kinds of events, doesn't he?"
-            voice audio.dorian_ch1_line80
-            dorian "Oh, absolutely. He told me he's going to take full credit for all the preparations since I skipped out early."
             voice audio.dorian_ch1_line81
-            dorian "I swear, he could convince a stone to laugh if he tried. At one point, he even joked about Adriana granting him a new daughter — right in front of the clerics."
-            voice audio.elara_ch1_line51
-            elara  "The clerics of Adriana? Tetrad above, the nerve of that man! Please tell me he didn't start a scene."
-            voice audio.dorian_ch1_line82
-            dorian "No scene, just some very awkward looks. By the way, he said he brought his family here."
+            dorian "So… Feng was in rare form tonight. You'd think he was the Emperor himself with how he was strutting around. He had everyone in stitches at the party."
             voice audio.elara_ch1_line52
+            elara  "That doesn't surprise me. He loves these kinds of events, doesn't he?"
+            voice audio.dorian_ch1_line82
+            dorian "Oh, absolutely. He told me he's going to take full credit for all the preparations since I skipped out early."
+            voice audio.dorian_ch1_line83
+            dorian "I swear, he could convince a stone to laugh if he tried. At one point, he even joked about Adriana granting him a new daughter — right in front of the clerics."
+            voice audio.elara_ch1_line53
+            elara  "The clerics of Adriana? Tetrad above, the nerve of that man! Please tell me he didn't start a scene."
+            voice audio.dorian_ch1_line84
+            dorian "No scene, just some very awkward looks. By the way, he said he brought his family here."
+            voice audio.elara_ch1_line54
             elara  "Oh, we met them earlier today while out shopping. His youngest is adorable. Reminds me of Lucas at that age."
 
             "She grabs a cookie and offers me one before finishing hers."
@@ -1970,23 +2011,23 @@ label ch1_elara_topic_menu:
             $ elara_talked_olympia = True
 
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line83
+            voice audio.dorian_ch1_line85
             dorian "Olympia gave a speech tonight. You would've been proud of her. She had the whole audience hanging on her every word."
-            voice audio.elara_ch1_line53
+            voice audio.elara_ch1_line55
             elara  "I've always admired her ability to command a room. What did she say?"
-            voice audio.dorian_ch1_line84
+            voice audio.dorian_ch1_line86
             dorian "She spoke about unity and peace between the empires. Made it sound like tonight was the beginning of a new era."
-            voice audio.elara_ch1_line54
+            voice audio.elara_ch1_line56
             elara  "And do you believe it?"
             show dorian neutral at left_char
-            voice audio.dorian_ch1_line85
+            voice audio.dorian_ch1_line87
             dorian "It's my job to believe it, isn't it? But whether or not I do doesn't really matter."
-            voice audio.elara_ch1_line55
+            voice audio.elara_ch1_line57
             elara  "Were there any other rulers present?"
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line86
+            voice audio.dorian_ch1_line88
             dorian "King Long Shen was there to deliver an address."
-            voice audio.dorian_ch1_line87
+            voice audio.dorian_ch1_line89
             dorian "King Gustav from Mjoll and King Tatsuya from Hinami were present at the party. They didn't deliver a speech though."
 
             jump ch1_elara_topic_menu
@@ -1995,32 +2036,32 @@ label ch1_elara_topic_menu:
         "Talk about the Kyeongjang Emperor, Hyon Min-joon.":
 
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line88
+            voice audio.dorian_ch1_line90
             dorian "The Emperor of Kyeongjang made quite an entrance tonight. Teleported right into the courtyard with his entourage."
-            voice audio.elara_ch1_line56
+            voice audio.elara_ch1_line58
             elara  "Teleportation? That's… bold. What was he like?"
-            voice audio.dorian_ch1_line89
+            voice audio.dorian_ch1_line91
             dorian "Weren't you and the kids watching?"
 
             "Elara shakes her head."
 
-            voice audio.elara_ch1_line57
+            voice audio.elara_ch1_line59
             elara  "No. Emily tripped and hit her head earlier, so the kids decided to stay back and help me take care of her. We had a quiet dinner here at the inn instead."
             show dorian serious at left_char
-            voice audio.dorian_ch1_line90
+            voice audio.dorian_ch1_line92
             dorian "Emily's alright, though, right?"
-            voice audio.elara_ch1_line58
+            voice audio.elara_ch1_line60
             elara  "She's fine. A little bump, but nothing a kiss and some cookies couldn't fix."
-            voice audio.elara_ch1_line59
+            voice audio.elara_ch1_line61
             elara  "So, how was this Emperor? Did he live up to all the stories?"
             show dorian normal_alt_neutral at left_char
-            voice audio.dorian_ch1_line91
+            voice audio.dorian_ch1_line93
             dorian "He was… impressive. Even Cyrus was speechless for once."
-            voice audio.elara_ch1_line60
+            voice audio.elara_ch1_line62
             elara  "Now that's an accomplishment. What about his son? I heard there were a lot of applicants to be his translator."
-            voice audio.dorian_ch1_line92
+            voice audio.dorian_ch1_line94
             dorian "The son wasn't there. It was just the Emperor, his wife, and guards."
-            voice audio.elara_ch1_line61
+            voice audio.elara_ch1_line63
             elara  "Really? That's too bad. I hope the interpreter still gets paid, though."
 
             jump ch1_elara_chat_common
@@ -2029,9 +2070,9 @@ label ch1_elara_chat_common:
 
     show dorian neutral at left_char
     show elara at right_char
-    voice audio.elara_ch1_line62
+    voice audio.elara_ch1_line64
     elara "*yawns* I think it's time for bed, my heart."
-    voice audio.dorian_ch1_line93
+    voice audio.dorian_ch1_line95
     dorian "You're right. It's been a day."
 
     "Before heading to the bedroom, I walk over to each of our children and kiss them on the forehead."
@@ -2040,30 +2081,30 @@ label ch1_elara_chat_common:
     hide dorian
     hide elara
     show dorian normal at left_char
-    voice audio.dorian_ch1_line94
+    voice audio.dorian_ch1_line96
     dorian "Good night, kids."
 
     "When I turn back, Elara is leaning against the doorway."
 
     show elara at right_char with Dissolve(0.2)
-    voice audio.elara_ch1_line63
+    voice audio.elara_ch1_line65
     elara "They're already asleep, you know. You might wake them up."
     show dorian sad at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line95
+    voice audio.dorian_ch1_line97
     dorian "Maybe, but I can't shake this feeling. I needed to do that."
 
     # ADDED LATER: Elara's goodbye kiss, "I love you" exchange (PDF p39)
     "Elara walks up to me and gently places her hands on my shoulders. She pulls me down into a kiss, soft and lingering."
 
-    voice audio.elara_ch1_line64
+    voice audio.elara_ch1_line66
     elara "Whatever's weighing on you… let it go for tonight. Just rest. Remember, Dragon of Gale, I've got you."
 
     "We head to bed together."
 
-    voice audio.elara_ch1_line65
+    voice audio.elara_ch1_line67
     elara "I love you."
     show dorian smile at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line96
+    voice audio.dorian_ch1_line98
     dorian "I love you too, my heart."
 
     "As her breathing slows beside me, I close my eyes and drift to sleep."
@@ -2080,9 +2121,10 @@ label ch1_elara_chat_common:
     scene black with fade
 
     "Elara sleeps soundly beside me, her face serene in the faint moonlight filtering through the window. But I can't shake the twisting unease in my chest."
-
-    voice audio.prosperity_dragon_ch1_line11
-    prosperity_dragon "Promise me that no matter what happens, you will not lose connection with me. You will not lose yourself."
+    voice prosperity_dragon_ch1_line5
+    prosperity_dragon "Promise me that no matter what happens, you will not lose connection with me."
+    voice prosperity_dragon_ch1_line6
+    prosperity_dragon"You will not lose yourself."
 
     "I can't help but remember those words."
 
@@ -2110,7 +2152,7 @@ label ch1_elara_chat_common:
     "Instead, I rise quietly, grabbing my sword and cloak. I kiss her on the forehead."
 
     show dorian serious at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line97
+    voice audio.dorian_ch1_line99
     dorian "Stay safe, my heart."
 
     hide dorian
@@ -2139,17 +2181,19 @@ label ch1_battle:
     show soldier_gao at left_char
     show soldier_jiang at right_char
     with Dissolve(0.25)
+    voice audio.gao_ch1_line10
     gao  "Paladin Dorian? You're here!"
     voice audio.jiang_ch1_line10
     jiang "Paladin Cyrus and Paladin Feng are already inside. They went inside an hour ago!"
     hide soldier_gao
     show dorian serious at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line98
+    voice audio.dorian_ch1_line100
     dorian "Did Cyrus or Feng mention anything specific? Anything strange before they went in?"
 
     "Before either of them can answer, a deafening rumble erupts beneath us. The ground quakes violently, and cracks spiderweb across the cobblestones."
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch1_line11
     gao "What the—"
 
     "Before he can finish, the earth beneath Jiang explodes."
@@ -2158,18 +2202,20 @@ label ch1_battle:
     hide soldier_jiang
     hide dorian
     scene bg_tianho_city_on_fire with flash
+    play music ost_battle
 
     "A monstrous yaoguai emerges, its massive, grotesque form dripping with black ichor that hisses and sizzles against the stone. Its six glowing red eyes scan the courtyard, its maw filled with jagged, rotting teeth that emit a foul stench."
 
-    # TODO: add yg monster image and audio
     show yaoguai at center_yg with flash
+    voice audio.yg_scream 
     yg "Raaaaaaawwrrr!!!"
 
     hide yaoguai
     show dorian dragon_eyes at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line99
+    voice audio.dorian_ch1_line101
     dorian "Dragon's Bollocks! A yaoguai?!"
 
+    voice audio.gao_ch1_line12
     "Soldier Gao and Jiang scream, stumbling back as the creature lets out a piercing roar that shakes the very air around us."
 
     hide dorian
@@ -2178,11 +2224,12 @@ label ch1_battle:
     voice audio.jiang_ch1_line11
     jiang "It's a yaoguai! Tetrad above, it's a yaoguai!"
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch1_line13
     gao   "We're going to die! We're all going to—"
 
-    play sound sfx_heartbeat loop
     hide soldier_gao
     hide soldier_jiang
+    with Dissolve(0.1)
 
     # =====================================================================
     # D5 — TIMED QTC: Castle Gate (3 options) — all converge
@@ -2192,7 +2239,6 @@ label ch1_battle:
         "Do nothing.":
             $ _choice_timeout = 0
             $ ch1_gate_qtc = "nothing"
-            stop sound
 
             show dorian serious at left_char with Dissolve(0.2)
             "For a split second, I freeze, my mind racing as the yaoguai's eyes bore into mine."
@@ -2201,11 +2247,13 @@ label ch1_battle:
             "What in Tetrad's name is happening?!"
 
             show soldier_gao at right_char with Dissolve(0.2)
+            voice audio.gao_ch1_line14
             gao "P-Paladin! Watch out!"
 
             "The yaoguai lunges, its claws carving through the air with terrifying speed. At the last second, Jiang dives to the side, pulling Gao and I with him."
             hide soldier_gao
             show yaoguai at right_yg with Dissolve(0.2)
+            voice audio.yg_screech
             yg "Grrraaaaawwwww!!!"
 
             "The creature's attack slams into the ground, sending shards of stone flying everywhere."
@@ -2216,11 +2264,12 @@ label ch1_battle:
             with Dissolve(0.2)
             voice audio.jiang_ch1_line12
             jiang "Paladin Dorian! Are you alright?"
+            voice audio.gao_ch1_line15
             gao   "That was close..."
             hide soldier_jiang
             hide soldier_gao
             show dorian serious at left_char with Dissolve(0.2)
-            voice audio.dorian_ch1_line100
+            voice audio.dorian_ch1_line102
             dorian "Get up! Move!"
 
             "I shove Gao and Jiang toward the nearby wall as the yaoguai snarls, its glowing eyes locking on me now. My hands ignite with fire, the heat surging up my arms."
@@ -2231,10 +2280,9 @@ label ch1_battle:
         "Channel fire into a blazing shield to protect Gao and Jiang.":
             $ _choice_timeout = 0
             $ ch1_gate_qtc = "shield"
-            stop sound
 
-            # play sound sfx_wind_blast           # PLACEHOLDER — fire shield SFX
             show dorian serious at left_char with Dissolve(0.2)
+            play sound sfx_wind
             "The yaoguai's claws slam into the ground, sending shockwaves through the courtyard. Without thinking, I thrust my hands forward, summoning a fiery barrier between us and the creature."
             show dorian dragon_eyes at left_char
             "Flames roar to life, swirling in a protective arc that absorbs the beast's attack with a deafening crack."
@@ -2242,22 +2290,23 @@ label ch1_battle:
 
             show yaoguai at right_yg with Dissolve(0.2)
             voice audio.toatie_roar_ch1_line3
+            voice audio.yg_scream 
             yg "Grrraaawwwrrr!!"
             hide yaoguai
 
             show dorian serious at left_char
-            voice audio.dorian_ch1_line101
+            voice audio.dorian_ch1_line103
             dorian "Are you alright?"
             show soldier_jiang at right_char with Dissolve(0.2)
             voice audio.jiang_ch1_line13
             jiang  "Paladin… Thank you!"
-            voice audio.dorian_ch1_line102
+            voice audio.dorian_ch1_line104
             dorian "Get ready to run when I say."
 
             show dorian dragon_eyes at left_char
             "I concentrate, channeling more power into the shield until the flames burst outward in a controlled explosion. The yaoguai stumbles back, momentarily dazed."
 
-            voice audio.dorian_ch1_line103
+            voice audio.dorian_ch1_line105
             dorian "Go now!"
             hide soldier_jiang with Dissolve(0.2)
             "Gao and Jiang dart to safety, and I extinguish the shield, stepping forward to face the creature head-on."
@@ -2279,6 +2328,7 @@ label ch1_battle:
             "The yaoguai lets out an ear-splitting roar, thrashing wildly as it tries to shake off the fire. Gao and Jiang take the opportunity to scramble to safety."
             hide yaoguai
             show soldier_gao at right_char with Dissolve(0.2)
+            voice audio.gao_ch1_line16
             gao "P-Paladin! What should we do?"
             hide soldier_gao
 
@@ -2299,7 +2349,7 @@ label ch1_battle:
     "The ground trembles beneath my feet again, but this time, it's not just from the yaoguai before me. Deep, guttural growls rise from all directions, reverberating through the night air."
 
     show yaoguai at center_yg with Dissolve(0.2)
-    voice audio.toatie_roar_ch1_line1
+    voice audio.yg_scream 
     yg "Raaaaaaaaawwrrrrr!!!"
 
     "The city of Tianho is under siege."
@@ -2309,7 +2359,7 @@ label ch1_battle:
     show soldier_jiang at right_char
     with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line104
+    voice audio.dorian_ch1_line106
     dorian "Wait, Gao! Jiang! Sound the alarm! Now!"
     voice audio.jiang_ch1_line14
     jiang  "Y-Yes, sir! Gao, come quick!"
@@ -2328,6 +2378,7 @@ label ch1_battle:
 
     "The yaoguai's roar is cut short, replaced by a piercing screech as its monstrous form is enveloped in the radiance. In seconds, its body is reduced to ash, the air filling with the acrid smell of sulfur."
     hide yaoguai
+    stop music fadeout 2.0
     scene cg_blindinglight with flash
     "I lower my sword, blinking against the sudden brightness, and as the light fades, a figure steps forward."
     scene bg_tianho_city_on_fire with Dissolve(2.0)
@@ -2337,7 +2388,7 @@ label ch1_battle:
 
     voice audio.vasily_ch1_line1
     vasily "You must be Dorian. The Dragon of Gale. You're welcome, Paladin."
-    voice audio.dorian_ch1_line105
+    voice audio.dorian_ch1_line107
     dorian "I don't think we've met, yet. Who are you?"
 
     "The man steps closer, his boots clicking against the fractured stone."
@@ -2353,7 +2404,7 @@ label ch1_battle:
     vasily "The King of Mjoll is here. He's inside the castle. I felt his spirit call out to me."
 
     show dorian serious at left_char
-    voice audio.dorian_ch1_line106
+    voice audio.dorian_ch1_line108
     dorian "Olympia — I mean Her Grace called out to me as well."
 
     "The bell suddenly rings, its sound sharp and frantic."
@@ -2368,6 +2419,7 @@ label ch1_battle:
 
     hide vasily
     hide dorian
+    with Dissolve(0.1)
 
     "I nod and we sprint towards the castle."
 
@@ -2385,15 +2437,17 @@ label ch1_battle:
 
     show dorian dragon_eyes at left_char
     with Dissolve(0.2)
-    voice audio.dorian_ch1_line107
+    voice audio.dorian_ch1_line109
     dorian "Tetrad above…"
 
     "I hear a guttural snarl, and my gaze snaps to the end of the hall. Two yaoguai stand there, their claws dripping with fresh blood, their glowing red eyes locked on us. They charge."
 
     show yaoguai at right_yg with Dissolve(0.2)
+    play music audio.ost_battle 
+    voice audio.yg_scream 
     yg "Raaaaaaawwrrr!!!"
+    play music audio.ost_battle
     $ renpy.save("quick-1")
-    play sound sfx_heartbeat loop
 
     # =====================================================================
     # D6 — TIMED QTC: Castle Interior (2 options)
@@ -2404,7 +2458,6 @@ label ch1_battle:
         "Freeze up and do nothing.":
             $ _choice_timeout = 0
             $ ch1_castle_qtc = "freeze"
-            stop sound
 
             show dorian normal_alt_tense at left_char
             "I tense up, my nerves getting the best of me after seeing all of those bodies piled up. Count Vasily steps forward."
@@ -2420,7 +2473,7 @@ label ch1_battle:
             vasily "Focus, Paladin. I can handle this, but you're not here to stand idle."
             show vasily alt_normal at right_char
             show dorian sad at left_char
-            voice audio.dorian_ch1_line108
+            voice audio.dorian_ch1_line110
             dorian "I apologize. I just…"
 
             show vasily alt_think at right_char
@@ -2430,7 +2483,6 @@ label ch1_battle:
         "Use your earth channeling powers.":
             $ _choice_timeout = 0
             $ ch1_castle_qtc = "spikes"
-            stop sound
 
             # play sound sfx_stone_spike          # PLACEHOLDER — stone spike SFX
             hide yaoguai
@@ -2438,11 +2490,13 @@ label ch1_battle:
             with Dissolve(0.2)
 
             show yaoguai at right_yg with Dissolve(0.2)
+            play sound audio.sfx_earth
             "I slam my hand to the ground, channeling the raw power of the earth beneath me. Jagged spikes of stone erupt from the floor with a deafening crack, impaling the yaoguai before they can take another step."
 
             voice audio.toatie_roar_ch1_line3
             yg "Raaaaaaa!!!!"
             hide yaoguai with Dissolve(0.2)
+            play sound audio.sfx_body_thud
             "Their bodies twitch once before falling limp, pinned like broken marionettes."
 
             show vasily neutral at right_char with Dissolve(0.2)
@@ -2450,7 +2504,7 @@ label ch1_battle:
             vasily "Impressive. Fire channeling, Earth channeling and, if I'm not mistaken, wind as well. The stories about you aren't just legend, it seems."
 
             show dorian normal at left_char
-            voice audio.dorian_ch1_line109
+            voice audio.dorian_ch1_line111
             dorian "Thanks. I was just born with this. Nothing special."
 
     # --- Post-QTC: both branches converge here ---
@@ -2472,15 +2526,12 @@ label ch1_battle:
     show dorian angry at left_char
     show vasily alt_normal at right_char
     with Dissolve(0.2)
-    voice audio.dorian_ch1_line110
+    voice audio.dorian_ch1_line112
     dorian "This… this isn't an attack. It's a slaughter."
 
     show vasily alt_think at right_char
     voice audio.vasily_ch1_line10
     vasily "If the yaoguai made it this far… the throne room—"
-
-    hide vasily
-    hide dorian
 
     show bg_tianho_throne with fade
     "Ahead of us, a door creaks, its sound cutting through the silence like a knife. It swings open fully, revealing a stone stairway that spirals downward into the depths of the castle. Faint, ominous red light glows from below, flickering like firelight."
@@ -2499,7 +2550,7 @@ label ch1_battle:
     vasily "Wait. We don't know what's down there."
 
     show dorian dragon_eyes at left_char
-    voice audio.dorian_ch1_line111
+    voice audio.dorian_ch1_line113
     dorian "We'll soon find out."
 
     hide vasily
@@ -2554,7 +2605,7 @@ label ch1_battle:
 
             hide vasily
             show dorian angry at left_char
-            voice audio.dorian_ch1_line112
+            voice audio.dorian_ch1_line114
             dorian "Ahhh!"
 
             "The yaoguai's sudden attack catches me off guard, and I trip on a loose stone, hitting the ground hard."
@@ -2579,11 +2630,12 @@ label ch1_battle:
     show dorian serious at left_char
 
     "With the yaoguai dealt with, I look around, my heart sinking."
+    stop music fadeout 2.0
     show olympia at right_char with Dissolve(0.2)
     "At the far end of the room, Empress Olympia is slumped against the wall, her once-pristine robes soaked in blood."
     "Paladins Cyrus and Feng are crouched beside her, their armor dented and smeared with gore."
 
-    voice audio.dorian_ch1_line113
+    voice audio.dorian_ch1_line115
     dorian "Your Grace!"
 
     "They look up as I approach."
@@ -2595,13 +2647,13 @@ label ch1_battle:
 
     show dorian neutral at left_char
 
-    voice audio.dorian_ch1_line114
+    voice audio.dorian_ch1_line116
     dorian "You too, Feng. What happened here?"
     feng "No clue. We were summoned by the Empress."
 
     show dorian serious at left_char
 
-    voice audio.dorian_ch1_line115
+    voice audio.dorian_ch1_line117
     dorian "Where are the others? The Kyeongjang Emperor? The King of Tianho?"
     "Feng shakes his head, his eyes filled with frustration and shame."
 
@@ -2625,7 +2677,7 @@ label ch1_battle:
     vasily "If they're not here, they must've been taken deeper. I'll find them myself if I have to."
 
     show dorian serious at left_char
-    voice audio.dorian_ch1_line116
+    voice audio.dorian_ch1_line118
     dorian "Vasily, wait!"
 
     hide vasily with Dissolve(0.1)
@@ -2635,7 +2687,7 @@ label ch1_battle:
 
     show dorian neutral at left_char
 
-    voice audio.dorian_ch1_line117
+    voice audio.dorian_ch1_line119
     dorian "Your Grace, can you hear me? Everything's going to be alright."
     "I turn back to Olympia, her eyes fluttering open as she struggles to focus on me. Her hand weakly grips my arm, smearing it with blood."
 
@@ -2646,7 +2698,7 @@ label ch1_battle:
     show feng_suit at right_char with Dissolve(0.2)
     feng "We need to get her out of here. She's lost too much blood."
     show dorian serious at left_char
-    voice audio.dorian_ch1_line118
+    voice audio.dorian_ch1_line120
     dorian  "Feng, Cyrus — we need a plan. And fast."
 
     hide feng_suit
@@ -2672,7 +2724,7 @@ label ch1_battle:
 
     show dorian serious at left_char with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line119
+    voice audio.dorian_ch1_line121
     dorian "Come on, man. Hurry up!"
 
     hide dorian
@@ -2684,6 +2736,7 @@ label ch1_battle:
     "Finally, we burst out into the courtyard, gasping for air."
     "The city of Tianho is in chaos. Streets are lit by the glow of fires, their smoke curling into the night sky. People are screaming, running in every direction. Buildings collapse in the distance, their foundations giving way as the earth continues to quake."
 
+    voice man1_ch1_line4
     man_1 "Wait… Look… Up in the sky!"
 
     "And then, the most chilling sight of all—a massive, winged shadow looms atop the highest spire of Castle Tianho. Its form is obscured by the darkness."
@@ -2706,7 +2759,7 @@ label ch1_battle:
     "The sound of more yaoguais roaring echo eerily through the chaos as the ground beneath Tianho begins to crack open. The air grows hotter, thick with sulfur, and an ominous red glow spills through the fissures."
 
     show dorian angry at left_char with Dissolve(0.2)
-    voice audio.dorian_ch1_line120
+    voice audio.dorian_ch1_line122
     dorian "What in the Tetrad's name…?"
 
     hide dorian
@@ -2726,8 +2779,9 @@ label ch1_battle:
     show dorian serious at left_char
     with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line121
+    voice audio.dorian_ch1_line123
     dorian "Gao! Jiang! RUN! Evacuate as many civilians as you can! That's an order!"
+    voice audio.gao_ch1_line17
     gao "Y-Yes, sir!"
 
     hide soldier_gao
@@ -2738,14 +2792,14 @@ label ch1_battle:
     show feng_suit at right_char
     with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line122
+    voice audio.dorian_ch1_line124
     dorian "Feng, we need to help them evacuate! The city will burn if we don't act now!"
     feng  "On it. I'll clear the streets and rally anyone who can still fight."
     hide feng_suit
     show cyrus at right_char
     with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line123
+    voice audio.dorian_ch1_line125
     dorian "Cyrus, what about you?"
 
     voice audio.cyrus_ch1_line33
@@ -2753,7 +2807,7 @@ label ch1_battle:
 
     show dorian serious at left_char
 
-    voice audio.dorian_ch1_line124
+    voice audio.dorian_ch1_line126
     dorian "Cyrus, you can't—"
 
     voice audio.cyrus_ch1_line34
@@ -2791,7 +2845,7 @@ label ch1_battle:
     hide taotie
     show dorian angry at left_char with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line125
+    voice audio.dorian_ch1_line127
     dorian "Tetrad above… What the—"
 
     show feng_suit at right_char with Dissolve(0.2)
@@ -2800,19 +2854,19 @@ label ch1_battle:
     feng "Dorian, get the civilians out! I'll handle this beast!"
 
     show dorian serious at left_char
-    voice audio.dorian_ch1_line126
+    voice audio.dorian_ch1_line128
     dorian "Feng, wait! We can't take this thing alone!"
-    hide dorian
+    hide dorian with Dissolve(0.1)
 
     "But Feng doesn't listen. With a battle cry, he charges toward the Taotie, leaping high and slashing at its massive head."
     # blade sfx and meat searing
     "His blade slices across one of its glowing eyes, the blue fire searing into its flesh. The Taotie roars in pain, its head snapping back as it reels from the attack."
-    # claws sfx
+    play sound audio.sfx_claw
     "But it's not enough. The beast retaliates with a vicious swipe of its massive claws, faster than Feng can react."
 
     show dorian angry at left_char with Dissolve(0.2)
 
-    voice audio.dorian_ch1_line127
+    voice audio.dorian_ch1_line129
     dorian "FENG, LOOK OUT!"
 
     hide dorian
@@ -2830,7 +2884,7 @@ label ch1_battle:
     show dorian angry at left_char with Dissolve(0.2)
 
     $ renpy.save("quick-1")
-    voice audio.dorian_ch1_line128
+    voice audio.dorian_ch1_line130
     dorian "NO!! FENG!!"
 
     show taotie at right_tt with Dissolve(0.2)
@@ -2863,7 +2917,7 @@ label ch1_battle:
             voice audio.toatie_roar_ch1_line3
             taotie "GRAAAWWRRRR!!"
 
-            voice audio.dorian_ch1_line129
+            voice audio.dorian_ch1_line131
             dorian "AAHHHH!!!"
             hide dorian
             hide taotie
@@ -2900,7 +2954,7 @@ label ch1_battle:
 
             voice audio.toatie_roar_ch1_line2
             taotie "Mmmmmmm—"
-            voice audio.dorian_ch1_line130
+            voice audio.dorian_ch1_line132
             dorian "Think again, mate."
 
         "Run toward its flank to avoid the blast.":
@@ -2910,7 +2964,6 @@ label ch1_battle:
             "I dash to the side, hoping to avoid the roar. But the Taotie's roar is deafening, its force throwing me into the air like a ragdoll."
             "The ground beneath me erupts, molten lava surging upward. I scream as the searing heat engulfs me."
 
-            voice audio.dorian_ch1_line131
             dorian "AHHH!!!"
             feng "DORIAN!!"
             voice audio.olympia_ch1_line9
@@ -2942,7 +2995,6 @@ label ch1_battle:
 
             hide dorian
             hide taotie
-            voice audio.dorian_ch1_line132
             dorian "AHHH!!!"
             feng "DORIAN!!"
             voice audio.olympia_ch1_line10
@@ -3161,12 +3213,13 @@ label ch1_common_end:
     hide yuxuan
     hide dorian
     stop music
-
+    # TODO: LAVA SFX
     "Soon, the inn comes into view, but my heart plummets as I see the hellscape before me."
     "The building where my family rested is now submerged in molten lava, its structure reduced to ash and smoldering debris."
 
     "No…"
     "No…"
+    stop music fadeout 1.0
 
     show yk at left_char, silhouette with Dissolve(1.5)
     "Standing in the center of the destruction is a massive figure, nearly twice the height of a man. Its body is grotesque — hulking and sinewy, its skin a mottled mix of black and crimson, with molten veins pulsing across its form."
@@ -3192,19 +3245,18 @@ label ch1_common_end:
     "The yaoguai king throws its head back and laughs, a deep, guttural sound that shakes the ground."
 
     show yk at right_char with Dissolve(0.2)
-    voice audio.yk_ch1_line1
     yk "Such fragile creatures… humans. So soft. So full of fear."
-    voice audio.yk_ch1_line2
+    voice audio.yk_ch1_line3
     yk "I've searched through fire and blood for you, Dragonkin. At last, I've found you."
 
     "It raises Elara's severed head higher, as if to taunt me."
 
-    voice audio.yk_ch1_line3
+    voice audio.yk_ch1_line4
     yk "You're looking for this, aren't you?"
     show dorian sad at left_char
     voice audio.dorian_ch1_line148
     dorian "No… No…"
-    voice audio.yk_ch1_line4
+    voice audio.yk_ch1_line2
     yk "She begged for you. Cried your name with her last breath. Where were you, Paladin?"
     show dorian angry at left_char
     voice audio.dorian_ch1_line149
@@ -3236,6 +3288,7 @@ label ch1_common_end:
     "I try to rush forward, to throw myself at the yaoguai king, but strong hands grab my shoulders."
     hide dorian
     show soldier_gao at left_char with Dissolve(0.2)
+    voice audio.gao_ch1_line18
     gao "Paladin, no! You can't! We have to go, now!"
     hide soldier_gao
     show soldier_jiang at left_char with Dissolve(0.2)
@@ -3248,8 +3301,8 @@ label ch1_common_end:
     dorian "LET ME GO! I'LL KILL HIM! LET ME GO!"
 
     show yk at right_char with Dissolve(0.2)
-    voice audio.yk_ch1_line9
     yk "YES! YES! HAHAHA! That's it! Cry! Rage! Let your soul split open!"
+    voice audio.yk_ch1_line10
     yk "Burn for me! Show me what grief can do to a god-touched soul!"
 
     hide dorian
@@ -3258,7 +3311,9 @@ label ch1_common_end:
     jiang "Gao! Do something!"
     hide soldier_jiang
     show soldier_gao at left_char with Dissolve(0.2)
+    voice audio.gao_ch1_line19
     gao "Ok! Ok!"
+    voice audio.gao_ch1_line20
     gao "I'm sorry, Paladin. This is for your own good."
     hide soldier_gao
     show dorian dragon_eyes at left_char with Dissolve(0.2)
@@ -3290,7 +3345,7 @@ label ch1_common_end:
     "Then, Elara's voice… and the kids' laughter."
 
     hide dorian
-    voice audio.elara_ch1_line66
+    voice audio.elara_ch1_line68
     elara "I love you, my heart…"
     voice audio.dorian_ch1_line155
     dorian "E…lara…"
@@ -3309,7 +3364,6 @@ label ch1_common_end:
     hide text with dissolve
 
     jump chapter_2
-
 
 # =============================================================================
 # END OF CHAPTER 1

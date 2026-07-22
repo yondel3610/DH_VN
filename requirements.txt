@@ -1,0 +1,6 @@
+faster-whisper
+
+# Note: ffmpeg is also required and is NOT installed via pip.
+# Windows:  choco install ffmpeg   (or download from https://ffmpeg.org)
+# Mac:      brew install ffmpeg
+# Linux:    sudo apt install ffmpeg

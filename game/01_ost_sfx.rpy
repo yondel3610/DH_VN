@@ -1,7 +1,7 @@
 # ====================================================================================
 # Ambience and background music
 # ====================================================================================
-define audio.amb_underground   = "audio/sfx and ost/00_prologue/amb/Cave.ogg" # cave ambience DONE
+define audio.amb_underground   = "audio/sfx and ost/amb/Cave.ogg" # cave ambience DONE
 define audio.ost_tension_short = "audio/sfx and ost/amb/tension_theme.ogg" 
 
 
@@ -24,7 +24,16 @@ define audio.sfx_poison         = "audio/sfx and ost/sfx/46_Poison_01.ogg"
 define audio.sfx_enemy_death    = "audio/sfx and ost/sfx/69_Enemy_death_01.ogg"
 define audio.sfx_eruption       = "audio/sfx and ost/sfx/eruption.ogg"
 define audio.sfx_claw           = "audio/sfx and ost/sfx/sfx_claw.ogg"
+define audio.sfx_blade          = "audio/sfx and ost/sfx/sfx_blade.ogg"
+define audio.sfx_arrow          = "audio/sfx and ost/sfx/arrow_impact.ogg"
 
+# Yaoguai
+define audio.yg_screech = "audio/sfx and ost/beast sounds/zapsplat_horror_demon_monster_evil_scream_screech_114117.ogg"
+define audio.yg_snore   = "audio/sfx and ost/beast sounds/zapsplat_horror_demon_monster_evil_short_snore_003_114120.ogg"
+define audio.yg_scream  = "audio/sfx and ost/beast sounds/freesound_community-short-monster-scream-105026.ogg"
+define audio.qq_roar    = "audio/sfx and ost/beast sounds/dffdv-tiger-roar-loudly-193229.ogg"
+define audio.qq_raah    = "audio/sfx and ost/beast sounds/dffdv-monster-warrior-roar-195877.ogg"
+define audio.monster_death = "audio/sfx and ost/beast sounds/ragecore29-htf-flesh-impact-1-480118.ogg"
 
 # ====================================================================================
 # THEMES
@@ -46,10 +55,8 @@ define audio.ost_magnus_riddles = "audio/sfx and ost/ost/ost_magnus_riddles.ogg"
 define audio.ost_taotie_battle = "audio/sfx and ost/ost/ost_taotie_battle.ogg"
 define audio.ost_tension_rising = "audio/sfx and ost/ost/ost_tension_rising.ogg"
 define audio.ost_tianho_cemetery = "audio/sfx and ost/ost/ost_tianho_cemetery.ogg"
-define audio.ost_tianho_market = "audio/sfx and ost/ost/ost_tianho_market.ogg"
+define audio.ost_tianho_emperor = "audio/sfx and ost/ost/ost_tianho_festival_emperor.ogg"
 define audio.ost_yuxuan_lab = "audio/sfx and ost/ost/ost_yuxuan_lab.ogg"
-
-
 
 # CHARACTER THEMES
 define audio.aoi_theme = "audio/sfx and ost/char themes/Aoi_s theme.ogg"

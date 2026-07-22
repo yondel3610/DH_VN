@@ -4,7 +4,7 @@
 # Technical stuff
 # define quick_menu = True
 
-default demo_mode = False  # Set to False for full release
+# default demo_mode = True  # Set to False for full release
 
 # =============================================================================
 # AFFECTION / RELATIONSHIP TRACKERS

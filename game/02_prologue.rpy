@@ -281,7 +281,7 @@ label prologue_choice_wall:
     
     voice boy_ald_prl_line15
     boy_ald "Come on, come on—!"
-    
+    play sound sfx_earth
     "A slab of earth surged upward between him and the Yaoguai King."
     "Then—CRACK!"
     
@@ -323,10 +323,12 @@ label prologue_choice_dash:
     yk "Running away from me? Pathetic."
     
     "He didn't make it ten steps."
+    play sound sfx_claw
     "Too fast."
     "A blur. A slash. A body fell."
     
     scene bg_underground_red with flash
+    play sound sfx_body_thud
     pause 0.4
     scene bg_underground_red with dissolve
     jump prologue_common
@@ -376,7 +378,7 @@ label prologue_common:
     # -------------------------------------------------------------------------
     # CHAPTER TITLE CARD
     # -------------------------------------------------------------------------
-    show screen chapter_title_screen("1", "Lorem Ipsum", "Lorem Ipsum", duration=3.0)
+    show screen chapter_title_screen("1", "Tianho", "", duration=3.0)
     pause 3.0
     
     # -------------------------------------------------------------------------

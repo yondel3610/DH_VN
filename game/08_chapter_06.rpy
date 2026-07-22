@@ -7,6 +7,13 @@
 # =============================================================================
 
 label chapter_6:
+    if demo_mode:
+        scene black with fade
+        pause 1.0
+        centered "Thank you for playing the demo\n\n Full version will include ch6-10"
+        pause 2.0
+        $ MainMenu(confirm=False)()
+        
     $ save_name = "Chapter 6"
     # scene bg_lab_bedroom with fade              # PLACEHOLDER — lab bedroom, dim lamp in corner — use spare_room
     scene spare_room with fade

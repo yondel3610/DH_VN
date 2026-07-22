@@ -241,9 +241,10 @@ define config.quit_action = [
     Quit(confirm=True)
 ]
 
-
 define _black_with_hide = Pause(0) # placeholder
 label scene_black():
     window hide dissolve
     scene black with fade
     return
+
+define build.directory_name = "Dragon's Heart"

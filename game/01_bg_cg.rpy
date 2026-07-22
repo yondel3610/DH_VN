@@ -275,41 +275,29 @@ image bg_frostcradle_cave: # Inside the Frostcradle in pdf
     yalign 1.0
 
 # # --- Backgrounds: Dorian's Cave ---
-image dorians_cave_on:
-    # "images/Assets/Background/dorians_cave_on.png"
-    size (1920, 1080) # STANDARD FOR ALL FUTURE BG
-    xalign 0.5
-    yalign 1.0
-
-image dorians_cave_off:
-    # "images/Assets/Background/dorians_cave_off.png"
+image dorians_cave:
+    "images/Assets/Background/dorian_cave.jpg"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
     yalign 1.0
 
 image lab_cave_on:
-    "images/Assets/Background/dorians_cave_on.png"
+    "images/Assets/Background/lab_cave_on.png"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
     yalign 1.0
 
 image lab_cave_off:
-    "images/Assets/Background/dorians_cave_off.png"
+    "images/Assets/Background/lab_cave_off.png"
     size (1920, 1080) # STANDARD FOR ALL FUTURE BG
     xalign 0.5
     yalign 1.0
 
-# image violet_tent:
-#     "images/Assets/Background/"
-#     size (1920, 1080) 
-#     xalign 0.5
-#     yalign 1.0
-
-# image bg_mjoll_square_festive:
-#     "images/Assets/Background/"
-#     size (1920, 1080) 
-#     xalign 0.5
-#     yalign 1.0
+image violet_tent:
+    "images/Assets/Background/violet_tent.png"
+    fit "cover" 
+    xalign 0.5
+    yalign 1.0
 
 # ==============================================================
 image cg_qiongqi_fight:
