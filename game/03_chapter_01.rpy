@@ -1401,6 +1401,7 @@ label ch1_auditions:
     "The younger brother, Kaito, stiffens under the hostile murmurs, his knuckles white as he clutches the hem of his robe. Niko, however, remains calm, though his voice tightens."
 
     show niko normal_base at left_char with Dissolve(0.2)
+    voice audio.kaito_ch1_line2
     kaito "B-Brother…"
     voice audio.niko_ch1_line6
     niko  "Yes. We serve Enoch. But we do not bring death. We offer peace to those whose time has come. We comfort. We do not decide. That is not our place."
@@ -1431,7 +1432,7 @@ label ch1_auditions:
     voice audio.jiang_ch1_line5
     jiang "That's right! Tell him like it is, Paladin!"
     hide soldier_jiang
-
+    voice audio.kaito_ch1_line3
     kaito "P-Please… I only want to help. Please."
 
     "The female guard scoffs, her hand resting on the hilt of her sword."
@@ -1444,6 +1445,7 @@ label ch1_auditions:
     gao "Th-that won't be necessary, ma'am! We're here to evaluate — not shed blood!"
     hide soldier_gao
 
+    voice audio.kaito_ch1_line4
     kaito "M-Mercy… Brother, I think we should go…"
     hide cyrus
     show dorian normal_alt_calm at left_char
@@ -1508,6 +1510,8 @@ label ch1_auditions:
             show niko normal_base at right_char with Dissolve(0.2)
             voice audio.niko_ch1_line9
             niko "We'll leave on our own. We don't need your escort."
+
+            voice audio.kaito_ch1_line5
             kaito "Yeah! K-Keep your damned position!"
             voice audio.niko_ch1_line10
             niko "I held out hope that you people would be different. The truth will reveal itself in time. Until then, I wish you peace."

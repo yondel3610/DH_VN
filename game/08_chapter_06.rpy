@@ -24,13 +24,13 @@ label chapter_6:
     show screen chapter_title_screen(
         "6",
         "Beneath Tianho",
-        subtitle="Tianho — Underground Lab",
+        # subtitle="Tianho — Underground Lab",
         duration=3.0
     )
     pause 3.0
     scene spare_room with fade
 
-    show dorian sad at left_char with Dissolve(0.2)
+    
 
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     elias "Daddy! Daddy! Wake up!"
@@ -41,7 +41,7 @@ label chapter_6:
     elias "Are you okay, Daddy?"
 
     "I swallowed, trying to push away the burning weight in my throat. My body still trembled, the dream lingering like a wound torn open."
-
+    show dorian sad at left_char with Dissolve(0.2)
     dorian "N-n-no, buddy. It's nothing. Don't think about it."
 
     "A small pause. The fan hummed softly in the quiet room, blades cutting through the still air."
@@ -53,12 +53,13 @@ label chapter_6:
     "His voice wavered, gentle, worried."
 
     elias "I was worried. Tedda went out to get water from kitchen."
-    show dorian neutral at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.2)
     "I exhaled, rubbing my face."
 
     show elias normal_neutral at right_char_kids
     elias "Tedda says bad dreams need water. She'll be back."
 
+    show dorian neutral at left_char
     "He smiled and reached out, his tiny hand wrapping around mine."
     "I froze."
     "With my free hand, I wiped away the last of my tears, then gave his fingers a gentle squeeze."
@@ -80,19 +81,21 @@ label chapter_6:
     show dorian neutral at left_char
     dorian "But what happens if I got attacked by an ugly monster? Would you save me?"
 
-    show elias normal_happy at right_char_kids
+    show elias normal_sad at right_char_kids
     "Elias gasped."
     "The worry on his face vanished—replaced with uncontainable excitement."
+    show elias normal_happy at right_char_kids
     "He scrambled up on the bed, wiggling like a puppy, his whole body buzzing with energy."
     "Then—he struck a pose."
+    show elias alt_joy at right_char_kids
     "One foot forward. One tiny fist raised."
-
+    show elias normal_evil at right_char_kids
     elias "Hmph! I'll beat that ugly monster and his ass!"
 
     show dorian serious at left_char
     dorian "Elias—language."
 
-    show elias normal_sad at right_char_kids
+    show elias normal_happy at right_char_kids
     "He froze."
     "Then, with wide, guilty eyes, he quickly corrected himself—talking even faster."
 
@@ -102,7 +105,6 @@ label chapter_6:
     "He spun in a clumsy circle, nearly tumbling onto his face."
     "I wrapped my arms around him, holding him close."
 
-    show dorian smile at left_char
     dorian "How long was I asleep, Elias?"
     elias  "I don't know, daddy. Mister Niko brought you here."
     elias  "After you fell asleep, Tim and I were played and colored. A… And—And… Tedda joined us!"
@@ -116,6 +118,7 @@ label chapter_6:
     elias  "Yes, Daddy! Big big hugs! And I feel so happy. We're with other people now."
     show dorian smile at left_char
     dorian "Yeah. It's not just you, me and Yuxuan."
+    show dorian neutral at left_char
     elias  "And Tedda!"
 
     show elias normal_happy at right_char_kids
@@ -136,27 +139,24 @@ label chapter_6:
 # =============================================================================
 
 label ch6_elias_choices:
-
     menu:
-
         "How's Yuxuan?":
             $ ch6_d1_elias_choice = "yuxuan"
             $ yuxuan_affection += 1             # +1 Yuxuan affection
 
             show dorian neutral at left_char
             dorian "How's Yuxuan? What happened during dinner?"
-            show elias normal_neutral at right_char_kids
+            show elias normal_lying at right_char_kids
             elias  "I think he go… to his office, daddy. I saw him getting… Grrr…"
-            show dorian smile at left_char
+            show dorian normal at left_char
             dorian "Like angry? That's him alright. Sounds like something that he'll do."
-            show elias normal_happy at right_char_kids
+            show elias normal_neutral at right_char_kids
             elias  "But then he went inside office and it became quiet. Weaaaal quiet. He took Mister Roboto with him too."
             elias  "But he's reallyyyy nice, daddy. He gave me and Tim some candies a while ago! He even made you and me stay in a big room like this. Maybe we can live here forever! Hihi"
             show dorian neutral at left_char
             dorian "Well, not forever, Elias. I doubt a millionaire like him would want us to stay in his expensive home."
             show elias normal_happy at right_char_kids
             elias  "He wants us to, daddy! He told me that if we wanted to, we could stay here forever with him! You, me and him!"
-            show dorian serious at left_char
             dorian "Huh? Wait, did he really say that?"
             show elias normal_happy at right_char_kids
             elias  "Yes, daddy! Tim even made fun of Mr. Yuxuan! He said that Mr. Yuxuan was… hmm, what was it… oh, a blushing mess! Tim said Mr. Yuxuan was a blushing mess when he said we can stay here forever!"
@@ -188,6 +188,7 @@ label ch6_elias_choices:
             "I'm sorry, Chung."
             "Emperor Hyon Min-joon and his wife. So that's how they died."
             "Gustav Nordstrom…"
+            show dorian angry at left_char
             "Just the thought of his name got my blood boiling. I tightened my fist."
 
             elias  "So, Mister Niko told him that he get more sleep and then- And- Daddy, are you listening?"
@@ -227,6 +228,7 @@ label ch6_elias_choices:
             dorian "Yeah. You like the weather here more, Elias?"
             show elias normal_neutral at right_char_kids
             elias  "*yawns* Yes, Daddy. It isn't cold like the cave there. It's more… comfy here."
+            show dorian neutral at left_char
 
             "He yawned, snuggling deeper into the blankets."
 
@@ -258,6 +260,7 @@ label ch6_elias_choices:
             dorian "…I weigh more than two people combined."
             show elias normal_happy at right_char_kids
             elias  "He's really strong, Daddy! And he was so serious."
+            show dorian neutral at left_char
 
             "He yawned, snuggling deeper into the blankets."
 
@@ -271,19 +274,20 @@ label ch6_elias_choices:
 # =============================================================================
 
 label ch6_elias_common:
-
-    show elias normal_lying at right_char_kids
+    show dorian neutral at left_char
+    show elias normal_neutral at right_char_kids
     "Elias's breathing slowed, his tiny chest rising and falling in a steady rhythm. His fingers, still curled around my sleeve, loosened their grip as sleep took him."
 
     show dorian smile at left_char
     "I leaned down, pressing a gentle kiss to his forehead."
 
     dorian "Sleep well, buddy."
+    show dorian neutral at left_char
 
-    "Carefully, I tucked the blanket around him, making sure he was warm before standing. The room was quiet, save for the soft hum of the fan. I lingered for a moment, watching the peaceful rise and fall of his breath, then quietly made my way to the main area."
+    "Carefully, I tucked the blanket around him, making sure he was warm before standing."
+    "The room was quiet, save for the soft hum of the fan."
+    "I lingered for a moment, watching the peaceful rise and fall of his breath, then quietly made my way to the main area."
 
-    hide elias
-    hide dorian
     jump ch6_briefing
 
 
@@ -295,41 +299,45 @@ label ch6_elias_common:
 
 label ch6_briefing:
 
-    # scene bg_yuxuan_lab_dim with dissolve       # PLACEHOLDER — lab main room, dim glow — use cheng_industries_bunk_off
-    scene cheng_industries_bunk_off with dissolve
+    scene lab_cave_off with dissolve
 
-    "There, in the dim glow of the lanterns, Chung-hee sat with his back straight, a cup of tea cradled in his hands. Beside him, Tim fidgeted anxiously, his little fingers drumming against the wooden table."
+    "There, in the dim glow of the lanterns, Chung-hee sat with his back straight, a cup of tea cradled in his hands."
+    "Beside him, Tim fidgeted anxiously, his little fingers drumming against the wooden table."
     "Chung-hee looked up as I entered, his sharp eyes studying me."
 
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
-    show dorian neutral at left_char with Dissolve(0.2)
+    scene lab_cave_on with dissolve
+    show chunghee normal_neutral at right_char
+    show dorian neutral at left_char
+    with Dissolve(0.2)
     chung_hee "You're awake."
     dorian    "How long was I out?"
     chung_hee "Four hours, I believe."
 
     "He took a sip of his tea, setting the cup down with a quiet clink. Then, his expression hardened."
 
-    show chunghee normal_angry at center_char
+    show chunghee normal_angry at right_char
     chung_hee "We need to go. To Tianho."
     show dorian serious at left_char
     dorian    "Tianho? Why?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_v2 at right_char
     "Chung-hee exhaled slowly, fingers curling around his cup."
 
     chung_hee "Tianho is under siege by monsters."
-    show dorian serious at left_char
+    show dorian angry at left_char
     dorian    "What?!"
 
     "Tim's face was pinched with worry, his small hands clenched into fists."
+    show dorian serious at left_char
 
+    show tim sad at center_char_kids with Dissolve(0.2)
     tim "Mister Dorian! Miss Weng—!"
 
     "He swallowed hard, looking up at me with wide, desperate eyes."
 
     tim "Tianho is under attack! Miss Weng went there to check on Master Yuxuan's main branch shortly after dinner, but then suddenly monsters attacked!"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     chung_hee "Svante and Niko followed after her. I stayed behind because Niko ordered me to."
     chung_hee "He said I'm still recovering."
 
@@ -337,120 +345,137 @@ label ch6_briefing:
 
     "His voice cracked slightly, and he hugged his arms to his chest."
 
-    show dorian neutral at left_char
     dorian    "Where's Yuxuan?"
 
-    show chunghee normal_angry at center_char
     "Chung-hee's brow furrowed slightly."
 
     chung_hee "He panicked the moment he heard, said something about the underground and locked himself in his study. He said it was important."
     show dorian serious at left_char
     dorian    "Important?"
     tim       "Yes, Mister. He said it was very important."
-    show chunghee normal_sad at center_char
+    show chunghee normal_sad at right_char
     chung_hee "I want to help. But I don't think I can do much with my situation."
     chung_hee "Will you accompany me, Dorian?"
 
     show dorian neutral at left_char
+    show tim normal at center_char_kids
     "I glanced at him, noting the way his fingers lightly tapped against the side of his cup. I can tell that his unease."
 
     dorian    "Yeah, of course. But I can't leave Elias behind."
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     chung_hee "He has Tedda."
 
     show dorian normal_alt_annoyed at left_char
     "I nearly rolled my eyes."
 
     dorian    "Chung, you're an adult. You know Tedda's a stuffed animal doll, right?"
+    hide chunghee
 
-    jump ch6_tedda_alive
-
+    jump ch6_tedda
 
 # =============================================================================
-# SECTION 9: LABEL CH6_TEDDA_ALIVE — Tedda is Alive / Roboto Update
+# SECTION 9: LABEL CH6_tedda — Tedda is Alive / Roboto Update
 # =============================================================================
 
-label ch6_tedda_alive:
+label ch6_tedda:
 
     show tedda_human at right_char with Dissolve(0.2)
-    "Tedda: A stuffed animal doll? Oh, Mister Dorian, I'm offended!"
+    tedda " A stuffed animal doll? Oh, Mister Dorian, I'm offended!"
 
-    "I turned, and there she was, standing in the doorway with a dramatic pout. She held a pitcher of water in both hands, her pink dress swishing as she swayed on her heels. Stuffed toy ears, identical to the ones on Elias's doll, sat atop her head."
+    "I turned, and there she was, standing in the doorway with a dramatic pout."
+    "She held a pitcher of water in both hands, her pink dress swishing as she swayed on her heels."
+    "Stuffed toy ears, identical to the ones on Elias's doll, sat atop her head."
 
-    show dorian serious at left_char
+    show dorian normal_alt_tense at left_char
     dorian        "… T-Tedda?"
-    tedda_alive   "It's me, Mister Dorian! Hello!"
+    tedda   "It's me, Mister Dorian! Hello!"
+    show dorian neutral at left_char
+    show tim alt_pumped at center_char_kids
     tim           "She's Tedda, Mister Dorian! Mister Chung made her alive with his mind channeling!"
-    show chunghee normal_neutral at center_char
+    hide tedda_human
+    show chunghee normal_neutral at right_char with Dissolve(0.2)
     chung_hee     "Took you a while just to get water."
+    show tim normal at center_char_kids
 
     "Tedda huffed, puffing up her cheeks."
+    hide chunghee
 
-    tedda_alive "I'll have you know, I got very sidetracked!"
+    show tedda_human at right_char with Dissolve(0.2)
+    tedda "I'll have you know, I got very sidetracked!"
 
     "She marched over and placed the pitcher down with exaggerated effort."
 
-    tedda_alive "First, the kitchen was too dark. Spooky! So I had to light a lantern."
+    tedda "First, the kitchen was too dark. Spooky! So I had to light a lantern."
 
     "She held up a finger."
 
-    tedda_alive "Then, I saw a spider. A very rude spider, mind you! And I had to ask it politely to leave before I could pass."
+    tedda "Then, I saw a spider. A very rude spider, mind you! And I had to ask it politely to leave before I could pass."
 
     "Another finger went up."
 
-    tedda_alive "And THEN, I got thirsty carrying the water back, so I had to drink a little myself. Can't deliver water if I pass out, you know?"
+    tedda "And THEN, I got thirsty carrying the water back, so I had to drink a little myself. Can't deliver water if I pass out, you know?"
 
     "She flashed me an innocent smile, then picked up a cup and pressed it into my hands."
 
-    tedda_alive "Now, drink, Mister Dorian. You need it after having that bad dream of yours."
+    tedda "Now, drink, Mister Dorian. You need it after having that bad dream of yours."
 
     show dorian neutral at left_char
     "I frowned but didn't argue. She wasn't going to let up until I did, anyway. I took a slow sip, the cool water soothing my dry throat."
 
-    tedda_alive "There, see? Lady Elias will be just fine with me."
+    tedda "There, see? Lady Elias will be just fine with me."
 
     "I sighed, wiping my mouth with the back of my hand."
 
-    dorian      "Lady Elias?"
-
+    show dorian normal_alt_annoyed at left_char
+    dorian "Lady Elias?"
+    show dorian neutral at left_char
     "Tedda only giggled, her eyes twinkling."
 
-    tedda_alive "Just a little nickname. It suits her, don't you think?"
-
-    hide tedda_alive
+    tedda "Just a little nickname. It suits her, don't you think?"
+    
     "Then, we heard whirring. Roboto approached us."
-
+    hide tedda_human
     show roboto happy at right_robot with Dissolve(0.2)
     roboto "Apologies for me being late, M-M-M-Master Dorian."
     roboto "Me and Miss T-T-Tedda here will take care of Elias. Don't worry."
 
     "His arms whirred as he gave me a reassuring thumbs-up."
 
-    roboto      "You can count on Robotoooo~"
+    roboto "You can count on Robotoooo~"
 
+    hide roboto
     show tedda_human at right_char with Dissolve(0.2)
-    tedda_alive "See? You'll be leaving Lady Elias in the best hands. Now go and take care of yourselves!"
+    tedda "See? You'll be leaving Lady Elias in the best hands. Now go and take care of yourselves!"
 
+    show tim alt_nervous at center_char_kids
     "Tim, who had been fidgeting near the table, quickly stepped forward."
-
     tim "Mister Roboto, how's Master Yuxuan?"
 
     "Roboto's head tilted, gears clicking as he processed the question. His screen showed a smiling face."
-
-    show roboto happy at right_robot
+    hide tedda_human
+    show roboto happy at right_robot with Dissolve(0.2)
     roboto "Master Yuxuan is doing fine. I gave him some s-s-s-s-snackss!"
     roboto "He's currently monitoring the situation ab-b-b-b-bove ground and b-b-b-below ground from his room."
-    show dorian neutral at left_char
+
+    show dorian serious at left_char
     dorian "And what about Svante and Niko? Any word from them?"
+
     show roboto bad_mood at right_robot
     roboto "Unfortunately, we were not able to contact t-t-t-t-them."
+
+    show dorian normal_alt_calm at left_char
     roboto "If you wish to go there, now would b-b-b-b-b-b-b-b-b *crashes*"
 
+    show dorian neutral at left_char
     show roboto error at right_robot
     "His head snapped back with a loud clunk before he slumped forward slightly, his voice cutting off entirely."
+    
+    hide roboto
+    show tedda_human at right_char with Dissolve(0.2)
 
-    tedda_alive "Umm… Is Roboto alright?"
-    tim         "Oh, um… Hold on a second."
+    tedda "Umm… Is Roboto alright?"
+    show tim think at center_char_kids 
+    tim "Oh, um… Hold on a second."
 
     "Tim hurried behind Roboto, his small hands fumbling as he reached into his pocket. He pulled out a well-worn screwdriver, its handle smoothed from years of use."
     "With careful hands, he opened a panel on Roboto's back, adjusting a few loose wires."
@@ -459,33 +484,31 @@ label ch6_tedda_alive:
 
     "A few moments later, Roboto jolted back to life."
 
-    show roboto happy at right_robot
+    hide tedda_human
+    show roboto happy at right_robot with Dissolve(0.2)
     roboto "Bzzt—Reboot sequence complete… r-r-r-r-recalibrating sensors…"
     roboto "Robotooo is ready to seerrveeee~ You can count on Robotoo~"
 
-    tedda_alive "Yay! Tim, you're amazing!"
+    tedda "Yay! Tim, you're amazing!"
 
     "Tim scratched the back of his neck, looking away with a sheepish smile."
 
     tim       "It's nothing, Tedda. Just a small fix."
+    hide roboto
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee stepped back, shaking his head in disbelief."
 
     chung_hee "Are all kids here that smart?"
     show dorian neutral at left_char
     dorian    "No."
 
-    show roboto happy at right_robot
+    hide tim
+    show roboto happy at center_robot with Dissolve(0.2)
     roboto "Y-Y-You should depart now if you're planning to leave."
     dorian "Alright. Let's head out."
 
-    hide tedda_alive
-    hide roboto
-    hide chunghee
-    hide dorian
     jump ch6_depart
-
 
 # =============================================================================
 # SECTION 10: LABEL CH6_DEPART — Tim Insists / Group Leaves
@@ -494,43 +517,45 @@ label ch6_tedda_alive:
 label ch6_depart:
 
     "Tim's hands curled tighter. He inhaled deeply, then straightened up, determination flickering behind his nervous eyes."
+    hide roboto
+    show tim alt_pumped at center_char_kids with Dissolve(0.2)
 
     tim "I can show you the way to Tianho!"
     tim "I-I know all the fastest roads! I can help!"
 
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
-    show dorian neutral at left_char with Dissolve(0.2)
+    show chunghee normal_neutral at right_char
     chung_hee "Tim, it's too dangerous for you. You would be safer here with Tedda and Roboto."
     dorian    "Chung-hee's right, Tim. Even if you're smart, you're still 5 years old. If anything were to happen to you, Yuxuan would—"
+    show tim sad at center_char_kids
     tim       "Please, Mister Dorian! I don't wanna just sit here and do nothing!"
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_calm at left_char
     "I sighed."
 
+    show dorian neutral at left_char
     dorian "Dragon's bollocks. Fine. But you stay close to us, alright? And when we tell you to run, you run. No arguments. Got it?"
 
+    show tim happy at center_char_kids
     "Tim's eyes widened in shock. Then he grinned, nodding rapidly."
 
     tim       "Yes, sir."
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     chung_hee "Let's head out."
 
     show dorian neutral at left_char
     "I gave Tedda and Roboto one last look."
-
+    hide chunghee
+    hide tim
+    show tedda_human at right_char
+    show roboto happy at center_robot
+    with Dissolve(0.2)
     dorian    "Take care of Elias, okay?"
 
-    show tedda_human at right_char with Dissolve(0.2)
     "Tedda beamed, placing a hand on her hip."
 
-    tedda_alive "Obviously! Now go before you miss all the fun!"
-    show roboto happy at right_robot with Dissolve(0.2)
+    tedda "Obviously! Now go before you miss all the fun!"
     roboto      "C-C-Come home safe!"
 
-    hide tedda_alive
-    hide roboto
-    hide chunghee
-    hide dorian
     jump ch6_elevator
 
 
@@ -540,15 +565,15 @@ label ch6_depart:
 
 label ch6_elevator:
 
-    # scene cg_black with fade                    # PLACEHOLDER — black screen (elevator interior)
+    scene black with fade               
+    stop music fadeout 1.5
 
-    # stop music fadeout 1.5
-
-    "Tim led us through a dimly lit corridor, the soft hum of machinery whispering through the walls. At the end stood a small, unassuming elevator, its metal frame dull and scratched with age. No buttons. No panels. Just a smooth reflective surface."
+    "Tim led us through a dimly lit corridor, the soft hum of machinery whispering through the walls. At the end stood a small, unassuming elevator, its metal frame dull and scratched with age."
+    "No buttons. No panels. Just a smooth reflective surface."
     "Without a word, Tim stepped forward. A soft blue light flickered to life, scanning his face with a faint beep."
 
-    lab_door "Attention. Facial recognition is currently in progress."
-    lab_door "Identity confirmed. Going above ground. Take care, Mister Tim."
+    door_voice "Attention. Facial recognition is currently in progress."
+    door_voice "Identity confirmed. Going above ground. Take care, Mister Tim."
 
     "The elevator jolted, then ascended so smoothly it felt like we weren't moving at all. A moment later, the doors slid open with a quiet hiss."
 
@@ -562,81 +587,115 @@ label ch6_elevator:
 label ch6_overlooking:
 
     # scene bg_tianho_overlooking_night with fade # PLACEHOLDER — rocky outcrop, Tianho below — use bg_tianho_city_night
-    scene bg_tianho_city_night with fade
+    scene bg_tianho_deng_night with fade
 
     # play music ost_tianho_night fadein 2.0      # PLACEHOLDER — tense quiet night theme
     # play audio amb_tianho_night loop fadein 1.5 # PLACEHOLDER — ruin-night ambient
 
-    "We stepped out into what looked like a rocky outcrop, hidden beneath a thick canopy of gnarled trees. The entrance behind us disappeared, concealed beneath layers of foliage and jagged stone. The air smelled of damp earth and moss, the ground uneven beneath my boots."
-    "Tim moved ahead, brushing past thick vines and branches that had been carefully arranged to keep the entrance secret. He pointed past the trees, toward a cluster of makeshift structures nestled in the valley below."
-
+    "We stepped out into what looked like a rocky outcrop, hidden beneath a thick canopy of gnarled trees."
+    "The entrance behind us disappeared, concealed beneath layers of foliage and jagged stone. The air smelled of damp earth and moss, the ground uneven beneath my boots."
+    "Tim moved ahead, brushing past thick vines and branches that had been carefully arranged to keep the entrance secret."
+    "He pointed past the trees, toward a cluster of makeshift structures nestled in the valley below."
+    show tim normal at right_char_kids 
+    show dorian serious at left_char
+    with Dissolve(0.2)
     tim "That's Tianho."
 
     show dorian sad at left_char with Dissolve(0.2)
     "I followed his gaze, my stomach twisting at the sight before me."
     "I couldn't help but compare it to before. Before the Tragedy."
+    hide tim
+    hide dorian
+    with Dissolve(0.1)
     "Before the flames. Before the screams."
     "Before the Death God. Before the Emperor. Before the Yaoguai King."
     "Tianho—if you could even call it that anymore—looked nothing like the grand city it had once been."
     "Gone were the towering pagodas, the intricate wooden bridges that once spanned the rivers like delicate ribbons."
-    "It was a makeshift village, hastily built upon the bones of the old Tianho. Wooden scaffolding clung to the remnants of once-magnificent buildings, their broken walls patched with mismatched planks and scavenged stone."
-
+    "It was a makeshift village, hastily built upon the bones of the old Tianho."
+    "Wooden scaffolding clung to the remnants of once-magnificent buildings, their broken walls patched with mismatched planks and scavenged stone."
     "Tim adjusted the straps of his satchel and glanced up at me."
 
+    show tim normal at right_char_kids 
+    show dorian serious at left_char
+    with Dissolve(0.2)
     tim "We'll have to walk the rest of the way. It's not far—just a short walk."
 
     show dorian neutral at left_char
     "I nodded, then turned to Chung-hee."
-
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
+    hide tim
+    show chunghee normal_neutral at right_char with Dissolve(0.2)
     dorian    "Chung… earlier, you were floating. Why aren't you doing that now?"
 
     "Chung-hee's voice echoed in my mind, the way it always did."
 
     chung_hee "Floating attracts attention. Also, why would waste energy floating when I could just walk?"
 
+    hide chunghee
+    hide dorian
+    with Dissolve(0.1)
     "We pressed forward."
 
-    show dorian serious at left_char
+    pause 2.0
+
+    show dorian serious at left_char 
+    show tim alt_nervous at right_char_kids
+    with Dissolve(0.2)
     dorian "Stay alert."
 
     "Tim nodded, his expression growing serious."
 
     dorian "And Tim—stay close. Don't wander off."
+    show tim alt_nervous at right_char_kids with Dissolve(0.1)
     tim    "Y-Yes, sir."
 
+    show dorian angry at left_char
     "Then, I felt it—a ripple in the air, a shift in the stillness that sent a chill up my spine."
+    hide tim
+    show chunghee normal_v2 at right_char with Dissolve(0.2)
     "Chung-hee tensed beside me. He felt it too."
     "Then—footsteps."
     "Fast. Heavy."
 
-    "Out of nowhere, three Yaoguai burst into view, tearing through the dust and haze with inhuman speed. Their grotesque forms flickered in and out of sight—limbs too long, spines twisted at unnatural angles, glowing eyes burning with raw hunger."
+    scene bg_tianho_deng_night with shock_cut
+    play music audio.ost_battle loop
+    show yaoguai at center_yg with Dissolve(0.2)
+    "Out of nowhere, three Yaoguai burst into view, tearing through the dust and haze with inhuman speed."
+    "Their grotesque forms flickered in and out of sight—limbs too long, spines twisted at unnatural angles, glowing eyes burning with raw hunger."
 
+    voice audio.yg_scream
     yg "Raaaaaaawwrrr!!! Craaawwrrr!!"
 
-    show chunghee normal_angry at center_char
+    show yaoguai at right_yg 
+    show chunghee normal_angry at left_char
+    with Dissolve(0.2)
     "Chung-hee reacted instantly."
 
     chung_hee "Get back!"
 
     # play sound sfx_lightning_crack              # PLACEHOLDER — lightning SFX
+    show chunghee normal_power_up at left_char
+    "He thrust a hand forward, and the air pulsed— a sudden, invisible force slammed into the nearest Yaoguai, halting it mid-lunge."
+    voice audio.yg_screech
+    "The creature shrieked in fury, its claws scraping wildly against an unseen barrier, but it was pinned in place."
+    hide yaoguai with Dissolve(0.1)
 
-    "He thrust a hand forward, and the air pulsed— a sudden, invisible force slammed into the nearest Yaoguai, halting it mid-lunge. The creature shrieked in fury, its claws scraping wildly against an unseen barrier, but it was pinned in place."
-
+    show chunghee normal_angry at left_char
     chung_hee "Dorian, behind you!"
+    hide chunghee
 
-    show dorian serious at left_char
+    show dorian angry at left_char
+    show yaoguai at right_yg 
+    with Dissolve(0.2)
     "I spun around and the yaoguai was already upon me."
 
-    yg "Raaaaaaawwrrr!!!"
+    voice audio.yg_scream
+    yg "Raaaaaaawwrrr!!!" 
 
     "Its clawed hands stretched forward, its gaping maw snapping open, teeth like jagged shards of obsidian."
+    $ renpy.save("quick-1")
     "Too close. Too fast."
 
-    # play sound sfx_heartbeat loop               # PLACEHOLDER — tension heartbeat
-
     jump ch6_yaoguai_encounter
-
 
 # =============================================================================
 # SECTION 13: LABEL CH6_YAOGUAI_ENCOUNTER — Timed Choice D1 (Earth or Stumble)
@@ -645,66 +704,74 @@ label ch6_overlooking:
 # =============================================================================
 
 label ch6_yaoguai_encounter:
-
     $ _choice_timeout = 5.0
     menu:
-
         "Channel earth!":
             $ _choice_timeout = 0
             $ ch6_first_qtc = "earth"
-            stop sound
 
-            # play sound sfx_earth_spike          # PLACEHOLDER — earth spike SFX
+            play sound sfx_earth  # PLACEHOLDER — earth spike SFX
 
             show dorian dragon_eyes at left_char
             "My foot slammed into the ground, and a pulse of raw energy surged through my veins."
-            "A burst of sharpened rock erupted from the ground, spearing upward like a wall of jagged teeth. The Yaoguai screeched, twisting in midair to avoid the worst of it, but the stone still caught its leg—a sickening crunch."
+            "A burst of sharpened rock erupted from the ground, spearing upward like a wall of jagged teeth."
+            voice audio.yg_screech
+            "The Yaoguai screeched, twisting in midair to avoid the worst of it, but the stone still caught its leg—a sickening crunch."
 
+            voice audio.yg_scream
             yg "GRAAAHHH!!!"
 
+            voice audio.yg_screech
             "It crashed onto its side, hissing in fury."
+            hide yaoguai with Dissolve(0.1) 
 
         "Stumble!":
             $ _choice_timeout = 0
             $ ch6_first_qtc = "stumble"
             $ ch6_yaoguai_tracker += 1          # +1 yaoguai tracker
 
-            stop sound
-
-            show dorian sad at left_char
+            show dorian angry at left_char
             "My foot caught on a loose rock."
             "Shiii—"
             "I tripped, my arms flailing as the world tilted."
             "The Yaoguai pounced. Its claws raked across my side—pain exploded through me as I hit the ground hard. The impact knocked the breath from my lungs."
+            hide dorian
+            hide yaoguai
+            with Dissolve(0.1)
 
+            show tim alt_nervous at left_char_kids with Dissolve(0.2)
             tim "Mister Dorian!!"
 
             "I barely registered his voice—the Yaoguai loomed over me."
 
+            show yaoguai at right_yg with Dissolve(0.2)
+            voice audio.yg_scream
             yg "Graaaaaaawwrrr!!!"
-
+            
+            scene cg_blindinglight with shock_cut
+            # TODO: lightning sfx
             "Then, a flash of light. A bolt of lightning hit the beast."
             "The Yaoguai was sent flying—its body crashed through a tree, splintering bark on impact."
-
-            show chunghee normal_angry at center_char with Dissolve(0.2)
+            scene bg_tianho_deng_night with Dissolve(0.8)
+            show chunghee normal_power_up at right_char with Dissolve(0.2)
             "Chung-hee stood over me, eyes narrowed, hand still raised."
 
             chung_hee "Are you alright?"
-
+            show dorian serious at left_char with Dissolve(0.2)
             "I sucked in a shaky breath, pain flaring through my ribs."
 
             dorian "T-Thanks… Sorry."
 
     $ _choice_timeout = 0
+    hide chunghee
+    show tim alt_nervous at right_char_kids with Dissolve(0.2)
     "Tim's panicked scream split the air."
 
     tim "Mister! A-Another one!"
-
+    show dorian angry at left_char
     "I turned just in time to see another Yaoguai sprinting toward us from the shadows, its grotesque form blurring with unnatural speed."
 
     tim "Mister! Make a barrier! Quick!"
-
-    # play sound sfx_heartbeat loop               # PLACEHOLDER — tension heartbeat
 
     jump ch6_yaoguai_barrier
 
@@ -716,26 +783,29 @@ label ch6_yaoguai_encounter:
 # =============================================================================
 
 label ch6_yaoguai_barrier:
-
     $ _choice_timeout = 5.0
     menu:
-
         "Make a barrier made out of earth.":
             $ _choice_timeout = 0
             $ ch6_second_qtc = "earth"
-            stop sound
-
-            # play sound sfx_earth_spike          # PLACEHOLDER — earth barrier SFX
-
+            hide tim
+            show yaoguai at right_yg 
             show dorian dragon_eyes at left_char
-            "I slammed my hands together, channeling my energy into the ground."
-            "The earth rumbled."
-            "A wall of solid rock erupted between us and the Yaoguai—thick, sturdy, unyielding. The creature crashed into it headfirst, letting out a choked snarl as the impact sent it sprawling."
+            with Dissolve(0.2)
 
+            "I slammed my hands together, channeling my energy into the ground."
+            "The earth rumbled." with hpunch
+            play sound sfx_earth
+            "A wall of solid rock erupted between us and the Yaoguai—thick, sturdy, unyielding. The creature crashed into it headfirst, letting out a choked snarl as the impact sent it sprawling."
+            voice audio.yg_scream
             yg "GRAAAH—!!"
 
+            hide yaoguai with Dissolve(0.1)
+            # TODO: scratching sfx
             "I could hear it scratching, clawing, trying to scale the wall, but I had bought us time."
+            show dorian serious at left_char
 
+            show tim happy at right_char_kids with Dissolve(0.2)
             tim "You did it, sir Dorian!"
 
             show dorian normal_alt_confident at left_char
@@ -745,34 +815,42 @@ label ch6_yaoguai_barrier:
             $ _choice_timeout = 0
             $ ch6_second_qtc = "wind"
             $ ch6_yaoguai_tracker += 1          # +1 yaoguai tracker
-
-            stop sound
-
-            # play sound sfx_wind_blast           # PLACEHOLDER — wind SFX
-
-            show dorian serious at left_char
+            hide tim
+            show yaoguai at right_yg
+            show dorian dragon_eyes at left_char
+            with Dissolve(0.2)
+            play sound audio.sfx_wind
             "I thrust my hands forward, summoning the wind—a forceful gust howled to life, swirling between us and the oncoming Yaoguai."
             "For a split second, I thought it would be enough."
+            show dorian angry at left_char
             "I was wrong."
+
+            # TODO: snarling sfx
             "The Yaoguai snarled and dove straight through the whirlwind, using the momentum to propel itself faster."
 
             tim "M-Mister—!!"
 
-            show dorian sad at left_char
             "I barely had time to react before it was on me."
+
+            play sound audio.sfx_claw  
             "Sharp claws raked across my shoulder. Pain exploded through me as I staggered back."
 
+            voice audio.yg_scream
             yg "RRRAAAAGH!!!"
 
             "It reared back for another strike—"
             "BOOM!"
+            # TODO: force field sfx
             "An invisible force slammed into it, sending the creature flying into the dirt."
+            stop sound fadeout 0.5
+            hide yaoguai
 
-            show chunghee normal_neutral at center_char with Dissolve(0.2)
+            show chunghee normal_neutral at right_char with Dissolve(0.2)
             chung_hee "Dorian, take care."
 
             "I clutched my shoulder, my breath shaky."
 
+            show dorian serious at left_char
             dorian "I thought the wind would stop it…"
 
     $ _choice_timeout = 0
@@ -784,80 +862,82 @@ label ch6_yaoguai_barrier:
 # =============================================================================
 
 label ch6_yaoguai_common:
-
     if ch6_yaoguai_tracker >= 2:
-
         # GAME OVER — blood loss
         stop sound
+        stop music fadeout 2.0
 
-        show dorian sad at left_char
+        show dorian normal_alt_tense at left_char
         "Pain flared across my side. Warm, wet."
         "I pressed a hand to my ribs, and my fingers came away slick with blood."
         "Damn it. When did I—?"
 
+        show tim alt_nervous at center_char_kids with Dissolve(0.2)
         tim "M-Mister Dorian! You're bleeding!"
 
         "I staggered, my vision swaying. Too much blood. Too fast."
 
-        show chunghee normal_angry at center_char with Dissolve(0.2)
+        show chunghee normal_angry at right_char
         chung_hee "Dorian! We need to find Niko. Fast!"
 
         "But the ground tilted beneath me, my legs buckling. I hit my knees."
+        scene black with fade                # PLACEHOLDER — black screen
         "Darkness…"
         "Please… Not now…"
 
-        # scene cg_black with fade                # PLACEHOLDER — black screen
-
-        # stop music fadeout 1.0
-        # stop audio
-
-        pause 1.5
+        stop music fadeout 1.0
+        stop audio
+        pause 1.5   
 
         "Reload your last save and avoid taking hits from the Yaoguai."
 
         pause 1.0
-
-        return
+        jump game_over
 
     else:
-
-        stop sound
-
+        show dorian serious at left_char
         "The remaining Yaoguai snarled, their bodies twitching, their eyes locked on us."
 
-        show dorian serious at left_char
         dorian    "They're… a lot faster than I remember."
-        show chunghee normal_neutral at center_char with Dissolve(0.2)
+        hide tim
+        show chunghee normal_neutral at right_char with Dissolve(0.2)
         chung_hee "We need to end this quickly."
         chung_hee "Stay close to me. I have this."
 
+        show chunghee normal_power_up at right_char
         "His eyes flashed. He lifted his arms."
         "And then— Lightning."
 
         # play sound sfx_lightning_crack          # PLACEHOLDER — lightning SFX
-
-        show chunghee normal_power_up at center_char
+        hide chunghee
+        hide dorian
+        show yaoguai at center_yg 
+        with Dissolve(0.2)
         "A storm of raw electricity erupted from his fingertips, forking through the air."
         "The Yaoguai screeched as the bolts struck one, then another, then the last—lightning chaining them together in a web."
 
+        voice audio.yg_scream
         yg "GRAAAHHHHH!"
 
         "Their bodies twisted, convulsing violently—"
+        play sound audio.monster_death
+        hide yaoguai with Dissolve(0.1)
         "Then they were gone. Soot."
+    
         "Silence followed."
 
         "Chung-hee exhaled, lowering his hands. Tim clung to my side, still tense."
         "I let out a slow breath, my pulse still pounding."
 
-        show dorian smile at left_char
+        show dorian normal at left_char
+        show chunghee normal_neutral at right_char
+        with Dissolve(0.2)
         dorian    "…Remind me to never piss you off, Chung."
-        show chunghee normal_neutral at center_char
         chung_hee "…"
 
         "Chung-hee just gave me a knowing look."
+        show dorian serious at left_char
 
-        hide chunghee
-        hide dorian
         jump ch6_tianho_approach
 
 
@@ -868,25 +948,37 @@ label ch6_yaoguai_common:
 label ch6_tianho_approach:
 
     "We ran—feet pounding against the rough earth, the wind howling past us."
+    show tim normal at center_char_kids with Dissolve(0.2)
     "Tim clung to me, his small arms wrapped tightly around my neck as I carried him."
 
     tim "Go left! That way!"
 
+    hide chunghee
+    hide tim
+    show yaoguai at right_yg 
+    with Dissolve(0.2)
     "I barely had time to process his words before two more Yaoguai emerged from the shadows—twisted, snarling creatures with glowing, predatory eyes."
     "I didn't hesitate."
 
-    # play sound sfx_earth_spike                  # PLACEHOLDER — earth spike SFX
+    play sound sfx_earth          # PLACEHOLDER — earth spike SFX
 
     show dorian dragon_eyes at left_char with Dissolve(0.2)
     "With a surge of power, I slammed my foot to the ground. The earth trembled beneath us—then rose."
     "Jagged spikes of stone erupted from the ground in a split second, impaling both creatures mid-leap."
+    hide yaoguai
+    
+    voice audio.monster_death
     "A sickening crunch. A strangled howl."
     "Then—silence."
+    stop music fadeout 2.0
+    show dorian serious at left_char with Dissolve(0.1)
     "I exhaled sharply. No time to waste."
     "We pushed forward."
 
     # scene bg_tianho_post_tragedy_night with dissolve # PLACEHOLDER — Tianho ruins at night — use bg_tianho_city_on_fire
-    scene bg_tianho_city_on_fire with dissolve
+    scene tianho_food_stalls_destroyed with fade
+    stop music fadeout 2.0
+    stop sound
 
     "We reached Tianho."
     "It had been five years since the Tragedy of Tianho—five years since the city fell."
@@ -897,11 +989,11 @@ label ch6_tianho_approach:
     "We walked down streets lined with Yaoguai corpses."
     "Twisted, grotesque bodies lay motionless in the dust, limbs contorted in unnatural angles."
     "Some had deep slashes, others looked like they had rotted from the inside out."
-
-    hide dorian
+    show dorian serious at left_char 
+    show tim alt_nervous at center_char_kids
+    show chunghee normal_neutral at right_char
+    with Dissolve(0.2)
     "I lowered Tim gently to the ground. He stumbled a bit, still shaken."
-
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee immediately pulled him close, his expression unreadable."
 
     chung_hee "Stay close to me."
@@ -909,26 +1001,24 @@ label ch6_tianho_approach:
     "Tim nodded, his small fingers clutching the hem of Chung-hee's sleeve."
     "Then… I've heard voices. A hushed whisper from the shadows."
 
-    hide chunghee
     jump ch6_jiang_gao
-
 
 # =============================================================================
 # SECTION 17: LABEL CH6_JIANG_GAO — Cheng Industries Entrance / Jiang and Gao
 # =============================================================================
 
 label ch6_jiang_gao:
+    scene bg_tianho_city_night with fade
 
-    # scene bg_cheng_store_entrance_night with dissolve # PLACEHOLDER — Cheng store entrance — use bg_tianho_city_night
-    scene bg_tianho_city_night with dissolve
-
-    show soldier_gao at right_char with Dissolve(0.2)
-    show soldier_jiang at right_char with Dissolve(0.2)
+    show soldier_gao at right_char
+    show soldier_jiang at left_char
+    with Dissolve(0.2)
     gao  "Gao, look! People!"
     jiang "Hmm… Wait, Jiang… Is that—"
     gao   "Paladin Dorian? In Li Mengtia's name! It's really you!"
     jiang "Hey! Hey! Over here, sir!"
-
+    
+    hide soldier_jiang
     show dorian neutral at left_char with Dissolve(0.2)
     "I turned toward the sound, heart pounding, and there they were—peering out from a ruined storefront, their bodies pressed into the shadows."
     "They weren't in armor. No swords at their hips. Instead, they wore Cheng Industries shirts—stained, but unmistakable."
@@ -1687,7 +1777,7 @@ label ch6_vasily_ice_qtc:
             $ ch6_ice_qtc = "earth"
             stop sound
 
-            # play sound sfx_earth_spike          # PLACEHOLDER — earth wall SFX
+            play sound sfx_earth  # PLACEHOLDER — earth wall SFX
 
             show dorian dragon_eyes at left_char
             "I slammed my foot into the ice. A wall of jagged stone and ice shot up in front of me just as Vasily's beam struck."
@@ -1945,7 +2035,7 @@ label ch6_feng_appears:
 
     yg "SKREEEEEAAAAAAAAAAAARGHHH!!"
 
-    # play sound sfx_wind_blast                   # PLACEHOLDER — wind SFX
+    play sound audio.sfx_wind                   # PLACEHOLDER — wind SFX
 
     show dorian serious at left_char
     "I stepped forward, thrusting my arms out. The wind howled with me."

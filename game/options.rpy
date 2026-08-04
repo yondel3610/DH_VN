@@ -14,13 +14,13 @@
 
 # TODO: change build name and version on release
 # define config.name = _("Dragon's Heart: Crimson Rebirth")
-define config.name = _("Dragon's Heart: demo version")
+define config.name = _("Dragon's Heart: DEMO EDITION")
 
 ## The version of the game.
 # game version docs:
 # [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "dev 1.8.3"
+define config.version = "dev 1.5.2"
 # define config.version = "alpha 1.2.0"
 # define config.version = "demo 1.2.0"
 
@@ -189,7 +189,6 @@ init python:
     build.documentation('*.html')
     build.documentation('*.txt')
 
-
 ## A Google Play license key is required to perform in-app purchases. It can be
 ## found in the Google Play developer console, under "Monetize" > "Monetization
 ## Setup" > "Licensing".
@@ -247,4 +246,4 @@ label scene_black():
     scene black with fade
     return
 
-define build.directory_name = "Dragon's Heart"
+define build.directory_name = "DragonsHeart"

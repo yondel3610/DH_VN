@@ -109,7 +109,7 @@ label chapter_5:
 # =============================================================================
 
 label ch5_lab_entrance:
-    # play sound sfx_earth_open
+    play sound sfx_earth
     show dorian dragon_eyes at left_char
     "I planted my feet firmly on the damp ground and extended my hand."
     "The earth rumbled beneath my palm, shifting and parting at my command." with vpunch
@@ -4468,8 +4468,8 @@ label ch5_nightmare:
         duration=3.0
     )
     pause 3.0
-    jump demo
-    # jump chapter_6
+    # jump demo
+    jump chapter_6
 
 
 # =============================================================================

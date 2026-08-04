@@ -3111,11 +3111,11 @@ label ch4_draconic_fire:
     "There wasn't much time."
     hide aoi_battle_suit with Dissolve(0.1)
 
-    play sound sfx_earth
 
     show dorian normal_alt_calm at left_char
     "I took a deep breath, slamming my palms into the earth."
     show dorian dragon_eyes at left_char
+    play sound sfx_earth
     "The ground rumbled and groaned beneath us as I focused. a wide opening formed, a tunnel descending into the depths below." with vpunch
 
     voice audio.dorian_ch4_line89

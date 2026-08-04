@@ -403,10 +403,10 @@ define audio.niko_ch1_line13 = "audio/Chapter 1/Niko_Chapter 1/NIKO-CHAPTER-1.13
 
 # Kaito
 define audio.kaito_ch1_line1 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.1.ogg"  # transcript: "Good morning. It's an honor"
-define audio.kaito_ch1_line6 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.2.ogg"  # transcript: "Brother"
-define audio.kaito_ch1_line6 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.3.ogg"  # transcript: "Please, I only want to"
-define audio.kaito_ch1_line6 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.4.ogg"  # transcript: "Mercy Brother, I think we"
-define audio.kaito_ch1_line6 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.5.ogg"  # transcript: "Yeah, keep your damn position"
+define audio.kaito_ch1_line2 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.2.ogg"  # transcript: "Brother"
+define audio.kaito_ch1_line3 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.3.ogg"  # transcript: "Please, I only want to"
+define audio.kaito_ch1_line4 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.4.ogg"  # transcript: "Mercy Brother, I think we"
+define audio.kaito_ch1_line5 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.5.ogg"  # transcript: "Yeah, keep your damn position"
 define audio.kaito_ch1_line6 = "audio/Chapter 1/Kaito_Chapter 1/KAITO-CHAPTER-1.6.ogg"  # transcript: "You people are awful."
 
 # Gao

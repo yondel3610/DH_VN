@@ -314,7 +314,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            # textbutton _("Prefs") action ShowMenu('preferences')
 
 
 # This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -418,12 +418,7 @@ style navigation_button_text:
 screen main_menu():
     ## This ensures that any other menu screen is replaced.
 
-    # on "show" action Function(cycle_main_menu_bg)
-    # on "show" action With(fade)
-
-    # on "show" action Play("music", audio.main_menu_music, fadein=2.0, loop=True)
-    # on "hide" action Stop("music", fadeout=2.0)
-
+    tag menu
     default bg_index = 0
     default bgs = ["gui/main_menu_1.png", "gui/main_menu_2.png", "gui/main_menu_3.png"]
 
@@ -536,10 +531,6 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
     textbutton _("Return"):
         style "return_button"
         action Return()
-    label title
-    if main_menu:
-        key "game_menu" action ShowMenu("main_menu")
-
 
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty
@@ -685,11 +676,11 @@ screen about():
 
             null height 20
             text _("Created with Ren'Py [renpy.version_only]") size 20 color "#888888"
-            text _("© 2025-2026 Temers Studio ") size 20 color "#888888"   
+            text _("© 2026 Temers Studio ") size 20 color "#888888"   
             null height 30 
 
         textbutton _("Back"):
-            action ShowMenu("preferences")
+            action ShowMenu("settings")
             xalign 0.0
             yalign 1.0
             xoffset 20

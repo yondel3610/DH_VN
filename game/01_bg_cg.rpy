@@ -161,6 +161,12 @@ image tianho_food_stalls_fire: # TIANHO FOOD STALLS ON FIRE ASSET | to be used f
     xalign 0.5
     yalign 1.0
 
+image tianho_food_stalls_destroyed: 
+    "images/Assets/Background/Tianho Food Stalls destroyed.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image bg_tianho_underground_2:
     "images/Assets/Background/Underground Lights Off (1).png" # TODO: check if correct
     size (1920, 1080)
