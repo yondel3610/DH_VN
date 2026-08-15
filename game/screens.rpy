@@ -345,6 +345,12 @@ style quick_button_text:
 # Navigation screen
 # This screen is included in the main and game menus, and provides navigation
 # to other menus, and to start the game.
+transform hover_float:
+    on hover:
+        easein 0.15 yoffset -4
+    on idle:
+        easein 0.15 yoffset 0
+
 default lastsave = renpy.newest_slot(r"\d+-\d+")
 screen navigation():
     vbox:
@@ -361,16 +367,16 @@ screen navigation():
             #     textbutton _("Debug: [_qs]") action NullAction()
 
             if FileLoadable("quick-1"):
-                textbutton _("Continue") action FileLoad("quick-1")
+                textbutton _("Continue") action FileLoad("quick-1") at hover_float
             elif lastsave is not None:
-                textbutton _("Continue") action FileLoad(lastsave)
+                textbutton _("Continue") action FileLoad(lastsave) at hover_float
 
-            textbutton _("Start") action Start()
-            textbutton _("Load Game") action ShowMenu("load")
-            textbutton _("Settings") action ShowMenu("settings")
+            textbutton _("Start") action Start() at hover_float
+            textbutton _("Load Game") action ShowMenu("load") at hover_float
+            textbutton _("Settings") action ShowMenu("settings") at hover_float
 
             if renpy.variant("pc"):
-                textbutton _("Quit") action Quit(confirm=True)
+                textbutton _("Quit") action Quit(confirm=True) at hover_float
 
         else: #in-game menu buttons
             textbutton _("History") action ShowMenu("history")
@@ -1030,27 +1036,18 @@ screen settings():
                 vbox:
                     xoffset 30
                     spacing 8
-                    $ unseen_symbol = "☑" if preferences.skip_unseen else "☐"
-                    textbutton "[unseen_symbol] Unseen Text":
+                    textbutton _("Unseen Text"):
+                        style "check_button"
                         action Preference("skip", "toggle")
-                        if preferences.skip_unseen:
-                            text_color "#88ff88"
-                        else:
-                            text_color "#cccccc"
-                    $ after_symbol = "☑" if preferences.skip_after_choices else "☐"
-                    textbutton "[after_symbol] After Choices":
+                        text_selected_color "#88ff88"
+                    textbutton _("After Choices"):
+                        style "check_button"
                         action Preference("after choices", "toggle")
-                        if preferences.skip_after_choices:
-                            text_color "#88ff88"
-                        else:
-                            text_color "#cccccc"
-                    $ trans_symbol = "☐" if preferences.transitions else "☑"
-                    textbutton "[trans_symbol] Transitions":
+                        text_selected_color "#88ff88"
+                    textbutton _("Transitions"):
+                        style "check_button"
                         action InvertSelected(Preference("transitions", "toggle"))
-                        if not preferences.transitions:
-                            text_color "#88ff88"
-                        else:
-                            text_color "#cccccc"
+                        text_selected_color "#88ff88"
                 null height 10
 
                 # ── Text Speed ──
@@ -1108,8 +1105,9 @@ screen settings():
                     null height 5
                     if config.has_music or config.has_sound or config.has_voice:
                         textbutton _("Mute All"):
+                            style "check_button"
                             action Preference("all mute", "toggle")
-                            text_size 18
+                            text_size 30
 
             elif tab == "display":
                 if renpy.variant("pc") or renpy.variant("web"):

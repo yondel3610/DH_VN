@@ -199,6 +199,18 @@ image cg_emperor_arrival:
     xalign 0.5
     yalign 1.0
 
+image cg_dorian_yg_fight:
+    "images/Assets/Illustrations/5 - Dorian vs Yaoguai .jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_dorian_yg_fight_night:
+    "images/Assets/Illustrations/5.5 - dorian vs yg night.png"
+    zoom 1.2
+    xalign 0.5
+    yalign 1.0
+
 image cg_taotie_fight:
     "images/Assets/Illustrations/6 - Taotie Fight.png"
     size (1920, 1080)
@@ -441,6 +453,12 @@ image cg_hundun_attack:
     xalign 0.5
     yalign 1.0
 
+image cg_vasily_clones:
+    "images/Assets/Illustrations/32.6 - cg_vasily_clones.png"
+    zoom 1.22
+    xalign 0.5
+    yalign 1.0
+
 image cg_chung_slay_hundun:
     "images/Assets/Illustrations/33 - Chung hee slays hundun colored.png"
     size (1920, 1080)
@@ -449,7 +467,7 @@ image cg_chung_slay_hundun:
 
 image cg_feng_aoi:
     "images/Assets/Illustrations/34 - Feng and Aoi.png"
-    size (1920, 1080)
+    zoom 1.10
     xalign 0.5
     yalign 1.0
 
@@ -705,5 +723,12 @@ image underground_door_scan:
     "images/Assets/Background/UndergroundDoorScanning.png"
     fit "contain"
     # zoom 1.1
+    xalign 0.5
+    yalign 1.0
+
+image tianho_hundun_haze:
+    "images/Assets/Background/Tianho - Haze.png"
+    fit "contain"
+    zoom 1.05
     xalign 0.5
     yalign 1.0

@@ -127,6 +127,7 @@ transform left_elias:
 # tt - taotie
 # qq - qiongqi
 # yo - yuki onna
+# hd - hundun
 # ==========================================
 transform left_yg:
     xalign -0.15  
@@ -223,6 +224,44 @@ transform silhouette_reveal_yo_right:
     yoffset 40
     ease 3 matrixcolor IdentityMatrix()
 
+transform left_hd:
+    xalign -0.15
+    yalign 0.45
+    zoom 1.75
+    yoffset 40
+
+transform right_hd:
+    xanchor 0.5 # used to invert image
+    xzoom -1.0 # used to invert image
+    xalign 1.80
+    yalign 0.45
+    zoom 1.75
+    yoffset 40
+    
+transform silhouette_hd:
+    matrixcolor TintMatrix("#000000") * BrightnessMatrix(-0.5)
+    xanchor 0.5 # used to invert image
+    xzoom -1.0 # used to invert image
+    xalign 1.80
+    yalign 0.45
+    zoom 1.75
+    yoffset 40
+
+transform silhouette_reveal_hd:
+    matrixcolor TintMatrix("#000000") * BrightnessMatrix(-0.5)
+    xanchor 0.5 # used to invert image
+    xzoom -1.0 # used to invert image
+    xalign 1.80
+    yalign 0.45
+    zoom 1.75
+    yoffset 40
+    ease 3 matrixcolor IdentityMatrix()
+
+transform center_hd:
+    xalign 0.5
+    yalign 0.45
+    zoom 1.75
+    yoffset 40
 
 # ==========================================
 # CENTER + SILHOUETTE
@@ -481,3 +520,17 @@ image snow_blizzard_1 = CreateFlutterParticles(
     xspeed=(-10, 10), yspeed=(60, 100),
     flutter_width=50, flutter_xtime=(6, 10)
 )
+
+# Elara (Hundun effect)
+transform distort_mild:
+    function WaveShader(
+        amp=3.0, period=3.0, speed=1.0,
+        direction="both", damp=1.0
+    )
+
+transform distort_severe:
+    function WaveShader(
+        amp=22.0, period=8.0, speed=1.4,
+        direction="both", damp=1.0,
+        double="both"
+    )

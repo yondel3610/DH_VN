@@ -30,7 +30,6 @@ label chapter_6:
     pause 3.0
     scene spare_room with fade
 
-    
 
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     elias "Daddy! Daddy! Wake up!"
@@ -1029,39 +1028,59 @@ label ch6_jiang_gao:
 
     "I barely held back the urge to grab them, to make sure they were real."
     "Gao smirked and pointed at his shirt."
+    show dorian neutral at left_char
 
     gao  "We work for Cheng Industries now! Here at Cheng's, we make ch—"
 
     "Jiang rolled his eyes."
 
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     jiang "Change. *Hums a tone* Yes, anyway…"
 
     "He cleared his throat."
 
     jiang "You must be looking for Miss Weng… She's with your friends."
-    show dorian neutral at left_char
     dorian "You know Miss Weng?"
     jiang "She's our supervisor… in a way."
+    hide soldier_jiang
+    show soldier_gao at right_char with Dissolve(0.2)
     gao   "She's with the doctor, and the guy with the pink hair."
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     jiang "Idiot. It's not pink. It's violet."
+    hide soldier_jiang
+    show soldier_gao at right_char with Dissolve(0.2)
     gao   "Sir, it's been a while! How are—"
+
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     jiang "Don't raise your voice too much, Gao. That thing might see us."
     show dorian serious at left_char
+
     dorian "He's right, Gao. Where are the others?"
+
+    hide soldier_jiang
+    show soldier_gao at right_char with Dissolve(0.2)
     gao   "H-Hiding, sir. Many are wounded. They're hiding inside this store."
+
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     jiang "The doctor is trying to heal the injured."
 
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee's sharp gaze flicked between us."
-
     chung_hee "Do you know these people, Dorian?"
+
     show dorian neutral at left_char
     dorian    "Yeah, I've fought with them during the Tragedy of Tianho."
 
     "Tim's worry hadn't left his face."
-
+    hide chunghee
+    show tim alt_nervous at center_char_kids with Dissolve(0.2)
     tim "But… they're hiding from something… Shouldn't we hide too?"
 
+    show dorian serious at left_char
     "I glanced at him. He's right. It's too dangerous for him to be out in the open. I gestured toward Jiang."
 
     jiang "Got it, Paladin. We'll make sure he's safe."
@@ -1073,10 +1092,8 @@ label ch6_jiang_gao:
 
     "They took him to hide behind the storefront, their eyes still watching."
     "Then—"
-    "The ground trembled."
+    "The ground trembled." with hpunch
 
-    hide soldier_gao
-    hide soldier_jiang
     jump ch6_hundun_appears
 
 
@@ -1087,28 +1104,25 @@ label ch6_jiang_gao:
 label ch6_hundun_appears:
 
     # scene bg_tianho_post_tragedy_night with dissolve # PLACEHOLDER — Tianho ruins — use bg_tianho_city_on_fire
-    scene bg_tianho_city_on_fire with dissolve
+    scene bg_tianho_city_night with dissolve
 
-    # play music ost_hundun_theme fadein 0.5      # PLACEHOLDER — Hundun theme
+    # TODO: play sound fadein 0.5      # PLACEHOLDER — Hundun theme
 
     "A wet, gurgling sound slithered through the alleyways of Tianho."
     "It wasn't footsteps. It wasn't breathing."
     "It was something else."
     "A noise so unnatural it sent a shiver down my spine."
 
-    show soldier_jiang at right_char with Dissolve(0.2)
+    show soldier_jiang at left_char
+    show soldier_gao at right_char
+    with Dissolve(0.2)   
+    
     jiang "Li Mengtia, save us…"
-    show soldier_gao at right_char with Dissolve(0.2)
     gao   "D-Don't you wanna hide with us, Paladin Dorian?"
 
     "And then I saw it."
-
-    # scene cg_hundun_form with dissolve          # PLACEHOLDER — cg_hundun_form, no asset declared
-    # pause 1.5
-    # scene bg_tianho_city_on_fire with dissolve
-
+    scene cg_hundun_attack with shock_cut
     # play sound sfx_hundun_whisper               # PLACEHOLDER — Hundun whisper SFX
-
     "A massive, shifting mass of flesh and darkness loomed above us, writhing and twisting in unnatural ways."
     "Its form was never still."
     "Limbs sprouted and folded, then vanished back into the mass."
@@ -1120,26 +1134,38 @@ label ch6_hundun_appears:
 
     tim "A… Hundun…"
 
-    show chunghee normal_serious at center_char with Dissolve(0.2)
+    scene bg_tianho_city_night with dissolve
+    show dorian serious at left_char
+    show chunghee normal_neutral at right_char
+    show tim alt_nervous at center_char_kids
+    with Dissolve(0.2)
     "Chung-hee approached me, his gaze not leaving the monster's."
 
     chung_hee "I take it this isn't just another Yaoguai?"
-    show dorian serious at left_char with Dissolve(0.2)
     dorian    "Don't you have this creature in Kyeongjang?"
-    show chunghee normal_neutral at center_char
     chung_hee "No, I- I haven't read about this. This is foreign to me…"
+
+    show tim think at center_char_kids
     tim       "Hundun… it means 'chaos.' It's not like the others. I've read about it. In Li Mengtia's bibliography page 237."
     dorian    "How so?"
     tim       "Chaos. Confusion. It moves in ways you can't predict. If you watch it too long, you'll start seeing things that aren't real."
+    show tim alt_nervous at center_char_kids
     tim       "Hunduns confuse people and… they eat them."
 
-    show soldier_gao at right_char
     "Gao took an uneasy step back."
+    hide chunghee
+    hide tim
+    show soldier_jiang at right_flip
+    show soldier_gao at center_char
+    with Dissolve(0.2)
 
     gao   "Holy… So that's why people have been hiding."
     jiang "Once people started seeing that thing, they're minds are all muddied."
     show dorian normal_alt_annoyed at left_char
     dorian "Tch. Just my lucky day."
+    show dorian serious at left_char
+
+    scene cg_hundun_attack with dissolve
 
     "The Hundun rippled."
     "Its many mouths opened at once."
@@ -1153,7 +1179,10 @@ label ch6_hundun_appears:
 
     "The air itself warped, twisting like a heat mirage. The world wavered at the edges of my vision, everything doubling, then tripling—Chung-hee, Tim, Jiang, Gao, the Hundun."
 
-    show dorian sad at left_char
+    scene tianho_hundun_haze with Dissolve(0.4)
+    show dorian angry at left_char
+    show hundun at right_hd
+    with Dissolve(0.2)
     dorian "W-What the…"
 
     "Too many."
@@ -1163,20 +1192,29 @@ label ch6_hundun_appears:
     hundun "Mhmhmhmhmhm…"
 
     "I blinked—once, twice—only to find that my own hands were shifting before my eyes, fingers elongating and twisting. The ground beneath me felt wrong—soft, then hard, then liquid."
-    "Tianho itself flickered before my eyes. No longer a struggling city in recovery, but a warped nightmare—buildings bending at impossible angles, their windows wide and dark like gaping mouths. The sky above churned in a swirling abyss, the color of rotting ink."
+    "Tianho itself flickered before my eyes."
+    "No longer a struggling city in recovery, but a warped nightmare—buildings bending at impossible angles, their windows wide and dark like gaping mouths."
+    "The sky above churned in a swirling abyss, the color of rotting ink."
 
+    hide dorian
+    hide hundun
+
+    show soldier_jiang at left_char
+    show soldier_gao at right_char
+    with Dissolve(0.2)
     jiang "Come here, Paladin! Hahaha! We won't bite!"
     gao   "Hahahaha! Your blood will be perfect for our dinner!"
+    hide soldier_jiang
+    hide soldier_gao
 
+    show dorian normal_alt_tense at left_char
+    show hundun at right_hd
+    with Dissolve(0.2)
     "My breath hitched."
     "All of a sudden, Chung-hee's voice echoed in my mind."
 
     chung_hee "Dorian. Listen to me."
 
-    hide soldier_gao
-    hide soldier_jiang
-    hide chunghee
-    hide dorian
     jump ch6_hundun_illusion_1
 
 
@@ -1186,26 +1224,35 @@ label ch6_hundun_appears:
 
 label ch6_hundun_illusion_1:
 
-    # scene bg_tianho_dorians_room with shock_cut # PLACEHOLDER — Dorian's Tianho room (illusion), no asset declared
+    scene bg_dorians_room with shock_cut # PLACEHOLDER — Dorian's Tianho room (illusion), no asset declared
     # play music ost_illusion_family fadein 0.5   # PLACEHOLDER — distorted warmth theme
-
+    pause 1.5
     "It was sharp, cutting through the suffocating fog in my mind."
 
     chung_hee "What you're seeing is the Hundun. It's digging into your thoughts, warping your perception. You must trust me."
 
-    show dorian sad at left_char with Dissolve(0.2)
+    show dorian serious at left_char with Dissolve(0.2)
     "I swallowed hard, clutching my head as another vision flickered before me—"
+    show dorian sad at left_char
+    show elara at right_char with Dissolve(0.2)
     "Elara."
     "She stood just ahead, her red hair flowing as she reached out to me. Behind her, Emily, Sarah, Daniel, and Lucas—small hands outstretched, eyes wide with tears."
 
-    show elara at center_char with Dissolve(0.2)
     dorian "E-Elara?! What are you doing here—"
 
-    lucas  "Dad come back!"
-    emily  "We miss you!"
+    show lucas at center_char_kids with Dissolve(0.2)
+    lucas "Dad come back!"
+    hide lucas
+    show emily at center_char_kids with Dissolve(0.2)
+    emily "We miss you!"
+    hide emily
+    show daniel at center_char_kids with Dissolve(0.2)
     daniel "We missed you so much!"
-    sarah  "Come here, dad!"
-    elara  "Dorian."
+    hide daniel
+    show sarah at center_char_kids with Dissolve(0.2)
+    sarah "Come here, dad!"
+    hide sarah with Dissolve(0.1)
+    elara "Dorian."
 
     "She stepped forward, arms outstretched, a smile pulling at her lips."
 
@@ -1224,10 +1271,14 @@ label ch6_hundun_illusion_1:
     # scene bg_tianho_food_stalls_fire with shock_cut # PLACEHOLDER — food stalls on fire (nightmare) — use tianho_food_stalls_fire
     scene tianho_food_stalls_fire with shock_cut
 
-    show dorian angry at left_char
+    show dorian angry at left_char 
+    show elara at right_char
+    with Dissolve(0.2)
+
     "I clenched my jaw."
     "The illusions flickered."
     "The children's eyes darkened—turning black, hollow, hungry."
+    show elara at distort_mild with Dissolve(0.2)
     "Elara's face twitched."
     "For a fraction of a second, the warmth in her smile cracked."
 
@@ -1237,20 +1288,25 @@ label ch6_hundun_illusion_1:
 
     "I slammed my fists together."
 
-    # play sound sfx_draconic_fire                # PLACEHOLDER — fire eruption SFX
 
-    show dorian dragon_eyes at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
     "Flames erupted from my hands—bright, wild, furious."
+    play sound audio.sfx_fire_explosion
     "I thrust my arms forward, sending a torrent of fire surging toward them."
     "The illusion shattered like glass."
+    camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
+    with shattered_glass_transition
+    hide elara with Dissolve(0.1)
     "The warm, familiar faces of my loved ones morphed."
-    "Elara's soft features melted into a grotesque, many-mouthed horror. The children's arms stretched into clawed appendages. Their eyes turned into endless, soulless pits."
+    camera
 
+    "Elara's soft features melted into a grotesque, many-mouthed horror. The children's arms stretched into clawed appendages. Their eyes turned into endless, soulless pits."
+    show hundun at silhouette_hd with Dissolve(0.8)
     # play sound sfx_illusion_shatter             # PLACEHOLDER — shatter SFX
 
-    hide elara
     "Its true form coiled in the darkness—its many mouths stretched wide, jagged teeth gnashing in fury."
     "It screamed."
+    show hundun at silhouette_reveal_hd with Dissolve(0.3)
     "Not one voice. Not two. A thousand voices."
 
     hundun "You. Reject. Us. Hmmmmrnmmmm…"
@@ -1273,19 +1329,23 @@ label ch6_vasily_room:
 
     # scene bg_mjoll_palace_throne with shock_cut # PLACEHOLDER — Mjoll throne room (illusion) — use mjoll_palace_throne
     scene mjoll_palace_throne with shock_cut
-    # play music ost_vasily_illusion fadein 0.3   # PLACEHOLDER — eerie familiarity theme
+    # play music ost_vasily fadein 0.3   # PLACEHOLDER — eerie familiarity theme
 
     "The world collapsed in on itself."
     "The ruined streets of Tianho vanished, replaced by a throne room. A lavish throne room in Mjoll. As I remembered it."
 
     show vasily alt_think at center_char with Dissolve(0.2)
-    vasily_illusion "My, my. Dorian my friend. Still as temperamental as ever, I see."
-    vasily_illusion "Do tell me, how's the Prince?"
+    vasily "My, my. Dorian my friend. Still as temperamental as ever, I see."
+    vasily "Do tell me, how's the Prince?"
 
-    show dorian serious at left_char with Dissolve(0.2)
+    show vasily neutral at right_char 
+    show dorian serious at left_char
+    with Dissolve(0.2)
     dorian "Vasily…"
 
     "The words barely left my lips before he multiplied."
+    show dorian angry at left_char
+    show vasily alt_savage at right_char
     "One Vasily. Then two. Then four. Then dozens—standing at every corner of the throne room, each an exact copy, each watching me with those sharp, amused eyes."
 
     chung_hee "Be careful, Dorian… This is a trap."
@@ -1293,15 +1353,18 @@ label ch6_vasily_room:
 
     "I could feel it. The pressure building around me."
     "Vasily was channeling light."
+    scene vasily_attack with shock_cut
     "The illusions layered on top of each other, twisting, warping, shifting. The throne room flickered—too bright, too dark, too blinding."
     "My heartbeat pounded in my ears."
 
-    show vasily alt_aggressive at center_char
-    vasily_illusion "What's the matter, old friend? Confused?"
+    vasily "What's the matter, old friend? Confused?"
+    scene mjoll_palace_throne with shock_cut
 
+    show dorian angry at left_char 
+    show vasily alt_aggressive at right_char
+    with Dissolve(0.2)
+    $ renpy.save("quick-1")
     "I ground my teeth. I had to make a decision—fast."
-
-    # play sound sfx_heartbeat loop               # PLACEHOLDER — heartbeat tension
 
     jump ch6_vasily_qtc
 
@@ -1313,108 +1376,104 @@ label ch6_vasily_room:
 # =============================================================================
 
 label ch6_vasily_qtc:
-
     $ _choice_timeout = 5.0
     menu:
-
         "Attack the Vasily who speaks the most.":
             $ _choice_timeout = 0
             $ ch6_vasily_qtc = "speak_most"
-            stop sound
 
-            show dorian serious at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I struck first—but my hand went straight through the illusion."
-
+            
+            show dorian angry at left_char
             dorian "W-What?"
 
-            show vasily alt_savage at center_char
-            vasily_illusion "No hard feelings, old friend."
+            show vasily alt_savage at right_char
+            vasily "No hard feelings, old friend."
 
+            scene cg_blindinglight with shock_cut
             "A blinding flash of bright light came. Light seared through my side, burning hot, ripping through flesh like molten steel."
 
-            show dorian sad at left_char
             dorian "Ahhhh!!! F—"
-
             "I hit the ground hard, vision swimming, my nerves screaming in agony. Above me, Vasily loomed, smirking, his sharp eyes gleaming in the flickering light."
 
-            vasily_illusion "It hurts. Doesn't it, old friend?"
-            vasily_illusion "Call it karma. Or revenge."
+            vasily "It hurts. Doesn't it, old friend?"
+            vasily "Call it karma. Or revenge."
 
             chung_hee "DORIAN, NO!"
 
             "And then darkness swallowed me whole."
-
-            # scene cg_black with fade            # PLACEHOLDER — black screen
-            # stop music fadeout 1.0
-            # stop audio
+            scene black with fade    
+            stop music fadeout 1.0
+            stop audio
             pause 1.5
-            "Reload your last save and trust Chung-hee's guidance."
-            pause 1.0
-            return
+            jump game_over
 
         "Attack the Vasily closest to you.":
             $ _choice_timeout = 0
             $ ch6_vasily_qtc = "closest"
             stop sound
 
-            show dorian serious at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I struck first—but my hand went straight through the illusion."
-
+            
+            show dorian angry at left_char
             dorian "W-What?"
 
-            show vasily alt_savage at center_char
-            vasily_illusion "No hard feelings, old friend."
+            show vasily alt_savage at right_char
+            vasily "No hard feelings, old friend."
 
+            scene cg_blindinglight with shock_cut
             "A blinding flash of bright light came. Light seared through my side, burning hot, ripping through flesh like molten steel."
 
-            show dorian sad at left_char
             dorian "Ahhhh!!! F—"
+            "I hit the ground hard, vision swimming, my nerves screaming in agony. Above me, Vasily loomed, smirking, his sharp eyes gleaming in the flickering light."
 
-            "I hit the ground hard, vision swimming, my nerves screaming in agony. Above me, Vasily loomed, smirking."
-
-            vasily_illusion "It hurts. Doesn't it, old friend?"
-            vasily_illusion "Call it karma. Or revenge."
+            vasily "It hurts. Doesn't it, old friend?"
+            vasily "Call it karma. Or revenge."
 
             chung_hee "DORIAN, NO!"
 
             "And then darkness swallowed me whole."
-
-            # scene cg_black with fade            # PLACEHOLDER — black screen
-            # stop music fadeout 1.0
-            # stop audio
+            scene black with fade            # PLACEHOLDER — black screen
+            stop music fadeout 1.0
+            stop audio
             pause 1.5
-            "Reload your last save and trust Chung-hee's guidance."
-            pause 1.0
-            return
+            jump game_over
 
         "Close your eyes and rely on Chung-hee's mind channeling.":
             $ _choice_timeout = 0
             $ ch6_vasily_qtc = "close_eyes"
             stop sound
 
-            show dorian serious at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I shut my eyes, forcing myself to ignore the illusions."
 
-            show vasily alt_aggressive at center_char
-            vasily_illusion "What's the matter, old friend?"
-            vasily_illusion "Open your eyes before you get yourself killed! Hrmmmmmnnnn…."
+            show vasily alt_aggressive at right_char
+            vasily "What's the matter, old friend?"
+            vasily "Open your eyes before you get yourself killed! Hrmmmmmnnnn…."
 
             "Then—a voice cut through the noise."
 
             chung_hee "Third person from the left."
 
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I didn't hesitate."
+            play sound audio.sfx_fire_explosion
             "I lunged—flames igniting along my fist."
 
-            show vasily alt_mad at center_char
-            vasily_illusion "Wha-?!"
+            show vasily alt_mad at right_char
+            vasily "Wha-?!"
 
             "The moment my fire struck him, the illusions shattered like glass, breaking into shards of twisted, flickering light."
-
+            camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
+            with shattered_glass_transition
             # play sound sfx_illusion_shatter     # PLACEHOLDER — shatter SFX
 
-            vasily_illusion "AAHHH!!!"
-
+            vasily "AAHHH!!!"
+            camera
+            hide vasily
+            show hundun at right_hd with Dissolve(0.2)
             hundun "AHHHHH!!! You!!"
 
         "Use fire channeling to light up the entire room.":
@@ -1422,15 +1481,19 @@ label ch6_vasily_qtc:
             $ ch6_vasily_qtc = "fire_room"
             stop sound
 
-            # play sound sfx_draconic_fire        # PLACEHOLDER — fire SFX
+            # play sound audio.sfx_fire_explosion        # PLACEHOLDER — fire SFX
 
-            show dorian dragon_eyes at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I threw my hands up, summoning fire from deep within."
+
+            play sound audio.sfx_fire_explosion
             "The flames exploded outward, engulfing the entire room in a brilliant, raging inferno."
 
-            show vasily alt_savage at center_char
-            vasily_illusion "Graahhh!!"
+            show vasily alt_savage at right_char
+            vasily "Graahhh!!"
 
+            hide vasily
+            show hundun at right_hd with Dissolve(0.2)
             "The Hundun howled, its monstrous form recoiling from the fire."
 
             hundun "NOOOOOO!!!"
@@ -1450,30 +1513,41 @@ label ch6_rulers_illusion:
     # scene bg_mjoll_square_festive with shock_cut # PLACEHOLDER — Mjoll square (illusion) — use bg_mjoll_icelands
     scene bg_mjoll_icelands with shock_cut
 
-    show vasily alt_think at center_char
+    show vasily alt_savage at center_char
     "Vasily's grin widened, a slow, lazy smirk spreading across his face."
 
-    vasily_illusion "Time for some friends from the upper society."
-
+    vasily "Time for some friends from the upper society."
+    
+    show vasily neutral at center_char
     "He snapped his fingers."
     "The air twisted."
 
+    show king_gustav at right_char
+    show olympia at left_char
+    with Dissolve(0.2)
     "King Gustav. Empress Olympia. Emperor Min-joon."
     "Their figures stood tall and regal. I took an instinctive step back, my chest tightening."
     "Their gazes bore into me, their expressions unreadable—but their intentions were clear. Destroy me."
 
     show vasily alt_aggressive at center_char
-    vasily_illusion "Do you, by chance, remember them, old friend?"
+    vasily "Do you, by chance, remember them, old friend?"
 
-    show dorian serious at left_char
+    hide king_gustav
+    hide olympia
+    show vasily alt_aggressive at right_char
+    show dorian angry at left_char
+    with Dissolve(0.2)
     dorian "What kind of sick game is this?"
 
+    hide vasily
     show king_gustav at right_char with Dissolve(0.2)
     gustav_illusion "DIE!"
 
+    hide king_gustav
     show olympia at right_char with Dissolve(0.2)
-    "Empress Olympia: You burn everything you touch, Paladin."
+    olympia_illusion "You burn everything you touch, Paladin."
 
+    # TODO: add wind sfx
     "The winds around her howled, her presence distorting the air itself."
 
     olympia_illusion "You will die, you monster!"
@@ -1481,18 +1555,22 @@ label ch6_rulers_illusion:
     show dorian angry at left_char
     "I clenched my fists."
 
+    hide olympia
     minjoon_illusion "Your head will be ours… It will look good on a pike."
 
+    show vasily alt_savage at right_char with Dissolve(0.2)
     "My breath hitched."
     "My flames wavered—as if responding to my own doubt."
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "I could feel their power pressing down on me."
     "Could see the unwavering conviction in their eyes."
     "Was this an illusion? Or was it something more?"
     "A cold wave of fear crept into my chest, tightening like a vice."
 
+    $ renpy.save("quick-1")
     chung_hee "Dorian. Listen to me. I can feel your fear. You must let it go."
 
-    show dorian sad at left_char
+    show dorian normal_alt_calm at left_char
     "I sucked in a sharp breath."
 
     dorian "…*breathes deeply* Hrnnn…"
@@ -1508,53 +1586,54 @@ label ch6_rulers_illusion:
     chung_hee "And lastly, you shall strike down whoever is left."
 
     "The area shuddered as the rulers prepared their assault."
+    show dorian serious at left_char with Dissolve(0.1)
     "I gritted my teeth, sweat beading down my temple. Even though I knew they weren't real, their presence was so overwhelming that doubt still clawed at the edges of my mind."
+    hide dorian
+    show king_gustav at right_char
+    show vasily alt_savage at center_char 
+    show olympia at left_char
+    with Dissolve(0.2)
     "Their gazes pierced through me, judgment dripping from every word, every movement."
     "On the far left, Gustav stood unshaken, his broad form towering, his expression carved from stone."
     "Cracks spiderwebbed beneath his feet, the very earth groaning under the weight of his rage."
 
-    show king_gustav at right_char
     gustav_illusion "Prepare to die, Dorian!"
 
-    "To his right, Empress Olympia hovered mid-air, her robes billowing violently in a cyclone of shrieking wind. A hurricane twisted around her, distorting the air itself, flickers of lightning threading through the storm."
+    "To his right, Empress Olympia hovered mid-air, her robes billowing violently in a cyclone of shrieking wind."
+    "A hurricane twisted around her, distorting the air itself, flickers of lightning threading through the storm."
 
-    show olympia at right_char
     olympia_illusion "You will rue this day!"
 
     "At the center, Vasily stood, his form bathed in radiant light, his smirk so casual it sent chills down my spine. He raised his hand, and daggers of light formed at his fingertips, their edges pulsing with raw, celestial power."
 
-    show vasily alt_savage at center_char
-    vasily_illusion "A pity it has to end this way, dear friend."
+    vasily "A pity it has to end this way, dear friend."
 
     "On the far right, Emperor Min-joon stood, but he did not move. His eyes gleamed an unnatural violet, swirling with shifting patterns."
 
     minjoon_illusion "Your family died because of you. Death will be too kind of a punishment for monsters such as yourself…"
 
-    show dorian sad at left_char
+    hide king_gustav
+    hide olympia
+    show dorian angry at left_char 
+    show vasily alt_aggressive at right_char 
+    with Dissolve(0.2)
     "I staggered, my breath hitching— My body felt disconnected."
 
     chung_hee "Wait for it, Dorian."
 
     "The four figures stepped forward, power building to a breaking point—"
+    show dorian dragon_eyes at left_char
     "I tightened my fists. My flames surged."
 
-    show vasily alt_aggressive at center_char
-    vasily_illusion "LIGHTS OUT!"
+    vasily "LIGHTS OUT!"
 
-    # scene cg_black with shock_cut               # PLACEHOLDER — pitch black
+    scene black with shock_cut           
 
     "Then—pitch blackness."
     "The world vanished."
     "The ground beneath me disappeared into an abyss. I couldn't see. All I can see are shadows."
 
     chung_hee "NOW!! Hit them before they strike!"
-
-    # play sound sfx_heartbeat loop               # PLACEHOLDER — heartbeat tension
-
-    hide king_gustav
-    hide olympia
-    hide vasily
-    hide dorian
     jump ch6_darkness_qtc
 
 
@@ -1569,48 +1648,40 @@ label ch6_darkness_qtc:
 
     $ _choice_timeout = 5.0
     menu:
-
         "Hit the second shadow first, then the first, then the fourth, then the third.":
             $ _choice_timeout = 0
             $ ch6_darkness_qtc = "order_wrong_1"
             stop sound
 
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
             dorian "GRAAHHH!!"
 
             "My flames surged, my fists colliding with—nothing."
 
-            show dorian sad at left_char
             dorian "W-What?! But how?!"
 
             olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
             gustav_illusion "Foolish. Utterly foolish."
             minjoon_illusion "How disappointing. How unworthy."
-            vasily_illusion  "You always were predictable, dear friend."
+            vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
             "Then—searing, unbearable pain."
 
             dorian "AHHH!!"
 
-            vasily_illusion "THIS is my revenge. Farewell, dear friend."
+            vasily "THIS is my revenge. Farewell, dear friend."
             chung_hee       "DORIAN! NO!"
-            vasily_illusion "HAHAHAHAHAHA!!"
+            vasily "HAHAHAHAHAHA!!"
 
-            # scene cg_black with fade            # PLACEHOLDER — black screen
-            # stop music fadeout 1.0
-            # stop audio
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            pause 1.0
-            return
+            jump game_over
 
         "Hit the second shadow first, then the fourth, then the first, then the third.":
             $ _choice_timeout = 0
             $ ch6_darkness_qtc = "order_2"
             stop sound
 
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
             "I launched forward—my flames twisted in my palms, roaring to life."
             "Flames hit the targets. They shrieked as the fire engulfed them."
 
@@ -1618,7 +1689,10 @@ label ch6_darkness_qtc:
 
             olympia_illusion "AHHH!!!"
 
+            camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
+            with shattered_glass_transition
             "Her form cracked, like glass under heat—then shattered."
+            camera
 
             minjoon_illusion "AH! AH! AHHH!!!"
 
@@ -1630,78 +1704,64 @@ label ch6_darkness_qtc:
 
             hundun "Hmmmhmmmm….."
 
-            show vasily alt_think at center_char with Dissolve(0.2)
             "Vasily smirked."
 
         "Hit the fourth shadow first, then the first, then the second, then the third.":
             $ _choice_timeout = 0
             $ ch6_darkness_qtc = "order_wrong_3"
             stop sound
-
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
             dorian "GRAAHHH!!"
 
             "My flames surged, my fists colliding with—nothing."
 
-            show dorian sad at left_char
             dorian "W-What?! But how?!"
 
             olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav_illusion  "Foolish. Utterly foolish."
+            gustav_illusion "Foolish. Utterly foolish."
             minjoon_illusion "How disappointing. How unworthy."
-            vasily_illusion  "You always were predictable, dear friend."
+            vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
             "Then—searing, unbearable pain."
 
             dorian "AHHH!!"
 
-            vasily_illusion "THIS is my revenge. Farewell, dear friend."
+            vasily "THIS is my revenge. Farewell, dear friend."
             chung_hee       "DORIAN! NO!"
-            vasily_illusion "HAHAHAHAHAHA!!"
+            vasily "HAHAHAHAHAHA!!"
 
-            # scene cg_black with fade            # PLACEHOLDER — black screen
-            # stop music fadeout 1.0
-            # stop audio
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            pause 1.0
-            return
+            jump game_over
 
         "Hit the fourth shadow first, then the second, then the first, then the third.":
             $ _choice_timeout = 0
             $ ch6_darkness_qtc = "order_wrong_4"
             stop sound
 
-            show dorian dragon_eyes at left_char with Dissolve(0.2)
             dorian "GRAAHHH!!"
 
             "My flames surged, my fists colliding with—nothing."
 
-            show dorian sad at left_char
             dorian "W-What?! But how?!"
 
             olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav_illusion  "Foolish. Utterly foolish."
+            gustav_illusion "Foolish. Utterly foolish."
             minjoon_illusion "How disappointing. How unworthy."
-            vasily_illusion  "You always were predictable, dear friend."
+            vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
             "Then—searing, unbearable pain."
 
             dorian "AHHH!!"
 
-            vasily_illusion "THIS is my revenge. Farewell, dear friend."
+            vasily "THIS is my revenge. Farewell, dear friend."
             chung_hee       "DORIAN! NO!"
-            vasily_illusion "HAHAHAHAHAHA!!"
+            vasily "HAHAHAHAHAHA!!"
 
-            # scene cg_black with fade            # PLACEHOLDER — black screen
-            # stop music fadeout 1.0
-            # stop audio
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            pause 1.0
-            return
+            jump game_over
 
     $ _choice_timeout = 0
     hide dorian
@@ -1715,45 +1775,58 @@ label ch6_darkness_qtc:
 
 label ch6_vasily_final:
 
-    show vasily alt_normal at center_char with Dissolve(0.2)
-    vasily_illusion "Well done, old friend."
+    vasily "Well done, old friend."
 
     "He clapped his hands together, and the world around us shattered."
+    camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
+    with shattered_glass_transition
+    camera
 
-    # scene bg_frostcradle_ice with shock_cut     # PLACEHOLDER — Frostcradle ice wasteland — use frostcradle_blizzard
     scene frostcradle_blizzard with shock_cut
+    show snow_blizzard_1
     # play music ost_frostcradle fadein 0.5       # PLACEHOLDER — cold howling theme
     # play audio amb_blizzard loop fadein 1.0     # PLACEHOLDER — blizzard ambient
 
-    "The warmth was ripped away in an instant, replaced by a howling blizzard. The sky churned an eerie gray, thick snow pounding against my skin like frozen needles. The air burned in my lungs, each breath coming out in a white gasp."
+    "The warmth was ripped away in an instant, replaced by a howling blizzard."
+    "The sky churned an eerie gray, thick snow pounding against my skin like frozen needles."
+    "The air burned in my lungs, each breath coming out in a white gasp."
     "We stood on an endless stretch of ice, the frozen wasteland stretching in all directions. Jagged cliffs loomed in the distance, their edges sharp as broken glass."
     "Mjoll."
 
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
+    show dorian serious at left_char
+    show vasily alt_savage at right_char
+    with Dissolve(0.2)
     "I clenched my fists, flames flickering to life at my fingertips. They sputtered, struggling against the cold."
     "Vasily stood across from me, unbothered, smirking. His coat billowed in the wind, the fur-lined edges pristine despite the storm."
 
-    show vasily alt_think at center_char
-    vasily_illusion "Feels familiar, doesn't it? How many battles did we fight here, Dorian? How many nights did we spend wading through snow, side by side…"
+    vasily "Feels familiar, doesn't it? How many battles did we fight here, Dorian? How many nights did we spend wading through snow, side by side…"
 
-    show dorian serious at left_char
     dorian "Mjoll…"
 
-    show vasily alt_aggressive at center_char
-    vasily_illusion "Fitting, isn't it? Where it all started. Where we stood side by side—until you decided to betray it all."
+    show vasily alt_aggressive at right_char
+    vasily "Fitting, isn't it? Where it all started. Where we stood side by side—until you decided to betray it all."
 
     show dorian sad at left_char
     "I looked down."
 
     dorian "Look, you didn't give me a choice—"
+    show dorian serious at left_char
 
-    show vasily alt_savage at center_char
+    show vasily alt_savage at right_char
     "His eyes glowed with an unnatural radiance. Then—"
+    show cg_blindinglight with shock_cut
     "A surge of blinding light."
+    show vasily_attack with Dissolve(0.3)
     "It swirled around his hands before condensing into a searing white beam, crackling with raw power."
 
-    vasily_illusion "Let's see if you still have the strength to stand against me, Dorian."
 
+    vasily "Let's see if you still have the strength to stand against me, Dorian."  
+    scene frostcradle_blizzard with shock_cut
+    show snow_blizzard_1
+
+    show dorian dragon_eyes at left_char
+    show vasily alt_savage at right_char
+    with Dissolve(0.2)
     "The very air shimmered with heat as the beam bore down on me, faster, sharper, deadlier."
 
     # play sound sfx_heartbeat loop               # PLACEHOLDER — tension heartbeat
@@ -1777,20 +1850,21 @@ label ch6_vasily_ice_qtc:
             $ ch6_ice_qtc = "earth"
             stop sound
 
-            play sound sfx_earth  # PLACEHOLDER — earth wall SFX
-
             show dorian dragon_eyes at left_char
+            play sound sfx_earth  # PLACEHOLDER — earth wall SFX
             "I slammed my foot into the ice. A wall of jagged stone and ice shot up in front of me just as Vasily's beam struck."
             "The impact was deafening."
+
+            play sound audio.sfx_ice_explosion
             "Cracks spread through the barrier, light spilling through the fractures. The force of his attack shattered the wall, sending shards of rock and ice flying in all directions."
+            show dorian angry at left_char with Dissolve(0.1)
             "I barely had time to brace before the explosion sent me skidding backward, boots scraping against the frozen ground."
 
             "Vasily laughed, his silhouette glowing against the snow."
 
-            show vasily alt_savage at center_char
-            vasily_illusion "Hiding behind walls now? That won't save you, Dorian."
+            show vasily alt_savage at right_char
+            vasily "Hiding behind walls now? That won't save you, Dorian."
 
-            show dorian sad at left_char
             "I wiped blood from my lip."
 
         "Channel Fire.":
@@ -1798,52 +1872,62 @@ label ch6_vasily_ice_qtc:
             $ ch6_ice_qtc = "fire"
             stop sound
 
-            # play sound sfx_draconic_fire        # PLACEHOLDER — fire clash SFX
-
+            
             show dorian dragon_eyes at left_char
+            play sound audio.sfx_fire_explosion        # PLACEHOLDER — fire clash SFX
             "I threw my hands forward, summoning the flames deep within me. Fire erupted, a roaring inferno colliding with Vasily's beam."
+
+            # TODO: lava melting ice sfx
             "For a moment, the world burned white-hot—our powers clashing in a searing explosion. Ice melted in an instant, the snow beneath us turning to steam. I pushed forward, forcing the fire down the path of his light."
 
             "Vasily gritted his teeth, digging his heels into the ice."
 
-            show vasily alt_mad at center_char
-            vasily_illusion "Tch—so you still have some fight in you!"
+            show vasily alt_mad at right_char 
+            vasily "Tch—so you still have some fight in you!"
 
+            show cg_blindinglight with shock_cut 
             "He flicked his wrist. The beam split in two—one part diverting around my flames, the other curving like a spear toward my side."
+            scene frostcradle_blizzard with shock_cut
+            show snow_blizzard_1
+
+            show dorian angry at left_char
+            show vasily alt_savage at right_char
+            with Dissolve(0.2)
+
             "It grazed my ribs, a white-hot burn searing through my coat. I hissed in pain but stood my ground."
 
     $ _choice_timeout = 0
-    show vasily alt_aggressive at center_char
+    show vasily alt_aggressive at right_char
     "He raised his hand. The air shifted."
+    scene cg_vasily_clones with shock_cut
     "The ground beneath me trembled. Shadows stretched unnaturally, writhing, shifting—before bodies stepped out of them. A dozen. A hundred. A thousand."
 
-    show dorian serious at left_char
     dorian "Tsk…"
-
     "The Vasily copies moved in unison, like reflections in a shattered mirror."
 
-    vasily_illusion "You didn't think you'd get a fair fight, did you?"
+    vasily "You didn't think you'd get a fair fight, did you?"
 
     "A wall of Vasilys—perfect replicas—stared back at me. Their eyes glowed with the same ruthless cunning. Their smirks identical. A sickening, dizzying sight."
     "They stood in perfect formation, radiating a light so intense it swallowed the snowstorm in an ethereal glow. Each one moved in sync, eyes gleaming like suns."
     "Then—he laughed. A mocking, cruel sound that rang through the frozen battlefield."
 
-    show vasily alt_savage at center_char
-    vasily_illusion "Hahaha! Farewell, old friend. I'll be meeting you in Xianlun."
-
+    vasily "Hahaha! Farewell, old friend. I'll be meeting you in Xianlun."
+    scene cg_blindinglight with shock_cut
     "And then, the world erupted in blinding white. A wave of pure white radiance surged forward, folding in on itself—expanding, swallowing everything in its path."
 
-    show dorian dragon_eyes at left_char
     "I clenched my fists, breath unsteady. My body tensed, my fire flaring to life. But before I could react—"
     "Everything stopped."
+    scene frostcradle_blizzard with shock_cut
+
+    show dorian serious at left_char
+    show vasily alt_savage at right_char
+    with Dissolve(0.2)
     "The snow, mid-air, froze in place. Individual flakes suspended in time, glimmering like tiny frozen stars."
     "The clones, mid-attack, halted. Their light dimmed, their movements severed."
     "Vasily froze, his hand still raised—expression unreadable."
+    scene black with fade
     "And then—Mjoll disappeared."
     "The frozen battlefield vanished and the stench of burnt flesh filled the air."
-
-    hide vasily
-    hide dorian
     jump ch6_hundun_defeated
 
 
@@ -1853,35 +1937,37 @@ label ch6_vasily_ice_qtc:
 
 label ch6_hundun_defeated:
 
-    # scene bg_tianho_post_tragedy_night with dissolve # PLACEHOLDER — Tianho ruins, night — use bg_tianho_city_on_fire
-    scene bg_tianho_city_on_fire with dissolve
-
-    # stop audio fadeout 1.5
+    scene bg_tianho_city_night with dissolve
+    stop audio fadeout 1.5
     # play music ost_tianho_night fadein 1.0      # PLACEHOLDER — night theme returns
 
     "I was standing in Tianho again."
-
-    "The Hundun—the monstrous, shifting mass of darkness—lay on the scorched ground, its grotesque form twitching. Its many mouths hung open, jagged teeth bared, its skin blackened and peeling, thick smoke curling from its half-burned body."
+    scene cg_chung_slay_hundun with shock_cut
+    "The Hundun—the monstrous, shifting mass of darkness—lay on the scorched ground, its grotesque form twitching."
+    "Its many mouths hung open, jagged teeth bared, its skin blackened and peeling, thick smoke curling from its half-burned body."
     "A pool of shimmering darkness seeped from its wounds, writhing, alive. Its whispers were no longer mocking, no longer deceptive. Only pained."
 
     hundun "Rrrrrnnnmmmrr…"
-
-    show chunghee normal_power_up at center_char with Dissolve(0.2)
+    
     "And standing over it—his coat still billowing slightly from the residual static—was Chung-hee."
     "Lightning crackled at his fingertips, bright and sharp against the ruined cityscape."
     "For a moment, he simply looked down at the creature, his face impassive, unreadable. Then, his sharp gaze shifted to me."
-
+    scene bg_tianho_city_night with shock_cut
+    show chunghee normal_neutral at right_char
+    show dorian serious at left_char
+    with Dissolve(0.2)
     chung_hee "Are you alright, Dorian?"
-
-    show dorian neutral at left_char with Dissolve(0.2)
+    
     "His voice rang through my mind, steady and clear."
     "I exhaled—only then realizing how tightly I had been clenching my fists. My fire flickered out, my breath escaping in a sharp, ragged sigh."
 
-    dorian    "I'm fine… thanks."
+    dorian "I'm fine… thanks."
 
+    show dorian sad at left_char
     "I flexed my fingers. I still felt the lingering heat of the illusory flames from Mjoll. The memory of Vasily's voice, the blinding light, the suffocating pressure—it had felt so real."
+    show dorian serious at left_char
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     "Chung-hee tilted his head slightly, eyes narrowing as he studied me."
 
     chung_hee "I apologize for losing contact with you. The Hundun doubled down on me."
@@ -1892,35 +1978,40 @@ label ch6_hundun_defeated:
 
     "Tiny footsteps pounded against the broken ground. Tim."
 
+    show tim alt_pumped at center_char_kids with Dissolve(0.2)
     tim "I knew it! I-I knew it! This is just like the Pre-Enoch stories!"
 
     show dorian serious at left_char
     dorian "Pre-Enoch? This monster is Pre-Enoch?"
 
+    show tim normal at center_char_kids with Dissolve(0.2)
     tim "Yes, sir Dorian! In Li Mengtia's bibliography, page 237, he wrote about creatures that existed before the time of the death god Enoch!"
     tim "Before he wiped them all out four hundred years ago!"
 
-    # scene bg_cheng_store_entrance_night with dissolve # PLACEHOLDER — Cheng store exterior — use bg_tianho_city_night
-    scene bg_tianho_city_night with dissolve
-
-    show soldier_gao at right_char with Dissolve(0.2)
-    show soldier_jiang at right_char with Dissolve(0.2)
+    scene bg_tianho_city_night with Dissolve(0.1)
+    show soldier_gao at right_char
+    show soldier_jiang at left_char 
+    with Dissolve(0.2)
     "Soldier Gao and Soldier Jiang peeked out from behind their hiding spot, still half-crouched, looking just as stunned."
 
     gao   "Wait, wait, wait."
     jiang "Did that kid just say—four hundred years ago?"
 
+    show tim alt_pumped at center_char_kids with Dissolve(0.2)
     "Tim nodded furiously."
 
     tim "Yes!"
 
-    show chunghee normal_serious at center_char
+    hide soldier_gao
+    hide soldier_jiang
+    show dorian neutral at left_char
+    show chunghee normal_v2 at right_char
+    with Dissolve(0.2)
     "Chung-hee's hands tightened into fists. The faintest flicker of electricity crackled at his fingertips before dying out."
 
     chung_hee "No… that doesn't make sense."
-    show dorian neutral at left_char
     dorian    "So this thing existed during Enoch's time, huh…"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     chung_hee "Not just existed. These creatures…"
     chung_hee "They were hunted. Purged. Every last one of them."
 
@@ -1929,29 +2020,41 @@ label ch6_hundun_defeated:
 
     chung_hee "That's what the records say. That's what we were taught. That's what we believed."
     tim       "That's what Li Mengtia wrote, too…"
+    hide chunghee
+    show soldier_jiang at right_char with Dissolve(0.2)
     jiang     "You really read those? But you're a toddler."
 
+    show tim alt_annoyed at center_char_kids
     "Tim shot him an irritated glance but didn't stop."
-
-    show chunghee normal_neutral at center_char
+    
+    hide soldier_jiang
+    show chunghee normal_v2 at right_char with Dissolve(0.2)
     chung_hee "I don't know much about the details. Maybe someone familiar with Enoch can tell us more. We—"
 
+    play sound audio.yg_scream volume 0.8
     yg "Raaaaaaawwrrr!!!"
 
+    show dorian angry at left_char
+    show tim alt_nervous at center_char_kids
     "A guttural scream pierced the air. I stiffened, my instincts already sharpening."
 
     show dorian serious at left_char
     dorian    "Did you hear that?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at right_char
     chung_hee "No. I'm still processing all your thoughts about what it is."
 
-    show soldier_jiang at right_char
+    hide dorian
+    hide chunghee
+    hide tim
+    show soldier_gao at right_char
+    show soldier_jiang at left_char
+    with Dissolve(0.2)
     "Jiang gripped the hilt of his sheathed sword, his jaw clenched."
 
     jiang "Yaoguai."
-    show soldier_gao at right_char
     gao   "They must be enraged. They can't feel their leader anymore."
 
+    voice audio.yg_scream
     yg "Raaaaaa!!!"
 
     jiang "Then that means… there might be a few left!"
@@ -1960,32 +2063,46 @@ label ch6_hundun_defeated:
 
     jiang "Let us join you! We can help—"
 
-    show dorian neutral at left_char
+    hide soldier_jiang
+    hide soldier_gao
+    show dorian serious at left_char 
+    with Dissolve(0.2)
     "I took a closer look at their bodies. Jiang was limping on his right leg. I raised a hand, cutting him off."
 
+    show dorian neutral at left_char 
     dorian "Stand down, soldier. We can handle this."
 
     "My gaze flicked to the bodies strewn across the ruined streets. The civilians who hadn't made it. The ones who didn't get the chance to hide."
+    show soldier_jiang at right_flip with Dissolve(0.2)
     "Jiang followed my gaze. His mouth pressed into a firm line."
 
     jiang "But—"
     show dorian serious at left_char
     dorian "Orders are orders, soldier."
+    hide soldier_jiang
+    show soldier_gao at right_char with Dissolve(0.2)
     gao   "A-Affirmative, Paladin. Jiang, let's just follow his orders."
     gao   "Besides… you're already not in a position to fight."
 
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     "Jiang exhaled sharply, frustration flashing across his face."
 
     jiang "Fine. But you better come back in one piece."
+    show tim alt_pumped at center_char_kids with Dissolve(0.2)
     tim   "We will! Don't worry about us, sir soldiers! We'll be very careful!"
-    show dorian neutral at left_char
+    show dorian normal_alt_annoyed at left_char
     dorian "Tim, you're not coming with us. Go with them."
+    show tim sad at center_char_kids with Dissolve(0.1)
 
     "Tim flinched, his small hands clenching into fists."
 
     tim "But… but I can help!"
 
-    show chunghee normal_neutral at center_char
+    hide soldier_jiang
+    show dorian serious at left_char
+    show chunghee normal_neutral at right_char
+    with Dissolve(0.2)
     "Chung-hee stepped in."
 
     chung_hee "Tim… Listen to Dorian."
@@ -1995,21 +2112,30 @@ label ch6_hundun_defeated:
 
     tim "Okay…Fine…"
 
+    hide chunghee
+    show dorian neutral at left_char
+    show soldier_gao at right_char with Dissolve(0.2)
     "Soldier Gao clapped a reassuring hand on his back."
 
     gao   "Come on, little fella. We'll bring you to Ma'am Weng."
     tim   "Is she alright, Mister?"
+    hide soldier_gao
+    show soldier_jiang at right_flip with Dissolve(0.2)
     jiang "Yes, she's with the doctor and the violet-haired guy. Tending to the wounded."
 
+    show tim alt_nervous at center_char_kids
     "Tim hesitated for one last moment—then, with a final reluctant glance at the Hundun, me and Chung-hee, he followed them into the store."
-
+    show tim normal at center_char_kids
     tim "Take care, Mister Dorian, okay? And Mister Chung."
-
+    
+    hide tim 
+    hide soldier_jiang
+    show chunghee normal_v2 at right_char
+    show dorian serious at left_char
+    with Dissolve(0.2)
     "The moment they disappeared, another howl rang through the night."
     "This time, closer."
 
-    hide soldier_gao
-    hide soldier_jiang
     jump ch6_feng_appears
 
 
@@ -2019,77 +2145,100 @@ label ch6_hundun_defeated:
 
 label ch6_feng_appears:
 
-    # scene bg_tianho_post_tragedy_night with dissolve # PLACEHOLDER — Tianho night — use bg_tianho_city_on_fire
-    scene bg_tianho_city_on_fire with dissolve
+    scene bg_tianho_city_night_sleeping with dissolve
 
-    show dorian dragon_eyes at left_char with Dissolve(0.2)
+    show dorian serious at left_char
+    show chunghee normal_v2 at right_char 
+    with Dissolve(0.2)
+    play music audio.ost_battle
     "I rolled my shoulders, feeling the fire in my veins ignite."
 
-    show chunghee normal_serious at center_char with Dissolve(0.2)
+    show chunghee normal_power_up at right_char with Dissolve(0.1)
     chung_hee "I can feel more of them coming. Prepare yourself, Dorian."
 
+    "Another screech — a hideous, piercing sound that scraped against my skull like metal tearing through stone."
+    hide chunghee
+    show dorian angry at left_char
+    show yaoguai at right_yg 
+    with Dissolve(0.2)
+    voice audio.yg_scream
     yg "RAAAAA!!!!"
 
     "Their grotesque forms twisted, eyes burning with a deep, unnatural rage. Clawed feet slammed against the ground as they charged."
     "Their attention flicked between us and the Hundun's smoldering corpse. They howled again, the sound rattling through the broken streets of Tianho."
 
+    voice audio.yg_screech
     yg "SKREEEEEAAAAAAAAAAAARGHHH!!"
 
-    play sound audio.sfx_wind                   # PLACEHOLDER — wind SFX
-
-    show dorian serious at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
+    play sound audio.sfx_wind
     "I stepped forward, thrusting my arms out. The wind howled with me."
     "A violent gust tore through the Yaoguai, sweeping them up like ragdolls. I twisted my fingers, and the currents snapped—spinning like a tornado, hurling the creatures into the crumbling walls of Tianho's ruins."
+    play sound audio.monster_death
     "Bones cracked. Flesh splintered. They shrieked as they were flung into the air."
-
+    
+    voice audio.yg_scream
     yg "GRAAAAAA!!!"
 
     # play sound sfx_lightning_crack              # PLACEHOLDER — Chung-hee lightning SFX
 
-    show chunghee normal_power_up at center_char
+    hide dorian
+    show chunghee normal_power_up at left_char with Dissolve(0.2)
     "Beside me, Chung-hee raised his hands, and a shimmering forcefield exploded outward. A Yaoguai leapt toward him—fangs bared, claws outstretched—only to slam into the forcefield."
-    "The creature was thrown back so violently that it left a crater where it landed. Another tried, only for Chung-hee to flick his wrist. The forcefield twisted and with a sickening crunch, the Yaoguai's body caved inward."
+    play sound audio.sfx_stone_break
+    "The creature was thrown back so violently that it left a crater where it landed. Another tried, only for Chung-hee to flick his wrist."
+    "The forcefield twisted and with a sickening crunch, the Yaoguai's body caved inward."
 
+    voice audio.yg_scream
     yg "Raaaaaaa!!!!"
 
+    hide yaoguai
+    show dorian serious at left_char 
+    show chunghee normal_v2 at right_char
+    with Dissolve(0.2)
     "For a fleeting moment, I thought we had them."
+
+    show dorian angry at left_char 
+    show chunghee normal_angry at right_char
+    with Dissolve(0.1)
     "Then—there were more."
     "Not just a handful. Dozens."
+    hide dorian 
+    hide chunghee
+    show yaoguai at center_yg
+    with Dissolve(0.2)
     "They emerged from the shadows, from the broken alleys, from the wreckage of some of the old buildings. Grotesque forms twisting. Glowing eyes flashing. Clawed fingers scraping against stone. They kept coming."
     "My pulse pounded in my ears. Chung-hee's voice echoed sharply in my mind."
-
-    show chunghee normal_angry at center_char
-    chung_hee "Dorian, find a spot to hide. I'll—"
+    hide yaoguai
     show dorian serious at left_char
+    show chunghee normal_angry at right_char
+    chung_hee "Dorian, find a spot to hide. I'll—"
     dorian    "Don't be reckless, Chung."
-    show chunghee normal_neutral at center_char
+    show chunghee normal_sad at right_char
     chung_hee "I—Fine…"
 
-    show dorian dragon_eyes at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
     "I readied myself—fists clenched, fire curling at my fingertips—when suddenly a brilliant blue light cut through the night."
 
-    # play sound sfx_blue_fire                    # PLACEHOLDER — blue fire SFX
-
+    # play sound sfx_blue_fire
+    scene cg_dorian_yg_fight_night with shock_cut
     "A wall of blue fire hurled towards the yaoguai. The Yaoguai screeched in agony as the blue flames swallowed them whole. Their blackened bodies twisted, shriveling, burning, turning to ash."
 
     "I turned sharply, and a figure stood atop the wreckage of a ruined merchant's stall. I knew that stance."
     "My eyes widened."
     "My mind reeled. What in Tetrad's was he doing here?"
 
-    # scene cg_feng_arrives with dissolve         # PLACEHOLDER — cg_feng_arrives — use cg_feng_aoi
-    # pause 1.5
-    # scene bg_tianho_city_on_fire with dissolve
+    scene bg_tianho_city_night_sleeping with shock_cut
 
-    # play music ost_feng_arrives fadein 0.5      # PLACEHOLDER — Feng arrival theme
-
-    show feng_suit at right_char with Dissolve(0.2)
-    show aoi_battle_suit at right_char with Dissolve(0.2)
+    show feng_suit at right_char
+    show aoi_battle_suit at left_char
+    with Dissolve(0.2)
     dorian "Feng?!"
     feng   "Watch out! Behind you!"
     aoi    "Stay sharp!"
 
     "Before I could even open my mouth—"
-
+    scene cg_feng_aoi with shock_cut
     yg "Graaaawwrrrr!!!"
 
     # play sound sfx_water_spear                  # PLACEHOLDER — water spear SFX
@@ -2101,7 +2250,6 @@ label ch6_feng_appears:
 
     "Their bodies tensed—twitched—then dissolved into black mist."
 
-    show chunghee normal_angry at center_char with Dissolve(0.2)
     chung_hee "You—!"
 
     "Chung-hee's glare darkened, energy rippling in the air around him like a storm ready to break. Electricity cracked through the air."
@@ -2109,27 +2257,39 @@ label ch6_feng_appears:
 
     "Feng casually raised a hand."
 
+    scene bg_tianho_city_night_sleeping with shock_cut
+    show feng_suit at right_char
+    show aoi_battle_suit at left_char
+    with Dissolve(0.2)
+
     feng "Easy. She's on our side."
 
     "Aoi merely huffed, flicking her wrist."
 
     aoi "Hmph."
 
+    hide feng_suit
+    show yaoguai at right_yg with Dissolve(0.2)
     "A final tendril of water lashed out behind her, striking the last Yaoguai."
+    hide yaoguai with Dissolve(0.1)
     "The creature didn't even have time to scream before it burst into dust."
 
-    show dorian neutral at left_char
+    show dorian serious at right_flip with Dissolve(0.2)
     dorian "What…"
 
+    hide dorian 
+    show yaoguai at right_yg with Dissolve(0.2)
+    voice audio.yg_scream
     yg "Graaaarrrrr!!"
 
     "Aoi's head snapped toward the sound, water already coiling at her fingertips, alive and restless. Her expression was unreadable, cold as ever."
 
     aoi "I'll handle it, Feng. This won't take long."
 
-    "She didn't wait for permission. With a swift movement, she vanished into the shadows, her figure weaving through the broken streets of Tianho."
-
     hide aoi_battle_suit
+    hide yaoguai
+    with Dissolve(0.1)
+    "She didn't wait for permission. With a swift movement, she vanished into the shadows, her figure weaving through the broken streets of Tianho."
     "But even as she disappeared, Chung-hee's glare followed her."
     "His entire body remained tense, his presence humming with quiet suspicion. Electricity crackled faintly at his fingertips."
 
@@ -2143,14 +2303,14 @@ label ch6_feng_appears:
 label ch6_reunion:
 
     # play music ost_reunion fadein 1.0           # PLACEHOLDER — warm bittersweet reunion theme
-
-    show feng_suit at right_char with Dissolve(0.2)
     "Feng exhaled before stepping forward, finally turning his attention to me."
+    show feng_suit at right_char
+    show chunghee normal_neutral at center_char 
+    show dorian normal at left_char 
+    with Dissolve(0.2)
     "He didn't say anything at first. His gaze lingered on Chung-hee. The ghost of a smirk pulled at his lips."
-
     feng "By the Prosperity Dragon, The Emperor of Kyeongjang in the flesh."
 
-    show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee met his gaze, still stiff, still guarded."
 
     feng "You look different from your father, His Majesty Hyon Min-joon. But I see the resemblance."
@@ -2159,10 +2319,11 @@ label ch6_reunion:
 
     feng "Should I kneel? Or perhaps I should summon an interpreter for a deaf-mute? I could arrange—"
 
-    show chunghee normal_angry at center_char
+    show chunghee normal_angry at center_char with Dissolve(0.1)
     "Chung-hee's voice slammed into our minds like a thunderclap."
 
     chung_hee "Does it look like I need an interpreter?"
+    show chunghee normal_v2 at center_char with Dissolve(0.1)
 
     "Feng's smirk faltered—just slightly."
     "Feng."
@@ -2170,12 +2331,12 @@ label ch6_reunion:
     "He stood before me, still wearing that same confident stance, that same effortless composure—but something was different."
     "I remembered the Taotie. Its claws. Its shriek. The way it had nearly gouged out Feng's left eye."
 
-    show dorian sad at left_char with Dissolve(0.2)
+    show dorian sad at left_char with Dissolve(0.1)
     "I opened my mouth, wanting to ask—wanting to know— but before I could—"
 
     dorian "Feng, what are you doing here?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I clenched my fists."
 
     dorian "Don't you know she's from Mjoll? They attacked—"
@@ -2199,9 +2360,11 @@ label ch6_reunion:
     feng "And I thought, 'Nah. That can't be my best friend. My best friend left Tianho years ago, and he sure as hell ain't going back...' Then—lo and behold."
     feng "How's it going, old friend? Miss me?"
 
+    show dorian normal at left_char with Dissolve(0.1)
     dorian "Feng… It's been a while. I thought you were dead."
     feng   "Funny. I thought the same about you."
 
+    show dorian neutral at left_char with Dissolve(0.1)
     "And then—without thinking—I stepped forward and pulled him into a hug."
     "Then, with a quiet chuckle, he patted my back—harder than necessary."
 
@@ -2226,11 +2389,12 @@ label ch6_reunion:
 
     feng "Still, I keep these around. Gives me a little edge. Makes me look mysterious, don't you think?"
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I rolled my eyes."
 
     dorian "You always did think too highly of yourself."
     feng   "Hahaha. Damn right."
+    show dorian neutral at left_char with Dissolve(0.1)
 
     "Feng slung an arm around my shoulders, his grin easy. He gestured toward the charred remains of the Hundun, its twisted form still crackling with lingering energy."
 
@@ -2242,20 +2406,21 @@ label ch6_reunion:
 
     feng "What about you, Your Majesty? Will the Emperor Lord grace us peasants with his presence?"
 
-    show chunghee normal_angry at center_char
+    show chunghee normal_v2 at center_char
     "Chung-hee stood with his arms crossed, with his brow twitched."
 
     chung_hee "Please. Calling you or Sir Dorian 'peasants' is beneath me."
 
-    show dorian smile at left_char
+    show dorian normal at left_char
     "I arched an eyebrow."
 
     dorian "So, that's a yes?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     "Chung-hee's mouth opened—then closed. A faint wrinkle appeared between his brows, as if he were choosing his words carefully."
 
     chung_hee "I… suppose I can accompany you."
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
 
     feng "Oh? His Majesty drinks with commoners? I'm honored."
 
@@ -2281,47 +2446,46 @@ label ch6_end:
 
     feng "Don't worry. Me and the Paladins will handle this. Go to the hideout."
 
-    show dorian neutral at left_char
+    show dorian serious at left_char
     "I frowned, feeling an unease settle in my gut."
 
     dorian "You sure?"
     feng   "Tianho is under the protection of the Imperial City of Gale. This is our job as Paladins. You should know this, buddy—you were one of us once."
     feng   "Besides, there are plenty of us. You sticking around would just be a waste of resources."
-
+    
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "He wasn't wrong. He looked at the charred body of the Hundun."
+    show dorian serious at left_char with Dissolve(0.1)
 
     feng "And more importantly—the appearance of this… thing isn't normal. Whatever's happening, we need answers, not just bodies in the streets."
     feng "Fortunately, we have specialists from the city who will handle the investigation. Best you steer clear once they arrive."
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_v2 at center_char with Dissolve(0.1)
     "Chung-hee nodded."
 
     chung_hee "He's right, Dorian."
     chung_hee "Then we go to the hideout beneath the Cheng Industries store."
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     dorian "Tch. Fine."
     feng   "Try not to miss me too much. See you later."
 
-    show dorian smile at left_char
     "I rolled my eyes."
 
+    show dorian normal at left_char with Dissolve(0.1)
     dorian "Try not to get bitten this time, dumbass."
 
     "Feng barked out a laugh—then disappeared into the shadows, his blue flames joining the lanterns in illuminating the area."
 
-    hide feng_suit
-    hide chunghee
-    hide dorian
-    # scene cg_black with fade                    # PLACEHOLDER — fade to black
-    # stop music fadeout 2.0
-    # stop audio fadeout 1.5
+    scene black with fade                    # PLACEHOLDER — fade to black
+    stop music fadeout 2.0
+    stop audio fadeout 1.5
 
     pause 2.0
 
     show screen chapter_title_screen(
         "6",
-        "Beneath Tianho",
+        "Return to Tianho",
         subtitle="END",
         duration=3.0
     )

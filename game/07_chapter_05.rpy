@@ -27,7 +27,6 @@
 # define audio.ost_dinner_warm     = "audio/music/ost_dinner_warm.ogg"        # PLACEHOLDER
 # define audio.ost_chung_reveal    = "audio/music/ost_chung_reveal.ogg"       # PLACEHOLDER
 # define audio.ost_amulet_vision   = "audio/music/ost_amulet_vision.ogg"      # PLACEHOLDER
-# define audio.ost_magnus_void     = "audio/music/ost_magnus_void.ogg"        # PLACEHOLDER
 # define audio.ost_minjoon_memory  = "audio/music/ost_minjoon_memory.ogg"     # PLACEHOLDER
 # define audio.ost_nightmare       = "audio/music/ost_nightmare.ogg"          # PLACEHOLDER
 
@@ -52,16 +51,6 @@
 # =============================================================================
 # SECTION 4: GAME VARIABLES
 # =============================================================================
-
-# default niko_affection           = 0       # Niko trust tracker
-# default svante_affection         = 0       # Svante trust tracker
-# default ch5_food_choice          = ""      # "tianho" "gale" "hinami" or "mjoll"
-# default ch5_roboto_witness       = ""      # "yes" or "no" (Roboto stumble testimony)
-# default ch5_chunghee_speech      = ""      # "naive" or "inspiring"
-# default ch5_magnus_q1            = False   # Asked Magnus about Min-joon vision
-# default ch5_magnus_q2            = False   # Asked Magnus about Tragedy of Tianho
-# default ch5_magnus_q3            = False   # Asked Magnus about this place
-# default ch5_magnus_q4            = False   # Asked Magnus about the amulet
 
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_5 — Underground Tunnel Walk
@@ -4125,11 +4114,6 @@ label ch5_amulet_vision:
     
     scene black with dissolve
     "Darkness."
-
-    # [COMMENT: bg_white_screen — white void returns]
-    # scene bg_white_screen with fade             # PLACEHOLDER — white void
-    # stop music fadeout 0.5
-    # play music ost_magnus_void fadein 0.5       # PLACEHOLDER — Magnus void theme
 
     "For a moment, there was nothing—just darkness, emptiness, weightlessness."
     scene plain_white with flash

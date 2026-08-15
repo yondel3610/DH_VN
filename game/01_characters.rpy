@@ -99,8 +99,7 @@ define seo_yeon                 = Character("Empress Seo-yeon",     color="#1c00
 define door_voice               = Character("Door",                 color="#1c0000", callback=name_callback, cb_name="door_voice")
 
 # Chapter 6
-define hundun                   = Character("",                     color="#1c0000", callback=name_callback, cb_name="hundun")
-define vasily_illusion          = Character("Vasily",               color="#1c0000", callback=name_callback, cb_name="vasily_illusion")
+define hundun                   = Character("Hundun",               color="#1c0000", callback=name_callback, cb_name="hundun")
 define olympia_illusion         = Character("Empress Olympia",      color="#1c0000", callback=name_callback, cb_name="olympia_illusion")
 define gustav_illusion          = Character("King Gustav",          color="#1c0000", callback=name_callback, cb_name="gustav_illusion")
 define minjoon_illusion         = Character("Emperor Min-joon",     color="#1c0000", callback=name_callback, cb_name="minjoon_illusion")

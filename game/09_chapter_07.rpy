@@ -33,41 +33,54 @@
 # =============================================================================
 # SECTION 5: LABEL CHAPTER_7 — White Void / Magnus Dream / Wake Up
 # =============================================================================
-# ch7 txt lines 1-88.
-# =============================================================================
 
 label chapter_7:
     $ save_name = "Chapter 7"
-    scene bg_white_screen with fade             # PLACEHOLDER — white void
-    play music ost_ch7_dream fadein 1.0         # PLACEHOLDER — urgent dream theme
 
-    "CHAPTER 7"
+    scene black with fade             # PLACEHOLDER — white void
+    show screen chapter_title_screen(
+        "7",
+        "Cheng Industries",
+        # subtitle="Tianho — Underground Lab",
+        duration=3.0
+    )
+    pause 3.0
+    scene plain_white with fade
+    pause 1.5
+    # play music ost_ch7_dream fadein 1.0         # PLACEHOLDER — urgent dream theme
 
-    # show char magnus at center_char with Dissolve(0.2)  # PLACEHOLDER — no magnus sprite declared
+    show magnus normal at center_char, dream_haze_in  # PLACEHOLDER — no magnus sprite declared
     magnus "DRAGONKIN…. DRAGONKIN!!"
 
     "I gasped, my breath sharp and ragged as I jolted awake. There he was—the winged man again."
+    camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
+    with shattered_glass_transition
     "The blinding white void collapsed like fragile glass, breaking inward, dissolving into wisps of fading light."
+    camera
+    scene underground_magnus with Dissolve(0.5)
     "The air hit me like a wave—thick, humid, ancient. It reeked of damp moss, of something metallic and bitter, of rot buried deep within the earth."
     "A cavern stretched before me, vast and endless. Stalagmites jutted from the ground like jagged teeth, and the walls shimmered faintly."
     "But it was the door that held me still. It loomed before me—massive, stretching high into the abyss, forged of simple stone yet impossibly ancient."
     "The carvings on its surface were impossibly delicate, intricate to the point of madness—a magnificent dragon, its body coiling through storm-wracked clouds. The Prosperity Dragon."
-    "Magnus' fingers dug into my shoulders, desperate, clawing. His golden eyes burned with an unnatural glow, his large white wings twitching, restless, afraid. Cracks spiderwebbed through his feathers, glowing faintly at the edges."
+    "Magnus' fingers dug into my shoulders, desperate, clawing."
+    "His golden eyes burned with an unnatural glow, his large white wings twitching, restless, afraid. Cracks spiderwebbed through his feathers, glowing faintly at the edges."
 
+    show dorian serious at left_char
+    show magnus alt_anger at right_char
+    with Dissolve(0.2)
     magnus "They're here… Dragonkin. Help me! Please!"
 
     "And then—I felt it. Something watching. Something waiting."
     "A presence, slow and hungry, like a massive, slumbering beast curling in its den, exhaling long, rattling breaths through jagged fangs."
 
-    show dorian neutral at left_char with Dissolve(0.2)
+    show dorian angry at left_char 
     dorian "Magnus!"
 
     magnus "You have to hurry—no, no, no, listen to me, Dorian! This isn't a warning anymore—IT'S HERE!"
 
-    "The cracks in his feathers deepened. The cavern trembled. Stone dust rained down from above."
+    "The cracks in his feathers deepened. The cavern trembled. Stone dust rained down from above." with hpunch
     "The air was heavier now—thick with something unseen, something pressing against my ribs, my throat, my skull."
 
-    show yk at center_yg with Dissolve(0.2)
     yk "Dragonkin… Dragonkin…"
 
     "It was low. Hungry. Smiling. Like it knew I was there. Like it knew my name."
@@ -78,49 +91,55 @@ label chapter_7:
 
     "Then Magnus became quiet."
 
+    show magnus normal at right_char with Dissolve(0.1)
     magnus "There's no time. The seal—it's WEAKENING. I don't know how, but something—someone—has started to undo it!"
+    show magnus alt_shocked at right_char with Dissolve(0.1)
     magnus "If it breaks—if it breaks, Dorian, I… I—"
 
     "The stone splintered. Something on the other side moved."
 
+    show magnus alt_anger at right_char with Dissolve(0.1)
+
     magnus "PLEASE! HURRY! I don't think I can last much longer—Please—!!"
 
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "Then, I felt pain."
-    "Magnus screamed. His entire body convulsed as unseen forces ripped at him, as if his very essence was being torn apart. His wings, so brilliant and white before, fractured, black veins crawling along his feathers like spreading rot."
+    "Magnus screamed. His entire body convulsed as unseen forces ripped at him, as if his very essence was being torn apart."
+    "His wings, so brilliant and white before, fractured, black veins crawling along his feathers like spreading rot."
 
     magnus "AHHHH!!!"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     dorian "MAGNUS!!"
 
     "He reached for me, and I reached out for him. But before I could grasp him, he was yanked away."
-    "The world around me shattered."
+    "The world around me shattered." with hpunch
 
     # =============================================================================
     # WAKE UP — Cheng Industries Bunker
     # =============================================================================
 
-    hide dorian
-    hide yk
-    scene bg_cheng_bunker with fade             # PLACEHOLDER — Cheng Industries bunker
+    scene cheng_industries_bunk with fade             # PLACEHOLDER — Cheng Industries bunker
     stop music fadeout 1.0
-    play music ost_ch7_bunker fadein 2.0        # PLACEHOLDER — quiet tense bunker theme
-    play audio amb_bunker loop fadein 1.5       # PLACEHOLDER — bunker ambient
+    # play music ost_ch7_bunker fadein 2.0        # PLACEHOLDER — quiet tense bunker theme
+    # play audio amb_bunker loop fadein 1.5       # PLACEHOLDER — bunker ambient
 
     "I woke up gasping."
     "Cold sweat clung to my skin, my breath coming in short, uneven bursts. My body was tense, hands clenched like I had tried to hold onto something."
     "A soft whirring sound broke the silence."
-    "I turned my head sharply, still disoriented, and was immediately greeted by the glow of a blue-tinted screen. A small hovering delivery bot floated beside me, its screen flickering before revealing a familiar face."
+    "I turned my head sharply, still disoriented, and was immediately greeted by the glow of a blue-tinted screen."
+    "A small hovering delivery bot floated beside me, its screen flickering before revealing a familiar face."
 
-    # play sound sfx_hologram                  # PLACEHOLDER — hologram SFX
-
-    # Yuxuan appears on delivery bot screen — no sprite shown
+    show supply_robot normal at right_supply
+    show dorian serious at left_char
+    with Dissolve(0.2)
     yuxuan "Had another dream, Dorian buddy?"
 
     "His usual teasing tone was there, but the way his brows furrowed told me he already knew the answer."
     "I blinked, my thoughts sluggish. I rubbed my palms against my face."
-
-    show weng normal at right_char with Dissolve(0.2)
+    show supply_robot normal at center_supply
+    show weng normal at right_flip 
+    with Dissolve(0.2)
     weng "Here Master Dorian, drink this."
 
     "I barely registered her presence before a warm ceramic cup was pressed into my hands. The scent of bitter herbs and a whiff of honey drifted into my nose."
@@ -129,16 +148,15 @@ label chapter_7:
 
     "I took the teacup that Weng held out to me."
 
-    show dorian neutral at left_char with Dissolve(0.2)
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Thank you, Miss Weng."
 
-    show weng happy at right_char
+    show weng happy at right_flip with Dissolve(0.1)
     weng "You must be parched from the battle earlier. I really have to thank you for being concerned about an old woman like me."
 
-    # Yuxuan on delivery bot screen — no sprite
     yuxuan "Weng told me about the Hundun. And when I heard, well—by the Prosperity Dragon, I was mortified! What in the world was an extinct creature doing here?!"
 
-    show weng normal at right_char
+    show weng normal at right_flip with Dissolve(0.1)
     weng "His Majesty told Sir Niko, Sir Svante, and me. At first, we didn't believe him. Until Tim backed him up."
     weng "And then we went outside and saw the body."
 
@@ -148,19 +166,20 @@ label chapter_7:
     "Yuxuan opened his mouth to respond, but before he could—"
 
     hide weng
-    show tedda_human at right_char with Dissolve(0.2)
+    hide supply_robot
+    show tedda_human at right_char 
+    show roboto happy at center_robot
+    with Dissolve(0.2)
     tedda "Master Doriaaaann! Lady Elias is sleeping soundly! You have nothing to worry about! She is—"
-
-    show roboto happy at right_robot with Dissolve(0.2)
     roboto "Miss Tedda, please lower your voice."
-
     tedda "Oh… Sorry, Roboto. Whoopsiee…"
 
     hide tedda_human
     hide roboto
+    show supply_robot base at right_supply 
+    with Dissolve(0.2)
     "Yuxuan sighed, but a smirk tugged at the corner of his lips."
 
-    # Yuxuan on delivery bot screen — no sprite
     yuxuan "Well, you heard it, buddy. Elias is fine."
 
     show dorian neutral at left_char
@@ -175,19 +194,21 @@ label chapter_7:
 
 label ch7_dream_debrief:
 
-    show dorian neutral at left_char
+    show dorian serious at left_char 
+    show supply_robot lied at right_supply 
+    with Dissolve(0.1)
     dorian "Yu… I have to tell you something."
 
     "The room hushed slightly. I took a breath and told them everything."
     "I told them how the white void cracked apart, breaking like shattered glass until I stood in an ancient underground cavern."
-    "I told them about the winged man – Magnus. How his white wings streaked with cracks of light. How he would always call me every now and then."
+    "I told them about the winged man - Magnus. How his white wings streaked with cracks of light. How he would always call me every now and then."
     "How he had grabbed me, shook me, and yelled my name in desperation. He told me that the seal was weakening. That someone—or something—was undoing it."
     "When I finished speaking, a heavy silence settled over between the three of us."
 
-    show weng normal at right_char with Dissolve(0.2)
+    show supply_robot lied at center_supply 
+    show weng normal at right_flip with Dissolve(0.2)
     weng "By the stars… Is that what happened in your dream?"
 
-    # Yuxuan on delivery bot screen — no sprite
     yuxuan "A winged man? Preposterous. We—"
 
     hide weng
@@ -205,9 +226,7 @@ label ch7_dream_debrief:
     svante "Me and Sir Niko hurried to get here when we learned that the monsters attacked Tianho."
 
     hide svante
-    show yuxuan normal_neutral at right_char with Dissolve(0.2)
-    # Yuxuan on delivery bot screen — no sprite; line delivered via hologram
-    hide yuxuan normal_neutral
+    show supply_robot normal at right_supply
     yuxuan "If it wasn't for them, almost half of the wounded here might have died."
 
     show weng normal at right_char with Dissolve(0.2)
@@ -235,7 +254,7 @@ label ch7_dream_debrief:
 
     "I opened my mouth to respond, but before I could—"
 
-    # Yuxuan on delivery bot screen — no sprite
+    show supply_robot base at right_supply 
     yuxuan "Oh, here we go…"
     yuxuan "Niko, I think you'd love any excuse to bring up Enoch."
 
@@ -309,7 +328,7 @@ label ch7_dream_debrief:
     show dorian neutral at left_char
     dorian "There was a massive door. It was made of simple stone… but it bore an amazing illustration of the Prosperity Dragon. The details were immaculate, almost like I was looking at the dragon himself."
 
-    # Yuxuan on delivery bot screen — no sprite
+    show supply_robot base at right_supply 
     yuxuan "A massive door… Intricate illustration of the Prosperity Dragon…"
 
     "I turned to the delivery bot as Yuxuan's face flickered on the screen. His usual playfulness was gone, replaced with a calculating look."
@@ -395,7 +414,7 @@ label ch7_dream_debrief:
 
 label ch7_waiting:
 
-    play music ost_ch7_warm fadein 1.5          # PLACEHOLDER — warm subdued theme
+    # play music ost_ch7_warm fadein 1.5          # PLACEHOLDER — warm subdued theme
 
     menu:
 
@@ -1305,7 +1324,7 @@ label ch7_waiting_common:
 
 label ch7_feng_niko_clash:
 
-    play music ost_ch7_feng_clash fadein 0.5    # PLACEHOLDER — tense confrontation theme
+    # play music ost_ch7_feng_clash fadein 0.5    # PLACEHOLDER — tense confrontation theme
 
     show feng_suit at right_char
     "The air grew heavier."
@@ -1555,7 +1574,7 @@ label ch7_feng_niko_clash:
 
 label ch7_drink_choice:
 
-    play music ost_ch7_drink fadein 1.0         # PLACEHOLDER — relaxed post-battle theme
+    # play music ost_ch7_drink fadein 1.0         # PLACEHOLDER — relaxed post-battle theme
 
     menu:
 
