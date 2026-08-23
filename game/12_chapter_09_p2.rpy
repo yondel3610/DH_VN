@@ -38,13 +38,15 @@ define audio.amb_hilltop_night   = "audio/ambient/amb_hilltop_night.ogg"   # PLA
 label chapter_09_p2:
     $ save_name = "Chapter 9"
     # [COMMENT: bg_hot_spring — natural cavern hot spring, lanterns, steam]
-    scene bg_hot_spring with dissolve           # PLACEHOLDER — hot spring
+    scene yuxuan_lab_hotspring with dissolve           # PLACEHOLDER — hot spring
     play music ost_ch9_hotspring fadein 2.0     # PLACEHOLDER — hot spring theme
     play audio amb_hot_spring loop fadein 1.5   # PLACEHOLDER — hot spring ambient
 
     "We reached the hot springs, and the moment we stepped inside, the warmth in the air wrapped around me like a comforting embrace."
     "The soft glow of lanterns flickered against the cavern walls, their light dancing over the steaming water. The air carried a faint floral scent, something soothing yet unfamiliar."
     "Roboto came to a stop and turned to me."
+
+    show roboto normal at center_char with Dissolve(0.2)
 
     roboto "Master Dorian, please undress b-b-b-before entering. Master Yuxuan has ensured the waters will provide optimal relaxation."
     dorian "Yeah, thanks for the reminder."
@@ -57,6 +59,10 @@ label chapter_09_p2:
     "And with that, the metallic figure turned and departed, his whirring echoing as he disappeared down the stone hallway."
     "Left alone, I took a step forward, only to pause when I noticed a figure already standing by the water's edge."
     "Magnus."
+
+    hide roboto
+    show magnus clothed_no_wings at center_char with Dissolve(0.2)
+
     "He was dressed in a deep blue shirt with gold accents, a rare sight given that I saw him the entire day shirtless. But what stood out the most was the absence of his wings."
     "I furrowed my brows. Magnus without his wings?"
     "Magnus turned his head slightly, his expression calm."
@@ -65,6 +71,8 @@ label chapter_09_p2:
     magnus "Look! I've made a discovery-an astonishing revelation, a truth hidden within my very being!"
 
     "I raised a brow."
+
+    show dorian underwear_neutral at left_char with Dissolve(0.2)
 
     magnus "Apparently, I can make my wings appear and disappear at will! A most convenient ability, wouldn't you say?"
     dorian "Convenient. Saves fabric, I guess."
@@ -134,6 +142,10 @@ label chapter_09_p2:
             "He peered at me over his shoulder, awaiting my response. Whether I gave him an actual color or simply let him stew in his devastation, I knew one thing for certain-he wasn't going to let me forget this anytime soon."
 
     "Shaking my head, I reached for my belt and started undoing my clothes. Magnus followed suit, both of us stripping down to our undergarments before stepping into the water."
+    
+    show magnus underwear_base at center_char
+    show dorian underwear_normal at left_char
+
     "The moment I sank into the warmth, a deep sigh escaped me. The heat seeped into my muscles, melting away tension I hadn't realized I was carrying. Magnus settled in beside me, his gaze drifting over the glowing fungi, the sheer ambiance of the place."
 
     magnus "It's beautiful here. Almost... unreal."
@@ -158,6 +170,9 @@ label chapter_09_p2:
     "Yuxuan entered, his usual composed expression relaxed into something softer, almost coy."
     "His eyes swept over the water, and he exhaled, the corner of his lips tugging into the smallest, knowing smirk."
 
+    hide magnus
+    show yuxuan underwear_normal at right_char with Dissolve(0.2)
+
     yuxuan "Ah, Dorian... Just the two of us, bathed in the glow of the springs..."
     dorian "Oh, Yu."
 
@@ -169,6 +184,8 @@ label chapter_09_p2:
     "Then he saw Magnus."
     "For a moment, there was silence. Absolute. Stunned. Silence."
     "Yuxuan's eyes landed on Magnus, who-completely oblivious-smiled and raised his hands in delight."
+
+    show magnus underwear_base at center_char with Dissolve(0.2)
 
     magnus "Yuxuan, my dear friend! Have you come to partake in the benefits of the hot-"
     yuxuan "W H A T."
@@ -187,6 +204,8 @@ label chapter_09_p2:
 
     dorian "Just come join us, Yu. The water's fine."
 
+    show yuxuan underwear_sad at right_char
+
     "Still twitching, Yuxuan slipped into the water. The moment he did, Magnus spread his arms wide and pulled him into a suffocating hug."
 
     yuxuan "M-Magnus! H-hey! I'm getting strangled!"
@@ -200,6 +219,13 @@ label chapter_09_p2:
     "All three of them. In their undergarments."
     "They weren't even paying attention to us at first. They were deep in mid-conversation, voices echoing slightly against the cavern walls."
 
+    hide magnus
+    hide yuxuan
+    show niko underwear_base at right_char
+    show svante underwear_base at center_char
+    show chung_hee underwear_neutral at left_char
+    with Dissolve(0.2)
+
     niko      "Fasting is a form of discipline, Svante. A way to show devotion to Enoch. A test of the soul's resolve."
     svante    "But for that long? I don't think you can do it. How are you not hungry? I'd pass out."
     niko      "You rely on Enoch's words. And pray. One does not live by earthly sustenance, but by every word that-"
@@ -210,12 +236,21 @@ label chapter_09_p2:
     "And then-finally-they looked up."
     "Magnus lifted his arms wide, water sloshing around him. His wings were still hidden, but it was as if he radiated an invisible aura of divinity."
 
+    hide svante
+    hide chung_hee
+    show magnus underwear_base at center_char with Dissolve(0.2)
+
     magnus "Dear friends!! Here we are!!"
 
     "He waved, as if this was the most natural gathering in the world. Chung-hee blinked, deadpan."
 
+    show chung_hee underwear_neutral at left_char
+    show svante underwear_base at right_char
+
     chung_hee "Oh look. It's Magnus. Dorian's here too, along with Yuxuan."
     svante    "MAGNUS!! YOU'RE HERE!!"
+
+    show yuxuan underwear_angry at right_char
 
     "Yuxuan, still submerged in the water, was visibly vibrating with rage. His fingers twitched as if they were itching to summon some kind of spell-maybe to drown Magnus, maybe to drown himself."
 
@@ -236,6 +271,8 @@ label chapter_09_p2:
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
+    show roboto normal at center_char with Dissolve(0.2)
+
     roboto "Y-y-y-you called, Master Yuxuan? Roboto is h-h-h-here. At your service."
     yuxuan "I told you to bring our special guest here! I also told Tedda to take care of Elias so our special guest could come here! How in the name of the Prosperity Dragon did this-"
 
@@ -246,6 +283,8 @@ label chapter_09_p2:
     "Roboto's mechanical eyes whirred as it scanned the room."
 
     roboto "The term 'special guest' was n-n-not explicitly defined. Given that Master Dorian, Sir Magnus, Sir Chung-hee, Sir Niko, and Sir Svante all hold unique statuses, it was l-l-l-logical to conclude that all of them qualified as... special guests."
+
+    show yuxuan underwear_sad at right_char
 
     "Yuxuan let out a sound somewhere between a strangled groan and a defeated whimper."
     "His entire body trembled. His eye twitched again. He opened his mouth-closed it-opened it again-"
@@ -275,6 +314,14 @@ label ch9_huli_jing:
 
     play music ost_huli_jing fadein 1.0         # PLACEHOLDER — Huli Jing ethereal theme
 
+    hide magnus
+    hide yuxuan
+    hide roboto
+    hide chung_hee
+    hide svante
+    hide niko
+    show huli_jing at center_char with Dissolve(0.2)
+
     huli_jing "Hihihihi~"
 
     niko      "Wait... Did you hear that?"
@@ -291,7 +338,7 @@ label ch9_huli_jing:
     "Perched atop a rock at the edge of the spring, half-shrouded by mist, was a fox."
     "Nine, impossibly long tails curled elegantly around her, their tips flicking idly, as if brushing away unseen dust motes of magic. Her golden eyes-slit-pupiled, like molten amber-watched us with quiet amusement."
 
-    show cg_huli_jing_spring with dissolve      # PLACEHOLDER — cg_huli_jing_spring
+    scene yuxuan_lab_hotspring with dissolve      # PLACEHOLDER — hot spring
 
     huli_jing "Oh, don't look so startled, my handsome bathers... You wouldn't deny a lonely fox the pleasure of a little conversation, would you?"
 
@@ -299,7 +346,7 @@ label ch9_huli_jing:
     "A faint pressure settled in my chest-an instinctual warning, ancient and primal. Then I saw it."
     "Not just the nine flowing tails..."
 
-    scene bg_hot_spring with dissolve           # PLACEHOLDER — hot spring
+    show huli_jing at center_char with Dissolve(0.2)
 
     svante "She's a fox spirit. A huli jing."
     svante "My mom told me and Kristin stories. Said they were born from moonlight and starlight. They've lived for centuries... maybe since the first breath of the world when the Weaver made the Tetrad."
@@ -417,7 +464,7 @@ label ch9_huli_jing:
 label ch9_judgment_mjoll:
 
     # [COMMENT: bg_mjoll_town_square — snow, stone buildings, shackled man in center]
-    scene bg_mjoll_town_square with flash       # PLACEHOLDER — Mjoll town square illusion
+    scene bg_mjoll_icelands with flash       # PLACEHOLDER — Mjoll town square illusion
     stop music fadeout 0.5
     play music ost_judgment_mjoll fadein 0.5    # PLACEHOLDER — Mjoll judgment theme
     play sound sfx_judgment_chains              # PLACEHOLDER — chains SFX
@@ -450,10 +497,14 @@ label ch9_judgment_mjoll:
 
     fynn "Enoch told me to do it! He told me to cleanse them! To protect the town!"
 
+    show huli_jing at center_char with Dissolve(0.2)
+
     "She sat atop a stone throne of ice that hadn't been there before, tails draped like velvet across her lap."
 
     huli_jing "Now, as part of our little game... you will judge him."
     huli_jing "Death, exile, or forgiveness."
+
+    show dorian underwear_neutral at left_char with Dissolve(0.2)
 
     "I stood frozen. Not from the cold, but from the sheer weight of it all."
 
@@ -586,7 +637,7 @@ label ch9_judgment_mjoll:
 label ch9_judgment_hinami:
 
     # [COMMENT: bg_hinami — cliffside, blue sky, crashing waves below]
-    scene bg_hinami with flash                  # PLACEHOLDER — Hinami cliffs illusion
+    scene hinami_castle_morning with flash                  # PLACEHOLDER — Hinami cliffs illusion
     stop music fadeout 0.5
     play music ost_judgment_hinami fadein 0.5   # PLACEHOLDER — Hinami judgment theme
 
@@ -632,6 +683,8 @@ label ch9_judgment_hinami:
     yuxuan    "D-Death? Niko-tell me that's not true."
     niko      "It depends on what was stolen. On who it was stolen from. And why. Hinami's laws are old... and not always kind."
     huli_jing "But here, your judgment holds sway. What will your choice be?"
+
+    show dorian underwear_neutral at left_char with Dissolve(0.2)
 
     "I looked at my companions. Magnus whispered, barely audible."
 
@@ -830,7 +883,7 @@ label ch9_judgment_hinami:
 label ch9_judgment_kyeong:
 
     # [COMMENT: bg_kyeongjang_palace — palace courtyard, pagodas, marble platform]
-    scene bg_kyeongjang_palace with flash       # PLACEHOLDER — Kyeongjang illusion
+    scene kyeonjang_palace with flash       # PLACEHOLDER — Kyeongjang illusion
     stop music fadeout 0.5
     play music ost_judgment_kyeong fadein 0.5   # PLACEHOLDER — Kyeongjang judgment theme
 
@@ -843,9 +896,13 @@ label ch9_judgment_kyeong:
 
     seorin "Y-Your Majesty?"
 
+    show chung_hee underwear_neutral at left_char with Dissolve(0.2)
+
     "Chung-hee was startled. His face flushed, and he shifted awkwardly, hand tugging at the edge of the towel slung over his shoulders. We were, after all, still in our undergarments."
 
     chung_hee "Seorin seonsaengnim?"
+
+    show huli_jing at right_char with Dissolve(0.2)
 
     "Huli Jing cooed from above, now reclined on a gilded parasol carried by an unseen force, her nine tails fanned out like a blooming chrysanthemum."
 
@@ -1014,13 +1071,15 @@ label ch9_judgment_kyeong:
 label ch9_judgments_back:
 
     # [COMMENT: bg_hot_spring — back to hot spring]
-    scene bg_hot_spring with flash              # PLACEHOLDER — hot spring return
+    scene yuxuan_lab_hotspring with flash              # PLACEHOLDER — hot spring return
     stop music fadeout 0.5
     play music ost_huli_jing fadein 0.5         # PLACEHOLDER — Huli Jing theme
 
     "The air shifted one final time."
     "The incense, the towers of Kyeongjang, the weight of our choices-all of it faded like breath on glass. The cold dissolved. The thunderous silence of the spirit realm gave way to something gentler."
     "Heat. Steam. The sound of water lapping gently at stone. We were back. In the hot springs."
+
+    show magnus underwear_base at right_char with Dissolve(0.2)
 
     yuxuan    "By the Prosperity Dragon's blessed scales-we're back!!"
     niko      "That wasn't just illusion. That felt real. Too real."
@@ -1044,6 +1103,8 @@ label ch9_judgments_back:
 # =============================================================================
 
 label ch9_huli_reward_low:
+
+    show huli_jing at center_char with Dissolve(0.2)
 
     huli_jing "As for your judgments, my dear dumplings... I was a little underwhelmed. Mmm. Lukewarm, like reheated noodles."
     huli_jing "I gave you a game. A gift of truth. And you judged... mediocrely. Is that even a word?"
@@ -1070,6 +1131,8 @@ label ch9_huli_reward_low:
 # =============================================================================
 
 label ch9_huli_reward_high:
+
+    show huli_jing at center_char with Dissolve(0.2)
 
     huli_jing "As for your judgments, my dear dumplings..."
     huli_jing "I am beyond delighted. Compassion with justice, side by side... How refreshing."
@@ -1157,9 +1220,11 @@ label ch9_huli_reward_high:
             "Behind them loomed a great golden gate, etched with stars and music and language I couldn't read but felt in my heart."
             "And just beyond that- The Halls of Xianlun. Realm of the noble dead. The honored. The brave. The pure."
 
-            show cg_elara_xianlun with dissolve  # PLACEHOLDER — cg_elara_xianlun
+            scene plain_white with dissolve
+            show cg_family_into_light with dissolve  # PLACEHOLDER — cg_elara_xianlun
             pause 2.0
-            scene bg_hot_spring with dissolve   # PLACEHOLDER — hot spring
+            scene yuxuan_lab_hotspring with dissolve   # PLACEHOLDER — hot spring
+            show huli_jing at center_char
 
             huli_jing "They walk where pain cannot touch them now, dumpling. Brave, every one of them. They knew courage. They knew love. And that was enough."
 
@@ -1389,7 +1454,7 @@ label ch9_huli_exit:
 label ch9_stuffed_fox_exit:
 
     # [COMMENT: cg_black — total darkness]
-    scene cg_black with fade                    # PLACEHOLDER — black screen
+    scene black with fade                    # PLACEHOLDER — black screen
     pause 0.5
 
     "In a blink, the warmth vanished. Steam gone. Stones vanished. Comfort obliterated. Suddenly-squish. Pressed in. Too close. Far too close."
@@ -1424,17 +1489,27 @@ label ch9_stuffed_fox_exit:
 label ch9_kids_spring:
 
     # [COMMENT: bg_hot_spring — Tim and Elias in the springs, playing]
-    scene bg_hot_spring with dissolve           # PLACEHOLDER — hot spring kids
+    scene yuxuan_lab_hotspring with dissolve           # PLACEHOLDER — hot spring kids
 
     "Tim: Elias! Hey Elias!"
     "Elias: Yes, Tim?"
+
+    show tim swimwear_normal at left_char_kids with Dissolve(0.2)
+    show elias swimwear_happy at right_char_kids with Dissolve(0.2)
+
     tim   "Come here! The water's fine!"
     tim   "Given the thermal consistency of this geothermal spring and accounting for the elevation, I hypothesize that the temperature today hovers around seventy-eight degrees Celsius-perhaps just under the threshold to soft-boil an egg."
     tim   "We might even be able to cook noodles, Elias. Just imagine-hot spring ramen! Ambient-heated broth, mineral-rich. Quite possibly delicious."
     elias "Soup? We takin bath in soup?!"
+
+    show weng bathwear at center_char with Dissolve(0.2)
+
     weng  "It's not soup, kids. It's spring water. Full of magic. And minerals. Good for the bones and even better for the soul."
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+
+    hide weng
+    show roboto normal at center_char with Dissolve(0.2)
 
     roboto      "S-S-S-Springs detected. Temperature optimal. Steam density: fluffy."
     elias       "Ooh! It's so pretty! We swim together, Roboto!"
@@ -1446,6 +1521,9 @@ label ch9_kids_spring:
     tedda_alive "Let's go, Lady Elias! Let's swim like noble queens in our glittery bath!"
     elias       "Yey!! Let's go, Tedda! Tim, let's go!"
     tim         "Hey! I'm a king! I'm not a queen!"
+
+    hide tim
+    show tedda_human at left_char_kids with Dissolve(0.2)
 
     tim   "So... Miss Weng told me a story once. About this very spring."
     elias "Ooooh. What story?"
@@ -1476,7 +1554,8 @@ label ch9_kids_spring:
     weng   "My back... If you'll excuse me, I'll have a cup of calming jasmine tea."
     roboto "M-M-Miss Weng, I highly suggest you don't drink tea while taking a bath in the springs."
 
-    "-Weng and Roboto goes away-"
+    hide roboto
+    show weng bathwear at center_char with Dissolve(0.2)
 
     elias "Hmm... Daddy told me to always believe in legends."
     tim   "Oh, Mister Dorian? He's so cool! He fought a Hundun in Tianho with Mister Chung, remember?"
@@ -1532,6 +1611,8 @@ label ch9_fox_toy:
 
         "Shwake it!":
 
+            show elias swimwear_cute at right_char_kids
+
             elias       "Ooh! Okay! I'll shwake it!"
             tedda_alive "With emotion, Lady Elias! Let's goooo!!"
             tim         "Are... you sure shaking it is the best course of action?"
@@ -1542,6 +1623,8 @@ label ch9_fox_toy:
             "-POP-"
 
         "Open it!":
+
+            show elias swimwear_cute at right_char_kids
 
             elias       "Let's open it first, Tedda!"
             tim         "Let's count to three first!"
@@ -1557,11 +1640,15 @@ label ch9_fox_toy:
 
 label ch9_spring_end:
 
-    scene bg_hot_spring with flash              # PLACEHOLDER — hot spring pop
+    scene yuxuan_lab_hotspring with flash              # PLACEHOLDER — hot spring pop
 
     "I tumbled out."
     "Face-first. Right into someone's thigh."
     "Everything reeked of lavender, steam, and shame. We were all still in our undergarments, soaked, tangled like a bundle of wet spaghetti, sprawled out in the middle of the hot spring."
+
+    show chung_hee underwear_neutral at left_char with Dissolve(0.2)
+    show svante underwear_base at center_char with Dissolve(0.2)
+    show magnus underwear_base at right_char with Dissolve(0.2)
 
     chung_hee "This is completely indecent. I swear someone's cheek was on my-wait. Never mind. I don't want to know."
     svante    "I'm... I'm upside down. I can taste someone's foot."
@@ -1569,7 +1656,11 @@ label ch9_spring_end:
     niko      "I apologize. I'll move now."
     elias     "DAAADDDYYY!! Why are you in the foxie?!"
 
+    show elias swimwear_happy at right_char_kids with Dissolve(0.2)
+
     "Above us, I saw Weng, holding a teacup in her swimwear. She squinted at the mess."
+
+    show weng bathwear at center_char with Dissolve(0.2)
 
     weng   "By the stars, Master Yuxuan? What happened to all of you?"
     yuxuan "W-We did it, Miss Weng! The spring won't smell like fermented feet stew!"
@@ -1583,7 +1674,8 @@ label ch9_spring_end:
     tedda_alive "That looks uncomfortable! I'll help you Lady Elias!"
     weng        "Do you need help? Roboto, hold this teacup."
 
-    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    hide magnus
+    show roboto normal at right_char with Dissolve(0.2)
 
     roboto "T-T-Transferring... hot liquid. Grip calibrated to teacup fragility."
     tim    "That was amazing. I deduce that the fox must've sealed them inside an extradimensional plush construct-"
@@ -1593,7 +1685,7 @@ label ch9_spring_end:
     "One by one, we were untangled-wet, dazed, and half-dressed, but alive. Tedda and Elias offered towels. Roboto beeped encouragingly. Magnus looked like he needed ten massages."
     "I groaned, dragging myself upright. My hair clung to my face. Water trickled down my back."
 
-    roboto "S-S-Spatial anomaly resolved. Group integrity: 100%. Modesty: 4.143%."
+    roboto "S-S-Spatial anomaly resolved. Group integrity: 100%. Modesty: 4.143%%."
     elias  "You okay now, Daddy?"
 
     "I looked at him and grinned, still catching my breath."
@@ -1621,7 +1713,7 @@ label ch9_spring_end:
 label ch9_hilltop:
 
     # [COMMENT: bg_hill_memorial_night — hilltop, indigo sky, Tianho Memorial glowing below]
-    scene bg_hill_memorial_night with fade      # PLACEHOLDER — hill overlooking memorial
+    scene tianho_cemetery_night with fade      # PLACEHOLDER — hill overlooking memorial
     stop music fadeout 2.0
     play music ost_ch9_ceremony fadein 2.0      # PLACEHOLDER — ceremony theme
     play audio amb_hilltop_night loop fadein 1.5 # PLACEHOLDER — hilltop night ambient
@@ -1630,29 +1722,40 @@ label ch9_hilltop:
     "From afar, the Tianho Memorial shimmered in the twilight, glowing faintly."
     "Elias and Tim were already running in small circles around the hill, chasing each other in their ceremonial robes."
 
+    show elias ceremonial_happy at left_char_kids with Dissolve(0.2)
+    show tim ceremonial_happy at right_char_kids with Dissolve(0.2)
+
     elias "You can't catch me, Professor Tim!"
-    tim   "Incorrect, my student. My calculations suggest you have a 32.8% chance of tripping on your hem in the next five seconds."
+    tim   "Incorrect, my student. My calculations suggest you have a 32.8%% chance of tripping on your hem in the next five seconds."
     elias "Wha-AHH!"
 
     "Elias' foot caught on the edge of the robe, causing them to tumble onto the floor, giggling uncontrollably."
     "Weng was laying out a neat spread of food on a long silk blanket, adjusting each dish with practiced hands-though every so often, she winced and rubbed her lower back."
 
+    show weng ceremonial at center_char with Dissolve(0.2)
+
     weng "Kids, stop running around like little spirits. You're in ceremonial outfits. You'll tear the fabric and then what?"
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    roboto "B-b-bento arrangement: c-c-c-complete. Humidity: 47%. Aesthetic symmetry: 93.44%... adjusting for toddler chaos."
+    hide weng
+    show roboto normal at center_char with Dissolve(0.2)
+
+    roboto "B-b-bento arrangement: c-c-c-complete. Humidity: 47%%. Aesthetic symmetry: 93.44%%... adjusting for toddler chaos."
 
     tedda_alive "Ooh! Look how cute these rice cakes are! They look like smiling bunnies!"
+
+    hide roboto
+    show yuxuan ceremonial_happy at center_char with Dissolve(0.2)
 
     "Yuxuan waved us over from the far side of the hill, dressed in his expensive looking golden ceremonial attire."
 
     yuxuan "Dorian! Over here, come on!"
     yuxuan "This is the place I wanted all of you to see. A hill above history. The calm before reverence."
 
-    "We all gathered at the rise. The view was breathtaking. The Tianho Memorial stood distant yet dominant, a pale silhouette bathed in the twilight's soft glow."
+    show magnus ceremonial at right_char with Dissolve(0.2)
 
-    yuxuan "I had my people prepare this place for this very special night."
+    "We all gathered at the rise. The view was breathtaking. The Tianho Memorial stood distant yet dominant, a pale silhouette bathed in the twilight's soft glow."
 
     "Magnus stood quietly to one side, his arms crossed, expression unreadable. He stared out at the fading horizon."
 
@@ -1667,9 +1770,16 @@ label ch9_hilltop:
     dorian "They did well. There's not a single trace of the bombs."
     svante "Or my brothers and sisters... I can't believe so many of us died yesterday."
     yuxuan "They called in all the best Earth Channelers from across the Empire. Every stone replaced, every crack healed."
+
+    hide yuxuan
+    show roboto normal at center_char with Dissolve(0.2)
+
     roboto "For m-m-m-more information, even the Paladins from Gale lent their hands. According to my database, they all w-w-w-worked to make this moment possible."
 
     "-BACK CRACK-"
+
+    hide roboto
+    show weng ceremonial at left_char with Dissolve(0.2)
 
     weng        "Tetrad above... Should've called in a back healer too. These knees weren't built for bending this much."
     niko        "Miss Weng, do you want me to grab a chair?"
@@ -1704,9 +1814,14 @@ label ch9_hilltop:
 
     "( PLAY VIDEO: Dragon of the Depths - ?? )"
 
-    show cg_aoi_performance with dissolve       # PLACEHOLDER — cg_aoi_performance
+    hide weng
+    hide magnus
+    hide tim
+    hide elias
+    scene cg_aoi_singing with dissolve       # PLACEHOLDER — cg_aoi_performance
     pause 3.0
-    scene bg_hill_memorial_night with dissolve  # PLACEHOLDER — hill
+    scene tianho_cemetery_night with dissolve  # PLACEHOLDER — hill
+    show aoi_base at center_char with Dissolve(0.2)
 
     "As the last haunting note of the song faded into the wind, silence settled over the hill like a soft shroud."
     "None of us moved for several long seconds-no one dared disturb the weight of what we had just witnessed."
@@ -1717,12 +1832,16 @@ label ch9_hilltop:
 
     magnus "Amazing. I could give it a go too. A little aria of my own-"
 
-    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    hide aoi
+    show roboto normal at right_char with Dissolve(0.2)
 
     roboto "W-W-Would you like some tea to calm you down, Sir Magnus?"
     magnus "...I suppose that's a no."
 
     "Then, as the water projection calmed into a mirror-like stillness once more, Lady Aoi reappeared-her image clear, standing tall at the center of the great pool of light."
+
+    hide roboto
+    show aoi_base at center_char with Dissolve(0.2)
 
     aoi "Tonight, beneath these stars and above these honored hills, we gather not as divided nations, but as a shared people-united by memory, by loss, and by hope."
     aoi "We remember the Tragedy of Tianho. A day not written in ink, but seared into our hearts."
@@ -1749,6 +1868,9 @@ label ch9_hilltop:
     tedda_alive "Here at Cheng's, we bring change..."
     tim         "Here at Cheng's, we bring change..."
     elias       "*hums off tune*"
+
+    hide aoi
+    show yuxuan ceremonial_happy at center_char with Dissolve(0.2)
 
     "Yuxuan tried and failed to hide his smile."
 
@@ -1793,6 +1915,8 @@ label ch9_lantern_kids:
 
     play music ost_ch9_lanterns fadein 2.0      # PLACEHOLDER — lantern release theme
 
+    show dorian tianho_ceremonial_neutral at left_char with Dissolve(0.2)
+
     "I walked away from the others, lantern in hand, toward a more remote edge of the hill where the moonlight draped the grass like silver thread. I wanted the moment to be quiet. Private. The wind was gentle here, and the stars looked like they were listening."
     "I knelt down beside a smooth stone and studied the blank canvas of the lantern."
     "Elara. Daniel. Emily. Sarah. Lucas."
@@ -1807,6 +1931,10 @@ label ch9_lantern_kids:
 
     dorian "What are all of you doing?"
 
+    show elias ceremonial_cute at right_char_kids with Dissolve(0.2)
+    show tim ceremonial_think at center_char_kids with Dissolve(0.2)
+    show roboto normal at center_char with Dissolve(0.2)
+
     "Elias immediately perked up like I'd just invited him to a picnic."
 
     elias       "We want to help, daddy!"
@@ -1815,7 +1943,7 @@ label ch9_lantern_kids:
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    roboto "O-O-OObservation mode: Active. Sentimental ritual detected. Emotional resonance: 73.3%."
+    roboto "O-O-OObservation mode: Active. Sentimental ritual detected. Emotional resonance: 73.3%%."
     tim    "Miss Weng hurt her back setting up her lantern and said she's skipping the event. So I took command and assembled the child unit!"
     roboto "M-M-Master Yuxuan said he preferred to be alone. Emotional spike detected. Possible mourning protocol initiated."
     elias       "It's not mourning, Roboto! Siwwy Roboto! It's night time!"
@@ -1825,6 +1953,9 @@ label ch9_lantern_kids:
 
     dorian "Fine. But be careful. And no glitter."
     elias  "Daddy? No gwitter?"
+
+    hide tim
+    show tedda_human at center_char_kids with Dissolve(0.2)
 
     "As I launched into a brief explanation of paper textures and ink flow with Tim-who, to his credit, had real thoughts about paper grain-Roboto began calibrating wind speed and \"optimal lantern-lift trajectory.\" Whatever that meant."
     "I didn't notice Elias had quietly dipped a brush into the ink. His tiny hands were already scribbling furiously across the side of my lantern."
@@ -1840,12 +1971,17 @@ label ch9_lantern_kids:
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    roboto "L-L-Literacy deviation detected. Spelling accuracy: 37%. Suggest enrolling Elias in supplementary language modules. Possibly... kindergarten."
+    hide tedda_human
+    show roboto normal at center_char_kids with Dissolve(0.2)
+
+    roboto "L-L-Literacy deviation detected. Spelling accuracy: 37%%. Suggest enrolling Elias in supplementary language modules. Possibly... kindergarten."
     elias  "Kinnygarden?"
 
     "Before I could even confiscate the lantern-WHOOSH."
     "A gust of wind lifted the lantern right out of his tiny hands."
     "We all turned as it wobbled into the air-floating awkwardly, proudly, like a crooked duck with a mission."
+
+    show elias ceremonial_sad at right_char_kids
 
     elias       "W-Wait!! Nooo!! I didn't mean to let go yet!"
     tedda_alive "Oh no! My name's flying away!!"
@@ -1853,12 +1989,14 @@ label ch9_lantern_kids:
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    roboto "L-Lantern has launched. Contents: ['teDuH']. Probability of proper sentiment delivery: 3.6%. Ascension trajectory: marginally passable."
+    roboto "L-Lantern has launched. Contents: ['teDuH']. Probability of proper sentiment delivery: 3.6%%. Ascension trajectory: marginally passable."
 
     "I just... stared up at the sky. Elias reached out and grabbed my hand, his grip small and warm."
 
     elias  "Sowwy, Daddy. It was pretty though."
     dorian "It was... something. Don't worry, buddy."
+
+    show elias ceremonial_happy at right_char_kids
 
     "We watched it vanish into the stars-an accidental, misspelled tribute, lovingly launched by sticky little fingers."
 
@@ -1871,6 +2009,9 @@ label ch9_lantern_kids:
     tedda_alive "Lady Elias, we must go! Miss Weng is summoning us!"
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+
+    hide roboto
+    show weng ceremonial at center_char with Dissolve(0.2)
 
     roboto "M-M-Miss Weng has entered Critical Hunger Mode. She is demanding all juniors report for dumpling consumption immediately."
     elias  "Dumprings!?"
@@ -1907,6 +2048,9 @@ label ch9_lantern_kids:
 
 label ch9_route_yuxuan:
 
+    hide weng
+    show yuxuan ceremonial_neutral at right_char with Dissolve(0.2)
+
     "As I turned around, I saw Yuxuan. He was standing there, wide-eyed, staring up at the wobbling lantern."
 
     yuxuan "Dorian, what was that?! That lantern just launched early! What if someone down there saw it?! It's glowing like a signal flare! It could give away our location! I told Miss Weng not to let the kids have brushes unsupervised-!"
@@ -1920,6 +2064,8 @@ label ch9_route_yuxuan:
 
     "I nodded again. Slowly. Dramatically."
 
+    show yuxuan ceremonial_sad at right_char
+
     yuxuan "Nooo... Here. We'll share mine."
     dorian "You sure? Roboto told me earlier you wanted to be alone."
     yuxuan "Ah-hah... yeah, well... I told Roboto that so... I could, uh... scout the area. Alone. For... strategic solitude. Yes."
@@ -1931,10 +2077,12 @@ label ch9_route_yuxuan:
     "The wind was gentler here. A quiet hill beneath the stars, just the two of us. The glow of the memorial in the distance made Yuxuan's silhouette shimmer like something caught in a dream."
     "He sat down slowly on the grass, patting the space beside him. I joined him."
 
+    show yuxuan ceremonial_normal at right_char
+
     yuxuan "How have you been feeling... since Elara? Since the kids?"
 
     "He didn't look at me when he said it. His voice was soft, like he was afraid of pressing too hard."
-    "I hesitated, staring out into the dark where Elias's lantern had floated. Somewhere above, it drifted still-misspelled and luminous."
+    "I hesitated, staring out into the dark where Elias's lantern had floated. Somewhere above, it drifted still-Misspelled and luminous."
 
     dorian "I'm... getting there. One day at a time."
 
@@ -1942,6 +2090,8 @@ label ch9_route_yuxuan:
     "He was touching the lantern. I noticed an entire line of names written on the lantern."
 
     dorian "Those names there. Did you... lose someone important in the tragedy?"
+
+    show yuxuan ceremonial_sad at right_char
 
     "Yuxuan didn't respond right away. He traced a finger along the edge of the lantern, watching the way the candlelight flickered through the rice paper."
 
@@ -1956,7 +2106,7 @@ label ch9_route_yuxuan:
 
     "He looked away."
 
-    yuxuan "When you rescued me... I was grateful. So grateful to you. I was over the moon to have survived. But once I heard they didn't..."
+    yuxuan "When you rescued me... I was grateful. So grateful to have survived. But once I heard they didn't..."
 
     "His voice caught. He rubbed at his neck, eyes glinting with the shine of held-back tears."
 
@@ -1965,6 +2115,8 @@ label ch9_route_yuxuan:
     yuxuan "I just wish they were here to see it."
 
     "He gave a soft, shaky laugh and rubbed his neck."
+
+    show yuxuan ceremonial_happy at right_char
 
     yuxuan "Sorry. That got heavy. I should've told you all this sooner."
 
@@ -2077,6 +2229,9 @@ label ch9_route_yuxuan:
 
 label ch9_route_chunghee:
 
+    hide weng
+    show chung_hee ceremonial_neutral at right_char with Dissolve(0.2)
+
     chung_hee "Are you alright, Dorian?"
 
     "I turned around-and there stood Chung-hee, silent as always, holding his lantern with both hands like it was some sacred relic. His brows were slightly furrowed as he watched the crooked, ink-blotted \"teDuH\" lantern bobbing higher and higher into the night sky."
@@ -2111,9 +2266,9 @@ label ch9_route_chunghee:
 
     dorian "You light this part here. The hot air lifts it up. Like this-"
 
-    "A soft flame danced at my fingertips. As I moved to light it-"
-
     chung_hee "Wait."
+
+    show chung_hee ceremonial_sad at right_char
 
     "He looked down at the lantern again, then up at me. His gaze was gentle. Inviting."
 
@@ -2156,9 +2311,13 @@ label ch9_route_chunghee:
 
     dorian "Then we'll make this one count. For them."
 
+    show chung_hee ceremonial_neutral at right_char
+
     "He nodded, his fingers curling softly around mine."
 
     dorian "What about your aunt? You mentioned her yesterday. Is she...?"
+
+    show chung_hee ceremonial_sad at right_char
 
     "He lowered his eyes."
 
@@ -2214,6 +2373,8 @@ label ch9_route_chunghee:
     "He glanced down, realizing our hands were still entwined. His eyes widened slightly. A faint blush crept up his neck, and he quickly-though reluctantly-let go."
     "Then, almost like flipping a switch, he straightened his posture, squared his shoulders, and cleared his throat."
 
+    show chung_hee ceremonial_neutral at right_char
+
     chung_hee "Ahem. I-apologize. I allowed emotion to... compromise my composure. Clearly, this moment has overwhelmed me."
     chung_hee "Thank you, Dorian."
 
@@ -2250,6 +2411,9 @@ label ch9_route_chunghee:
 
 label ch9_route_svante:
 
+    hide weng
+    show svante ceremonial_base at right_char with Dissolve(0.2)
+
     svante "Is... that your lantern, Dorian?"
 
     "I turned around, still shaking my head at the trail of glitter Elias left behind, and there he was-Svante."
@@ -2277,6 +2441,8 @@ label ch9_route_svante:
 
     dorian "I think that's a nice idea."
 
+    show svante ceremonial_happy at right_char
+
     "He smiled shyly, scratching the back of his head."
 
     svante "You can write something, if you want. I... honestly don't know anyone I'd-"
@@ -2287,6 +2453,8 @@ label ch9_route_svante:
 
     dorian "Kristin."
     svante "... Kristin..."
+
+    show svante ceremonial_sad at right_char
 
     "His voice caught on the name. His shoulders stiffened, just slightly. I saw the way his jaw clenched, how his breath hitched before he carefully smoothed it out again."
 
@@ -2320,6 +2488,8 @@ label ch9_route_svante:
     svante "I... I want to say I'm sorry, Dorian. For the resentment. You and Elias."
 
     "I reached over and gently rested a hand over his. He blushed."
+
+    show svante ceremonial_nervous at right_char
 
     svante "D-Dorian..."
     dorian "Kristin gave you the courage to start questioning him. You don't have to be sorry for that."
@@ -2431,6 +2601,9 @@ label ch9_route_svante:
 
 label ch9_route_niko:
 
+    hide weng
+    show niko ceremonial_base at right_char with Dissolve(0.2)
+
     niko "...I told Miss Weng not to give the kids any brushes. Especially Elias."
 
     "I turned around-and there he was. Niko. Standing a few steps behind me with his arms crossed and that usual unreadable expression on his face, like the breeze didn't dare ruffle his robes without permission."
@@ -2474,6 +2647,8 @@ label ch9_route_niko:
 
     "For a moment, I didn't think he would answer. But then:"
 
+    show niko ceremonial_sad at right_char
+
     niko "...He died saving people at the tragedy."
     niko "During the Tragedy. There was an inn-Shenzhou. It caught fire. Most people ran. Kaito... ran in."
     niko "There were children. An elderly couple. A dog. Knowing Kaito, he probably went back for all of them."
@@ -2492,6 +2667,8 @@ label ch9_route_niko:
     "I sat still, letting the silence stretch between us. The kind of silence that didn't need to be filled."
 
     dorian "He sounds like someone worth remembering."
+
+    show niko ceremonial_base at right_char
 
     "Niko didn't look at me right away, but his expression softened."
     "Then-deliberately-he pulled out a second spoon from the container and held it toward me."
@@ -2523,9 +2700,13 @@ label ch9_route_niko:
     dorian "Yuxuan told me someone stitched him up. No one knew who. But he said if it wasn't for those stitches... Elias would've died that night."
     niko   "...Hmm."
 
+    show niko ceremonial_sad at right_char
+
     "Niko didn't answer. He looked down at the book again. Then at the lantern."
     "And slowly, silently, he took the brush and dipped it in ink. Wrote, in clean, solemn strokes:"
     "Kaito Tsukumo. Rest in peace, beloved brother."
+
+    show niko ceremonial_base at right_char
 
     niko "Well. Shall we, Dorian?"
 
@@ -2634,6 +2815,9 @@ label ch9_route_niko:
 # =============================================================================
 
 label ch9_route_magnus:
+
+    hide weng
+    show magnus ceremonial at right_char with Dissolve(0.2)
 
     magnus "What a lovely made piece of artwork!"
 
@@ -2805,7 +2989,7 @@ label ch9_end:
     "We returned to the lab in quiet procession. My steps felt heavier, but not from exhaustion-from the weight of everything I'd seen, heard, and felt."
     "I changed, climbed into bed, and let myself collapse into the softness. My heart was full. Maybe too full."
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    scene black with fade                    # PLACEHOLDER — fade to black
     stop music fadeout 3.0
     stop audio fadeout 2.0
 

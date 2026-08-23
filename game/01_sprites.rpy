@@ -1090,7 +1090,7 @@ image feng_suit:
     At("images/Assets/Character Sprites/Other Characters/paladin feng suit.png", sprite_highlight("feng"))
     fit "contain"
 image tedda_human:
-    At("images/Assets/Character Sprites/Other Characters/tedda human form.png", sprite_highlight("tedda_alive"))
+    At("images/Assets/Character Sprites/Other Characters/tedda human form.png", sprite_highlight("tedda"))
     fit "contain"
 image vasily_rubric:
     At("images/Assets/Character Sprites/Other Characters/count vasilynorubics.png", sprite_highlight("vasily"))

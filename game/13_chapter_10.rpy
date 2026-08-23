@@ -43,8 +43,7 @@
 
 label chapter_10:
     $ save_name = "Chapter 10"
-    # [COMMENT: bg_white_screen — dream void, warm shimmer]
-    scene bg_white_screen with fade             # PLACEHOLDER — white dream void
+    scene plain_white with fade
     play music ost_ch10_dream fadein 2.0        # PLACEHOLDER — dream theme
 
     show screen chapter_title_screen(
@@ -72,7 +71,7 @@ label chapter_10:
 
     play music ost_ch10_yaoguai_deal fadein 0.5 # PLACEHOLDER — Yaoguai King theme
 
-    show cg_yaoguai_king_dream with dissolve    # PLACEHOLDER — cg_yaoguai_king_dream
+    show yk at center_char with Dissolve(0.2)
 
     yk "They sleep. Exhausted. Vulnerable. That ridiculous ceremony drained them. Their warriors lie scattered, half-drunk on memory. Tianho is wide open."
 
@@ -156,8 +155,7 @@ label ch10_bad_end_accept:
 
     "The Yaoguai King's lips twisted into a crooked smile-satisfied, smug, victorious. He raised a hand, and the shadows behind him dispersed like vapor. The threat was withdrawn."
 
-    # [COMMENT: bg_black_screen — total darkness, narration]
-    scene cg_black with fade                    # PLACEHOLDER — black screen
+    scene black with fade
     play music ost_ch10_bad_end fadein 1.0      # PLACEHOLDER — bad ending theme
 
     "Tianho would wake to another quiet morning. The streets would remain unburnt. Children would still laugh in the courtyards. No one would know how close they came to death."
@@ -166,8 +164,7 @@ label ch10_bad_end_accept:
     "The Prosperity Dragon's voice fell into silence. It did not return. It left me completely. Even its warmth was gone from my dreams. Its presence-snuffed out like a candle in deep water."
     "Days passed. Then weeks. Then-the world began to crumble. We heard the whispers first."
 
-    # [COMMENT: bg_mjoll_palace — Mjoll, darkness, ruins]
-    scene bg_mjoll_palace with dissolve         # PLACEHOLDER — Mjoll palace
+    scene mjoll_palace_throne_lightsoff with dissolve
 
     "Mjoll, the northern realm of snow and light, was the first to fall."
     "They said the mountains cracked open, that black mist spilled from the earth, and creatures with no mouths and too many eyes swept through the villages. The screams were swallowed. The snow ran red."
@@ -176,7 +173,7 @@ label ch10_bad_end_accept:
     "Chung-hee left one night and never came back. No farewells. No goodbyes. We never heard from him or the empire of Kyeongjang."
     "Kyeongjang... Now, lost to time."
 
-    scene cg_black with dissolve                # PLACEHOLDER — black screen
+    scene black with dissolve
 
     "Niko joined the Prophets of Enoch, walking westward in silence. He told us, as the chosen of the Death God, that the world would be remade in its image. He smiled when he left. He didn't say goodbye."
     "Svante went home-to ash and broken stone. He said he needed to make peace with his brothers and sisters."
@@ -262,8 +259,7 @@ label ch10_consult:
 
 label ch10_common_wake:
 
-    # [COMMENT: bg_lab_bedroom — Dorian wakes, drenched in sweat, ground shaking]
-    scene bg_lab_bedroom with flash             # PLACEHOLDER — lab bedroom
+    scene spare_room with flash
 
     "My body was drenched in sweat. The room was trembling. No-not the room. The ground."
 
@@ -272,8 +268,7 @@ label ch10_common_wake:
     "Elias was still sleeping near me. I touched his hair gently."
     "Then I quickly got dressed. There was no time for questions. No time for doubt."
 
-    # [COMMENT: bg_storage_room — Yuxuan playing audio drama for the group]
-    scene bg_storage_room with dissolve         # PLACEHOLDER — storage room
+    scene storage_room with dissolve
 
     "Chace: But... love, come on! I barely know him!"
     "Isagani: You said he just turned fourteen a few days ago, love. Fourteen. And his mother just died trying to keep him from being deported. Don't you care what happens to Yevhen?"
@@ -287,19 +282,39 @@ label ch10_common_wake:
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep
 
+    show yuxuan normal_neutral at left_char
+    show niko normal_base at right_char
+    show svante normal_base at center_char
+    with Dissolve(0.2)
+
     roboto "A-A-Audiodrama paused by M-M-Master Yuxuan."
     yuxuan "So... thoughts? Come on, I want honest feedback here!"
     niko   "For starters, I love the acting. The guy who played Chace was perfect for the role."
     svante "I-I agree! Even his younger voice! The way he cried... it brought tears to my eyes!"
+
+    show magnus normal at right_char
+
     magnus "~Noel's voice... was heaven-sent... like silk, like rain, like sweet lament~"
     yuxuan "YES!! Roboto, take note of that. Praise from Magnus is a sign we're about to break the market!"
+
+    show roboto normal at left_char
+
     roboto "N-N-Noted. Cheng Industries... preparing hit tracker update. Logging Magnus endorsem-m-ment."
     niko   "Great. *yawns* Are we done here? I'm late for prayer."
     yuxuan "Honestly, I think Isagani's voice is underrated too. So grounded. So real. But enough about my tastes, I-"
 
+    hide niko
+    hide svante
+    hide magnus
+    hide roboto
+    show dorian normal_alt_tense at center_char with Dissolve(0.2)
+
     "And then... I stepped into the room, the weight of urgency pressing on my shoulders."
 
     dorian "They're coming."
+
+    show magnus normal at right_char with Dissolve(0.2)
+
     magnus "Who?"
 
     "The room stilled. Every eye turned to me."
@@ -308,6 +323,8 @@ label ch10_common_wake:
     yuxuan "Wait... w-what?"
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep
+
+    show roboto normal at left_char with Dissolve(0.2)
 
     roboto "I-I-Incoming threat? P-Please reconfirm?"
     dorian "There's no time. Tianho will be attacked under an hour."
@@ -321,16 +338,27 @@ label ch10_common_wake:
 
 label ch10_departure:
 
-    # [COMMENT: bg_lab_bedroom — Dorian wakes everyone; Tedda leads kids to safety]
-    scene bg_lab_bedroom with dissolve          # PLACEHOLDER — lab bedroom
+    scene spare_room with dissolve
 
     "We woke up everyone inside the underground lab-Chung-hee, Miss Weng, and the kids. Tedda quietly gathered Elias and Tim and led them into a single room, locking the door behind her to keep them safe."
+
+    show tedda_human at center_char
+    show elias sleepwear_neutral at left_char_kids
+    show tim sleepwear_normal at right_char_kids
+    with Dissolve(0.2)
 
     dorian      "Please... take care of Elias, Tedda."
     tedda_alive "Don't worry, Sir Dorian. I'll make sure Elias and Tim are safe. I'll lock the door."
 
     "They slept together in a pile of pillows."
     "The rest of us-me, Niko, Yuxuan, Chung-hee, Svante, Magnus, Miss Weng, and Roboto-hurried to the living room for a quick, urgent meeting."
+
+    scene yuxuan_lab with dissolve
+
+    show chunghee normal_neutral at left_char
+    show magnus normal at right_char
+    show yuxuan normal_neutral at center_char
+    with Dissolve(0.2)
 
     chung_hee "Are you certain this is happening?"
     magnus    "I trust Dorian. That's enough for me."
@@ -340,6 +368,10 @@ label ch10_departure:
     dorian    "Yu, can you send a message to Gao and Jiang immediately? We need to reach Paladin Feng. If he's still at Tianho at this hour, he might be able to mobilize the other paladins in time."
 
     "Paladin Feng... My old friend. Once my closest ally. If he's still there, he'll act. He has to act."
+
+    show svante normal_base at right_char
+    show niko normal_base at left_char
+    with Dissolve(0.2)
 
     svante "What about Lady Aoi? She's an incredible water channeler. She could make a huge difference."
     niko   "That is, if she's still in Tianho."
@@ -351,6 +383,8 @@ label ch10_departure:
     yuxuan "Roboto, establish connection with Li Gao and Sun Jiang immediately!"
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep
+
+    show roboto normal at center_char with Dissolve(0.2)
 
     roboto "G-G-Got it, Master Yuxuan. Establishing connection in 3...2...1..."
 
@@ -374,14 +408,19 @@ label ch10_departure:
 
     $ feng_score += 1                           # +1 Feng alerted
 
-    # [COMMENT: bg_yuxuan_lab_dim — lab living room, urgent gathering]
-    scene bg_yuxuan_lab_dim with dissolve       # PLACEHOLDER — lab living room
+    scene yuxuan_lab with dissolve
+
+    show dorian normal_alt_tense at left_char
+    show chunghee normal_neutral at right_char
+    with Dissolve(0.2)
 
     "I exhaled, realizing I'd been holding my breath. The lab felt heavier now-like the walls themselves could sense what was coming."
 
     play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep
 
-    roboto    "F-F-Fear levels in the room are fluctuating at 63%. Suggesting calming ambient music-"
+    show roboto normal at center_char with Dissolve(0.2)
+
+    roboto    "F-F-Fear levels in the room are fluctuating at 63%%. Suggesting calming ambient music-"
     chung_hee "If this happens tonight, we don't have long. We leave for Tianho now."
     svante    "We can set up a makeshift command post there. An hour's not enough to mount full defense-but we have to try."
     niko      "No more waiting. We move. Now."
@@ -389,6 +428,8 @@ label ch10_departure:
     weng      "Roboto and I will stay behind to protect the kids. This lab's shielded, reinforced. It'll hold."
 
     "She snapped her fingers. A flame sparked in her palm, steady and sharp."
+
+    show weng normal at right_char with Dissolve(0.2)
 
     weng      "Any yaoguai stupid enough to get through that door? I'll make sure they burn to ash."
 
@@ -404,8 +445,12 @@ label ch10_departure:
     roboto "T-T-Take care, Masters! Please stay alive!"
     roboto "I'll make you a quick cup of tea, Miss W-W-Weng."
 
-    # [COMMENT: bg_underground_door — Jinyan steel door, JIN-SHIELD protocol]
-    scene bg_underground_door with dissolve     # PLACEHOLDER — lab exit
+    scene underground_door with dissolve
+
+    show magnus normal at left_char
+    show niko normal_base at right_char
+    show yuxuan normal_neutral at center_char
+    with Dissolve(0.2)
 
     "We exited the door. The big metallic door for the underground laboratory closed."
 
@@ -422,6 +467,10 @@ label ch10_departure:
     door_voice "No unauthorized being shall pass."
     niko   "Are you sure this thing can hold, Yuxuan?"
     door_voice "I am forged from Jinyan steel, tempered in the magma-forges of Yonghai. I do not buckle. I do not burn. I do not break."
+
+    show svante normal_base at left_char
+    show chunghee normal_neutral at right_char
+    with Dissolve(0.2)
 
     "Svante lifted his hand, trying to channel the metal. It won't budge."
 
@@ -468,12 +517,13 @@ label ch10_departure:
 
 label ch10_route_farewell:
 
-    # [COMMENT: bg_tianho_underground_2 — dark underground path]
-    scene bg_tianho_underground_2 with dissolve # PLACEHOLDER — underground path
+    scene bg_tianho_underground_2 with dissolve
 
     play music ost_ch10_alert fadein 1.0        # PLACEHOLDER — urgent alert theme
 
     if love_route_locked == "yuxuan":
+
+        show dorian normal_alt_tense at left_char with Dissolve(0.2)
 
         "I kept walking."
         "Each step carried the weight of ghosts I could no longer protect. My fists clenched. My jaw tightened. I had to do this. Alone."
@@ -482,6 +532,8 @@ label ch10_route_farewell:
         yuxuan "DORIAN!"
 
         "I stopped. His voice cut through the silence like a blade. Urgent. Cracked. Furious."
+
+        show yuxuan normal_angry at right_char with Dissolve(0.2)
 
         yuxuan "What in the Prosperity Dragon's name are you doing!?"
 
@@ -494,6 +546,8 @@ label ch10_route_farewell:
         yuxuan "I thought we were past this. I thought we were a team. I... I thought we were family ever since the blizzard at Frostcradle. I..."
 
         "His voice broke."
+
+        show yuxuan normal_sad at right_char
 
         yuxuan "I don't want to lose you, Dorian..."
         dorian "I don't plan on dying, Yu."
@@ -510,6 +564,8 @@ label ch10_route_farewell:
 
     elif love_route_locked == "chunghee":
 
+        show dorian normal_alt_tense at left_char with Dissolve(0.2)
+
         "I kept walking."
         "Each step carried the weight of ghosts I could no longer protect. My fists clenched. My jaw tightened. I had to do this. Alone."
         "Then a voice thundered inside my head, not spoken aloud but pulsing through my chest like a divine decree."
@@ -517,6 +573,8 @@ label ch10_route_farewell:
         chung_hee "Dorian. What do you think you are doing?"
 
         "Footsteps followed, fast, heavy, resolute. Chung-hee was behind me-his presence unmistakable."
+
+        show chunghee normal_angry at right_char with Dissolve(0.2)
 
         dorian    "Go to Tianho. They need you more than I do."
         chung_hee "The Yaoguai King isn't some warlord you can stab through the heart. He's not a man-he's a force. A storm. You'll be throwing yourself into a hurricane fueled by rot and fury."
@@ -543,6 +601,8 @@ label ch10_route_farewell:
 
     elif love_route_locked == "svante":
 
+        show dorian normal_alt_tense at left_char with Dissolve(0.2)
+
         "I kept walking."
         "Each step carried the weight of ghosts I could no longer protect. My fists clenched. My jaw tightened. I had to do this. Alone."
         "Then I heard it-footsteps pounding fast behind me."
@@ -551,6 +611,8 @@ label ch10_route_farewell:
 
         "It was Svante. Breathless. His face flushed, eyes wide with panic and frustration as he caught up beside me."
 
+        show svante normal_angry at right_char with Dissolve(0.2)
+
         svante "You can't go alone! The Yaoguai King-he's not just some monster. He's old, Dorian. Too powerful. Please, come back. Come with us to Tianho."
         svante "Yuxuan's worried sick. I'm worried sick. We need to-"
         dorian "Svante, go back. I have to do this alone."
@@ -558,6 +620,8 @@ label ch10_route_farewell:
         dorian "It... It's personal."
 
         "He grabbed my arm-his grip trembling."
+
+        show svante normal_sad at right_char
 
         svante "You're being selfish. What about Elias? You're all he has. He lost Queen Ekaterina, his mother-don't make him lose you, too!"
 
@@ -586,6 +650,8 @@ label ch10_route_farewell:
 
     elif love_route_locked == "niko":
 
+        show dorian normal_alt_tense at left_char with Dissolve(0.2)
+
         "I kept walking."
         "Each step carried the weight of ghosts I could no longer protect. My fists clenched. My jaw tightened. I had to do this. Alone."
         "Then I heard it-footsteps pounding fast behind me."
@@ -593,6 +659,8 @@ label ch10_route_farewell:
         niko "Dorian."
 
         "I stopped, but didn't turn. The sound of his footsteps caught up with mine."
+
+        show niko normal_anger at right_char with Dissolve(0.2)
 
         niko "Forget me. Forget about the others. But what about Elias?"
 
@@ -604,6 +672,8 @@ label ch10_route_farewell:
         niko "Then I'm coming with you. You shouldn't-"
 
         "I shook my head and raised my hand. And he stopped. Stilled. His expression twisted, somewhere between pleading and fury."
+
+        show niko normal_sad at right_char
 
         niko "Are you really willing to leave Elias behind? Leave him fatherless? To chase a death you know is coming?"
         dorian "I'm not planning to die."
@@ -626,6 +696,8 @@ label ch10_route_farewell:
 
     else:
 
+        show dorian normal_alt_tense at left_char with Dissolve(0.2)
+
         "I kept walking."
         "Each step carried the weight of ghosts I could no longer protect. My fists clenched at my sides. My jaw tightened. My breath came steady, but heavy-measured like the silence between thunder."
         "I had to do this. Alone."
@@ -633,6 +705,8 @@ label ch10_route_farewell:
         magnus "Wait, Dorian! Wait!"
 
         "I didn't stop."
+
+        show magnus normal at right_char with Dissolve(0.2)
 
         magnus "Heavens, you walk like you're marching into hell-...which, okay, fair, you kind of are, but still."
 
@@ -696,14 +770,12 @@ label ch10_route_farewell:
 
 label ch10_sealed_door:
 
-    # [COMMENT: bg_underground_door — the path to the sealed chamber, chasm, bridge]
-    scene bg_underground_door with dissolve     # PLACEHOLDER — underground door path
+    scene underground_door with dissolve
 
     "After minutes of walking, I reached the place where we had found Magnus."
     "A bottomless chasm wrapped around the edge, and a single narrow bridge stretching towards the center."
 
-    # [COMMENT: bg_sealed_door_inside — cracked ice platform, broken etchings, two yaoguai feasting]
-    scene bg_sealed_door_inside with dissolve   # PLACEHOLDER — sealed door interior
+    scene underground_magnus with dissolve
     play music ost_ch10_boss fadein 1.0         # PLACEHOLDER — boss theme
 
     "Two yaoguai hunched over mangled bodies-unrecognizable, barely even bones now. The sound-"
@@ -712,11 +784,16 @@ label ch10_sealed_door:
 
     "-echoed across the stone. One of them slurped something wet and vile, then burped loudly, its bloated belly sagging against the ground."
 
+    show yg at left_char with Dissolve(0.2)
+
     yg "Mmmh... That one tasted like fear. My favorite seasoning."
     yg "You always say that. I think this one tasted like despair. Much richer. Earthier. You wouldn't know taste if it chewed you."
     yg "Bah. Give me fear with a side of broken dreams any day."
     yg "We already ate all of them, Your Majesty. Nothing but bones left!"
     yk "You're spoiling your appetites, boys. The main course has arrived."
+
+    hide yg
+    show yk at center_char with Dissolve(0.2)
 
     "At the center stood the Yaoguai King."
     "He was crouched low, fingers trailing along the broken ice where Magnus had once been entombed."
@@ -727,6 +804,8 @@ label ch10_sealed_door:
 
     "I didn't flinch. Not on the outside."
 
+    show yg at left_char with Dissolve(0.2)
+
     yg "The dragonkin smells like righteous fury. I love when they're angry. It makes the blood sweeter."
     yg "Do you think we can have a taste before the king breaks him?"
     dorian "Tell me what happened. And maybe I'll make this quick."
@@ -734,6 +813,8 @@ label ch10_sealed_door:
     yg "He's burning up! Let's bite him now! Hot blood's the sweetest!"
     yk "Hush, boys... Let the dragonkin grieve with context."
     yk "Very well. This will be fun. I suppose you've earned a peek behind the curtain. After all, you have played your part well, dragonkin."
+
+    hide yg
 
     "He circled slowly, claws clicking against the cracked ice where Magnus once hung, suspended in frost. His grin widened, revealing fangs too long for his face."
 
@@ -746,7 +827,12 @@ label ch10_sealed_door:
     "I said nothing. Not from fear-but disbelief. He watched me closely, savoring the silence like wine."
 
     yk "You should've seen your face just now. Delicious..."
+
+    show yg at left_char with Dissolve(0.2)
+
     yg "Delicious! Delicious! Good enough to eat!"
+
+    hide yg
 
     "He tapped the icy platform with a clawed foot, sending tiny shards skittering."
 
@@ -783,11 +869,14 @@ label ch10_sealed_door:
 
 label ch10_vision_rulers:
 
-    # [COMMENT: bg_sealed_door_no_color — desaturated vision of the past meeting]
-    scene bg_sealed_door_no_color with fade     # PLACEHOLDER — desaturated sealed door
+    scene underground_magnus with fade
 
     "We were in this very hall, though the memory shimmered like heat rising from frost."
-    "King Gustav stood at the center, bound in iron cuffs. His teeth bared in fury, his gaze locked-hungrily-on the frozen form of Magnus."
+
+    show king_gustav at center_char
+    show king_long_shen at left_char
+    show olympia at right_char
+    with Dissolve(0.2)
 
     king_gustav "UNHAND ME this instant, or I will order every soldier in my empire to raze this palace to ash!"
     long_shen   "You butchered my family, Gustav! You sent your aldorith assassins in the dead of night! My wife and my two sons-you knew what you were doing!"
@@ -821,8 +910,12 @@ label ch10_vision_rulers:
     emperor_minjoon   "I will guard the Amulet of Teleportation-the second key. I will make sure that it's safe in Kyeongjang."
     long_shen         "By the Prosperity Dragon-"
     king_gustav       "TOOK YOU LONG ENOUGH!"
-    boy_ald           "They have Father! Destroy them!"
-    girl_ald          "YAHHHH!!"
+
+    show boy_ald_normal at center_char with Dissolve(0.2)
+    show girl_ald_normal at right_char with Dissolve(0.2)
+
+    boy_ald   "They have Father! Destroy them!"
+    girl_ald  "YAHHHH!!"
 
     "The doors exploded inward as Gustav's hidden soldiers stormed in, blades drawn and channeling elements."
 
@@ -836,13 +929,16 @@ label ch10_vision_rulers:
     king_gustav     "Heh. You will give me the amulet of frost, skank!"
     olympia         "You want the weapon, Gustav? Then come and take it!"
 
-    # [COMMENT: bg_underground_door_no_col — desaturated underground door exterior — battle aftermath vision]
-    scene bg_underground_door_no_col with dissolve # PLACEHOLDER — desaturated underground door
+    scene underground_door with dissolve
 
     "The vision shifted-like flame caught in a gust."
     "Screams. Roars. Metal clashing. The ground trembled beneath the weight of monsters unleashed."
     "And I stood before them. King Gustav lay broken on the blood-soaked ground, battered and heaving, his armor cracked, his face streaked with ash and blood."
     "Standing over him was King Long Shen, surrounded by scorched earth and a seething aura of draconic power."
+
+    show king_gustav at right_char
+    show king_long_shen at left_char
+    with Dissolve(0.2)
 
     king_gustav "Do it... Kill me..."
 
@@ -887,8 +983,12 @@ label ch10_vision_rulers:
 
     vasily "YOUR MAJESTY!!"
 
-    # [COMMENT: bg_tianho_underground_2 — vision continues, Vasily strikes]
-    scene bg_tianho_underground_2 with flash    # PLACEHOLDER — underground path
+    scene bg_tianho_underground_2 with flash
+
+    show king_gustav at right_char
+    show king_long_shen at left_char
+    show vasily neutral at center_char
+    with Dissolve(0.2)
 
     "A beam of divine light tore through the haze. Count Vasily, brilliant and fast as lightning, surged in. In one blinding motion, he drove a knife through Long Shen's back."
 
@@ -919,13 +1019,14 @@ label ch10_vision_rulers:
     king_gustav "O... Of course."
     vasily "Then let me help you. We must hurry."
 
-    # [COMMENT: bg_sealed_door_inside — vision ends, back to the present]
-    scene bg_sealed_door_inside with fade       # PLACEHOLDER — sealed door interior
+    scene underground_magnus with fade
 
     "The vision ended yet I stood frozen. The echo of the vision still burned in my mind-the roar of fire, the flash of betrayal, the final breath of a king."
     "Count Vasily was the one who saved Gustav. That loyal dog."
     "King Gustav was the reason for the death god's release in his ice prison."
     "And in that chaos... King Long Shen-the last known wielder of draconic fire-was killed."
+
+    show yk at center_char with Dissolve(0.2)
 
     "The Yaoguai King let out a low, satisfied hum behind me, as if relishing my silence."
 
@@ -960,10 +1061,15 @@ label ch10_vision_rulers:
 
     yk "Because I needed you broken. The legends say draconic fire awakens only through sheer desperation. When your heart is torn apart and all that remains... is rage."
 
+    show yg at left_char with Dissolve(0.2)
+
     "Then came the voices-those cursed, laughing mouths beside him."
 
     yg "And they were yummy! Yummy delicious!"
     yg "That woman- what a skank! Hahaha! And the little ones-"
+
+    hide yg
+    hide yk
 
     "They didn't finish. I didn't let them."
     "My rage ignited. Draconic fire erupted around me like a storm-blazing gold and crimson, heat warping the air in violent waves. I thrust both hands forward and unleashed a roaring inferno across the platform."
@@ -977,6 +1083,8 @@ label ch10_vision_rulers:
 
     "Ash and smoke whirled in the air."
     "The Yaoguai King didn't move as the flames engulfed him-but his grin was gone."
+
+    show yk at center_char with Dissolve(0.2)
 
     yk "HOW DARE YOU! AFTER I JUST TOLD YOU EVERYTHING! I could have given you power. Dominion. Revenge. I was going to make you a god, Dragonkin!"
 
@@ -1086,8 +1194,12 @@ label ch10_boss_fight_2:
 
     play sound sfx_yaoguai_roar                 # PLACEHOLDER — yaoguai spirit roar
 
+    show yg at left_char with Dissolve(0.2)
+
     yg "Raaaaaaawwrrr!!! Grrraaawwwrrr!! Rawwwrrr!!"
     yk "Their hatred will be my shield. Their screams, my chorus."
+
+    hide yg
 
     "He hurled them toward me in a wave of screaming shadow."
 
@@ -1136,6 +1248,8 @@ label ch10_boss_fight_3:
 
 label ch10_boss_outcome:
 
+    show yk at center_char with Dissolve(0.2)
+
     yk "The halls of Xianlun await you... you'll see your kin again... Aren't you excited?"
 
     "He sneered."
@@ -1160,7 +1274,7 @@ label ch10_boss_outcome:
             "I was running out of time."
 
         "Duck between the claws and twist behind him.":
-            $ yking_score += 1                  # +1 YKing score (note: this puts max at 4 but threshold is 3)
+            $ yking_score += 1                  # +1 YKing score
 
             "I took one sharp breath and dove between his incoming arms. The wind of his swipe grazed my skin, but I twisted my torso mid-dodge and rolled behind him in one smooth motion."
             "The King spun, eyes wild. Too late."
@@ -1182,7 +1296,11 @@ label ch10_boss_outcome:
 
 label ch10_bad_end_fight:
 
+    hide yk
+
     "The Yaoguai King snarled-scorched, bleeding, but very much alive. His charred skin peeled at the edges, smoke curling from every wound... and still, he laughed."
+
+    show yk at center_char with Dissolve(0.2)
 
     yk "Pathetic. I expected more from the Dragon of Gale."
 
@@ -1218,9 +1336,13 @@ label ch10_bad_end_fight:
 
 label ch10_boss_good:
 
+    hide yk
+
     "I dropped low and slammed my hand into the ground."
     "A jagged spike of stone shot up and slammed into his jaw, snapping his head back in a brutal crunch."
     "Smoke curled from his wounds. His charred, half-melted body hissed and crackled like dying coals. But he didn't fall. Not yet."
+
+    show yk at center_char with Dissolve(0.2)
 
     yk "You... You've gotten strong. Too strong."
 
@@ -1228,7 +1350,8 @@ label ch10_boss_good:
     "I stood tall, even as my body ached to collapse. Flames continued to swirl around me. The shadows behind him rippled."
     "And from them... she stepped forward."
 
-    show cg_elara_illusion with dissolve        # PLACEHOLDER — cg_elara_illusion
+    hide yk
+    show cg_elara_children_death with dissolve
 
     elara "Dorian... you did it. You're safe now. Come home."
 
@@ -1236,10 +1359,13 @@ label ch10_boss_good:
     "But then I saw it. Just a flicker. The smirk behind the eyes. The hunger behind the tears. The way her shadow curved wrong against the floor."
     "Too late."
 
-    scene bg_sealed_door_inside with flash      # PLACEHOLDER — sealed door interior
+    hide cg_elara_children_death
+    scene underground_magnus with flash
 
     "Something sharp, searing, punched through my gut. My hands trembled."
     "The illusion melted away. Elara vanished like mist in the sun. And standing there, face twisted in delight, was the Yaoguai King."
+
+    show yk at center_char with Dissolve(0.2)
 
     yk "Still so gullible. That's what makes you fun."
 
@@ -1287,7 +1413,7 @@ label ch10_rescue_yuxuan:
 
     yk "Hmm?"
 
-    "FWUMP!"
+    "FWOMP!"
 
     play sound sfx_electric_net                 # PLACEHOLDER — electric net SFX
 
@@ -1302,6 +1428,10 @@ label ch10_rescue_yuxuan:
     "I looked up-barely conscious, my body trembling."
 
     dorian "Y-Yuxuan?"
+
+    hide yk
+    show yuxuan normal_happy at left_char with Dissolve(0.2)
+    show supply_robot normal at right_char with Dissolve(0.2)
 
     "Smoke billowed from the shattered archway above, and through it walked a figure wielding an absolutely massive cannon strapped to a rig of copper coils and glowing tubes."
     "It was Yuxuan. A supply bot rolled behind him, wheels screeching slightly as it dragged what looked like an absurdly overloaded battery."
@@ -1322,7 +1452,7 @@ label ch10_rescue_yuxuan:
     "He flicked a switch. The cannon began to hum, and the coils down its barrel lit up like lightning in a bottle."
 
     yuxuan "Voltage check?"
-    "Supply Bot: CALIBRATION COMPLETE. VOLTAGE: 100,000%. MEGABOOM PROTOCOL READY."
+    "Supply Bot: CALIBRATION COMPLETE. VOLTAGE: 100,000%%. MEGABOOM PROTOCOL READY."
 
     "The air vibrated. The cannon whined, glowing dangerously."
 
@@ -1348,6 +1478,8 @@ label ch10_rescue_yuxuan:
     "Smoke curled from the ruin where he stood."
     "I collapsed to my knees, gasping. My vision blurred, but I was alive-scorched, bleeding, trembling... but alive."
     "Yuxuan was already sprinting toward me, cannon clattering to the ground."
+
+    show yuxuan normal_sad at left_char
 
     yuxuan "DORIAN! NO!! NO!! Are you okay?! Say something!"
 
@@ -1399,6 +1531,9 @@ label ch10_rescue_chunghee:
 
     yk "Another pest? You dare threaten-"
 
+    hide yk
+    show chunghee normal_angry at left_char with Dissolve(0.2)
+
     "Before he could finish, Chung-hee raised both hands, and the air around him rippled. With a sudden, sharp crack, ethereal chains-woven from pure mind energy-snapped into existence and lashed out."
     "They coiled around the Yaoguai King like living serpents, binding his arms, his legs, his neck. He thrashed, howled, clawed at them-but the psychic chains only tightened."
 
@@ -1417,6 +1552,8 @@ label ch10_rescue_chunghee:
 
     yk "No... no, no-"
 
+    show yg at right_char with Dissolve(0.2)
+
     "But Chung-hee stepped forward, eyes narrowing. And then-his mind reached out."
     "From the shadows beyond, the Yaoguai spirits-twisted remnants once bound to the King-hesitated, confused by the power now overwhelming their master."
     "He... He's... controlling them telepathically."
@@ -1426,6 +1563,8 @@ label ch10_rescue_chunghee:
     yk "WHAT? NO! I AM YOUR MASTER! YOU-"
     yg "Yummy... Must feed!"
 
+    hide yg
+
     "And they obeyed."
     "One by one, the once-writhing yaoguai spirits turned on their former master. They surged toward him, screeching, weeping, screaming like ghosts freed from torment-and they devoured him."
 
@@ -1434,6 +1573,8 @@ label ch10_rescue_chunghee:
     "The psychic chains constricted one final time-a brilliant flash of silver and white light-and then, with an agonizing shriek, the Yaoguai King erupted into dust."
     "Silence fell."
     "Warm hands caught me before I hit the ground. I collapsed against him, gasping for air. My chest ached, my vision flickered. But I felt his arms around me-strong, trembling just slightly."
+
+    show chunghee normal_neutral at left_char
 
     chung_hee "Dorian, are you alright?"
 
@@ -1451,6 +1592,8 @@ label ch10_rescue_chunghee:
     chung_hee "Everything's going to be alright. I'll try to-"
 
     "A soft whirring sound echoed in the distance."
+
+    show supply_robot normal at right_char with Dissolve(0.2)
 
     "Supply Bot: Emergency assistance activated. Master Yuxuan suspected that Sir Chung-hee and Master Dorian might need assistance."
     "Supply Bot: He was, as always, correct."
@@ -1486,6 +1629,9 @@ label ch10_rescue_svante:
 
     yk     "GAHHHH-WHAT?!"
 
+    hide yk
+    show svante normal_angry at left_char with Dissolve(0.2)
+
     "Violet hair, eyes burning with fury. Violet armor slick with battle light."
 
     dorian "S... Svante?"
@@ -1506,10 +1652,14 @@ label ch10_rescue_svante:
     prosperity_dragon "Svante Nordström. Illegitimate son of King Gustav of Mjoll. A heart forged not from royal blood, but from undying loyalty and courage."
     yk "The... the Prosperity Dragon...?!"
 
+    show yg at right_char with Dissolve(0.2)
+
     "The Yaoguai King roared, furious, his claws curling as he summoned the shadows."
     "The yaoguai spirits surrounding the Yaoguai King sprang forth-wailing specters of the dead, cloaked in fire and grief. They screeched, lunging toward Svante with blazing teeth and blade-like limbs."
 
     svante "M-Merciful Enoch..."
+
+    hide yg
 
     "Svante ran as the swarm of spirits surged toward him. Then, he leapt in midair, meeting the spirits."
     "The pieces of metal surrounding him whirled like a hurricane, cutting through the spectral horde with blinding speed. Spirits were pierced, severed, disintegrated by in flashes of light. Svante advanced with purpose-not one step wasted."
@@ -1525,6 +1675,8 @@ label ch10_rescue_svante:
     "The Yaoguai King collapsed in a heap of soot and shadow, disintegrating into the earth. Silence."
     "A deafening, holy silence."
     "I stumbled, vision blurring. My legs gave out. I fell, but strong arms caught me."
+
+    show svante normal_sad at left_char
 
     svante "DORIAN!"
 
@@ -1546,6 +1698,8 @@ label ch10_rescue_svante:
     svante "HELP! PLEASE! ANYONE!"
 
     "A soft whirring sound echoed in the distance."
+
+    show supply_robot normal at right_char with Dissolve(0.2)
 
     "Supply Bot: Emergency assistance activated. Master Yuxuan suspected Master Dorian might be reckless. He was, in fact, correct."
 
@@ -1581,6 +1735,9 @@ label ch10_rescue_niko:
 
     "The shadows screamed."
     "And from the heart of them stepped a figure."
+
+    hide yk
+    show niko normal_anger at left_char with Dissolve(0.2)
 
     dorian "N... Niko?"
 
@@ -1621,6 +1778,8 @@ label ch10_rescue_niko:
     "Niko remained still. Unblinking. Merciless."
     "The air went still-eerily silent-as if the world itself dared not speak. I felt my legs give out. My body couldn't take it anymore. I collapsed. But strong arms caught me."
 
+    show niko normal_sad at left_char
+
     niko "DORIAN!"
 
     "He knelt, cradling me with shaking hands. My vision was fractured-blurry outlines, streaks of red. I tasted iron."
@@ -1642,6 +1801,8 @@ label ch10_rescue_niko:
     niko "You won't die. First, I need to get you to-"
 
     "A soft whirring sound echoed in the distance."
+
+    show supply_robot normal at right_char with Dissolve(0.2)
 
     "Supply Bot: Sir Niko detected. Emergency assistance activated. Master Yuxuan suspected Master Dorian might be reckless. He was, in fact, correct."
 
@@ -1668,6 +1829,9 @@ label ch10_rescue_magnus:
 
     "A voice, bright and thundering, cut through the suffocating dark like a blade of sunlight cleaving stormclouds."
 
+    hide yk
+    show magnus normal at left_char with Dissolve(0.2)
+
     magnus "Well, I am absolutely and positively flattered!"
 
     "From the smoke and ruin, he stepped forward. His golden eyes were ablaze, full of fury. Sweat clung to his face. His chest rose and fell, breath ragged."
@@ -1679,8 +1843,12 @@ label ch10_rescue_magnus:
 
     play sound sfx_divine_lance                 # PLACEHOLDER — divine lance SFX
 
+    show magnus clothed_wings at left_char
+
     magnus "Touch him again and I'll rip your cursed throat out."
     yk     "At last. The Divine Weapon."
+
+    show yk at right_char with Dissolve(0.2)
 
     "The Yaoguai King hissed and flung me aside like a discarded toy. I hit the ground, groaning weakly. I could barely keep my eyes open."
     "The Yaoguai King laughed manically."
@@ -1693,6 +1861,8 @@ label ch10_rescue_magnus:
 
     yk "Ughhh-ack..."
 
+    hide yk
+
     "Magnus reappeared behind him, a golden lance piercing straight through the king's chest. Light surged. The Yaoguai King convulsed."
 
     yk "ARGHHH! What... What are you doing?!"
@@ -1700,10 +1870,14 @@ label ch10_rescue_magnus:
     prosperity_dragon "Magnus Wyndham. The so-called Divine Weapon. A new man."
     yk     "The... the Prosperity Dragon...?!"
 
+    show yk at right_char with Dissolve(0.2)
+
     "The Yaoguai King's eyes widened in horror."
 
     yk     "You were chosen?! The Dragon talks to you?! But how?! I don't-"
     magnus "Aww you're too kind, Dragon. Now if you'll excuse me."
+
+    hide yk
 
     "He launched skyward, dragging the king with him, wings leaving a burning wake. Then-"
 
@@ -1718,6 +1892,8 @@ label ch10_rescue_magnus:
 
     "The Yaoguai King exploded in a storm of ash and shadow. The light swallowed it all. And then-Silence."
     "Magnus landed hard beside me, stumbling, dropping to his knees at my side."
+
+    show magnus normal_sad at left_char
 
     magnus "Dorian? Dorian! Hey-no, no, no, stay with me. Please."
     dorian "M.. Magnus... You... came..."
@@ -1734,6 +1910,8 @@ label ch10_rescue_magnus:
 
     "A soft whirring sound echoed in the distance."
 
+    show supply_robot normal at right_char with Dissolve(0.2)
+
     "Supply Bot: Sir Magnus detected. Emergency medical protocol online. Master Yuxuan suspected Master Dorian might be reckless. He was, in fact, correct."
 
     "The small metal drone hovered into view, arms outstretched with medkits and healing supplies."
@@ -1744,7 +1922,7 @@ label ch10_rescue_magnus:
 
     magnus "Melodrama? I-Never mind, help Dorian!"
 
-    "Supply Bot: Vital signs stabilizing. Continue holding his hand. Data suggests you refusing to let go improves patient survival by 6.8%"
+    "Supply Bot: Vital signs stabilizing. Continue holding his hand. Data suggests you refusing to let go improves patient survival by 6.8%%"
 
     "Magnus cradled me close. Then, softly-tenderly-he began to hum."
 
@@ -1770,10 +1948,14 @@ label ch10_tianho_battle:
 
     play music ost_ch10_alert fadein 1.0        # PLACEHOLDER — battle theme
 
-    # [COMMENT: bg_cheng_entrance_night — Cheng Industries entrance, yaoguai attacking]
-    scene bg_cheng_entrance_night with flash    # PLACEHOLDER — Cheng entrance night
+    scene cheng_industries_bunk with flash
 
     play sound sfx_yaoguai_roar                 # PLACEHOLDER — yaoguai roar
+
+    show soldier_jiang at left_char
+    show soldier_gao at right_char
+    show yg at center_char
+    with Dissolve(0.2)
 
     jiang "Everyone, fall back! Get inside your homes, now! Barricade the doors!"
     gao   "GO! Don't look back! Get to Cheng Industries!"
@@ -1785,17 +1967,30 @@ label ch10_tianho_battle:
 
     if love_route_locked == "yuxuan":
 
+        show yuxuan normal_neutral at center_char with Dissolve(0.2)
+
         yuxuan "Jiang! Gao! Don't do anything reckless! Please-stay sharp, stay alive. My companions will handle the front."
         jiang  "Understood, Master Yuxuan. We'll hold the line. You can count on us."
         gao    "Wouldn't be the first time we've danced with monsters."
+
+        show svante normal_base at left_char with Dissolve(0.2)
+
         svante "Leave the heavy lifting to us. We'll make sure nothing gets past."
         yuxuan "Alright... We're trusting you. All of you. Make it count."
+
+        show magnus normal at right_char with Dissolve(0.2)
+
         magnus "I shall scout up in the air. I shall see if there are more yaoguai."
         yuxuan "Oh that's actually a very good idea, Magnus."
+
+        show niko normal_base at left_char with Dissolve(0.2)
+
         niko   "Everyone! In position! No mistakes. We hold the gate or we die trying."
         yuxuan "Come on, Dorian... wherever you are. Don't die on us now."
 
     else:
+
+        show chunghee normal_neutral at center_char with Dissolve(0.2)
 
         chung_hee "Jiang. Gao. Do not act without thought. Stay sharp. Stay alive. My companions will handle the front."
         jiang  "Understood, sir Chung-hee. We'll hold the line. You can count on us."
@@ -1806,27 +2001,44 @@ label ch10_tianho_battle:
         chung_hee "Let no yaoguai survive!"
         chung_hee "Dorian... Wherever you are, you have to survive."
 
-    # [COMMENT: bg_tianho_night — Tianho streets, yaoguai attack, fleeing civilians]
-    scene bg_tianho_night with dissolve         # PLACEHOLDER — Tianho streets night
+    scene bg_tianho_city_night with dissolve
 
     play sound sfx_yaoguai_roar                 # PLACEHOLDER — yaoguai roar
+
+    show soldier_jiang at left_char
+    show soldier_gao at right_char
+    with Dissolve(0.2)
 
     man_1 "HELP! SOMEONE, PLEASE-AHHH!!!"
     yg    "Graawwwr!!"
     jiang "I'll help you, sir! Gao, cover me!"
     gao   "On it, Jiang!"
+
+    hide soldier_jiang
+    hide soldier_gao
+    show yg at center_char with Dissolve(0.2)
+
     yg    "Graawwwr!!"
 
     if feng_score < 2:
+
+        show soldier_jiang at left_char with Dissolve(0.2)
+        show soldier_gao at right_char with Dissolve(0.2)
 
         jiang "GAO! We've got incoming! Left flank!"
         gao   "I see it!"
         jiang "Gao, we failed-AHHH!!! We failed, Gao! I-"
         gao   "JIANG!! LOOK BEHIND YOU!"
         jiang "What the-"
+
+        show yg at center_char with Dissolve(0.2)
+
         yg    "GRAAAAAAARRR!!"
 
         play sound sfx_claws                    # PLACEHOLDER — claws SFX
+
+        hide soldier_jiang
+        show soldier_gao at right_char
 
         jiang "ARGHH!!!"
         gao   "JIANG!! NO!! PLEASE!! GET UP!!"
@@ -1834,6 +2046,9 @@ label ch10_tianho_battle:
         gao   "No... Please!! No! Not me!! AHHH!!"
 
         play sound sfx_claws                    # PLACEHOLDER — claws SFX
+
+        hide soldier_gao
+        show yg at center_char
 
         yg "GWAAARR!"
 
@@ -1843,6 +2058,10 @@ label ch10_tianho_battle:
             yuxuan "NO!! GAO!! JIANG!! *cries*"
 
     else:
+
+        show soldier_jiang at left_char
+        show soldier_gao at right_char
+        with Dissolve(0.2)
 
         gao   "JIANG!! LOOK BEHIND YOU!"
         jiang "What the-"
@@ -1860,6 +2079,10 @@ label ch10_tianho_battle:
         man_1 "Y-Yes, sir!!"
         jiang "Let's move, everyone! Let's move!"
 
+        hide soldier_jiang
+        hide soldier_gao
+        show feng_suit at center_char with Dissolve(0.2)
+
         if love_route_locked == "yuxuan":
             niko "Paladin Feng... Seems we'll need to put our differences aside. We're grateful for your help."
         else:
@@ -1876,21 +2099,26 @@ label ch10_tianho_battle:
 
 label ch10_tianho_aoi:
 
-    # [COMMENT: bg_tianho_food_stalls_night — food stall row, yaoguai in the dark]
-    scene bg_tianho_food_stalls_night with dissolve # PLACEHOLDER — Tianho food stalls night
+    scene tianho_food_stalls_fire with dissolve
 
     play sound sfx_yaoguai_roar                 # PLACEHOLDER — yaoguai roar
+
+    show babala at left_char with Dissolve(0.2)
 
     babala "Damned Weaver... I-I can't for the life of me... My arms... they won't respond. I can't channel... not like I used to..."
     male_guard "We already told you to stay inside your homes! Why won't you listen?!"
     female_guard "Mam, please! We have to move-now!"
     babala "I'm trying!"
     babala "I shouldn't have come here. These old bones were never meant for battle. This was foolish..."
+
+    show yg at center_char with Dissolve(0.2)
+
     yg     "GRAWWWRR!!"
     babala "HELP! Someone-please!"
 
     if aoi_score < 1:
 
+        hide babala
         female_guard "It's right behind us-AAHHH!!!"
         yg "GRAWWRRRRR!!!"
         babala "ARGHHH!!"
@@ -1904,6 +2132,10 @@ label ch10_tianho_aoi:
         yg  "GRAWWRRRRR!!!"
         aoi "Not today."
         yg  "GYAAAAA!!!"
+
+        hide yg
+        show aoi_base at center_char with Dissolve(0.2)
+
         babala "Heavens! What a stunning young woman! Thank the Weaver, you-"
         aoi "Save the flattery. More are coming. Why are you even out here? We told you to evacuate!"
         babala "Alright, alright! No need to shout!"
@@ -1916,6 +2148,8 @@ label ch10_tianho_aoi:
         female_guard "Mam!"
 
         if feng_score >= 2 and aoi_score >= 1:
+
+            show feng_suit at right_char with Dissolve(0.2)
 
             feng "Well, well... You wear the battlefield well, Lady Aoi. Quite the vision outside your kimono. Long hair really does suit you."
             aoi  "Ugh. Really, Feng? Save the charm for after we've cleaned up this mess. Now move-we're not done yet."
@@ -1936,8 +2170,7 @@ label ch10_tianho_aoi:
 
 label ch10_epilogue:
 
-    # [COMMENT: bg_overlooking_tianho — aerial view at dawn, calm after battle]
-    scene bg_overlooking_tianho with fade       # PLACEHOLDER — overlooking Tianho
+    scene bg_tianho_city_morning with fade
     stop music fadeout 2.0
     play music ost_ch10_aftermath fadein 2.0    # PLACEHOLDER — aftermath / hopeful theme
 
@@ -1946,7 +2179,11 @@ label ch10_epilogue:
     prosperity_dragon "Dorian-the Dragon of Gale, bearer of grief, fire, and unyielding will-now lies in recovery, his body battered, but his soul no longer burdened by vengeance."
     prosperity_dragon "When he awoke, it was not to battle horns or the roar of flame, but to a familiar warmth. A small hand in his own. A voice, soft and sweet."
 
+    show elias normal_happy at right_char_kids with Dissolve(0.2)
+
     elias "Daddy! You're awake!"
+
+    show roboto normal at left_char with Dissolve(0.2)
 
     "Supply Bot: Vitals stable. Blood pressure within optimal range. Neural activity increasing... Welcome back, Master Dorian."
 
@@ -1958,19 +2195,34 @@ label ch10_epilogue:
     prosperity_dragon "Dorian now stands at the edge of a new chapter. Not written in blood or fury-but perhaps... in love."
     prosperity_dragon "As for our tale... it is not yet over."
 
-    # [COMMENT: bg_kitchen — everyone gathered, Dorian tells them everything]
-    scene bg_kitchen with dissolve              # PLACEHOLDER — kitchen
+    scene yuxuan_lab with dissolve
+
+    show yuxuan normal_neutral at left_char
+    show weng normal at right_char
+    show magnus normal at center_char
+    with Dissolve(0.2)
 
     "I gathered everyone in the kitchen. I told them everything. About Magnus. About the Yaoguai King. About the Divine Weapon."
 
     yuxuan "Wait... so let me get this straight. Magnus is a clone of the Death God?!"
     weng   "By the stars... I can't believe it. The Death God..."
 
+    show magnus normal_alt_neutral at center_char
+
     "Magnus sat off to the side, silent, his brows furrowed in confusion. I didn't blame him."
 
     magnus "I... don't really feel like a clone. I don't even know what that means. I have memories. Feelings. I've laughed, cried, bled. How do you explain that?"
+
+    show svante normal_base at right_char with Dissolve(0.2)
+
     svante "I'm with Magnus. I haven't seen clones before. But I know he's not one. He's real to me. Maybe the Yaoguai King was just trying to mess with your head."
+
+    show niko normal_base at left_char with Dissolve(0.2)
+
     niko   "I highly doubt that. Normally, I'd call it blasphemy outright. But considering that the Prosperity Dragon is involved with this... it aligns. All too well."
+
+    show chunghee normal_neutral at right_char with Dissolve(0.2)
+
     chung_hee "If what you're saying is true, I can take Magnus back to Kyeongjang with me. If he really is the Divine Weapon, we can't risk him falling into King Gustav's hands."
     svante "My father would never harm Magnus. He has merciful and kind tendencies! I don't think he'll want to doom us all."
     elias  "Ooh! Can I come? I wanna go to Kongjong!"
@@ -1992,6 +2244,8 @@ label ch10_epilogue:
 
     roboto "U-Unfortunately, K-K-King Long Shen has long been deceased. No further logs are available on his activities."
     yuxuan "Then we turn to the other. King Tatsuya of Hinami."
+
+    show dorian normal_alt_tense at left_char with Dissolve(0.2)
 
     "I looked down, my fists tight."
 
@@ -2016,6 +2270,8 @@ label ch10_epilogue:
     roboto "No, Miss Tedda. You'll stay in the lab and c-c-c-clean up after Lady Elias. And maybe assist in kitchen duties if you don't burn rice again."
     tedda_alive "Aww boo..."
     niko   "Dorian, you'll need someone who knows the island. I'll go. For Enoch. And for the truth they've long buried."
+
+    show magnus normal at center_char
 
     "Magnus looked up from where he sat-his carefree demeanor dimmed. His eyes serious now, thoughtful."
 
@@ -2070,16 +2326,19 @@ label ch10_epilogue:
 
 label ch10_credits_scene:
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    scene black with fade
     stop music fadeout 2.0
     pause 1.0
 
     "( Credits )"
 
-    # [COMMENT: bg_empty_battlefield — muddy trail, carriage, storm clouds rolling in]
-    scene bg_empty_battlefield with fade        # PLACEHOLDER — empty battlefield
+    scene destroyed_land with fade
     play music ost_ch10_credits fadein 2.0      # PLACEHOLDER — ominous credits theme
     play sound sfx_carriage_rumble              # PLACEHOLDER — carriage rumble SFX
+
+    show king_gustav at left_char
+    show cyrus at right_char
+    with Dissolve(0.2)
 
     "The imperial carriage rumbled down the muddy trail, wheels slick with rainwater. Thunder cracked in the distance, the sky bruised with approaching storm."
 
@@ -2089,6 +2348,8 @@ label ch10_credits_scene:
 
     "The carriage lurched slightly. A knock sounded. The door creaked open to reveal three kneeling figures-hooded Aldoriths, rain dripping from their cloaks."
 
+    show boy_ald_normal at center_char with Dissolve(0.2)
+
     boy_ald "Father... we are humbly asking for your permission to-"
     cyrus   "CAN'T YOU SEE HE IS TALKING TO ME?!"
     boy_ald "F-Forgive us..."
@@ -2096,6 +2357,8 @@ label ch10_credits_scene:
     boy_ald "Thank you Father. I appreciate your kindness."
     girl_ald "Father, forgive the intrusion. We bring urgent news."
     boy_ald "We found him. Our brother... Svante. He lives."
+
+    show king_gustav normal_alt_anger at left_char
 
     "King Gustav's eyes narrowed, tension rising in his shoulders."
 
@@ -2140,7 +2403,7 @@ label ch10_credits_scene:
 
     "[ DEMO OVER ]"
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    scene black with fade
     stop music fadeout 3.0
     pause 2.0
 
@@ -2153,7 +2416,7 @@ label ch10_credits_scene:
 
 label ch10_bad_end_credits:
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    scene black with fade
     stop music fadeout 1.0
     play music ost_ch10_bad_end fadein 1.0      # PLACEHOLDER — bad end music
 
@@ -2169,7 +2432,7 @@ label ch10_bad_end_credits:
 
     "( CREDITS )"
 
-    scene cg_black with fade                    # PLACEHOLDER — fade to black
+    scene black with fade
     stop music fadeout 3.0
     pause 2.0
 

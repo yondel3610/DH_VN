@@ -448,6 +448,62 @@ screen rage_power():
         ysize 1080
 
 # =========================================
+# FENG SPRITE BLUE FIRE GLOW
+# to be used for feng_suit sprite
+
+# show feng_suit at center_char with Dissolve(0.3)
+# show screen feng_blue_fire  # Call this to show the glow behind him
+# =========================================
+
+# In transforms.rpy
+transform blue_glow_outline:
+    ease 1.0 alpha 0.6
+    ease 0.5 alpha 0.3
+    ease 1.0 alpha 0.6
+    ease 1.0 alpha 0.6
+    ease 0.5 alpha 0.3
+    ease 1.0 alpha 0.6
+    repeat
+
+# In screens.rpy
+screen feng_blue_fire():
+    # Blue glow layer behind the sprite
+    add "feng_suit":
+        at blue_glow_outline
+        matrixcolor TintMatrix("#00bfffff") * BrightnessMatrix(0.3) # Deep sky blue tint
+        xalign 1.15   # Centered (change to -0.15 if he's on the left, or 1.15 if on the right)
+        yalign 0.3
+        zoom 1.20    # Slightly larger to create outline effect
+        yoffset 40
+        blur 8 
+
+transform blue_fire_pulse:
+    linear 2.0 alpha 0.6
+    linear 1.0 alpha 0.3
+    linear 0.5 alpha 0.8
+    linear 1.0 alpha 0.5
+    repeat
+
+transform blue_fire_pulse_cyan:
+    linear 2.0 alpha 0.3
+    linear 1.0 alpha 0.6
+    linear 0.5 alpha 0.2
+    linear 1.0 alpha 0.8
+    repeat
+
+screen feng_power():
+    # Full screen pulsing blue/cyan overlay
+    add "#0040ff":  # Deep Blue
+        at blue_fire_pulse
+        xsize 1920
+        ysize 1080
+    
+    add "#00ffff":  # Cyan
+        at blue_fire_pulse_cyan
+        xsize 1920
+        ysize 1080
+
+# =========================================
 # Flashback filter
 # =========================================
 transform flashback_filter:
@@ -534,3 +590,40 @@ transform distort_severe:
         direction="both", damp=1.0,
         double="both"
     )
+
+# MAGNUS CAVE TRANSFORMS
+transform golden_glow_pulse:
+    alpha 0.0
+    linear 1.0 alpha 0.4
+    linear 1.5 alpha 0.6
+    linear 1.5 alpha 0.4
+    repeat
+
+# FOR CH8 MEMORIES FLASHING
+image flashback_memory_loop:
+    "mp1"
+    0.5
+    "mp2"
+    0.5
+    "mp3"
+    0.5
+    "mp4"
+    0.5
+    "mp5"
+    0.5
+    "mp6"
+    0.5
+    "mp7"
+    0.5
+    "mp8"
+    0.5
+    "mp9"
+    0.5
+    "mp10"
+    0.5
+    "mp11"
+    0.5
+    "mp12"
+    0.5
+    repeat
+

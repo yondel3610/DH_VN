@@ -17,12 +17,12 @@
 # SECTION 3: AUDIO DECLARATIONS
 # =============================================================================
 
-define audio.ost_ch9_morning     = "audio/music/ost_ch9_morning.ogg"        # PLACEHOLDER
-define audio.ost_ch9_kitchen     = "audio/music/ost_ch9_kitchen.ogg"        # PLACEHOLDER
-define audio.ost_ch9_library     = "audio/music/ost_ch9_library.ogg"        # PLACEHOLDER
-define audio.ost_ch9_tavern      = "audio/music/ost_ch9_tavern.ogg"         # PLACEHOLDER
-define audio.amb_tianho_festival = "audio/ambient/amb_tianho_festival.ogg"  # PLACEHOLDER
-define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PLACEHOLDER
+# define audio.ost_ch9_morning     = "audio/music/ost_ch9_morning.ogg"        # PLACEHOLDER
+# define audio.ost_ch9_kitchen     = "audio/music/ost_ch9_kitchen.ogg"        # PLACEHOLDER
+# define audio.ost_ch9_library     = "audio/music/ost_ch9_library.ogg"        # PLACEHOLDER
+# define audio.ost_ch9_tavern      = "audio/music/ost_ch9_tavern.ogg"         # PLACEHOLDER
+# define audio.amb_tianho_festival = "audio/ambient/amb_tianho_festival.ogg"  # PLACEHOLDER
+# define audio.amb_library         = "audio/ambient/amb_library.ogg"          # PLACEHOLDER
 # define audio.sfx_cheng_jingle  = "audio/sfx/sfx_cheng_jingle.ogg"        # PLACEHOLDER — not declared in 01_sprites.rpy
 # define audio.sfx_door_chime    = "audio/sfx/sfx_door_chime.ogg"          # PLACEHOLDER — not declared in 01_sprites.rpy
 # define audio.sfx_roboto_beep   = "audio/sfx/sfx_roboto_beep.ogg"         # PLACEHOLDER — not declared in 01_sprites.rpy

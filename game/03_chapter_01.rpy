@@ -136,7 +136,7 @@ label chapter_1:
     # -------------------------------------------------------------------------
     scene bg_tianho_city_night with dissolve
 
-    play music ost_tianho_festival volume 0.5
+    play music ost_tianho_festival volume 0.4
     #play audio amb_festival_crowd loop fadein 1.5  # PLACEHOLDER — crowd ambient loop
     
     "The moment we step out into the street, the kids swarm us, buzzing with excitement."

@@ -27,6 +27,9 @@ define audio.sfx_claw           = "audio/sfx and ost/sfx/sfx_claw.ogg"
 define audio.sfx_blade          = "audio/sfx and ost/sfx/sfx_blade.ogg"
 define audio.sfx_arrow          = "audio/sfx and ost/sfx/arrow_impact.ogg"
 
+define audio.stone_click        = "audio/sfx and ost/sfx/sfx_stoneclick.ogg"
+define audio.amulet_door        = "audio/sfx and ost/sfx/amulet_solved.ogg"
+
 # Yaoguai
 define audio.yg_screech     = "audio/sfx and ost/beast sounds/zapsplat_horror_demon_monster_evil_scream_screech_114117.ogg"
 define audio.yg_snore       = "audio/sfx and ost/beast sounds/zapsplat_horror_demon_monster_evil_short_snore_003_114120.ogg"

@@ -24,7 +24,7 @@ image bg_underground_dim:
     xalign 0.5
     yalign 1.0
 
-image bg_underground_lit:
+image bg_underground_lit: # underground 2
     "images/Assets/Background/Underground.png"
     size (1920, 1080)
     xalign 0.5
@@ -181,7 +181,7 @@ image bg_tianho_throne:
 
 # ==============================================================
 # TODO: NOTE: some CGs are transparent pngs
-image cg_blindinglight: # vasily's powers 9when vasily uses flash or blinding light)
+image cg_blindinglight: # vasily's powers (when vasily uses flash or blinding light)
     "images/cg/cg_blindinglight_vasily.jpg"
     size (1920, 1080)
     xalign 0.5
@@ -477,8 +477,26 @@ image cg_roboto_yuxuan:
     xalign 0.5
     yalign 1.0
 
+image underground_magnus_corpse:
+    "images/Assets/Illustrations/41.5 - Underground - Magnus Cave Corpse.png"
+    zoom 1.5
+    xalign 0.5
+    yalign 1.0
+
 image cg_magnus_battle:
     "images/Assets/Illustrations/42 - Magnus Battle.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image cg_magnus_ice:
+    "images/Assets/Illustrations/42.1 - magnus in ice.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image niko_shadows:
+    "images/Assets/Illustrations/43 - Niko vs Magnus.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -730,5 +748,123 @@ image tianho_hundun_haze:
     "images/Assets/Background/Tianho - Haze.png"
     fit "contain"
     zoom 1.05
+    xalign 0.5
+    yalign 1.0
+
+# magnus paintings
+image cg_painting_1:
+    "images/Assets/magnus_painting1.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image cg_painting_2:
+    "images/Assets/magnus_painting2.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image cg_painting_3:
+    "images/Assets/magnus_painting3.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image cg_painting_4:
+    "images/Assets/magnus_painting4.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image smoke1:
+    "images/Assets/smoke1.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image smoke2:
+    "images/Assets/smoke2.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image smoke3:
+    "images/Assets/smoke3.png"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+# ==============================================
+# MEMORIES CH8
+# ==============================================
+image mp1: # memory pic # 
+    "images/Assets/memories/1.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp2: # memory pic # 
+    "images/Assets/memories/2.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp3: # memory pic # 
+    "images/Assets/memories/3.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp4: # memory pic # 
+    "images/Assets/memories/4.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp5: # memory pic # 
+    "images/Assets/memories/5.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp6: # memory pic # 
+    "images/Assets/memories/6.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp7: # memory pic # 
+    "images/Assets/memories/7.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp8: # memory pic # 
+    "images/Assets/memories/8.jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp9: # memory pic # 
+    "images/Assets/memories/9.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp10: # memory pic # 
+    "images/Assets/memories/10.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp11: # memory pic # 
+    "images/Assets/memories/11.jpeg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image mp12: # memory pic # 
+    "images/Assets/memories/12.jpeg"
+    size (1920, 1080)
     xalign 0.5
     yalign 1.0
