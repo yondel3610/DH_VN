@@ -1477,13 +1477,10 @@ label ch3_vasily_arrives:
 
     "Another man in a hooded robe rushed forward, grabbing Niko's arm and pulling him back. This one wore an ingratiating smile, his voice light and appeasing."
 
-    hide niko
-    show prophet_1 at right_char with Dissolve(0.2)
     prophet_1 "Hehe, forgive my fellow brother in Enoch, Count. He tends to let his curiosity get the better of him."
     prophet_1 "Please, pay him no mind."
-    hide prophet_1
 
-    show niko alt_irritate at right_char with Dissolve(0.2)
+    show niko alt_irritate at right_char with Dissolve(0.1)
     voice audio.niko_ch3_line5
     niko "No. I'm serious. Something doesn't make sense, and—"
 
@@ -1791,10 +1788,6 @@ label ch3_bad_end:
 
     pause 3.0
 
-    "GAME OVER — BAD END"
-
-    pause 1.0
-
     jump game_over
 
 # =============================================================================
@@ -1986,7 +1979,7 @@ label ch3_fight_back:
     voice audio.vasily_ch3_line40
     vasily "Friend… wait… we can talk about this—"
     "I didn't let him finish."
-    "With a roar that shook the cave, I raised my hands, fire erupting in a torrent that roared like a beast unleashed."
+    "With a roar that shook the cave, I raised my hands, fire erupting in a torrent that roared like a beast unleashed." with hpunch
     "It surged toward him, engulfing him completely. His screams were drowned out by the crackling inferno."
     voice audio.vasily_ch3_line41
     vasily "Ahhh!! Ahhhh!!!"
@@ -1994,7 +1987,7 @@ label ch3_fight_back:
 
     show girl_ald_normal at right_char with Dissolve(0.2)
     girl_ald "What in the name of Enoch—"
-    "The ground beneath her erupted, jagged pillars of molten rock spearing upward. The heat melted the steel of her armor, her body incinerated before she could even cry out."
+    "The ground beneath her erupted, jagged pillars of molten rock spearing upward. The heat melted the steel of her armor, her body incinerated before she could even cry out." with vpunch
     hide girl_ald_normal
     hide screen draconic_rage
     hide dorian

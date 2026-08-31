@@ -145,7 +145,7 @@ label chapter_2:
     "The snow falls steadily, blanketing the area in silence. The only sounds are the crunch of boots and the occasional muttered curses from the mercenaries behind me."
 
     # show dorian sad at left_char with Dissolve(0.2)
-    show mjoll_pavel at right_char with Dissolve(0.2)
+    show mjoll_pavel at right_flip with Dissolve(0.2)
     voice audio.pavel_ch2_line1
     mjoll_pavel "Merciful Enoch, it's freezing. Why does it have to be this cold?"
     show mjoll_helga at left_char with Dissolve(0.2)
@@ -175,7 +175,7 @@ label chapter_2:
     voice audio.lars_ch2_line3
     mjoll_lars  "Shut up. He'll hear you!"
     hide mjoll_lars
-    hide mjoll_pavel
+    hide mjoll_pavel 
     "Vasily shoots them a sharp glare. He snaps his fingers."
 
     show vasily alt_aggressive at right_char with Dissolve(0.2)
@@ -319,7 +319,7 @@ label chapter_2:
     stop music fadeout 2.0
 
     show dorian normal_alt_annoyed at left_char
-    show mjoll_pavel at right_char with Dissolve(0.2)
+    show mjoll_pavel at right_flip with Dissolve(0.2)
     voice audio.pavel_ch2_line5
     mjoll_pavel "He… he literally could have just done this without us."
     hide mjoll_pavel
@@ -1493,14 +1493,12 @@ label ch2_common_freetime:
     vasily "Pavel. His name's Pavel, I believe."
     hide vasily
     hide dorian
+    with Dissolve(0.1)
 
     "The crowd roared in approval as a herald stepped forward to announce the event. My recognition was grand, as Vasily predicted. I could hear murmurs and shouts of my name from the crowd."
 
-    show herald at center with Dissolve(0.2)             # PLACEHOLDER — Herald sprite
-
     herald "People of Mjoll! We gather today to honor the Dragon of Gale, the hero who has slain the Qiongqi that terrorized our kingdom!"
     "The applause was thunderous. But I had no desire for recognition, no joy in the spectacle."
-    hide herald
     jump ch2_ceremony
 
 # =============================================================================
@@ -1550,12 +1548,10 @@ label ch2_ceremony:
     hide dorian
     hide vasily
 
-    show herald at center_char with Dissolve(0.2)
     herald "To mark this grand occasion, we begin with the traditional dunking! And as is custom, the guest of honor shall have the first dunk!"
     herald "And as is custom, the guest of honor shall have the first dunk! Only the Dragon of Gale himself will claim this honor! After which, the dunk will be open to the public!"
 
     "The crowd erupted into cheers, and my fists clenched at my sides."
-    hide herald
 
     man_1 "I can't wait to see that violet-haired freak drown!"
     woman_2 "Dunk them all! Teach those mutts their place!"
@@ -1572,9 +1568,7 @@ label ch2_ceremony:
     hide svante
     hide kristin_normal
 
-    show herald at center_char with Dissolve(0.2)
     herald "And for our first dunk, we have Svante—the metal channeling aldorith! Dragon of Gale, the first throw is yours!"
-    hide herald
 
     show dorian normal_alt_annoyed at left_char
     show svante normal_sad at right_char
@@ -1639,9 +1633,7 @@ label ch2_ceremony:
     vasily "Here. It's Mjollian tradition, my friend. It's just a dunk tank, after all. The water's only cold if you let yourself feel it. They're only aldoriths. Filthy mutts."
     hide vasily
 
-    show herald at right_char with Dissolve(0.2)
     herald "Come now, Dragon of Gale. It's tradition. Show us your strength and honor by taking the first shot. The people are watching!"
-    hide herald
 
     show svante normal_sad at right_char with Dissolve(0.2)
     "I looked back at Svante, his violet eyes meeting mine. His expression was unreadable. He looks down, defeated."
@@ -1676,7 +1668,6 @@ label ch2_ceremony:
 
             "The crowd roared with laughter."
 
-            show kristin_normal at left_char
             voice audio.kristin_ch2_line8
             kristin "B-Brother!"
 
@@ -1684,8 +1675,9 @@ label ch2_ceremony:
             woman_2 "Bet he wishes he wasn't born now!"
 
             "I stepped back, my face blank. Vasily clapped me on the back, his laughter blending in with the crowd."
-
+            hide svante
             show vasily alt_savage at right_char
+            with Dissolve(0.2)
             vasily "Haha! Look at that wet mutt! Great job, friend!"
 
         "Pretend to miss the shot.":
@@ -1695,11 +1687,11 @@ label ch2_ceremony:
 
             "I raised my arm, aimed, and threw the ball—but it went wide, striking the wood of the tank instead. The crowd groaned in disappointment, their laughter fading into murmurs."
 
-            hide svante
-            show herald at right_char with Dissolve(0.2)
             herald "A miss? Well, no matter! The Dragon of Gale may try again!"
 
             show dorian normal_alt_annoyed at left_char
+            show svante normal_base at right_char
+            with Dissolve(0.1)
             voice audio.dorian_ch2_line53
             dorian "I won't throw another."
 
@@ -1710,8 +1702,7 @@ label ch2_ceremony:
             dorian "Then there will be no dunking."
 
             "The crowd booed, their shouts becoming increasingly hostile. Vasily looked at me, his face an odd mix of amusement and disbelief."
-
-            hide herald
+            hide svante
             show vasily alt_think at right_char with Dissolve(0.2)
             vasily "You really know how to ruin a celebration, Dorian. This is Mjollian culture."
 
@@ -1746,11 +1737,9 @@ label ch2_ceremony:
             svante "Thank you…"
 
             "Svante, though shivering, straightened his posture slightly, his violet eyes locked onto me until he is escorted out by the guards."
-            hide svante
+            hide svante with Dissolve(0.1)
 
-            show herald at right_char with Dissolve(0.2)
             herald "Well… There you have it, folks. No first shot has been made. For the first time ever, we will be cancelling today's dunking festivities."
-            hide herald
     # Both branches converge — then the Frost Oni attack begins
     jump ch2_frost_oni
 
@@ -1763,35 +1752,33 @@ label ch2_ceremony:
 # If ice_tracker >= 2 during D6's wrong branch -> GAME OVER.
 # =============================================================================
 label ch2_frost_oni:
-
+    scene bg_mjoll_icelands with dissolve
+    show snow_blizzard_1
     stop audio fadeout 1.0   # Stop crowd ambient
 
     "As other festive activities continued, I felt a sudden wave of unease."
-    "The ground beneath us trembled violently, cutting through the crowd's laughter like a blade. The quake was sudden, jolting everyone out of their revelry."
+    "The ground beneath us trembled violently, cutting through the crowd's laughter like a blade. The quake was sudden, jolting everyone out of their revelry." with hpunch
 
     man_3 "Ahhh!!"
 
     "The herald stumbled forward, gripping the edge of the dunk tank for support, his face pale with terror."
 
-    show herald at right_char with Dissolve(0.2)
     herald "What… what is happening?!"
-    hide herald
 
     "Before anyone could answer, a bone-chilling wind swept through the square. The air seemed to freeze in place, heavy and sharp like needles against the skin."
     "Then, out of the frost-laden mist, they appeared."
 
     # TODO: add sfx
-    # play sound sfx_ice_crack                    # PLACEHOLDER — ice crack SFX
-
+    # play sound sfx_ice_crack                    
     # CG: Frost Oni emerging from the mist
     scene bg_mjoll_blizzard with shock_cut
     show snow_blizzard_1
 
-    # play music ost_frost_oni_battle fadein 0.5  # PLACEHOLDER — Frost Oni battle theme
-    "Towering figures, their forms jagged and crystalline, emerged from the haze. Beings of ice, emanating an eerie glow. Long, flowing tendrils of frost extended from their limbs, crackling as they moved. They carried weapons of ice—curved swords and long spears."
+    # TODO: play music ost_frost_oni_battle fadein 0.5
+    "Towering figures, their forms jagged and crystalline, emerged from the haze. Beings of ice, emanating an eerie glow."
+    "Long, flowing tendrils of frost extended from their limbs, crackling as they moved. They carried weapons of ice—curved swords and long spears."
 
     frost_oni "*Crackling sounds*"
-
     man_2 "W-What are those things?!"
     woman_1 "D-Demons! Demons!"
 
@@ -1804,17 +1791,15 @@ label ch2_frost_oni:
     # PDF p82
     "The herald tried to regain control, his voice breaking as he shouted."
 
-    show herald at center_char with Dissolve(0.2)
     herald "Remain calm! Guards, come quick! P-Protect—"
 
     "An ice being surged forward, impaling him with its spear."
 
     herald "Ahhh!! *dying sounds*"
-    hide herald with Dissolve(0.5)
 
     "His words died in his throat, his body encased in frost before shattering into pieces."
 
-    show frost_oni at right_char with Dissolve(0.2)
+    show frost_oni at center_char with shock_cut
     frost_oni "Graaaaa!!"
 
     "The dunk tank was their next target. One of the creatures slammed its massive fist against the frame, shattering it instantly. The water inside spilled out, freezing as it hit the ground."
@@ -2211,14 +2196,11 @@ label ch2_common_end:
     "No Vasily, no summons, no word. Not even a whisper of gold. Only rumors and idle gossip."
     "They said the ice creatures had come from inside the castle. From someone within. I didn't care."
     "Let them chase their shadows and whisper their theories. It wasn't my concern. My only concern was survival—and, when I could afford it, distraction."
-
-    # [COMMENT: bg_mjoll_blizzard — snow falling heavier than before, vendors complaining]
-    # add effects here
     "The biting chill nipped at my skin as I trudged back to my cave. Strangely, the snow was falling heavier than before these past few days."
     "The cold didn't bother me much—it never had. Maybe it was the fire channeling power coursing through me. But for some people, according to the vendors, it's become unbearable."
     "The pouch of gold Vasily had thrust into my hands days ago had been spent sparingly, stretched to buy food and small comforts."
 
-    scene dorians_cave with dissolve(0.8)     # PLACEHOLDER — cave at night, fire low
+    scene dorians_cave with Dissolve(0.8)     # PLACEHOLDER — cave at night, fire low
 
     stop audio fadeout 1.0
     play audio amb_cave_fire loop fadein 2.0    # PLACEHOLDER — fire crackle ambient
@@ -2343,10 +2325,10 @@ label ch2_common_end:
         "Write a warm response.":
             $ ch2_letter_choice = "warm"
             $ yuxuan_affection += 1             # +1 Yuxuan affection tracker
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I sat for a moment, letting my memories of that night in Tianho run my hand. The ink bottle was nearly empty, but I managed to write carefully:"
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "Cheng Yuxuan,"
             "It's great to know that the life I saved has grown into such a kind and successful soul. "
             "I would be honored to have tea with you and see how you've rebuilt your life. Perhaps we can trade stories—I have a few to tell myself. "
@@ -2363,7 +2345,7 @@ label ch2_common_end:
             $ ch2_letter_choice = "distant"
 
             "The fire crackled as I sat at the table, the pen feeling heavy in my hand. I stared at the parchment for a long moment before scrawling a short reply in quick, precise strokes."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "Cheng Yuxuan,"
             "I am glad to hear you are doing well. I don't have time for travel at the moment. Best of luck to you in Tianho."
             voice audio.dorian_ch2_line74
@@ -2382,11 +2364,9 @@ label ch2_common_end:
             voice audio.elara_ch2_line11
             elara  "You're impossible, you know that?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I folded the letter and tucked it into my pocket. I'd deliver it when I made my next trip into the city."
     "As I turned back to the warmth of the fire, I heard it—a voice calling for me from outside the cave. It was sharp, urgent."
-
-    show messenger at right_char with Dissolve(0.2)             # PLACEHOLDER — Messenger sprite (out of breath)
 
     messenger "Paladin Dorian! Are you there? Paladin?"
 
@@ -2423,7 +2403,6 @@ label ch2_castle_briefing:
 
     "The howl of the snowstorm seemed alive, its icy fingers clawing at us even as we slammed the heavy doors shut behind us."
 
-    show messenger at right_char with Dissolve(0.2)
     messenger "C-C-Cold… Cold…"
 
     show dorian normal_alt_neutral at left_char
@@ -2431,7 +2410,6 @@ label ch2_castle_briefing:
     dorian "Are you alright? Are you still cold?"
 
     messenger "A l-little.."
-    hide messenger
 
     show dorian serious at left_char
     "Inside, the warmth of the Mjoll Castle did little to shake the lingering chill. My boots echoed on the stone floor as I took in the sight before me."
@@ -2448,7 +2426,6 @@ label ch2_castle_briefing:
     boy_ald "I know… But we don't have a choice."
     hide boy_ald_normal
 
-    show messenger at right_char with Dissolve(0.2)
     messenger "Paladin… Count Vasily is over there. If you'll excuse me, I'll—"
 
     show dorian serious at left_char
@@ -2462,7 +2439,6 @@ label ch2_castle_briefing:
 
     "The young man nodded, his face still flushed from the cold. Without another word, he bolted back out into the storm."
 
-    hide messenger
     hide dorian
 
     "My eyes moved across the room until they landed on Vasily."
@@ -2745,9 +2721,7 @@ label ch2_questions:
             svante "If I only have the power to brave through this blizzard, I will kill him with my own bare hands!"
             hide svante
 
-            show prophet_1 at right_char with Dissolve(0.2)
             prophet_1 "If I may. Me and my prophet brothers can sense the death god's magic in this storm. It's unmistakable."
-            hide prophet_1
 
             show niko normal_serious at right_char with Dissolve(0.2)
             niko "All signs point to Elias. The storm, the cursed frost, the powers he's wielding… they all lead back to him. For all we know, he might have sold his soul to Enoch."
@@ -2842,9 +2816,7 @@ label ch2_questions:
             vasily "What did you just say, Prophet?"
             hide vasily
 
-            show prophet_2 at right_char with Dissolve(0.2)
             prophet_2 "P-Perhaps we can move on, sire."
-            hide prophet_2
 
             show vasily alt_normal at right_char with Dissolve(0.2)
             vasily "*sighs* As I said, Cheng Industries' bots have been delivering supplies. Only a few shipments, and only what they can carry. It's helping, but it's not enough to sustain us. We can't rely on them forever."
@@ -2882,12 +2854,10 @@ label ch2_end:
     niko "Frostcradle lies to the west, buried in the heart of the mountains."
 
     "The other prophet raised a pale hand, pointing to a crudely drawn map on the table beside him. The inked lines were jagged, as if the cartographer's hand had trembled while drawing."
-    hide niko
-    show prophet_2 at right_char with Dissolve(0.2)
     prophet_2 "Follow the ridge through the Iceclaw Pass. Then just go straight until you reach the Frostcradle."
-    hide prophet_2
 
     "I nodded, already tightening the straps of my pack. I adjusted the thick layers of fur and leather I had donned before leaving the castle."
+    hide niko
     show vasily neutral at right_char with Dissolve(0.2)
     vasily "Take care, Dorian. I wouldn't want you to end up like those aldorith mutts."
 

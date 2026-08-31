@@ -26,6 +26,7 @@ define audio.sfx_eruption       = "audio/sfx and ost/sfx/eruption.ogg"
 define audio.sfx_claw           = "audio/sfx and ost/sfx/sfx_claw.ogg"
 define audio.sfx_blade          = "audio/sfx and ost/sfx/sfx_blade.ogg"
 define audio.sfx_arrow          = "audio/sfx and ost/sfx/arrow_impact.ogg"
+# define audio.sfx_earthquake   = "audio/sfx and ost/sfx/sfx_earthquake.ogg"
 
 define audio.stone_click        = "audio/sfx and ost/sfx/sfx_stoneclick.ogg"
 define audio.amulet_door        = "audio/sfx and ost/sfx/amulet_solved.ogg"

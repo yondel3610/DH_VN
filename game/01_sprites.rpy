@@ -18,7 +18,6 @@
 #   show dorian normal_alt confident at right
 #   show dorian sleepware dragon_eyes at far_left
 #   show dorian tianho_ceremonial smile at far_right
-#   show dorian underwear serious
 # =============================================================================
 
 # TODO: fix file path
@@ -333,7 +332,6 @@ image elias ceremonial_neutral:
 #   show yuxuan normal_neutral at left
 #   show yuxuan alt_think at center
 #   show yuxuan sleepware_sad at right
-#   show yuxuan underwear_angry at far_left
 #   show yuxuan ceremonial_happy at far_right
 # =============================================================================
 # =============================================================================
@@ -1145,8 +1143,17 @@ image feng_suit:
 image mjoll_pavel:
     At("images/Assets/Character Sprites/pavel colored v2.png", sprite_highlight("mjoll_pavel"))
     fit "contain"
+image mjoll_lars:
+    At("images/Assets/Character Sprites/ald grunts/ald_grunt_1.png", sprite_highlight("mjoll_lars"))
+    fit "contain"
+image mjoll_helga:
+    At("images/Assets/Character Sprites/ald grunts/female_soldier_1.png", sprite_highlight("mjoll_helga"))
+    fit "contain"
 image qiongqi:
     At("images/Assets/Character Sprites/Qiongqi.png", sprite_highlight("qiongqi"))
+    fit "contain"
+image frost_oni:
+    At("images/Assets/Character Sprites/Frost Oni.png", sprite_highlight("frost_oni"))
     fit "contain"
 image queen_ekaterina:
     At("images/Assets/Character Sprites/Queen Ekaterina Drakos.png", sprite_highlight("queen_ekaterina"))

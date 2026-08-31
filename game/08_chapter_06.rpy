@@ -819,6 +819,7 @@ label ch6_yaoguai_barrier:
             show dorian dragon_eyes at left_char
             with Dissolve(0.2)
             play sound audio.sfx_wind
+            # TODO: scene cg_dorian_yg_fight_night with shock_cut
             "I thrust my hands forward, summoning the wind—a forceful gust howled to life, swirling between us and the oncoming Yaoguai."
             "For a split second, I thought it would be enough."
             show dorian angry at left_char
@@ -2171,6 +2172,7 @@ label ch6_feng_appears:
     yg "SKREEEEEAAAAAAAAAAAARGHHH!!"
 
     show dorian dragon_eyes at left_char with Dissolve(0.1)
+    scene cg_dorian_yg_fight_night with shock_cut
     play sound audio.sfx_wind
     "I stepped forward, thrusting my arms out. The wind howled with me."
     "A violent gust tore through the Yaoguai, sweeping them up like ragdolls. I twisted my fingers, and the currents snapped—spinning like a tornado, hurling the creatures into the crumbling walls of Tianho's ruins."
@@ -2182,8 +2184,10 @@ label ch6_feng_appears:
 
     # play sound sfx_lightning_crack              # PLACEHOLDER — Chung-hee lightning SFX
 
-    hide dorian
-    show chunghee normal_power_up at left_char with Dissolve(0.2)
+    scene bg_tianho_city_night with dissolve
+    show dorian dragon_eyes at left_char
+    show chunghee normal_power_up at right_char
+    with Dissolve(0.2)
     "Beside me, Chung-hee raised his hands, and a shimmering forcefield exploded outward. A Yaoguai leapt toward him—fangs bared, claws outstretched—only to slam into the forcefield."
     play sound audio.sfx_stone_break
     "The creature was thrown back so violently that it left a crater where it landed. Another tried, only for Chung-hee to flick his wrist."
@@ -2221,7 +2225,6 @@ label ch6_feng_appears:
     "I readied myself—fists clenched, fire curling at my fingertips—when suddenly a brilliant blue light cut through the night."
 
     # play sound sfx_blue_fire
-    scene cg_dorian_yg_fight_night with shock_cut
     "A wall of blue fire hurled towards the yaoguai. The Yaoguai screeched in agony as the blue flames swallowed them whole. Their blackened bodies twisted, shriveling, burning, turning to ash."
 
     "I turned sharply, and a figure stood atop the wreckage of a ruined merchant's stall. I knew that stance."

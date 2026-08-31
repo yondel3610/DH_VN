@@ -37,16 +37,18 @@ define audio.amb_hilltop_night   = "audio/ambient/amb_hilltop_night.ogg"   # PLA
 
 label chapter_09_p2:
     $ save_name = "Chapter 9"
-    # [COMMENT: bg_hot_spring — natural cavern hot spring, lanterns, steam]
-    scene yuxuan_lab_hotspring with dissolve           # PLACEHOLDER — hot spring
-    play music ost_ch9_hotspring fadein 2.0     # PLACEHOLDER — hot spring theme
-    play audio amb_hot_spring loop fadein 1.5   # PLACEHOLDER — hot spring ambient
+    scene yuxuan_lab_hotspring with fade          # PLACEHOLDER — hot spring
+    # play music ost_ch9_hotspring fadein 2.0     # PLACEHOLDER — hot spring theme
+    # play audio amb_hot_spring loop fadein 1.5   # PLACEHOLDER — hot spring ambient
 
     "We reached the hot springs, and the moment we stepped inside, the warmth in the air wrapped around me like a comforting embrace."
-    "The soft glow of lanterns flickered against the cavern walls, their light dancing over the steaming water. The air carried a faint floral scent, something soothing yet unfamiliar."
+    "The soft glow of lanterns flickered against the cavern walls, their light dancing over the steaming water."
+    "The air carried a faint floral scent, something soothing yet unfamiliar."
     "Roboto came to a stop and turned to me."
 
-    show roboto normal at center_char with Dissolve(0.2)
+    show dorian neutral at left_char
+    show roboto happy at right_robot
+    with Dissolve(0.2)
 
     roboto "Master Dorian, please undress b-b-b-before entering. Master Yuxuan has ensured the waters will provide optimal relaxation."
     dorian "Yeah, thanks for the reminder."
@@ -56,13 +58,17 @@ label chapter_09_p2:
     roboto "I have other matters to attend to. Please enjoy your time."
     roboto "M-M-Master Yuxuan will join you momentarily."
 
+    # TODO: roboto motors
+    hide roboto 
+    hide dorian 
+    with Dissolve(0.1)
     "And with that, the metallic figure turned and departed, his whirring echoing as he disappeared down the stone hallway."
     "Left alone, I took a step forward, only to pause when I noticed a figure already standing by the water's edge."
     "Magnus."
 
-    hide roboto
-    show magnus clothed_no_wings at center_char with Dissolve(0.2)
-
+    show magnus clothed_wings at right_char
+    show dorian neutral at left_char
+    with Dissolve(0.2)
     "He was dressed in a deep blue shirt with gold accents, a rare sight given that I saw him the entire day shirtless. But what stood out the most was the absence of his wings."
     "I furrowed my brows. Magnus without his wings?"
     "Magnus turned his head slightly, his expression calm."
@@ -72,8 +78,7 @@ label chapter_09_p2:
 
     "I raised a brow."
 
-    show dorian underwear_neutral at left_char with Dissolve(0.2)
-
+    show magnus clothed_no_wings at right_char with Dissolve(0.2)
     magnus "Apparently, I can make my wings appear and disappear at will! A most convenient ability, wouldn't you say?"
     dorian "Convenient. Saves fabric, I guess."
     magnus "Precisely. And, most importantly, it prevents... unfortunate accidents involving doorways and the backs of unsuspecting heads."
@@ -91,10 +96,12 @@ label chapter_09_p2:
     magnus "But alas! The heavens took pity on me. I merely wished for relief, and lo and behold-like the parting of storm clouds, the burden was lifted!"
 
     "He rolled his shoulders once more, as if reveling in his newfound control. I chuckled, nodding toward his attire."
-
+    show dorian normal at left_char with Dissolve(0.1)
     dorian "By the way, nice outfit. You clean up well."
+    
     magnus "Ah, such high praise from the esteemed Dragon of Gale! I shall treasure this moment."
 
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "I asked him where did he get the outfit."
 
     magnus "Ah, a tale most unexpected! Tedda, our diligent little dolly, was cleaning out Yuxuan's closet when she stumbled upon this garment-folded, untouched, a relic of time."
@@ -113,14 +120,14 @@ label chapter_09_p2:
     magnus "Or, in more common terms-blue suits me, don't you think?"
 
     menu:
-
         "Yes, it does.":
             $ magnus_affection += 1             # +1 Magnus affection
-
+            show dorian smile at left_char with Dissolve(0.1)
             "Magnus gasped, his expression shifting into one of delighted triumph. He spun again, this time with even more flourish, letting the fabric billow as he moved."
 
             magnus "Ah! I knew you were a man of refined taste! You see it, don't you, Dorian? This hue, this elegance-it was made for me!"
-
+            
+            show dorian neutral at left_char with Dissolve(0.1)
             "He placed a hand on my shoulder, his eyes shining with genuine joy beneath all the dramatics."
 
             magnus "And to have such recognition from you... well, my dear friend, I shall cherish this moment until the stars themselves fade from the sky!"
@@ -130,8 +137,10 @@ label chapter_09_p2:
             magnus "Blue it is, then. A color worthy of a Gale-born soul such as mine."
 
         "No, it doesn't.":
-
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+            
             "Magnus froze, his expression caught somewhere between shock and absolute betrayal. His hand clutched at his chest as if I had struck him with an arrow."
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
             magnus "No? No?! Dorian, you wound me!"
 
@@ -139,15 +148,17 @@ label chapter_09_p2:
 
             magnus "Then tell me, O Great Fashion Oracle, what shade would better suit my divine essence?"
 
-            "He peered at me over his shoulder, awaiting my response. Whether I gave him an actual color or simply let him stew in his devastation, I knew one thing for certain-he wasn't going to let me forget this anytime soon."
+            "He peered at me over his shoulder, awaiting my response."
+            "Whether I gave him an actual color or simply let him stew in his devastation, I knew one thing for certain-he wasn't going to let me forget this anytime soon."
 
+    scene yuxuan_lab_hotspring with Dissolve(0.75)          # PLACEHOLDER — hot spring
     "Shaking my head, I reached for my belt and started undoing my clothes. Magnus followed suit, both of us stripping down to our undergarments before stepping into the water."
-    
-    show magnus underwear_base at center_char
-    show dorian underwear_normal at left_char
+    "The moment I sank into the warmth, a deep sigh escaped me. The heat seeped into my muscles, melting away tension I hadn't realized I was carrying."
+    "Magnus settled in beside me, his gaze drifting over the glowing fungi, the sheer ambiance of the place."
 
-    "The moment I sank into the warmth, a deep sigh escaped me. The heat seeped into my muscles, melting away tension I hadn't realized I was carrying. Magnus settled in beside me, his gaze drifting over the glowing fungi, the sheer ambiance of the place."
-
+    show dorian underwear_neutral at left_char
+    show magnus underwear_base at right_char
+    with Dissolve(0.2)
     magnus "It's beautiful here. Almost... unreal."
     dorian "*sighs* This is the life..."
     magnus "*sighs* This is perfect..."
@@ -160,18 +171,22 @@ label chapter_09_p2:
 
     "A few minutes passed in peaceful silence before Magnus shifted slightly, tilting his head toward me."
 
+    show  magnus underwear_serious at right_char with Dissolve(0.1)
     magnus "Dorian, my dear friend, can you do me a favor?"
+    show dorian underwear_normal at left_char with Dissolve(0.1)
     dorian "Depends."
+    show magnus underwear_base at right_char with Dissolve(0.1)
     magnus "Can you scrub my back?"
+    show dorian underwear_neutral at left_char with Dissolve(0.1)
     dorian "Really?"
     magnus "Miss Weng gave me something to help us scrub. I'll go get it."
 
+    hide magnus with Dissolve(0.1)
     "Then, the door slid open."
     "Yuxuan entered, his usual composed expression relaxed into something softer, almost coy."
     "His eyes swept over the water, and he exhaled, the corner of his lips tugging into the smallest, knowing smirk."
 
-    hide magnus
-    show yuxuan underwear_normal at right_char with Dissolve(0.2)
+    show yuxuan normal_neutral at right_char with Dissolve(0.2)
 
     yuxuan "Ah, Dorian... Just the two of us, bathed in the glow of the springs..."
     dorian "Oh, Yu."
@@ -180,6 +195,7 @@ label chapter_09_p2:
 
     yuxuan "The heat is perfect, wouldn't you say? Almost as if it's drawing us in... together."
 
+    show yuxuan underwear_neutral at right_char with Dissolve(0.1)
     "Yuxuan confidently stripped down to his undergarments, preparing to step in. His movements were slow, deliberate, like a man savoring the moment."
     "Then he saw Magnus."
     "For a moment, there was silence. Absolute. Stunned. Silence."
@@ -188,26 +204,34 @@ label chapter_09_p2:
     show magnus underwear_base at center_char with Dissolve(0.2)
 
     magnus "Yuxuan, my dear friend! Have you come to partake in the benefits of the hot-"
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
     yuxuan "W H A T."
+    show magnus underwear_ignore at center_char with Dissolve(0.1)
     magnus "-springs?"
     yuxuan "DORIAN?! WHAT-WHAT IS HE DOING HERE?! I THOUGHT-"
 
     "His hands clutched his undergarments, suddenly realizing he had undressed in front of an audience. His composure crumbled like old parchment."
 
+    show dorian underwear_serious at left_char with Dissolve(0.1)
     dorian "Uh... bathing?"
+    show dorian underwear_neutral at left_char with Dissolve(0.1)
+    show magnus underwear_base at center_char
+    with Dissolve(0.1)
     magnus "Nice undergarments, my dear friend! Thank you for lending me your friends' undergarments as well!"
     yuxuan "T-Thanks?!-Wait-NO-WHY-"
     magnus "Come join us, my dear friend!"
 
+    show yuxuan underwear_normal at right_char with Dissolve(0.1)
     "Yuxuan inhaled deeply, nostrils flaring. His fingers twitched, and for a second, I swore he was debating whether to murder Magnus on the spot or sink into the hot spring and pretend this never happened."
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
     "Instead, his eye twitched violently."
 
     dorian "Just come join us, Yu. The water's fine."
 
-    show yuxuan underwear_sad at right_char
-
+    show yuxuan underwear_normal at right_char with Dissolve(0.1)
     "Still twitching, Yuxuan slipped into the water. The moment he did, Magnus spread his arms wide and pulled him into a suffocating hug."
 
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
     yuxuan "M-Magnus! H-hey! I'm getting strangled!"
     magnus "My dear friend, the water is amazing!"
     yuxuan "WHY ARE YOU EVEN HERE?!"
@@ -221,9 +245,10 @@ label chapter_09_p2:
 
     hide magnus
     hide yuxuan
-    show niko underwear_base at right_char
+    hide dorian
+    show niko underwear_base at left_char
     show svante underwear_base at center_char
-    show chung_hee underwear_neutral at left_char
+    show chunghee underwear_neutral at right_char
     with Dissolve(0.2)
 
     niko      "Fasting is a form of discipline, Svante. A way to show devotion to Enoch. A test of the soul's resolve."
@@ -237,71 +262,116 @@ label chapter_09_p2:
     "Magnus lifted his arms wide, water sloshing around him. His wings were still hidden, but it was as if he radiated an invisible aura of divinity."
 
     hide svante
-    hide chung_hee
-    show magnus underwear_base at center_char with Dissolve(0.2)
+    hide chunghee
+    show magnus underwear_base at right_char
+    with Dissolve(0.2)
 
     magnus "Dear friends!! Here we are!!"
 
     "He waved, as if this was the most natural gathering in the world. Chung-hee blinked, deadpan."
 
-    show chung_hee underwear_neutral at left_char
-    show svante underwear_base at right_char
-
+    hide niko
+    show chunghee underwear_happy at left_char
+    show svante underwear_happy at center_char
+    with Dissolve(0.2)
     chung_hee "Oh look. It's Magnus. Dorian's here too, along with Yuxuan."
     svante    "MAGNUS!! YOU'RE HERE!!"
-
-    show yuxuan underwear_angry at right_char
+    
 
     "Yuxuan, still submerged in the water, was visibly vibrating with rage. His fingers twitched as if they were itching to summon some kind of spell-maybe to drown Magnus, maybe to drown himself."
-
+    hide chunghee
+    hide svante
+    hide magnus
+    show yuxuan underwear_angry at center_char
+    with Dissolve(0.2)
     yuxuan "WHY. IS. EVERYONE. HERE."
+    
+    hide yuxuan
+    show niko underwear_base at left_char
+    show svante underwear_base at center_char
+    show chunghee underwear_neutral at right_char
+    with Dissolve(0.2)
     chung_hee "What's gotten into him?"
     svante    "Didn't you invite us, Yuxuan?"
     niko      "Your invitation made me think it was going to be just the two of us here."
     chung_hee "Same. I thought you had some confidential information about the Divine Weapon, so I came here expecting something important. I was surprised to see these two, though."
     svante    "Yeah. You even called us your \"special guest\"."
 
+    hide svante
+    show yuxuan underwear_angry at center_char
+    with Dissolve(0.1)
     "Yuxuan's eye twitched so violently that for a second, I thought he might actually explode. He inhaled sharply, barely keeping himself from launching into a full-blown tantrum."
     "Then he snapped his head toward the entrance, his voice echoing through the chamber."
 
     yuxuan "Special?! ROBOTO! ROBOTO!"
-
+    hide yuxuan
+    hide chunghee
+    hide niko
+    with Dissolve(0.1)
     "A few moments passed."
     "The sound of mechanical whirring filled the air, followed by the faint clanking of metal against stone. And then-"
 
-    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    show roboto normal at center_char with Dissolve(0.2)
+    show yuxuan underwear_angry at left_char
+    show roboto happy at right_robot 
+    with Dissolve(0.2)
 
     roboto "Y-y-y-you called, Master Yuxuan? Roboto is h-h-h-here. At your service."
     yuxuan "I told you to bring our special guest here! I also told Tedda to take care of Elias so our special guest could come here! How in the name of the Prosperity Dragon did this-"
-
+    show roboto malfunction at right_robot with Dissolve(0.1)
     "Roboto's sensors flickered again."
 
     roboto "M-M-Master Yuxuan, you said to bring the... special guest."
+    show roboto happy at right_robot with Dissolve(0.1)
 
     "Roboto's mechanical eyes whirred as it scanned the room."
 
     roboto "The term 'special guest' was n-n-not explicitly defined. Given that Master Dorian, Sir Magnus, Sir Chung-hee, Sir Niko, and Sir Svante all hold unique statuses, it was l-l-l-logical to conclude that all of them qualified as... special guests."
 
-    show yuxuan underwear_sad at right_char
+    show yuxuan underwear_sad at left_char with Dissolve(0.1)
 
     "Yuxuan let out a sound somewhere between a strangled groan and a defeated whimper."
+    show yuxuan underwear_angry at left_char with Dissolve(0.1)
+
     "His entire body trembled. His eye twitched again. He opened his mouth-closed it-opened it again-"
+    show yuxuan underwear_sad at left_char with Dissolve(0.1)
+
     "Then, with a slow, heavy inhale, he lowered himself deeper into the water until only his eyes were visible, like a man giving up on life itself."
 
+    hide roboto
+    show dorian underwear_normal at left_char
+    show yuxuan underwear_sad at right_char 
+    with Dissolve(0.1)
+
     dorian "The water is nice, Yu. Might as well enjoy it."
+    show svante underwear_happy at center_char with Dissolve(0.2)
     svante "Dorian! Let's explore that side with Magnus!"
     dorian "Sounds nice. Let's go."
+
+    hide svante
+    show magnus underwear_base at center_char with Dissolve(0.2)
     magnus "Then let us embark, my friends! Onward to the unknown! Chung, can you hold my hand as we walk?"
+
+    hide yuxuan
+    show chunghee underwear_base at right_char with Dissolve(0.2)
     chung_hee "I should've stayed in bed."
+
+    hide magnus
+    hide chunghee
+    show niko underwear_smile at center_char 
+    show yuxuan underwear_angry at right_char 
+    with Dissolve(0.2)
     niko      "Just Dorian, huh? Figures."
     yuxuan    "I will END you, Niko."
     niko      "That explains all of the rose petals in-"
     yuxuan    "Shhh!! Just shhh!!"
-    niko      "Hey! How dare you splash water on me!"
 
-    "Steam curled lazily through the air as we settled deeper into the hot springs. The warmth seeped into my muscles, unraveling tension I hadn't even realized I carried. For a moment-just a moment-it was peaceful."
+    show niko underwear_anger at center_char with Dissolve(0.1)
+    niko      "Hey! How dare you splash water on me!"
+    scene yuxuan_lab_hotspring with Dissolve(0.75)          # PLACEHOLDER — hot spring
+    "Steam curled lazily through the air as we settled deeper into the hot springs."
+    "The warmth seeped into my muscles, unraveling tension I hadn't even realized I carried. For a moment-just a moment-it was peaceful."
 
     jump ch9_huli_jing
 
@@ -312,17 +382,14 @@ label chapter_09_p2:
 
 label ch9_huli_jing:
 
-    play music ost_huli_jing fadein 1.0         # PLACEHOLDER — Huli Jing ethereal theme
-
-    hide magnus
-    hide yuxuan
-    hide roboto
-    hide chung_hee
-    hide svante
-    hide niko
-    show huli_jing at center_char with Dissolve(0.2)
+    # play music ost_huli_jing fadein 1.0         # PLACEHOLDER — Huli Jing ethereal theme
 
     huli_jing "Hihihihi~"
+
+    show niko underwear_serious at right_char
+    show chunghee underwear_base at left_char
+    show yuxuan underwear_lying at center_char
+    with Dissolve(0.2)
 
     niko      "Wait... Did you hear that?"
     chung_hee "No. For the hundredth time, no."
@@ -330,27 +397,33 @@ label ch9_huli_jing:
     huli_jing "Hihihihi~"
     yuxuan    "Eek! What was that?"
 
-    "A whisper of laughter, high and melodic, like wind chimes swaying in a summer breeze. The air itself thickened, humming with unseen energy. A delicate floral scent, subtly sweet, curled into the steam rising from the springs."
-
+    "A whisper of laughter, high and melodic, like wind chimes swaying in a summer breeze."
+    "The air itself thickened, humming with unseen energy. A delicate floral scent, subtly sweet, curled into the steam rising from the springs."
+    
+    hide niko
+    hide chunghee
+    hide yuxuan
+    show huli_jing at center_char 
+    with Dissolve(0.2)
     huli_jing "Ahh, what a luxurious sight! A gathering of warriors, scholars, and lost souls-all marinating like dumplings in a pot."
 
     "A faint tinkling of bells accompanied soft footsteps, the sound of water rippling as a figure gracefully stepped into view."
     "Perched atop a rock at the edge of the spring, half-shrouded by mist, was a fox."
-    "Nine, impossibly long tails curled elegantly around her, their tips flicking idly, as if brushing away unseen dust motes of magic. Her golden eyes-slit-pupiled, like molten amber-watched us with quiet amusement."
-
-    scene yuxuan_lab_hotspring with dissolve      # PLACEHOLDER — hot spring
-
+    "Nine, impossibly long tails curled elegantly around her, their tips flicking idly, as if brushing away unseen dust motes of magic."
+    "Her golden eyes-slit-pupiled, like molten amber-watched us with quiet amusement."
     huli_jing "Oh, don't look so startled, my handsome bathers... You wouldn't deny a lonely fox the pleasure of a little conversation, would you?"
 
     "The being's laughter echoed through the mist, melodic yet uncanny, like a song sung in reverse. The steam curled tighter, shifting unnaturally, as if the very air around us was holding its breath."
     "A faint pressure settled in my chest-an instinctual warning, ancient and primal. Then I saw it."
     "Not just the nine flowing tails..."
 
-    show huli_jing at center_char with Dissolve(0.2)
-
+    show dorian underwear_neutral at left_char
+    show svante underwear_neutral at right_char
+    with Dissolve(0.1)
     svante "She's a fox spirit. A huli jing."
     svante "My mom told me and Kristin stories. Said they were born from moonlight and starlight. They've lived for centuries... maybe since the first breath of the world when the Weaver made the Tetrad."
     dorian "And what do they want?"
+    show svante underwear_base at right_char with Dissolve(0.1)
     svante "That's the thing. No one ever knows."
 
     "His voice lowered, nearly reverent."
@@ -362,7 +435,12 @@ label ch9_huli_jing:
 
     huli_jing "Mmm... clever boy. A shame your mother never told you the most important part."
     huli_jing "We never knock twice."
+    hide svante
+    show niko underwear_base at right_char with Dissolve(0.2)
     niko      "Yuxuan, you didn't say there'd be an ancient spirit here!"
+
+    hide niko
+    show yuxuan underwear_lying at right_char with Dissolve(0.2)
     yuxuan    "But I... I always bathe here! Miss Weng too! Tim as well. We never-!"
     huli_jing "Of course not, my entrepreneurial little beetle. We don't come for the scent of soap, sweat, and money."
 
@@ -371,15 +449,20 @@ label ch9_huli_jing:
     huli_jing "I came because I smelled something rare..."
     huli_jing "Among your gathering... I scent the blood of an emperor. The son of a king. One who has been chosen by the death god. One... touched by a deity's longing. And one..."
 
+    show dorian underwear_serious at left_char with Dissolve(0.1)
     "She turned her gaze to me. And the air stilled."
 
     huli_jing "Praise the Prosperity Dragon indeed..."
+
+    hide yuxuan 
+    show chunghee underwear_neutral at right_char with Dissolve(0.2)
     chung_hee "What do you want, spirit? Speak plainly."
     huli_jing "This spring... the mist that dances on its surface... the dreams that bloom when one sinks into its warmth-"
     huli_jing "These were once mine... before I was betrayed. Before I was slain mercilessly by the Death God Enoch himself."
 
     "Niko, lounging with a towel over his head, didn't even lift his gaze."
-
+    hide chunghee
+    show niko underwear_serious at right_char with Dissolve(0.2)
     niko "You creatures probably deserved it, given your kind's reputation."
     huli_jing "Understandable... for a lapdog to bark what it cannot comprehend. But I'll pretend I didn't hear that-your heart beats too loud with something else."
 
@@ -401,46 +484,108 @@ label ch9_huli_jing:
     prosperity_dragon "The Huli Jing knows more than she speaks. The knowledge she carries lies coiled in riddles older than your bloodline."
     prosperity_dragon "She could speak answers that even the Tetrad have forgotten."
     huli_jing "But if you refuse..."
+    hide niko
+    show chunghee underwear_angry at right_char with Dissolve(0.2)
     chung_hee "Then what? You'll kill us?"
+    hide chunghee
+    show yuxuan underwear_sad at right_char with Dissolve(0.2)
     yuxuan    "AH! Prosperity Dragon save me!"
+    hide yuxuan
+    show niko underwear_serious at right_char with Dissolve(0.2)
     niko      "You're more than welcome to try."
     huli_jing "No, no. I don't spill blood. My fur is too good for that."
     huli_jing "I'll curse this spring for a thousand years. Every bather after you will think they've slipped into paradise, only to discover they're soaking in..."
     huli_jing "Fermented foot fungus stew."
+
+    hide niko
+    show chunghee underwear_neutral at right_char with Dissolve(0.2)
     chung_hee "Pardon me?"
+
+    hide chunghee
+    show magnus underwear_sad at right_char with Dissolve(0.2)
     magnus    "F-Fermented foot fungus stew?"
+    hide magnus
+    show yuxuan underwear_angry at right_char with Dissolve(0.2)
     yuxuan    "EWWW! I bathe here all the time!!"
+
+    hide yuxuan
+    show svante underwear_nervous at right_char with Dissolve(0.2)
     svante    "I... I think I'm gonna be sick... blarrrghhh!"
     huli_jing "Hahaha! Your guests will be smelling like the Tetrad's feet by the time they finish bathing!"
+
+    hide svante 
+    show niko underwear_ignore at right_char with Dissolve(0.2)
     niko      "*sighs*"
     huli_jing "So, my beautiful dumplings... Shall we play?"
 
     "I looked around the spring, its mist now feeling heavier somehow-less soothing, more watchful. My eyes met Svante's. He was looking around too, brow furrowed deep in thought."
+    
+    hide niko
+    show svante underwear_neutral at right_char with Dissolve(0.2)
+    svante "She said she can answer one question..."
+    hide svante
+    show niko underwear_ignore at right_char with Dissolve(0.2)
+    niko "Don't be stupid, Svante."
 
-    svante    "She said she can answer one question..."
-    niko      "Don't be stupid, Svante."
-    svante    "I'm not being stupid, Niko. I was just thinking that maybe we need it!"
-    niko      "She said no tricks-but that's the trick. You said it yourself: spirits like her oftentimes never play fair. You'll think you're getting a straight answer and wind up cursed, or worse."
+    hide niko
+    show svante underwear_neutral at right_char with Dissolve(0.2)
+    svante "I'm not being stupid, Niko. I was just thinking that maybe we need it!"
+
+    hide svante 
+    show niko underwear_serious at right_char with Dissolve(0.2)
+    niko "She said no tricks-but that's the trick. You said it yourself: spirits like her oftentimes never play fair. You'll think you're getting a straight answer and wind up cursed, or worse."
+
+    hide niko
+    show chunghee underwear_base at right_char with Dissolve(0.2)
     chung_hee "Niko's right, Svante."
     chung_hee "Every version of this tale ends the same way. We had stories like that in Kyeongjang too. Not of the Huli Jing-but spirits with games, riddles and promises."
     chung_hee "An innocent hero. A ruined life. Don't be a storybook idiot, Svante."
-    svante    "I... I hate to say it, but you may be right."
-    magnus    "But... what if she's telling the truth? Not all spirits are malevolent."
-    magnus    "One question. One truth. Think about what you could learn. Something no divine, no scholar, no channeler could tell us."
-    magnus    "Isn't that worth a little risk?"
-    yuxuan    "I want to do it!! We have to do it!!"
+
+    hide chunghee
+    show svante underwear_neutral at right_char with Dissolve(0.2)
+    svante "I... I hate to say it, but you may be right."
+
+    hide svante
+    show magnus underwear_base at right_char with Dissolve(0.2)
+    magnus "But... what if she's telling the truth? Not all spirits are malevolent."
+    show magnus underwear_serious at right_char with Dissolve(0.1)
+    magnus "One question. One truth. Think about what you could learn. Something no divine, no scholar, no channeler could tell us."
+    magnus "Isn't that worth a little risk?"
+
+    hide magnus
+    show yuxuan underwear_normal at right_char with Dissolve(0.2)
+    yuxuan "I want to do it!! We have to do it!!"
+
+    hide yuxuan 
+    show chunghee underwear_base at right_char with Dissolve(0.2)
     chung_hee "But... why?"
-    yuxuan    "I-I always bathe here! So does Miss Weng! And Tim! We come here every day! If she curses this spring, it'll smell like foot fungus for a thousand years!"
-    yuxuan    "I can already imagine the smell! I have to do something!"
-    yuxuan    "I AM CHENG YUXUAN, an inventor of great renown. And I will NOT BE SMELLING LIKE SOMEONE'S FOOT!"
+
+    hide chunghee
+    show yuxuan underwear_sad at right_char with Dissolve(0.2)
+    yuxuan "I-I always bathe here! So does Miss Weng! And Tim! We come here every day! If she curses this spring, it'll smell like foot fungus for a thousand years!"
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
+    yuxuan "I can already imagine the smell! I have to do something!"
+    yuxuan "I AM CHENG YUXUAN, an inventor of great renown. And I will NOT BE SMELLING LIKE SOMEONE'S FOOT!"
+    show dorian underwear_neutral at left_char with Dissolve(0.1)
 
     "He nearly slipped on the rocks trying to make his point."
 
+    show yuxuan underwear_sad at right_char with Dissolve(0.1)
     yuxuan "AHHH!!"
+
     dorian "Yu! Careful!"
+
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
     yuxuan "Do you know how expensive this place is?! I spent a lot of coin to refurbish this place!"
-    niko   "How much would that be?"
+
+    hide yuxuan
+    show niko underwear_smile at right_char with Dissolve(0.1)
+    niko "How much would that be?"
+
+    hide niko
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
     yuxuan "A LOT!!"
+    show yuxuan underwear_normal at right_char with Dissolve(0.1)
 
     huli_jing "Ahhh, the little beetle speaks sense~"
 
@@ -450,8 +595,13 @@ label ch9_huli_jing:
 
     "The mist curled around my fingertips. I didn't know what pushed me to speak, but the words came anyway."
 
-    yuxuan    "Do it! Do it!"
-    dorian    "I'll do it. I agree to the game."
+    show yuxuan underwear_angry at right_char with Dissolve(0.1)
+    yuxuan "Do it! Do it!"
+    show dorian underwear_serious at left_char with Dissolve(0.1)
+    dorian "I'll do it. I agree to the game."  
+
+    hide yuxuan
+    show chunghee underwear_base at right_char with Dissolve(0.2)
     chung_hee "Fine. I trust you, Dorian."
 
     jump ch9_judgment_mjoll
@@ -465,31 +615,53 @@ label ch9_judgment_mjoll:
 
     # [COMMENT: bg_mjoll_town_square — snow, stone buildings, shackled man in center]
     scene bg_mjoll_icelands with flash       # PLACEHOLDER — Mjoll town square illusion
+    show snow_blizzard_1
+
     stop music fadeout 0.5
-    play music ost_judgment_mjoll fadein 0.5    # PLACEHOLDER — Mjoll judgment theme
-    play sound sfx_judgment_chains              # PLACEHOLDER — chains SFX
+    # TODO: add audio
+    # play music ost_judgment_mjoll fadein 0.5    # PLACEHOLDER — Mjoll judgment theme
+    # play sound sfx_judgment_chains              # PLACEHOLDER — chains SFX
 
     "The mist curled tighter the moment the words left my lips. It coiled like a serpent around my limbs-soft, almost warm-and then turned cold."
     "The springs vanished."
     "In their place, snow."
     "The world around us shimmered, then cracked like glass. Wind howled past us, biting at our skin, lifting flurries of snow into the air like ash. But I still felt the heat from the hot springs."
 
-    magnus    "O-Oh. Oh no. We're still in our undergarments!"
-    yuxuan    "AH! I can't be seen wondering around in my undergarments! Think of the bad publicity!"
-    svante    "W-What?! This is Mjoll! This is my hometown!! I can't be here! Not like this!"
+    show magnus underwear_angry at right_char 
+    show dorian underwear_serious at left_char
+    with Dissolve(0.1)
+    magnus "O-Oh. Oh no. We're still in our undergarments!"
+
+    hide magnus
+    show yuxuan underwear_sad at right_char with Dissolve(0.1)
+    yuxuan "AH! I can't be seen wondering around in my undergarments! Think of the bad publicity!"
+
+    hide yuxuan
+    show svante underwear_nervous at right_char with Dissolve(0.1)
+    svante "W-What?! This is Mjoll! This is my hometown!! I can't be here! Not like this!"
 
     "He wrapped his arms around his chest, cheeks blazing red."
 
-    niko      "You're not used to your brothers seeing you in your undergarments?"
+    hide svante
+    show niko underwear_serious at right_char with Dissolve(0.1)
+    niko "You're not used to your brothers seeing you in your undergarments?"
+
+    hide niko
+    show chunghee underwear_base at right_char with Dissolve(0.1)
     chung_hee "It's not real. Look at the snow-doesn't melt when it hits your skin."
 
     "He held out a hand. True enough, the flakes dissolved before they touched him."
 
-    dorian    "We can also feel the heat of the hot spring's waters."
+    dorian "We can also feel the heat of the hot spring's waters."
     chung_hee "It's just an illusion. A trick. The spirit's game."
 
-    "The snow parted. In the middle of the town stood a man, shackled and bare-kneed in the snow. Blood streaked the front of his torn tunic. Before him, crumpled in the red-stained snow, were two villagers-a woman and a child. Motionless."
+    hide chunghee
+    hide dorian
+    with Dissolve(0.1)
 
+    "The snow parted. In the middle of the town stood a man, shackled and bare-kneed in the snow. Blood streaked the front of his torn tunic."
+    "Before him, crumpled in the red-stained snow, were two villagers-a woman and a child. Motionless."
+    show huli_jing at center_char with Dissolve(0.2)
     huli_jing "This man, Fynn Hjorth, is a follower of the death god."
     huli_jing "He killed his neighbor and her daughter in the dead of night. Stabbed them both. Took their coin. I'll leave you to it."
 
@@ -504,8 +676,12 @@ label ch9_judgment_mjoll:
     huli_jing "Now, as part of our little game... you will judge him."
     huli_jing "Death, exile, or forgiveness."
 
-    show dorian underwear_neutral at left_char with Dissolve(0.2)
+    jump choice_judgement_mjoll
 
+label choice_judgement_mjoll:
+    show dorian underwear_serious at left_char 
+    show chunghee underwear_base at right_char 
+    with Dissolve(0.2)
     "I stood frozen. Not from the cold, but from the sheer weight of it all."
 
     chung_hee "We were to judge a man's life. Such a burden to carry."
@@ -518,18 +694,27 @@ label ch9_judgment_mjoll:
     "I looked at the man in the eyes. A man broken, or a man twisted? A misguided zealot? A monster wearing a mask of devotion?"
     "But now... the judgment was mine to cast."
 
+
     menu:
 
         "Pass the judgment of Death.":
-
+            
             "I closed my eyes. The cold air kissed my skin, but I felt nothing-only the weight of my decision. I raised my hand, flame flickering to life in my palm. Not a warm flame. A crimson one."
 
             dorian "He took two innocent lives. That cannot be forgiven. We sentence death."
 
-            "A tremor rippled through the ground. The snow around Fynn shattered into sharp shards as the spirits surged up from beneath. He screamed-but it wasn't a scream of fear. It was something worse. A scream of belief."
+            # TODO: ice shard sfx
+            "A tremor rippled through the ground. The snow around Fynn shattered into sharp shards as the spirits surged up from beneath."
+            "He screamed-but it wasn't a scream of fear. It was something worse. A scream of belief."
 
             fynn   "I was chosen! I was doing Lord Enoch's work! You'll see!"
+
+            hide chunghee
+            show svante underwear_angry at right_char with Dissolve(0.2)
             svante "You murdered a mother cradling her child. You didn't cleanse anything. You just wanted to kill!"
+
+            hide svante
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
             yuxuan "You deserve it! Degenerate!"
 
             "The mist devoured him. No blood. No remains. Only silence."
@@ -551,6 +736,7 @@ label ch9_judgment_mjoll:
 
             fynn "No... no, this is my home! I did what I had to! For the town! For Lord Enoch!"
 
+            # TODO: add sfx
             "The wind howled louder. His chains dissolved into frost, and something unseen dragged him backward into the mist-screaming, kicking, shouting for Enoch to save him."
 
             fynn "Lord Enoch! Lord Enoch your servant begs you! No!"
@@ -564,11 +750,21 @@ label ch9_judgment_mjoll:
 
             "The silence was unbearable."
             "Everyone waited. The spirits. The snow. The fox. I took a breath. My heart was hammering."
+            show dorian underwear_sad at left_char with Dissolve(0.1)
 
             dorian "He's broken. Not evil. If he can live with what he's done... let him. We grant forgiveness."
             fynn   "You... you're not killing me?"
+
+            hide chunghee
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko   "Yes. Continue walking in Enoch's path, brother."
+
+            hide niko
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
             yuxuan "W-What?! Why are we letting him go? What is wrong with you, Dorian?!"
+
+            hide yuxuan
+            show chunghee underwear_sad at right_char with Dissolve(0.2)
             chung_hee "Kindness or naiveness? I hope we aren't straying towards the latter."
 
             "Her voice was unreadable-neither impressed nor disappointed."
@@ -597,17 +793,41 @@ label ch9_judgment_mjoll:
 
             "He broke into hysterical giggling. I pulled my hand away. I stood, heart a stone in my chest."
 
+            show chunghee underwear_angry at right_char with Dissolve(0.1)
             chung_hee "Madness. I've heard stories like this in Kyeongjang. Men claiming divine voices told them to murder their own kin. It's never justice. It's bloodlust wrapped in prophecy."
-            magnus    "But... is it really forbidden? Tetrad worship?"
-            svante    "In Mjoll, yes. It's punishable by death. Especially Saelara... Her worship is considered the gravest blasphemy. Father says her name poisons the wind."
-            svante    "But I rarely see Tetrad worshippers punished for it. Some keep their heads down. Live quietly. They're not hunted unless they cross a line."
-            svante    "Still... my mother always told me: \"Too much mercy for the killer becomes cruelty to the dead.\""
-            niko      "Maybe Fynn did see Enoch. You'd be surprised how often the divine walks among us, especially when desperation opens the door. You speak of madness-but what if he really was chosen?"
-            yuxuan    "Are you joking? He murdered a mother and her child in the name of your rotting corpse deity! You defend this?"
-            niko      "Only those who follow a sane god can understand the cost of divine obedience. Unlike others who would worship an overgrown lizard."
-            yuxuan    "LIZARD?! HOW DARE YOU- The Prosperity Dragon ISN'T A LIZARD!"
+
+            hide chunghee
+            show magnus underwear_base at right_char with Dissolve(0.2)
+            magnus "But... is it really forbidden? Tetrad worship?"
+
+            hide magnus
+            show svante underwear_neutral at right_char with Dissolve(0.2)
+            svante "In Mjoll, yes. It's punishable by death. Especially Saelara... Her worship is considered the gravest blasphemy. Father says her name poisons the wind."
+            svante "But I rarely see Tetrad worshippers punished for it. Some keep their heads down. Live quietly. They're not hunted unless they cross a line."
+            svante "Still... my mother always told me: \"Too much mercy for the killer becomes cruelty to the dead.\""
+
+            hide svante
+            show niko underwear_serious at right_char with Dissolve(0.2)
+            niko "Maybe Fynn did see Enoch. You'd be surprised how often the divine walks among us, especially when desperation opens the door. You speak of madness-but what if he really was chosen?"
+
+            hide niko
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
+            yuxuan "Are you joking? He murdered a mother and her child in the name of your rotting corpse deity! You defend this?"
+
+            hide yuxuan
+            show niko underwear_meditate at right_char with Dissolve(0.2)
+            niko "Only those who follow a sane god can understand the cost of divine obedience. Unlike others who would worship an overgrown lizard."
+
+            hide niko
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
+            yuxuan "LIZARD?! HOW DARE YOU- The Prosperity Dragon ISN'T A LIZARD!"
+
+            hide yuxuan
+            show chunghee underwear_base at right_char with Dissolve(0.2)
             chung_hee "The two of you, calm down."
 
+            hide chunghee
+            show magnus underwear_serious at right_char with Dissolve(0.2)
             "Magnus took a careful step toward Fynn, expression soft but troubled."
 
             magnus "You took two lives, Fynn. A mother and her child. Look at me."
@@ -621,11 +841,13 @@ label ch9_judgment_mjoll:
             fynn "No. I was chosen. I'd do it again if my Lord commanded me to."
             fynn "ALL HAIL LORD ENOCH!"
 
-            "The air turned still. Even the snow seemed to freeze in place."
-
+            "The air turned still. Even the snow seemed to freeze in place."        
             huli_jing "Ooooh... how deliciously complicated. Mortals and your morality. So-will you judge, dumplings?"
 
-            jump ch9_judgment_mjoll
+            scene bg_mjoll_icelands with Dissolve(0.1)
+            show snow_blizzard_1
+
+            jump choice_judgement_mjoll
 
     jump ch9_judgment_hinami
 
@@ -638,23 +860,42 @@ label ch9_judgment_hinami:
 
     # [COMMENT: bg_hinami — cliffside, blue sky, crashing waves below]
     scene hinami_castle_morning with flash                  # PLACEHOLDER — Hinami cliffs illusion
-    stop music fadeout 0.5
-    play music ost_judgment_hinami fadein 0.5   # PLACEHOLDER — Hinami judgment theme
+    # stop music fadeout 0.5
+    # play music ost_judgment_hinami fadein 0.5   # PLACEHOLDER — Hinami judgment theme
 
     "Then, the air shifted again."
     "The bitter cold of Mjoll vanished like melting frost. In its place came warmth-salt-laced and sun-kissed. The world opened into color and light."
-    "Suddenly, we were standing atop windswept cliffs beneath a wide blue sky. The scent of the sea wrapped around us, briny and deep. Waves thundered against the rocks below, their rhythm steady."
+    "Suddenly, we were standing atop windswept cliffs beneath a wide blue sky."
+    "The scent of the sea wrapped around us, briny and deep. Waves thundered against the rocks below, their rhythm steady."
+
+    show svante underwear_nervous at left_char
+    show magnus underwear_base at center_char
+    show niko underwear_serious at right_char
+    with Dissolve(0.2) 
 
     svante "W-We're not at Mjoll anymore."
     magnus "Really? Where are we now?"
     niko   "Hinami..."
-
+    
+    hide svante
+    hide magnus
+    hide niko
+    show huli_jing at center_char
+    show chunghee underwear_neutral at left_char 
+    show niko underwear_meditate at right_char
+    with Dissolve(0.2)
     "He stepped forward, lifting his face to the wind."
 
+    show niko underwear_ignore at right_char with Dissolve(0.1)
     niko      "This ocean scent... It's unmistakable. It's from Hinami."
+    show niko underwear_serious at right_char with Dissolve(0.1)
+
     chung_hee "That's right. You said you were from Hinami..."
     huli_jing "That's right! Welcome to Hinami, little dumplings! Ahhh... can you feel it?"
     huli_jing "The salt in your lungs, the sun on your cheeks? A perfect day for judgment."
+    hide chunghee
+    show svante underwear_nervous at left_char
+    with Dissolve(0.2)
     svante    "A-Another judgment?!"
 
     "She turned, fox tail swaying."
@@ -662,7 +903,8 @@ label ch9_judgment_hinami:
     huli_jing "Look behind you, dumplings."
 
     "We did."
-    "Chained to the jagged cliff face was a man. Arms outstretched, his body crucified by salt and time. His skin was rough and sun-darkened, his clothes tattered and clinging to his frame. Bruises ringed his wrists where iron bit into flesh. The tide lapped at his ankles like a patient predator. With every swell, he shivered."
+    "Chained to the jagged cliff face was a man. Arms outstretched, his body crucified by salt and time. His skin was rough and sun-darkened, his clothes tattered and clinging to his frame."
+    "Bruises ringed his wrists where iron bit into flesh. The tide lapped at his ankles like a patient predator. With every swell, he shivered."
     "Below him, kneeling in the wet sand, was a woman. Her shoulders shook with sobs as she clutched a bundle of soaked cloth to her chest."
 
     emi "Please! Please, he didn't mean any harm!"
@@ -676,15 +918,28 @@ label ch9_judgment_hinami:
     huli_jing "And that is Emi, his daughter. She's been crying since dawn."
     emi       "Please! Save my father. I beg you!"
     huli_jing "Ah, this game is divine. You know the rules, my dumplings. Like before-you judge."
+
+    hide svante
+    show magnus underwear_serious at left_char
+    with Dissolve(0.2)
     magnus    "Just like before... Justice is not a sword, but a wave. It wears you down. It erodes the soul. It asks you to stand in the storm and never flinch."
     huli_jing "Well said, pretty one."
     huli_jing "So, beloved judges... what now? This island's laws are clear. Theft is theft. And the punishment?"
     huli_jing "DEATH."
+    hide magnus
+    show yuxuan underwear_sad at left_char
+    with Dissolve(0.2)
     yuxuan    "D-Death? Niko-tell me that's not true."
     niko      "It depends on what was stolen. On who it was stolen from. And why. Hinami's laws are old... and not always kind."
     huli_jing "But here, your judgment holds sway. What will your choice be?"
 
-    show dorian underwear_neutral at left_char with Dissolve(0.2)
+
+label choice_judgement_hinami:
+    hide yuxuan
+    hide niko
+    show dorian underwear_serious at left_char 
+    show magnus underwear_serious at right_char
+    with Dissolve(0.2)
 
     "I looked at my companions. Magnus whispered, barely audible."
 
@@ -723,11 +978,20 @@ label ch9_judgment_hinami:
             emi "NO! FATHER! FATHER! PLEASE!"
 
             "The tide tugged gently at the hem of her dress, as if trying to comfort her. But there was no comfort here."
-
+            hide magnus 
+            show svante underwear_sad at right_char with Dissolve(0.2)
             svante    "I... I thought we were better than this."
+
+            hide svante
+            show magnus underwear_serious at right_char with Dissolve(0.2)
             magnus    "I hope you're proud of yourself, Dorian."
+
+            hide magnus
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko      "The law is not kindness, it is structure. And Katashi knew what he risked when he broke it."
             niko      "We cannot let emotion blind us. That is how justice becomes chaos. Dorian did what needed to be done, even when it hurt. That is the mark of a real judge."
+            hide niko
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
             yuxuan    "\"wE cAnnOt lEt eMotIon bLind Us\" Hmph!"
 
             "Niko rolled his eyes."
@@ -751,9 +1015,19 @@ label ch9_judgment_hinami:
             katashi "We'll survive, Emi. We always have. One tide at a time."
             emi     "Yes, Father."
 
+            hide magnus 
+            show chunghee underwear_neutral at right_char with Dissolve(0.2)
             chung_hee "He will live. That, in itself, is a mercy most do not receive."
+            hide chunghee
+            show niko underwear_base at right_char with Dissolve(0.2)
             niko      "This is mercy, by Hinami's standards. And mercy... is a rare, dangerous thing. Enoch, please forgive us..."
+
+            hide niko
+            show yuxuan underwear_lying at right_char with Dissolve(0.2)
             yuxuan    "I don't care about Enoch's forgiveness."
+            
+            hide yuxuan
+            show magnus underwear_base at right_char with Dissolve(0.2)
             magnus    "Wherever the sea carries you-may it carry you to peace. I wish you both the best."
 
             "Huli Jing twirled one tail lazily."
@@ -779,10 +1053,20 @@ label ch9_judgment_hinami:
 
             "With a sound like falling rain, the chains shattered, not broken by force-but by will. They fell into the surf, vanishing beneath the tide."
 
+            hide magnus
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko   "This will... upset the elders. Enoch, judge us gently. We have strayed from the letter of the law-but perhaps not its spirit."
+            hide niko
+            show magnus underwear_base at right_char with Dissolve(0.2)
             magnus "Let them be upset. If the law cannot bend for the starving, then it deserves to break."
+            hide magnus
+            show yuxuan underwear_happy at right_char with Dissolve(0.2)
             yuxuan "Yeah! What Magnus said!"
+            hide yuxuan
+            show svante underwear_neutral at right_char with Dissolve(0.2)
             svante "I hope the world is kinder to you from now on. I hope it gives you peace. You both deserve it."
+            hide svante
+            show magnus underwear_serious at right_char with Dissolve(0.2)
             magnus "Justice without mercy is a sword that rusts in its own blood~ Let this tide wash away the weight-let love be understood~"
 
             "Katashi and Emi turned, bowing deeply. The shadows returned-silent escorts. But this time, they walked behind, not leading them like prisoners-but following them like guardians."
@@ -805,21 +1089,36 @@ label ch9_judgment_hinami:
             magnus  "Kind sir... What do you have to say for yourself? Do you deny the charges laid upon you?"
             katashi "I do not deny it. I broke the law."
             katashi "But tell me-is it justice to watch your child starve? Is it noble to let your daughter bathe in saltwater while nobles hoard rose oils and perfumes? I am no saint. But I would steal again if it meant she could eat."
+            
+            hide magnus 
+            show chunghee underwear_neutral at right_char with Dissolve(0.2)
             chung_hee "Eat, you say? Then enlighten us, Katashi Morita. What prize did you deem worth breaking the King's law?"
             katashi "A loaf of bread. A sack of rice. A bar of soap. Two dried fish."
 
             "Svante looked like he'd been punched."
-
+            hide chunghee
+            show svante underwear_sad at right_char 
+            show dorian underwear_sad at left_char
+            with Dissolve(0.2)
             svante  "T-That's it? Just food and soap?"
             emi     "We were starving! We hadn't eaten in days. Please... he didn't want to steal. I begged him not to... but-he did it for me!"
             dorian  "Where did you steal the food and soap?"
+            show dorian underwear_serious at left_char with Dissolve(0.1)
             katashi "... I stole from the home of Lord Nakai."
+            hide svante
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko    "Merciful En-... Lord Nakai?!"
             niko    "You've either got guts or a death wish. Might as well stroll into a yaoguai king's den and ask for a cup of tea."
+            hide niko
+            show svante underwear_base at right_char with Dissolve(0.2)
             svante  "Who is Lord Nakai, Niko?"
+            hide svante
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko    "One of Hinami's high lords. Second only to King Tatsuya Fujiwara. He commands the military and answers to no one but the crown."
             niko    "The man would have you flayed for touching his wine cellar, let alone stealing from his kitchens."
             katashi "I knew the risk. But his servants throw away more food in a week than most villages see in a season. I couldn't watch her waste away. Not again."
+            hide niko
+            show chunghee underwear_neutral at right_char with Dissolve(0.2)
             chung_hee "Again? What do you mean... 'not again'?"
             emi     "We had... a sister. Her name was Maru."
             emi     "She died last winter. Her belly swollen from hunger, her skin cracked and cold. We had no firewood. No rice. No medicine."
@@ -832,10 +1131,16 @@ label ch9_judgment_hinami:
             emi "Please, your highness, your grace-anything! Take my life instead! I'll serve-I'll go in his place! Just let him go!"
 
             "She lowered her face, lips trembling, and pressed them against his foot. Svante blushed and shielded his face."
-
+            hide chunghee
+            show svante underwear_nervous at right_char with Dissolve(0.2)
             svante    "N-No! Please don't do that, we're still in our undergarments!"
+            hide svante
+            show chunghee underwear_sad at right_char with Dissolve(0.2)
             chung_hee "H-Hey... that's-this is highly improper. Please rise. There is no need for... such a display."
             huli_jing "Hey! No touching the judges! That's against the rules!"
+
+            hide chunghee
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
             yuxuan    "This is preposterous!"
             yuxuan    "I am Cheng Yuxuan, an inventor of great renown! I've contributed to the advancement of technology in countless kingdoms! And yet, here I am, in my undergarments in front of all to see!"
             yuxuan    "You could have at least gotten us some clothes before making us judges, you know!"
@@ -846,32 +1151,51 @@ label ch9_judgment_hinami:
             "I turned to the others, the wind pressing against my back like a tide urging me to speak."
 
             dorian    "You've heard him. Now I ask you-what do you think?"
+            hide yuxuan
+            show niko underwear_meditate at right_char with Dissolve(0.2)
             niko      "According to the teachings of Lord Enoch, the law is the spine of civilization. Harsh? Perhaps. But mercy without order is rot without bone."
             niko      "\"When one man steals with no consequence, a hundred more will follow. Then who feeds the honest?\" That's what Enoch teaches. The law must stand-or all things crumble."
+            hide niko
+            show chunghee underwear_base at right_char with Dissolve(0.2)
             chung_hee "As the Emperor of Kyeongjang, I've had to pass judgments that weighed heavy on my heart."
             chung_hee "Aunt Ji - I mean, my royal advisor once told me, \"Compassion must walk behind law, not in front of it.\""
             chung_hee "Order is fragile. If the law bends for sympathy, how long until it breaks for greed?"
+            hide chunghee
+            show yuxuan underwear_sad at right_char with Dissolve(0.2)
             yuxuan    "But what kind of justice punishes a starving man trying to save his daughter? Are we really protecting society?! Or just the pride of the rich?"
+            hide yuxuan
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko      "You're one to talk. You're one of the rich yourself."
+            hide niko
+            show yuxuan underwear_angry at right_char with Dissolve(0.2)
             yuxuan    "I try to feed as many as I can! I give what I have! I- I don't punish love with death! If we are going to punish him, at least don't kill him!"
+            hide yuxuan
+            show svante underwear_nervous at right_char with Dissolve(0.2)
             svante    "W-We should forgive him. Please. What kind of world punishes love like this?"
             svante    "A father's love... I..."
 
             "Then, Magnus stepped forward. His eyes were on Katashi, but his voice was lifted to the crashing sea."
-
+            hide svante
+            show magnus underwear_serious at right_char with Dissolve(0.2)
             magnus "I don't care what the law says."
             magnus "Justice without compassion is cruelty dressed in gold. If the law demands we turn away from the hungry, then the law has already failed."
+            show magnus underwear_base at right_char with Dissolve(0.1)
             magnus "Look at her. Look at him. Tell me-are these the faces of danger? Are these threats to the throne?"
             magnus "Break the chains. Feed them. Heal them. That is the kind of kingdom I would fight for."
+            hide magnus
+            show niko underwear_serious at right_char with Dissolve(0.2)
             niko   "This isn't about threats, Magnus. It's about precedent. The moment the law yields, even once, every tyrant will find cause to twist it."
+            hide niko
+            show chunghee underwear_base at right_char with Dissolve(0.2)
             chung_hee "As much as it pains me, I must agree. The law is not a feeling-it is a pillar. Without it, we drift."
             huli_jing "Mmm... such passion. Such division. Oh, my dumplings... what a delightful dilemma."
             huli_jing "Well then, Dragon of Gale... it falls to you."
 
             "I then turned to the Huli Jing."
             "I turned to look at them all-at Katashi, crucified by justice; at Emi, drowning in desperation; at the sea, endless and roaring. The world held its breath."
-
-            jump ch9_judgment_hinami
+            
+            scene hinami_castle_morning with Dissolve(0.1)
+            jump choice_judgement_hinami
 
     jump ch9_judgment_kyeong
 
@@ -887,16 +1211,18 @@ label ch9_judgment_kyeong:
     stop music fadeout 0.5
     play music ost_judgment_kyeong fadein 0.5   # PLACEHOLDER — Kyeongjang judgment theme
 
-    "The air shifted again-sharp and dry, like brittle parchment touched by flame. The scent of lotus blossoms and aged ink reached my nostrils, thick and heady. My feet met smooth stone, cold to the touch. I looked around slowly."
+    "The air shifted again-sharp and dry, like brittle parchment touched by flame."
+    "The scent of lotus blossoms and aged ink reached my nostrils, thick and heady. My feet met smooth stone, cold to the touch. I looked around slowly."
     "We were no longer near the sea."
     "Towering pagodas surrounded us, their curved rooftops gleaming with gold leaf beneath a pale sky. The very ground vibrated with power-a coiled pressure humming just beneath the surface."
     "I blinked, adjusting to the light that struck the stone courtyard like polished jade. And then-I saw her."
-    "A woman knelt in the center of a marble platform, chains wrapped tight around her wrists. Her hanbok was torn, stained from travel or shame. Her long black hair hung in tangles, but even in ruin, she carried a strange grace."
+    "A woman knelt in the center of a marble platform, chains wrapped tight around her wrists. Her hanbok was torn, stained from travel or shame."
+    "Her long black hair hung in tangles, but even in ruin, she carried a strange grace."
     "She raised her head. Her hollow, desperate eyes locked onto one of us."
 
     seorin "Y-Your Majesty?"
 
-    show chung_hee underwear_neutral at left_char with Dissolve(0.2)
+    show chunghee underwear_neutral at left_char with Dissolve(0.2)
 
     "Chung-hee was startled. His face flushed, and he shifted awkwardly, hand tugging at the edge of the towel slung over his shoulders. We were, after all, still in our undergarments."
 
@@ -907,32 +1233,70 @@ label ch9_judgment_kyeong:
     "Huli Jing cooed from above, now reclined on a gilded parasol carried by an unseen force, her nine tails fanned out like a blooming chrysanthemum."
 
     huli_jing "Ahhh, so he does know her. Even better. The final judgment will cut closest to the heart."
+    hide huli_jing 
+    hide chunghee
+    show huli_jing at center_char
+    show chunghee underwear_sad at right_char   
+    show dorian underwear_sad at left_char
+    with Dissolve(0.2)
     dorian    "Wait... You know her, Chung?"
     chung_hee "She was my past mentor. In alchemy. Before I ever wore the crown."
 
+    show dorian underwear_serious at left_char 
+    show chunghee underwear_base at right_char   
+    with Dissolve(0.1)
     "He narrowed his eyes at the ornate architecture."
 
     chung_hee "With this vision, I take it we stand in Kyeongjang?"
+
     huli_jing "Right you are, dumpling! Welcome back to the capital!"
-    svante    "W-Wow... This is Kyeongjang? It's beautiful..."
-    yuxuan    "PRAISE THE PROSPERITY DRAGON! KYEONGJANG! AT LAST!"
-    yuxuan    "I have waited for this moment my entire life! My life's work has led me to this moment! Niko, pinch me! I must be dreaming!"
-    niko      "This is still an illusion, Yuxuan. Part of the Huli Jing's game."
-    magnus    "Beautiful, magnificent Kyeongjang! Oh, how noble your towers, how gleaming your-"
-    dorian    "Magnus. Please. Save the ballad for later."
 
+    hide chunghee
+    show svante underwear_neutral at right_char with Dissolve(0.2)
+    svante "W-Wow... This is Kyeongjang? It's beautiful..."
+
+    hide svante
+    show yuxuan underwear_normal at right_char with Dissolve(0.2)
+    yuxuan "PRAISE THE PROSPERITY DRAGON! KYEONGJANG! AT LAST!"
+    yuxuan "I have waited for this moment my entire life! My life's work has led me to this moment! Niko, pinch me! I must be dreaming!"
+
+    hide yuxuan
+    show niko underwear_serious at right_char with Dissolve(0.2)
+    niko "This is still an illusion, Yuxuan. Part of the Huli Jing's game."
+
+    hide niko
+    show magnus underwear_base at right_char with Dissolve(0.2)
+    magnus "Beautiful, magnificent Kyeongjang! Oh, how noble your towers, how gleaming your-"
+
+    
+    show dorian underwear_normal at left_char with Dissolve(0.1)
+    dorian "Magnus. Please. Save the ballad for later."
+    show dorian underwear_neutral at left_char with Dissolve(0.1)
+    hide magnus
+    show chunghee underwear_base at right_char with Dissolve(0.2)
     chung_hee "Seonsaengnim. Explain yourself."
-    seorin    "Y-Your Majesty! I didn't mean for any of it. I swear it, I didn't."
 
+    seorin "Y-Your Majesty! I didn't mean for any of it. I swear it, I didn't."
+
+    show dorian underwear_serious at left_char with Dissolve(0.1)
     "Her voice cracked as she tried to rise, but the chains held her fast."
 
     huli_jing "Seorin Im. Scholar. Once one of the most promising alchemists in the Empire. Tasked with crafting a powerful medicinal salve for the royal hospital-one that would heal plague, infection, and injury alike."
     huli_jing "But her alchemy was flawed. The ingredients, unstable. Instead of healing the sick..."
     huli_jing "...it poisoned them. Fifty-five souls. Gone. Thirty-seven imperial soldiers. Eighteen children. Every last one who drank the salve died within hours."
 
+    hide chunghee
+    show magnus underwear_base at right_char with Dissolve(0.2)
     magnus "Those... Those poor children..."
+
+    show dorian underwear_serious at left_char with Dissolve(0.2)
     dorian "Tetrad above..."
-    niko   "Unforgivable. I've seen things like this in Hamatame. Villagers dosing the sick with faulty tinctures, hoping for miracles. It always ends in death. You don't gamble with lives-not as a healer. Not ever."
+
+    hide magnus
+    show niko underwear_meditate at right_char with Dissolve(0.2)
+    niko "Unforgivable. I've seen things like this in Hamatame. Villagers dosing the sick with faulty tinctures, hoping for miracles. It always ends in death. You don't gamble with lives-not as a healer. Not ever."
+    show niko underwear_serious at right_char with Dissolve(0.2)
+
     seorin "I-I didn't know, Your Majesty! It was a mistake! Please, I beg you!"
 
     "She turned to Chung-hee, voice trembling, heart in her throat."
@@ -942,15 +1306,16 @@ label ch9_judgment_kyeong:
     "Around the platform, ghostly silhouettes began to appear-spirits with soft blue eyes and pale robes, their hands clasped before them as if in mourning."
 
     huli_jing "So... my beautiful dumplings. For the last time. Death, exile, or forgiveness?"
-    niko      "Last time? Great."
-    huli_jing "The dead don't speak, but they remember. And they are watching."
 
+    show niko underwear_serious at right_char with Dissolve(0.2)
+    niko "Last time? Great."
+
+    huli_jing "The dead don't speak, but they remember. And they are watching."
     "She grinned, sharp as a blade."
 
     huli_jing "Judge wisely, Dragon of Gale. This one cuts to the bone..."
 
     menu:
-
         "Pass the judgment of Death.":
 
             "I closed my eyes. The weight of it all pressed down on my chest like iron."
@@ -1646,7 +2011,7 @@ label ch9_spring_end:
     "Face-first. Right into someone's thigh."
     "Everything reeked of lavender, steam, and shame. We were all still in our undergarments, soaked, tangled like a bundle of wet spaghetti, sprawled out in the middle of the hot spring."
 
-    show chung_hee underwear_neutral at left_char with Dissolve(0.2)
+    show chunghee underwear_neutral at left_char with Dissolve(0.2)
     show svante underwear_base at center_char with Dissolve(0.2)
     show magnus underwear_base at right_char with Dissolve(0.2)
 
@@ -2230,7 +2595,7 @@ label ch9_route_yuxuan:
 label ch9_route_chunghee:
 
     hide weng
-    show chung_hee ceremonial_neutral at right_char with Dissolve(0.2)
+    show chunghee ceremonial_neutral at right_char with Dissolve(0.2)
 
     chung_hee "Are you alright, Dorian?"
 
@@ -2268,7 +2633,7 @@ label ch9_route_chunghee:
 
     chung_hee "Wait."
 
-    show chung_hee ceremonial_sad at right_char
+    show chunghee ceremonial_sad at right_char
 
     "He looked down at the lantern again, then up at me. His gaze was gentle. Inviting."
 
@@ -2311,13 +2676,13 @@ label ch9_route_chunghee:
 
     dorian "Then we'll make this one count. For them."
 
-    show chung_hee ceremonial_neutral at right_char
+    show chunghee ceremonial_neutral at right_char
 
     "He nodded, his fingers curling softly around mine."
 
     dorian "What about your aunt? You mentioned her yesterday. Is she...?"
 
-    show chung_hee ceremonial_sad at right_char
+    show chunghee ceremonial_sad at right_char
 
     "He lowered his eyes."
 
@@ -2373,7 +2738,7 @@ label ch9_route_chunghee:
     "He glanced down, realizing our hands were still entwined. His eyes widened slightly. A faint blush crept up his neck, and he quickly-though reluctantly-let go."
     "Then, almost like flipping a switch, he straightened his posture, squared his shoulders, and cleared his throat."
 
-    show chung_hee ceremonial_neutral at right_char
+    show chunghee ceremonial_neutral at right_char
 
     chung_hee "Ahem. I-apologize. I allowed emotion to... compromise my composure. Clearly, this moment has overwhelmed me."
     chung_hee "Thank you, Dorian."

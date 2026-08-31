@@ -166,11 +166,8 @@ label chapter_4:
     voice audio.svante_ch4_line7
     svante "Y-Yes, Father…"
 
-    hide svante
-    show messenger at left_char with Dissolve(0.2)
     messenger   "A letter from the Emperor of Kyeongjang, Your Majesty."
-    hide messenger
-
+    hide svante
     show mjoll_pavel at left_char with Dissolve(0.2)
     voice audio.pavel_ch4_line3
     mjoll_pavel "K-Kyeongjang, Your Majesty?"
@@ -900,8 +897,8 @@ label ch4_tianho_dorian:
     show yuxuan normal_happy at right_char
     voice audio.yuxuan_ch4_line3
     yuxuan "Sure!"
-    hide yuxuan
     "Before I could respond, Elias sprang to his feet, clutching Tedda tightly to his chest."
+    hide yuxuan
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
 
     voice audio.elias_ch4_line2
@@ -1317,14 +1314,14 @@ label ch4_yuxuan_common:
     show dorian angry at left_char
     voice audio.dorian_ch4_line29
     dorian "Wait, Yu—"
+
     hide dorian
     hide yuxuan
-
-    show svante normal_angry at center_char with Dissolve(0.2)
+    show svante normal_angry at center_char 
+    with Dissolve(0.2)
     voice audio.svante_ch4_line9
     svante "Excuse me, civilians. You need to get away from this place as soon as possible. It's not safe here."
 
-    # show dorian serious at left_char
     "A strangely familiar young man approached us, his brushed-up hair was of the color violet, matching his armor."
     "Svante. An aldorith from Mjoll."
     "I instinctively turned Elias away, hoping Svante wouldn't recognize us. As he approached, his voice was firm but respectful."
@@ -1587,7 +1584,7 @@ label ch4_cemetery_exit:
     voice audio.yuxuan_ch4_line49
     yuxuan "What are they talking about?"
 
-    # play sound sfx_explosion_boom                  # PLACEHOLDER
+    # TODO: play sound sfx_explosion_boom                  # PLACEHOLDER
 
     "-EXPLOSION-"
     scene tianho_cemetery_morning_alt with shock_cut
@@ -1799,7 +1796,6 @@ label ch4_cemetery_exit:
     hide elias
     show mjoll_soldier_1 at left_char with Dissolve(0.2)
     mjoll_soldier_1 "We need this carriage. It's ours now. Get off!"
-    show carriage_driver at right_char with Dissolve(0.2)
     carriage_driver "I don't care who you are—I was called to pick Master Yuxuan up! This is the property of Cheng Industries!"
     hide mjoll_soldier_1
 
@@ -1812,7 +1808,6 @@ label ch4_cemetery_exit:
     carriage_driver "Ahh!! Okay! Okay!"
 
     "The second soldier turned, spotting us as we approached. His hand shot to his weapon—a jagged blade that glinted in the light."
-    hide carriage_driver
     hide mjoll_soldier_female_1
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
     mjoll_soldier_female_1    "Looks like they're here."
@@ -1954,8 +1949,7 @@ label ch4_cemetery_exit:
             $ _choice_timeout = 0
             stop sound
 
-            # play sound sfx_wind_blast                # PLACEHOLDER
-
+            play sound sfx_wind
             show dorian dragon_eyes at left_char
             "I planted my feet firmly and reached deep, calling on the winds. They roared to life around me, whipping through the air like an invisible storm."
             "With a sharp motion of my arm, the wind blasted toward the carriage."

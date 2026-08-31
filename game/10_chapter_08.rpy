@@ -1025,7 +1025,7 @@ label ch8_open_door:
             $ ch8_d1_choice = "chunghee"
             $ chunghee_affection += 1
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I exhaled slowly, pressing my fingers against my temple before turning to Chung-hee."
             "For once, I'm going to listen to the most reasonable person in the room."
 
@@ -1427,6 +1427,7 @@ label ch8_letter_common:
     svante "R-Right. No reckless touching."
 
     "I turned my attention to the first painting."
+    play music audio.ost_magnus_riddles fadein 1.5 loop
 
     jump ch8_paintings
 
@@ -1437,7 +1438,6 @@ label ch8_letter_common:
 
 label ch8_paintings:
     $ ch8_puzzle_seen = True
-    # play music ost_ch8_paintings fadein 1.5     # PLACEHOLDER — mystical paintings theme
 
     # --- Painting 1 ---
     scene cg_painting_1 with dissolve           # PLACEHOLDER — The Loom's Whisper
@@ -1596,7 +1596,7 @@ label ch8_painting_order:
             jump choice_134
 
         "The Loom's Whisper, Thrones of the Eternal, When the Stars Watched, Chains of Choice, Tragedy, Wrath":
-
+            stop music fadeout 1.5
             scene underground_magnus with dissolve 
             "As the final painting was touched, the chamber came alive."
             # TODO: add magic pulse sfx
@@ -1915,6 +1915,7 @@ label ch8_magnus_found:
     "Near the rubble, broken spearheads littered the ground—remnants of royal guards who had once stood here. They were crude, but they were large enough to act as a weapon."
     "Scattered all around us were the remains of ancient lantern stands, their metal frames cracked and bent."
     "They weren't as large or sturdy as the spearheads, but their fragmented nature meant Svante could spread his power through them, striking from multiple angles at once."
+    play music audio.ost_battle fadein 1.5 loop
     "And with Magnus focused on Niko, he might not anticipate it."
     scene cg_magnus_battle with shock_cut
     jump ch8_magnus_battle
@@ -1926,7 +1927,6 @@ label ch8_magnus_found:
 label ch8_magnus_battle:
     
     # play music ost_ch8_magnus fadein 0.5        # PLACEHOLDER — intense divine battle theme
-    play music audio.ost_battle fadein 1.5
     $ _choice_timeout = 5.0
     menu:
 
@@ -2095,6 +2095,8 @@ label ch8_battle_qtc3:
     
     magnus "AHHHH!! YOU WILL PAY FOR THIS!!"
     scene cg_magnus_battle with shock_cut
+
+    # play sound audio.sfx_earthquake
     "A roar of pain erupted from his throat, shaking the walls, sending dust cascading from the ceiling." with hpunch
     "His flight wavered, his balance lost for a fraction of a second."
 
@@ -2587,7 +2589,6 @@ label ch8_walk_back:
     scene cg_black with fade                    # PLACEHOLDER — black screen
     stop music fadeout 1.0
 
-    show roboto happy at right_robot with Dissolve(0.2)
     "When we finally reached the laboratory, Roboto was on edge. It seemed to sense the tension. It moved toward Magnus, scanning him with mechanical precision before giving a small nod."
 
     roboto "H-H-HHe requires rest. I have prepared a bed. Please f-f-follow me."

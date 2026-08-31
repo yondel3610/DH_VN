@@ -69,7 +69,7 @@ screen amulet_door_puzzle():
     # TODO: placeholder - replace with the actual sealed-door background art
     add Transform("images/Assets/amulet_wall.png", zoom=1.3)
 
-    text "Click each amulet to rotate it. Align both with the door's carvings.":
+    text "Align the amulets to open the door.":
         xalign 0.5
         ypos 60
         size 34
@@ -130,14 +130,14 @@ screen amulet_door_puzzle():
                 yanchor 0.5
 
     # status labels
-    text "{}".format("Aligned" if amulet_a_locked else "Click to rotate"):
+    text "{}".format("Aligned" if amulet_a_locked else "Rotate"):
         xpos AMULET_A_CENTER[0]
         ypos AMULET_A_CENTER[1] + AMULET_RADIUS + 30
         xanchor 0.5
         color ("#88ff88" if amulet_a_locked else "#cccccc")
         size 24
 
-    text "{}".format("Aligned" if amulet_b_locked else "Click to rotate"):
+    text "{}".format("Aligned" if amulet_b_locked else "Rotate"):
         xpos AMULET_B_CENTER[0]
         ypos AMULET_B_CENTER[1] + AMULET_RADIUS + 30
         xanchor 0.5

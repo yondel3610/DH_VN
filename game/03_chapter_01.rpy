@@ -23,7 +23,7 @@
 # define audio.sfx_yaoguai_roar       # monster roar DONE
 # define audio.sfx_explosion          # find free explosion audio
 # define audio.sfx_stone_spike        # stone spike
-# define audio.sfx_wind_blast         # wind blast from other games
+# define audio.sfx_wind         # wind blast from other games
 # define audio.sfx_heartbeat          # heartbeat audio
 # define audio.sfx_taotie_lava        # lava cracking SFX DONE
 # define audio.amb_festival_crowd     # festival crowd | to be called again in ch2
@@ -631,14 +631,12 @@ label ch1_city_xiangli:
     "Just as I'm starting to enjoy myself, a voice breaks through the din of the market."
     hide sarah
     show dorian serious at left_char
-    show male_soldier_1 at right_char with Dissolve(0.2)
     male_soldier_1 "Paladin Dorian!"
     "I turn to see three soldiers in Tianho's imperial armor weaving through the crowd. They salute sharply as they reach me."
 
     show dorian normal_alt_annoyed at left_char
     male_soldier_1 "Paladin! Apologies for the interruption."
 
-    hide male_soldier_1
     show lucas at right_char_kids with Dissolve(0.2)
     voice audio.lucas_ch1_line12
     lucas  "Cool! A soldier! Hello—"
@@ -647,15 +645,12 @@ label ch1_city_xiangli:
     voice audio.elara_ch1_line28
     elara  "Not now, sweetie. Finish your skewer."
     hide elara
-    show male_soldier_1 at right_char with Dissolve(0.2)
     show dorian normal_alt_calm at left_char
     voice audio.dorian_ch1_line27
     dorian "At ease, soldiers. What is it?"
     show dorian normal_alt_annoyed at left_char
 
     "The second soldier steps forward, holding a folded parchment."
-    hide male_soldier_1
-    show male_soldier_2 at right_char with Dissolve(0.2)
     male_soldier_2 "The perimeter reports for the event tomorrow, sir. We wanted to ensure you were informed."
 
     "The third soldier, younger and clearly nervous, clears his throat."
@@ -672,13 +667,11 @@ label ch1_city_xiangli:
 
     "The first soldier hesitates, then nods."
     hide soldier_gao
-    show male_soldier_1 at right_char
     male_soldier_1 "Of course, sir. We didn't mean to disrupt your evening."
     voice audio.dorian_ch1_line29
     dorian "Good. Keep me updated."
     show dorian
     "The soldiers bow slightly before disappearing back into the crowd. I turn back to my family, only to find Daniel mimicking the soldiers. He salutes dramatically, puffing out his chest."
-    hide male_soldier_1
 
     show daniel at right_char_kids with Dissolve(0.2)
     voice audio.daniel_ch1_line12
@@ -786,7 +779,6 @@ label ch1_city_zhong:
     hide yuxuan
     voice audio.roboto_ch1_line2
     roboto "W-w-w-why did the chicken from Tianho c-c-crossed the road?"
-    show man_1 at left_char with Dissolve(0.2)
     man_1  "Oh I love these types of jokes! Why?"
     voice audio.roboto_ch1_line3
     roboto "*weird robotic noises* I-I-I-I— Error… Error… T-T-T-…"
@@ -814,17 +806,11 @@ label ch1_city_zhong:
     show roboto malfunction at right_robot
     "He presses another button, and Roboto's screen suddenly flashes a random image of a fish before its voice returns."
     hide yuxuan
-    show man_1 at left_char with Dissolve(0.2)
     man_1  "A fish? What gives?!"
     voice audio.roboto_ch1_line4
     roboto "T-To get to the o-o-other s-s-s-s-s…. ERROR… ERROR… sideeee…. S-s-s-s-s— *glitches*"
-    hide man_1
-    show woman_1 at left_char with Dissolve(0.2)
     woman_1 "W-What's happening?"
-    hide woman_1
-    show man_2 at left_char with Dissolve(0.2)
     man_2  "Look out! It's gonna explode!"
-    hide man_2
 
     "Roboto begins to shake violently, its screen flashing with bright, chaotic patterns. The arms jerk wildly, one of them flinging off and landing with a loud clank near Lucas' feet."
     show roboto error at right_robot
@@ -852,15 +838,9 @@ label ch1_city_zhong:
     voice audio.sarah_ch1_line15
     sarah "Very interesting…"
     hide sarah
-    show man_1 at left_char with Dissolve(0.2)
     man_1  "Aww brother this guy stinks!"
-    hide man_1
-    show woman_1 at left_char with Dissolve(0.2)
     woman_1 "Come on! We came here for nothing?"
-    hide woman_1
-    show man_2 at left_char with Dissolve(0.2)
     man_2  "Tianho will look bad if this man was given a chance to talk to the Kyeongjang Emperor!"
-    hide man_2
 
     show yuxuan normal_sad at left_char with Dissolve(0.2)
     voice audio.yuxuan_ch1_line6
@@ -1291,8 +1271,6 @@ label ch1_castle_morning:
     "Before Cyrus can respond, a commotion breaks out near the front of the line. A woman falls to her knees, clutching the hem of a guard's armor. Her face is streaked with tears, her voice desperate."
     hide dorian
     hide cyrus
-    show woman_2 kneeling at left      # PLACEHOLDER — desperate woman sprite
-    show female_guard at right                 # PLACEHOLDER — female guard sprite
     with Dissolve(0.2)
 
     woman_2 "Please, I beg you! Let me audition! My son is starving, and this is my only chance to provide for him. I'll do anything!"
@@ -1310,8 +1288,6 @@ label ch1_castle_morning:
 
     woman_2 "No! Please, my son — he needs me! Just give me a chance, please!"
     female_guard "Good riddance. Pft."
-    hide female_guard
-    hide woman_2
 
     show dorian normal_alt_calm at left_char
     show cyrus at right_char
@@ -1388,15 +1364,9 @@ label ch1_auditions:
     "A murmur ripples through the line of applicants, and a few people take a cautious step back."
 
     hide niko
-    show woman_1 at left_char with Dissolve(0.2)
     woman_1 "Tetrad save us… a prophet of the death god?"
-    hide woman_1
-    show man_2 at left_char with Dissolve(0.2)
     man_2 "A Chosen of Enoch? Oh no! He'll bring misfortune upon us!"
-    hide man_2
-    show man_3 at left_char with Dissolve(0.2)
     man_3 "Get him out of here!"
-    hide man_3
 
     "The younger brother, Kaito, stiffens under the hostile murmurs, his knuckles white as he clutches the hem of his robe. Niko, however, remains calm, though his voice tightens."
 
@@ -1410,19 +1380,12 @@ label ch1_auditions:
     voice audio.cyrus_ch1_line15
     cyrus "Don't twist your heresies into compassion. Your order watched my cousin bleed out on a battlefield — because he had 'met his time'. Your order knelt beside him, praying, as his lungs filled with blood. Don't you dare speak of comfort."
 
-    hide niko
-    show female_guard at left_char with Dissolve(0.2)
     female_guard "So this is what the Death God's kindness looks like? Letting the weak die, untouched? And you think we'll let you serve the royal family?"
-    hide female_guard
-    show man_3 at left_char with Dissolve(0.2)
     man_3 "They worship death. That's all you need to know. Get them out of here before misfortune falls on all of us!"
-    hide man_3
-    show man_1 at left_char with Dissolve(0.2)
     voice man1_ch1_line1
     man_1 "Please! Let them out!"
-    hide man_1
 
-    show niko normal_serious at left_char with Dissolve(0.2)
+    show niko normal_serious at left_char with Dissolve(0.1)
     voice audio.niko_ch1_line7
     niko "We came to serve. Not to interfere, not to harm. My brother only asks for a chance to interpret — not to pass judgment on life or death."
     voice audio.cyrus_ch1_line16
@@ -1437,9 +1400,7 @@ label ch1_auditions:
 
     "The female guard scoffs, her hand resting on the hilt of her sword."
 
-    show female_guard at left_char with Dissolve(0.2)
     female_guard "You want to help? Then prove you're not a coward hiding behind your god's silence. Face me in a duel to the death!"
-    hide female_guard
     show soldier_gao at left_char with Dissolve(0.2)
     voice audio.gao_ch1_line6
     gao "Th-that won't be necessary, ma'am! We're here to evaluate — not shed blood!"
@@ -1472,9 +1433,7 @@ label ch1_auditions:
             "I step forward, positioning myself between the guards and the brothers."
 
             hide niko
-            show female_guard at right_char with Dissolve(0.2)
             female_guard "P-Paladin Dorian? I don't understand. Why would you defend these lunatics? I—"
-            hide female_guard
             show cyrus at right_char with Dissolve(0.2)
             voice audio.cyrus_ch1_line17
             cyrus "Dorian, you overstep your bounds."
@@ -1519,7 +1478,6 @@ label ch1_auditions:
             niko "Let's go brother. We're too good for this place."
 
             hide niko
-            show man_1 at right_char with Dissolve(0.2)
             voice man1_ch1_line2    
             man_1 "Get out of here before I crack your skull with this rock!"
             hide man_1
@@ -1578,9 +1536,7 @@ label ch1_auditions:
             "The female guard spits on Kaito's feet."
 
             hide cyrus
-            show female_guard at right_char with Dissolve(0.2)
             female_guard "You heard the Paladin. Out!"
-            hide female_guard
 
             show niko normal_sad at right_char with Dissolve(0.2)
             voice audio.kaito_ch1_line6
@@ -1868,15 +1824,11 @@ label ch1_ceremony:
     "I scan the room until my gaze lands on Feng, effortlessly charming a group of nobles with his jokes."
 
     show feng_suit at right_char
-    show woman_1 at left_char
     with Dissolve(0.2)
     feng "And then I said — what do you want me to do? Pray to Adriana to hand me a new daughter?!"
     woman_1 "Hahaha! Paladin Feng, that's hilarious!"
-    hide woman_1
-    show man_1 at left_char with Dissolve(0.2)
     voice man1_ch1_line3
     man_1 "That is so funny! Haha! One more, good sir!"
-    hide man_1
 
     "I shake my head, a faint smile tugging at my lips despite myself, and approach Feng."
 
@@ -2247,7 +2199,7 @@ label ch1_battle:
             show dorian serious at left_char with Dissolve(0.2)
             "For a split second, I freeze, my mind racing as the yaoguai's eyes bore into mine."
             "Its guttural snarl sends chills down my spine, and I feel every instinct screaming at me to move, but I can't."
-            show dorian angry at left_char
+            show dorian angry at left_char with Dissolve(0.2)
             "What in Tetrad's name is happening?!"
 
             show soldier_gao at right_char with Dissolve(0.2)
@@ -2286,9 +2238,12 @@ label ch1_battle:
             $ ch1_gate_qtc = "shield"
 
             show dorian serious at left_char with Dissolve(0.2)
+            "The yaoguai's claws slam into the ground, sending shockwaves through the courtyard."
             play sound sfx_wind
-            "The yaoguai's claws slam into the ground, sending shockwaves through the courtyard. Without thinking, I thrust my hands forward, summoning a fiery barrier between us and the creature."
-            show dorian dragon_eyes at left_char
+            play sound audio.sfx_fire_explosion
+            "Without thinking, I thrust my hands forward, summoning a fiery barrier between us and the creature."
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
+            
             "Flames roar to life, swirling in a protective arc that absorbs the beast's attack with a deafening crack."
             "The heat from my shield is intense, but Gao and Jiang hold their ground."
 
@@ -2297,17 +2252,17 @@ label ch1_battle:
             voice audio.yg_scream 
             yg "Grrraaawwwrrr!!"
             hide yaoguai
-
             show dorian serious at left_char
+            with Dissolve(0.1)
             voice audio.dorian_ch1_line103
             dorian "Are you alright?"
-            show soldier_jiang at right_char with Dissolve(0.2)
+            show soldier_jiang at right_flip with Dissolve(0.2)
             voice audio.jiang_ch1_line13
             jiang  "Paladin… Thank you!"
             voice audio.dorian_ch1_line104
             dorian "Get ready to run when I say."
 
-            show dorian dragon_eyes at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.2)
             "I concentrate, channeling more power into the shield until the flames burst outward in a controlled explosion. The yaoguai stumbles back, momentarily dazed."
 
             voice audio.dorian_ch1_line105
@@ -2324,7 +2279,7 @@ label ch1_battle:
             "The yaoguai lunges, its glowing red eyes locked on me. Without hesitation, I channel fire into my palm, condensing the heat into a pulsing orb."
             "I hurl the fireball with all my strength. The orb smashes into the yaoguai's face, erupting in a fiery explosion that engulfs its head in flames."
 
-            show yaoguai at right_yg
+            show yaoguai at right_yg 
             voice audio.toatie_roar_ch1_line1
             voice audio.toatie_roar_ch1_line3
             yg "Raaaaaaawwrrr!!! Grrraaawwwrrr!!"
@@ -2591,7 +2546,7 @@ label ch1_battle:
             $ _choice_timeout = 0
             $ ch1_stair_qtc = "wind"
             stop sound
-            play sound sfx_wind_blast           # PLACEHOLDER — wind blast SFX
+            play sound sfx_wind           # PLACEHOLDER — wind blast SFX
 
             hide vasily
             show dorian dragon_eyes at left_char
@@ -2736,9 +2691,9 @@ label ch1_battle:
     scene bg_tianho_city_on_fire with shock_cut  # PLACEHOLDER — city on fire, courtyard
 
     # play music ost_battle_tianho fadein 1.0
-
     "Finally, we burst out into the courtyard, gasping for air."
-    "The city of Tianho is in chaos. Streets are lit by the glow of fires, their smoke curling into the night sky. People are screaming, running in every direction. Buildings collapse in the distance, their foundations giving way as the earth continues to quake."
+    "The city of Tianho is in chaos. Streets are lit by the glow of fires, their smoke curling into the night sky."
+    "People are screaming, running in every direction. Buildings collapse in the distance, their foundations giving way as the earth continues to quake."
 
     voice man1_ch1_line4
     man_1 "Wait… Look… Up in the sky!"
@@ -2857,31 +2812,25 @@ label ch1_battle:
     "Paladin Feng steps forward, unwavering, his sword burning with blue fire."
     feng "Dorian, get the civilians out! I'll handle this beast!"
 
-    show dorian serious at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line128
     dorian "Feng, wait! We can't take this thing alone!"
-    hide dorian with Dissolve(0.1)
 
     "But Feng doesn't listen. With a battle cry, he charges toward the Taotie, leaping high and slashing at its massive head."
-    # blade sfx and meat searing
     "His blade slices across one of its glowing eyes, the blue fire searing into its flesh. The Taotie roars in pain, its head snapping back as it reels from the attack."
     play sound audio.sfx_claw
     "But it's not enough. The beast retaliates with a vicious swipe of its massive claws, faster than Feng can react."
 
-    show dorian angry at left_char with Dissolve(0.2)
-
     voice audio.dorian_ch1_line129
     dorian "FENG, LOOK OUT!"
-
-    hide dorian
-    hide feng_suit
 
     scene cg_feng_eye_injury with shock_cut     # PLACEHOLDER — cg_feng_eye_injury
     pause 0.5
     voice audio.toatie_roar_ch1_line3
     taotie "GRAAAWWRRRR!!"
 
-    "The claws rake across his face, sending him flying backward. He crashes into the ground, rolling to a stop near me. Blood gushes from deep, savage gashes across his eyes, the blue fire extinguished from his blade as it clatters to the ground."
+    "The claws rake across his face, sending him flying backward. He crashes into the ground, rolling to a stop near me."
+    "Blood gushes from deep, savage gashes across his eyes, the blue fire extinguished from his blade as it clatters to the ground."
 
     feng "ARGGGHHHH!!!!"
     scene bg_tianho_city_on_fire with shock_cut
@@ -2952,9 +2901,10 @@ label ch1_battle:
         "Channel wind to force its mouth shut.":
             $ _choice_timeout = 0
             stop sound
-            play sound sfx_wind_blast           # PLACEHOLDER
+            play sound sfx_wind          # PLACEHOLDER
 
-            "I focus my energy, summoning a powerful gust of wind that slams into the Taotie's gaping maw. The force is enough to snap its jaws shut with a thunderous clang, cutting off the ear-splitting roar."
+            "I focus my energy, summoning a powerful gust of wind that slams into the Taotie's gaping maw."
+            "The force is enough to snap its jaws shut with a thunderous clang, cutting off the ear-splitting roar."
 
             voice audio.toatie_roar_ch1_line2
             taotie "Mmmmmmm—"
@@ -3032,7 +2982,7 @@ label ch1_battle:
     "I whirl around, heart pounding, to see the source of the wind. There stands Empress Olympia, barely upright."
 
     show olympia at right_char with Dissolve(0.2)
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.olympia_ch1_line11
     olympia "Are… are you alright, Dorian?"
 
@@ -3044,7 +2994,7 @@ label ch1_battle:
     show olympia at right_char
     voice audio.olympia_ch1_line12
     olympia "I… I'm fine. *coughs*"
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line135
     dorian  "You'll be alright. Stay with me!"
 
@@ -3055,7 +3005,7 @@ label ch1_battle:
     show soldier_gao at right_char with Dissolve(0.2)
     male_soldier_1 "Paladin, sir! Soldier Jiang sent us. We'll handle this."
     hide soldier_gao
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line136
     dorian "FENG!"
 
@@ -3069,9 +3019,7 @@ label ch1_battle:
     "Two more soldiers appear, offering to take Feng to the medics. My chest tightens as I watch them lift him gently, his face contorted in pain."
 
     hide feng_suit
-    show female_guard at right_char with Dissolve(0.2)
     female_guard "We'll take it from here, Paladin. I'm a trained medic."
-    hide female_guard
     show feng_suit at right_char with Dissolve(0.2)
     feng "Dorian. Your family."
 
@@ -3134,9 +3082,7 @@ label ch1_common_end:
     "As I sprint, my gaze locks onto a building half-consumed by flames. The roof is sagging, embers raining down like hellfire. Faint cries reach my ears through the roaring inferno."
 
     hide dorian
-    show man_3 at right_char with Dissolve(0.2)
     man_3 "Help! Someone, help us!"
-    hide man_3
 
     show yuxuan normal_sad at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch1_line7
@@ -3153,7 +3099,7 @@ label ch1_common_end:
     dorian "Go! Now! Get out of here!"
 
     "Coughing and clutching one another, the mother and her child stumble out, tears streaming down their soot-streaked faces. A man runs out, carrying some clothes with him."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line141
     dorian "Are you alright? Run straight and you'll find soldiers who will help you. Now!"
 
@@ -3178,18 +3124,18 @@ label ch1_common_end:
 
     "His wide, tear-filled eyes meet mine."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.dorian_ch1_line143
     dorian "You're not going to die here. What's your name?"
     voice audio.yuxuan_ch1_line10
     yuxuan "Y-Yuxuan. Cheng Yuxuan."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line144
     dorian "Alright, Yuxuan. I'm Paladin Dorian. On three, I'm going to lift this beam, and you're going to run. Got it?"
 
     "He nods shakily, his breaths shallow and quick."
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     "I grip the beam, summoning strength into my arms."
     voice audio.dorian_ch1_line145
     dorian "One… Two… Three! Run!"
@@ -3198,8 +3144,8 @@ label ch1_common_end:
     "Yuxuan hesitates for a moment, his gaze fixed on me with an intensity I can't place, then bolts toward safety."
     "When he reaches a safe distance, he turns back, his voice trembling but filled with emotion."
 
-    show dorian serious at left_char
-    show yuxuan alt_mid_close_eyes at right_char
+    show dorian serious at left_char with Dissolve(0.1)
+    show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch1_line11
     yuxuan "You… You saved me. I…"
     voice audio.yuxuan_ch1_line12
@@ -3207,7 +3153,7 @@ label ch1_common_end:
     show dorian neutral at left_char
     voice audio.dorian_ch1_line146
     dorian "Don't mention it, Yuxuan. I want you to run. Head straight and you'll find soldiers who will help you. Hurry!"
-    show yuxuan alt_smile at right_char
+    show yuxuan alt_smile at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch1_line13
     yuxuan "T-Thank you for saving me…"
 
@@ -3216,6 +3162,7 @@ label ch1_common_end:
 
     hide yuxuan
     hide dorian
+    with Dissolve(0.1)
     stop music
     # TODO: LAVA SFX
     "Soon, the inn comes into view, but my heart plummets as I see the hellscape before me."
@@ -3226,7 +3173,8 @@ label ch1_common_end:
     stop music fadeout 1.0
 
     show yk at left_char, silhouette with Dissolve(1.5)
-    "Standing in the center of the destruction is a massive figure, nearly twice the height of a man. Its body is grotesque — hulking and sinewy, its skin a mottled mix of black and crimson, with molten veins pulsing across its form."
+    "Standing in the center of the destruction is a massive figure, nearly twice the height of a man."
+    "Its body is grotesque — hulking and sinewy, its skin a mottled mix of black and crimson, with molten veins pulsing across its form."
     "Its claws drip with blood, and its eyes glow like twin embers. Horns twist from its head, curling like a jagged crown, and its gaping maw splits into a sinister grin."
     show yk at left_char, silhouette_reveal with Dissolve(1.5)
     "This is no ordinary yaoguai. This is a Yaoguai King — a lord of their kind, radiating a dark, oppressive aura that makes the air feel heavy."

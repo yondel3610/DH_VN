@@ -14,13 +14,13 @@
 
 # TODO: change build name and version on release
 # define config.name = _("Dragon's Heart: Crimson Rebirth")
-define config.name = _("Dragon's Heart: DEMO EDITION")
+define config.name = _("Dragon's Heart: DEMO EDITION v2")
 
 ## The version of the game.
 # game version docs:
 # [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "dev 1.5.2"
+define config.version = "dev 1.9.1"
 # define config.version = "alpha 1.2.0"
 # define config.version = "demo 1.2.0"
 
@@ -33,6 +33,18 @@ define gui.show_name = True
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+    Dragon's Heart: Crimson Rebirth 
+    
+    v1.9 demo
+
+    Credits:
+    Temers Studio 
+
+    Socials: 
+    @TemersStudio - Twitter
+    Temers Studio - itch.io
+
+    (insert rest when done)
 """)
 
 

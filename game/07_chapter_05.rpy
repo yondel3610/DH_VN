@@ -4037,7 +4037,6 @@ label ch5_amulet_vision:
     "Blood. Darkness. Betrayal."
     "I saw him."
     show king_gustav at right_char 
-    show minjoon at left_char
     with Dissolve(0.2)
     "A man, regal yet crumbling—his robes once pristine, now soaked in his own blood."
     "Emperor Min-joon."
@@ -4061,7 +4060,7 @@ label ch5_amulet_vision:
     voice audio.minjoon_ch5_line3
     emperor_minjoon "We… *coughs* made sure that it will… never go to… someone like you…"
 
-    "The underground chamber trembled. Cracks splintered across the stone ceiling."
+    "The underground chamber trembled. Cracks splintered across the stone ceiling." with hpunch
     # TODO: ground effects
     "The entire structure was collapsing."
 
@@ -4074,7 +4073,6 @@ label ch5_amulet_vision:
     king_gustav "Enjoy Xianlun, Your Majesty."
 
     "Min-joon collapsed to the ground, gasping. Blood pooled beneath him, his strength fading."
-    hide minjoon
     hide king_gustav
     with Dissolve(0.1)
     "Beside him, a frail, trembling hand reached out."

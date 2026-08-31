@@ -226,3 +226,112 @@ label show_hwan_sik_diary:
     with Dissolve(0.6)
 
     return
+
+screen poem_screen():
+    modal True
+
+    on "hide" action With(dissolve)
+
+    add "gui/chengletter_bg.jpg":  # You'll need to create this background image
+        xalign 0.5
+        yalign 0.0
+        yoffset -55
+        zoom 0.85
+    
+    # Click anywhere to close
+    button:
+        xfill True
+        yfill True
+        background None
+        action Hide("poem_screen"), Return()
+    
+    viewport:
+        xalign 0.5
+        yalign 0.7
+        xsize 700
+        ysize 900
+        draggable True
+        mousewheel True
+        
+        vbox:
+            spacing 15
+            
+            text "Farmer Oda - Takayori Sogen":
+                font "fonts/Angelface.otf"
+                size 70
+                color "#000000"
+                xalign 0.5
+            
+            text """\nBeneath the moon's pale, mournful gaze,
+Where silver waves in sorrow wane,
+A father knelt on weary knees,
+His heart weighed down with silent pain.\n
+The rice fields sang of autumn's end,
+Yet no small hands would reap the grain.
+No laughter danced among the reeds,
+Only the echo of his name.\n""":
+                font "fonts/Angelface.otf"
+                size 55
+                color "#000000"
+                justify True
+            
+            text """He held his child, so cold, so still,
+A blossom lost before its spring.
+No breath remained to warm her lips,
+No voice to hear, no song to sing.\n
+And so he turned to sea's embrace,
+Where all prayers drift and call,
+Where Dragon waits in endless depths,
+To cradle those who slip and fall.\n""":
+                font "fonts/Angelface.otf"
+                size 55
+                color "#000000"
+                justify True
+            
+            text """He wove her name in whispered pleas,
+And cast his grief upon the tide.
+The ocean opened, vast and deep,
+And drew his love to rest inside.\n
+"O Dragon, keeper of the lost,
+Let not my child drift alone.
+Within your depths, may she be free,
+Where seafoam sings and spirits roam."\n""":
+                font "fonts/Angelface.otf"
+                size 55
+                color "#000000"
+                justify True
+            
+            text """The tide replied, a hush, a sigh,
+A touch of salt, a breath, a tear.
+And in the waves, he swore he saw
+Her shadow flicker—bright, then clear.\n
+No footprints lingered on the shore,
+The farmer turned, his sorrow vast.
+Yet every time he faced the sea,
+He knew her soul had found its past.\n""":
+                font "fonts/Angelface.otf"
+                size 55
+                color "#000000"
+                justify True
+            
+            text """For in the waves, she danced anew,
+A child of light, a child of blue.
+No grave to mark, no stone to see—
+The ocean held her endlessly.
+\n\n\n\n\n\n\n\n\n""":
+                font "fonts/Angelface.otf"
+                size 55
+                color "#000000"
+                justify True
+
+label show_poem_screen:
+
+    show screen poem_screen
+    with Dissolve(0.4)
+
+    $ ui.interact()
+
+    hide screen poem_screen
+    with Dissolve(0.4)
+
+    return

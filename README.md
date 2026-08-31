@@ -5,10 +5,11 @@
 ---
 
 **Dragon's Heart: The Crimson Rebirth** 
+
 **Genre:** Fantasy / Drama / Romance (multi-route)  
 **Engine:** Ren'Py 8.5+  
-**Platforms:** [insert when done]
-**Demo Status:** Chapter 5 and 6 in progress
+**Platforms:** Windows, Mac, Linux, Android
+**Demo Status:** Chapter 9 and 10 in progress
 
 ---
 

@@ -241,6 +241,12 @@ image bg_mjoll_icelands: # also mjoll townsquare in pdf
     xalign 0.5
     yalign 1.0
 
+image bg_mjoll_square_festive:
+    "images/Assets/Background/Mjoll.jpg"            
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image bg_mjoll_blizzard:
     "images/Assets/Background/Mjoll - blizzard.png"            
     size (1920, 1080)
@@ -314,6 +320,12 @@ image lab_cave_off:
 image violet_tent:
     "images/Assets/Background/violet_tent.png"
     fit "cover" 
+    xalign 0.5
+    yalign 1.0
+
+image bg_tianho_dorian_room:
+    "images/dorian_room/0F_DAY_FULL.jpg"
+    fit "contain" 
     xalign 0.5
     yalign 1.0
 
@@ -467,7 +479,7 @@ image cg_chung_slay_hundun:
 
 image cg_feng_aoi:
     "images/Assets/Illustrations/34 - Feng and Aoi.png"
-    zoom 1.10
+    size (1920, 1080)
     xalign 0.5
     yalign 1.0
 
@@ -751,7 +763,28 @@ image tianho_hundun_haze:
     xalign 0.5
     yalign 1.0
 
+image bg_library: # TODO: add to artist credits
+    "images/Assets/Background/library_by_vui_huynh.jpg"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image tianho_tavern:
+    "images/Assets/Background/tianho_tavern.jpg"
+    fit "contain"
+    xalign 0.5
+    yalign 1.0
+
+image tianho_tragedy_day:
+    "images/Assets/Background/Tianho - tragedy.png"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+# =========================================================================
 # magnus paintings
+# =========================================================================
+
 image cg_painting_1:
     "images/Assets/magnus_painting1.png"
     fit "contain"
