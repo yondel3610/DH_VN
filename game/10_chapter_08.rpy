@@ -46,6 +46,8 @@
 # ch8 txt lines 1-121.
 # =============================================================================
 
+# TODO: FIX YUXUAN LINES
+
 label chapter_8:
     $ save_name = "Chapter 8"
 
@@ -75,6 +77,7 @@ label chapter_8:
     with Dissolve(0.2)
     weng "By the stars, my back is starting to ache… Tim, are you sure you can finish all of that?"
 
+    voice audio.tim_ch8_line1  # transcript: "Positive Miss Wang?"
     tim  "Positive, Miss Weng!"
 
     scene underground_door with dissolve     # PLACEHOLDER — lab entrance door
@@ -82,8 +85,10 @@ label chapter_8:
     "After a while, we reached the entrance of Yuxuan's lab. The same towering door of polished metal loomed before us. Like before, it spoke as we approached."
 
     show underground_door_scan with Dissolve(0.5)
+    voice audio.door_ch8_line1  # transcript: "Facial recognition is currently in"
     door_voice "Facial recognition is currently in progress. Please refrain from excessive movement."
     scene underground_door with Dissolve(0.5)
+    voice audio.door_ch8_line2  # transcript: "Initiating secondary verification, please present"
     door_voice "Initiating secondary verification. Please present a valid voice signature."
 
     show weng normal at right_flip 
@@ -91,63 +96,77 @@ label chapter_8:
     with Dissolve(0.2)
     weng "Cai Weng. Master Yuxuan's assistant."
 
+    voice audio.door_ch8_line3  # transcript: "Processing. Please provide a biological"
     door_voice "Processing… Please provide a biological confirmation."
 
     hide weng
     show chunghee alt_neutral at right_char with Dissolve(0.2)
     "Chung-hee exhaled sharply, folding his arms. His gaze flicked to Weng before trailing over the towering metal door."
 
+    voice audio.chung_ch8_line1  # transcript: "Isn't this... excessive? Must a"
     chung_hee "Isn't this… excessive? Must a simple door be guarded like a royal vault?"
 
     show niko alt_disappointed at center_char with Dissolve(0.2)
     "Niko raised a brow, glancing at him."
 
+    voice audio.niko_ch8_line1  # transcript: "They don't have security systems"
     niko "They don't have security systems like this in Kyeongjang, huh?"
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line2  # transcript: "we have, but not the"
     chung_hee "We have, but not this excessive."
 
     hide niko
     show svante normal_base at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line1  # transcript: "You have these in Hyung-jung"
     svante "You have these in Kyeongjang too, Your Majesty?"
 
     show chunghee alt_smirk at right_char with Dissolve(0.2)
     "Chung-hee let out a quiet scoff, shaking his head."
 
+    voice audio.chung_ch8_line3  # transcript: "Yes, but not even our"
     chung_hee "Yes, but not even our palace gates demand so much proof of existence."
     show chunghee normal_v2 at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line4  # transcript: "and against Avanté, call me"
     chung_hee "And again, Svante. Call me Chung."
 
     show svante normal_nervous at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line2  # transcript: "Sorry, Your Majesty. I mean"
     svante "S-Sorry, Your Majesty. I mean Sir Chung."
 
     hide svante with Dissolve(0.1)
     "The door let out a low beep, and the heavy locks shifted with a mechanical hiss."
 
+    voice audio.door_ch8_line4  # transcript: "Identity confirmed. Welcome home, Miss"
     door_voice "Identity confirmed. Welcome home, Miss Cai Weng. May the blessings of the Prosperity Dragon be with you this wonderful night."
+    voice audio.door_ch8_line5  # transcript: "Here are chains, we bring"
     door_voice "Here at Cheng's we bring change."
     "~Here at Cheng's we bring change.~"
 
     show niko normal_ignore at center_char with Dissolve(0.2)
+    voice audio.niko_ch8_line2  # transcript: "Merciful Enoch, I can't escape"
     niko "Merciful Enoch, I can't seem to escape that damn jingle."
 
     hide niko with Dissolve(0.1)
     "The seamless metal parted, revealing the pristine interior of the lab."
 
     # play sound sfx_roboto_beep               # PLACEHOLDER — not declared
-
+    voice audio.roboto_ch8_line1
     show roboto happy at center_robot with Dissolve(0.2)
     "Roboto whirred forward. Its polished exterior reflected the glow of the overhead panels, giving it an almost ghostly sheen in the dim light."
-
+    
     roboto "G-G-G-Good evening, Master Dorian. Master Yuxuan is t-t-taking a n-n-n-nap."
+    voice audio.roboto_ch8_line2  # transcript: "He requested me to show"
     roboto "He r-r-requested me to show you y-y-y-your d-d-destination."
 
     hide chunghee
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line3  # transcript: "Sir, you shun naps?"
     svante "Sir Yuxuan… naps?"
 
     hide svante
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line3  # transcript: "He's a human being. Of"
     niko "He's a human being. Of course he gets tired."
 
     hide niko
@@ -159,6 +178,7 @@ label chapter_8:
 
     hide weng
     show tim shy at right_char_kids with Dissolve(0.2)
+    voice audio.tim_ch8_line2  # transcript: "No, I'm not. More than"
     tim  "N-No I'm not *yawns* I'm more than willing to- *yawn*"
 
     hide tim
@@ -171,16 +191,19 @@ label chapter_8:
 
     hide weng
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line4  # transcript: "Don't worry this way."
     svante "Don't worry, miss Weng."
 
     hide svante
     show tim sad at right_char_kids with Dissolve(0.2)
     "Tim pouted but gave a small wave."
 
+    voice audio.tim_ch8_line3  # transcript: "Ah, but take care, sirs."
     tim  "Aww… But take care, sirs! See you *yawns* tomorrow."
 
     hide tim sad
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line5  # transcript: "we will Tim."
     chung_hee "We will, Tim."
 
     hide chunghee
@@ -190,11 +213,12 @@ label chapter_8:
     show dorian neutral at left_char with Dissolve(0.2)
     "I met her gaze and gave a slight nod."
 
+    voice audio.dorian_ch8_line1  # transcript: "Thank you, Miss Wang. I"
     dorian "Thank you, Miss Weng. I appreciate it."
 
     "She gave me a knowing look before turning away, leading Tim inside. The metal door slid shut behind them with a quiet hiss."
     "Roboto whirred again, its headpiece swiveling slightly as it pivoted toward the darkened corridor ahead."
-
+    voice audio.roboto_ch8_line3
     roboto "F-F-Follow me, sirs. T-T-This way…"
 
     scene bg_underground_lit with fade
@@ -209,7 +233,9 @@ label chapter_8:
     show dorian serious at left_char
     show roboto happy at right_robot 
     with Dissolve(0.2)
+    voice audio.dorian_ch8_line2  # transcript: "So, Roboto, do you have"
     dorian "So, Roboto, do you have any background of how these tunnels came to be?"
+    voice audio.roboto_ch8_line4
     roboto "M-Master Yuxuan and his partners d-d-discovered these tunnels b-by accident."
 
     hide roboto
@@ -223,14 +249,17 @@ label chapter_8:
     hide chunghee
     show roboto happy at right_robot
     with Dissolve(0.2)
+    voice audio.roboto_ch8_line5  # transcript: "The original creators are unknown."
     roboto "The original creators are… u-u-unknown. However, some data suggest that they predate the c-c-current settlements"
 
     hide roboto
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line5  # transcript: "The creators might pre-date the"
     svante "The creators might predate the current settlements? So that means…"
 
     hide svante
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line6  # transcript: "There is a distinct possibility"
     chung_hee "There is a distinct possibility these tunnels were built long ago, before any of our cities existed."
 
     hide chunghee
@@ -239,15 +268,18 @@ label chapter_8:
     "The tunnel stretched endlessly before us, its ancient markings bathed in the cold, sterile glow of the fixed lights embedded in the walls."
     "The artificial brightness clashed against the archaic surroundings, like two worlds trying to coexist."
 
+    voice audio.dorian_ch8_line3  # transcript: "And where exactly in the"
     dorian "And where exactly in the tunnel are you taking us?"
 
     show roboto happy at right_robot with Dissolve(0.2)
     "Roboto whirred again, tilting its metallic headpiece slightly."
 
+    voice audio.roboto_ch8_line6  # transcript: "to the end of the"
     roboto "T-To the end of the tunnels."
     show roboto error at right_robot with Dissolve(0.1)
     "It hesitated for the briefest of moments, as if its internal systems were recalibrating its response. Then, it spoke again, its voice more certain this time."
     show roboto happy at right_robot with Dissolve(0.1)
+    voice audio.roboto_ch8_line7  # transcript: "The M-M-M-Messive D-D-D-D-DOR with the"
     roboto "The m-m-massive d-d-door with the Prosperity Dragon illustration… It l-l-lies ahead. At the end of the tunnels."
 
     "The group fell into a heavier silence as we continued walking, the weight of Roboto's words settling over us."
@@ -274,24 +306,30 @@ label ch8_door_chamber:
     show yuxuan normal_happy at right_char
     show dorian neutral at left_char
     with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line1  # transcript: "Your late buddy."
     yuxuan "You're late, buddy."
     "For a moment, none of us moved."
+    voice audio.dorian_ch8_line4  # transcript: "You... you're here."
     dorian "Yu… you're here."
 
     show chunghee normal_neutral at center_char with Dissolve(0.2)
+    voice audio.chung_ch8_line7  # transcript: "I hope you weren't waiting"
     chung_hee "I hope you weren't waiting long."
 
     hide chunghee
     show svante normal_nervous at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line6  # transcript: "We thought you were sleeping."
     svante "We—we thought you were sleeping!"
 
     hide svante
     show niko normal_base at center_char with Dissolve(0.2)
+    voice audio.niko_ch8_line4  # transcript: "Shouldn't you be in bed?"
     niko "Shouldn't you be in bed?"
 
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     "Yuxuan, unbothered as ever, smirked. He shifted his weight onto one foot, crossing his arms."
 
+    voice audio.yuxuan_ch8_line2  # transcript: "What can I say? The"
     yuxuan "What can I say? The idea of you wandering through my tunnels unsupervised was more terrifying than losing a little sleep."
 
     "And then—Roboto twitched."
@@ -299,6 +337,7 @@ label ch8_door_chamber:
 
     hide niko
     show roboto malfunction at center_robot with Dissolve(0.2)
+    voice audio.roboto_ch8_line8
     roboto "E-E-E-E-Error. E-E-E-E-Error. P-P-P-Para-d-d-d-d-d—"
 
     "With a sudden, jerky movement, it spun on its wheels and bolted down the corridor, its metallic limbs twitching as if something had taken hold of its systems."
@@ -306,18 +345,22 @@ label ch8_door_chamber:
     "We all turned, watching as it disappeared into the darkness, its garbled stuttering echoing until it was gone."
     "I glanced back at Yuxuan, half-expecting him to look concerned. But instead— he let out an exaggerated sigh, his smirk never faltering."
 
+    voice audio.yuxuan_ch8_line3  # transcript: "Guess even my trashy machines"
     yuxuan "Guess even my trashy machines can't handle the grandeur of my genius."
 
     show chunghee normal_neutral at center_char with Dissolve(0.1)
     "He waved a hand dismissively, as if Roboto's erratic malfunction was of no concern. Chung-hee furrowed his brow, arms crossed."
 
+    voice audio.chung_ch8_line8  # transcript: "Oh, do they?"
     chung_hee "Oh, do they?"
 
     show yuxuan normal_normal at right_char with Dissolve(0.1)
     "Yuxuan's grin didn't waver, but his fingers twitched at his side before he threw up his hands in mock surrender."
 
+    voice audio.yuxuan_ch8_line4
     yuxuan "Of course, Your Majesty! I assure you, everything is perfectly under control."
     show yuxuan normal_happy at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line5  # transcript: "but enough about my poor,"
     yuxuan "But enough about my poor, overworked machines. Let's turn our focus to the real star of the show, shall we?"
     show yuxuan normal_normal at right_char with Dissolve(0.1)
 
@@ -325,6 +368,7 @@ label ch8_door_chamber:
 
     hide chunghee
     show niko normal_base at center_char with Dissolve(0.2)
+    voice audio.niko_ch8_line5  # transcript: "Dorian, is this the same"
     niko "Dorian, is this the same one that you saw on your dream?"
 
     show dorian serious at left_char with Dissolve(0.1)
@@ -335,27 +379,33 @@ label ch8_door_chamber:
 
     hide yuxuan
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line7  # transcript: "Incredible! I bet even the"
     svante "Incredible… I bet even the most skilled earth channelers would struggle to sculpt something this detailed."
 
     "His fingers twitched at his side, as if he were resisting the urge to reach out and confirm that the door was real—that something this perfect hadn't just been imagined into existence."
 
     hide svante
     show yuxuan normal_happy at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line6  # transcript: "Amazing, right?"
     yuxuan "Amazing, right?"
 
     hide yuxuan
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line9  # transcript: "the creation worthy of the"
     chung_hee "A creation worthy of the Tetrad themselves. Not a single detail out of place. This was not simply built—it was bestowed."
 
     hide chunghee
     show niko normal_serious at right_char with Dissolve(0.2)
     "Niko, hands clasped behind his back, studied the metalwork with a careful eye."
 
+    voice audio.niko_ch8_line6  # transcript: "Whoever created this was clearly"
     niko "Whoever created this was clearly more than just a master craftsman… They were a devout worshiper of the Prosperity Dragon."
+    voice audio.niko_ch8_line7  # transcript: "I highly doubt that a"
     niko "I highly doubt that a pagan or a mere artisan would dedicate their waking hours to crafting something this impossibly intricate. This isn't just an offering—it's a declaration."
 
     "He let his fingers trail over the carved ridges of the dragon's body, his tone growing contemplative."
     show niko alt_tense at right_char with Dissolve(0.1)
+    voice audio.niko_ch8_line8  # transcript: "This level of precision, the"
     niko "This level of precision… the sheer reverence in the way each scale, each line, each curve has been etched—it's not just talent. It's faith."
 
     "The chamber was silent, save for the quiet hum of flickering lights and the faint, distant sound of shifting metal in the tunnels beyond."
@@ -363,25 +413,35 @@ label ch8_door_chamber:
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line8  # transcript: "You worship the tetrad, right?"
     svante "You worship the Tetrad, right, Your Maj— I mean, Sir Chung? Do you have sculptures like this back in Kyeongjang?"
 
     hide svante
     show chunghee normal_neutral at right_char with Dissolve(0.2)
-    chung_hee "As a matter of fact, we do."
+    chung_hee "As a matter of fact"
+    voice audio.chung_ch8_line10
+    chung_hee "We do."
+    voice audio.chung_ch8_line11  # transcript: "In the imperial capital, we"
     chung_hee "In the Imperial Capital, we have towering sculptures of each of the four Immortal Tetrads."
     show chunghee normal_v2 at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line12  # transcript: "Adriana, the tetrad of emotion"
     chung_hee "Adriana, the Immortal Tetrad of Emotion and Kindness, standing at the gates of the Celestial Palace of the Emperor Lord. A reminder for the Emperor Lord's responsibility to rule with kindness and mercy."
     show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line13  # transcript: "Meanwhile, in the great halls"
     chung_hee "Meanwhile, in the great halls of justice, a solemn statue of Renji, the Immortal Tetrad of Justice and the Void."
     show chunghee alt_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line14  # transcript: "The Grand Library of Kyeong-jang"
     chung_hee "The Grand Library of Kyeongjang houses a magnificent sculpture of Li Mengtia, the Immortal Tetrad of Knowledge and Wisdom. Visitors see his face each time they seek guidance in the pursuit of knowledge."
     show chunghee normal_v2 at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line15  # transcript: "and in the heart of"
     chung_hee "And in the heart of the imperial gardens, the most revered of them all—Saelara, the Immortal Tetrad of Creation, is immortalized in marble. Her outstretched hands hold an intricate celestial map, a reminder that creation itself is a gift to be cherished and honored."
     show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line16  # transcript: "These sculptures were all commissioned"
     chung_hee "These sculptures were all commissioned by my great great great grandfather, one of the late Emperors of Kyeongjang. He believed the Tetrad's presence should not only be felt but seen, woven into the very foundation of the empire."
 
     hide chunghee
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line9  # transcript: "Wow, what I wouldn't give"
     svante "Wow… what I wouldn't give to see them, sir."
 
     hide svante
@@ -397,6 +457,7 @@ label ch8_door_chamber:
 
     "Then, with a smooth motion, he turned to face me and Chung-hee directly, holding out his palm."
 
+    voice audio.yuxuan_ch8_line7  # transcript: "Now then, the amulet, hand"
     yuxuan "Now then. The amulets. Hand them over."
 
     show dorian normal_alt_tense at left_char with Dissolve(0.1)
@@ -404,47 +465,57 @@ label ch8_door_chamber:
     "Slowly, I withdrew it—the amulet I had found on Elias when I first found him. Its surface gleamed under the dim tunnel light, an intricate pattern of old symbols carved into the metal."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line5  # transcript: "I have any you, but"
     dorian "I have it, Yu. But why?"
 
     show yuxuan normal_neutral at right_char
     "He motioned toward the door, his fingers ghosting over the carvings of the Prosperity Dragon once more."
 
+    voice audio.yuxuan_ch8_line8  # transcript: "This door is sealed. My"
     yuxuan "This door is sealed. My theory is that it has been for far longer than any of us have walked this land."
 
     "He glanced at me and Chung-hee, his expression unreadable."
 
+    voice audio.yuxuan_ch8_line9  # transcript: "Something is inside this. Something"
     yuxuan "Something is inside this. Something ancient."
+    voice audio.yuxuan_ch8_line10  # transcript: "It won't open for just"
     yuxuan "It won't open for just anyone. You can't break through it with brute force. We already tried."
 
     hide yuxuan
     show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee crossed his arms, his tone cautious."
 
+    voice audio.chung_ch8_line17  # transcript: "and then have you discovered"
     chung_hee "Then have you discovered what does open it?"
 
     hide chunghee
     show yuxuan alt_think at right_char with Dissolve(0.2)
     "Yuxuan smiled faintly, as if pleased by the question."
 
+    voice audio.yuxuan_ch8_line11  # transcript: "Draconic fire. Only a channeler"
     yuxuan "Draconic fire. Only a channeler of draconic fire is strong enough to awaken the engravings can unlock the seal. That, and… the two amulets."
 
     hide yuxuan
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line10  # transcript: "Draconic fire? Are you sure?"
     svante "D-Draconic fire? Are you sure, Master Yuxuan? You mean Sir Dorian…"
 
     hide svante
     "I exchanged a glance with Chung-hee, my grip tightening around the amulet."
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line18  # transcript: "and you're certain about this."
     chung_hee "And you're certain about this?"
 
     hide chunghee
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line12  # transcript: "I wouldn't ask if I"
     yuxuan "I wouldn't ask if I weren't."
 
     "Yuxuan huffed a quiet laugh, tilting his head slightly. Still, neither of us moved to hand them over."
     "Yuxuan, sensing our hesitation, took a step closer, his voice dipping into something softer—something personal."
 
+    voice audio.yuxuan_ch8_line13  # transcript: "Dorian, you've found that amulet"
     yuxuan "Dorian. You found that amulet on Elias, didn't you? That poor little child. That amulet was given to him by his mother—Queen Ekaterina. You were there when he lost everything. At that cave."
 
     "The mention of it made my jaw tighten. Snow. Darkness. The relentless howling wind. The way Elias had clung to that amulet like it was his last tether to the world."
@@ -454,23 +525,28 @@ label ch8_door_chamber:
     show yuxuan normal_neutral at right_char with Dissolve(0.1)
     "Yuxuan exhaled, shaking his head slightly, as if he couldn't believe I had to ask."
 
+    voice audio.yuxuan_ch8_line14  # transcript: "I'm saying, who helped you"
     yuxuan "I'm saying… who helped you and little Elias when you were trapped in Frostcradle during the blizzard? When the cold was closing in and there was no way out?"
 
     "He took a step closer, tilting his head."
 
+    voice audio.yuxuan_ch8_line15  # transcript: "It was me, wasn't it?"
     yuxuan "It was me, wasn't it?"
 
     "My grip on the amulet tightened."
 
     show yuxuan normal_normal at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line16  # transcript: "you and Elias would have"
     yuxuan "You and Elias would've starved to death in that cave if I hadn't gotten you both out."
 
     show dorian normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line6  # transcript: "Yes, I do, you. Always."
     dorian "Yes. I do, Yu. Always."
 
     "I smiled at Yuxuan and gave him the amulet."
 
     show yuxuan normal_happy at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line17  # transcript: "Thank you for your trust,"
     yuxuan "Thank you for your trust, Dorian."
     show yuxuan alt_smile at right_char with Dissolve(0.1)
     
@@ -479,12 +555,15 @@ label ch8_door_chamber:
     scene cg_blindinglight with shock_cut
     "A blinding white light swallowed my vision."
 
+    voice audio.prosperity_dragon_ch8_line1  # transcript: "You have been deceived, child!"
     prosperity_dragon "YOU HAVE BEEN DECEIVED, CHILD!"
 
     "A sharp pain lanced through my skull. My breath caught."
 
+    voice audio.dorian_ch8_line7  # transcript: "Ahaha! What do you mean?"
     dorian "ARGH! What do you mean?"
 
+    voice audio.prosperity_dragon_ch8_line2  # transcript: "Gets back the emulator child."
     prosperity_dragon "GET BACK THE AMULET, CHILD! OBEY!"
     scene bg_underground_dim with shock_cut
     pause 2.5
@@ -495,15 +574,20 @@ label ch8_door_chamber:
     with Dissolve(0.2)
     "I staggered, the room spinning as reality snapped back into place."
     "My heart pounded against my ribs like a war drum."
+    voice audio.niko_ch8_line9  # transcript: "Dorian are you alright?"
     niko "Dorian, are you alright?"
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line8
     dorian "I-I'm fine…"
 
     hide niko
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line18  # transcript: "And what about you, your"
     yuxuan "And what about you, Your Majesty?"
+    voice audio.yuxuan_ch8_line19
     yuxuan "You left Kyeongjang with a purpose, didn't you? And when you return home, Your Majesty, what will you say? What will your aunt think?"
+    voice audio.yuxuan_ch8_line20  # transcript: "that you came all this"
     yuxuan "That you came all this way, held the key to something far greater, and did nothing."
 
     jump ch8_impostor
@@ -519,15 +603,19 @@ label ch8_impostor:
     show chunghee alt_tense at right_char with Dissolve(0.2)
     "The shift in Chung-hee was immediate. His entire demeanor darkened, his jaw tightening as his hands curled into fists at his sides."
 
+    voice audio.chung_ch8_line19  # transcript: "Where did you get that?"
     chung_hee "Where did you get that?"
 
     hide chunghee
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line21  # transcript: "Pardon your majesty."
     yuxuan "Pardon, Your Majesty?"
 
     hide yuxuan
     show chunghee alt_tense at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line20  # transcript: "Where did you find out"
     chung_hee "Where did you find out about my aunt?"
+    voice audio.chung_ch8_line21  # transcript: "I never told any of"
     chung_hee "I never told any of you about her. I never spoke of my family—any of them."
 
     "Silence hung between us, heavy and suffocating. My mind raced. Chung-hee had never once mentioned an aunt."
@@ -536,14 +624,17 @@ label ch8_impostor:
     hide chunghee
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     "Yuxuan, unfazed, merely offered a small, knowing smile. He tilted his head, amusement flickering in his expression."
+    voice audio.yuxuan_ch8_line22  # transcript: "I have my ways. I"
     yuxuan "I have my ways. I make it a point to know things. Call it… connections."
 
     hide yuxuan
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line10  # transcript: "Connections to Kiyon-jong with all"
     niko "Connections? To Kyeongjang? With all due respect, you don't actually expect us to believe you have ties there, do you, Yuxuan?"
 
     hide niko
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line11  # transcript: "He does have a point"
     svante "He does have a point, sir Yuxuan."
 
     "And then I felt it."
@@ -555,6 +646,7 @@ label ch8_impostor:
     show chunghee alt_charging at right_char with Dissolve(0.2)
     "Chung-hee exhaled slowly, closing his eyes for a fleeting moment before opening them again—sharper, burning with quiet fury. His fingers twitched at his sides, lightning crackling faintly along his knuckles."
 
+    voice audio.chung_ch8_line22  # transcript: "I apologize for this."
     chung_hee "…I apologize for this."
 
     "It was the only warning we got."  
@@ -563,6 +655,7 @@ label ch8_impostor:
     scene plain_white with shock_cut # TODO: replace with lightning
     "Before anyone could react, a surge of raw energy erupted from his fingertips. A bolt of lightning, blinding and furious, shot straight toward Yuxuan."
 
+    voice audio.svante_ch8_line12  # transcript: "Sure!"
     svante "SIR—!"
 
     hide svante
@@ -572,6 +665,7 @@ label ch8_impostor:
 
     scene bg_underground_dim with dissolve
     show dorian angry at left_char with Dissolve(0.2)
+    voice audio.dorian_ch8_line9  # transcript: "You know"
     dorian "YU!! NO!!"
 
     "Panic surged through me as I rushed forward, heart pounding in my chest. The others weren't far behind, though they weren't running to help—no, they were turning on Chung-hee."
@@ -579,18 +673,22 @@ label ch8_impostor:
     show svante normal_angry at center_char
     show chunghee normal_neutral at right_char 
     with Dissolve(0.2)
+    voice audio.svante_ch8_line13  # transcript: "Surt-shom, what did you just"
     svante "SIR CHUNG, WHAT DID YOU JUST DO?!"
 
     hide svante
     show niko normal_anger at center_char with Dissolve(0.2)
+    voice audio.niko_ch8_line11  # transcript: "Chung, are you insane? That"
     niko "Chung, are you insane?! That was completely uncalled for!"
 
     "Chung-hee didn't respond at first, his posture rigid, hands still crackling with fading electricity."
     show chunghee normal_v2 at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line23  # transcript: "That was not you on."
     chung_hee "That was not Yuxuan."
 
     hide niko
     show svante normal_nervous at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line14  # transcript: "Sir Chung, what an Enoch's"
     svante "Sir Chung! What in Enoch's name are you talking about?! He's right there, dying!"
 
     scene bg_underground_dim with dissolve
@@ -610,6 +708,7 @@ label ch8_impostor:
     with Dissolve(0.2)
     "My stomach twisted. Yuxuan had been a yaoguai this whole time?!"
 
+    voice audio.niko_ch8_line12  # transcript: "You knock above what is"
     niko "Enoch above… What is going on here?!"
 
     # play sound sfx_roboto_beep               # PLACEHOLDER — not declared
@@ -617,6 +716,7 @@ label ch8_impostor:
     show roboto happy at center_robot 
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.roboto_ch8_line9
     roboto "A-A-A-A-Alert. M-M-M-Master Yuxuan is here…"
 
     hide roboto with Dissolve(0.1)
@@ -628,33 +728,41 @@ label ch8_impostor:
     "His robes were slightly disheveled, his long hair loose over his shoulders like he'd just rolled out of bed."
     "He blinked blearily at us before groaning."
 
+    voice audio.yuxuan_ch8_line23
     yuxuan "What in the Prosperity Dragon's name is going on!!"
 
     "He took a long, frustrated sip of coffee before pointing an accusatory finger at Roboto."
 
+    voice audio.yuxuan_ch8_line24  # transcript: "There better be a good"
     yuxuan "There better be a good reason for waking me up, Roboto!"
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line10  # transcript: "Wait, you?"
     dorian "Wait… Yu?"
 
     hide yuxuan
     show svante normal_nervous at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line15  # transcript: "um... what just happened?"
     svante "…Umm. What just happened?"
 
     hide svante
     show yuxuan normal_sad at center_char with Dissolve(0.2)
     "The moment Yuxuan's gaze landed on the grotesque, convulsing form of the yaoguai, his entire body tensed. His eyes widened in sheer terror, and his grip on the coffee cup slackened."
 
+    voice audio.yuxuan_ch8_line25
     yuxuan "E-E-EEEKKKK!!!"
 
     "With an unceremonious yelp, he leaped backward, dropping his drink as his free hand flailed in panic. His breath came in sharp, ragged gasps as he pointed a trembling finger at the writhing creature."
     
     show yuxuan normal_lying at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line26  # transcript: "How did it get in"
     yuxuan "HOW DID IT GET IN HERE?! DORIAN!! HELP!!"
 
     show niko normal_ignore at right_char with Dissolve(0.1)
+    voice audio.niko_ch8_line13  # transcript: "Oh, brother."
     niko "Oh brother…"
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line11  # transcript: "It's already dead, you."
     dorian "It's already dead, Yu."
 
     show yuxuan normal_neutral at center_char with Dissolve(0.2)
@@ -662,6 +770,7 @@ label ch8_impostor:
     "As we spoke, Yuxuan's face shifted from horror to a mixture of understanding and lingering unease."
 
     show yuxuan alt_think at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line27  # transcript: "Oh my. Did that really"
     yuxuan "Oh my… Did that really happen? How did you found out that the person wasn't really me?"
 
     hide yuxuan
@@ -670,37 +779,47 @@ label ch8_impostor:
     with Dissolve(0.2)
     "Chung-hee exhaled slowly, his gaze still locked onto the lifeless form of the yaoguai. His expression was unreadable—stoic, yet touched with something heavier."
 
+    voice audio.chung_ch8_line24  # transcript: "dug deep into its mind."
     chung_hee "I dug deep into its mind. I found out too late."
     show chunghee normal_v2 at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line25  # transcript: "I don't do this. I"
     chung_hee "I don't do this. I don't invade minds unless absolutely necessary. It's a violation of trust, of privacy… But this thing was dangerous. It was deceiving us."
     show chunghee alt_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line26  # transcript: "I swear on my honor,"
     chung_hee "I swear on my honor—I will never turn my abilities against any of you unless it is a matter of life and death. That is my promise."
 
     "The weight of his words settled over us. I nodded, accepting his vow."
     hide chunghee
     show svante alt_funny at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line16  # transcript: "I trust you, Sir Chung."
     svante "I trust you, sir Chung. After saving and not killing me, I technically owe you my life still. *nervous chuckle*"
 
     hide svante
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line14  # transcript: "That works. You don't seem"
     niko "That works. You don't seem to be the type that breaks his promises."
 
     hide niko
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line28  # transcript: "Well, oh goodness. Well, it's"
     yuxuan "Well… oh, goodness! Well, it's a damn good thing Roboto woke me up."
 
     show roboto happy at center_robot with Dissolve(0.2)
+    voice audio.roboto_ch8_line10
     roboto "N-N-N-No worries, Master Yuxuan! Y-Y-Y-You can always count on Robotoooo~~"
 
     # TODO: beep sound
     "It beeped and blinked its lights proudly."
 
+    voice audio.roboto_ch8_line11  # transcript: "I was worried, so I"
     roboto "I w-w-w-was worried, so I hurried to wake Master Yuxuan up. I had help from Miss Tedda as well."
+    voice audio.roboto_ch8_line12  # transcript: "Miss Tetta helped me, well,"
     roboto "Miss Tedda helped me w-w-w-wake Master Yuxuan up while I monitored the tunnels for further threats."
 
     "Then Roboto turned to the yaoguai's still form, its glowing optics flickering as it processed the situation. It tilted its head slightly, then spoke with a tone of programmed enthusiasm."
 
     show roboto fin at center_robot with Dissolve(0.1)
+    voice audio.roboto_ch8_line13  # transcript: "I shall take care of"
     roboto "I shall take care of this! P-p-proper disposal protocols will be followed!"
 
     scene cg_roboto_yuxuan with shock_cut
@@ -710,15 +829,20 @@ label ch8_impostor:
     "It latched onto the corpse, adjusting its grip before effortlessly hoisting the body upward."
     "The weight didn't seem to strain it in the slightest."
 
+    voice audio.niko_ch8_line15  # transcript: "Strong fella. Who know?"
     niko "Strong fella… who knew?"
 
+    voice audio.roboto_ch8_line14  # transcript: "Now now, off to proper"
     roboto "Now, now. Off to proper containment and disposal you go~"
 
     "The lifeless form dangled in its grasp as Roboto turned toward the tunnels."
     "Just before departing, it spun back around and blinked at us cheerfully."
-
+    voice audio.roboto_ch8_line15
     roboto "S-S-See you at the lab, sirs!"
+    voice audio.svante_ch8_line17  # transcript: "See you, Roboto!"
     svante "See you, Roboto!"
+    play sound audio.sfx_roboto_beep
+    voice audio.roboto_ch8_line16
     roboto "Robotooooo~"
 
     "A collective breath seemed to escape from all of us."
@@ -731,23 +855,28 @@ label ch8_impostor:
     with Dissolve(0.2)
     "Chung-hee studied it for a moment, then spoke."
 
+    voice audio.chung_ch8_line27  # transcript: "maybe. What the fake you"
     chung_hee "Maybe… what the fake Yuxuan said was true."
 
     hide chunghee
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line16  # transcript: "Even if it was lying"
     niko "Even if it was lying about who it was, it might not have been lying about the door itself."
 
     hide niko
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line29  # transcript: "from what a lot of"
     yuxuan "From what the lot of you were saying, yes. Those are merely theories though."
 
     hide yuxuan
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line18  # transcript: "It won't hurt to try,"
     svante "It won't hurt to try, right? If this thing really does require the amulets and draconic fire to open, then…"
 
     show dorian serious at left_char with Dissolve(0.1)
     "I tightened my grip around the amulet in my palm."
 
+    voice audio.dorian_ch8_line12  # transcript: "I'm the only one who"
     dorian "I'm the only one who can open it."
     
     hide svante
@@ -755,6 +884,7 @@ label ch8_impostor:
     "Without a word, he reached into the folds of his coat and pulled out his amulet. The dim tunnel light caught the edges of the amulet as he extended it toward me."
     "I looked at him, searching his expression. There was no hesitation, no doubt."
 
+    voice audio.chung_ch8_line28  # transcript: "If anyone can open it,"
     chung_hee "If anyone can open it, it's you."
 
     show dorian neutral at left_char with Dissolve(0.1)
@@ -765,6 +895,7 @@ label ch8_impostor:
     "I turned toward the towering door, exhaling slowly."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line13  # transcript: "Alright, I know I need"
     dorian "Alright… I know I need to channel draconic fire to break the seal, but what do I do with the amulets? Hold them up? Place them on the door?"
     
     hide chunghee
@@ -780,51 +911,63 @@ label ch8_impostor:
     show yuxuan alt_think at right_char with Dissolve(0.1)
     "Then slowly folded his arms."
 
+    voice audio.yuxuan_ch8_line30  # transcript: "Did the Windman tell you"
     yuxuan "…Did the winged man tell you what to do?"
 
     show dorian serious at left_char
+    voice audio.dorian_ch8_line14  # transcript: "What? Are you saying you"
     dorian "What?! Are you saying you don't know?"
 
     show yuxuan normal_neutral at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch8_line31  # transcript: "Buddy, you think I've done"
     yuxuan "Buddy, you think I've done this before? I told you, I've spent years studying this door, not opening it."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I groaned, rolling my shoulders."
 
+    voice audio.dorian_ch8_line15  # transcript: "Great, so what now?"
     dorian "Great. So what now?"
 
     hide yuxuan
     show dorian neutral at left_char
     show svante alt_weird at right_char
     with Dissolve(0.2)
+    voice audio.svante_ch8_line19  # transcript: "Maybe we can just, you"
     svante "Maybe we can just… you know, guess. How hard could it be? It's just a pose right?"
 
     hide svante
     show chunghee normal_v2 at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line29  # transcript: "I hardly think dramatic poses"
     chung_hee "I hardly think dramatic poses are necessary. We possess the amulets—surely that alone should be enough. Must we resort to theatrics?"
 
     hide chunghee 
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line17  # transcript: "Think about it. Posture holds"
     niko "Think about it. Posture holds great significance in religious ceremonies, does it not? If this door is bound to something ancient—something sacred—then the way we present ourselves may matter more than we think."
 
     "He let his fingers trail over the carved ridges of the dragon's body, his tone growing contemplative."
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line30  # transcript: "I highly doubt that."
     chung_hee "I… highly doubt that."
 
     hide chunghee
     show niko normal_meditate at right_char with Dissolve(0.2)
     "Niko took a step forward, holding out his hands with the amulets, palms facing upward, as if offering them to an unseen deity."
 
+    voice audio.niko_ch8_line18  # transcript: "Like this. This is how"
     niko "Like this. This is how priests kneel before an altar, or how supplicants raise their hands in prayer. If this is a ritual, then our stance should reflect reverence—humility befitting an item of such significance."
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch8_line19  # transcript: "Humility, Reflection, Devotion."
     niko "Humility. Reflection. Devotion."
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line31  # transcript: "Isn't that a little excessive?"
     chung_hee "Isn't that a little excessive?"
 
+    voice audio.dorian_ch8_line16  # transcript: "Chung's right, Nico. Any other"
     dorian "Chung's right, Niko. Any other ideas?"
 
     hide chunghee
@@ -832,36 +975,44 @@ label ch8_impostor:
     "Svante spread his arms dramatically, mimicking a grand gesture of divine invocation."
 
     show svante alt_funny at right_char with Dissolve(0.1)
+    voice audio.svante_ch8_line20  # transcript: "or and hear me out,"
     svante "Or—and hear me out—you point them at the door like twin weapons. Like—'BEHOLD MY POWER!'—and then blast the fire!"
     show svante normal_happy at right_char with Dissolve(0.1)
+    voice audio.svante_ch8_line21  # transcript: "like this, Sir Dorian."
     svante "Like this, Sir Dorian!"
 
     hide svante
     show chunghee alt_smirk at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line32  # transcript: "not you two, Savante."
     chung_hee "Not you too, Svante."
 
     hide chunghee
     show yuxuan alt_think at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line32  # transcript: "Please, if we're going by"
     yuxuan "Please. If we're going by theatrical inspiration, we should follow The Trials of the Silver Dragon."
 
     hide yuxuan
     show chunghee alt_wink at right_char with Dissolve(0.2)
     "Chung-hee raised an eyebrow, his expression one of mild curiosity."
 
+    voice audio.chung_ch8_line33  # transcript: "trials of the silver dragon."
     chung_hee "The Trials of the Silver Dragon? I am unfamiliar with this Silver Dragon you speak of. Is this a deity of some significance?"
 
     hide chunghee
     show yuxuan normal_happy at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line33  # transcript: "It's an audio drama I"
     yuxuan "It's an audio drama I listen to every morning! The protagonist stands before the sacred gate, arms crossed over his chest, an amulet in each hand, and recites a sacred vow before unleashing his divine energy."
 
     hide yuxuan
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line22  # transcript: "You're into audio dramas too,"
     svante "You're into audio dramas too, sir Yuxuan?! My mom used to star in one! It's called—"
 
     hide svante
     show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee let out a long, suffering sigh, pinching the bridge of his nose as if physically pained by the discussion."
 
+    voice audio.chung_ch8_line34  # transcript: "Or perhaps you simply place"
     chung_hee "Or perhaps you simply place the amulets against the door, instead of engaging in wildly unnecessary pageantry."
 
     hide chunghee
@@ -869,6 +1020,7 @@ label ch8_impostor:
     with Dissolve(0.1)
     "I stared at them all."
 
+    voice audio.dorian_ch8_line17  # transcript: "These are my options."
     dorian "…These are my options?"
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
@@ -891,7 +1043,7 @@ label ch8_open_door:
 
         "Go with Niko's suggestion.":
             $ ch8_d1_choice = "niko"
-            $ niko_affection += 1
+            $ A1_niko_affection += 1
 
             show dorian normal_alt_calm at left_char
             show niko normal_meditate at right_char
@@ -899,31 +1051,37 @@ label ch8_open_door:
             "I took a deep breath and followed Niko's suggestion, raising the amulets with both hands, palms facing upward as if offering them to something divine."
             "Niko stood close, his voice calm yet commanding."
 
+            voice audio.niko_ch8_line20  # transcript: "That's it. Hold them up"
             niko "That's it. Hold them up as an offering."
             show niko alt_base at right_char with Dissolve(0.1)
+            voice audio.niko_ch8_line21  # transcript: "Feel the faith, show humility,"
             niko "Feel the faith. Show humility. Devotion. Sincerity. Let go of all doubt."
 
             hide niko
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line35  # transcript: "You've chosen Nico's suggestion. A"
             chung_hee "You've chosen Niko's suggestion. A noble choice… I think. Let us see if the door deems it worthy."
 
             hide chunghee
             show svante normal_neutral at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line23  # transcript: "Well, I suppose that makes"
             svante "Well, I suppose that makes some sense. Old temples and rituals usually had some kind of pose, right?"
 
             hide svante
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line36  # transcript: "greed. There is wisdom in"
             chung_hee "Agreed. There is wisdom in tradition. Even if one does not fully grasp the meaning, the act itself can hold power."
 
             hide chunghee
             show niko alt_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line22  # transcript: "Faith is power, searchung. If"
             niko "Faith is power, Sir Chung. If you dismiss it, you dismiss what has moved entire civilizations, what has turned the tides of history."
 
             jump ch8_open_door_common
 
         "Go with Svante's suggestion.":
             $ ch8_d1_choice = "svante"
-            $ svante_affection += 1
+            $ A2_svante_affection += 1
 
             show dorian serious at left_char
             "I took a steadying breath, deciding to follow Svante's advice. If nothing else, it had flair. I guess."
@@ -931,6 +1089,7 @@ label ch8_open_door:
             "A familiar heat coiled in my chest, waiting to be unleashed."
 
             show svante alt_funny at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line24  # transcript: "Like twin weapons, sir. Point"
             svante "Like twin weapons, sir! Point them toward the door—let them know who's in charge!"
 
             hide svante
@@ -940,6 +1099,7 @@ label ch8_open_door:
             "Energy crackled along my fingertips, sparks of draconic fire licking at the edges of my vision. The chamber seemed to hold its breath."
 
             show screen draconic_rage 
+            voice audio.dorian_ch8_line18  # transcript: "Behold my power!"
             dorian "BEHOLD MY POWER!"
 
             "The amulets flared to life, light exploding from their surfaces in a blinding display."
@@ -947,50 +1107,59 @@ label ch8_open_door:
             show svante normal_happy at center_char 
             show yuxuan normal_happy at right_char
             with Dissolve(0.2)
-            "PRAISE BE TO THE SILVER DRAGON!"
+            voice audio.svante_ch8_line25
+            svante "PRAISE BE TO THE SILVER DRAGON!"
 
             hide yuxuan
             hide svante
             show niko alt_irritate at right_char 
             with Dissolve(0.2)
+            voice audio.niko_ch8_line23
             niko "…"
 
             hide niko
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line37  # transcript: "Silver Dragon. I assume this"
             chung_hee "... Silver Dragon? I assume this pertains to the fictional audio drama Sir Yuxuan insists on referencing?"
 
             hide chunghee
             show niko normal_ignore at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line24
             niko "Merciful Enoch, grant me patience for I'm running out of it."
 
             hide niko
             show svante normal_happy at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line26  # transcript: "Now Sir Dorian, channel the"
             svante "Now, sir Dorian—channel the draconic fire! Show the door your might!"
         
             jump ch8_open_door_common
 
         "Go with Yuxuan's suggestion.":
             $ ch8_d1_choice = "yuxuan"
-            $ yuxuan_affection += 1
+            $ A3_yuxuan_affection += 1
 
             show dorian neutral at left_char
             "After a moment of indecision, I sighed and turned to Yuxuan."
 
+            voice audio.dorian_ch8_line19  # transcript: "Alright, you shwan, what was"
             dorian "Alright, Yuxuan, what was that ridiculous thing you mentioned?"
 
             show yuxuan normal_happy at right_char with Dissolve(0.2)
             "His face lit up with delight, as if he had been waiting for this moment his entire life."
 
+            voice audio.yuxuan_ch8_line34  # transcript: "Ah, an excellent choice. There's"
             yuxuan "Ah, an excellent choice! There's this one scene from 'The Silver Dragon Chronicles'—Episode 37, mind you—"
 
             "He went into full detail. I didn't understand anything."
 
             hide yuxuan
             show svante normal_happy at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line27  # transcript: "Sir, you shwan, that's correct!"
             svante "Sir Yuxuan! That's correct!"
 
             hide svante
             show niko normal_ignore at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line25  # transcript: "Do you actually listen to"
             niko "...Do you actually listen to these programs or do they just manifest in your mind?"
 
             hide niko
@@ -998,20 +1167,26 @@ label ch8_open_door:
             "Fine. I took a deep breath. struck a dramatic stance, raising my arms high. I made sure to follow what he said."
 
             show dorian angry at left_char with Dissolve(0.1)
-            dorian "BY THE WILL OF THE ANCIENT FLAME, I STAND AT THE PRECIPICE OF DESTINY! … Like that?"
+            voice audio.dorian_ch8_line20  # transcript: "by the will of the"
+            dorian "BY THE WILL OF THE ANCIENT FLAME, I STAND AT THE PRECIPICE OF DESTINY!"
+            voice audio.dorian_ch8_line21
+            "… Like that?"
 
             show yuxuan normal_happy at right_char 
             show dorian dragon_eyes at left_char
             with Dissolve(0.2)
             show screen draconic_rage 
+            voice audio.yuxuan_ch8_line35  # transcript: "I love it! The intensity,"
             yuxuan "I love it! The INTENSITY! The EMOTION! Oh, the drama! It's perfect!"
 
             hide yuxuan
             show svante normal_happy at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line28  # transcript: "Beautiful, absolutely beautiful Cerdorian! I"
             svante "Beautiful. Absolutely beautiful, sir Dorian. I felt moved! Bravo! Bravo!"
 
             hide svante
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line38
             chung_hee "…"
 
             hide chunghee
@@ -1023,29 +1198,34 @@ label ch8_open_door:
 
         "Go with Chung-hee's suggestion.":
             $ ch8_d1_choice = "chunghee"
-            $ chunghee_affection += 1
+            $ A4_chunghee_affection += 1
 
             show dorian neutral at left_char with Dissolve(0.1)
             "I exhaled slowly, pressing my fingers against my temple before turning to Chung-hee."
             "For once, I'm going to listen to the most reasonable person in the room."
 
+            voice audio.dorian_ch8_line22  # transcript: "Choon, what was your idea?"
             dorian "Chung, what was your idea?"
 
             show chunghee normal_neutral at right_char with Dissolve(0.2)
             "Chung-hee regarded me with a measured gaze, his expression calm and unwavering."
 
+            voice audio.chung_ch8_line39  # transcript: "The amulets are keys, therefore"
             chung_hee "The amulets are keys—therefore, they must be used as such. Align them with the engravings and let the door recognize its rightful seal."
 
             hide chunghee
             show niko normal_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line26  # transcript: "Sometimes the simple answer is"
             niko "Sometimes the simple answer is the right one."
 
             hide niko
             show svante normal_neutral at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line29  # transcript: "I suppose it does make"
             svante "I suppose it does make the most sense… probably."
 
             hide svante
             show yuxuan normal_sad at right_char with Dissolve(0.2)
+            voice audio.yuxuan_ch8_line36  # transcript: "No battle cry, no flair!"
             yuxuan "No battle cry? No flair? That's sad."
 
             hide yuxuan
@@ -1064,18 +1244,22 @@ label ch8_open_door:
             # play sound sfx_door_unlock       # PLACEHOLDER
 
             show svante normal_happy at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line30  # transcript: "Oh! Did you hear that,"
             svante "Oh! Did you hear that, Your sir Chung? It might have worked!"
 
             hide svante
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line40  # transcript: "Sofante, I remind you, such"
             chung_hee "Svante, I remind you—such sounds do not reach me for I am not of hearing. Please tell me what the sound was."
 
             hide chunghee
             show svante normal_nervous at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line31  # transcript: "Right. Of course. My apologies,"
             svante "Right. Of course. My apologies, sir Chung."
 
             hide svante
             show niko normal_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line27  # transcript: "It was a click, John,"
             niko "It was a click, Chung. Like the unlocking of a mechanism or something."
 
             hide niko
@@ -1118,25 +1302,30 @@ label ch8_inside_door:
     show yuxuan normal_lying at right_char
     with Dissolve(0.2)
 
+    voice audio.dorian_ch8_line23  # transcript: "You, do you mean to"
     dorian "Yu, do you mean to tell me you studied this door for years and never once suspected what was inside of it?"
 
     "Yuxuan held up both hands in defense, his eyes wide."
 
+    voice audio.yuxuan_ch8_line37  # transcript: "I swear to you I"
     yuxuan "I swear to you, I had no idea! We tried everything—earth channeling, brute force—but we could never break the seal. We assumed it was an empty chamber, or that it had collapsed long ago!"
 
     "With caution, we stepped forward, each footfall echoing across the vast emptiness."
 
     hide yuxuan
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line28  # transcript: "Careful everyone."
     niko "Careful, everyone."
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line41  # transcript: "Watch your footing, the bridge"
     chung_hee "Watch your footing. The bridge is old."
 
     "The bridge rocked." with hpunch
     hide chunghee
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line32  # transcript: "How deep is the pit?"
     svante "How deep is the pit?"
 
     hide svante
@@ -1151,31 +1340,38 @@ label ch8_inside_door:
     "There were corpses littered in the central area. Niko crouched near one of the fallen figures, eyes narrowing as he examined the remains."
 
     show niko normal_serious at right_char    with Dissolve(0.2)
+    voice audio.niko_ch8_line29  # transcript: "Odd. The decomposition suggests varying"
     niko "Odd. The decomposition suggests varying timelines. Some of these bodies have been here for centuries, reduced to skeletal remains. Others… are far more recent. Mummified, desiccated, yet eerily preserved by the cold, dry air."
+    voice audio.niko_ch8_line30  # transcript: "It reminds me of the"
     niko "It reminds me of the time I went to a remote village in the Hinami kingdom. The way corpses were left untouched after the famine, preserved not by time's mercy but by sheer desolation."
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
     "Svante swallowed hard, his face paling."
 
+    voice audio.svante_ch8_line33  # transcript: "I think I'm going to"
     svante "I-I think I'm going to be sick… *barfs*"
 
     hide svante
     show yuxuan normal_sad at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line38
     yuxuan "C-Can I go back? Oh Prosperity Dragon… *barfs* *barfs*"
     
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line24  # transcript: "Calm down, you."
     dorian "Calm down, Yu."
 
     hide yuxuan
     show chunghee normal_angry at right_char with Dissolve(0.2)
     "Chung-hee wrinkled his nose in distaste, his voice as poised as ever despite the ghastly scene before us."
 
+    voice audio.chung_ch8_line42  # transcript: "This stench is vile, a"
     chung_hee "This stench is vile. A cloying, putrescent rot. Something terrible had happened here. And whatever it was… it had not been swift. Nor had it been merciful."
     
     "We moved cautiously, our footsteps echoing in the vast, forsaken chamber. Dust and debris covered the floor, mingling with shards of broken glass and rusted metal tools."
     hide chunghee
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line34  # transcript: "Ah, merciful Enoch!"
     svante "Merciful Enoch…"
 
     scene underground_magnus_corpse with fade
@@ -1191,6 +1387,7 @@ label ch8_inside_door:
     with Dissolve(0.2)
     "Chung-hee stepped forward, his sharp gaze scanning the corpse with unnerving precision. His expression remained unreadable, but there was something distant in his eyes."
 
+    voice audio.chung_ch8_line43  # transcript: "uniform. It is standard kyeongjang"
     chung_hee "That uniform… It is standard Kyeongjang military wear."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
@@ -1200,18 +1397,22 @@ label ch8_inside_door:
     show chunghee normal_sad at right_char with Dissolve(0.2)
     "Chung-hee's eyes traced the insignia still faintly visible beneath layers of dust and decay. His lips pressed into a firm line."
 
+    voice audio.chung_ch8_line44  # transcript: "no doubt about it. This"
     chung_hee "No doubt about it. This is not just any soldier—this insignia belongs to the royal guard."
 
     hide chunghee
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch8_line39  # transcript: "The royal guard. You mean"
     yuxuan "The royal guard… You mean… they served the Emperor?"
 
     hide yuxuan
     show chunghee normal_sad at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line45  # transcript: "Yes, my father's soldiers."
     chung_hee "Yes. My father's soldiers."
 
     hide chunghee
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line31  # transcript: "Judging by the decomposition, he's"
     niko "Judging by the decomposition, he's been here for at least four to five years. The cold air likely slowed the process, keeping him more preserved than he otherwise would be."
 
     hide niko
@@ -1225,6 +1426,7 @@ label ch8_inside_door:
     "My eyes narrowed as I caught a group of glimmering parchment, aged and brittle, yet miraculously intact, clutched between the soldier's fingers."
 
     show svante normal_neutral at center_char with Dissolve(0.2)
+    voice audio.svante_ch8_line35  # transcript: "letter should we read it?"
     svante "A letter. Should we read it?"
 
     jump ch8_corpse
@@ -1248,6 +1450,7 @@ label ch8_corpse:
             "A testament."
 
             show svante normal_nervous at center_char with Dissolve(0.1)
+            voice audio.svante_ch8_line36  # transcript: "What does it say sir?"
             svante "W-What does it say, sir?"
 
             show dorian normal_alt_calm at left_char
@@ -1267,12 +1470,14 @@ label ch8_corpse:
 
             hide chunghee
             show niko normal_serious at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line32  # transcript: "Are all of you hearing"
             niko "Are all of you hearing this?"
 
             hide niko
             show chunghee normal_sad at right_char with Dissolve(0.2)
             "A voice—hoarse, weak, filled with exhaustion and regret."
 
+            voice audio.chung_ch8_line46  # transcript: "mind note. However wrote this,"
             chung_hee "A mind note. Whoever wrote this… they channeled their very thoughts onto the parchment."
             hide dorian
             hide chunghee
@@ -1288,28 +1493,35 @@ label ch8_corpse:
             "I exhaled slowly, feeling the weight of the words settle deep in my chest. My fingers tightened around the parchments, the paper crackling slightly in my grip."
 
             show yuxuan normal_sad at right_char with Dissolve(0.2)
+            voice audio.yuxuan_ch8_line40  # transcript: "by the Prosperity Dragon."
             yuxuan "By the Prosperity Dragon…"
 
             show dorian sad at left_char
+            voice audio.dorian_ch8_line25  # transcript: "He knew he wasn't going"
             dorian "He knew he wasn't going to make it."
 
             hide yuxuan
             show svante normal_sad at right_char with Dissolve(0.2)
+            voice audio.svante_ch8_line37  # transcript: "he wanted to be remembered."
             svante "He… He wanted to be remembered."
 
             hide svante
             show chunghee normal_sad at right_char with Dissolve(0.2)
             "Chung-hee clasped his hands together, as if in prayer."
 
+            voice audio.chung_ch8_line47  # transcript: "and so he shall be"
             chung_hee "And so he shall be. Soldier Baek Hwan-sik, Protector of the Emperor Lord…"
+            voice audio.chung_ch8_line48  # transcript: "Your Emperor Lord thanks you."
             chung_hee "Your Emperor Lord thanks you. May Xianlun's gates open wide for you, and may you walk among the honored dead of Kyeongjang."
 
             hide chunghee
             show niko normal_serious at right_char with Dissolve(0.2)
+            voice audio.niko_ch8_line33  # transcript: "But why? Why bring the"
             niko "But why? Why bring the Emperor of Kyeongjang here? What purpose could this place have served?"
 
             hide niko
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch8_line49  # transcript: "We will uncover the truth,"
             chung_hee "We will uncover the truth. And we will not leave this place until we do."
 
             hide chunghee
@@ -1321,13 +1533,16 @@ label ch8_corpse:
             show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I hesitated. Something about that parchment felt wrong. The sight of the soldier's decaying hand, locked in an eternal grip, sent a chill through me."
             show dorian serious at left_char with Dissolve(0.1)
+            voice audio.dorian_ch8_line26  # transcript: "I don't want to touch"
             dorian "I don't want to touch that."
 
             show chunghee normal_sad at right_char with Dissolve(0.2)
             "Chung-hee exhaled slowly, his gaze flicking to me before returning to the corpse."
 
+            voice audio.chung_ch8_line50  # transcript: "then I shall take it."
             chung_hee "Then I shall take it."
             show chunghee normal_v2 at right_char with Dissolve(0.1)
+            voice audio.chung_ch8_line51
             chung_hee "This man once swore fealty to the Imperial House of Kyeongjang. Even in death, he remains my subject. It is my obligation to bear witness to his final message."
 
             "With a careful hand, he pried the brittle parchment from the soldier's grasp."
@@ -1361,6 +1576,7 @@ label ch8_letter_common:
     
     hide yuxuan
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line38  # transcript: "That's a beautiful button. It's"
     svante "That's a beautiful button… It's so well made. Just like the door earlier."
 
     hide svante
@@ -1372,11 +1588,14 @@ label ch8_letter_common:
 
     hide yuxuan
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line39  # transcript: "Or maybe it's more than"
     svante "Or… maybe it's more than that! Maybe it's a piece of something greater."
+    voice audio.svante_ch8_line40  # transcript: "Too bad we can't see"
     svante "Too bad we can't see his face, though."
 
     hide svante
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line34  # transcript: "Let's press it and see"
     niko "Let's press it and see what happens."
 
     "I hesitated for only a breath, then pressed the button."
@@ -1398,6 +1617,7 @@ label ch8_letter_common:
     "A heavy silence settled over us."
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line41  # transcript: "Touch them? Are you sure?"
     svante "T-Touch them? Are you sure? All the paintings look beautiful!"
 
     "His voice cracked slightly, gaze darting between the glowing paintings and me."
@@ -1406,24 +1626,30 @@ label ch8_letter_common:
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     yuxuan "Oh my! These are all exquisite! Can't we all just take them? I'm sure they'd be a wonderful addition to my collection and—"
 
+    voice audio.dorian_ch8_line27  # transcript: "I don't think that's a"
     dorian "I don't think that's a good idea, Yu."
 
     hide yuxuan
     show niko alt_tense at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line35  # transcript: "It would be foolish to"
     niko "It would be foolish to rush in blindly. We have no idea what these represent—or what consequences touching them might bring."
 
+    voice audio.dorian_ch8_line28  # transcript: "It's obviously a trial of"
     dorian "It's obviously a trial of some sort. If they wanted us to just tap all six and be done with it, they wouldn't have gone through the trouble of making them appear like this."
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line52  # transcript: "agreed. We must proceed with"
     chung_hee "Agreed. We must proceed with caution. Each one of these may hold a key to understanding what lies ahead."
 
     "I stepped closer, studying the nearest painting. The light within it flickered, almost as if it were breathing."
 
+    voice audio.dorian_ch8_line29  # transcript: "We should examine them first,"
     dorian "We should examine them first—one by one. There's no telling what will happen if we touch them all at once."
 
     hide chunghee
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line42  # transcript: "Right, no reckless touching."
     svante "R-Right. No reckless touching."
 
     "I turned my attention to the first painting."
@@ -1448,8 +1674,11 @@ label ch8_paintings:
     "Her body is half-formed, her eyes closed in peaceful slumber, as if she has yet to awaken to the world."
 
     yuxuan    "The title of this painting is… The Loom's Whisper…"
+    voice audio.niko_ch8_line36  # transcript: "Remarkable. The art style is"
     niko      "Remarkable. The art style is exquisite."
+    voice audio.svante_ch8_line43  # transcript: "It's kind of eerie isn't"
     svante    "It's kind of eerie, isn't it?"
+    voice audio.chung_ch8_line53  # transcript: "sculpted not just by hands,"
     chung_hee "Sculpted not just by hands, but by will. By fate. By the Weaver."
 
     # --- Painting 2 ---
@@ -1461,12 +1690,16 @@ label ch8_paintings:
     "Their fingers intertwine, golden chains barely visible around the divine's wrists, as if binding them to something they are trying to leave behind."
     "In the background, unseen figures watch in silence, their expressions unreadable."
 
+    voice audio.niko_ch8_line37  # transcript: "Gailin's symbology. Golden chains mean"
     niko "Galean symbology. Golden chains mean devotion. A vow. A promise you can't break. You were a citizen of Gale, Dorian. Is that true?"
 
+    voice audio.dorian_ch8_line30
     dorian "Yes. Elara and I were bound in golden chains when we were wed."
 
+    voice audio.niko_ch8_line38  # transcript: "I see. I apologize for"
     niko "I see. I apologize for bringing that up."
 
+    voice audio.dorian_ch8_line31  # transcript: "No need. The wedding was"
     dorian "No need. The wedding was a fond memory… save for the catering. Elara said it was a disaster."
 
     # --- Painting 3 ---
@@ -1480,8 +1713,10 @@ label ch8_paintings:
     "One throne, covered in flowers, bore the sweet smile of the radiant woman."
 
     yuxuan "Hmm… her throne is different. Softer. As if she ruled with something the others did not."
+    voice audio.niko_ch8_line39  # transcript: "Flowers and smiles don't rule"
     niko   "Flowers and smiles don't rule eternity. They decay. Enoch's throne is carved from obsidian and silence. Cold, clear. Eternal like death itself. That's power."
     yuxuan "\"tHat's pOwEr\"… Hmph!"
+    voice audio.niko_ch8_line40  # transcript: "Are you a child?"
     niko   "Are you a child?"
 
     # --- Painting 4 ---
@@ -1493,6 +1728,7 @@ label ch8_paintings:
     "Her eyes burn with unrelenting fury, golden banners slashed and torn at their feet."
     "The last remnants of kindness stain her cheek—a single tear, gleaming in the firelight."
 
+    voice audio.chung_ch8_line54  # transcript: "breath pure and simple breath."
     chung_hee "Wrath. Pure and simple wrath."
     yuxuan    "The deadliest emotion."
 
@@ -1510,10 +1746,15 @@ label ch8_paintings:
     show niko normal_sad at center_char
     with Dissolve(0.2)
 
+    voice audio.svante_ch8_line44  # transcript: "Oh no, that's heartbreaking."
     svante "Oh no… That's heartbreaking."
+    voice audio.niko_ch8_line41  # transcript: "Lord Enoch."
     niko   "Lord Enoch…"
+    voice audio.dorian_ch8_line32  # transcript: "What?"
     dorian "What?"
+    voice audio.niko_ch8_line42  # transcript: "That's him. Lord Enoch. The"
     niko   "That's him. Lord Enoch. The wings. The markings. The way he holds the severed head like a trophy."
+    voice audio.niko_ch8_line43  # transcript: "Why is he here? Why"
     niko   "Why is he here? Why does he appear in these paintings?"
 
 
@@ -1529,6 +1770,7 @@ label ch8_paintings:
     "Their eyes meet across a reflecting pool, the rippling water caught between two fates. The air hums with something unspoken—something fragile, dangerous, and inevitable."
 
     show svante normal_happy at right_char with Dissolve(0.1)
+    voice audio.svante_ch8_line45  # transcript: "Ah, romance! This is the"
     svante    "Ahh, a romance! This is the moment where everything changes, isn't it?"
 
     hide niko
@@ -1537,6 +1779,7 @@ label ch8_paintings:
     show chunghee normal_sad at right_char
     with Dissolve(0.1)
     yuxuan    "*sighs* He must have been very beautiful…"
+    voice audio.chung_ch8_line55  # transcript: "Stars do not interfere with"
     chung_hee "Stars do not interfere with the lives of men. They only watch."
 
     spirit "Do you want to go through the paintings one more time?"
@@ -1573,10 +1816,12 @@ label choice_134:
 
     hide yuxuan
     show svante normal_sad at right_char with Dissolve(0.2)
+    voice audio.svante_ch8_line46  # transcript: "unfortunate. Maybe we can try"
     svante "Unfortunate… Maybe we can try again, sir Dorian."
 
     hide svante
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line44  # transcript: "Perhaps the painting show a"
     niko "Perhaps the paintings show a story. Let's be sure to pay attention."
 
     jump ch8_paintings
@@ -1588,6 +1833,7 @@ label ch8_painting_order:
     show dorian neutral at left_char with Dissolve(0.2)
     "I swallowed and looked at my companions, their expressions reflecting the same uncertainty I felt. The paintings loomed before us, waiting."
 
+    voice audio.dorian_ch8_line33  # transcript: "So, which one do we"
     dorian "So… which one do we touch first?"
 
     menu:
@@ -1614,6 +1860,7 @@ label ch8_painting_order:
             show chunghee normal_happy at right_char
             show dorian normal at left_char
             with Dissolve(0.2)
+            voice audio.chung_ch8_line56  # transcript: "Finally, great job Dorian."
             chung_hee "Finally. Great job, Dorian."
 
             jump ch8_painting_correct
@@ -1653,6 +1900,7 @@ label ch8_magnus_found:
     "My heart pounded. It was him. Magnus."
     "My hands trembled as I reached forward, drawn by something I could not name."
 
+    voice audio.dorian_ch8_line34  # transcript: "Magnus."
     dorian "Magnus!"
 
     yuxuan "Wait… Hold on- That's Magnus?!"
@@ -1661,10 +1909,12 @@ label ch8_magnus_found:
     "Then, a voice—soft at first, but urgent—whispered into my mind."
 
     # magnus — voice in mind, no sprite yet
+    voice audio.magnus_ch8_line1  # transcript: "You have found me Dorian!"
     magnus "You have found me, Dorian!"
 
     "I staggered back. The voice wasn't just in my head—it was inside me, resonating through my very soul."
 
+    voice audio.magnus_ch8_line2  # transcript: "Release me, Dorian. Please!"
     magnus "Release me, Dorian! Please!!"
 
     "The plea sent a sharp, aching pang through my chest. This was no illusion. No mere fragment of the past."
@@ -1672,13 +1922,16 @@ label ch8_magnus_found:
 
     "Svante took a shaky step back, his eyes wide with disbelief."
 
+    voice audio.svante_ch8_line47  # transcript: "Did we just unearth the"
     svante "D-Did we just unearth a person? This is insane!"
     yuxuan "Wait… is that him?! The winged man from the paintings?!"
 
     "Niko stepped forward, closer to the ice. His breath fogged the surface."
-
+    voice audio.niko_ch8_line45
     niko "No, Yuxuan. The winged man from the paintings was Enoch."
+    voice audio.niko_ch8_line46  # transcript: "Interesting. His body is perfectly"
     niko "Interesting… His body is perfectly intact. No decay, no deterioration. This isn't just preservation—this is suspension. He has not aged a single day since he was sealed."
+    voice audio.magnus_ch8_line3  # transcript: "Dorian, release me please! Only"
     magnus "Dorian! Release me, please! Only you can release me from this prison I'm in!"
 
     scene underground_magnus with fade
@@ -1686,7 +1939,9 @@ label ch8_magnus_found:
     show dorian serious at left_char
     show chunghee normal_neutral at right_char
     with Dissolve(0.2)
+    voice audio.dorian_ch8_line35  # transcript: "I can hear him. Inside"
     dorian "I can hear him. Inside my mind. He's calling my name, begging me to free him."
+    voice audio.chung_ch8_line57  # transcript: "I hope you know what"
     chung_hee "I hope you know what you're doing, Dorian."
 
     show dorian angry at left_char with Dissolve(0.1)
@@ -1701,10 +1956,12 @@ label ch8_magnus_found:
     "Draconic fire ignited in my palms, gold and crimson, burning with an intensity that set the air ablaze."
     "It crackled and roared, a storm of embers swirling around me, hungry, desperate to be unleashed."
 
+    voice audio.dorian_ch8_line36  # transcript: "Everyone, get back!"
     dorian "Everyone, get back!"
 
     hide chunghee
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line47  # transcript: "Move back now, unless you"
     niko "Move back! Now! Unless you want to be reduced to ash!"
 
     hide niko with Dissolve(0.1)
@@ -1740,8 +1997,10 @@ label ch8_magnus_found:
     show magnus alt_close at right_char 
     show svante normal_nervous at left_char 
     with Dissolve(0.2)
+    voice audio.magnus_ch8_line4
     magnus "*coughing*"
 
+    voice audio.svante_ch8_line48  # transcript: "He must be hurt."
     svante "He must be hurt!"
 
     hide svante
@@ -1750,8 +2009,10 @@ label ch8_magnus_found:
     "He dropped to one knee beside Magnus, his fingers ghosting over the man's soaked skin before pressing against his throat to check his pulse."
     "His brow furrowed, concern tightening his features."
 
+    voice audio.niko_ch8_line48  # transcript: "Can you hear me? You're"
     niko "Can you hear me? You're breathing too fast—try to slow it down."
     show niko normal_ignore at left_char with Dissolve(0.1)
+    voice audio.niko_ch8_line49  # transcript: "You must have been trapped"
     niko "You must have been trapped for a long time. Hypothermia, dehydration—who knows what else."
 
     hide niko
@@ -1763,15 +2024,18 @@ label ch8_magnus_found:
     "Then—his voice. A sound that carried the weight of a thousand storms."
 
     show magnus alt_anger at center_char with Dissolve(0.1)
+    voice audio.magnus_ch8_line5  # transcript: "You killed Adriana!"
     magnus "YOU KILLED ADRIANA!"
 
     show svante normal_nervous at right_char
     show dorian angry at left_char
     with Dissolve(0.2)
+    voice audio.svante_ch8_line49  # transcript: "What?"
     svante "What?!"
 
     hide svante
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line50
     niko "?!"
 
     show magnus alt_anger at center_char with Dissolve(0.2)
@@ -1783,6 +2047,7 @@ label ch8_magnus_found:
 
     # play sound sfx_divine_pulse              # PLACEHOLDER
 
+    voice audio.magnus_ch8_line6  # transcript: "Monsters! You've tormented my dreams"
     magnus "MONSTERS! YOU'VE TORMENTED MY DREAMS FOR AN ETERNITY! I HAVE DROWNED IN YOUR LIES! BURNED IN YOUR DECEIT!"
 
     show dorian normal_alt_tense at left_char 
@@ -1812,8 +2077,10 @@ label ch8_magnus_found:
     show yuxuan normal_sad at center_char
     show svante normal_angry at right_char
     with Dissolve(0.2)
+    voice audio.dorian_ch8_line37  # transcript: "No, no, no, get away!"
     dorian "No… No… No, get away! I-I won't let you! I—"
     yuxuan "Dorian! Dorian! You're shaking! Are you alright?"
+    voice audio.svante_ch8_line50  # transcript: "Sir Torian, we have to"
     svante "Sir Dorian! We have to move! Hurry!"
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
@@ -1834,18 +2101,19 @@ label ch8_magnus_found:
     show svante normal_nervous at right_char 
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.svante_ch8_line51  # transcript: "That was closer, Dorian."
     svante "That was close, sir Dorian."
 
     hide svante
     show chunghee normal_neutral at right_char with Dissolve(0.2)
-    chung_hee "His mind."
 
     "We turned to look at him."
-
-    chung_hee "It's being warped. There's something else at work here. I'll figure something out. Buy me some time."
+    voice audio.chung_ch8_line58
+    chung_hee "His mind. It's being warped. There's something else at work here. I'll figure something out. Buy me some time."
 
     hide chunghee
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line51  # transcript: "Sure, but we can't last"
     niko "Sure. But we can't last long if he's this powerful! We need to weaken him!"
 
     hide niko
@@ -1856,6 +2124,7 @@ label ch8_magnus_found:
 
     hide magnus
     show niko normal_meditate at center_char with Dissolve(0.2)
+    voice audio.niko_ch8_line52
     niko "Kurayami ni hisomu mono… watashi no koe ni kotae yo, Enoch-sama."
     show niko normal_serious at center_char with Dissolve(0.1)
 
@@ -1868,6 +2137,7 @@ label ch8_magnus_found:
     scene underground_magnus with shock_cut
     show magnus alt_anger at center_char
     with Dissolve(0.2)
+    voice audio.magnus_ch8_line7  # transcript: "You dare call upon a"
     magnus "YOU DARE CALL UPON THE DARK IN MY PRESENCE?!"
 
     show expression Solid("#f4c542") as golden_glow_wash zorder 50 at golden_glow_pulse
@@ -1886,17 +2156,21 @@ label ch8_magnus_found:
     "Svante, Chung-hee, Yuxuan, and I huddled behind a jagged stone. The heat of Magnus's power was oppressive, the light burning through the mist of steam left behind by the shattered ice."
     "Chung-hee was deep in thought."
 
+    voice audio.dorian_ch8_line38  # transcript: "What's the situation, Chongi?"
     dorian "What's the situation, Chung-hee?"
     "He didn't respond immediately. His eyes flickered with something unsteady—like he wasn't fully present. His breathing was uneven."
+    voice audio.chung_ch8_line59  # transcript: "Something's very wrong. His mind"
     chung_hee "Something's very wrong. His mind is in chaos. Broken, fragmented—like shattered glass scattered across a storm. I can sense the echoes of his memories, but they are not whole."
 
     show yuxuan normal_angry at center_char with Dissolve(0.2)
     yuxuan "W-What do you mean? Can you fix it?"
 
     show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch8_line60  # transcript: "It is a labyrinth of"
     chung_hee "It is a labyrinth of torn recollections—some forced upon him, some stolen, some warped beyond recognition. I need a moment to piece them together."
 
     show dorian serious at left_char with Dissolve(0.2)
+    voice audio.dorian_ch8_line39  # transcript: "and do what you must,"
     dorian "Then do what you must, Chung. We'll hold the line."
 
     hide yuxuan
@@ -1905,6 +2179,7 @@ label ch8_magnus_found:
     with Dissolve(0.2)
     "A sudden pulse of divine energy sent tremors through the stone, and Svante turned to me, his breath shallow, eyes darting between Magnus and Niko. His fingers curled into fists."
 
+    voice audio.svante_ch8_line52  # transcript: "Surniko needs help."
     svante "Sir Niko needs help."
 
     $ renpy.save("quick-1")
@@ -1936,6 +2211,7 @@ label ch8_magnus_battle:
 
             "I gripped Svante's shoulder, voice firm."
 
+            voice audio.dorian_ch8_line40  # transcript: "Use the spearhead, Sponte."
             dorian "Use the spearheads, Svante."
 
             "He gave a sharp nod, his eyes narrowing in focus."
@@ -1945,11 +2221,13 @@ label ch8_magnus_battle:
             "The spearheads met his divine aura with a violent clang, stopping mid-air as if colliding with an unseen force."
             "Sparks burst from the impact, the shadows flickering and twisting—but Magnus barely flinched."
 
+            voice audio.magnus_ch8_line8  # transcript: "pathetic."
             magnus "Pathetic."
 
             "Before we could react, he raised his hand—and with a single crushing motion, the pillar we were hiding behind detonated, sending shards of rock raining down around us." with hpunch
             "I barely had time to throw up my arms as the blast sent us sprawling. Dust choked the air, and pain flared through my side as I hit the ground hard."
 
+            voice audio.svante_ch8_line53  # transcript: "Sorry, my bad."
             svante "*coughs* S-Sorry. My bad…"
             yuxuan "*coughs* I… I think I'm going to be sick…"
 
@@ -1962,14 +2240,16 @@ label ch8_magnus_battle:
 
             "I met Svante's eyes."
 
+            voice audio.dorian_ch8_line41  # transcript: "Sponty! See the lantern charts"
             dorian "Svante, see the lantern shards around us?"
+            voice audio.svante_ch8_line54  # transcript: "Yes, Sir Dorian. What do"
             svante "Yes, sir Dorian. What do you want me to- Oh… got it."
 
             "Svante hesitated for only a second before nodding. His hands moved in sharp, precise motions, and the jagged shards of metal hurtled toward Magnus."
 
             # TODO: play sound sfx_metal_shards      # PLACEHOLDER
             "The shards whistled through the air, moving unpredictably, weaving and darting. They struck Magnus from multiple angles, slashing across his arms, his chest—his wings."
-
+            voice audio.magnus_ch8_line9
             magnus "AHHH!!!"
 
             "His body recoiled mid-air, wings jerking as golden blood sprayed into the mist."
@@ -1977,6 +2257,7 @@ label ch8_magnus_battle:
             "With a furious roar, Magnus threw out his arm. A burst of divine energy erupted from him like a tidal wave, and before we could react—"
             "The rock pillar we were hiding behind shattered." with hpunch
 
+            voice audio.svante_ch8_line55  # transcript: "H-h-h-h-h Can I do good?"
             svante "*coughs* Did I do good?"
 
             jump ch8_battle_qtc2
@@ -1987,17 +2268,22 @@ label ch8_battle_qtc2:
     "Magnus' golden eyes locked onto mine. Fury burned in their depths, raw and seething."
     "His wings flared, sending waves of heat rolling through the cavern."
 
+    voice audio.magnus_ch8_line10  # transcript: "You."
     magnus "You."
 
     "My breath hitched."
 
+    voice audio.magnus_ch8_line11  # transcript: "You're the one who haunted"
     magnus "You're the one who haunted my dreams. The tormentor. The deceiver."
+    voice audio.magnus_ch8_line12  # transcript: "The Villain!"
     magnus "The VILLAIN."
 
     "My pulse pounded in my ears. Villain?"
 
+    voice audio.dorian_ch8_line42  # transcript: "Villain? What in Tetrad's name"
     dorian "Villain? What in Tetrad's name are you talking about? You're the one—"
 
+    voice audio.magnus_ch8_line13  # transcript: "You must die, monster!"
     magnus "YOU MUST DIE, MONSTER!"
 
     "Magnus lunged. I barely had a second to react before he closed the distance, his hand wreathed in blinding celestial fire."
@@ -2016,12 +2302,15 @@ label ch8_battle_qtc2:
             play sound audio.sfx_stone_break
             "My entire body jerked backward as I was sent flying, crashing against the cavern floor."
 
+            voice audio.dorian_ch8_line43  # transcript: "But, uh, Dragon's Bollocks."
             dorian "*coughs* Dragon's bollocks."
 
             yuxuan "Dorian! Are you alright?!"
 
+            voice audio.dorian_ch8_line8  # transcript: "I'm fine."
             dorian "I'm fine…"
 
+            voice audio.niko_ch8_line53  # transcript: "He's too strong!"
             niko "He's too strong!"
 
             jump ch8_battle_qtc3
@@ -2036,8 +2325,10 @@ label ch8_battle_qtc2:
             "At the last second, I twisted sharply, the heat of Magnus' strike grazing past my armor instead of slamming into me full force." with vpunch
             "I used that instant. Draconic fire flared through my hand, and I punched his side. Magnus flinched and staggered."
 
+            voice audio.magnus_ch8_line14  # transcript: "You monster! I'll kill you!"
             magnus "YOU MONSTER! I'LL KILL YOU!"
 
+            voice audio.niko_ch8_line54  # transcript: "Great job!"
             niko "Great job!"
 
             jump ch8_battle_qtc3
@@ -2052,12 +2343,14 @@ label ch8_battle_qtc3:
     "The sheer force of it sent a storm of dust and debris raining down."
     "Some of the dead bodies were moved and left falling off the central platform."
 
+    voice audio.dorian_ch8_line44  # transcript: "Everyone, grab onto something!"
     dorian "Everyone, grab onto something!"
 
     yuxuan "Prosperity Dragon, save me!!"
 
     "Svante almost fell, but he got a knife and attached it to the ground to avoid him falling."
 
+    voice audio.svante_ch8_line56  # transcript: "That was close!"
     svante "That was close…"
 
     "Magnus ascended."
@@ -2066,12 +2359,14 @@ label ch8_battle_qtc3:
     "The heat was suffocating, like standing too close to the heart of a dying star."
     "His eyes glew as he spoke."
 
+    voice audio.magnus_ch8_line15  # transcript: "You cannot escape me. The"
     magnus "You CANNOT escape me. The gates of Xianlun stand open. They shall welcome you into eternity."
 
     "And then he descended like a falling sun."
 
     yuxuan "AHHH!!"
 
+    voice audio.niko_ch8_line55  # transcript: "Shadows to me! Kage no"
     niko "Shadows, to me!! Kage no subete wa watashi no meirei ni shitagau."
 
     scene niko_shadows with shock_cut
@@ -2080,6 +2375,7 @@ label ch8_battle_qtc3:
     "The shadows wrapped around Magnus' legs, his arms—clinging, pulling."
     "They thrashed like chains forged from the abyss, tightening with every flick of Niko's wrist."
 
+    voice audio.magnus_ch8_line16  # transcript: "God, let go of me!"
     magnus "Argh!! Let go of me!"
 
     scene black 
@@ -2093,6 +2389,7 @@ label ch8_battle_qtc3:
     "Svante's power magnified them, spinning them faster than any thrown weapon could ever reach."
     "One jagged piece tore across Magnus' wing."
     
+    voice audio.magnus_ch8_line17  # transcript: "AHHHHH YOU WILL pay for"
     magnus "AHHHH!! YOU WILL PAY FOR THIS!!"
     scene cg_magnus_battle with shock_cut
 
@@ -2108,7 +2405,7 @@ label ch8_battle_qtc3:
     "And smacked squarely into Chung-hee's shoulder. The impact made the sound of an unimpressively dull thunk."
 
     "Chung-hee, mid-focus, stiffened. For a brief, fleeting moment, his regal composure cracked, his lips pressing into a thin line as he slowly turned his head to inspect the object that had so rudely interrupted him."
-
+    voice audio.chung_ch8_line61
     chung_hee "Sir Yuxuan, I implore you—cease this senseless barrage immediately."
 
     yuxuan "S-Sorry! It was a good plan in my head, okay?!"
@@ -2118,6 +2415,7 @@ label ch8_battle_qtc3:
 
     "I felt my feet slipping. The ground beneath me vanished as the wind threatened to hurl us into the chasm below."
 
+    voice audio.svante_ch8_line57  # transcript: "The wind? What do we"
     svante "T-The wind?! What should we do?"
 
     $ _choice_timeout = 5.0
@@ -2133,19 +2431,22 @@ label ch8_battle_qtc3:
             "For a brief second, I thought it would work."
             "The fire and air clashed violently. Instead of overpowering the wind, my flames were swept up into the cyclone—twisting, twisting—turning into something volatile."
 
+            voice audio.niko_ch8_line56  # transcript: "Torian, stop!"
             niko "Dorian, STOP!"
 
+            voice audio.svante_ch8_line66  # transcript: "No, no, no!"
             svante "No, no, no—!"
 
             "An explosion rocked the cavern." with hpunch
 
             # play sound audio.sfx_fire_explosion
             "The force threw me backward. Agony flared through my arm as I slammed into the jagged stone. The smell of scorched fabric and burnt flesh filled the air."
-
+            voice audio.dorian_ch8_line45
             dorian "Ghkk—!"
 
             "Pain. My right arm throbbed, bleeding, burned. Smoke curled from my sleeve, and my vision blurred for a moment."
 
+            voice audio.magnus_ch8_line18  # transcript: "You dare try to match"
             magnus "You dare try to match my storms with fire?! You know nothing of loss! Nothing of PAIN!"
 
             "He lifted his hand again, the air thickening around us, preparing to strike once more."
@@ -2167,29 +2468,35 @@ label ch8_battle_qtc3:
             "A tether—something to keep us from being swallowed by the storm."
             "The wind still howled. I needed to hold on. I needed to pull the others back before it was too late."
 
+            voice audio.dorian_ch8_line46  # transcript: "Come on, grab my arm!"
             dorian "Come on! Grab my arm!"
 
             yuxuan "You're out of your damn mind if you think I'm letting go!"
 
             "Yuxuan reached first, his grip like iron. He dug his nails into my forearm, anchoring himself against the relentless force."
 
+            voice audio.svante_ch8_line58  # transcript: "I can't!"
             svante "I-I can't—!"
 
             play sound audio.sfx_stone_break 
             "He was slipping. His feet scraped against the stone, but the wind was too strong. His frame was being dragged straight for the abyss." with vpunch
 
+            voice audio.svante_ch8_line59  # transcript: "Sir Dorian! Sir Dorian! Help!"
             svante "Sir Dorian! Sir Dorian, help please!! AHHH—"
-
+            voice audio.dorian_ch8_line47
             dorian "Svante!!"
 
             "A shadow tendril grabbed Svante's arm."
 
+            voice audio.niko_ch8_line57  # transcript: "Are you alright?"
             niko "Are you alright?"
 
+            voice audio.svante_ch8_line60  # transcript: "Yes, Surniko. Thank you."
             svante "Yes, sir Niko. T-Thank you."
 
             "Chung-hee floated, his cape whipping around him like a storm-struck banner."
 
+            voice audio.chung_ch8_line62  # transcript: "I'm getting the bigger picture"
             chung_hee "I'm getting the bigger picture of his mind. I'm close!"
 
             jump ch8_battle_qtc4
@@ -2197,36 +2504,46 @@ label ch8_battle_qtc3:
 
 label ch8_battle_qtc4:
 
+    voice audio.magnus_ch8_line19  # transcript: "I see that you wounded"
     magnus "I see that you've wounded me. Villains. Righteousness will have its vengeance!"
 
     "Magnus exhaled slowly, closing his eyes. The faint scratches on his wings—remnants of our desperate struggle—began to disappear."
 
+    voice audio.niko_ch8_line58  # transcript: "That's... That's not possible!"
     niko "That's… that's not possible."
 
+    voice audio.svante_ch8_line61  # transcript: "He just... That should have"
     svante "H-He just—! That should've taken time!"
 
     "Magnus' white eyes snapped open. The air shuddered with his presence."
 
+    voice audio.magnus_ch8_line20  # transcript: "You think you can wound"
     magnus "You think you can wound me? Me?!"
 
     "His voice sent a ripple through the chamber. The walls cracked under the sheer force of his rage."
 
+    voice audio.magnus_ch8_line21  # transcript: "I have suffered an eternity"
     magnus "I have suffered an eternity of torment. And now, you dare to stand before me as if you are not the architects of my misery?"
 
     "He stepped forward. Each footfall sent a tremor through the stone."
 
+    voice audio.magnus_ch8_line22  # transcript: "I should rip you apart."
     magnus "I should rip you apart. One by one. Slowly. Make you feel what I felt when she—"
 
     "His breath hitched. His fingers twitched."
 
+    voice audio.dorian_ch8_line48  # transcript: "When's she what, Magnus?"
     dorian "When she what, Magnus?"
 
     "His expression contorted. His hands clenched into fists."
 
+    voice audio.magnus_ch8_line23  # transcript: "You took her from me!"
     magnus "YOU TOOK HER FROM ME!"
 
+    voice audio.niko_ch8_line59  # transcript: "You're being unreasonable. We don't"
     niko "You're being unreasonable! We don't know what you're talking about!"
 
+    voice audio.magnus_ch8_line24  # transcript: "Lies! Absolute lies! You shan't"
     magnus "LIES! ABSOLUTE LIES! YOU SHAN'T FOOL ME WITH YOUR DECEIT, VILLAIN!"
 
     "Divine light ignited."
@@ -2234,11 +2551,13 @@ label ch8_battle_qtc4:
 
     yuxuan "W-What's going on?!"
 
+    voice audio.svante_ch8_line62  # transcript: "He's channeling light, but..."
     svante "He's channeling light… but—"
 
     play sound audio.sfx_stone_break 
     "The very air seemed to bend. The cavern rumbled. I looked at Chung-hee, still concentrating on Magnus' mind." with hpunch
 
+    voice audio.niko_ch8_line60  # transcript: "Damn it! He's not just"
     niko "Damn it! He's not just wielding power—he's devouring it! We're wasting our strength throwing everything at him!"
 
     "I need to do something."
@@ -2255,19 +2574,22 @@ label ch8_battle_qtc4:
             "The heat within me surged outward, twisting into a spiraling inferno."
             "And yet—It didn't work."
             "Magnus' light consumed my fire."
-
+            voice audio.dorian_ch8_line49
             dorian "Ghhkk—!"
 
             "I was thrown backward, my body crashing against the cavern wall. A sharp crack erupted through my arm, a searing pain spreading like wildfire. My vision blurred. Smoke curled from my skin."
 
+            voice audio.niko_ch8_line61  # transcript: "Torian!"
             niko "DORIAN!"
 
+            voice audio.svante_ch8_line63  # transcript: "Sir Torian!"
             svante "SIR DORIAN!"
 
             "Their voices were distant, muffled beneath the ringing in my ears. I forced myself upright, my movements sluggish and pained. My fingers curled against my ribs. It hurts."
 
             "Above me, Magnus hovered, bathed in golden fury, his wings outstretched like a vengeful god descending upon the unworthy. His eyes burned with celestial wrath, locking onto me like I was nothing more than a blasphemer before his throne."
 
+            voice audio.magnus_ch8_line25  # transcript: "You dare fight me. You"
             magnus "You dare fight me? You dare compare your flame to the light of the divine?!"
 
             jump ch8_magnus_end
@@ -2281,21 +2603,26 @@ label ch8_battle_qtc4:
             "I looked at Magnus. He wasn't just furious. He was in agony. Grief."
             "I remembered losing Elara, my wife. How it felt."
 
+            voice audio.dorian_ch8_line50  # transcript: "Magnus, stop!"
             dorian "Magnus—stop!"
 
+            voice audio.magnus_ch8_line26  # transcript: "You who dare speak to"
             magnus "You would dare speak to me?! After what you've done?!"
 
+            voice audio.dorian_ch8_line51  # transcript: "I don't know what happened."
             dorian "I don't know what happened. But I know you're hurting. Tell me what happened."
 
             "His wings twitched. The divine light flickered—for just a moment."
             "I stepped forward."
 
+            voice audio.dorian_ch8_line52  # transcript: "We didn't take her from"
             dorian "We didn't take her from you, Magnus. We don't even know who you mean."
 
+            voice audio.svante_ch8_line64  # transcript: "You think we're your enemies,"
             svante "You think we're your enemies, but we're not!"
 
             "Magnus staggered. His breath came uneven, his fists clenched so tightly his knuckles turned white. The divine glow around him wavered, like a candle caught in the wind."
-
+            voice audio.magnus_ch8_line27
             magnus "DECEIT! FOUL VILLAIN!"
 
             jump ch8_magnus_end
@@ -2312,6 +2639,7 @@ label ch8_magnus_end:
         show dorian angry at left_char
         show magnus alt_anger at right_char
         with Dissolve(0.2)
+        voice audio.magnus_ch8_line28  # transcript: "You think you can deceive"
         magnus "You think you can deceive me? You think I cannot see the blood on your hands?"
 
         "And then—he moved."
@@ -2331,7 +2659,9 @@ label ch8_magnus_end:
         show svante normal_angry at left_char
         with Dissolve(0.2)
 
+        voice audio.niko_ch8_line62
         niko "CHUNG-HEE—!"
+        voice audio.svante_ch8_line65  # transcript: "Sir Cheung! NOOOO!"
         svante "Sir Chung! NO!!"
 
         scene niko_shadows with shock_cut
@@ -2342,6 +2672,7 @@ label ch8_magnus_end:
         scene underground_magnus with shock_cut
         show niko normal_anger at center_char with Dissolve(0.2)
         "He gasped—his eyes wide, his mouth moving soundlessly—"
+        voice audio.niko_ch8_line63
         niko "Urgh- Ah… Lord Enoch…"
 
         hide niko with Dissolve(0.7)
@@ -2358,12 +2689,14 @@ label ch8_magnus_end:
         scene black with shock_cut
         "His limbs jerked, twisting at unnatural angles as if invisible hands were crushing him from the inside."
 
+        voice audio.svante_ch8_line67  # transcript: "Ahhhhhhh!!!!"
         svante "AHHH!!!"
 
         "His neck twisted violently to the side."
         play sound audio.sfx_body_thud
         "His body dropped."
 
+        voice audio.dorian_ch8_line53  # transcript: "Spontane! No!"
         dorian "Svante! No!"
         yuxuan "Svanteee!!!"
 
@@ -2381,6 +2714,7 @@ label ch8_magnus_end:
 
         hide yuxuan with Dissolve(0.5)
 
+        voice audio.dorian_ch8_line54  # transcript: "NO! YOU!"
         dorian "No!! YU!!"
         play sound audio.sfx_body_thud
 
@@ -2388,11 +2722,12 @@ label ch8_magnus_end:
         "Magnus turned his head towards me, slow, deliberate. His wings unfurled, their brilliance unbearable, their presence suffocating."
         show dorian serious at left_char with Dissolve(0.1)
         "His white eyes locked onto mine. For a fraction of a second, something wavered."
-
+        voice audio.magnus_ch8_line29
         magnus "Dorian…"
 
         "His voice—uncertain, shaken."
 
+        voice audio.magnus_ch8_line30  # transcript: "Please, this isn't me."
         magnus "Please! T-This isn't m—"
 
         show magnus alt_anger at right_char with Dissolve(0.1)
@@ -2401,9 +2736,11 @@ label ch8_magnus_end:
         "His face twisted, his body tensed—whatever glimpse of clarity had surfaced was drowned beneath raw, consuming fury."
 
         show dorian normal_alt_tense at left_char with Dissolve(0.1)
+        voice audio.dorian_ch8_line55  # transcript: "Magnus"
         dorian "M-Magnus?!"
 
         show magnus alt_anger at right_char with Dissolve(0.2)
+        voice audio.magnus_ch8_line31  # transcript: "Die, villain!"
         magnus "DIE, VILLAIN!!"
 
         show dorian angry at left_char with Dissolve(0.1)
@@ -2413,12 +2750,14 @@ label ch8_magnus_end:
         "Magnus brought me closer. Face to face."
 
         show dorian sad at left_char with Dissolve(0.1)
+        voice audio.dorian_ch8_line56
         dorian "Magnus…*coughs*"
         show dorian normal_alt_tense at left_char with Dissolve(0.1)
 
         show magnus alt_evil_eye at right_char with Dissolve(0.2)
         "His expression was unreadable, but his eyes—those terrible, soulless white eyes—bored into me, stripping me down to my very core."
 
+        voice audio.magnus_ch8_line32  # transcript: "You will feel what I"
         magnus "You will feel what I felt."
 
         hide magnus
@@ -2428,13 +2767,14 @@ label ch8_magnus_end:
         "Then suddenly, I saw him. A presence just beyond Magnus, just behind his flickering golden light. A figure watching with quiet amusement."
         "A crown of bone sat atop his head, the twisted remnants of something ancient and cruel."
 
+        voice audio.yk_ch8_line1
         yk "Shame… I thought you had what it takes, dragonkin."
         hide yk with Dissolve(0.2)
         "The last of my breath fled my body."
         "I gasped—a final, desperate sound."
         "And then everything went black."
 
-        jump game_over
+        jump ch10_bad_end_credits
 
     else:
         jump ch8_magnus_peace
@@ -2452,6 +2792,7 @@ label ch8_magnus_peace:
     show magnus alt_anger at right_char 
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.magnus_ch8_line33  # transcript: "AHHHHH MY HEAD!"
     magnus "AHHHH!! MY HEAD!!"
 
     "Suddenly, the divine light around him shuddered before flickering violently, like a sun on the verge of exploding."
@@ -2459,6 +2800,7 @@ label ch8_magnus_peace:
     "His voice tore through the chamber like a dying star."
     "The walls shook. The very ground beneath us quaked as his agony turned into a raw, unfiltered roar of fury." with hpunch
 
+    voice audio.magnus_ch8_line34  # transcript: "You killed Adriana! Murderer! VEN!"
     magnus "YOU KILLED ADRIANA!! MURDERER! VILLAIN!!"
 
     hide magnus
@@ -2475,10 +2817,12 @@ label ch8_magnus_peace:
 
     hide magnus
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch8_line64  # transcript: "We didn't kill her, Magnus!"
     niko "We didn't kill her, Magnus!"
 
     hide niko
     show magnus alt_anger at right_char with Dissolve(0.2)
+    voice audio.magnus_ch8_line35  # transcript: "DOS HEAVERS!"
     magnus "DECEIVERS!"
 
     hide magnus
@@ -2487,6 +2831,7 @@ label ch8_magnus_peace:
     "Through it all, Chung-hee stood firm."
     "He placed two fingers against his temple, eyes locked onto Magnus like a hunter sighting prey."
 
+    voice audio.chung_ch8_line63  # transcript: "Your mind is in shambles,"
     chung_hee "Your mind is in shambles, Magnus."
 
     show magnus alt_close at center_char 
@@ -2495,14 +2840,17 @@ label ch8_magnus_peace:
     with Dissolve(0.2)
     "Magnus' whole body convulsed. His breathing was ragged, uneven. It was like something inside him was tearing apart—splitting him in two."
 
+    voice audio.magnus_ch8_line36  # transcript: "I won't give in. You"
     magnus "*panting* I WON'T GIVE IN!! YOU WON'T TWIST ME LIKE HER!! I'LL KILL YOU ALL!"
 
     show chunghee alt_tense at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line64  # transcript: "You were frozen for centuries."
     chung_hee "You were frozen for centuries. You have no real memory, Magnus."
 
     show magnus alt_anger at center_char 
     show dorian angry at left_char
     with Dissolve(0.2)
+    voice audio.magnus_ch8_line37  # transcript: "You lied!"
     magnus "YOU LIE!"
 
     "He slammed a fist into the ground. The earth ruptured beneath him in a violent, golden explosion." with hpunch
@@ -2512,6 +2860,7 @@ label ch8_magnus_peace:
     "But Chung-hee didn't move."
     "His voice remained calm. Unyielding."
 
+    voice audio.chung_ch8_line65  # transcript: "all your memories, they were"
     chung_hee "All your memories—they were implanted. Fabricated. Artificial."
 
     show dorian serious at left_char with Dissolve(0.2)
@@ -2521,14 +2870,17 @@ label ch8_magnus_peace:
     "Magnus' breath hitched."
     "For a second, the divine light around him faltered. But then—he roared again."
     show magnus alt_anger at center_char with Dissolve(0.2)
+    voice audio.magnus_ch8_line38  # transcript: "No! NOOOOO! I remember her!"
     magnus "NO! NO! I REMEMBER HER! I REMEMBER HER SMILE! I REMEMBER HER HAND IN MINE! YOU WON'T TAKE THAT FROM ME!"
 
     "Magnus' breath came in ragged, seething gasps. His body trembled—whether from pain or fury, I couldn't tell."
     "His wings remained outstretched, the divine light flickering chaotically along the edges like an unstable flame."
 
+    voice audio.magnus_ch8_line39  # transcript: "You're trying to twist me."
     magnus "Y-You're trying to twist me. Trying to make me forget her."
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line66  # transcript: "Calm down, Magnus. We're just"
     chung_hee "Calm down, Magnus. We're just as confused as you are."
 
     show magnus alt_close at center_char with Dissolve(0.2)
@@ -2538,6 +2890,7 @@ label ch8_magnus_peace:
     "Hesitation."
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch8_line67  # transcript: "We aren't your enemies. We"
     chung_hee "We aren't your enemies. We aren't here to hurt you."
 
     show magnus alt_newpose at center_char with Dissolve(0.1)
@@ -2546,6 +2899,7 @@ label ch8_magnus_peace:
     show dorian neutral at left_char with Dissolve(0.1)
     "I extended my hand."
 
+    voice audio.dorian_ch8_line57  # transcript: "See, we're not out to"
     dorian "See? We're not out to get you."
 
     show magnus alt_close at center_char with Dissolve(0.1)
@@ -2554,12 +2908,14 @@ label ch8_magnus_peace:
     "I followed his line of sight—to the shattered ice. The ice that had once entombed him."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch8_line58  # transcript: "We freed you, Magnus."
     dorian "We freed you, Magnus."
 
     "For a long, aching moment, Magnus just stared."
     "His fingers twitched. His lips parted. The divine light around him dimmed."
     "A choked breath escaped him."
 
+    voice audio.magnus_ch8_line40  # transcript: "Everything I knew, everything I"
     magnus "Everything I knew… everything I remembered… was a lie?"
 
     "Magnus' hand trembled as he stared at mine. His breath was shallow, unsteady. For a moment, I thought he would refuse—thought he would pull away, retreat into his fury."

@@ -9,14 +9,13 @@
 # =============================================================================
 # AFFECTION / RELATIONSHIP TRACKERS
 # =============================================================================
-default niko_affection       = 0
-default feng_affection       = 0
-default aoi_affection        = 0
-default svante_affection     = 0
-default yuxuan_affection     = 0
-default chunghee_affection   = 0
-default magnus_affection     = 0 
+default A1_niko_affection       = 0
+default A2_svante_affection     = 0
+default A3_yuxuan_affection     = 0
+default A4_chunghee_affection   = 0
+default A5_magnus_affection     = 0
 
+default aoi_affection        = 0
 # =============================================================================
 # BATTLE / GATE TRACKERS
 # =============================================================================

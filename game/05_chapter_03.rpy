@@ -27,13 +27,13 @@
 #    image tags      — bg_name, cg_name, character_name emotion
 #    audio variables — audio.ost_name, audio.sfx_name, audio.amb_name
 #    label names     — ch3_name (all lowercase, underscores only)
-#    game variables  — yuki_tracker, svante_affection, yuxuan_affection, etc.
+#    game variables  — yuki_tracker, A2_svante_affection, A3_yuxuan_affection, etc.
 #    NO SPACES in any tag, label, variable, or image name.
 #
 #  TRACKER SUMMARY:
 #    yuki_tracker      : accumulates in D1–D4; ≥2 = GAME OVER after D4
-#    svante_affection  : +1 if D5 = Refuse and fight
-#    yuxuan_affection  : +2 if D6 = Join Yuxuan; -1 if D6 = Don't join
+#    A2_svante_affection  : +1 if D5 = Refuse and fight
+#    A3_yuxuan_affection  : +2 if D6 = Join Yuxuan; -1 if D6 = Don't join
 #    D7 (cooking)      : 4 soft-branch options; no stat effect
 #
 #  HARD GATES:
@@ -133,14 +133,14 @@ label ch3_elias_questions:
     voice audio.elias_ch3_line1
     elias "Ahhh!"
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line2
     dorian "Hey. I'm not going to hurt you."
 
     "Elias clutched the edge of a blanket like it was a shield, his gaze flickering between me and the jar."
     "I noticed it more clearly. Old and scratched — a preserve jar. Fruits, most likely. His little hands had been trying to open it."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line3
     dorian "You were trying to get this open, right?"
 
@@ -154,17 +154,18 @@ label ch3_elias_questions:
     show elias first_meet_happy at right_elias with Dissolve(0.2)
     "He hesitated, then inched forward cautiously, still clutching the blanket. His tiny hands darted out to grab the jar, pulling it close. He buried his face in it and began to eat."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line5
     dorian "You need to wipe your face. Hold on."
 
     "I knelt and opened my pack. My hands brushed against something familiar. Emily's ribbon. Lucas's slingshot. Daniel's carved wooden horse. Elara's scarf. And Tedda — the knit doll with the missing eye."
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line6
     dorian "How did these get here?"
     show dorian neutral at left_char
     show elias first_meet_neutral at right_elias
+    with Dissolve(0.1)
     "I turned back to Elias, who was licking his fingers, his small face sticky with syrup. I offered him the cloth."
 
     voice audio.dorian_ch3_line8
@@ -177,12 +178,13 @@ label ch3_elias_questions:
 
     "Elias hesitated, then held up three fingers."
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line2
     elias "Fow."
     show elias first_meet_neutral at right_elias
 
     show dorian smile at left_char
+    with Dissolve(0.1)
     voice audio.dorian_ch3_line10
     dorian "Four, huh? You sure about that?"
 
@@ -190,7 +192,7 @@ label ch3_elias_questions:
     "I watched as Elias went right back to eating, his tiny hands sticky again with syrup. I sighed, shaking my head. I had just cleaned him up."
     "Sitting back against the creaky shack wall, I decided to try asking him a few questions."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line11
     dorian "Alright. I have some questions."
     "Elias didn't look up, too focused on scooping out the last bit of syrup from the jar with his fingers."
@@ -218,16 +220,16 @@ label ch3_question_menu:
 
             "He stuffed another piece of fruit into his mouth mid-sentence, mumbling through it"
 
-            show elias first_meet_sad at right_elias
+            show elias first_meet_sad at right_elias with Dissolve(0.1)
             voice audio.elias_ch3_line4
             elias "An' Mama say... no cry, 'cause... 'cause Mommy's gonna be back. But she not..."
 
             "His little face scrunched up in thought, and he trailed off, licking his fingers again."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line13
             dorian "Well… I'm not getting any answers from you, am I?"
-            show elias first_meet_neutral at right_elias
+            show elias first_meet_neutral at right_elias with Dissolve(0.1)
             elias "Um… Huh?"
 
             jump ch3_question_menu
@@ -235,11 +237,11 @@ label ch3_question_menu:
         "What's that amulet you're wearing?" if not ch3_asked_amulet:
             $ ch3_asked_amulet = True
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line14
             dorian "What's that amulet you're wearing?"
 
-            show elias first_meet_neutral at right_elias
+            show elias first_meet_neutral at right_elias with Dissolve(0.1)
             "At this, Elias froze. His sticky hands darted to the amulet, clutching it protectively."
 
             elias "This? They Mommy say... uh... um... Mommy say, don't give it! Don't give it to bad guys. No, no, no!"
@@ -251,16 +253,16 @@ label ch3_question_menu:
 
             "He blinked at me, then tilted his head."
 
-            show elias first_meet_sad at right_elias
+            show elias first_meet_sad at right_elias with Dissolve(0.1)
             voice audio.elias_ch3_line8
             elias "Are you a bad guy, mister?"
-            show dorian smile at left_char
+            show dorian smile at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line15
             dorian "What do you think? I opened the jar for you, didn't I?"
 
             "Elias squinted at me suspiciously before shoving another chunk of fruit into his mouth."
 
-            show elias first_meet_happy at right_elias
+            show elias first_meet_happy at right_elias with Dissolve(0.1)
             voice audio.elias_ch3_line9
             elias "Okay. I believe you, mister."
 
@@ -269,13 +271,13 @@ label ch3_question_menu:
         "Who are those people frozen at the entrance?" if not ch3_asked_bodies:
             $ ch3_asked_bodies = True
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I gestured toward the cave entrance, where the bodies I had seen earlier were frozen."
 
             voice audio.dorian_ch3_line16
             dorian "Who are those guys? The ones outside?"
 
-            show elias first_meet_neutral at right_elias
+            show elias first_meet_neutral at right_elias with Dissolve(0.1)
             "Elias glanced toward the entrance, his expression scrunching up."
 
             voice audio.elias_ch3_line10
@@ -283,14 +285,14 @@ label ch3_question_menu:
 
             "He threw his arms up, making a dramatic gusting sound."
 
-            show elias first_meet_happy at right_elias
+            show elias first_meet_happy at right_elias with Dissolve(0.1)
             elias "And they go... um... like statues. Mommy say, 'Leave!' An' dey didn't... so, um, they go 'brrrrrrrrrr!'"
 
             "He shivered for emphasis, then giggled, poking at the jar."
 
             voice audio.elias_ch3_line12
             elias "They're not scary, mister. Mommy's scarier!"
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line17
             dorian "I can imagine."
 
@@ -307,13 +309,13 @@ label ch3_question_menu:
             show elias first_meet_happy at right_elias with Dissolve(0.2)
             elias "Okay! You ask lotsa stuffs, mister. I like da fruit. Got more?"
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I sighed, grabbing the cloth again."
 
             voice audio.dorian_ch3_line19
             dorian "First, let's clean you up — again."
 
-            hide elias
+            hide elias with Dissolve(0.1)
             jump ch3_blizzard_trapped
 
 
@@ -340,6 +342,7 @@ label ch3_blizzard_trapped:
     hide elias
     hide dorian
 
+    with Dissolve(0.1)
     "I followed his gesture and found what he meant."
     "A pile of provisions—ice-cold fish wrapped in rough parchment, some frozen vegetables that looked like they'd been pulled straight from the fields, and a sack of rice."
     "I knelt down, inspecting the fish. They were Tianho white-scaled fish, a staple back in Tianho."
@@ -377,25 +380,25 @@ label ch3_blizzard_trapped:
     voice audio.elias_ch3_line17
     elias "Uh-huh! Mommy makes somethin' like dat sometimes. But this smells better... I think."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line23
     dorian "You haven't even tasted it yet. Sit tight—it'll be ready soon."
 
     "I smirked, ladling the finished stew into a couple of old wooden bowls I'd found among the shack's scattered supplies."
     "The fish had cooked perfectly, tender and flaky, the broth rich with the sweetness of the vegetables and the faint, salty tang of the kelp."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line24
     dorian "Here. Don't spill it."
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     "I handed him a bowl, and he cradled it carefully, blowing on it."
     "Elias took a cautious sip, then let out a happy hum, his legs kicking excitedly."
 
     voice audio.elias_ch3_line18
     elias "Mmm! It's hot... but it's yummy! You're a good cooker!"
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line25
     dorian "It's cook, not cooker."
 
@@ -404,13 +407,14 @@ label ch3_blizzard_trapped:
     "I finished my bowl quickly, setting it down as I glanced at Elias. He was still swinging his legs and slurping away at the stew."
     "I stood up."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line26
     dorian "Stay here, kid. I'll be right back."
 
     hide elias
     hide dorian
 
+    with Dissolve(0.1)
     "Elias barely acknowledged me, too absorbed in savoring every bite of his stew. I shook my head and stepped toward the entrance of the shack, the sound of the blizzard growing louder with every step."
 
     scene frostcradle_blizzard with dissolve
@@ -430,7 +434,7 @@ label ch3_blizzard_trapped:
     show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     "I clenched my fists, my jaw tightening."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line27
     dorian "It's a bounty, my heart. You know how bounties work."
 
@@ -441,17 +445,17 @@ label ch3_blizzard_trapped:
     voice audio.elera_ch3_line3
     elara "You've seen Mjoll. You've seen how they treat the aldoriths. You know what Gustav will do to that child if he gets a hold of him."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line29
     dorian "It's not my decision. It's not my place. The task was to kill him, Elara. I didn't... I couldn't. So maybe bringing him to Gustav is the compromise."
 
     "Even as I said the words, they tasted bitter."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
 
     voice audio.elera_ch3_line4
     elara "A compromise? You think handing a defenseless child over to that monster is a compromise? You've seen what he does to people, Dorian. To innocents. What makes you think this boy will be any different?"
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line30
     dorian "I'm not a savior, Elara. I never was. I… wasn't strong enough to save you… and the kids."
     voice audio.dorian_ch3_line31
@@ -459,7 +463,7 @@ label ch3_blizzard_trapped:
     voice audio.elera_ch3_line5
     elara "This isn't who you are. I know you've buried the man you used to be under all that guilt, but I know he's still there. And you know it too, or that boy would already be dead."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line32
     dorian "Once the blizzard stops, I'm giving the boy to King Gustav. I'm a man of my word. I'm paid to do so."
 
@@ -477,7 +481,7 @@ label ch3_blizzard_trapped:
     voice audio.elias_ch3_line19
     elias "Hello, mister. Who are you talking to?"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I blinked, momentarily caught off guard by his question."
 
     voice audio.dorian_ch3_line33
@@ -491,6 +495,7 @@ label ch3_blizzard_trapped:
     hide dorian
     hide elias
 
+    with Dissolve(0.1)
     scene frostcradle_cabin_on with dissolve
 
     "A couple of days passed. The blizzard showed no sign of letting up. The storm had trapped us here, together."
@@ -511,21 +516,21 @@ label ch3_blizzard_trapped:
 
     show dorian sad at left_char with Dissolve(0.2)
     "My chest tightened. That was my gift for Sarah for her birthday. And now another child is holding it."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line35
     dorian "That's for Sarah. Put that down."
 
-    show elias first_meet_crying at right_elias
+    show elias first_meet_crying at right_elias with Dissolve(0.1)
     "Elias froze, his wide eyes looking up at me, startled and afraid. He clutched Tedda tighter, his little fingers curling around the bear as if it might protect him."
 
     voice audio.elias_ch3_line20
     elias "I… I'm sorry, mister. I-I—"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line36
     dorian "I said put it down."
 
-    hide elias
+    hide elias with Dissolve(0.1)
     "He flinched at the harshness of my tone, his bottom lip trembling. Slowly, he placed the teddy bear on the floor and backed away, his small frame shrinking under my glare."
     "I bent down, picking up Tedda. My hands brushed off invisible dust as if I could somehow erase the fact that someone else had touched it. My fingers trembled, and I hated that they did."
     "Behind me, I heard the faint sound of a sniffle."
@@ -535,7 +540,7 @@ label ch3_blizzard_trapped:
     voice audio.elias_ch3_line21
     elias "I'm sorry, mister. I didn't mean to make you mad."
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     "I stood there, staring down at the bear in my hands."
 
     voice audio.dorian_ch3_line37
@@ -546,16 +551,16 @@ label ch3_blizzard_trapped:
     voice audio.dorian_ch3_line38
     dorian "She's not here anymore. I'm her dad… and everything I do is to protect her."
 
-    show elias first_meet_sad at right_elias
+    show elias first_meet_sad at right_elias with Dissolve(0.1)
     "Elias looked down at his lap, his small hands fiddling with the edge of his blanket."
 
     voice audio.elias_ch3_line22
     elias "I… I wish I had a daddy…"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "His words hit me like a blow. I stared at him, stunned, as he looked away, his shoulders trembling."
 
-    show elias first_meet_crying at right_elias
+    show elias first_meet_crying at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line23
     elias "*sniffling* My daddy doesn't love me. He… he wants me dead."
 
@@ -573,7 +578,7 @@ label ch3_blizzard_trapped:
     "He buried his face in the blanket, his small body shaking with silent sobs. I stood there, frozen, clutching Tedda in my hands."
     "I stood there for a moment, staring down at Elias as he cried softly into his blanket. My grip on Tedda loosened, and before I could stop myself, I knelt beside him, holding out the bear."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line7
     dorian "Here."
 
@@ -581,18 +586,20 @@ label ch3_blizzard_trapped:
     "Elias peeked up at me, his tear-streaked face glowing with surprise. His small hands hesitated for a moment before gently taking Tedda from me."
     "He hugged the bear tightly, his tiny fingers curling into its soft fabric."
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line40
     dorian "If Tedda will make you happy, you can have her."
     show dorian normal at left_char
 
     show elias first_meet_happy at right_elias
+    with Dissolve(0.1)
     voice audio.elias_ch3_line26
     elias "T-Thank you, mister."
 
     "I thought that would be it. That maybe he'd cry himself to sleep, curled around Tedda the way she used to. But then Elias reached out with both arms and threw them around my neck."
     hide elias
     hide dorian
+    with Dissolve(0.1)
     scene cg_dorian_hug_elias with fade
     "He hugged me."
     "His small arms clung to me with all the strength in his tiny body, desperate and shaking, like he was afraid I'd vanish if he let go."
@@ -631,13 +638,13 @@ label ch3_blizzard_trapped:
 label ch3_yuxuan_arrives:
     "Elias gasped, clutching Tedda tighter as he broke our hug and moved closer to get a look."
 
-    show elias first_meet_sad at right_elias 
+    show elias first_meet_sad at right_elias  with Dissolve(0.1)
     voice audio.elias_ch3_line29
     elias "What's that? Is it alive?"
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line41
     dorian "No, it's not alive. It's a supply bot. Made by Cheng Industries."
-    show elias first_meet_neutral at right_elias
+    show elias first_meet_neutral at right_elias with Dissolve(0.1)
     elias "A suh-ply bot?"
     "The bot's sensors glowed softly as it paused."
     show supply_robot normal at center_supply with Dissolve(0.2)
@@ -649,23 +656,23 @@ label ch3_yuxuan_arrives:
     "An oddly soothing, yet out of tune jingle filled the cave over and over again. I grimaced, resisting the urge to roll my eyes."
     "Elias, on the other hand, was utterly entranced. His wide eyes followed the bot's every movement as it rolled to a stop in front of us. He hugged Tedda."
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line31
     elias "It sings, mister! It's so cute!"
 
     "As the jingle faded, a soft hum emanated from the bot. A hologram flickered to life above its chest."
     # show yuxuan hologram at left_char          # PLACEHOLDER — Yuxuan hologram sprite
-    show supply_robot base at center_supply 
+    show supply_robot base at center_supply  with Dissolve(0.1)
     voice audio.yuxuan_ch3_line1
     yuxuan "Praise the Prosperity Dragon! Dorian, I'm so happy to see you again!"
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "I blinked, caught off guard. I awkwardly forced a smile, though I didn't remember his face at all. I only remembered writing him a letter."
 
     voice audio.dorian_ch3_line42
     dorian "Nice to meet you again, Yuxuan."
     "He didn't seem to notice my hesitation as he continued, his voice bright and enthusiastic."
-    show supply_robot normal at center_supply 
+    show supply_robot normal at center_supply  with Dissolve(0.1)
     yuxuan "I got your letter! The messenger you gave it to dropped it off at the post office, and thankfully we had a bot there! So I read it from the comfort of my home. Hehe, I wasn't expecting you to reach out, but I'm glad you did!"
     voice audio.yuxuan_ch3_line4
     yuxuan "So, I hijacked one of our bots already en route to Mjoll and had it rerouted here."
@@ -675,7 +682,7 @@ label ch3_yuxuan_arrives:
     yuxuan "The blizzard's getting worse, so I thought you'd appreciate a little extra help. Everything in here is yours — no charge, of course."
     "Elias' eyes widened, his eyes sparkled as he stared at the supplies"
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line32
     elias "Mister, look! It's got food! And bwankets! And… and CANDIES!"
 
@@ -685,41 +692,41 @@ label ch3_yuxuan_arrives:
     dorian "T-Thanks, Yuxuan. You didn't have to go out of your way."
 
     "Yuxuan waves a hand dismissively."
-    show supply_robot base at center_supply
+    show supply_robot base at center_supply with Dissolve(0.1)
     yuxuan "Nonsense! You saved my hide back in Tianho, remember? Consider this payback."
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line33
     elias "Wow, there's so many TWEATS! Tedda, look! Tweats just for us!"
 
     "Elias practically squealed as he reached for the tin of sweets, clutching Tedda in one arm while fumbling to open the packaging with the other."
     "Before I could stop him, he scurried off to a corner of the shack, clutching the tin and laughing gleefully."
-    hide elias
+    hide elias with Dissolve(0.1)
     show supply_robot base at right_supply
     with Dissolve(0.2)
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line44
     dorian "Hey — we haven't had a proper meal, first!"
 
     "I groaned inwardly as Yuxuan chuckled through the hologram."
 
     yuxuan "Wait… Who's Tedda? Is there another person here? I can hijack another bot to make sure we get enough supplies-"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line45
     dorian "That's just the knit doll with the missing eye."
-    show supply_robot normal at right_supply
+    show supply_robot normal at right_supply with Dissolve(0.1)
     voice audio.yuxuan_ch3_line8
     yuxuan "Oh… I thought it was another person. Anyway, Dorian…"
     yuxuan "I-I'm sorry if this seems abrupt, but it's so good to finally meet you. Well, not really 'meet.' More like… uh… see your face. Not face-to-face, but face-to-bot? I mean, I see your face, but you can't see mine. Heh."
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I raised an eyebrow, unsure how to respond."
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line46
     dorian "Um… thanks, Yuxuan. I'm happy to see you too. I really appreciate all of this."
     voice audio.yuxuan_ch3_line10
     yuxuan "Ahem! Right, so… Have you, uh… handled the situation yet?"
-    show supply_robot lied at right_supply
+    show supply_robot lied at right_supply with Dissolve(0.1)
     voice audio.dorian_ch3_line47
     dorian "What situation?"
     yuxuan "Have you killed the Prince? The one who murdered the Queen. You know, to stop the blizzard? The people in Mjoll are going haywire. They're barely surviving out there."
@@ -728,7 +735,7 @@ label ch3_yuxuan_arrives:
 
     "The question hung heavily in the air. I took a deep breath and pointed to the corner."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line48
     dorian "You're looking at him."
 
@@ -738,57 +745,58 @@ label ch3_yuxuan_arrives:
     voice audio.elias_ch3_line34
     elias "*giggling* Tedda says, 'Candy is the best thing ever!' Right, Tedda?"
     tedda "..."
-    show supply_robot sad at right_supply
+    show supply_robot sad at right_supply with Dissolve(0.1)
     voice audio.yuxuan_ch3_line13
     yuxuan "W-WHAT?! That's… that's the Prince?!"
     show supply_robot normal at right_supply
     
     show dorian normal_alt_neutral at left_char
+    with Dissolve(0.1)
     "I crossed my arms and nodded."
 
     yuxuan "I… I'm confused. By the way they described what he did, I thought the Prince would be… older. At least of age! Not…"
     "He gestured toward Elias, who was now attempting to stack candies into a precarious little tower on Tedda's lap."
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     "I sighed, the weight of everything pressing on my chest. Yuxuan might not have the full picture, but he deserved to know."
     "Elara and the kids were the ones who pushed me to write to him, after all. If they trusted him, maybe I should too."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "Taking a deep breath, I leaned closer to the hologram."
     "I told Yuxuan everything. How Queen Ekaterina became the frost spirit Yuki-onna and that she's the one who caused the blizzard, not Elias."
 
     "Yuxuan's expression softened with horror and sympathy as he absorbed the information."
-    show supply_robot sad at right_supply
+    show supply_robot sad at right_supply with Dissolve(0.1)
     yuxuan "Heavens. Prosperity Dragon save Her Majesty's soul. That's too tragic!"
     voice audio.yuxuan_ch3_line17
     yuxuan "And even King Gustav and Count Vasily want him dead…"
     "I nodded grimly, my jaw tightening."
     
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line49
     dorian "Yeah. Kid's got it rough."
     "Yuxuan looked down for a moment, shaking his head."
-    show supply_robot normal at right_supply
+    show supply_robot normal at right_supply with Dissolve(0.1)
     voice audio.yuxuan_ch3_line16
     yuxuan "But… what do you plan to do, Dorian? You can't exactly just…"
 
     "I stiffened. His words trailed off, leaving the question lingering in the air. What was I going to do?"
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line50
     dorian "I don't know…"
 
     "Yuxuan tilted his head, his brows furrowed with concern, but I quickly straightened."
-    hide supply_robot
+    hide supply_robot with Dissolve(0.1)
     show elias first_meet_happy at right_elias
     with Dissolve(0.2)
     
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line51
     dorian "C'mon, Elias. I'll cook you up something proper before you finish half of that candy."
     "Elias perked up, his face lighting up as he scrambled to his feet, clutching Tedda with one hand and the candy tin with the other."
     voice audio.elias_ch3_line35
     elias "Okay, mister."
-    hide elias
-    show dorian normal_alt_tense at left_char 
+    hide elias with Dissolve(0.1)
+    show dorian normal_alt_tense at left_char  with Dissolve(0.1)
     "I started toward the makeshift cooking area, but before I could take another step, a sharp pain pierced through my head like a hot blade."
     "My knees buckled, and the room tilted. My vision blurred."
 
@@ -799,7 +807,7 @@ label ch3_yuxuan_arrives:
     scene plain_white with shock_cut
     # play sound sfx_amulet_surge                       # PLACEHOLDER
 
-    show magnus normal at center_char, dream_haze
+    show magnus normal at center_char, dream_haze with Dissolve(0.1)
     voice audio.magnus_ch3_line1
     magnus "Come to Tianho, Dragonkin…"
     "His words echoed in my mind."
@@ -935,6 +943,7 @@ label ch3_yuxuan_arrives:
     hide dorian
     hide elias
 
+    with Dissolve(0.1)
     scene black with fade
     pause 2.0
 
@@ -945,7 +954,7 @@ label ch3_yuxuan_arrives:
 # SECTION 12: LABEL CH3_MUSHROOM — D6: Yuxuan Mushroom Invitation
 # =============================================================================
 # Morning after the dream. Yuxuan spots Blisscap mushrooms nearby.
-# D6: Join Yuxuan (++yuxuan_affection) or Don't Join (-yuxuan_affection).
+# D6: Join Yuxuan (++A3_yuxuan_affection) or Don't Join (-A3_yuxuan_affection).
 # Both paths converge on D7 the cooking choice.
 # =============================================================================
 label ch3_mushroom:
@@ -967,7 +976,7 @@ label ch3_mushroom:
     voice audio.yuxuan_ch3_line26
     yuxuan "Good morning, Dorian!"
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line56
     dorian "Morning, Yuxuan. You're up early."
 
@@ -998,11 +1007,11 @@ label ch3_mushroom:
 
         "Join Yuxuan.":
             $ ch3_d6 = "joined"
-            $ yuxuan_affection += 1
+            $ A3_yuxuan_affection += 1
             
             "I stood, brushing off my hands."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line58
             dorian "Alright, Yuxuan. Show me where it is."
 
@@ -1029,23 +1038,23 @@ label ch3_mushroom:
             yuxuan "You know… seeing you here, alive, after everything in Tianho — it's, um… it's really nice. I never got to say thank you. For what you did."
             "I glanced at his hologram, caught off guard by the sincerity in his tone."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line59
             dorian "You don't owe me anything, Yuxuan."
 
-            show supply_robot normal at right_supply
+            show supply_robot normal at right_supply with Dissolve(0.1)
             voice audio.yuxuan_ch3_line34
             yuxuan "Maybe not. But that doesn't mean I'm not grateful. You didn't have to save me back then, but you did. And… it meant a lot."
             voice audio.yuxuan_ch3_line35
             yuxuan "I… I'm just so happy I finally get to meet you again. You were my hero, you know? Still are."
-            show supply_robot base at right_supply
+            show supply_robot base at right_supply with Dissolve(0.1)
 
             "He paused, his holographic image flickering faintly."
 
             voice audio.yuxuan_ch3_line36
             yuxuan "Paladin Dorian Burnham. The Dragon of Gale. I never forgot your name."
 
-            show dorian sad at left_char
+            show dorian sad at left_char with Dissolve(0.1)
             "The title felt foreign now, like it belonged to someone else entirely. I looked down, the faint glow of the mushrooms catching the edge of my hand."
             "Paladin Dorian. The Dragon of Gale. Am I even worth that title anymore?"
             voice audio.dorian_ch3_line60
@@ -1064,7 +1073,7 @@ label ch3_mushroom:
             yuxuan "Thanks for humoring me. I, uh… I hope breakfast turns out great."
             "For a moment, his hologram lingered, his gaze soft, almost hesitant."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line61
             dorian "It will. Thanks to you, Yuxuan."
 
@@ -1072,20 +1081,20 @@ label ch3_mushroom:
 
         "Don't join.":
             $ ch3_d6 = "skipped"
-            $ yuxuan_affection -= 1
+            $ A3_yuxuan_affection -= 1
 
             "I shook my head, turning back to the pot."
 
-            show dorian normal_alt_annoyed at left_char
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line62
             dorian "Thanks, but I'll pass. I've already got breakfast going."
 
             "Yuxuan's hologram faltered slightly, but he recovered quickly."
-            show supply_robot sad at right_supply
+            show supply_robot sad at right_supply with Dissolve(0.1)
             voice audio.yuxuan_ch3_line39
             yuxuan "Of course. No problem. I just thought… well, never mind. If you change your mind, the bot will be here."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "He gave a faint smile."
             voice audio.dorian_ch3_line63
             dorian "Appreciate it, Yuxuan. But I think I'll stick with what we've got for now."
@@ -1094,19 +1103,20 @@ label ch3_mushroom:
             yuxuan "Understood. Well, if you need anything else, just let me know."
 
             "With that, the hologram flickered off."
-            hide supply_robot
+            hide supply_robot with Dissolve(0.1)
             "A few minutes later, Yuxuan's bot returned, its mechanical arms extending to offer me a small container filled with glowing Blisscap mushrooms."
 
-            show supply_robot base at right_supply
+            show supply_robot base at right_supply with Dissolve(0.1)
             voice audio.yuxuan_ch3_line41
             yuxuan "Here you go. Breakfast is on me. Well, technically on the cave, but you get the idea."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line64
             dorian "Thank you, Yuxuan."
 
     hide yuxuan
     hide supply_robot
+    with Dissolve(0.1)
     jump ch3_breakfast
 
 # =============================================================================
@@ -1137,10 +1147,10 @@ label ch3_breakfast:
             show supply_robot normal at right_supply with Dissolve(0.2)
             voice audio.yuxuan_ch3_line42
             yuxuan "C-Careful, Dorian! Don't let it stick to the pan. Maybe a bit more oil?"
-            show dorian normal_alt_annoyed at left_char
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line66
             dorian "I know how to cook, you know."
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
             "I frowned, adding a touch more oil as the edges began to crisp."
             "I folded the omelet in half, the golden fish glinting faintly against the soft yellow of the eggs."
@@ -1160,7 +1170,7 @@ label ch3_breakfast:
             voice audio.yuxuan_ch3_line43
             yuxuan "Uh… maybe add some salt? It looks a little bland."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "I sprinkled in a pinch, tasting the broth with a wooden spoon."
             "It wasn't bad, but it lacked something."
 
@@ -1181,7 +1191,7 @@ label ch3_breakfast:
             
             voice audio.yuxuan_ch3_line44
             yuxuan "D-Dorian! You're burning the veggies!"
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line69
             dorian "Dragon's bollocks! *grumbling*"
             # TODO: show food 8
@@ -1197,7 +1207,7 @@ label ch3_breakfast:
             show supply_robot normal at right_supply with Dissolve(0.2)
             voice audio.yuxuan_ch3_line45
             yuxuan "A little soy sauce might help."
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line70
             dorian "We… don't have soy sauce. Oh — sorry. We have some."
 
@@ -1209,14 +1219,14 @@ label ch3_breakfast:
 
             "I plated the fried rice, sprinkling a pinch of dried herbs on top for good measure."
     
-    hide supply_robot
+    hide supply_robot with Dissolve(0.1)
     show elias first_meet_happy at right_elias with Dissolve(0.2)
     "Elias woke up and toddled over, rubbing his eyes."
 
     voice audio.elias_ch3_line43
     elias "Good morning, da— I mean, mister!"
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     "I smiled, kneeling to his level to hug him."
 
     voice audio.dorian_ch3_line71
@@ -1224,14 +1234,14 @@ label ch3_breakfast:
 
     "He nodded enthusiastically as I gestured to the food. He hugged Tedda tightly."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line72
     dorian "Dig in!"
 
-    show elias first_meet_neutral at right_elias
+    show elias first_meet_neutral at right_elias with Dissolve(0.1)
     "Elias sat cross-legged on the floor, the warm meal before him."
 
-    hide elias
+    hide elias with Dissolve(0.1)
     show supply_robot base at right_supply with Dissolve(0.2)
     voice audio.yuxuan_ch3_line46
     yuxuan "If I had a mouth, I'd eat every bite. My compliments, Chef Burnham."
@@ -1241,33 +1251,33 @@ label ch3_breakfast:
     weng  "Master Yuxuan, you must eat something. You've been working so hard."
     "Yuxuan's expression flickered briefly, but he said nothing, his gaze shifting away."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line73
     dorian "Who's that, Yuxuan?"
-    show supply_robot lied at right_supply
+    show supply_robot lied at right_supply with Dissolve(0.1)
     voice audio.yuxuan_ch3_line47
     yuxuan "Oh just no one… Just my chef. I'm going to eat, Miss Weng! Just wait!"
 
     "The sound of the raging blizzard outside filled the brief silence. I stirred the pot absently"
-    hide supply_robot
-    show elias first_meet_neutral at right_elias
+    hide supply_robot with Dissolve(0.1)
+    show elias first_meet_neutral at right_elias with Dissolve(0.1)
     voice audio.elias_ch3_line44
     elias "Mister…"
     "I turned to him."
     dorian "Yes, Elias?"
 
-    show elias first_meet_neutral at right_elias
+    show elias first_meet_neutral at right_elias with Dissolve(0.1)
     "He hesitated, fiddling with Tedda's paw."
 
     voice audio.elias_ch3_line45
     elias "Is… is it okay if I call you daddy?"
 
     "The question hit me harder than I expected. My chest tightened, but I quickly ruffled his messy hair with a soft smile."
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line74
     dorian "Whatever makes you happy."
 
-    show elias first_meet_happy at right_elias
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     "Elias beamed, his face lighting up with pure joy as he hugged Tedda tightly."
 
     voice audio.elias_ch3_line46
@@ -1328,7 +1338,7 @@ label ch3_breakfast:
     voice audio.dorian_ch3_line77
     dorian "Good night, Elias."
 
-    hide elias
+    hide elias with Dissolve(0.1)
     show supply_robot base at right_supply with Dissolve(0.2)
     yuxuan "Good night to both of you. May the howling blizzard only make our little shack feel warmer."
     
@@ -1374,13 +1384,13 @@ label ch3_vasily_arrives:
     voice audio.dorian_ch3_line78
     dorian "V-Vasily... What brings you here?"
 
-    show vasily alt_think at right_char
+    show vasily alt_think at right_char with Dissolve(0.1)
     "He stepped closer, his boots crunching softly against the cave floor."
 
     voice audio.vasily_ch3_line2
     vasily "Oh, you know. Just passing through. Thought I'd check on an old friend."
     "His eyes flicked past me, scanning the interior of the cave before landing back on me. A smile tugged at his lips, but it was sharp, calculated, and far from friendly."
-    show vasily neutral at right_char
+    show vasily neutral at right_char with Dissolve(0.1)
     voice audio.vasily_ch3_line3
     vasily "Imagine my surprise when I heard rumors. A seasoned mercenary hiding in a cave. Abandoning his mission. It's... disappointing, Dorian."
     "He tilted his head slightly, his gaze narrowing."
@@ -1396,7 +1406,7 @@ label ch3_vasily_arrives:
     "An entire battalion, their armor gleaming even in the dim light, filed into position behind Vasily."
     "My breath caught in my throat. Each soldier bore the insignia of King Gustav's forces."
 
-    show vasily alt_aggressive at right_char
+    show vasily alt_aggressive at right_char with Dissolve(0.1)
     voice audio.vasily_ch3_line5
     vasily "Under orders from His Majesty, the Prince is to be executed. Immediately."
 
@@ -1404,36 +1414,36 @@ label ch3_vasily_arrives:
 
     voice audio.vasily_ch3_line6
     vasily "So tell me, friend. Have you killed the Prince yet?"
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line80
     dorian "You… didn't tell me the Prince was a toddler, Vasily."
 
-    show vasily alt_aggressive at right_char
+    show vasily alt_aggressive at right_char with Dissolve(0.1)
     voice audio.vasily_ch3_line7
     vasily "Does it matter? The contract was clear. Elias Drakos is to be eliminated. His age doesn't change what he's done… or what's at stake."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line81
     dorian "Look, I-I'll give you the money back. Every coin. I'll pay you back and walk away from this."
 
-    show vasily alt_savage at right_char
+    show vasily alt_savage at right_char with Dissolve(0.1)
     "Vasily barked out a laugh."
 
     voice audio.vasily_ch3_line9
     vasily "The prided mercenary of Mjoll, reduced to bargaining over coin? You, who once stared down entire armies without flinching, now trembling over a child?"
     voice audio.vasily_ch3_line10
     vasily "I'll even double your pay. Triple it, if that's what it takes. You've saved my hide more times than I can count, and I consider you a friend. That's why I'm offering you this chance."
-    show vasily neutral at right_char
+    show vasily neutral at right_char with Dissolve(0.1)
     "He paused, his tone softening just slightly, but his eyes remained cold and calculating"
     voice audio.vasily_ch3_line11
     vasily "Just give us the Prince, and we'll call it even. No hard feelings."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "A small part of me wanted to believe him, to trust that he'd keep his word."
     "But the image of Elias—his laughter, his warmth, the way he hugged Tedda so tightly—flashed through my mind. Could I really hand him over?"
     "Before I could answer, a guttural cry broke the silence."
 
-    hide vasily
+    hide vasily with Dissolve(0.1)
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch3_line1
     svante "That snake of a prince deserves to die!"
@@ -1447,13 +1457,13 @@ label ch3_vasily_arrives:
 
     voice audio.svante_ch3_line3
     svante "Kill the Prince! Show no mercy!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show boy_ald_normal at right_flip with Dissolve(0.2)         # PLACEHOLDER
     voice audio.boy_ald_ch3_line1
     boy_ald_soldier "My brother is right! He killed our family through this blizzard! He deserves to die!"
 
     "The crowd of soldiers stirred, murmurs of agreement spreading through their ranks. The tension was rising, and I could feel the tide turning against me."
-    hide boy_ald_normal
+    hide boy_ald_normal with Dissolve(0.1)
     "A man with striking blue hair stepped forward from the shadows — Niko, in a hooded robe."
 
     show niko normal_base at right_char with Dissolve(0.2)
@@ -1462,12 +1472,12 @@ label ch3_vasily_arrives:
     "His voice was measured, intelligent. He turned to Vasily, his gaze sharp."
     voice audio.niko_ch3_line2
     niko "The Prince… is he really just a toddler?"
-    hide niko
+    hide niko with Dissolve(0.1)
     
     show vasily alt_aggressive at right_char with Dissolve(0.2)
     voice audio.vasily_ch3_line12
     vasily "What of it, Prophet?"
-    hide vasily
+    hide vasily with Dissolve(0.1)
 
     show niko normal_serious at right_char with Dissolve(0.2)
     voice audio.niko_ch3_line3
@@ -1485,12 +1495,12 @@ label ch3_vasily_arrives:
     niko "No. I'm serious. Something doesn't make sense, and—"
 
     "Without a word, Vasily reached into a pouch at his belt and pulled out a heavy bag of coins, tossing it at the man's feet with a dull thud"
-    hide niko
+    hide niko with Dissolve(0.1)
 
     show vasily alt_think at right_char with Dissolve(0.2)
     voice audio.vasily_ch3_line13
     vasily "Here. Your payment. The services of the death god's Prophets are no longer required."
-    hide vasily
+    hide vasily with Dissolve(0.1)
     show niko alt_annoyed at right_char with Dissolve(0.2)
     voice audio.niko_ch3_line6
     niko   "Tsk."
@@ -1499,12 +1509,12 @@ label ch3_vasily_arrives:
     "The blue haired prophet hesitated, glancing between the bag and Vasily's steely gaze. The other prophet quickly scooped up the coins and bowed deeply."
 
     prophet_2 "Thank you, Count. May Enoch's blessings be with you. We will trouble you no further. Come, Niko."
-    show niko alt_tense at right_char
+    show niko alt_tense at right_char with Dissolve(0.1)
     voice audio.niko_ch3_line7
     niko   "But brother—"
     prophet_2 "You know the First Law of Enoch: 'To hinder death is to defy Him.' We are not to interfere. Not even if death comes unjustly. Not even if the innocent must suffer."
     prophet_2 "Death is the final mercy, the stillness beyond pain. If the Prince is marked by fate, we must not stand in its way."
-    show niko alt_disappointed at right_char
+    show niko alt_disappointed at right_char with Dissolve(0.1)
     voice audio.niko_ch3_line8
     niko   "I understand, brother. Praise be to His Word."
     prophet_2 "Praise be. Now come. Let us leave this place."
@@ -1523,7 +1533,7 @@ label ch3_vasily_arrives:
     svante "What are you doing, Kristin?"
     kristin "Thinking, Svante, dear brother. For myself. You should try it sometime."
 
-    show svante normal_angry at left_char
+    show svante normal_angry at left_char with Dissolve(0.1)
     voice audio.svante_ch3_line5
     svante "Shut it, Kristin! You dare question King Gustav? Our Father?"
     kristin "Brother, you used to think for yourself. What happened to you? Since when did you let blind faith replace reason?"
@@ -1533,7 +1543,7 @@ label ch3_vasily_arrives:
     kristin "Brother, please believe me."
     voice audio.svante_ch3_line7
     svante "I… I…"
-    hide kristin_normal
+    hide kristin_normal with Dissolve(0.1)
 
     show vasily alt_aggressive at right_char with Dissolve(0.2)
     "The air grew colder as Vasily stepped forward, his expression dark."
@@ -1542,7 +1552,7 @@ label ch3_vasily_arrives:
     vasily  "Enough."
 
     "He snapped his fingers. Kristin turned to him, her eyes wide with fear."
-    hide vasily
+    hide vasily with Dissolve(0.1)
     show kristin_normal at right_char with Dissolve(0.2)
     kristin "Count, please. I'm just—"
     play sound audio.sfx_blade 
@@ -1568,22 +1578,22 @@ label ch3_vasily_arrives:
     voice audio.svante_ch3_line8
     svante "K-Kristin… No…"
     kristin "B-Brother… I'm sorry… Tell mother I—"
-    show svante normal_angry at left_char
+    show svante normal_angry at left_char with Dissolve(0.1)
     voice audio.svante_ch3_line9
     svante "Kristin! KRISTIN!"
 
-    show vasily alt_think at right_char
+    show vasily alt_think at right_char with Dissolve(0.1)
     "Vasily turned to him, his voice cold."
 
     voice audio.vasily_ch3_line17
     vasily "It's the Prince's fault, Svante. His crime is sowing doubt on Kristin."
-    show svante normal_sad at left_char
+    show svante normal_sad at left_char with Dissolve(0.1)
     voice audio.svante_ch3_line10
     svante "K… K-Kristin *cries*"
     voice audio.vasily_ch3_line18
     vasily "If it weren't for him, Kristin would still be alive. King Gustav is right."
 
-    show svante normal_angry at left_char
+    show svante normal_angry at left_char with Dissolve(0.1)
     "Svante's tear-streaked face twisted into a mask of rage."
 
     voice audio.svante_ch3_line11
@@ -1601,7 +1611,7 @@ label ch3_vasily_arrives:
     voice audio.vasily_ch3_line19
     vasily "Dorian, think about it. Don't throw everything away for this child. You know how this ends if you don't do the right thing."
 
-    show vasily alt_think at right_char
+    show vasily alt_think at right_char with Dissolve(0.1)
     "He placed a hand on my shoulder, firm yet gentle."
 
     voice audio.vasily_ch3_line20
@@ -1650,30 +1660,30 @@ label ch3_critical_fork:
 
             voice audio.vasily_ch3_line25
             vasily "Aldoriths, go inside and kill the prince. Now."
-            hide vasily
+            hide vasily with Dissolve(0.1)
             show boy_ald_normal at right_flip with Dissolve(0.2)
             voice audio.boy_ald_ch3_line3
             boy_ald_soldier "What? That's it? You're not going to punish this traitor for—"
-            hide boy_ald_normal
+            hide boy_ald_normal with Dissolve(0.1)
             show vasily alt_aggressive at right_char with Dissolve(0.2)
             voice audio.vasily_ch3_line26
             vasily "Do it. Now."
             "The boy faltered, swallowed hard, and then nodded."
-            hide vasily
+            hide vasily with Dissolve(0.1)
             show boy_ald_normal at right_flip with Dissolve(0.2)
             voice audio.boy_ald_ch3_line4
             boy_ald_soldier "Yes, sir."
-            hide boy_ald_normal
+            hide boy_ald_normal with Dissolve(0.1)
             show girl_ald_normal at right_char with Dissolve(0.2)
             girl_ald_soldier "On it, sir!"
-            hide girl_ald_normal
+            hide girl_ald_normal with Dissolve(0.1)
 
             show svante normal_angry at right_char with Dissolve(0.2) 
             voice audio.svante_ch3_line12
             svante "Leave the prince to me. Kristin… sister… you'll be avenged."
-            hide svante
+            hide svante with Dissolve(0.1)
 
-            show vasily alt_normal at right_char
+            show vasily alt_normal at right_char with Dissolve(0.1)
             "Vasily turned to me, his eyes soft."
 
             voice audio.vasily_ch3_line27
@@ -1682,17 +1692,18 @@ label ch3_critical_fork:
             voice audio.vasily_ch3_line28
             vasily "You must be cold. Come on. I had some aldoriths brew you up some tea."
 
-            show dorian sad at left_char
+            show dorian sad at left_char with Dissolve(0.1)
             voice audio.dorian_ch3_line83
             dorian "Thanks, Vasily."
 
             hide vasily
             hide dorian
+            with Dissolve(0.1)
             jump ch3_bad_end
 
         "Refuse. Protect Elias.":
             $ ch3_d5 = "refused"
-            $ svante_affection += 1
+            $ A2_svante_affection += 1
             stop sound
             jump ch3_fight_back
 
@@ -1765,6 +1776,7 @@ label ch3_bad_end:
 
     hide vasily
     hide dorian
+    with Dissolve(0.1)
     scene frostcradle_blizzard with fade                # PLACEHOLDER
     show snow_blizzard_1
     # stop music fadeout 3.0
@@ -1784,11 +1796,11 @@ label ch3_bad_end:
 
     "For a moment, everything was silent. The world seemed to hold its breath, waiting."
     "And then I let go."
-    # stop audio
+    stop audio fadeout 3.0
 
     pause 3.0
 
-    jump game_over
+    jump ch10_bad_end_credits
 
 # =============================================================================
 # SECTION 17: LABEL CH3_FIGHT_BACK — GOOD PATH: Draconic Fire Awakens
@@ -1812,7 +1824,7 @@ label ch3_fight_back:
     dorian "No, Vasily. I can't do this. I beg you just… take the coin."
     voice audio.dorian_ch3_line88
     dorian "I'll return every piece the King gave me for this mission. No harm, no foul. We can both walk away from this."
-    show vasily neutral at right_char
+    show vasily neutral at right_char with Dissolve(0.1)
     "Vasily sighed, shaking his head slowly."
     voice audio.vasily_ch3_line32
     vasily "You don't get it, do you? This isn't about the coin, Dorian. It's about loyalty. It's about trust. The King doesn't just want his money's worth—he wants proof that his men are still willing to do what's necessary."
@@ -1825,7 +1837,7 @@ label ch3_fight_back:
 
     "Behind him, the violet haired aldorith let out a sharp, choked sob, his rage boiling over into words."
 
-    hide vasily 
+    hide vasily  with Dissolve(0.1)
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch3_line13
     svante "That boy—that prince—is the reason my sister is dead! You're protecting a murderer! You're as guilty as he is!"
@@ -1833,17 +1845,17 @@ label ch3_fight_back:
 
     voice audio.dorian_ch3_line89
     dorian "Look. I beg you. Just take the money. We all can-"
-    hide svante
+    hide svante with Dissolve(0.1)
     show elias first_meet_neutral at right_elias with Dissolve(0.2) 
     voice audio.elias_ch3_line49
     elias "Daddy?"
-    hide elias
+    hide elias with Dissolve(0.1)
 
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "My heart dropped. I spun around, and there he was—Elias—standing at the entrance of the shack, clutching Tedda tightly to his chest."
     "His small face was pale, his wide eyes flicking between me and the soldiers."
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     "I reached out, panic surging through me."
     voice audio.dorian_ch3_line90
     dorian "Elias! Get back inside! Now!"
@@ -1854,25 +1866,25 @@ label ch3_fight_back:
     voice audio.dorian_ch3_line91
     dorian "You see? He's just a child, Vasily. Look at him. Does he look like a killer to you?"
 
-    show vasily alt_mad at right_char
+    show vasily alt_mad at right_char with Dissolve(0.1)
     "Vasily's expression hardened, his eyes narrowing as he studied Elias."
     voice audio.vasily_ch3_line35
     vasily "The prince needs to die. My loyalty stands with the king. If the king says he murdered the Queen, then I would swear by Enoch's name that he did it."
     
     voice audio.boy_ald_ch3_line5
     "Long live King Gustav!"
-    hide vasily
+    hide vasily with Dissolve(0.1)
 
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch3_line14
     svante "L-Long live King Gustav!"
-    hide svante
+    hide svante with Dissolve(0.1)
 
     voice audio.dorian_ch3_line92
     dorian "Enough!"
     "My shout echoed through the cave, silencing the crowd. I stepped forward, placing myself between Elias and the soldiers."
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line93
     dorian "If you want him, you'll have to go through me."
     show vasily alt_mad at right_char with Dissolve(0.2)
@@ -1880,11 +1892,11 @@ label ch3_fight_back:
     voice audio.vasily_ch3_line36
     vasily "Don't do this, old friend. You're throwing your life away for a child who doesn't even belong to you. Is it even worth it?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch3_line94
     dorian "Yes. Yes, he is."
 
-    show vasily neutral at right_char
+    show vasily neutral at right_char with Dissolve(0.1)
     "Vasily's hands glew with light. He scoffed."
     voice audio.vasily_ch3_line37
     vasily "So be it."
@@ -1929,6 +1941,7 @@ label ch3_fight_back:
 
     hide boy_ald_normal
     hide girl_ald_normal
+    with Dissolve(0.1)
     show dorian angry at left_char
     with Dissolve(0.2)
 
@@ -1988,9 +2001,9 @@ label ch3_fight_back:
     show girl_ald_normal at right_char with Dissolve(0.2)
     girl_ald "What in the name of Enoch—"
     "The ground beneath her erupted, jagged pillars of molten rock spearing upward. The heat melted the steel of her armor, her body incinerated before she could even cry out." with vpunch
-    hide girl_ald_normal
+    hide girl_ald_normal with Dissolve(0.1)
     hide screen draconic_rage
-    hide dorian
+    hide dorian with Dissolve(0.1)
 
     scene cg_mjoll_massacre with fade
     # TODO: add intense fight music (massacre)
@@ -2059,7 +2072,7 @@ label ch3_fight_back:
     show dorian normal_alt_annoyed at left_char 
     with Dissolve(0.2)
     "He fell to his knees, tears streaming down his face, his sword clattering to the ground."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch3_line15
     svante "P-Please! Mercy! I-I didn't mean for this! It wasn't supposed to happen like this! Kristin—she's dead, and now—"
     "His words dissolved into incoherent sobs as he clutched at the hem of my cloak."
@@ -2071,7 +2084,7 @@ label ch3_fight_back:
     voice audio.svante_ch3_line17
     svante "I'm sorry! I'm sorry! Please, sir! I—"
 
-    show dorian serious at left_char 
+    show dorian serious at left_char  with Dissolve(0.1)
     "The fire in my hand flared, my rage begging for release. I took a step forward, the heat forcing him to crawl backward."
     "And then his foot slipped."
     voice audio.svante_ch3_line18 
@@ -2120,7 +2133,7 @@ label ch3_escape:
     voice audio.yuxuan_ch3_line51
     yuxuan "Prosperity Dragon bless me. I need to get you to safety…. Miss Weng! Call the—"
 
-    hide supply_robot
+    hide supply_robot with Dissolve(0.1)
     "The bot hovered closer, scanning the scene. I wanted to respond, to explain, but my body betrayed me."
     "My head lolled to the side, and everything went dark again."
 
@@ -2146,7 +2159,7 @@ label ch3_escape:
     "I reached out, brushing his hair from his face. Tears welled up in my eyes."
 
     "A voice spoke from outside the carriage."
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch3_line52
     yuxuan "Dorian! You're awake! Praise the Prosperity Dragon!"
@@ -2154,53 +2167,54 @@ label ch3_escape:
     "The door creaked open, and Yuxuan stepped inside. For the first time, it wasn't just his hologram from a supply bot. It was him. In the flesh."
     "His smile was as warm and earnest as I remembered from the hologram, but seeing him here, in person, was something else entirely."
     "His robes shimmered with an opulent sheen. Deep crimson fabric. The stitching alone probably cost more than I'd made in the last decade."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show elias first_meet_happy at right_elias with Dissolve(0.2)
     voice audio.elias_ch3_line61
     elias "Daddy, it's him! Mister Yuxuan!"
 
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan normal_sad at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch3_line53
     yuxuan "Thank the Prosperity Dragon I decided to check in. If I hadn't sent the bot when I did…"
-    show yuxuan alt_mid_close_eyes at right_char
+    show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
     "He trailed off, shaking his head."
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.dorian_ch3_line104
     dorian "Y-Yuxuan."
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     "My voice cracked, my throat dry as sandpaper."
     voice audio.dorian_ch3_line105
     dorian "Good to see you in person."
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "Yuxuan's grin widened."
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch3_line54
     yuxuan "The pleasure's all mine, Dorian! I'm so happy to finally meet you again!"
 
-    show yuxuan alt_neutral at right_char
+    show yuxuan alt_neutral at right_char with Dissolve(0.1)
     "He stepped aside, glancing toward the driver."
     "One of the guards—an older man with silver streaks in his hair—replied without hesitation."
 
     man_2 "A few hours, Master Yuxuan"
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     "At the mention of Tianho, something stirred in me. It had been years since I'd set foot there. Elara and my family. It's been a while."
     
     voice audio.yuxuan_ch3_line55
     yuxuan "We're taking you both to Tianho. We'll be hiding there."
     show yuxuan normal_neutral at right_char
     show dorian serious at left_char
+    with Dissolve(0.1)
     "I tried to respond, but my throat was dry, and the words caught. Instead, I nodded, leaning back against the cushions."
     
-    hide yuxuan 
-    show elias first_meet_happy at right_elias
+    hide yuxuan  with Dissolve(0.1)
+    show elias first_meet_happy at right_elias with Dissolve(0.1)
     "Elias stirred on the bench, his eyelids fluttering open. His gaze met mine, his small hand reaching out."
     voice audio.elias_ch3_line62
     elias "Daddy… I'm happy you're alright."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I took his hand, squeezing it gently."
 
     voice audio.dorian_ch3_line106

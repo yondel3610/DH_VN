@@ -17,7 +17,7 @@
 #   show dorian angry at center
 #   show dorian normal_alt confident at right
 #   show dorian sleepware dragon_eyes at far_left
-#   show dorian tianho_ceremonial smile at far_right
+#   show dorian ceremonial smile at far_right
 # =============================================================================
 
 # TODO: fix file path
@@ -93,25 +93,25 @@ image dorian sleepware_normal:
 # ===============================
 # DORIAN — TIANHO CEREMONIAL (7 emotions)
 # ===============================
-image dorian tianho_ceremonial_neutral:
+image dorian ceremonial_neutral:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe neutral.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_angry:
+image dorian ceremonial_angry:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe angry.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_sad:
+image dorian ceremonial_sad:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe sad.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_dragon_eyes:
+image dorian ceremonial_dragon_eyes:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe dragon eyes.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_serious:
+image dorian ceremonial_serious:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe serious.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_smile:
+image dorian ceremonial_smile:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-robe smile.png", sprite_highlight("dorian"))
     fit "contain"
-image dorian tianho_ceremonial_normal:
+image dorian ceremonial_normal:
     At("images/Assets/Character Sprites/Dorian/Tianho Ceremonial/dorian-mc kimono-yello.png", sprite_highlight("dorian")) # BASE SPRITE
     fit "contain"
 
@@ -423,22 +423,22 @@ image yuxuan underwear_sad:
 # YUXUAN — TIANHO CEREMONIAL (6 emotions)
 # ===============================
 image yuxuan ceremonial_neutral:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan base.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan ceremonial_angry:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan emotions angry.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe angry.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan ceremonial_normal:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan emotions normal.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe normal.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan ceremonial_happy:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan emotions happy.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe happy.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan ceremonial_lying:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan emotions lying.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe lying.png", sprite_highlight("yuxuan"))
     fit "contain"
 image yuxuan ceremonial_sad:
-    At("images/Assets/Character Sprites/Cheng Yuxuan/Underwear/cheng yuxuan emotions sad.png", sprite_highlight("yuxuan"))
+    At("images/Assets/Character Sprites/Cheng Yuxuan/Tianho Ceremonial/cheng yuxuan robe sad.png", sprite_highlight("yuxuan"))
     fit "contain"
 
 # =============================================================================
@@ -1177,6 +1177,10 @@ image ya_ji_hye:
     At("images/Assets/Character Sprites/ya ji hye colored (1).png", sprite_highlight("ji_hye"))
     fit "contain"
 image yaoguai:
+    At("images/Assets/Character Sprites/yaoguai.png", sprite_highlight("yg")) # beast not yg king
+    fit "contain"
+
+image yaoguai_1:
     At("images/Assets/Character Sprites/yaoguai.png", sprite_highlight("yg")) # beast not yg king
     fit "contain"
 image yuki_onna:

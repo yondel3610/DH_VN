@@ -2,25 +2,17 @@ import os
 import subprocess
 from pathlib import Path
 
-def convert_audio_folder(input_folder, output_folder=None, bitrate="128k", samplerate=44100):
+def convert_audio_folder(input_folder, bitrate="128k", samplerate=44100):
     """
-    Convert all audio files in a folder to .ogg format.
+    Convert all audio files in a folder to .ogg format, replacing the originals.
     Args:
         input_folder: Path to folder containing audio files
-        output_folder: Path to output folder (default: input_folder/ogg_output)
         bitrate: Bitrate for output (e.g., "128k", "192k")
         samplerate: Sample rate (e.g., 44100, 48000)
         
     use: Get-Command ffmpeg
     on powershell
     """
-    # Set default output folder
-    if output_folder is None:
-        output_folder = os.path.join(input_folder, "ogg_output")
-    
-    # Create output folder if it doesn't exist
-    os.makedirs(output_folder, exist_ok=True)
-    
     # Supported input formats
     supported_formats = {'.mp3', '.wav', '.flac', '.m4a', '.aac', '.wma', '.aiff', '.alac'}
     
@@ -34,8 +26,7 @@ def convert_audio_folder(input_folder, output_folder=None, bitrate="128k", sampl
         print(f"No audio files found in {input_folder}")
         return
     
-    print(f"Found {len(audio_files)} audio file(s)")
-    print(f"Output folder: {output_folder}")
+    print(f"Found {len(audio_files)} audio file(s) in {input_folder}")
     print("-" * 50)
     
     converted = 0
@@ -43,11 +34,11 @@ def convert_audio_folder(input_folder, output_folder=None, bitrate="128k", sampl
     
     for audio_file in audio_files:
         input_path = str(audio_file)
-        output_path = os.path.join(output_folder, f"{audio_file.stem}.ogg")
+        output_path = os.path.join(input_folder, f"{audio_file.stem}.ogg")
         
-        # Skip if output already exists
+        # Skip if an .ogg with the same name already exists
         if os.path.exists(output_path):
-            print(f"⏭️  Skipping (already exists): {audio_file.name}")
+            print(f"⏭️  Skipping (ogg already exists): {audio_file.name}")
             continue
         
         try:
@@ -65,13 +56,26 @@ def convert_audio_folder(input_folder, output_folder=None, bitrate="128k", sampl
             # Run conversion
             print(f"🔄 Converting: {audio_file.name} -> {audio_file.stem}.ogg")
             subprocess.run(cmd, check=True, capture_output=True, text=True)
-            converted += 1
-            print(f"✅ Success: {audio_file.stem}.ogg")
+            
+            # Verify the ogg file was actually created before deleting the original
+            if os.path.exists(output_path):
+                os.remove(input_path)
+                converted += 1
+                print(f"✅ Success (original deleted): {audio_file.stem}.ogg")
+            else:
+                print(f"❌ Failed: {audio_file.name} (ogg not created)")
+                failed.append(audio_file.name)
             
         except subprocess.CalledProcessError as e:
             print(f"❌ Failed: {audio_file.name}")
             print(f"   Error: {e.stderr}")
             failed.append(audio_file.name)
+            # Clean up partial ogg file if it was created
+            if os.path.exists(output_path):
+                try:
+                    os.remove(output_path)
+                except OSError:
+                    pass
         except FileNotFoundError:
             print("❌ ffmpeg not found! Please install ffmpeg first.")
             print("   Windows: Download from https://ffmpeg.org/")
@@ -86,7 +90,6 @@ def convert_audio_folder(input_folder, output_folder=None, bitrate="128k", sampl
         print(f"❌ Failed: {len(failed)} file(s)")
         for f in failed:
             print(f"   - {f}")
-    print(f"📁 Output folder: {output_folder}")
 
 # ============================================================
 # USAGE
@@ -96,13 +99,10 @@ if __name__ == "__main__":
     # --- Option 1: Convert with default settings ---
     convert_audio_folder("game/audio/sfx and ost/sfx")
     
-    # --- Option 2: Convert and specify output folder ---
-    # convert_audio_folder("audio/raw", "audio/ogg")
+    # --- Option 2: Convert with custom bitrate and sample rate ---
+    # convert_audio_folder("audio/raw", bitrate="192k", samplerate=48000)
     
-    # --- Option 3: Convert with custom bitrate and sample rate ---
-    # convert_audio_folder("audio/raw", "audio/ogg", bitrate="192k", samplerate=48000)
-    
-    # --- Option 4: Convert all subfolders recursively ---
+    # --- Option 3: Convert all subfolders recursively ---
     # for folder in Path("audio").iterdir():
     #     if folder.is_dir():
     #         convert_audio_folder(str(folder))

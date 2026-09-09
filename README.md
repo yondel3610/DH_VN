@@ -9,7 +9,7 @@
 **Genre:** Fantasy / Drama / Romance (multi-route)  
 **Engine:** Ren'Py 8.5+  
 **Platforms:** Windows, Mac, Linux, Android
-**Demo Status:** Chapter 9 and 10 in progress
+**Demo Status:** Complete
 
 ---
 
@@ -128,4 +128,4 @@ All assets follow these conventions:
 
 ---
 
-*Last Updated: June 2026*
+*Last Updated: Sept 2026*

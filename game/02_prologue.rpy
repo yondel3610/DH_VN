@@ -106,6 +106,7 @@ label prologue:
 
     hide boy_ald_normal 
     hide girl_ald_normal
+    with Dissolve(0.1)
     "Kristin flinched as if struck. She turned, eyes wide, lips pale."
 
     show kristin_normal at center_char with Dissolve(0.2)
@@ -128,7 +129,7 @@ label prologue:
     voice audio.kristin_ald_prl_line5
     kristin "N-no! I would never—why would I?"
     
-    show girl_ald_normal at right_char
+    show girl_ald_normal at right_char with Dissolve(0.2)
 
     #voice audio.girl_ald_prl_
     girl_ald "Your blood-brother Svante didn't hesitate. He slit their throats without blinking. He was useful. You? You pray for corpses."
@@ -136,8 +137,6 @@ label prologue:
     boy_ald "Useless."
     
     "Kristin dropped her gaze. Her hands trembled at her sides."
-    
-    show kristin_normal at center_char
     
     voice audio.kristin_ald_prl_line6
     kristin "I'm very sorry… I just—"
@@ -150,7 +149,7 @@ label prologue:
     "She didn't argue. With her head bowed and hands trembling at her sides, Kristin turned and walked away."
     "Her footsteps echoed faintly down the underground tunnel—slow and hesitant."
     
-    hide kristin_normal with dissolve
+    hide kristin_normal with Dissolve(0.2)
     
     "The two Aldoriths watched her disappear into the dark before exchanging a glance."
     "Their gazes drifted to the lifeless forms behind them: the Queen of Tianho, regal even in death, and her two sons, wrapped in the stillness of final silence."
@@ -202,7 +201,7 @@ label prologue:
     voice boy_ald_prl_line12
     boy_ald "D-Do you feel that?"
     
-    
+    play sound audio.sfx_shadows
     "A shriek—deep, guttural, wrong—ripped through the silence."
     
     #voice audio.girl_ald_prl_
@@ -215,7 +214,7 @@ label prologue:
     play sound sfx_yaoguai_burst
     scene underground_prl with flash
     
-    play music yaoguai_theme volume 0.8
+    play music audio.yaoguai_theme volume 0.8
     
     "The wall exploded inward, a mass of claws, horns, and red-hot eyes surging forward."
     "The Yaoguai King emerged from the rubble, obsidian-scaled and crowned in bone, the shadows clinging to his form like loyal hounds."
@@ -228,7 +227,6 @@ label prologue:
     show girl_ald_normal at right_char 
     show boy_ald_normal at left_char
     with Dissolve(0.2)
-
 
     #voice audio.girl_ald_prl_
     girl_ald "Enoch above…"
@@ -302,6 +300,7 @@ label prologue_choice_wall:
     voice boy_ald_prl_line17
     boy_ald "—gkkhh—!"
     
+    play sound audio.sfx_body_thud
     "He collapsed."
     
     jump prologue_common
