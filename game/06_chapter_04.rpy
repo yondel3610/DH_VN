@@ -79,46 +79,46 @@ label chapter_4:
     king_gustav "And the amulet? Tell me you at least retrieved the damn amulet!"
     show mjoll_lars at left_char with Dissolve(0.2)      
     mjoll_lars  "N-No, Your Majesty. We searched the site thoroughly, but it… it's gone."
-    hide mjoll_lars
+    hide mjoll_lars with Dissolve(0.1)
     show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "We believe… we believe sir Dor - I mean, Dorian took it."
     voice audio.gustav_ch4_line4
     king_gustav "That traitorous snake! After everything I gave him—after all my trust!"
     voice audio.gustav_ch4_line5
     king_gustav "How many? How many died?"
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
     show mjoll_lars at left_char with Dissolve(0.2)
     mjoll_lars  "Nearly all, Your Majesty. We lost nearly the entire battalion."
     voice audio.gustav_ch4_line6
     king_gustav "By Enoch… Nearly all…"
 
-    hide mjoll_lars
+    hide mjoll_lars with Dissolve(0.1)
     show mjoll_pavel at left_char with Dissolve(0.2)            
     voice audio.pavel_ch4_line1
     mjoll_pavel "Your Majesty… We have the two survivors with us. They're outside."
     voice audio.gustav_ch4_line7
     king_gustav "Send them in."
 
-    hide mjoll_pavel
+    hide mjoll_pavel with Dissolve(0.1)
     show girl_ald_normal at left_flip with Dissolve(0.2)
     voice audio.girl_ald_ch4_line1
     girl_ald_soldier "It… *crying* It wasn't human… He wasn't human…"
 
-    hide girl_ald_normal
+    hide girl_ald_normal with Dissolve(0.1)
     show mjoll_lars at left_char with Dissolve(0.2)      
     mjoll_lars       "Miss, please. Take a breath. Tell us what happened."
-    hide mjoll_lars
+    hide mjoll_lars with Dissolve(0.1)
     show girl_ald_normal at left_flip with Dissolve(0.2)
     voice audio.girl_ald_ch4_line2
     girl_ald_soldier "Flames… everywhere… He burned them… He burned them all alive!"
     voice audio.girl_ald_ch4_line3
     girl_ald_soldier "If I hadn't run… I would have… I would have— I would hav—burned with them! *weeping*"
 
-    hide girl_ald_normal
+    hide girl_ald_normal with Dissolve(0.1)
     show mjoll_pavel at left_char with Dissolve(0.2)
     voice audio.pavel_ch4_line2
     mjoll_pavel "And we have Svante, Your Majesty."
-    hide mjoll_pavel
+    hide mjoll_pavel with Dissolve(0.1)
     show svante normal_sad at left_char with Dissolve(0.2)
     voice audio.svante_ch4_line1
     svante "He's a monster… A massacrer… He… he killed them all…"
@@ -132,7 +132,7 @@ label chapter_4:
     svante "F-Father…"
     voice audio.gustav_ch4_line9
     king_gustav "I've heard troubling whispers. Whispers of your sister—TAINTED by the Prince's lies, doubting me."
-    show svante normal_nervous at left_char
+    show svante normal_nervous at left_char with Dissolve(0.1)
     voice audio.svante_ch4_line4
     svante "Kristin, she—"
     voice audio.gustav_ch4_line10
@@ -141,20 +141,20 @@ label chapter_4:
     svante "I—"
     voice audio.gustav_ch4_line11
     king_gustav "You are loyal, my son, and for that, you will be rewarded. But I see the grief in your eyes—the weight of Count Vasily and the others lost."
-    show svante normal_neutral at left_char
+    show svante normal_neutral at left_char with Dissolve(0.1)
     voice audio.svante_ch4_line6
     svante "The man… he was surrounded by fire, Father. It was like… it was part of him. He burned everything. Everyone. I barely escaped."
 
     voice audio.gustav_ch4_line12
     king_gustav "A massacre…"
-    hide svante
+    hide svante with Dissolve(0.1)
     show girl_ald_normal at left_flip with Dissolve(0.2)
     voice audio.girl_ald_ch4_line4
     girl_ald_soldier "Massacrer… He's a massacrer! *weeping*"
-    hide girl_ald_normal
+    hide girl_ald_normal with Dissolve(0.1)
     show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "Miss, please calm down."
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
 
     voice audio.gustav_ch4_line13
     king_gustav "Dorian the Dragon of Gale… Now the Massacrer of Mjoll."
@@ -167,11 +167,11 @@ label chapter_4:
     svante "Y-Yes, Father…"
 
     messenger   "A letter from the Emperor of Kyeongjang, Your Majesty."
-    hide svante
+    hide svante with Dissolve(0.1)
     show mjoll_pavel at left_char with Dissolve(0.2)
     voice audio.pavel_ch4_line3
     mjoll_pavel "K-Kyeongjang, Your Majesty?"
-    hide mjoll_pavel
+    hide mjoll_pavel with Dissolve(0.1)
     voice audio.gustav_ch4_line15
     king_gustav "Hmm… Fascinating…"
     mjoll_pavel "…"
@@ -191,6 +191,7 @@ label chapter_4:
 
     hide king_gustav
     hide svante
+    with Dissolve(0.1)
     jump ch4_kyeongjang
 
 
@@ -256,7 +257,7 @@ label ch4_kyeongjang:
 
     "I inclined my head, granting her silent permission to continue. Satisfied, she bowed once more and retreated into the crowd."
 
-    hide ya_ji_hye
+    hide ya_ji_hye with Dissolve(0.1)
     "Next, Park Dae-hyun, Head of Infrastructure, approached."
     "He was a man of practicality, his hands calloused from years of overseeing the empire's great projects. His bow was deep and deliberate."
 
@@ -266,6 +267,7 @@ label ch4_kyeongjang:
     "Beyond my advisors, I felt the pulse of the celebration itself."
     hide captain_kang
     hide dae_hyun
+    with Dissolve(0.1)
     "Courtiers raised their cups in my honor, their thoughts brimming with admiration and awe."
 
     courtier_1 "To Pyeha, the living embodiment of Kyeongjang's strength!"
@@ -284,7 +286,7 @@ label ch4_kyeongjang:
     ji_hye         "Pyeha has done what other kingdoms could not. Kyeongjang is self-made, unshaken by the tragedy of Tianho."
 
     "Upon the mention of the tragedy of Tianho, I could see the unease in their thoughts."
-    show chunghee alt_tense at center_char
+    show chunghee alt_tense at center_char with Dissolve(0.1)
 
     woman_1 "The tragedy of Tianho… it all began when they tried to reconnect with the world. Look where it led them."
     voice audio.man1_ch4_line2
@@ -306,7 +308,7 @@ label ch4_kyeongjang:
     chung_hee "The tragedy of Tianho is a lesson carved into history, one that I have not forgotten. The loss of our beloved pyeha and pyeha-sshi serves as a reminder of the dangers of trust misplaced and gates left unguarded. But hear me now."
     chung_hee "Kyeongjang is not Tianho. Their choices, their fate—it is not ours to share. We have moved past the mistakes of the past. We are stronger, wiser, and more unified than they ever were. We are self-sufficient. We do not need the outside world to prosper."
     "I saw the crowd listening as I continued."
-    show chunghee normal_v2 at center_char
+    show chunghee normal_v2 at center_char with Dissolve(0.1)
     chung_hee "The past is in the past. We will not dwell in the shadows of fear or doubt. Under my reign, Kyeongjang will remain untouchable. Eternal. A beacon of strength and prosperity."
     chung_hee "We will never commune with outsiders. That is a promise."
 
@@ -358,12 +360,12 @@ label ch4_kyeongjang_night:
     "The moment it touched my hand, the amulet's glow intensified, casting an ethereal green light that bathed the room."
     "I held it before me, trapping my eyes with its green glow. I held it for a long time."
 
-    show chunghee normal_sad at left_char
+    show chunghee normal_sad at left_char with Dissolve(0.1)
     chung_hee "Mother… Father…"
 
     "Then another thought, sharp and resolute, pierced through the haze of my mind."
 
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     chung_hee "I know you're there."
 
     show ya_ji_hye at right_char with Dissolve(0.2)
@@ -374,7 +376,7 @@ label ch4_kyeongjang_night:
 
     ji_hye    "P-Pyeha… forgive my intrusion. I… I cannot stop you, can I?"
 
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     "I turned to face her fully, the amulet's light glinting off my robes."
 
     chung_hee "You cannot stop the Emperor Lord, Royal Advisor."
@@ -383,14 +385,14 @@ label ch4_kyeongjang_night:
     "But she steadied herself, bowing deeply."
 
     ji_hye    "Forgive me, Pyeha… but as your humble servant, I must plead with you to reconsider. This path you are walking—it will only lead to ruin."
-    show chunghee normal_angry at left_char
+    show chunghee normal_angry at left_char with Dissolve(0.1)
     chung_hee "Kyeongjang calls for vengeance. King Gustav will fall."
     ji_hye    "Kyeongjang? Or is it just you, Pyeha? Is it your vengeance that drives you—not the empire's? Please… just leave the past behind! I beg you!"
 
     "Her hands continued to tremble."
 
     ji_hye    "As your Royal Advisor—"
-    show chunghee normal_angry at left_char
+    show chunghee normal_angry at left_char with Dissolve(0.1)
     chung_hee "How dare you presume to order your Emperor Lord? Do you think your station grants you the right to defy me?"
 
     "Her knees buckled, and tears started falling down from her eyes. She dropped to the floor, her forehead nearly touching the cold stone."
@@ -399,7 +401,7 @@ label ch4_kyeongjang_night:
 
     "I saw her shoulders shake. Tears continued to fall down from her eyes."
 
-    show chunghee normal_v2 at left_char
+    show chunghee normal_v2 at left_char with Dissolve(0.1)
     "I looked away, my jaw tightening as I clutched the amulet tighter."
 
     chung_hee "Do not make this harder than it already is, Aunt."
@@ -411,25 +413,25 @@ label ch4_kyeongjang_night:
 
     "I turned fully to her, my grip on the amulet loosening slightly."
 
-    show chunghee normal_sad at left_char
+    show chunghee normal_sad at left_char with Dissolve(0.1)
     chung_hee "Please… do not bring my little brother into this, Aunt."
 
     "There was a brief silence in our thoughts."
 
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     chung_hee "Speaking of Jong-hee… how is he? I didn't see him at the celebration earlier."
     ji_hye    "He's hospitalized since yesterday. The illness is taking over again."
     ji_hye    "All the more reason for you not to go. Please, Chung…"
 
     "Her tears stained the stone beneath her, and I could see her breaking—truly breaking before me. I knelt before her. The glow of the amulet painted the streaks of her tears in green."
 
-    show chunghee normal_sad at left_char
+    show chunghee normal_sad at left_char with Dissolve(0.1)
     chung_hee "Aunt Ji-hye… I must do this. I must."
     ji_hye    "You and Jong-hee are all I have left, Chung. Please… please don't leave me too"
 
     "Her hands gripped the folds of her robe tighter. I reached out, placing a hand on her trembling shoulder."
 
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     chung_hee "He must pay. You know that, Aunt."
 
     "I stood, lifting her gently to her fee, the amulet's unearthly light illuminating her tear-streaked face again."
@@ -444,7 +446,7 @@ label ch4_kyeongjang_night:
 
     "The air shifted, and then I felt something—another person's familiar thoughts. Sunwoo's."
 
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     chung_hee "Did you call Captain Sunwoo, Aunt?"
     "Her expression faltered, and she bowed her head."
 
@@ -458,11 +460,11 @@ label ch4_kyeongjang_night:
 
     ji_hye    "Chung, I want to stay for a bit. I know I can't stop you, but I wish to see you go."
 
-    show chunghee normal_sad at left_char
+    show chunghee normal_sad at left_char with Dissolve(0.1)
     "I rested a hand on her back for a short while."
 
     chung_hee "I intend to return, Aunt. It's just for a day. I won't leave you and Jong-hee. I promise."
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     "Her lips trembled, and I heard the unspoken thought she didn't dare voice aloud:"
     "'That's what pyeha and pyeha-sshi said when they left for Tianho. Five years ago…'"
     "The captain will be coming. I could sense that she really wanted me to stay, and it gave me pause."
@@ -471,6 +473,7 @@ label ch4_kyeongjang_night:
 
     hide ya_ji_hye
     hide chunghee
+    with Dissolve(0.1)
     jump ch4_chunghee_qtc
 
 
@@ -495,20 +498,20 @@ label ch4_chunghee_qtc:
             "I simply… stood there."
 
             ji_hye    "Chung… what are you doing? Are you… frozen? Have you reconsidered?"
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             chung_hee "No, Aunt. I am merely… recalibrating my thoughts."
             ji_hye    "*crying*"
             chung_hee "…"
             ji_hye    "*crying*"
             chung_hee "…"
-            hide ya_ji_hye
+            hide ya_ji_hye with Dissolve(0.1)
             jump ch4_common_1
 
         "Trick Aunt Ji-Hye.":
             $ _choice_timeout = 0
             stop sound
 
-            show chunghee alt_smirk at left_char
+            show chunghee alt_smirk at left_char with Dissolve(0.1)
             "There's no time."
             "I focused, my mind reaching outward, weaving through the threads of energy."
             "With deliberate precision, I channeled my power, bending the perception of those around me. Slowly, my form shimmered, then vanished completely."
@@ -584,12 +587,12 @@ label ch4_chunghee_qtc:
             $ _choice_timeout = 0
             stop sound
 
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             "I sighed, letting my shoulders relax slightly."
 
             chung_hee "I'll keep you company for a while, Aunt."
 
-            show ya_ji_hye at right_char
+            show ya_ji_hye at right_char with Dissolve(0.1)
             "Aunt Ji-hye's face lit up with gratitude."
 
             ji_hye "Thank you, Chung."
@@ -605,12 +608,12 @@ label ch4_chunghee_qtc:
             "Then the memories darkened. I saw my mother standing before Aunt Ji-hye expressing her desire to venture to Tianho with my father. Aunt cried and begged her to reconsider."
             "The last memory was Aunt knowing of my father and mother's fate. Captain Sunwoo was there, comforting her. We were there too. Me and Jong-hee."
 
-            show chunghee normal_sad at left_char
+            show chunghee normal_sad at left_char with Dissolve(0.1)
             chung_hee "Aunt…"
             "Aunt Ji-hye looked up at me, her eyes glistening with tears."
             ji_hye    "Chung, please… I've lost her once. Don't make me lose you too."
 
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             "I swallowed hard, pushing down the emotions that threatened to rise."
             "I had to remain strong. For her. For Jong-hee. For myself."
             chung_hee "Aunt, I promise. I'll return safely, and no harm will befall me."
@@ -624,18 +627,18 @@ label ch4_chunghee_qtc:
             chung_hee "I believe it was three years ago, Aunt. At that little noodle shop in the marketplace. Jong-hee couldn't stop laughing at the way the broth splashed on your robes."
             ji_hye    "Yes… that's the one. You scolded him, but you were laughing too. I miss those days, Chung. I miss when it was just the three of us, before…. the weight of the empire fell on your shoulders."
 
-            show chunghee normal_sad at left_char
+            show chunghee normal_sad at left_char with Dissolve(0.1)
             "I fell quiet. It's not my choice, Aunt. It's never been."
-            show chunghee normal_v2 at left_char
+            show chunghee normal_v2 at left_char with Dissolve(0.1)
 
             ji_hye "I hope we can have that again someday. Just one more day like that. Promise me, Chung. Promise me you'll come back, so we can laugh together again."
 
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             "I placed a hand over hers, squeezing gently."
 
             chung_hee "I promise, Aunt. One day, we'll have that moment again."
             ji_hye    "I would love that, Chung—"
-            hide ya_ji_hye
+            hide ya_ji_hye with Dissolve(0.1)
 
             jump ch4_common_1
 
@@ -643,17 +646,17 @@ label ch4_chunghee_qtc:
             $ _choice_timeout = 0
             stop sound
 
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             "I gazed at Aunt Ji-Hye, her trembling form clutching her robes."
 
             chung_hee "Aunt… I'm sorry. I cannot afford to falter. You leave me no choice."
 
-            show ya_ji_hye at right_char
+            show ya_ji_hye at right_char with Dissolve(0.1)
             "Her eyes widened as she realized what I intended to do."
 
             ji_hye "Chung, no! Don't do this. Please, I'm begging you—"
 
-            show chunghee alt_wink at left_char
+            show chunghee alt_wink at left_char with Dissolve(0.1)
             "Before she could finish, I closed my eyes, channeling my focus. My mind reached into hers, gently but firmly quieting her frantic thoughts."
 
             ji_hye "Oh… I - Yes. I feel sleepy…"
@@ -666,14 +669,14 @@ label ch4_chunghee_qtc:
             ji_hye "Zzz... Zzz..."
             "Carefully, I carried her to the spare sofa in the corner of the room."
 
-            show chunghee normal_sad at left_char
+            show chunghee normal_sad at left_char with Dissolve(0.1)
             chung_hee "I'm sorry, Aunt. I promise… I will return."
             "As I straightened, I sensed him before I saw him."
 
             voice audio.sunwoo_ch4_line20
             captain_sunwoo "Pyeha, it's Kang Sunwoo. May I enter?"
 
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
 
             "I turned, composing myself as the door opened."
             show captain_kang at right_flip with Dissolve(0.2)
@@ -692,15 +695,15 @@ label ch4_chunghee_qtc:
             captain_sunwoo "Then allow me to accompany you, Pyeha. If you insist on facing danger, I will not let you face it alone."
             chung_hee      "Your place is here, Sunwoo. Kyeongjang needs its captain, and I need you to protect what I leave behind. This is my burden to bear."
 
-            show chunghee alt_tense at left_char
+            show chunghee alt_tense at left_char with Dissolve(0.1)
             "The amulet in my hand began to glow brighter, its golden runes spiraling outward as I prepared to activate it."
 
             voice audio.sunwoo_ch4_line25
             captain_sunwoo "Pyeha—"
-            show chunghee normal_neutral at left_char
+            show chunghee normal_neutral at left_char with Dissolve(0.1)
             chung_hee      "Take care of Aunt Ji-hye. And Jong-hee… tell him I will return."
             "Captain Sunwoo carried Aunt Ji-hye and left the room."
-            hide captain_kang
+            hide captain_kang with Dissolve(0.1)
             jump ch4_common_2
 
 
@@ -719,23 +722,23 @@ label ch4_common_1:
     voice audio.sunwoo_ch4_line26
     captain_sunwoo "Pyeha. Forgive my intrusion, but I have come at Ji-Hye's request. She feared for you."
     "I turned to face him fully."
-    show chunghee normal_v2 at left_char
+    show chunghee normal_v2 at left_char with Dissolve(0.1)
     chung_hee      "Captain Sunwoo. You should know better than to interrupt the Emperor Lord's solitude."
     voice audio.sunwoo_ch4_line27
     captain_sunwoo "Pyeha, I… I mean no disrespect. But if I may speak freely…"
     voice audio.sunwoo_ch4_line28
     captain_sunwoo "Please don't do this… this path you are planning to choose is a perilous one."
 
-    show chunghee alt_neutral at left_char
+    show chunghee alt_neutral at left_char with Dissolve(0.1)
     "I raised an eyebrow."
 
     chung_hee "You think I do not know that, Captain? You think I haven't considered the risks?"
-    hide captain_kang
+    hide captain_kang with Dissolve(0.1)
     show ya_ji_hye at right_char with Dissolve(0.2)
     "He kept his head bowed earnestly. Aunt Ji-hye held my hand tightly."
 
     ji_hye         "Chung… Please… *crying*"
-    hide ya_ji_hye
+    hide ya_ji_hye with Dissolve(0.1)
     show captain_kang at right_flip with Dissolve(0.2)
     voice audio.sunwoo_ch4_line29
     captain_sunwoo "I do not doubt your wisdom, Pyeha. But the burden of vengeance is not yours to bear alone."
@@ -743,7 +746,7 @@ label ch4_common_1:
     captain_sunwoo "If it is vengeance you seek, then allow me to gather the most skilled soldiers of Kyeongjang."
     voice audio.sunwoo_ch4_line31
     captain_sunwoo "Let us march together, and I swear by my honor, Pyeha and Pyeha-sshi will be avenged."
-    show chunghee normal_neutral at left_char
+    show chunghee normal_neutral at left_char with Dissolve(0.1)
     chung_hee      "This is something I must do on my own, Captain. Kyeongjang will not suffer more losses on my behalf."
     voice audio.sunwoo_ch4_line32
     captain_sunwoo "Pyeha… please reconsider. Your safety is paramount. If you fall, the empire—"
@@ -755,22 +758,22 @@ label ch4_common_1:
     captain_sunwoo "Then may the Tetrad watch over you, Pyeha."
 
     "Both of them looked at each other and looked down."
-    hide captain_kang
+    hide captain_kang with Dissolve(0.1)
     show ya_ji_hye at right_char with Dissolve(0.2)
     ji_hye "If you are truly set on this path, Chung, then all I can do is wish you safety. Please… come back to us. Come back to Jong-hee."
-    show chunghee normal_sad at left_char
+    show chunghee normal_sad at left_char with Dissolve(0.1)
     chung_hee "I will return, Aunt. I swear it."
-    show chunghee normal_v2 at left_char
+    show chunghee normal_v2 at left_char with Dissolve(0.1)
 
     "Her trembling hands touched my face, her eyes searching mine one last time before stepping back."
 
     ji_hye "Then I have nothing left to say except… goodbye, my Emperor Lord. May your journey be swift, and may justice be yours."
-    hide ya_ji_hye
+    hide ya_ji_hye with Dissolve(0.1)
     show captain_kang at right_flip with Dissolve(0.2)
     "Captain Sunwoo stood up and approached Aunt Ji-hye."
     voice audio.sunwoo_ch4_line34
     captain_sunwoo "Royal Advisor. Would you care to walk back with me?"
-    hide captain_kang
+    hide captain_kang with Dissolve(0.1)
     show ya_ji_hye at right_char with Dissolve(0.2)
     ji_hye         "Yes, Captain Sunwoo. I appreciate your kind offer."
 
@@ -797,7 +800,7 @@ label ch4_common_2:
 
     # play sound sfx_amulet_pulse                    # PLACEHOLDER
 
-    show chunghee alt_charging at left_char
+    show chunghee alt_charging at left_char with Dissolve(0.1)
     chung_hee "Almighty Renji, Keeper of the Void and Sovereign of Time and Space, I beseech your power. Let your authority guide me across this mortal plane."
     chung_hee "Deliver me to my destination, that I may fulfill what destiny demands."
 
@@ -845,25 +848,25 @@ label ch4_tianho_dorian:
     "In those eight months, life moved forward quietly. Elias, my little light in the darkness, would often dress in skirts and adorn himself with flowers to match Tedda."
     show elias normal_cute at right_char_kids with Dissolve(0.2)
     "Whatever makes him happy, I suppose."
-    hide elias
+    hide elias with Dissolve(0.1)
     "The amulet that Elias once had stopped glowing entirely. "
     "It's like the power inside had been all used up."
     "Good riddance."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "For me, I spent my time rebuilding—physically, mentally, emotionally."
     "I was no longer the Dragon of Gale in the sense that I once was."
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "My days were simpler now, filled with quiet reflection and attempts to find a purpose beyond the shadow of loss."
     "The Dragon of Gale is dead."
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     "Yuxuan had invited me more than once to visit my family's graves. Each time, I declined."
     "It wasn't that I didn't want to go—it was that I couldn't."
     "The thought of standing before their final resting place, of facing the reality of their absence, was something I couldnt bring myself to do."
     "Until now."
     "Tomorrow marks the fifth anniversary of the tragedy of Tianho."
     "Five years since that fateful day when everything changed, when the world as I knew it was shattered."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I turned to Elias, who had been sitting on the rug, giggling as he carefully tied a chain of flowers around Tedda's neck."
 
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
@@ -871,7 +874,7 @@ label ch4_tianho_dorian:
     dorian "Elias… I think I'm ready."
     voice audio.elias_ch4_line1
     elias  "Ready for what, daddy?"
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     "Before I could answer, Yuxuan stepped into the room, his robes sweeping softly against the wooden floor. He had been reading in the corner, but now his full attention was on me."
@@ -882,23 +885,23 @@ label ch4_tianho_dorian:
     voice audio.dorian_ch4_line2
     dorian "To visit their graves. maybe now is the time."
 
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     "Yuxuan's expression softened. He set the book aside and crossed the room, placing a reassuring hand on my shoulder."
 
     voice audio.yuxuan_ch4_line2
     yuxuan "Praise the Prosperity Dragon. If you're ready, then I'll go with you."
 
-    show dorian sad at left_char
+    show dorian sad at left_char with Dissolve(0.1)
     "I hesitated, glancing at the darkened sky outside the window. The thought of Empress Olympia lingered in the back of my mind—a ripple of unease that I couldn't shake."
 
     voice audio.dorian_ch4_line3
     dorian "Do you think we could go now? I'd rather avoid running into the Empress of Gale if we can help it."
     "Yuxuan nodded without hesitation."
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line3
     yuxuan "Sure!"
     "Before I could respond, Elias sprang to his feet, clutching Tedda tightly to his chest."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
 
     voice audio.elias_ch4_line2
@@ -906,26 +909,26 @@ label ch4_tianho_dorian:
     tedda "…"
     "Tedda remained silent, as always, but Elias made sure to shake the little toy, as if demanding my agreement."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I knelt in front of him, placing a gentle hand on his head."
 
     voice audio.dorian_ch4_line4
     dorian "I don't think it's a good idea… This isn't the kind of trip for you."
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line4
     yuxuan "Oh, come now, Dorian. Let him come along. There are plenty of food stalls along the way. I'm sure Elias and Tedda would enjoy that, wouldn't you, Elias?"
-    hide yuxuan
-    show elias normal_happy at right_char_kids
+    hide yuxuan with Dissolve(0.1)
+    show elias normal_happy at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch4_line3
     elias  "Food? Like dumplings? And candy sticks? Ooooh, Tedda loves candy sticks!"
 
     "He spun in a little circle, holding Tedda above his head."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line5
     dorian "Alright, but you have to promise me you'll stay close. No running off, understand?"
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line5
     yuxuan "Alright. It's settled. I'll have the carriage waiting!"
@@ -956,7 +959,7 @@ label ch4_cemetery:
 
     voice audio.yuxuan_ch4_line6
     yuxuan "Take your time, Dorian. Elias and I will wander around for a bit."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line4
     elias "Tedda and I will wait for you, daddy!"
@@ -975,10 +978,12 @@ label ch4_cemetery:
     "Elara Burnham. Daniel. Emily. Sarah. Lucas."
     "My family."
 
-    "My breath caught in my throat as I stared at the names, each one a sharp reminder of what I had lost. My knees felt weak, and before I knew it, I had fallen to the ground in front of them."
+    "My breath caught in my throat as I stared at the names, each one a sharp reminder of what I had lost."
+    "My knees felt weak, and before I knew it, I had fallen to the ground in front of them."
     "I reached out, my fingers brushing against Elara's name. The cold stone beneath my hand was a stark contrast to the warmth she had always carried."
 
     scene cg_dorian_to_family with fade
+    play music audio.ost_tianho_cemetery volume 0.5 fadein 1.5 loop
     voice audio.dorian_ch4_line7
     dorian "My love, my heart..."
     "The words came out in a whisper, trembling with emotion."
@@ -995,7 +1000,8 @@ label ch4_cemetery:
     voice audio.dorian_ch4_line12
     dorian"I should have been there with you all."
 
-    "I stayed there, sitting in silence as the wind carried the soft rustle of leaves. My mind drifted back to memories of them—Elara's laugh, Daniel's courage, Emily's curiosity, Sarah's wisdom, and little Lucas's boundless energy."
+    "I stayed there, sitting in silence as the wind carried the soft rustle of leaves."
+    "My mind drifted back to memories of them—Elara's laugh, Daniel's courage, Emily's curiosity, Sarah's wisdom, and little Lucas's boundless energy."
     "Time seemed to slip away as I sat there, lost in thought. I didn't know how long it had been when I finally looked up, noticing more people arriving at the cemetery."
     "The peaceful solitude was beginning to fade, and I realized it was time to leave."
     "I stood, brushing off the dirt from my knees, and looked down at the tombstones one last time."
@@ -1011,6 +1017,7 @@ label ch4_cemetery:
     "I turned and began walking back toward the entrance."
 
     scene tianho_cemetery_afternoon with dissolve        # PLACEHOLDER
+    stop music fadeout 1.5
 
     "I couldn't find Yuxuan at his previous location. I scanned the area. Then I found Elias."
     show elias normal_happy at right_char_kids with Dissolve(0.2)
@@ -1032,41 +1039,41 @@ label ch4_cemetery:
     voice audio.dorian_ch4_line15
     dorian "Elias, you're not supposed to sit on top of gravestones. Get down from there."
 
-    show elias normal_neutral at right_char_kids
+    show elias normal_neutral at right_char_kids with Dissolve(0.1)
     "Elias instinctively looked up at me. He cuddled his teddy bear, Tedda, close. He jumped from his perch and walked up to me."
 
     voice audio.elias_ch4_line8
     elias "Oh… Daddy, are you finished already?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line16
     dorian "Yeah. I'm done. Where's Yuxuan? Why aren't you guys at our agreed spot?"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I crouched down, brushing some dirt off his cheek."
 
     voice audio.dorian_ch4_line17
     dorian "But Elias, this is a place of respect. We don't sit on gravestones, alright?"
-    show elias normal_sad at right_char_kids
+    show elias normal_sad at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch4_line9
     elias "Oh… sorry, daddy."
-    show elias normal_neutral at right_char_kids
+    show elias normal_neutral at right_char_kids with Dissolve(0.1)
     "I scanned the area, my gaze landing on Yuxuan a little distance away. He was deep in conversation, gesturing with his usual authority as he discussed something I couldn't quite hear at first."
     "I took Elias's hand, his tiny fingers wrapping tightly around mine as he skipped beside me, Tedda swinging from his other hand."
     "As we got closer, Yuxuan's voice became clear, his commanding tone filling the air."
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line7
     yuxuan "Gentlemen, I appreciate your insights on the new propulsion system."
     voice audio.yuxuan_ch4_line8
     yuxuan "It's a promising concept, and I look forward to our continued collaboration."
-    show yuxuan alt_close_eyes at right_char
+    show yuxuan alt_close_eyes at right_char with Dissolve(0.1)
     "He adjusted a sleek communication device on his wrist."
 
     voice audio.yuxuan_ch4_line9
     yuxuan "But I need to make sure that the team will be performing properly."
     voice audio.yuxuan_ch4_line10
     yuxuan "Can I count on that, Mr. Diagro? Meeting deadlines is not an unreasonable expectation."
-    show yuxuan alt_mid_close_eyes at right_char
+    show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line11
     yuxuan "This new invention has the potential to make a positive impact, to improve lives." 
     voice audio.yuxuan_ch4_line12
@@ -1074,7 +1081,7 @@ label ch4_cemetery:
     voice audio.yuxuan_ch4_line13
     yuxuan "The propulsion system needs to be launched next month. That's an order, Ms. Ara."
     "I glanced down at Elias, whose eyes were wide with curiosity, though I could tell he didn't understand half of what Yuxuan was saying."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     
     voice audio.dorian_ch4_line18
     dorian "Elias, how long have you been separated from Yuxuan?"
@@ -1086,6 +1093,7 @@ label ch4_cemetery:
     elias "A lot, daddy. Mister Yuxuan was talking for a lot of minutes."
     show elias normal_neutral at right_char_kids 
     show dorian normal_alt_neutral at left_char
+    with Dissolve(0.1)
     voice audio.dorian_ch4_line19
     dorian "I see. So, he's been at it for a while now."
 
@@ -1105,7 +1113,7 @@ label ch4_yuxuan_convo:
         "Continue to wait patiently.":
             $ ch4_yuxuan_interrupted = False
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I can give him a few more minutes. It's not like we're in a rush. Elias seems content enough for now."
 
             show yuxuan alt_think at right_char with Dissolve(0.2)
@@ -1117,20 +1125,20 @@ label ch4_yuxuan_convo:
             yuxuan "But nothing! Risks are inherent in any endeavor, but we've mitigated them to the best of our abilities."
             voice audio.yuxuan_ch4_line17
             yuxuan "We owe it to ourselves and to Ena to move forward."
-            show yuxuan alt_close_eyes at right_char
+            show yuxuan alt_close_eyes at right_char with Dissolve(0.1)
             voice audio.yuxuan_ch4_line18
             yuxuan "Of course, of course. Yes. Ms. Jane, please prepare a detailed plan to be submitted at the end of your shift. Got it?"
             voice audio.yuxuan_ch4_line19
             yuxuan "Overtime? But you're on the night shift and it's barely the end of the afternoon… You have plenty of time. Ugh. Okay fine, approved."
-            show yuxuan normal_angry at right_char
+            show yuxuan normal_angry at right_char with Dissolve(0.1)
             voice audio.yuxuan_ch4_line20
             yuxuan "But you better have the plan prepared or, I swear in the name of the Prosperity dragon, I'm gonna have to replace you! No, I mean it! I really mean—"
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "Seeing no other option, I waved at Yuxuan."
-            show yuxuan normal_lying at right_char
+            show yuxuan normal_lying at right_char with Dissolve(0.1)
             "When he finally noticed me, his expression shifted from intense concentration to embarrassment, realizing that I had beenwaiting patiently."
-            show yuxuan normal_neutral at right_char
+            show yuxuan normal_neutral at right_char with Dissolve(0.1)
             voice audio.yuxuan_ch4_line21
             yuxuan "My apologies, I'll be back with you in just a moment. Ms. Ara, take the lead please."
 
@@ -1139,30 +1147,30 @@ label ch4_yuxuan_convo:
         "Try to get his attention by waving your hand.":
             $ ch4_yuxuan_interrupted = False
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I can give him a few more minutes. It's not like we're in a rush. Elias seems content enough for now."
 
             show yuxuan alt_think at right_char with Dissolve(0.2)
             yuxuan "Look, I understand your concerns, and they are VALID, but I firmly believe that the market is ready for this innovation. We can't afford to have any more delays."
             yuxuan "But nothing! Risks are inherent in any endeavor, but we've mitigated them to the best of our abilities. We owe it to ourselves and to Ena to move forward."
-            show yuxuan alt_close_eyes at right_char
+            show yuxuan alt_close_eyes at right_char with Dissolve(0.1)
             yuxuan "Of course, of course. Yes. Ms. Jane, please prepare a detailed plan to be submitted at the end of your shift. Got it?"
             yuxuan "Overtime? But you're on the night shift and it's barely the end of the afternoon… You have plenty of time. Ugh. Okay fine, approved."
-            show yuxuan normal_angry at right_char
+            show yuxuan normal_angry at right_char with Dissolve(0.1)
             yuxuan "But you better have the plan prepared or, I swear in the name of the Prosperity dragon, I'm gonna have to replace you! No, I mean it! I really mean—"
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "Seeing no other option, I waved at Yuxuan."
-            show yuxuan normal_lying at right_char
+            show yuxuan normal_lying at right_char with Dissolve(0.1)
             "When he finally noticed me, his expression shifted from intense concentration to embarrassment, realizing that I had beenwaiting patiently."
-            show yuxuan normal_neutral at right_char
+            show yuxuan normal_neutral at right_char with Dissolve(0.1)
             yuxuan "My apologies, I'll be back with you in just a moment. Ms. Ara, take the lead please."
 
             jump ch4_yuxuan_common
 
         "Ask Elias and Tedda for help.":
             $ ch4_yuxuan_interrupted = False
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "Elias could charm a mountain into moving. Maybe his enthusiasm can draw Yuxuan's attention."
 
             voice audio.dorian_ch4_line20
@@ -1179,7 +1187,7 @@ label ch4_yuxuan_convo:
             voice audio.elias_ch4_line12
             elias "Mister Yuxuan! See? Tedda's waving at you! She says hi really loud!"
             tedda "…"
-            hide elias
+            hide elias with Dissolve(0.1)
             show yuxuan normal_angry at right_char with Dissolve(0.2)
             voice audio.yuxuan_ch4_line22
             yuxuan "I already told you, Jane! Get it done by the end of your shift! Is that too much to ask?"
@@ -1187,27 +1195,27 @@ label ch4_yuxuan_convo:
             yuxuan "We can't afford to have another delay, I told you!"
             voice audio.yuxuan_ch4_line24
             yuxuan "We need to get those propulsion systems on the market as soon as possible! You have a secretary, right? Go and ask her for help!"
-            hide yuxuan
+            hide yuxuan with Dissolve(0.1)
             show elias normal_sad at right_char_kids with Dissolve(0.2)
             voice audio.elias_ch4_line13
             elias "Daddy, Mister Yuxuan didn't see Tedda."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I pinched the bridge of my nose, trying not to laugh."
-            show dorian normal at left_char
+            show dorian normal at left_char with Dissolve(0.1)
             voice audio.dorian_ch4_line21
             dorian "It's okay, Elias. It's not your fault. He's busy."
 
-            show elias normal_happy at right_char_kids
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
             "But Elias wasn't about to give up so easily. His eyes lit up with a new idea, and he pointed toward a nearby gravestone adorned with beautiful flowers."
 
             voice audio.elias_ch4_line14
             elias "Daddy! Tedda and me will give him flowers! Pretty flowers! Look over there!"
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "Before I could say a word, Elias bolted toward the gravestone with his tiny feet pattering against the ground."
             "The tag on the flowers read: Rest in Peace, Mom."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "I hurried after him, catching him just as he reached for the vibrant blooms. Gently, I took his little hand before he could pick any."
 
             voice audio.dorian_ch4_line22
@@ -1217,16 +1225,16 @@ label ch4_yuxuan_convo:
             voice audio.elias_ch4_line15
             elias "Oh… sorry, daddy. We'll just continue waving then."
 
-            show elias normal_happy at right_char_kids
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
             "Without a care in the world, he cheerfully continues to wave the toy's hands. Charming, but definitely not getting Yuxuan's attention. Why did I even ask for his help?"
 
             jump ch4_yuxuan_common
 
         "Interrupt Yuxuan yourself.":
             $ ch4_yuxuan_interrupted = True
-            $ yuxuan_affection += 1
+            $ A3_yuxuan_affection += 1
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "He told me to step in when this happens. I might as well remind him that we're waiting."
 
             show yuxuan normal_neutral at right_char with Dissolve(0.2)
@@ -1235,14 +1243,14 @@ label ch4_yuxuan_convo:
             voice audio.dorian_ch4_line23
             dorian "Yuxuan. Yuxuan?"
 
-            show yuxuan normal_angry at right_char
+            show yuxuan normal_angry at right_char with Dissolve(0.1)
             voice audio.yuxuan_ch4_line25
             yuxuan "Jane, I won't ask again. Get it done and send it to him. No excuses."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             dorian "Yuxuan. Hey, I'm finished."
 
-            show yuxuan normal_happy at right_char
+            show yuxuan normal_happy at right_char with Dissolve(0.1)
             "As I interrupted Yuxuan, he felt relieved. His face lit up with a smile as he turned to his device."
 
             voice audio.yuxuan_ch4_line26
@@ -1259,12 +1267,13 @@ label ch4_yuxuan_common:
 
     "I chuckled, shaking my head."
 
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line27
     yuxuan "Dorian, buddy, sorry for the spectacle. Are you finished? How was it?"
     show yuxuan normal_normal at right_char
 
     show dorian neutral at left_char
+    with Dissolve(0.1)
     voice audio.dorian_ch4_line24
     dorian "Don't mention it, Yu. And… yeah, I'm done. It felt nice, actually."
     voice audio.dorian_ch4_line25
@@ -1276,34 +1285,35 @@ label ch4_yuxuan_common:
 
     "He waved a hand dismissively."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line28
     yuxuan "No, no, no! Pleasure's all mine, Dorian. It's the least I can do since you've saved me during the tragedy."
     voice audio.yuxuan_ch4_line29
     yuxuan "And… we're friends. It's an honor for me to be there for you."
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line28
     dorian "Th-Thank you, Yu. I appreciate it."
     show dorian neutral at left_char
 
     show yuxuan alt_smile at right_char
+    with Dissolve(0.1)
     voice audio.yuxuan_ch4_line30
     yuxuan "Anyway, I think it's time for us to go. Before we leave, however, I suggest we try those treats from Hinami."
     voice audio.yuxuan_ch4_line31
     yuxuan "Elias, do you like treats?"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line16
     elias "Treats?! Candies?"
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line32
     yuxuan "Well, treats, yes. But they're not candies. They're delectable treats from the Hinami booth here."
     voice audio.yuxuan_ch4_line33
     yuxuan "They're fish treats- considering the ingredients-"
     hide yuxuan with Dissolve(0.1)
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "As Yuxuan continued speaking, I noticed a growing number of people entering the cemetery."
     "They moved in coordinated lines, their armor gleaming in the sunlight and marked with the unmistakable emblem of the Mjoll kingdom."
     "What in Tetrad's name are they doing here? Are they here for me? For Elias?"
@@ -1311,12 +1321,13 @@ label ch4_yuxuan_common:
     voice audio.yuxuan_ch4_line34
     yuxuan "Come, I'll show you where the booth is. Let's go. You'll love them!"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line29
     dorian "Wait, Yu—"
 
     hide dorian
     hide yuxuan
+    with Dissolve(0.1)
     show svante normal_angry at center_char 
     with Dissolve(0.2)
     voice audio.svante_ch4_line9
@@ -1333,7 +1344,7 @@ label ch4_yuxuan_common:
     voice audio.svante_ch4_line10
     svante "As I've said, sir. It's not safe. Please leave immediately."
 
-    show yuxuan normal_angry at right_char
+    show yuxuan normal_angry at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line36
     yuxuan "No. And who are YOU to tell us to leave? There better be a good reason for this!"
     voice audio.svante_ch4_line11
@@ -1345,18 +1356,18 @@ label ch4_yuxuan_common:
 
     show dorian normal_alt_calm at left_char with Dissolve(0.2)
     "I kept my head bowed, tightening my grip on Elias's hand. His little fingers curled into mine as Tedda dangled limply in his grasp."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
 
     voice audio.dorian_ch4_line30
     dorian "Thank you for the warning. We'll heed your advice and leave immediately. Which exit should we take?"
     voice audio.svante_ch4_line13
     svante "Please exit through the main gate—the way you came. But hurry. There isn't much time."
 
-    show yuxuan normal_angry at right_char
+    show yuxuan normal_angry at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line38
     yuxuan "No, we're not going anywhere without those damned treats—"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line31
     dorian "Yu, let's just go. Please. Come on. Elias."
     voice audio.elias_ch4_line17
@@ -1385,12 +1396,13 @@ label ch4_cemetery_exit:
 
     "I sighed, trying to keep my tone calm as I responded."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line32
     dorian "We're not being treated like common criminals, Yu. Calm down."
 
     show dorian serious at left_char
     show yuxuan normal_angry at right_char
+    with Dissolve(0.1)
     voice audio.yuxuan_ch4_line40
     yuxuan "My work has changed lives, improved industries, and brought prosperity to this land! I've dedicated myself to progress."
     voice audio.yuxuan_ch4_line41
@@ -1398,20 +1410,20 @@ label ch4_cemetery_exit:
 
     "Elias clung to my hand, his little giggles bubbling up despite the situation. He hugged Tedda close, whispering something to her while sneaking amused glances at Yuxuan."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "I stepped closer, placing a firm hand on Yuxuan's shoulder to steady him. His rant came to an abrupt halt, and I noticed his cheeks flush an intense shade of crimson."
 
-    show yuxuan normal_lying at right_char
+    show yuxuan normal_lying at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line42
     yuxuan "…?!"
 
     "He looked at me, wide-eyed, almost frozen in place."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line33
     dorian "Yu, calm yourself. We're going to be fine. Let's just go home."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     "Yuxuan blinked rapidly, his face growing even redder as he stumbled over his words."
 
     voice audio.yuxuan_ch4_line43
@@ -1419,23 +1431,23 @@ label ch4_cemetery_exit:
     voice audio.yuxuan_ch4_line44
     yuxuan "You always know how to, um, calm my nerves."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line34
     dorian "Yu, are you okay? You seem... flustered."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line18
     elias "Mister Yuxuan, your face matches Tedda's color!"
-    hide elias
+    hide elias with Dissolve(0.1)
     show yuxuan normal_angry at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line45
     yuxuan "Wh-What?! No!!! I—"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line35
     dorian "Come on. Let's keep moving."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line46
     yuxuan "You're right. Let's go."
 
@@ -1453,7 +1465,7 @@ label ch4_cemetery_exit:
     svante "Sir, please understand. This is for your safety. I must insist—"
     prophet "Safety? SAFETY?! We're here because we have brothers who died during the tragedy! This is sacred ground! How dare you kick us out?!"
 
-    show svante normal_angry at right_char
+    show svante normal_angry at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line15
     svante "With all due respect, sir, this isn't my choice. These are orders. I assure you, this is for your own protection—"
 
@@ -1463,7 +1475,7 @@ label ch4_cemetery_exit:
     voice audio.tianxun_ch4_line2
     tian_xun"If they won't leave willingly, I'll personally show them the consequences of disobedience!"
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line16
     svante "S-Sir—"
     voice audio.tianxun_ch4_line3
@@ -1479,6 +1491,7 @@ label ch4_cemetery_exit:
     tian_xun "One boom, and they'll scatter like frightened mice. Gustav would love it! BOOM! BOOM!"
     show svante normal_angry at right_char
     show niko alt_annoyed at left_char
+    with Dissolve(0.1)
     voice audio.niko_ch4_line2
     niko "You've got to be kidding me. This lunatic works for Gustav? No wonder things are a mess."
 
@@ -1494,13 +1507,13 @@ label ch4_cemetery_exit:
     tian_xun "They should be proud of me! But enough talk—get out before I decide to test my newest invention right here."
     tian_xun "GET OUT! OUT, OUT, OUT! BEFORE I GO BOOM!"
 
-    show niko normal_ignore at left_char
+    show niko normal_ignore at left_char with Dissolve(0.1)
     voice audio.niko_ch4_line3
     niko "Tsk…"
 
     prophet "Come, brother Niko. There is no reasoning with this one. Let us go for now. But mark my words, this is far from over."
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line18
     svante "I… I'm sorry."
 
@@ -1523,7 +1536,7 @@ label ch4_cemetery_exit:
     voice audio.niko_ch4_line5
     niko "I hope so."
     prophet "He knows, Niko. Kaito knows."
-    hide niko
+    hide niko with Dissolve(0.1)
 
     show elias normal_happy at right_char_kids
     show dorian neutral at left_char
@@ -1534,6 +1547,7 @@ label ch4_cemetery_exit:
     hide elias
     hide dorian
 
+    with Dissolve(0.1)
     show niko alt_tense at left_char with Dissolve(0.2)
     voice audio.niko_ch4_line6
     niko    "Hmm…"
@@ -1547,13 +1561,13 @@ label ch4_cemetery_exit:
     niko    "Enoch probably intervened."
     voice audio.niko_ch4_line10
     niko    "And that means that man with the child… is Dorian."
-    show niko normal_base at left_char
+    show niko normal_base at left_char with Dissolve(0.1)
     prophet "Dorian… Ex-paladin Dorian… By Enoch, you're right!"
     voice audio.niko_ch4_line11
     niko    "The Dragon of Gale…"
     prophet "What are they doing here?"
 
-    hide niko
+    hide niko with Dissolve(0.1)
     show dorian serious at left_char
     show yuxuan normal_neutral at right_char
     with Dissolve(0.2)
@@ -1564,18 +1578,19 @@ label ch4_cemetery_exit:
     dorian "Mjoll… What are they up to now?"
     "Yuxuan rolled his eyes, fiddling with his communication device."
 
-    show yuxuan normal_angry at right_char
+    show yuxuan normal_angry at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line48
     yuxuan "This is intolerable. I'm calling for our carriage. We're leaving this madhouse at once."
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.girl_ald_ch4_line5
     girl_ald_soldier "WAIT! HE KNOWS!! HE'S GETTING AWAY!! AFTER HIM, NOW!!"
     hide dorian
     hide yuxuan
+    with Dissolve(0.1)
     show tian_xun at center_char with Dissolve(0.2)
     voice audio.tianxun_ch4_line12
     tian_xun "What?! HE'S GETTING AWAY?! Bahaha, not on my watch! Fire the beauty—FIRE HER NOW!!"
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
 
     show elias alt_doubt at left_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line20
@@ -1601,15 +1616,15 @@ label ch4_cemetery_exit:
 
     chung_hee "People of Tianho! I have been tricked by Mjoll! They've ambushed me—please, I need aid!"
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line51
     yuxuan "Wait—I can hear it! I can hear his voice!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_sad at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line21
     elias  "Daddy… can you hear it too? What's happening?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I nodded grimly, gripping Elias's hand tighter."
 
     woman_1 "The man is asking for aid! But I can't stay here! I have children!"
@@ -1625,7 +1640,7 @@ label ch4_cemetery_exit:
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line1
     aoi "Such powerful mind channeling…"
-    hide aoi_battle_suit
+    hide aoi_battle_suit with Dissolve(0.1)
 
     show tian_xun at right_char with Dissolve(0.2)
     voice audio.tianxun_ch4_line13
@@ -1634,68 +1649,68 @@ label ch4_cemetery_exit:
     tian_xun "Impossible! A miscalculation like this… it's infuriating! You should've been a pile of ash by now! How did you survive, huh?!"
     voice audio.tianxun_ch4_line15
     tian_xun "What you need is another! Another! BOOM! BOOM!"
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line2
     aoi "Tian Xun, enough! The last thing we need is another one of your wasted bombs."
-    hide aoi_battle_suit
+    hide aoi_battle_suit with Dissolve(0.1)
 
     show tian_xun at right_char with Dissolve(0.2)
     voice audio.tianxun_ch4_line16
     tian_xun "Grr…. You're no fun, Aoi."
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line3
     aoi "Aldoriths, form up! His barriers won't last long. He's already at his limit."
-    hide aoi_battle_suit
-    show chunghee alt_charging at left_char
+    hide aoi_battle_suit with Dissolve(0.1)
+    show chunghee alt_charging at left_char with Dissolve(0.1)
     chung_hee "This is your last chance! I have no quarrel with you. I seek only your king. Stand aside, and no harm will come to you."
 
     show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars "Your fight with our king is OUR fight, you fool. Do you think you can just waltz in and demand a duel?!"
-    hide mjoll_lars
+    hide mjoll_lars with Dissolve(0.1)
 
     show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "We've been waiting for a real fight. Your 'honor' doesn't scare us, Emperor. You'll die here like the rest of your kind."
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
 
     show mjoll_pavel at right_flip with Dissolve(0.2)
     voice audio.pavel_ch4_line4
     mjoll_pavel "You're outnumbered, outclassed, and out of luck. It's time you joined your ancestors."
-    hide mjoll_pavel
+    hide mjoll_pavel with Dissolve(0.1)
 
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line19
     svante "…"
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show boy_ald_normal at right_flip with Dissolve(0.2)
     voice audio.boy_ald_ch4_line2
     boy_ald_soldier "Your blood will stain the land, Emperor! For Father!"
-    hide boy_ald_normal
+    hide boy_ald_normal with Dissolve(0.1)
 
     show svante normal_sad at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line20
     svante "No… No, this isn't right." 
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show girl_ald_normal at right_char with Dissolve(0.2)
     voice audio.girl_ald_ch4_line6
     girl_ald_soldier "What?! What did you say?"
-    hide girl_ald_normal
+    hide girl_ald_normal with Dissolve(0.1)
 
     show svante normal_base at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line21
     svante "This man doesn't want to harm us! He's asking for a duel—he's giving us a chance to avoid more bloodshed!"
     voice audio.svante_ch4_line22
     svante "Please, don't let this end like this!"
-    hide svante
+    hide svante with Dissolve(0.1)
     
     show mjoll_lars at right_char with Dissolve(0.2)
     mjoll_lars "Are you… are you siding with him? You'd betray your own people?"
-    hide mjoll_lars
+    hide mjoll_lars with Dissolve(0.1)
 
     show svante normal_sad at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line23
@@ -1704,27 +1719,27 @@ label ch4_cemetery_exit:
     svante "Father said that the Emperor is a dishonorable man who murders and kills innocents. Look at him! He's offering us peace!"
     voice audio.svante_ch4_line25
     svante "Will a dishonorable man do that?"
-    hide svante
+    hide svante with Dissolve(0.1)
     show chunghee normal_angry at left_char
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line4
     aoi "Bold of an aldorith to have an opinion. Your Father will know about this."
-    hide aoi_battle_suit
+    hide aoi_battle_suit with Dissolve(0.1)
 
     show boy_ald_normal at right_flip with Dissolve(0.2)
     voice audio.boy_ald_ch4_line3
     boy_ald_soldier "You really want to end up like your sister Kristin, huh? Dead for nothing?"
-    hide boy_ald_normal
+    hide boy_ald_normal with Dissolve(0.1)
 
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line26
     svante "All I'm saying is that this isn't the Emperor of Kyeongjang! He's far from him!"
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show tian_xun at right_char with Dissolve(0.2)
     voice audio.tianxun_ch4_line17
     tian_xun "Oh, how touching! A traitor among the righteous. Let's see how your little 'peace talk' works against THIS!"
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line5
@@ -1737,17 +1752,18 @@ label ch4_cemetery_exit:
     show tian_xun at right_char with Dissolve(0.2)
     voice audio.tianxun_ch4_line18
     tian_xun "HAHAHAHA! BOOM! BOOM!"
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
 
     show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "The barrier… it's still there!"
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
 
     show chunghee normal_angry at left_char with Dissolve(0.2)
     chung_hee "I didn't come here to spill blood. But if you force my hand…"
     show chunghee normal_power_up at left_char
 
     show aoi_battle_suit at right_char
+    with Dissolve(0.1)
     voice audio.aoi_ch4_line6
     aoi "Tsk! We wasted the last bomb because of you, Tian Xun! Aldoriths—kill him!"
 
@@ -1770,7 +1786,7 @@ label ch4_cemetery_exit:
 
     voice audio.yuxuan_ch4_line52
     yuxuan "The carriage! It's here—it's at the front gate! But it can't get through!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show elias alt_crying at right_char_kids with Dissolve(0.2)
     "Elias stumbled."
@@ -1783,10 +1799,10 @@ label ch4_cemetery_exit:
     voice audio.elias_ch4_line23
     elias "We can't leave her! She's scared!"
 
-    show dorian dragon_eyes at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
     "I raised my hand. The ground shifted slightly as the earth responded to my will, lifting the bear from the dirt and bringing it quickly to my hand."
 
-    show dorian normal at left_char
+    show dorian normal at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line37
     dorian "There. Tedda's fine now. Let's go."
 
@@ -1794,33 +1810,35 @@ label ch4_cemetery_exit:
     "Three soldiers from Mjoll stood near the carriage, their armor gleaming in the afternoon sun. All of them were arguing with the driver."
     hide dorian
     hide elias
+    with Dissolve(0.1)
     show mjoll_soldier_1 at left_char with Dissolve(0.2)
     mjoll_soldier_1 "We need this carriage. It's ours now. Get off!"
     carriage_driver "I don't care who you are—I was called to pick Master Yuxuan up! This is the property of Cheng Industries!"
-    hide mjoll_soldier_1
+    hide mjoll_soldier_1 with Dissolve(0.1)
 
     show mjoll_soldier_2 at left_char with Dissolve(0.2)
     mjoll_soldier_2 "Hey, buddy. We can do this the easy way, or we can do this the hard way. Your choice."
-    hide mjoll_soldier_2
+    hide mjoll_soldier_2 with Dissolve(0.1)
 
     show mjoll_soldier_female_1 at left_char with Dissolve(0.2)
     mjoll_soldier_female_1    "Get out of there if you know what's good for you!"
     carriage_driver "Ahh!! Okay! Okay!"
 
     "The second soldier turned, spotting us as we approached. His hand shot to his weapon—a jagged blade that glinted in the light."
-    hide mjoll_soldier_female_1
+    hide mjoll_soldier_female_1 with Dissolve(0.1)
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
     mjoll_soldier_female_1    "Looks like they're here."
 
     show yuxuan normal_angry at left_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line53
     yuxuan "Hey! Step away from the carriage! That's the property of Cheng Industries!"
-    hide mjoll_soldier_female_1
+    hide mjoll_soldier_female_1 with Dissolve(0.1)
     show mjoll_soldier_2 at right_char with Dissolve(0.2)
     mjoll_soldier_2 "If you're smart, you know better than to fight us. Find another way out."
     hide yuxuan
     hide mjoll_soldier_2
 
+    with Dissolve(0.1)
     show elias normal_neutral at right_char_kids
     show dorian serious at left_char
     with Dissolve(0.2)
@@ -1828,33 +1846,33 @@ label ch4_cemetery_exit:
     elias "Daddy… They look scary…"
     voice audio.dorian_ch4_line38
     dorian "You're not taking this carriage. We have a child with us."
-    hide elias
+    hide elias with Dissolve(0.1)
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
     mjoll_soldier_female_1 "And? You think we care about your kid? This carriage belongs to King Gustav now."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I clenched my fists, feeling the familiar hum of power coursing through me. The ground beneath my feet shifted slightly, small cracks forming as my frustration grew."
 
     voice audio.dorian_ch4_line39
     dorian       "This carriage doesn't belong to you. Step down now, or you'll regret it."
-    hide mjoll_soldier_female_1
+    hide mjoll_soldier_female_1 with Dissolve(0.1)
     show mjoll_soldier_1 at right_char with Dissolve(0.2) 
     mjoll_soldier_1        "A channeler, huh?"
-    hide mjoll_soldier_1
+    hide mjoll_soldier_1 with Dissolve(0.1)
     show mjoll_soldier_2 at right_char with Dissolve(0.2)
     mjoll_soldier_2        "You don't scare me, pal. Now beat it!"
     
     "The soldier in the driver's seat cursed, trying to pull the reins, but the carriage didn't budge. The horses, too petrified, didn't budge."
-    hide mjoll_soldier_2
+    hide mjoll_soldier_2 with Dissolve(0.1)
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
     mjoll_soldier_female_1 "What?"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line40
     dorian "Step aside. Now."
 
     "The second soldier stepped toward me, blade raised."
-    hide mjoll_soldier_female_1
+    hide mjoll_soldier_female_1 with Dissolve(0.1)
     show mjoll_soldier_2 at right_char with Dissolve(0.2)
     mjoll_soldier_2 "Why I oughta! Someone ought to teach you some manners!"
 
@@ -1868,12 +1886,12 @@ label ch4_cemetery_exit:
 
             play sound sfx_earth             # PLACEHOLDER
 
-            show dorian dragon_eyes at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I stomped the ground. The earth buckled beneath the soldier's feet, a jagged pillar shooting up and knocking the blade from his hands."
             "His head hit the ground, knocking him unconscious."
-            hide mjoll_soldier_2
+            hide mjoll_soldier_2 with Dissolve(0.1)
 
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             voice audio.dorian_ch4_line41
             dorian "You were warned."
 
@@ -1882,22 +1900,22 @@ label ch4_cemetery_exit:
             $ _choice_timeout = 0
             stop sound
 
-            show dorian normal_alt_tense at left_char
+            show dorian normal_alt_tense at left_char with Dissolve(0.1)
             "I froze, panic gripping me as the soldier's blade gleamed dangerously close. My breath caught in my throat."
             "Before I could react, Yuxuan reached into his satchel and flung a small pouch at the soldier. It burst mid-air, releasing a fine, silvery powder."
-            show mjoll_soldier_2 at right_char
+            show mjoll_soldier_2 at right_char with Dissolve(0.1)
             mjoll_soldier_2  "Zzz… Zzz…"
-            hide mjoll_soldier_2
+            hide mjoll_soldier_2 with Dissolve(0.1)
             show yuxuan normal_happy at right_char with Dissolve(0.2)
             voice audio.yuxuan_ch4_line54
             yuxuan "Sleep powder. Courtesy of Cheng Industries. I knew this would come in handy!"
-            hide yuxuan
+            hide yuxuan with Dissolve(0.1)
     show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
     mjoll_soldier_female_1    "This one's trouble! Fall back!"
-    hide mjoll_soldier_female_1
+    hide mjoll_soldier_female_1 with Dissolve(0.1)
     show mjoll_soldier_1 at right_char with Dissolve(0.2)
     mjoll_soldier_1 "Grr…. Hurry! Pull the reins again! Let's get out of here!"
-    hide mjoll_soldier_1
+    hide mjoll_soldier_1 with Dissolve(0.1)
     "The soldiers scrambled onto the carriage, yanking the driver out of the seat. The female soldier grabbed the reins, cracking them hard, and the horses began to pull away."
 
     carriage_driver "You can't do that! No!"
@@ -1912,26 +1930,26 @@ label ch4_cemetery_exit:
             $ _choice_timeout = 0
             stop sound
 
-            show dorian normal_alt_tense at left_char
+            show dorian normal_alt_tense at left_char with Dissolve(0.1)
             "I tried to focus, summoning the energy to stop them—but my foot caught on a loose rock, and I fell flat on my face."
 
             show yuxuan normal_sad at right_char with Dissolve(0.2)
             voice audio.yuxuan_ch4_line55
             yuxuan "Dorian!"
-            hide yuxuan
+            hide yuxuan with Dissolve(0.1)
             show elias normal_evil at right_char_kids with Dissolve(0.2)
             voice audio.elias_ch4_line25
             elias  "Tedda! Protect us!"
         
             "Elias flung his stuffed bear with all his might. The toy hit the female soldier dead in the face as she was laughing, specifically her mouth."
-            hide elias
+            hide elias with Dissolve(0.1)
             show mjoll_soldier_female_1 at right_char with Dissolve(0.2)
             mjoll_soldier_female_1 "Pfttt—Waahhh!! Eww!!"
             "She flailed, grabbing at the reins, but the sudden commotion startled the horses. They reared up, neighing loudly."
-            hide mjoll_soldier_female_1
+            hide mjoll_soldier_female_1 with Dissolve(0.1)
             show mjoll_soldier_1 at right_char with Dissolve(0.2)
             mjoll_soldier_1 "Stop! WHOA!"
-            hide mjoll_soldier_1
+            hide mjoll_soldier_1 with Dissolve(0.1)
 
             # TODO: play sound sfx_carriage_crash     
             "The carriage lurched violently to the side, its wheels hitting a large rock."
@@ -1950,10 +1968,10 @@ label ch4_cemetery_exit:
             stop sound
 
             play sound sfx_wind
-            show dorian dragon_eyes at left_char
+            show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I planted my feet firmly and reached deep, calling on the winds. They roared to life around me, whipping through the air like an invisible storm."
             "With a sharp motion of my arm, the wind blasted toward the carriage."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "The gust struck the soldiers with brutal force, knocking them clean off the back. They landed on the ground, knocking them unconscious."
     # D2 converge
     carriage_driver "Please, get in!"
@@ -1974,7 +1992,7 @@ label ch4_cemetery_exit:
     voice audio.elias_ch4_line27
     elias "Daddy… are we safe now?"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I reached over and gently ruffled his hair."
 
     voice audio.dorian_ch4_line43
@@ -1987,17 +2005,17 @@ label ch4_cemetery_exit:
 # =============================================================================
 
 label ch4_battlefield:
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "But then, as we turned a corner, we saw it."
     "The area near the cemetery was littered with bodies—armored individuals sprawled across the ground, their blood staining the dirt. Some were barely moving, others entirely still."
     "The once-sacred space now looked like a battlefield."
     "In the center of it all, a young man stood in the middle. His chest rose and fell unevenly, his breaths labored and ragged. His right hand clutched at his side, blood seeping through his fingers, and his left arm hung limply at his side."
     "His face was pale, slick with sweat and dirt, but what caught my attention most was his eye, which glowed faintly, pulsing with an unnatural light that flickered with each breath he took."
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "Then, a voice filled my head again."
 
     chung_hee "I beg… of you… Please… help… me…"
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show dorian serious at left_char
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
@@ -2007,20 +2025,20 @@ label ch4_battlefield:
 
     "Before he could finish, his knees buckled, and he crumpled to the ground. His body hit the blood-soaked dirt with a sickening thud, and for a moment, everything was still."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line44
     dorian "He needs my help. I have to help him, Yu."
 
-    show yuxuan normal_angry at right_char
+    show yuxuan normal_angry at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line56
     yuxuan "What?! Don't even think about it. We have Elias to protect. He's not our problem. We shouldn't involve ourselves with them!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line28
     elias "Daddy… he's hurt. Are we… are we going to help him?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     dorian "I have to."
 
     carriage_driver "Sir, I don't think we should stop. More of those armored ones could show up any second."
@@ -2028,31 +2046,31 @@ label ch4_battlefield:
 
     voice audio.dorian_ch4_line45
     dorian "We can't just leave him."
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show yuxuan normal_angry at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line57
     yuxuan "And risk our lives—and Elias's—for a stranger? Dorian, please!"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line46
     dorian "Yu, if it was you or Elias there, I would do anything to help."
 
-    show yuxuan normal_sad at right_char
+    show yuxuan normal_sad at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line58
     yuxuan "Dorian…"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line47
     dorian "Please, Yu. Take Elias to safety and stay out of harm's way."
     voice audio.dorian_ch4_line48
     dorian "I'll do everything I can to ensure I'm not caught up in something dangerous."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line59
     yuxuan "Fine. Meet me at my house, please. Just stay safe, Dorian. Promise me."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line49
     dorian "I promise. Stay safe. You too, Elias."
     "Without another word, I opened the carriage door and jumped down."
@@ -2087,7 +2105,7 @@ label ch4_battlefield:
     "Then I felt it."
     "A faint flicker of energy pulsed weakly from him, like the dying ember of a once-roaring flame. His aura was dim, fragile, and almost extinguished. Whatever power he once had was completely drained."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line50
     dorian "This is bad… this is really bad…"
     "He needed a doctor. Now."
@@ -2104,7 +2122,7 @@ label ch4_battlefield:
     voice audio.niko_ch4_line12
     niko "Does he have a pulse?"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I froze, my eyes darting around."
 
     voice audio.dorian_ch4_line53
@@ -2143,7 +2161,7 @@ label ch4_niko_raven:
     show niko normal_serious at right_char with Dissolve(0.2)
     "Standing before me, where the raven once perched, was a tall, striking figure—a person."
 
-    show dorian normal at left_char
+    show dorian normal at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line55
     dorian "What the…"
 
@@ -2158,37 +2176,37 @@ label ch4_niko_raven:
     "He plucked a few seeds from the satchel and cupped them in his hand. Closing his eyes, he took a deep breath, and I felt a strange energy ripple through the air."
     "The seeds began to sprout, tiny shoots unfurling as though sped up by years in mere seconds. Vines and leaves stretched forth, twisting around his fingers before blooming into vibrant, fragrant flowers."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line56 
     dorian "Nature channeling… I've never seen one channel nature before."
 
     "He snapped the petals from one flower and crushed them between his palms, creating a paste that glowed faintly green."
     "Without hesitation, he applied it to the worst of the young man's wounds, smearing it into gashes and bruises with the deftness of someone who had done this countless times before."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line57
     dorian "What… what are you doing?"
 
-    show niko alt_tense at right_char
+    show niko alt_tense at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line17
     niko "He's losing blood too quickly. The paste will slow the bleeding and encourage his skin to knit itself back together."
 
-    show niko alt_base at right_char
+    show niko alt_base at right_char with Dissolve(0.1)
     "He crushed another leaf, mixed it with water from a vial, and poured the liquid into the young man's mouth with careful precision."
 
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line58
     dorian "Is that safe? He can barely—"
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line18
     niko "It's a tonic. It'll keep his organs from shutting down. If you're so worried, please help me keep his head steady."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line59
     dorian "Got it."
 
-    show niko normal_meditate at right_char
+    show niko normal_meditate at right_char with Dissolve(0.1)
     "I obeyed, holding the young man's head as Niko worked."
     "His hands glowed faintly with energy, the aura spreading into the young man's wounds as he muttered soft words under his breath—spells?"
     "Prayers?"
@@ -2202,32 +2220,32 @@ label ch4_niko_raven:
     "The glow seeped into his skin, and for a moment, the young man's breathing grew steadier."
     "I could feel his aura growing a little stronger."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line60
     dorian "Amazing…"
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line20
     niko "This will stabilize him for now, but he needs real rest—immediately. If another fight breaks out, he won't survive it."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line61
     dorian "Who are you? And did this man… did he talk to you too?"
 
     voice audio.niko_ch4_line21
     niko "Yes, this man reached out to me. To everyone within the vicinity of Tianho cemetery, I believe. Very potent mind channeling, no doubt."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line62
     dorian "And only the two of us came to his aid?"
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line22
     niko "I'm afraid so, yes."
     voice audio.niko_ch4_line23
     niko "He's from Kyeongjang. You won't find anyone else on Ena with a power like that."
 
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     "He extended a hand, his expression softening slightly."
 
     voice audio.niko_ch4_line24
@@ -2235,30 +2253,30 @@ label ch4_niko_raven:
 
     "I shook his hand, his grip firm but warm."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line63
     dorian "Niko… Have we met before?"
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line25
     niko "We have. Five years ago. I was with my younger brother, Kaito. We crossed paths here in Tianho when you were with Paladin Cyrus."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line64
     dorian "I don't recall. I apologize."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line26
     niko "Don't apologize. It's been a long time."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line65
     dorian "You're a nature channeler. I take it you're from Clan Ligaya?"
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch4_line27
     niko "Contrary to popular belief, not every nature channeler hails from Clan Ligaya. My mother is from Clan Kaibig—the sister clan to Ligaya—and my father is from Hamatame, the village of shadows."
-    hide niko
+    hide niko with Dissolve(0.1)
     jump ch4_svante_capture
 
 
@@ -2282,42 +2300,42 @@ label ch4_svante_capture:
     voice audio.svante_ch4_line28
     svante "Please! Let me go! I'm not here to hurt you!"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "He writhed against the restraints, his voice trembling. But I didn't let up."
     "I strode toward him."
 
     voice audio.dorian_ch4_line66
     dorian "You knew something was going to happen here. Start talking. Now."
     "His breath hitched, his wide eyes darting between me, Niko, and the unconscious man."
-    show svante normal_nervous at right_char 
+    show svante normal_nervous at right_char  with Dissolve(0.1)
     voice audio.svante_ch4_line29
     svante "I... I don't know everything. They didn't tell me much, but—"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_serious at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line28
     niko   "But you were with that lunatic. You and your group tried to drive me and my fellow prophet away! Don't act innocent now."
-    hide niko
+    hide niko with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line30
     svante "It wasn't like that! I was trying to help you! Please, you have to believe me!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show dorian normal_alt_annoyed at left_char
     show niko alt_annoyed at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line29
     niko   "Help us? By threatening us? You're making this a lot harder for yourself, you know."
-    hide niko
+    hide niko with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line31
     svante "I wasn't threatening you! I was trying to save you! If you'd stayed, you'd be dead!"
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line32
     svante "They'll kill anyone who gets in their way. I… I didn't want to be part of this."
-    hide svante
+    hide svante with Dissolve(0.1)
     show dorian serious at left_char
     show niko alt_annoyed at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line30
     niko   "Then why were you here at all? You could've walked away. Who are you anyway?"
-    hide niko
+    hide niko with Dissolve(0.1)
 
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line33
@@ -2328,51 +2346,52 @@ label ch4_svante_capture:
     voice audio.elias_ch4_line29
     elias  "Daddy!!"
 
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     "To my utter surprise, Yuxuan and Elias came running towards me. Yuxuan was panting heavily, his hands on his knees as he struggled to catch his breath."
     "Elias crashed into me clinging to my leg as though his life depended on it."
     "His small body trembled, and when I knelt to pull him into my arms, I could feel his rapid heartbeat against my chest."
     "He was clutching Tedda in his one hand."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line67
     dorian "Yuxuan?! What in Tetrad's name are you doing here?! You should be at the carriage!"
 
-    show yuxuan normal_sad at right_char
+    show yuxuan normal_sad at right_char with Dissolve(0.1)
     "Yuxuan straightened, his face pale as he blurted out the words in a frantic rush."
 
     voice audio.yuxuan_ch4_line60
     yuxuan "Dorian, we-we have a problem! There's an army—a whole battalion of Mjoll soldiers—heading this way! We're surrounded!"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line68
     dorian "What?!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line35
     svante "I tried to warn you! You should've run when you had the chance! Now we're all going to die here!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan normal_sad at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line61
     yuxuan "Dorian, what are we supposed to do? We can't fight them all, but we can't stay here either! We're trapped!"
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line69
     dorian "You shouldn't have come back! You should've gotten the child out of here! What were you thinking?!"
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line62
     yuxuan "Dorian, we're not leaving you behind. We're in this together, no matter what."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch4_line30
     elias  "Daddy, I wanted to be with you! I won't leave you, daddy!"
 
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "I groaned and opened my mouth to answer, but the sound of distant boots—hundreds of them—marching in unison filled the cemetery air."
     hide dorian
     hide elias
+    with Dissolve(0.1)
     show niko normal_serious at left_char with Dissolve(0.2)
     voice audio.niko_ch4_line31
     niko   "Calm down. How many soldiers did you see?"
@@ -2381,18 +2400,19 @@ label ch4_svante_capture:
     voice audio.yuxuan_ch4_line63
     yuxuan "I... I don't know. There were so many of them—it looked like an entire battalion! Maybe more!"
 
-    show niko normal_serious at left_char
+    show niko normal_serious at left_char with Dissolve(0.1)
     voice audio.niko_ch4_line32
     niko   "We can't stay here. We have to move. Now."
 
-    show yuxuan normal_angry at right_char
+    show yuxuan normal_angry at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line64
     yuxuan "Move where?! I just told you! We're surrounded! Every path out of this cemetery is crawling with Mjoll soldiers!"
     hide niko
     hide yuxuan
+    with Dissolve(0.1)
     show mjoll_male_soldier at center_char with Dissolve(0.2)
     mjoll_male_soldier  "We have you surrounded! Surrender now and you might live to see another day. Resist, and you'll meet a swift end!"
-    hide mjoll_male_soldier
+    hide mjoll_male_soldier with Dissolve(0.1)
     show yuxuan normal_sad at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line65
     yuxuan "W-We surrender! Please! Don't hurt us!"
@@ -2402,16 +2422,17 @@ label ch4_svante_capture:
 
     voice audio.dorian_ch4_line70
     dorian "Yu, no need to surrender."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line36
     svante "He's right! If we surrender, we're as good as dead! They won't let us walk away, not after this. We have to fight or die!"
     hide svante
     hide dorian
 
+    with Dissolve(0.1)
     show mjoll_soldier_enby at center_char with Dissolve(0.2)
     mjoll_soldier_enby  "Come out with your hands up! All of you! We won't ask again!"
-    hide mjoll_soldier_enby
+    hide mjoll_soldier_enby with Dissolve(0.1)
 
     "A commanding female voice cut through the voices of the soldiers like a blade."
     show aoi_battle_suit at right_char with Dissolve(0.2)
@@ -2426,12 +2447,13 @@ label ch4_svante_capture:
     tian_xun  "HAHHAHAHA! Oh, but it better not! Because if I have to wait one more agonizing second for a BOOM, I might just detonate myself for fun! My darlings were perfectly timed and they ruined it! THEY RUINED IT!!"
     tian_xun  "I want fireworks! I want limbs flying! I want screams and smoke!"
 
-    show aoi_battle_suit at right_char
+    show aoi_battle_suit at right_char with Dissolve(0.1)
     "At the corner of my eye, I saw her. The woman was about Yuxuan's stature. Water circled faintly around her fingers, as if drawn to her by instinct."
     "A water channeler."
     hide tian_xun
     hide mjoll_male_soldier
 
+    with Dissolve(0.1)
     show mjoll_soldier_female_1 at left_char with Dissolve(0.2)
     mjoll_soldier_female_1 "We were under the impression that the—"
     voice audio.aoi_ch4_line8
@@ -2453,7 +2475,7 @@ label ch4_svante_capture:
     "He stomped his foot like a child throwing a tantrum, then pointed a trembling finger in our direction."
     voice audio.tianxun_ch4_line23
     tian_xun "ESPECIALLY THE TARGET!! HE WASTED MY BOMBS!"
-    show aoi_battle_suit at right_char
+    show aoi_battle_suit at right_char with Dissolve(0.1)
     "The lady rolled her eyes. She glanced at him, her expression one of thinly veiled disdain."
 
     voice audio.aoi_ch4_line10
@@ -2472,6 +2494,7 @@ label ch4_svante_capture:
     hide aoi_battle_suit
     hide mjoll_soldier_female_1
 
+    with Dissolve(0.1)
     show dorian serious at left_char with Dissolve(0.2)
     "From our vantage point, I could see the soldiers shuffling nervously. Aoi's cold demeanor and Tian Xun's volatile nature were enough to unsettle even seasoned warriors."
     "I tightened my grip on Yuxuan's shoulder and glanced down at Elias, who clung to my leg."
@@ -2479,16 +2502,16 @@ label ch4_svante_capture:
     voice audio.svante_ch4_line37
     svante "They're going to shoot any minute now. Take cover!"
 
-    show dorian normal_alt_tense at left_char 
+    show dorian normal_alt_tense at left_char  with Dissolve(0.1)
     "My chest tightened. The unconscious man, barely clinging to life, lay vulnerable on the ground. Thanks to Niko, his condition has improved, but any attack would almost certainly finish him."
     
-    hide svante
-    show elias normal_sad at right_char_kids
+    hide svante with Dissolve(0.1)
+    show elias normal_sad at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch4_line31
     elias "D-Daddy!"
-    hide elias
+    hide elias with Dissolve(0.1)
 
-    show aoi_battle_suit at right_char
+    show aoi_battle_suit at right_char with Dissolve(0.1)
     voice audio.aoi_ch4_line13
     aoi "Ready! Aim! Fire!"
     hide aoi_battle_suit
@@ -2503,7 +2526,7 @@ label ch4_svante_capture:
     "Before anyone could react, Svante stepped forward, his arms raised as if commanding the battlefield itself. He furrowed his brow."
     voice audio.svante_ch4_line38
     svante "Everyone, get back!"
-    hide svante
+    hide svante with Dissolve(0.1)
 
     # play sound sfx_metal_barrier                   # PLACEHOLDER
     show cg_svante_save_chung with shock_cut
@@ -2542,11 +2565,11 @@ label ch4_svante_capture:
     show dorian serious at left_char
     with Dissolve(0.2)
     mjoll_helga "Arrow units! Continue to shoot! Keep firing! Overwhelm them!"
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     "The lady raised her hand once more."
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.aoi_ch4_line14
     aoi "Cavalry units! Advance! Run them down!"
 
@@ -2574,7 +2597,7 @@ label ch4_svante_capture:
     niko "Chikara o ataete… Enoch-sama no tame ni."
 
     # TODO: shadow audio
-    hide niko
+    hide niko with Dissolve(0.1)
     show cg_niko_save_chung with shock_cut
     "A pulse of shadow erupted from his body, snaking through the air like living tendrils. The shadows coiled and writhed, stretching toward the oncoming cavalry with an unnatural speed."
     "As the darkness reached them, it engulfed the soldiers and their horses, twisting around them like black flames."
@@ -2664,35 +2687,36 @@ label ch4_svante_capture:
 
     hide aoi_battle_suit
     hide tian_xun
+    with Dissolve(0.1)
     show svante normal_nervous at right_char
     show dorian serious at left_char
     with Dissolve(0.2)
     "Svante turned to us, his form trembling."
     voice audio.svante_ch4_line39
     svante "Tian Xun… He… He's preparing another bomb!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_serious at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line37
     niko   "He's the lunatic who kicked us out of Tianho, isn't he? Everyone, stay close! The shadows will protect—"
-    hide niko
-    show svante normal_angry at right_char
+    hide niko with Dissolve(0.1)
+    show svante normal_angry at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line40
     svante "No! This isn't just another bomb! He's using his best from his personal collection… it's made of draconic fire!"
 
     dorian "!?"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_anger at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line38
     niko   "Draconic fire?! Are they really that desperate to kill us?!"
     voice audio.niko_ch4_line39
     niko   "If they're not careful, they'll blow this entire place to ashes!"
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     "I stepped forward, clutching Elias protectively to my side as my mind raced."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "The air grew heavier, a stifling presence of dread pressing down on all of us as we watched Tian Xun. His figure stood atop a platform."
 
-    show tian_xun at center_char
+    show tian_xun at center_char with Dissolve(0.1)
     "Tian Xun's voice rose in a demented crescendo, echoing through the field."
 
     voice audio.tianxun_ch4_line41
@@ -2700,7 +2724,7 @@ label ch4_svante_capture:
     voice audio.tianxun_ch4_line42
     tian_xun "Let your draconic fire consume the unworthy! Burn for me, my deity! BURN FOR GLORY! BURN FOR ART! BOOM! BOOM! HAHAHAHA!"
 
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
     "Suddenly, the air around us shifted. A deafening roar erupted from the container as something massive was hurled into the sky."
     "The glowing projectile screamed toward us with terrifying speed, trailing an inferno of searing light and heat."
     "The ground trembled beneath our feet, and the very air seemed to vibrate with the power of the draconic fire." with hpunch
@@ -2708,13 +2732,14 @@ label ch4_svante_capture:
 
     hide dorian
     hide niko
+    with Dissolve(0.1)
     show tian_xun at center_char
     with Dissolve(0.2)
     voice audio.tianxun_ch4_line43
     tian_xun "BEHOLD! DRACONIC FIRE! A MASTERPIECE BORN FROM THE PROSPERITY DRAGON!"
 
     "The projectile grew closer, its heat searing even from afar."
-    hide tian_xun
+    hide tian_xun with Dissolve(0.1)
     show niko normal_serious at left_char with Dissolve(0.2)
     voice audio.niko_ch4_line40
     niko   "Argh… Everybody! Get down!"
@@ -2725,6 +2750,7 @@ label ch4_svante_capture:
     hide svante 
     hide niko
 
+    with Dissolve(0.1)
     show boy_ald_normal at left_char 
     show mjoll_soldier_female_1 at right_char
     with Dissolve(0.2)
@@ -2734,6 +2760,7 @@ label ch4_svante_capture:
     hide boy_ald_normal
     hide mjoll_soldier_female_1
 
+    with Dissolve(0.1)
     show mjoll_soldier_1 at left_char
     show tian_xun at right_char 
     with Dissolve(0.2)
@@ -2926,7 +2953,7 @@ label ch4_bad_end_bomb:
 
     # pause 2.0
 
-    jump game_over
+    jump ch10_bad_end_credits
 
 
 # =============================================================================
@@ -2994,10 +3021,11 @@ label ch4_draconic_fire:
     hide svante
     hide yuxuan
 
+    with Dissolve(0.1)
     show niko alt_tense at center_char with Dissolve(0.2)
     voice audio.niko_ch4_line43
     niko "Merciful Enoch… what did you just do?"
-    hide niko
+    hide niko with Dissolve(0.1)
 
     "I didn't answer. I… didn't know."
     "Elias hugged me even more. Tedda hanging."
@@ -3006,7 +3034,7 @@ label ch4_draconic_fire:
     with Dissolve(0.2)
     voice audio.elias_ch4_line33
     elias "Daddy… is it over?"
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.aoi_ch4_line24
     aoi   "Tian Xun!! No!!"
     hide elias with Dissolve(0.1)
@@ -3015,10 +3043,10 @@ label ch4_draconic_fire:
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line25
     aoi         "You monsters! You dare kill him?! That genius, that visionary! He was worth a thousand of you pathetic fools!"
-    hide aoi_battle_suit
+    hide aoi_battle_suit with Dissolve(0.1)
     show mjoll_helga at right_char with Dissolve(0.2)
     mjoll_helga "P-Pavel!! They killed Pavel! No!!"
-    hide mjoll_helga
+    hide mjoll_helga with Dissolve(0.1)
     
     show aoi_battle_suit at right_char with Dissolve(0.2)
     "Her eyes gleamed with an almost unhinged fury as she turned to her soldiers."
@@ -3045,7 +3073,7 @@ label ch4_draconic_fire:
     voice audio.svante_ch4_line44
     svante "We can't fight them forever. We're outnumbered ten to one! We need to do something, and we need to do it now."
     "Niko stepped forward, shadows pooling at his feet."
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show niko normal_serious at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line44
@@ -3062,17 +3090,17 @@ label ch4_draconic_fire:
     aoi    "You cannot escape! Not even the Prosperity Dragon will save you from my wrath!"
     show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
     dorian "Tsk…"
-    show dorian serious at left_char
-    hide aoi_battle_suit
+    show dorian serious at left_char with Dissolve(0.1)
+    hide aoi_battle_suit with Dissolve(0.1)
 
     show yuxuan alt_think at right_char with Dissolve(0.2)
     "Yuxuan approached me."
 
     voice audio.yuxuan_ch4_line70
     yuxuan "Dorian, listen. Seeing you creatively use your fire channeling abilities gave me an idea."
-    show yuxuan normal_sad at right_char
+    show yuxuan normal_sad at right_char with Dissolve(0.1)
     "He hesitated for only a second before continuing."
-    show yuxuan alt_neutral at right_char
+    show yuxuan alt_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch4_line71
     yuxuan "I don't tell anyone this—like, ever—but I've got an underground lab nearby."
     voice audio.yuxuan_ch4_line72
@@ -3082,19 +3110,19 @@ label ch4_draconic_fire:
     voice audio.yuxuan_ch4_line74
     yuxuan "Can you do that? Please tell me you can… Otherwise, I just told you my secret for nothing."
 
-    show dorian normal at left_char 
+    show dorian normal at left_char  with Dissolve(0.1)
     "I arched a brow."
 
     voice audio.dorian_ch4_line88
     dorian "Of course, I can."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show dorian serious at left_char
     show niko normal_serious at right_char with Dissolve(0.2)
     "I turned to Niko, who stood with his shadows coiling protectively around us, their dark tendrils shifting like living sentinels. He met my gaze and gave a curt nod."
 
     voice audio.niko_ch4_line46
     niko "If it keeps us alive, we go with his idea. But I'm covering us while we move. No one gets through my shadows."
-    hide niko 
+    hide niko  with Dissolve(0.1)
 
     show aoi_battle_suit at right_char with Dissolve(0.2)
     voice audio.aoi_ch4_line28
@@ -3106,9 +3134,9 @@ label ch4_draconic_fire:
     hide aoi_battle_suit with Dissolve(0.1)
 
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I took a deep breath, slamming my palms into the earth."
-    show dorian dragon_eyes at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
     play sound sfx_earth
     "The ground rumbled and groaned beneath us as I focused. a wide opening formed, a tunnel descending into the depths below." with vpunch
 
@@ -3119,11 +3147,11 @@ label ch4_draconic_fire:
     niko   "I'll be the last one to jump."
 
     "Yuxuan didn't hesitate. He leapt in first."
-    hide niko
+    hide niko with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line75
     yuxuan "Come on. I'll catch you."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show elias alt_neutral at right_char_kids with Dissolve(0.2)
     "Elias clutched his beloved stuffed animal, Tedda, to his chest as he stood at the edge of the opening."
@@ -3133,15 +3161,15 @@ label ch4_draconic_fire:
     tedda "…"
     hide elias with Dissolve(0.1)
 
-    show dorian serious at left_char 
+    show dorian serious at left_char  with Dissolve(0.1)
     "I moved to the edge, hefting the unconscious man over my shoulder. His weight was considerable, but I tightened my grip, refusing to falter."
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line48
     niko   "Be careful with him! He's barely hanging on as it is!"
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line90
     dorian "I know. I've got him. Just keep them off us!"
-    hide niko
+    hide niko with Dissolve(0.1)
 
     show svante normal_nervous at right_char with Dissolve(0.2)
     "Svante lingered at the edge, uncertainty clouding his features. He hesitated, torn between the battle raging above and the unknown below."
@@ -3149,14 +3177,14 @@ label ch4_draconic_fire:
     dorian "You too. Jump. Now. I'll jump after you."
     voice audio.svante_ch4_line45
     svante "I… are you sure— I'm an aldorith I might—"
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch4_line92
     dorian "Dragon's bollocks! Just jump!"
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch4_line46
     svante "O-Okay, sir!"
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
 
     hide svante with Dissolve(0.1)
     "He jumped, vanishing into the tunnel's depths."
@@ -3166,14 +3194,14 @@ label ch4_draconic_fire:
 
     voice audio.yuxuan_ch4_line76
     yuxuan "That's everyone…You there! It's your turn!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line49
     niko   "Move over! Shadows, release!"
 
     # play sound sfx_tunnel_seal                     # PLACEHOLDER
 
-    hide niko
+    hide niko with Dissolve(0.1)
     "As he jumped, the shadows recoiled, pulling away like a collapsing wave. I didn't waste a second—I slammed my hands into the dirt once more, sealing the tunnel shut above us."
     scene black with shock_cut
     "The battlefield disappeared."
@@ -3237,19 +3265,19 @@ label ch4_underground:
     voice audio.dorian_ch4_line93
     dorian "Are you hurt? Injured?"
 
-    show elias normal_happy at right_char_kids
+    show elias normal_happy at right_char_kids with Dissolve(0.1)
     "Elias smiled and shook his head."
 
     voice audio.elias_ch4_line36
     elias  "We're fine, Daddy."
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch4_line47
     svante "I-I really can't believe it… We made it. We actually made it."
     voice audio.svante_ch4_line48
     svante "Thank you… Thank you, sir! I could kiss your fee—"
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show yuxuan alt_close_eyes at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch4_line78

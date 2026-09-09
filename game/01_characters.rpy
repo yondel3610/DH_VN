@@ -1,8 +1,8 @@
 #Prologue
-define kristin     = Character("Kristin",      color="#1c0000", what_prefix='"', what_suffix='"', callback=name_callback, cb_name="kristin")
-define boy_ald     = Character("Boy Aldorith", color="#1c0000", what_prefix='"', what_suffix='"', callback=name_callback, cb_name="boy_ald")
-define girl_ald    = Character("Girl Aldorith",color="#1c0000", what_prefix='"', what_suffix='"', callback=name_callback, cb_name="girl_ald")
-define yk          = Character("Yaoguai King", color="#1c0000", what_prefix='"', what_suffix='"', callback=name_callback, cb_name="yk") 
+define kristin     = Character("Kristin",      color="#1c0000", callback=name_callback, cb_name="kristin")
+define boy_ald     = Character("Boy Aldorith", color="#1c0000", callback=name_callback, cb_name="boy_ald")
+define girl_ald    = Character("Girl Aldorith",color="#1c0000", callback=name_callback, cb_name="girl_ald")
+define yk          = Character("Yaoguai King", color="#1c0000", callback=name_callback, cb_name="yk") 
 define narrator = Character(None, what_italic=False, callback=name_callback, cb_name=None)
 
 # Chapter 1

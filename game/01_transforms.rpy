@@ -135,6 +135,14 @@ transform left_yg:
     zoom 1.20
     yoffset 40
 
+transform left_yg_flip:
+    xanchor 0.5 # used to invert image
+    xzoom -1.0 # used to invert image
+    xalign -0.15  
+    yalign 0.95
+    zoom 1.20
+    yoffset 40
+
 transform right_yg:
     xalign 1.15
     yalign 0.95
@@ -422,6 +430,16 @@ screen draconic_rage():
         yoffset 40
         blur 8 
 
+screen draconic_rage_shen():
+    # Glow layer behind the sprite
+    add "king_long_shen":
+        at glow_outline
+        matrixcolor TintMatrix("#f54f13c1") * BrightnessMatrix(0.3)
+        xalign -0.15
+        yalign 0.3
+        zoom 1.20  # Slightly larger to create outline effect
+        yoffset 40
+        blur 8 
 transform fire_pulse:
     linear 2.0 alpha 0.6
     linear 1.0 alpha 0.3
@@ -627,3 +645,28 @@ image flashback_memory_loop:
     0.5
     repeat
 
+# ===========================================================
+# AOI SINGING
+# ===========================================================
+
+screen fullscreen_cutscene(filename):
+    zorder 100
+    modal True
+    add Movie(play=filename, size=(config.screen_width, config.screen_height))
+
+# ======================
+# YK flash ch10
+# ======================
+image visions_ch10:
+    "mp3"
+    0.5
+    "mp5"
+    0.5
+    "mp6"
+    0.5
+    "mp8"
+    0.5
+    "mp11"
+    0.5
+
+    repeat

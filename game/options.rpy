@@ -259,3 +259,5 @@ label scene_black():
     return
 
 define build.directory_name = "DragonsHeart"
+
+define config.end_game_transition = Dissolve(1.0)

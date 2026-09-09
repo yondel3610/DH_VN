@@ -32,30 +32,35 @@ label chapter_6:
 
 
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
+    voice audio.elias_ch6_line1
     elias "Daddy! Daddy! Wake up!"
 
     "A small pair of hands shook my shoulders. My breath hitched as I jolted awake, a choked gasp escaping my throat."
     "Tears clung to my face. Damn it. I pressed my palms against my eyes, willing myself to steady."
-
+    voice audio.elias_ch6_line2
     elias "Are you okay, Daddy?"
 
     "I swallowed, trying to push away the burning weight in my throat. My body still trembled, the dream lingering like a wound torn open."
     show dorian sad at left_char with Dissolve(0.2)
+    voice audio.dorian_ch6_line1  # transcript: "No, buddy. It's nothing. Don't"
     dorian "N-n-no, buddy. It's nothing. Don't think about it."
 
     "A small pause. The fan hummed softly in the quiet room, blades cutting through the still air."
     "A single dim lamp was at the far corner of the room. It partially lightened up Elias' face."
 
     show elias normal_sad at right_char_kids
+    voice audio.elias_ch6_line3  # transcript: "You're fine, daddy!"
     elias "You were crying, Daddy."
 
     "His voice wavered, gentle, worried."
 
+    voice audio.elias_ch6_line4  # transcript: "I was worried. Tera wanted"
     elias "I was worried. Tedda went out to get water from kitchen."
     show dorian normal_alt_calm at left_char with Dissolve(0.2)
     "I exhaled, rubbing my face."
 
     show elias normal_neutral at right_char_kids
+    voice audio.elias_ch6_line5  # transcript: "Tedassus bad drinks need water."
     elias "Tedda says bad dreams need water. She'll be back."
 
     show dorian neutral at left_char
@@ -65,19 +70,23 @@ label chapter_6:
     "He hesitated, then reached up with his other hand, his small arms barely making it to my face as he patted my head."
 
     show elias normal_happy at right_char_kids
+    voice audio.elias_ch6_line6  # transcript: "I'm here daddy, okay? Don't"
     elias "I'm here, daddy. Okay? Don't cry. I love you."
 
     "I forced a chuckle, ruffling his messy curls."
     show dorian smile at left_char
+    voice audio.dorian_ch6_line2  # transcript: "Come on, Lies. I'm not"
     dorian "Come on, Elias. I'm not crying. But, thank you. I love you too, Elias."
 
     show elias normal_happy at right_char_kids
     "His eyes shone, full of childlike pride."
 
+    voice audio.elias_ch6_line7  # transcript: "You always protect me, Daddy."
     elias "You always protect me, Daddy. I wanna protect you too."
 
     "I smirked, shaking my head."
     show dorian neutral at left_char
+    voice audio.dorian_ch6_line3  # transcript: "But what happens if I"
     dorian "But what happens if I got attacked by an ugly monster? Would you save me?"
 
     show elias normal_sad at right_char_kids
@@ -89,40 +98,52 @@ label chapter_6:
     show elias alt_joy at right_char_kids
     "One foot forward. One tiny fist raised."
     show elias normal_evil at right_char_kids
+    voice audio.elias_ch6_line8  # transcript: "Hooray! I'll beat that ugly"
     elias "Hmph! I'll beat that ugly monster and his ass!"
 
     show dorian serious at left_char
+    voice audio.dorian_ch6_line4  # transcript: "Elias, language."
     dorian "Elias—language."
 
     show elias normal_happy at right_char_kids
     "He froze."
     "Then, with wide, guilty eyes, he quickly corrected himself—talking even faster."
 
+    voice audio.elias_ch6_line9  # transcript: "I mean, but Daddy. And"
     elias "I mean, butt. Daddy. AND—AND THEN—!!! I'll do a super-duper spinny kick! WHOOSH!!!"
 
     show elias normal_happy at right_char_kids
     "He spun in a clumsy circle, nearly tumbling onto his face."
     "I wrapped my arms around him, holding him close."
 
+    voice audio.dorian_ch6_line5  # transcript: "How long was I asleep,"
     dorian "How long was I asleep, Elias?"
-    elias  "I don't know, daddy. Mister Niko brought you here."
-    elias  "After you fell asleep, Tim and I were played and colored. A… And—And… Tedda joined us!"
-    elias  "And then… and then… hmm…"
+    voice audio.elias_ch6_line10
+    elias "I don't know, daddy. Mister Niko brought you here."
+    voice audio.elias_ch6_line11  # transcript: "After you fell asleep, 10"
+    elias "After you fell asleep, Tim and I were played and colored. A… And—And… Tedda joined us!"
+    voice audio.elias_ch6_line12
+    elias "And then… and then… hmm…"
 
     "He scrunched his nose, tapping his chin like he was deep in thought. I couldn't help but chuckle and play along with Elias's imagination."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch6_line6  # transcript: "Dada joined you in Tim."
     dorian "Haha. Tedda joined you and Tim? Did she give you hugs?"
     show elias normal_happy at right_char_kids
-    elias  "Yes, Daddy! Big big hugs! And I feel so happy. We're with other people now."
+    voice audio.elias_ch6_line13  # transcript: "Yes, Daddy! Big big hugs"
+    elias "Yes, Daddy! Big big hugs! And I feel so happy. We're with other people now."
     show dorian smile at left_char
+    voice audio.dorian_ch6_line7  # transcript: "Yeah, it's not just you"
     dorian "Yeah. It's not just you, me and Yuxuan."
     show dorian neutral at left_char
-    elias  "And Tedda!"
+    voice audio.elias_ch6_line14
+    elias "And Tedda!"
 
     show elias normal_happy at right_char_kids
     "He threw his arms up, bouncing slightly."
 
+    voice audio.dorian_ch6_line8  # transcript: "and data."
     dorian "And Tedda."
 
     "The fan continued to hum softly in the quiet room. Elias yawned and hugged me close back."
@@ -141,129 +162,164 @@ label ch6_elias_choices:
     menu:
         "How's Yuxuan?":
             $ ch6_d1_elias_choice = "yuxuan"
-            $ yuxuan_affection += 1             # +1 Yuxuan affection
+            $ A3_yuxuan_affection += 1             # +1 Yuxuan affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line9  # transcript: "How's Yushuan? What happened during"
             dorian "How's Yuxuan? What happened during dinner?"
-            show elias normal_lying at right_char_kids
-            elias  "I think he go… to his office, daddy. I saw him getting… Grrr…"
-            show dorian normal at left_char
+            show elias normal_lying at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line15  # transcript: "I think he go to"
+            elias "I think he go… to his office, daddy. I saw him getting… Grrr…"
+            show dorian normal at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line10
             dorian "Like angry? That's him alright. Sounds like something that he'll do."
-            show elias normal_neutral at right_char_kids
-            elias  "But then he went inside office and it became quiet. Weaaaal quiet. He took Mister Roboto with him too."
-            elias  "But he's reallyyyy nice, daddy. He gave me and Tim some candies a while ago! He even made you and me stay in a big room like this. Maybe we can live here forever! Hihi"
-            show dorian neutral at left_char
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line16  # transcript: "But then he went inside"
+            elias "But then he went inside office and it became quiet. Weaaaal quiet. He took Mister Roboto with him too."
+            voice audio.elias_ch6_line17
+            elias "But he's reallyyyy nice, daddy. He gave me and Tim some candies a while ago! He even made you and me stay in a big room like this. Maybe we can live here forever! Hihi"
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line11  # transcript: "Well, not forever, Laihis. I"
             dorian "Well, not forever, Elias. I doubt a millionaire like him would want us to stay in his expensive home."
-            show elias normal_happy at right_char_kids
-            elias  "He wants us to, daddy! He told me that if we wanted to, we could stay here forever with him! You, me and him!"
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line18
+            elias "He wants us to, daddy! He told me that if we wanted to, we could stay here forever with him! You, me and him!"
+            voice audio.dorian_ch6_line12  # transcript: "Huh? Wait. Did he really"
             dorian "Huh? Wait, did he really say that?"
-            show elias normal_happy at right_char_kids
-            elias  "Yes, daddy! Tim even made fun of Mr. Yuxuan! He said that Mr. Yuxuan was… hmm, what was it… oh, a blushing mess! Tim said Mr. Yuxuan was a blushing mess when he said we can stay here forever!"
-            elias  "*yawns* Hmm… Daddy, what does a blushing mess mean?"
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line19
+            elias "Yes, daddy! Tim even made fun of Mr. Yuxuan! He said that Mr. Yuxuan was… hmm, what was it… oh, a blushing mess! Tim said Mr. Yuxuan was a blushing mess when he said we can stay here forever!"
+            voice audio.elias_ch6_line20
+            elias "*yawns* Hmm… Daddy, what does a blushing mess mean?"
 
             "He yawned, snuggling deeper into the blankets."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line13  # transcript: "Oh well, a blushing mess"
             dorian "Uh, well... a blushing mess is when someone has their face all red and can't speak straight. Like when they're embarrassed or have a crush on someone."
-            show elias normal_happy at right_char_kids
-            elias  "Ohhh, like when Mr. Yuxuan talk to you, daddy! He always gets all red and acting weiwwd! Tim was right, daddy!"
-            show dorian normal_alt_annoyed at left_char
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line21
+            elias "Ohhh, like when Mr. Yuxuan talk to you, daddy! He always gets all red and acting weiwwd! Tim was right, daddy!"
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line14  # transcript: "I'm not sure you mean"
             dorian "I-I'm not sure what you mean, Elias. Yuxuan is just a good friend, that's all."
 
             jump ch6_elias_common
 
         "What happened to the Emperor?":
             $ ch6_d1_elias_choice = "emperor"
-            $ chunghee_affection += 1           # +1 Chung-hee affection
+            $ A4_chunghee_affection += 1           # +1 Chung-hee affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line15  # transcript: "Do you remember the man"
             dorian "Do you remember the man we rescued? How is he doing?"
-            show elias normal_neutral at right_char_kids
-            elias  "Oh, the man with the cool arm, daddy?"
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line22  # transcript: "Oh, the moon, what the"
+            elias "Oh, the man with the cool arm, daddy?"
 
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "My thoughts went to the dream I had earlier."
             "If that was true then…"
             "I'm sorry, Chung."
             "Emperor Hyon Min-joon and his wife. So that's how they died."
             "Gustav Nordstrom…"
-            show dorian angry at left_char
+            show dorian angry at left_char with Dissolve(0.1)
             "Just the thought of his name got my blood boiling. I tightened my fist."
 
-            elias  "So, Mister Niko told him that he get more sleep and then- And- Daddy, are you listening?"
-            show dorian neutral at left_char
+            voice audio.elias_ch6_line23  # transcript: "So Mr. Nicole told him"
+            elias "So, Mister Niko told him that he get more sleep and then- And- Daddy, are you listening?"
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line16  # transcript: "Oh, I'm sorry buddy. I"
             dorian "Oh, I'm sorry, buddy. I was just thinking about some stuff."
-            show elias normal_sad at right_char_kids
-            elias  "*yawns* Oh, okay. Um… I… I forgot, Daddy. What was I talking about?"
+            show elias normal_sad at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line24
+            elias "*yawns* Oh, okay. Um… I… I forgot, Daddy. What was I talking about?"
 
             "He yawned, snuggling deeper into the blankets."
 
-            show elias normal_neutral at right_char_kids
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line25  # transcript: "Oh, we were talking about"
             elias "Oh! We were talking about the Empewor… His name is Cheng or Chong. Chang-hai? Cheng-hai?"
+            voice audio.elias_ch6_line26  # transcript: "Chang daddy or Chang maybe"
             elias "Cheng, daddy. Or Chang. Maybe Tedda knows. You should ask her when she gets back, daddy. She knows a lot about Kyeongjang!"
 
             jump ch6_elias_common
 
         "How was the violet-haired man?":
             $ ch6_d1_elias_choice = "svante"
-            $ svante_affection += 1             # +1 Svante affection
+            $ A2_svante_affection += 1             # +1 Svante affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line17  # transcript: "Do you remember the violet-haired"
             dorian "Do you remember the violet-haired guy with us? What happened to him when I passed out?"
-            show elias normal_neutral at right_char_kids
-            elias  "Hmm… The pink one, daddy? He helped Miss Weng clean."
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line27  # transcript: "Hmm... The pink one daddy..."
+            elias "Hmm… The pink one, daddy? He helped Miss Weng clean."
 
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "Svante Nordstrom… The aldorith. He was one of the soldiers who were originally tasked to kill the mysterious man."
             "To my surprise, he joined us and helped us escape."
             "I must admit, it took a lot of courage and strength for him to just disobey his father like that."
 
-            show elias normal_happy at right_char_kids
-            elias  "He's from Mjoll. Right, Daddy? Mjoll is very very cold."
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line28  # transcript: "He's from Neil, right Daddy?"
+            elias "He's from Mjoll. Right, Daddy? Mjoll is very very cold."
 
             "Elias cuddles even more, burying his tiny head at my chest."
 
-            show dorian smile at left_char
+            show dorian smile at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line18  # transcript: "Yeah, you like the weather"
             dorian "Yeah. You like the weather here more, Elias?"
-            show elias normal_neutral at right_char_kids
-            elias  "*yawns* Yes, Daddy. It isn't cold like the cave there. It's more… comfy here."
-            show dorian neutral at left_char
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line29
+            elias "*yawns* Yes, Daddy. It isn't cold like the cave there. It's more… comfy here."
+            show dorian neutral at left_char with Dissolve(0.1)
 
             "He yawned, snuggling deeper into the blankets."
 
-            show elias normal_happy at right_char_kids
-            elias  "I hope we get to know the pink guy. I think he's so nice. He laughed when Tim made a joke."
-            show dorian normal_alt_annoyed at left_char
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line30  # transcript: "I hope we get to"
+            elias "I hope we get to know the pink guy. I think he's so nice. He laughed when Tim made a joke."
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line19  # transcript: "Pink is not violet Elias."
             dorian "Pink is not violet, Elias."
 
             jump ch6_elias_common
 
         "How is the doctor?":
             $ ch6_d1_elias_choice = "niko"
-            $ niko_affection += 1               # +1 Niko affection
+            $ A1_niko_affection += 1               # +1 Niko affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line20  # transcript: "I guess that the doctor"
             dorian "I guess that the doctor helped me when I passed out, huh?"
-            show elias normal_happy at right_char_kids
-            elias  "Yes, Daddy! He was so cool! He waved his fingers and there were plants!"
-            elias  "What do you call them, Daddy?"
-            show dorian neutral at left_char
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line31  # transcript: "Yes, Daddy. He was so"
+            elias "Yes, Daddy! He was so cool! He waved his fingers and there were plants!"
+            voice audio.elias_ch6_line32  # transcript: "What are you calling, Dari?"
+            elias "What do you call them, Daddy?"
+            show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line21  # transcript: "Nature-channelers Elias, they're called Nature-channelers."
             dorian "Nature channelers, Elias. They're called nature channelers. They channel nature itself."
+            voice audio.dorian_ch6_line22  # transcript: "You haven't seen one before,"
             dorian "You haven't seen one before, right?"
 
-            show elias normal_neutral at right_char_kids
+            show elias normal_neutral at right_char_kids with Dissolve(0.1)
             "Elias shook his head."
 
-            elias  "Then he carried you back here, Daddy. Mister Svante helped him."
-            show dorian normal_alt_annoyed at left_char
+            voice audio.elias_ch6_line33  # transcript: "Then he carried you back"
+            elias "Then he carried you back here, Daddy. Mister Svante helped him."
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+            voice audio.dorian_ch6_line23  # transcript: "I weigh more than two"
             dorian "…I weigh more than two people combined."
-            show elias normal_happy at right_char_kids
-            elias  "He's really strong, Daddy! And he was so serious."
-            show dorian neutral at left_char
+            show elias normal_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch6_line34  # transcript: "He's really strong daddy and"
+            elias "He's really strong, Daddy! And he was so serious."
+            show dorian neutral at left_char with Dissolve(0.1)
 
             "He yawned, snuggling deeper into the blankets."
-
-            elias  "*yawns* Very…. Amazing…"
+            voice audio.elias_ch6_line35
+            elias "*yawns* Very…. Amazing…"
 
             jump ch6_elias_common
 
@@ -275,13 +331,15 @@ label ch6_elias_choices:
 label ch6_elias_common:
     show dorian neutral at left_char
     show elias normal_neutral at right_char_kids
+    with Dissolve(0.1)
     "Elias's breathing slowed, his tiny chest rising and falling in a steady rhythm. His fingers, still curled around my sleeve, loosened their grip as sleep took him."
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     "I leaned down, pressing a gentle kiss to his forehead."
 
+    voice audio.dorian_ch6_line24  # transcript: "Sleep well buddy."
     dorian "Sleep well, buddy."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
 
     "Carefully, I tucked the blanket around him, making sure he was warm before standing."
     "The room was quiet, save for the soft hum of the fan."
@@ -308,65 +366,85 @@ label ch6_briefing:
     show chunghee normal_neutral at right_char
     show dorian neutral at left_char
     with Dissolve(0.2)
+    voice audio.chung_ch6_line1  # transcript: "You're awake."
     chung_hee "You're awake."
+    voice audio.dorian_ch6_line25  # transcript: "How long was I out?"
     dorian    "How long was I out?"
+    voice audio.chung_ch6_line2  # transcript: "or hours I believe."
     chung_hee "Four hours, I believe."
 
     "He took a sip of his tea, setting the cup down with a quiet clink. Then, his expression hardened."
 
-    show chunghee normal_angry at right_char
+    show chunghee normal_angry at right_char with Dissolve(0.1)
+    voice audio.chung_ch6_line3  # transcript: "We need to go. Tetsuano."
     chung_hee "We need to go. To Tianho."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch6_line26  # transcript: "Tionome. Why?"
     dorian    "Tianho? Why?"
 
-    show chunghee normal_v2 at right_char
+    show chunghee normal_v2 at right_char with Dissolve(0.1)
     "Chung-hee exhaled slowly, fingers curling around his cup."
 
+    voice audio.chung_ch6_line4  # transcript: "Tian Ho was unseaged by"
     chung_hee "Tianho is under siege by monsters."
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
+    voice audio.dorian_ch6_line27  # transcript: "What?"
     dorian    "What?!"
 
     "Tim's face was pinched with worry, his small hands clenched into fists."
-    show dorian serious at left_char
-
-    show tim sad at center_char_kids with Dissolve(0.2)
+    show dorian serious at left_char 
+    show tim sad at center_char_kids
+    with Dissolve(0.2)
+    voice audio.tim_ch6_line1  # transcript: "Mr. Dorian, Miss Wang."
     tim "Mister Dorian! Miss Weng—!"
 
     "He swallowed hard, looking up at me with wide, desperate eyes."
 
+    voice audio.tim_ch6_line2  # transcript: "Tianhu was under attack. Miss"
     tim "Tianho is under attack! Miss Weng went there to check on Master Yuxuan's main branch shortly after dinner, but then suddenly monsters attacked!"
 
-    show chunghee normal_neutral at right_char
+    show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch6_line5  # transcript: "Svante and Nico followed after"
     chung_hee "Svante and Niko followed after her. I stayed behind because Niko ordered me to."
+    voice audio.chung_ch6_line6  # transcript: "he said I'm still recovering."
     chung_hee "He said I'm still recovering."
 
+    voice audio.tim_ch6_line3  # transcript: "But they've been gone for"
     tim "But they've been gone for so long…! What if—what if something happened to them?"
 
     "His voice cracked slightly, and he hugged his arms to his chest."
 
+    voice audio.dorian_ch6_line28  # transcript: "Where's Yushu-an?"
     dorian    "Where's Yuxuan?"
 
     "Chung-hee's brow furrowed slightly."
 
+    voice audio.chung_ch6_line7  # transcript: "He panicked the moment he"
     chung_hee "He panicked the moment he heard, said something about the underground and locked himself in his study. He said it was important."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     dorian    "Important?"
+    voice audio.tim_ch6_line4  # transcript: "Yes, Mr. He said it"
     tim       "Yes, Mister. He said it was very important."
     show chunghee normal_sad at right_char
+    voice audio.chung_ch6_line8  # transcript: "I want to help, but"
     chung_hee "I want to help. But I don't think I can do much with my situation."
+    voice audio.chung_ch6_line9  # transcript: "with you accompanying me Dorian."
     chung_hee "Will you accompany me, Dorian?"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     show tim normal at center_char_kids
     "I glanced at him, noting the way his fingers lightly tapped against the side of his cup. I can tell that his unease."
 
+    voice audio.dorian_ch6_line29  # transcript: "Yeah, of course, but I"
     dorian    "Yeah, of course. But I can't leave Elias behind."
     show chunghee normal_neutral at right_char
+    voice audio.chung_ch6_line10  # transcript: "He has TETTA."
     chung_hee "He has Tedda."
 
     show dorian normal_alt_annoyed at left_char
     "I nearly rolled my eyes."
 
+    voice audio.dorian_ch6_line30  # transcript: "Chung, you're an adult. You"
     dorian    "Chung, you're an adult. You know Tedda's a stuffed animal doll, right?"
     hide chunghee
 
@@ -386,13 +464,16 @@ label ch6_tedda:
     "Stuffed toy ears, identical to the ones on Elias's doll, sat atop her head."
 
     show dorian normal_alt_tense at left_char
+    voice audio.dorian_ch6_line31
     dorian        "… T-Tedda?"
     tedda   "It's me, Mister Dorian! Hello!"
     show dorian neutral at left_char
     show tim alt_pumped at center_char_kids
+    voice audio.tim_ch6_line5  # transcript: "She's Teta, Mr. Dorian. Mr."
     tim           "She's Tedda, Mister Dorian! Mister Chung made her alive with his mind channeling!"
     hide tedda_human
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch6_line11  # transcript: "Took you a while just"
     chung_hee     "Took you a while just to get water."
     show tim normal at center_char_kids
 
@@ -426,6 +507,7 @@ label ch6_tedda:
     "I sighed, wiping my mouth with the back of my hand."
 
     show dorian normal_alt_annoyed at left_char
+    voice audio.dorian_ch6_line32  # transcript: "Lady Elias?"
     dorian "Lady Elias?"
     show dorian neutral at left_char
     "Tedda only giggled, her eyes twinkling."
@@ -435,11 +517,14 @@ label ch6_tedda:
     "Then, we heard whirring. Roboto approached us."
     hide tedda_human
     show roboto happy at right_robot with Dissolve(0.2)
+    voice audio.roboto_ch6_line1  # transcript: "Apologies for me being late,"
     roboto "Apologies for me being late, M-M-M-Master Dorian."
+    voice audio.roboto_ch6_line2  # transcript: "me and Miss Teta Teta"
     roboto "Me and Miss T-T-Tedda here will take care of Elias. Don't worry."
 
     "His arms whirred as he gave me a reassuring thumbs-up."
 
+    voice audio.roboto_ch6_line3  # transcript: "You can count on Roboto!"
     roboto "You can count on Robotoooo~"
 
     hide roboto
@@ -448,21 +533,27 @@ label ch6_tedda:
 
     show tim alt_nervous at center_char_kids
     "Tim, who had been fidgeting near the table, quickly stepped forward."
+    voice audio.tim_ch6_line6  # transcript: "Mr. Roboto, how's Master Yushuan?"
     tim "Mister Roboto, how's Master Yuxuan?"
 
     "Roboto's head tilted, gears clicking as he processed the question. His screen showed a smiling face."
     hide tedda_human
     show roboto happy at right_robot with Dissolve(0.2)
+    voice audio.roboto_ch6_line4  # transcript: "Master Yushuan is doing fine."
     roboto "Master Yuxuan is doing fine. I gave him some s-s-s-s-snackss!"
+    voice audio.roboto_ch6_line5  # transcript: "He's currently monitoring the situation"
     roboto "He's currently monitoring the situation ab-b-b-b-bove ground and b-b-b-below ground from his room."
 
     show dorian serious at left_char
+    voice audio.dorian_ch6_line33  # transcript: "And what about Spontane Niko?"
     dorian "And what about Svante and Niko? Any word from them?"
 
     show roboto bad_mood at right_robot
+    voice audio.roboto_ch6_line6  # transcript: "Unfortunately, we were not able"
     roboto "Unfortunately, we were not able to contact t-t-t-t-them."
 
     show dorian normal_alt_calm at left_char
+    voice audio.roboto_ch6_line7  # transcript: "If we wish to go"
     roboto "If you wish to go there, now would b-b-b-b-b-b-b-b-b *crashes*"
 
     show dorian neutral at left_char
@@ -474,37 +565,46 @@ label ch6_tedda:
 
     tedda "Umm… Is Roboto alright?"
     show tim think at center_char_kids 
+    voice audio.tim_ch6_line7  # transcript: "Oh, um, hold on a"
     tim "Oh, um… Hold on a second."
 
     "Tim hurried behind Roboto, his small hands fumbling as he reached into his pocket. He pulled out a well-worn screwdriver, its handle smoothed from years of use."
     "With careful hands, he opened a panel on Roboto's back, adjusting a few loose wires."
 
+    voice audio.tim_ch6_line8  # transcript: "Okay, this one connects here"
     tim "Okay… this one connects here, and that one—yeah, that should do it…"
 
     "A few moments later, Roboto jolted back to life."
 
     hide tedda_human
     show roboto happy at right_robot with Dissolve(0.2)
+    voice audio.roboto_ch6_line8  # transcript: "Boop, RayBoot Sequence Complete, Ray"
     roboto "Bzzt—Reboot sequence complete… r-r-r-r-recalibrating sensors…"
+    voice audio.roboto_ch6_line9  # transcript: "Roboto is ready to serve!"
     roboto "Robotooo is ready to seerrveeee~ You can count on Robotoo~"
 
     tedda "Yay! Tim, you're amazing!"
 
     "Tim scratched the back of his neck, looking away with a sheepish smile."
 
+    voice audio.tim_ch6_line9  # transcript: "It's nothing, Tera. Just a"
     tim       "It's nothing, Tedda. Just a small fix."
     hide roboto
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee stepped back, shaking his head in disbelief."
 
+    voice audio.chung_ch6_line12  # transcript: "Are all kids here that"
     chung_hee "Are all kids here that smart?"
     show dorian neutral at left_char
+    voice audio.dorian_ch6_line34  # transcript: "Now,"
     dorian    "No."
 
     hide tim
     show roboto happy at center_robot with Dissolve(0.2)
+    voice audio.roboto_ch6_line10
     roboto "Y-Y-You should depart now if you're planning to leave."
+    voice audio.dorian_ch6_line35  # transcript: "Alright, let's head out."
     dorian "Alright. Let's head out."
 
     jump ch6_depart
@@ -519,26 +619,34 @@ label ch6_depart:
     hide roboto
     show tim alt_pumped at center_char_kids with Dissolve(0.2)
 
+    voice audio.tim_ch6_line10  # transcript: "I can show you the"
     tim "I can show you the way to Tianho!"
+    voice audio.tim_ch6_line11  # transcript: "I know all the fastest"
     tim "I-I know all the fastest roads! I can help!"
 
     show chunghee normal_neutral at right_char
+    voice audio.chung_ch6_line13  # transcript: "Tim, it's too dangerous for"
     chung_hee "Tim, it's too dangerous for you. You would be safer here with Tedda and Roboto."
+    voice audio.dorian_ch6_line36  # transcript: "Chung-ee's right, Tim. Even if"
     dorian    "Chung-hee's right, Tim. Even if you're smart, you're still 5 years old. If anything were to happen to you, Yuxuan would—"
     show tim sad at center_char_kids
+    voice audio.tim_ch6_line12  # transcript: "Please, Mr. Dorian, I don't"
     tim       "Please, Mister Dorian! I don't wanna just sit here and do nothing!"
 
     show dorian normal_alt_calm at left_char
     "I sighed."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch6_line37  # transcript: "Dragon's Bollocks. Fine. But you"
     dorian "Dragon's bollocks. Fine. But you stay close to us, alright? And when we tell you to run, you run. No arguments. Got it?"
 
     show tim happy at center_char_kids
     "Tim's eyes widened in shock. Then he grinned, nodding rapidly."
 
+    voice audio.tim_ch6_line13  # transcript: "Yes sir."
     tim       "Yes, sir."
     show chunghee normal_neutral at right_char
+    voice audio.chung_ch6_line14  # transcript: "Let's head out."
     chung_hee "Let's head out."
 
     show dorian neutral at left_char
@@ -548,11 +656,13 @@ label ch6_depart:
     show tedda_human at right_char
     show roboto happy at center_robot
     with Dissolve(0.2)
+    voice audio.dorian_ch6_line38  # transcript: "Take care of Elias, okay?"
     dorian    "Take care of Elias, okay?"
 
     "Tedda beamed, placing a hand on her hip."
 
     tedda "Obviously! Now go before you miss all the fun!"
+    voice audio.roboto_ch6_line11
     roboto      "C-C-Come home safe!"
 
     jump ch6_elevator
@@ -571,7 +681,9 @@ label ch6_elevator:
     "No buttons. No panels. Just a smooth reflective surface."
     "Without a word, Tim stepped forward. A soft blue light flickered to life, scanning his face with a faint beep."
 
+    voice audio.door_ch6_line1  # transcript: "Attention, facial recognition is currently"
     door_voice "Attention. Facial recognition is currently in progress."
+    voice audio.door_ch6_line2  # transcript: "Identity confirmed. Going above ground."
     door_voice "Identity confirmed. Going above ground. Take care, Mister Tim."
 
     "The elevator jolted, then ascended so smoothly it felt like we weren't moving at all. A moment later, the doors slid open with a quiet hiss."
@@ -598,6 +710,7 @@ label ch6_overlooking:
     show tim normal at right_char_kids 
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.tim_ch6_line14  # transcript: "That's Tiano."
     tim "That's Tianho."
 
     show dorian sad at left_char with Dissolve(0.2)
@@ -617,16 +730,19 @@ label ch6_overlooking:
     show tim normal at right_char_kids 
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.tim_ch6_line15  # transcript: "We'll have to walk the"
     tim "We'll have to walk the rest of the way. It's not far—just a short walk."
 
     show dorian neutral at left_char
     "I nodded, then turned to Chung-hee."
     hide tim
     show chunghee normal_neutral at right_char with Dissolve(0.2)
-    dorian    "Chung… earlier, you were floating. Why aren't you doing that now?"
+    voice audio.dorian_ch6_line39
+    dorian "Chung… earlier, you were floating. Why aren't you doing that now?"
 
     "Chung-hee's voice echoed in my mind, the way it always did."
 
+    voice audio.chung_ch6_line15  # transcript: "floating attracts attention. Also, why"
     chung_hee "Floating attracts attention. Also, why would waste energy floating when I could just walk?"
 
     hide chunghee
@@ -639,12 +755,15 @@ label ch6_overlooking:
     show dorian serious at left_char 
     show tim alt_nervous at right_char_kids
     with Dissolve(0.2)
+    voice audio.dorian_ch6_line40  # transcript: "Stay alert."
     dorian "Stay alert."
 
     "Tim nodded, his expression growing serious."
 
+    voice audio.dorian_ch6_line41  # transcript: "and him, stick close. Don't"
     dorian "And Tim—stay close. Don't wander off."
     show tim alt_nervous at right_char_kids with Dissolve(0.1)
+    voice audio.tim_ch6_line16  # transcript: "Yes sir."
     tim    "Y-Yes, sir."
 
     show dorian angry at left_char
@@ -669,6 +788,7 @@ label ch6_overlooking:
     with Dissolve(0.2)
     "Chung-hee reacted instantly."
 
+    voice audio.chung_ch6_line16  # transcript: "Get back!"
     chung_hee "Get back!"
 
     # play sound sfx_lightning_crack              # PLACEHOLDER — lightning SFX
@@ -679,6 +799,7 @@ label ch6_overlooking:
     hide yaoguai with Dissolve(0.1)
 
     show chunghee normal_angry at left_char
+    voice audio.chung_ch6_line17  # transcript: "Torian behind you."
     chung_hee "Dorian, behind you!"
     hide chunghee
 
@@ -739,6 +860,7 @@ label ch6_yaoguai_encounter:
             with Dissolve(0.1)
 
             show tim alt_nervous at left_char_kids with Dissolve(0.2)
+            voice audio.tim_ch6_line17  # transcript: "Mr. Dorian."
             tim "Mister Dorian!!"
 
             "I barely registered his voice—the Yaoguai loomed over me."
@@ -755,10 +877,12 @@ label ch6_yaoguai_encounter:
             show chunghee normal_power_up at right_char with Dissolve(0.2)
             "Chung-hee stood over me, eyes narrowed, hand still raised."
 
+            voice audio.chung_ch6_line18  # transcript: "Are you alright?"
             chung_hee "Are you alright?"
             show dorian serious at left_char with Dissolve(0.2)
             "I sucked in a shaky breath, pain flaring through my ribs."
 
+            voice audio.dorian_ch6_line42  # transcript: "Thanks. Sorry."
             dorian "T-Thanks… Sorry."
 
     $ _choice_timeout = 0
@@ -766,10 +890,12 @@ label ch6_yaoguai_encounter:
     show tim alt_nervous at right_char_kids with Dissolve(0.2)
     "Tim's panicked scream split the air."
 
+    voice audio.tim_ch6_line18  # transcript: "Mr. Another one!"
     tim "Mister! A-Another one!"
     show dorian angry at left_char
     "I turned just in time to see another Yaoguai sprinting toward us from the shadows, its grotesque form blurring with unnatural speed."
 
+    voice audio.tim_ch6_line19  # transcript: "Mr. Make a barrier quick!"
     tim "Mister! Make a barrier! Quick!"
 
     jump ch6_yaoguai_barrier
@@ -805,6 +931,7 @@ label ch6_yaoguai_barrier:
             show dorian serious at left_char
 
             show tim happy at right_char_kids with Dissolve(0.2)
+            voice audio.tim_ch6_line20  # transcript: "You did it, Sardorian!"
             tim "You did it, sir Dorian!"
 
             show dorian normal_alt_confident at left_char
@@ -827,7 +954,7 @@ label ch6_yaoguai_barrier:
 
             # TODO: snarling sfx
             "The Yaoguai snarled and dove straight through the whirlwind, using the momentum to propel itself faster."
-
+            voice audio.tim_ch6_line21
             tim "M-Mister—!!"
 
             "I barely had time to react before it was on me."
@@ -846,11 +973,13 @@ label ch6_yaoguai_barrier:
             hide yaoguai
 
             show chunghee normal_neutral at right_char with Dissolve(0.2)
+            voice audio.chung_ch6_line19  # transcript: "Take care."
             chung_hee "Dorian, take care."
 
             "I clutched my shoulder, my breath shaky."
 
             show dorian serious at left_char
+            voice audio.dorian_ch6_line43  # transcript: "I thought the wind would"
             dorian "I thought the wind would stop it…"
 
     $ _choice_timeout = 0
@@ -873,11 +1002,13 @@ label ch6_yaoguai_common:
         "Damn it. When did I—?"
 
         show tim alt_nervous at center_char_kids with Dissolve(0.2)
+        voice audio.tim_ch6_line22  # transcript: "Mr. Dorian! You're bleeding!"
         tim "M-Mister Dorian! You're bleeding!"
 
         "I staggered, my vision swaying. Too much blood. Too fast."
 
         show chunghee normal_angry at right_char
+        voice audio.chung_ch6_line20  # transcript: "Torian, we need to find"
         chung_hee "Dorian! We need to find Niko. Fast!"
 
         "But the ground tilted beneath me, my legs buckling. I hit my knees."
@@ -892,16 +1023,19 @@ label ch6_yaoguai_common:
         "Reload your last save and avoid taking hits from the Yaoguai."
 
         pause 1.0
-        jump game_over
+        jump ch10_bad_end_credits
 
     else:
         show dorian serious at left_char
         "The remaining Yaoguai snarled, their bodies twitching, their eyes locked on us."
 
+        voice audio.dorian_ch6_line44  # transcript: "There. A lot faster than"
         dorian    "They're… a lot faster than I remember."
         hide tim
         show chunghee normal_neutral at right_char with Dissolve(0.2)
+        voice audio.chung_ch6_line21  # transcript: "We need to end this"
         chung_hee "We need to end this quickly."
+        voice audio.chung_ch6_line23  # transcript: "Stay close to me."
         chung_hee "Stay close to me. I have this."
 
         show chunghee normal_power_up at right_char
@@ -932,6 +1066,7 @@ label ch6_yaoguai_common:
         show dorian normal at left_char
         show chunghee normal_neutral at right_char
         with Dissolve(0.2)
+        voice audio.dorian_ch6_line45  # transcript: "Remind me to never piss"
         dorian    "…Remind me to never piss you off, Chung."
         chung_hee "…"
 
@@ -951,6 +1086,7 @@ label ch6_tianho_approach:
     show tim normal at center_char_kids with Dissolve(0.2)
     "Tim clung to me, his small arms wrapped tightly around my neck as I carried him."
 
+    voice audio.tim_ch6_line23  # transcript: "Go left, that way!"
     tim "Go left! That way!"
 
     hide chunghee
@@ -996,6 +1132,7 @@ label ch6_tianho_approach:
     "I lowered Tim gently to the ground. He stumbled a bit, still shaken."
     "Chung-hee immediately pulled him close, his expression unreadable."
 
+    voice audio.chung_ch6_line22  # transcript: "Stay close to me, I"
     chung_hee "Stay close to me."
 
     "Tim nodded, his small fingers clutching the hem of Chung-hee's sleeve."
@@ -1013,9 +1150,13 @@ label ch6_jiang_gao:
     show soldier_gao at right_char
     show soldier_jiang at left_char
     with Dissolve(0.2)
-    gao  "Gao, look! People!"
-    jiang "Hmm… Wait, Jiang… Is that—"
-    gao   "Paladin Dorian? In Li Mengtia's name! It's really you!"
+    voice audio.jiang_ch6_line1
+    jiang  "Gao, look! People!"
+    voice audio.gao_ch6_line1
+    gao "Hmm… Wait, Jiang… Is that—"
+    voice audio.jiang_ch6_line2
+    jiang   "Paladin Dorian? In Li Mengtia's name! It's really you!"
+    voice audio.jiang_ch6_line3  # transcript: "Hey! Hey, over here, sir!"
     jiang "Hey! Hey! Over here, sir!"
     
     hide soldier_jiang
@@ -1025,70 +1166,89 @@ label ch6_jiang_gao:
     "Relief washed over me."
 
     show dorian smile at left_char
+    voice audio.dorian_ch6_line46  # transcript: "Zhang Gao"
     dorian "Jiang! Gao!"
 
     "I barely held back the urge to grab them, to make sure they were real."
     "Gao smirked and pointed at his shirt."
     show dorian neutral at left_char
 
+    voice audio.gao_ch6_line2  # transcript: "We work for Cheng Industries"
     gao  "We work for Cheng Industries now! Here at Cheng's, we make ch—"
 
     "Jiang rolled his eyes."
 
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
+    voice audio.jiang_ch6_line4  # transcript: "Change! Yes, anyway."
     jiang "Change. *Hums a tone* Yes, anyway…"
 
     "He cleared his throat."
 
+    voice audio.jiang_ch6_line5  # transcript: "You must be looking for"
     jiang "You must be looking for Miss Weng… She's with your friends."
+    voice audio.dorian_ch6_line47  # transcript: "You know, Miss Wang?"
     dorian "You know Miss Weng?"
+    voice audio.jiang_ch6_line6  # transcript: "She's our supervisor in a"
     jiang "She's our supervisor… in a way."
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch6_line3  # transcript: "She's with the doctor and"
     gao   "She's with the doctor, and the guy with the pink hair."
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
+    voice audio.jiang_ch6_line7  # transcript: "Idiot! It's not pink, it's"
     jiang "Idiot. It's not pink. It's violet."
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch6_line4  # transcript: "Sir, it's been a while."
     gao   "Sir, it's been a while! How are—"
 
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
+    voice audio.jiang_ch6_line8  # transcript: "Don't raise your voice too"
     jiang "Don't raise your voice too much, Gao. That thing might see us."
     show dorian serious at left_char
 
+    voice audio.dorian_ch6_line48  # transcript: "He's right, gal. Where are"
     dorian "He's right, Gao. Where are the others?"
 
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch6_line5  # transcript: "H-Hydin, sir. Many are wounded."
     gao   "H-Hiding, sir. Many are wounded. They're hiding inside this store."
 
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
+    voice audio.jiang_ch6_line9  # transcript: "the doctor is trying to"
     jiang "The doctor is trying to heal the injured."
 
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee's sharp gaze flicked between us."
+    voice audio.chung_ch6_line24  # transcript: "Do you know these people,"
     chung_hee "Do you know these people, Dorian?"
 
     show dorian neutral at left_char
+    voice audio.dorian_ch6_line49  # transcript: "Yeah, I fought with him"
     dorian    "Yeah, I've fought with them during the Tragedy of Tianho."
 
     "Tim's worry hadn't left his face."
     hide chunghee
     show tim alt_nervous at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch6_line24  # transcript: "But they're hiding from something."
     tim "But… they're hiding from something… Shouldn't we hide too?"
 
     show dorian serious at left_char
     "I glanced at him. He's right. It's too dangerous for him to be out in the open. I gestured toward Jiang."
 
+    voice audio.jiang_ch6_line10  # transcript: "God of Paladin. We'll make"
     jiang "Got it, Paladin. We'll make sure he's safe."
 
     "He approached Tim and extended his hand."
 
+    voice audio.jiang_ch6_line11  # transcript: "Come with us little one."
     jiang "Come with us, little one."
+    voice audio.tim_ch6_line25  # transcript: "Um, okay. Take care, Mr."
     tim   "Um… okay. Take care mister Dorian."
 
     "They took him to hide behind the storefront, their eyes still watching."
@@ -1118,7 +1278,9 @@ label ch6_hundun_appears:
     show soldier_gao at right_char
     with Dissolve(0.2)   
     
+    voice audio.jiang_ch6_line12  # transcript: "Lieb McTeeer, save us!"
     jiang "Li Mengtia, save us…"
+    voice audio.gao_ch6_line6  # transcript: "Don't you wanna hide with"
     gao   "D-Don't you wanna hide with us, Paladin Dorian?"
 
     "And then I saw it."
@@ -1133,6 +1295,7 @@ label ch6_hundun_appears:
 
     "Tim's voice was barely a whisper."
 
+    voice audio.tim_ch6_line26  # transcript: "Ah, handen."
     tim "A… Hundun…"
 
     scene bg_tianho_city_night with dissolve
@@ -1142,15 +1305,21 @@ label ch6_hundun_appears:
     with Dissolve(0.2)
     "Chung-hee approached me, his gaze not leaving the monster's."
 
+    voice audio.chung_ch6_line25  # transcript: "I take it, this isn't"
     chung_hee "I take it this isn't just another Yaoguai?"
+    voice audio.dorian_ch6_line50  # transcript: "Don't you have this creature"
     dorian    "Don't you have this creature in Kyeongjang?"
+    voice audio.chung_ch6_line26  # transcript: "No, I haven't read about"
     chung_hee "No, I- I haven't read about this. This is foreign to me…"
 
     show tim think at center_char_kids
+    voice audio.tim_ch6_line27  # transcript: "Undone. It means chaos. It's"
     tim       "Hundun… it means 'chaos.' It's not like the others. I've read about it. In Li Mengtia's bibliography page 237."
     dorian    "How so?"
+    voice audio.tim_ch6_line28  # transcript: "Chaos. Confusion. It moves in"
     tim       "Chaos. Confusion. It moves in ways you can't predict. If you watch it too long, you'll start seeing things that aren't real."
     show tim alt_nervous at center_char_kids
+    voice audio.tim_ch6_line29  # transcript: "Hunterns confuse people at... They"
     tim       "Hunduns confuse people and… they eat them."
 
     "Gao took an uneasy step back."
@@ -1159,8 +1328,9 @@ label ch6_hundun_appears:
     show soldier_jiang at right_flip
     show soldier_gao at center_char
     with Dissolve(0.2)
-
-    gao   "Holy… So that's why people have been hiding."
+    voice audio.gao_ch6_line7
+    gao "Holy… So that's why people have been hiding."
+    voice audio.jiang_ch6_line13  # transcript: "Once people start to see"
     jiang "Once people started seeing that thing, they're minds are all muddied."
     show dorian normal_alt_annoyed at left_char
     dorian "Tch. Just my lucky day."
@@ -1203,8 +1373,10 @@ label ch6_hundun_appears:
     show soldier_jiang at left_char
     show soldier_gao at right_char
     with Dissolve(0.2)
+    voice audio.jiang_ch6_line14  # transcript: "Come here, paladin. Who even"
     jiang "Come here, Paladin! Hahaha! We won't bite!"
-    gao   "Hahahaha! Your blood will be perfect for our dinner!"
+    voice audio.gao_ch6_line8
+    gao  "Hahahaha! Your blood will be perfect for our dinner!"
     hide soldier_jiang
     hide soldier_gao
 
@@ -1214,6 +1386,7 @@ label ch6_hundun_appears:
     "My breath hitched."
     "All of a sudden, Chung-hee's voice echoed in my mind."
 
+    voice audio.chung_ch6_line27  # transcript: "Dorian, listen to me."
     chung_hee "Dorian. Listen to me."
 
     jump ch6_hundun_illusion_1
@@ -1230,6 +1403,7 @@ label ch6_hundun_illusion_1:
     pause 1.5
     "It was sharp, cutting through the suffocating fog in my mind."
 
+    voice audio.chung_ch6_line28  # transcript: "What you're seeing is the"
     chung_hee "What you're seeing is the Hundun. It's digging into your thoughts, warping your perception. You must trust me."
 
     show dorian serious at left_char with Dissolve(0.2)
@@ -1248,15 +1422,18 @@ label ch6_hundun_illusion_1:
     emily "We miss you!"
     hide emily
     show daniel at center_char_kids with Dissolve(0.2)
+    voice audio.daniel_ch6_line1  # transcript: "We missed you so much!"
     daniel "We missed you so much!"
     hide daniel
     show sarah at center_char_kids with Dissolve(0.2)
     sarah "Come here, dad!"
     hide sarah with Dissolve(0.1)
+    voice audio.elara_ch6_line1  # transcript: "Dorian."
     elara "Dorian."
 
     "She stepped forward, arms outstretched, a smile pulling at her lips."
 
+    voice audio.elara_ch6_line2  # transcript: "Here, I missed you. Take"
     elara "Here. I missed you. Take one more step."
 
     "My entire body locked up."
@@ -1283,6 +1460,7 @@ label ch6_hundun_illusion_1:
     "Elara's face twitched."
     "For a fraction of a second, the warmth in her smile cracked."
 
+    voice audio.elara_ch6_line3  # transcript: "Dorian, I won't ask again."
     elara "Dorian… I won't ask again."
 
     dorian "You're not Elara."
@@ -1336,7 +1514,9 @@ label ch6_vasily_room:
     "The ruined streets of Tianho vanished, replaced by a throne room. A lavish throne room in Mjoll. As I remembered it."
 
     show vasily alt_think at center_char with Dissolve(0.2)
+    voice audio.vasily_ch6_line1  # transcript: "My, my, Dorian, my friend."
     vasily "My, my. Dorian my friend. Still as temperamental as ever, I see."
+    voice audio.vasily_ch6_line2  # transcript: "Do tell me, how's the"
     vasily "Do tell me, how's the Prince?"
 
     show vasily neutral at right_char 
@@ -1349,7 +1529,9 @@ label ch6_vasily_room:
     show vasily alt_savage at right_char
     "One Vasily. Then two. Then four. Then dozens—standing at every corner of the throne room, each an exact copy, each watching me with those sharp, amused eyes."
 
+    voice audio.chung_ch6_line29  # transcript: "Be careful Dorian, this is"
     chung_hee "Be careful, Dorian… This is a trap."
+    voice audio.chung_ch6_line30  # transcript: "Don't be rash. Relay on"
     chung_hee "Don't be rash. Rely on what I say."
 
     "I could feel it. The pressure building around me."
@@ -1357,7 +1539,7 @@ label ch6_vasily_room:
     scene vasily_attack with shock_cut
     "The illusions layered on top of each other, twisting, warping, shifting. The throne room flickered—too bright, too dark, too blinding."
     "My heartbeat pounded in my ears."
-
+    voice audio.vasily_ch6_line3
     vasily "What's the matter, old friend? Confused?"
     scene mjoll_palace_throne with shock_cut
 
@@ -1390,6 +1572,7 @@ label ch6_vasily_qtc:
             dorian "W-What?"
 
             show vasily alt_savage at right_char
+            voice audio.vasily_ch6_line4  # transcript: "No heart feelings, old friend."
             vasily "No hard feelings, old friend."
 
             scene cg_blindinglight with shock_cut
@@ -1398,9 +1581,11 @@ label ch6_vasily_qtc:
             dorian "Ahhhh!!! F—"
             "I hit the ground hard, vision swimming, my nerves screaming in agony. Above me, Vasily loomed, smirking, his sharp eyes gleaming in the flickering light."
 
+            voice audio.vasily_ch6_line5  # transcript: "It hurts. Doesn't it old"
             vasily "It hurts. Doesn't it, old friend?"
+            voice audio.vasily_ch6_line6  # transcript: "Call it karma or revenge."
             vasily "Call it karma. Or revenge."
-
+            voice audio.chung_ch6_line31
             chung_hee "DORIAN, NO!"
 
             "And then darkness swallowed me whole."
@@ -1408,7 +1593,7 @@ label ch6_vasily_qtc:
             stop music fadeout 1.0
             stop audio
             pause 1.5
-            jump game_over
+            jump ch10_bad_end_credits
 
         "Attack the Vasily closest to you.":
             $ _choice_timeout = 0
@@ -1440,7 +1625,7 @@ label ch6_vasily_qtc:
             stop music fadeout 1.0
             stop audio
             pause 1.5
-            jump game_over
+            jump ch10_bad_end_credits
 
         "Close your eyes and rely on Chung-hee's mind channeling.":
             $ _choice_timeout = 0
@@ -1451,11 +1636,14 @@ label ch6_vasily_qtc:
             "I shut my eyes, forcing myself to ignore the illusions."
 
             show vasily alt_aggressive at right_char
+            
             vasily "What's the matter, old friend?"
+            voice audio.vasily_ch6_line7  # transcript: "Open your eyes before you"
             vasily "Open your eyes before you get yourself killed! Hrmmmmmnnnn…."
 
             "Then—a voice cut through the noise."
 
+            voice audio.chung_ch6_line32  # transcript: "third person from the left."
             chung_hee "Third person from the left."
 
             show dorian dragon_eyes at left_char with Dissolve(0.1)
@@ -1464,13 +1652,14 @@ label ch6_vasily_qtc:
             "I lunged—flames igniting along my fist."
 
             show vasily alt_mad at right_char
+            voice audio.vasily_ch6_line8  # transcript: "What?"
             vasily "Wha-?!"
 
             "The moment my fire struck him, the illusions shattered like glass, breaking into shards of twisted, flickering light."
             camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
             with shattered_glass_transition
             # play sound sfx_illusion_shatter     # PLACEHOLDER — shatter SFX
-
+            voice audio.vasily_ch6_line9
             vasily "AAHHH!!!"
             camera
             hide vasily
@@ -1517,6 +1706,7 @@ label ch6_rulers_illusion:
     show vasily alt_savage at center_char
     "Vasily's grin widened, a slow, lazy smirk spreading across his face."
 
+    voice audio.vasily_ch6_line10  # transcript: "Time for some friends from"
     vasily "Time for some friends from the upper society."
     
     show vasily neutral at center_char
@@ -1531,6 +1721,7 @@ label ch6_rulers_illusion:
     "Their gazes bore into me, their expressions unreadable—but their intentions were clear. Destroy me."
 
     show vasily alt_aggressive at center_char
+    voice audio.vasily_ch6_line11  # transcript: "Do you, by chance, remember"
     vasily "Do you, by chance, remember them, old friend?"
 
     hide king_gustav
@@ -1542,22 +1733,25 @@ label ch6_rulers_illusion:
 
     hide vasily
     show king_gustav at right_char with Dissolve(0.2)
-    gustav_illusion "DIE!"
+    voice audio.gustav_ch6_line1
+    gustav "DIE!"
 
     hide king_gustav
     show olympia at right_char with Dissolve(0.2)
-    olympia_illusion "You burn everything you touch, Paladin."
+    voice audio.olympia_ch6_line1
+    olympia "You burn everything you touch, Paladin."
 
     # TODO: add wind sfx
     "The winds around her howled, her presence distorting the air itself."
-
-    olympia_illusion "You will die, you monster!"
+    voice audio.olympia_ch6_line2
+    olympia "You will die, you monster!"
 
     show dorian angry at left_char
     "I clenched my fists."
 
     hide olympia
-    minjoon_illusion "Your head will be ours… It will look good on a pike."
+    voice audio.minjoon_ch6_line1
+    minjoon "Your head will be ours… It will look good on a pike."
 
     show vasily alt_savage at right_char with Dissolve(0.2)
     "My breath hitched."
@@ -1569,6 +1763,7 @@ label ch6_rulers_illusion:
     "A cold wave of fear crept into my chest, tightening like a vice."
 
     $ renpy.save("quick-1")
+    voice audio.chung_ch6_line33  # transcript: "Dorian, listen to me. I"
     chung_hee "Dorian. Listen to me. I can feel your fear. You must let it go."
 
     show dorian normal_alt_calm at left_char
@@ -1576,14 +1771,20 @@ label ch6_rulers_illusion:
 
     dorian "…*breathes deeply* Hrnnn…"
 
+    voice audio.chung_ch6_line34  # transcript: "To not let your mind"
     chung_hee "Do not let your mind betray you. Those are merely illusions."
+    voice audio.chung_ch6_line35  # transcript: "Strike first at the honorable"
     chung_hee "Strike first at the Honorable Empress."
+    voice audio.chung_ch6_line36  # transcript: "Then the illusion of Pierre."
     chung_hee "And then the illusion of… pyeha."
 
     "For the briefest moment, his mind faltered—but it was gone in an instant."
 
+    voice audio.chung_ch6_line37  # transcript: "My father."
     chung_hee "My father."
+    voice audio.chung_ch6_line38  # transcript: "than that venomous serpent of"
     chung_hee "Then, that venomous serpent of a king."
+    voice audio.chung_ch6_line39  # transcript: "And lastly, you shall strike"
     chung_hee "And lastly, you shall strike down whoever is left."
 
     "The area shuddered as the rulers prepared their assault."
@@ -1597,21 +1798,23 @@ label ch6_rulers_illusion:
     "Their gazes pierced through me, judgment dripping from every word, every movement."
     "On the far left, Gustav stood unshaken, his broad form towering, his expression carved from stone."
     "Cracks spiderwebbed beneath his feet, the very earth groaning under the weight of his rage."
-
-    gustav_illusion "Prepare to die, Dorian!"
+    voice audio.gustav_ch6_line2
+    gustav "Prepare to die, Dorian!"
 
     "To his right, Empress Olympia hovered mid-air, her robes billowing violently in a cyclone of shrieking wind."
     "A hurricane twisted around her, distorting the air itself, flickers of lightning threading through the storm."
-
-    olympia_illusion "You will rue this day!"
+    voice audio.olympia_ch6_line3
+    olympia "You will rue this day!"
 
     "At the center, Vasily stood, his form bathed in radiant light, his smirk so casual it sent chills down my spine. He raised his hand, and daggers of light formed at his fingertips, their edges pulsing with raw, celestial power."
 
+    voice audio.vasily_ch6_line12  # transcript: "A period has to end"
     vasily "A pity it has to end this way, dear friend."
 
     "On the far right, Emperor Min-joon stood, but he did not move. His eyes gleamed an unnatural violet, swirling with shifting patterns."
 
-    minjoon_illusion "Your family died because of you. Death will be too kind of a punishment for monsters such as yourself…"
+    voice audio.minjoon_ch6_line2
+    minjoon "Your family died because of you. Death will be too kind of a punishment for monsters such as yourself…"
 
     hide king_gustav
     hide olympia
@@ -1620,12 +1823,14 @@ label ch6_rulers_illusion:
     with Dissolve(0.2)
     "I staggered, my breath hitching— My body felt disconnected."
 
+    voice audio.chung_ch6_line40  # transcript: "Wait for a Torian."
     chung_hee "Wait for it, Dorian."
 
     "The four figures stepped forward, power building to a breaking point—"
     show dorian dragon_eyes at left_char
     "I tightened my fists. My flames surged."
 
+    voice audio.vasily_ch6_line13  # transcript: "Lights out!"
     vasily "LIGHTS OUT!"
 
     scene black with shock_cut           
@@ -1634,6 +1839,7 @@ label ch6_rulers_illusion:
     "The world vanished."
     "The ground beneath me disappeared into an abyss. I couldn't see. All I can see are shadows."
 
+    voice audio.chung_ch6_line41  # transcript: "Now, hit them before they"
     chung_hee "NOW!! Hit them before they strike!"
     jump ch6_darkness_qtc
 
@@ -1659,10 +1865,13 @@ label ch6_darkness_qtc:
             "My flames surged, my fists colliding with—nothing."
 
             dorian "W-What?! But how?!"
-
-            olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav_illusion "Foolish. Utterly foolish."
-            minjoon_illusion "How disappointing. How unworthy."
+            voice audio.olympia_ch6_line4
+            olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
+            voice audio.gustav_ch6_line3
+            gustav "Foolish. Utterly foolish."
+            voice audio.minjoon_ch6_line3
+            minjoon "How disappointing. How unworthy."
+            voice audio.vasily_ch6_line14  # transcript: "You always were predictable dear"
             vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
@@ -1670,13 +1879,16 @@ label ch6_darkness_qtc:
 
             dorian "AHHH!!"
 
+            voice audio.vasily_ch6_line15  # transcript: "This is my revenge. Farewell"
             vasily "THIS is my revenge. Farewell, dear friend."
-            chung_hee       "DORIAN! NO!"
+            voice audio.chung_ch6_line42
+            chung_hee "DORIAN! NO!"
+            voice audio.vasily_ch6_line16  # transcript: "ha ha ha ha ha"
             vasily "HAHAHAHAHAHA!!"
 
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            jump game_over
+            jump ch10_bad_end_credits
 
         "Hit the second shadow first, then the fourth, then the first, then the third.":
             $ _choice_timeout = 0
@@ -1687,19 +1899,20 @@ label ch6_darkness_qtc:
             "Flames hit the targets. They shrieked as the fire engulfed them."
 
             # play sound sfx_illusion_shatter     # PLACEHOLDER — shatter SFX
-
-            olympia_illusion "AHHH!!!"
+            voice audio.olympia_ch6_line5
+            olympia "AHHH!!!"
 
             camera at bigshake(5.0, rate=0.020, time=0.09), shattered_glass_transform
             with shattered_glass_transition
             "Her form cracked, like glass under heat—then shattered."
             camera
 
-            minjoon_illusion "AH! AH! AHHH!!!"
+            voice audio.minjoon_ch6_line4
+            minjoon "AH! AH! AHHH!!!"
 
             "Emperor Min-joon vanished, his form dissolving like ash on the wind."
-
-            gustav_illusion "Curse…. CURSE YOU!!!! I WON'T FALL TO FIRE!!"
+            voice audio.gustav_ch6_line4
+            gustav "Curse…. CURSE YOU!!!! I WON'T FALL TO FIRE!!"
 
             "His form shattered as he continued to mutter curses."
 
@@ -1716,10 +1929,10 @@ label ch6_darkness_qtc:
             "My flames surged, my fists colliding with—nothing."
 
             dorian "W-What?! But how?!"
-
-            olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav_illusion "Foolish. Utterly foolish."
-            minjoon_illusion "How disappointing. How unworthy."
+            voice audio.olympia_ch6_line4
+            olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
+            gustav "Foolish. Utterly foolish."
+            minjoon "How disappointing. How unworthy."
             vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
@@ -1728,12 +1941,12 @@ label ch6_darkness_qtc:
             dorian "AHHH!!"
 
             vasily "THIS is my revenge. Farewell, dear friend."
-            chung_hee       "DORIAN! NO!"
+            chung_hee "DORIAN! NO!"
             vasily "HAHAHAHAHAHA!!"
 
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            jump game_over
+            jump ch10_bad_end_credits
 
         "Hit the fourth shadow first, then the second, then the first, then the third.":
             $ _choice_timeout = 0
@@ -1745,10 +1958,10 @@ label ch6_darkness_qtc:
             "My flames surged, my fists colliding with—nothing."
 
             dorian "W-What?! But how?!"
-
-            olympia_illusion "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav_illusion "Foolish. Utterly foolish."
-            minjoon_illusion "How disappointing. How unworthy."
+            voice audio.olympia_ch6_line4
+            olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
+            gustav "Foolish. Utterly foolish."
+            minjoon "How disappointing. How unworthy."
             vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
@@ -1757,12 +1970,12 @@ label ch6_darkness_qtc:
             dorian "AHHH!!"
 
             vasily "THIS is my revenge. Farewell, dear friend."
-            chung_hee       "DORIAN! NO!"
+            chung_hee "DORIAN! NO!"
             vasily "HAHAHAHAHAHA!!"
 
             pause 1.5
             "Reload your last save. Trust Chung-hee's instructions precisely."
-            jump game_over
+            jump ch10_bad_end_credits
 
     $ _choice_timeout = 0
     hide dorian
@@ -1776,6 +1989,7 @@ label ch6_darkness_qtc:
 
 label ch6_vasily_final:
 
+    voice audio.vasily_ch6_line17  # transcript: "Well done, old friend."
     vasily "Well done, old friend."
 
     "He clapped his hands together, and the world around us shattered."
@@ -1800,6 +2014,7 @@ label ch6_vasily_final:
     "I clenched my fists, flames flickering to life at my fingertips. They sputtered, struggling against the cold."
     "Vasily stood across from me, unbothered, smirking. His coat billowed in the wind, the fur-lined edges pristine despite the storm."
 
+    voice audio.vasily_ch6_line18  # transcript: "Feels familiar, doesn't it? How"
     vasily "Feels familiar, doesn't it? How many battles did we fight here, Dorian? How many nights did we spend wading through snow, side by side…"
 
     dorian "Mjoll…"
@@ -1821,6 +2036,7 @@ label ch6_vasily_final:
     "It swirled around his hands before condensing into a searing white beam, crackling with raw power."
 
 
+    voice audio.vasily_ch6_line19  # transcript: "Let's see if you still"
     vasily "Let's see if you still have the strength to stand against me, Dorian."  
     scene frostcradle_blizzard with shock_cut
     show snow_blizzard_1
@@ -1864,6 +2080,7 @@ label ch6_vasily_ice_qtc:
             "Vasily laughed, his silhouette glowing against the snow."
 
             show vasily alt_savage at right_char
+            voice audio.vasily_ch6_line20  # transcript: "Hiding behind walls now. That"
             vasily "Hiding behind walls now? That won't save you, Dorian."
 
             "I wiped blood from my lip."
@@ -1884,6 +2101,7 @@ label ch6_vasily_ice_qtc:
             "Vasily gritted his teeth, digging his heels into the ice."
 
             show vasily alt_mad at right_char 
+            voice audio.vasily_ch6_line21  # transcript: "So you still have some"
             vasily "Tch—so you still have some fight in you!"
 
             show cg_blindinglight with shock_cut 
@@ -1906,12 +2124,14 @@ label ch6_vasily_ice_qtc:
     dorian "Tsk…"
     "The Vasily copies moved in unison, like reflections in a shattered mirror."
 
+    voice audio.vasily_ch6_line22  # transcript: "You didn't think you'd get"
     vasily "You didn't think you'd get a fair fight, did you?"
 
     "A wall of Vasilys—perfect replicas—stared back at me. Their eyes glowed with the same ruthless cunning. Their smirks identical. A sickening, dizzying sight."
     "They stood in perfect formation, radiating a light so intense it swallowed the snowstorm in an ethereal glow. Each one moved in sync, eyes gleaming like suns."
     "Then—he laughed. A mocking, cruel sound that rang through the frozen battlefield."
 
+    voice audio.vasily_ch6_line23  # transcript: "Haha, farewell old friend. I'll"
     vasily "Hahaha! Farewell, old friend. I'll be meeting you in Xianlun."
     scene cg_blindinglight with shock_cut
     "And then, the world erupted in blinding white. A wave of pure white radiance surged forward, folding in on itself—expanding, swallowing everything in its path."
@@ -1957,6 +2177,7 @@ label ch6_hundun_defeated:
     show chunghee normal_neutral at right_char
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.chung_ch6_line43  # transcript: "Are you alright, Torian?"
     chung_hee "Are you alright, Dorian?"
     
     "His voice rang through my mind, steady and clear."
@@ -1971,22 +2192,27 @@ label ch6_hundun_defeated:
     show chunghee normal_neutral at right_char
     "Chung-hee tilted his head slightly, eyes narrowing as he studied me."
 
+    voice audio.chung_ch6_line44  # transcript: "I apologize for losing contact"
     chung_hee "I apologize for losing contact with you. The Hundun doubled down on me."
 
     "His fingers twitched, the last of the electricity fading from his hands. He wasn't looking at me. His gaze turned on the Hundun's charred body."
 
+    voice audio.chung_ch6_line45  # transcript: "This isn't how it's supposed"
     chung_hee "This isn't how it's supposed to be. The old stories…"
 
     "Tiny footsteps pounded against the broken ground. Tim."
 
     show tim alt_pumped at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch6_line30  # transcript: "I knew it. I knew"
     tim "I knew it! I-I knew it! This is just like the Pre-Enoch stories!"
 
     show dorian serious at left_char
     dorian "Pre-Enoch? This monster is Pre-Enoch?"
 
     show tim normal at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch6_line31  # transcript: "Yes, Sir Dorian. In Lin"
     tim "Yes, sir Dorian! In Li Mengtia's bibliography, page 237, he wrote about creatures that existed before the time of the death god Enoch!"
+    voice audio.tim_ch6_line32  # transcript: "before he wiped them all"
     tim "Before he wiped them all out four hundred years ago!"
 
     scene bg_tianho_city_night with Dissolve(0.1)
@@ -1994,13 +2220,15 @@ label ch6_hundun_defeated:
     show soldier_jiang at left_char 
     with Dissolve(0.2)
     "Soldier Gao and Soldier Jiang peeked out from behind their hiding spot, still half-crouched, looking just as stunned."
-
+    voice audio.gao_ch6_line9
     gao   "Wait, wait, wait."
+    voice audio.jiang_ch6_line15
     jiang "Did that kid just say—four hundred years ago?"
 
     show tim alt_pumped at center_char_kids with Dissolve(0.2)
     "Tim nodded furiously."
 
+    voice audio.tim_ch6_line33  # transcript: "Yes."
     tim "Yes!"
 
     hide soldier_gao
@@ -2010,19 +2238,25 @@ label ch6_hundun_defeated:
     with Dissolve(0.2)
     "Chung-hee's hands tightened into fists. The faintest flicker of electricity crackled at his fingertips before dying out."
 
+    voice audio.chung_ch6_line46  # transcript: "No, that doesn't make sense."
     chung_hee "No… that doesn't make sense."
     dorian    "So this thing existed during Enoch's time, huh…"
     show chunghee normal_neutral at right_char
+    voice audio.chung_ch6_line47  # transcript: "not just existed, these creatures."
     chung_hee "Not just existed. These creatures…"
+    voice audio.chung_ch6_line48  # transcript: "They were haunted, perched, every"
     chung_hee "They were hunted. Purged. Every last one of them."
 
     show dorian serious at left_char
     "I raised an eyebrow."
 
+    voice audio.chung_ch6_line49  # transcript: "That's what the records say,"
     chung_hee "That's what the records say. That's what we were taught. That's what we believed."
+    voice audio.tim_ch6_line34  # transcript: "That's what Lee Mensha wrote"
     tim       "That's what Li Mengtia wrote, too…"
     hide chunghee
     show soldier_jiang at right_char with Dissolve(0.2)
+    voice audio.jiang_ch6_line16  # transcript: "You really read those? But"
     jiang     "You really read those? But you're a toddler."
 
     show tim alt_annoyed at center_char_kids
@@ -2030,6 +2264,7 @@ label ch6_hundun_defeated:
     
     hide soldier_jiang
     show chunghee normal_v2 at right_char with Dissolve(0.2)
+    voice audio.chung_ch6_line50  # transcript: "I don't know much about"
     chung_hee "I don't know much about the details. Maybe someone familiar with Enoch can tell us more. We—"
 
     play sound audio.yg_scream volume 0.8
@@ -2052,16 +2287,20 @@ label ch6_hundun_defeated:
     with Dissolve(0.2)
     "Jiang gripped the hilt of his sheathed sword, his jaw clenched."
 
+    voice audio.jiang_ch6_line17
     jiang "Yaoguai."
+    voice audio.gao_ch6_line10  # transcript: "They must be enraged. They"
     gao   "They must be enraged. They can't feel their leader anymore."
 
     voice audio.yg_scream
     yg "Raaaaaa!!!"
 
+    voice audio.jiang_ch6_line18  # transcript: "Then that means there might"
     jiang "Then that means… there might be a few left!"
 
     "He turned to me, his expression determined."
 
+    voice audio.jiang_ch6_line19  # transcript: "Let us join you. We"
     jiang "Let us join you! We can help—"
 
     hide soldier_jiang
@@ -2077,20 +2316,25 @@ label ch6_hundun_defeated:
     show soldier_jiang at right_flip with Dissolve(0.2)
     "Jiang followed my gaze. His mouth pressed into a firm line."
 
+    voice audio.jiang_ch6_line20  # transcript: "But"
     jiang "But—"
     show dorian serious at left_char
     dorian "Orders are orders, soldier."
     hide soldier_jiang
     show soldier_gao at right_char with Dissolve(0.2)
+    voice audio.gao_ch6_line11  # transcript: "Affirmative. Paladin Jang. Let's just"
     gao   "A-Affirmative, Paladin. Jiang, let's just follow his orders."
+    voice audio.gao_ch6_line12  # transcript: "Besides, you're already not in"
     gao   "Besides… you're already not in a position to fight."
 
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
     "Jiang exhaled sharply, frustration flashing across his face."
 
+    voice audio.jiang_ch6_line21  # transcript: "Fine. You better come back"
     jiang "Fine. But you better come back in one piece."
     show tim alt_pumped at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch6_line35  # transcript: "We will. Don't worry about"
     tim   "We will! Don't worry about us, sir soldiers! We'll be very careful!"
     show dorian normal_alt_annoyed at left_char
     dorian "Tim, you're not coming with us. Go with them."
@@ -2098,6 +2342,7 @@ label ch6_hundun_defeated:
 
     "Tim flinched, his small hands clenching into fists."
 
+    voice audio.tim_ch6_line36  # transcript: "But I can help."
     tim "But… but I can help!"
 
     hide soldier_jiang
@@ -2111,6 +2356,7 @@ label ch6_hundun_defeated:
     "A silence stretched between us."
     "Tim bit his lip, his little shoulders trembling, but he finally nodded."
 
+    voice audio.tim_ch6_line37  # transcript: "Okay, fine."
     tim "Okay…Fine…"
 
     hide chunghee
@@ -2118,15 +2364,19 @@ label ch6_hundun_defeated:
     show soldier_gao at right_char with Dissolve(0.2)
     "Soldier Gao clapped a reassuring hand on his back."
 
+    voice audio.gao_ch6_line13  # transcript: "Come on little fella. We'll"
     gao   "Come on, little fella. We'll bring you to Ma'am Weng."
+    voice audio.tim_ch6_line38  # transcript: "Is she all right, Mr?"
     tim   "Is she alright, Mister?"
     hide soldier_gao
     show soldier_jiang at right_flip with Dissolve(0.2)
+    voice audio.jiang_ch6_line22  # transcript: "Yes, she's with the doctor"
     jiang "Yes, she's with the doctor and the violet-haired guy. Tending to the wounded."
 
     show tim alt_nervous at center_char_kids
     "Tim hesitated for one last moment—then, with a final reluctant glance at the Hundun, me and Chung-hee, he followed them into the store."
     show tim normal at center_char_kids
+    voice audio.tim_ch6_line39  # transcript: "Take care, Mr. Dorian, okay?"
     tim "Take care, Mister Dorian, okay? And Mister Chung."
     
     hide tim 
@@ -2238,6 +2488,7 @@ label ch6_feng_appears:
     with Dissolve(0.2)
     dorian "Feng?!"
     feng   "Watch out! Behind you!"
+    voice audio.aoi_ch6_line1  # transcript: "Stay sharp!"
     aoi    "Stay sharp!"
 
     "Before I could even open my mouth—"
@@ -2269,6 +2520,7 @@ label ch6_feng_appears:
 
     "Aoi merely huffed, flicking her wrist."
 
+    voice audio.aoi_ch6_line2
     aoi "Hmph."
 
     hide feng_suit
@@ -2287,6 +2539,7 @@ label ch6_feng_appears:
 
     "Aoi's head snapped toward the sound, water already coiling at her fingertips, alive and restless. Her expression was unreadable, cold as ever."
 
+    voice audio.aoi_ch6_line3  # transcript: "I'll handle it, this won't"
     aoi "I'll handle it, Feng. This won't take long."
 
     hide aoi_battle_suit

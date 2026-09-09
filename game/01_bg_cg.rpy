@@ -124,8 +124,8 @@ image bg_tianho_zhong_promenade: # tianho proper at night in files
 
 # --- Backgrounds: Castle and Ceremony ---
 image bg_tianho_castle_interior:
-    "images/Assets/Background/throne.png" # PLACEHOLDER ASSET
-    size (1920, 1080)
+    "images/Assets/Background/Tianho - throne.webp" # PLACEHOLDER ASSET
+    zoom 1.10
     xalign 0.5
     yalign 1.0
 
@@ -249,6 +249,18 @@ image bg_mjoll_square_festive:
 
 image bg_mjoll_blizzard:
     "images/Assets/Background/Mjoll - blizzard.png"            
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_mjoll_spa:
+    "images/Assets/Background/mjoll_spa.jpg"
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
+image bg_mjoll_destroyed:
+    "images/Assets/Background/Mjoll - destroyed.png"            
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
@@ -521,7 +533,7 @@ image cg_aoi_singing:
 
 image cg_men_trapped:
     "images/Assets/Illustrations/48 - The men trapped.png"
-    size (1920, 1080)
+    size (1920, 1080)   
     xalign 0.5
     yalign 1.0
 

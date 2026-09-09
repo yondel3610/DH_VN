@@ -60,31 +60,37 @@ label chapter_9:
     with Dissolve(0.2)
     "Beside me, Elias sat cross-legged on the bed, happily chewing on a Hinami chocolate bar. His tiny hands were smudged with bits of melted chocolate, and his bright eyes lit up the moment he saw me stir."
 
+    voice audio.elias_ch9_line1  # transcript: "Daddy, you're awake!"
     elias "Daddy! You're awake!"
 
     "Before I could even process what was happening, he launched himself at me, wrapping his little arms around my torso."
     "I let out a breathless chuckle, ruffling his soft hair as he clung to me. He was warm, his small body buzzing with energy."
 
     show dorian sleepware_normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line1  # transcript: "Lias, you have chocolate all"
     dorian "Elias, you have chocolate all over your hands. And I told you to not eat on the bed."
 
     show elias sleepware_neutral at right_char_kids with Dissolve(0.1)
     "He pulled back, grinning sheepishly. With a tiny huff, he hopped off the mattress and settled onto a chair beside the bed, still clutching his half-eaten chocolate bar like it was the most precious thing in the world."
 
+    voice audio.dorian_ch9_line2  # transcript: "Have you eaten breakfast yet?"
     dorian "Have you eaten breakfast yet?"
 
     show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line2  # transcript: "Hmm, yes, Daddy! I'm eating"
     elias "Yes, daddy! I'm eating my late lunch now."
 
     show dorian sleepware_neutral at left_char with Dissolve(0.1)
     "Late lunch? So it was already afternoon? I had overslept."
     "I looked down at his hands, still clutching the half-eaten chocolate bar. Late lunch?"
 
+    voice audio.dorian_ch9_line3  # transcript: "Elias, how many times have"
     dorian "Elias, how many times have I told you? Eat your vegetables."
 
     show elias sleepware_mad at right_char_kids with Dissolve(0.1)
     "Elias immediately scrunched up his nose, his face contorting into the most dramatic expression of disgust."
 
+    voice audio.elias_ch9_line3  # transcript: "I did daddy! This one"
     elias "I did, daddy! Miss Weng made me eat! Yucky veggies! Ew!"
 
     show dorian sleepware_neutral at left_char
@@ -102,14 +108,17 @@ label chapter_9:
     "I barely had time to process any of it before Elias' small hand slipped into mine. I looked down at him."
 
     show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line4
     elias "Me an' Tim gonna play later after my nap, Daddy! You wanna play too?"
 
     show dorian sleepware_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line4  # transcript: "Sorry buddy, daddy's busy."
     dorian "Sorry buddy. Daddy's busy."
 
     show elias sleepware_sad at right_char_kids with Dissolve(0.1)
     "Elias pouted and took another bite of the chocolate. After a few bites, he set down the chocolate and yawned."
 
+    voice audio.elias_ch9_line5  # transcript: "Ah, I'm really really sleepy"
     elias "Mmm... I'm real, real sleepy, Daddy. Can you pat my back so I can... um... nap better?"
 
     show elias sleepware_neutral at right_char_kids with Dissolve(0.1)
@@ -121,6 +130,7 @@ label chapter_9:
     show dorian sleepware_neutral at left_char with Dissolve(0.1)
     "Elias wiped his hands on a paper towel until they were clean and jumped to the bed next to me."
 
+    voice audio.elias_ch9_line6  # transcript: "Daddy, can you put my"
     elias "Daddy... can you pat my back?"
 
     jump ch9_elias_choice
@@ -134,7 +144,7 @@ label ch9_elias_choice:
     menu:
         "Stay with Elias and help him sleep.":
             $ ch9_elias_choice = "stay"
-            $ magnus_affection += 1
+            $ A5_magnus_affection += 1
 
             show dorian sleepware_neutral at left_char with Dissolve(0.1)
             "I sighed, glancing at the reinforced door before finally relenting. Magnus could wait."
@@ -142,28 +152,35 @@ label ch9_elias_choice:
             "As I began to pat his back, his body relaxed, melting into me with a soft, contented sigh."
 
             show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line7    
             elias "Miss Weng told me I hafta eat veggies, Daddy... but I dun' wanna."
 
             show dorian sleepware_smile at left_char with Dissolve(0.1)
             "I let out a quiet chuckle, my hand continuing its steady rhythm against his back."
 
+            voice audio.dorian_ch9_line5  # transcript: "This Wang is right. You"
             dorian "Miss Weng is right. You need to be healthy. When you grow old, you'll... get diseases. It's awful, trust me. You need those veggies."
 
             show elias sleepware_mad at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line8  # transcript: "But Tim said if you"
             elias "Blegh... but Tim says if you eat too many veggies you turn into a broccoli. Ew!"
 
             show dorian sleepware_smile at left_char with Dissolve(0.1)
             "I huffed out a small laugh, shaking my head."
 
+            voice audio.dorian_ch9_line6  # transcript: "I doubt someone as smart"
             dorian "I doubt someone as smart as Tim would say anything like that, Elias."
 
             show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line9
             elias "Roboto says it's gonna do something exciting later! Tedda told me so! An' Yuxuan was talkin' to someone real loud today, but I dunno who!"
 
             show dorian sleepware_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line7  # transcript: "You shone. Maybe it's some"
             dorian "Yuxuan? Maybe it's someone important."
 
             show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line10  # transcript: "Tera says it's the event"
             elias "Tedda said it's the iven owganizwer! I don't know what that means!"
 
             show dorian sleepware_neutral at left_char with Dissolve(0.1)
@@ -173,6 +190,7 @@ label ch9_elias_choice:
             "Elias let out another tiny yawn, his body going even softer against mine. Then, without warning, he nuzzled closer, his small fingers clutching my sleeve with just enough pressure to make my chest tighten."
 
             show elias sleepware_sad at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line11  # transcript: "Daddy, I hope you had"
             elias "Daddy... I hope you had fun when you visited your family at the grave..."
 
             show dorian sleepware_sad at left_char with Dissolve(0.1)
@@ -182,12 +200,14 @@ label ch9_elias_choice:
             "I hope you're all doing alright in Xianlun."
 
             show dorian sleepware_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line8  # transcript: "It was... enlightening. I wouldn't"
             dorian "It was... enlightening. I wouldn't call it fun, Elias. But I hope you had fun eating all those chocolate at the memorial."
 
             show elias sleepware_neutral at right_char_kids with Dissolve(0.1)
             "His only response was a sleepy hum, his fingers slowly loosening from my sleeve."
 
             show elias sleepware_happy at right_char_kids with Dissolve(0.1)
+            voice audio.elias_ch9_line12  # transcript: "Oh, see you, daddy!"
             elias "I love you, Daddy."
 
             show dorian sleepware_smile at left_char with Dissolve(0.1)
@@ -205,11 +225,13 @@ label ch9_elias_choice:
 
             show dorian sleepware_serious at left_char with Dissolve(0.1)
             "I hesitated only for a moment before rising from the bed."
+            voice audio.dorian_ch9_line10  # transcript: "Sorry buddy, I need to"
             dorian "Sorry buddy. I need to get this done immediately. Get some rest. I'll be back later."
 
-            show elias sleepware_sad at right_char_kids
+            show elias sleepware_sad at right_char_kids with Dissolve(0.1)
             "Elias yawned but didn't argue."
 
+            voice audio.elias_ch9_line13  # transcript: "Okay daddy, I'll just pretend"
             elias "Okay, daddy. I'll just pretend this piyow is you."
 
             scene spare_room_off with dissolve
@@ -251,6 +273,7 @@ label ch9_common:
     "With a flick of her wrist, she glided through the vegetable with effortless grace, each slice falling into uniform half-moons. Thin, translucent, perfect."
 
     show svante normal_happy at left_char with Dissolve(0.1)
+    voice audio.svante_ch9_line1
     svante "Oh... got it, Miss Weng! Thank you for teaching me!"
     show svante normal_neutral at left_char with Dissolve(0.1)
 
@@ -267,23 +290,28 @@ label ch9_common:
 
     show svante alt_weird at left_char with Dissolve(0.1)
     "Svante looked at him as if he had grown a second head."
+    voice audio.svante_ch9_line2  # transcript: "Uh, sir Magnus, would you"
     svante "Uh... Sir Magnus, would you mind cutting the daikon for me? I think I'll just stick to tomatoes."
 
     show magnus alt_newpose at center_char with Dissolve(0.1)
+    voice audio.magnus_ch9_line1
     magnus "Ah! Fear not, dear Svante! While you engage in divine companionship with the tomatoes, the daikon and I shall embark upon a journey most divine!"
 
     show svante normal_happy at left_char with Dissolve(0.1)
+    voice audio.svante_ch9_line3  # transcript: "Yes, thank you sir Magnus"
     svante "Y-Yes! Thank you, sir Magnus!"
 
     hide svante
     show dorian serious at left_char with Dissolve(0.2)
     "I took a cautious step forward."
 
+    voice audio.dorian_ch9_line11  # transcript: "Magnus."
     dorian "...Magnus?"
 
     show magnus alt_smirk at center_char with Dissolve(0.1)
     "He spun toward me with such bubbly energy that I instinctively tensed, half-expecting an attack. But instead, his eyes sparkled with pure joy."
 
+    voice audio.magnus_ch9_line2  # transcript: "Adorian, at last you awaken,"
     magnus "Ah! Dorian! At last, you awaken! You have entered the hallowed temple of culinary enlightenment! Have you come to witness the transcendence of mortal ingredients?!"
 
     "He held up a single radish slice between his fingers, as if he had just plucked the moon from the heavens."
@@ -298,6 +326,7 @@ label ch9_common:
     "I wasn't sure how to answer that. Was I alright? After everything that had happened yesterday?"
     "After waking up to a completely different Magnus-bubbly, shirtless, and eagerly chopping vegetables while delivering poetic monologues about radishes?"
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line12  # transcript: "I'm perfectly fine, Miss Wang."
     dorian "I'm perfectly fine, Miss Weng. Thanks."
     show weng normal at right_flip with Dissolve(0.1)
 
@@ -305,14 +334,17 @@ label ch9_common:
     show svante normal_happy at left_char with Dissolve(0.2)
     "I glanced at Svante, who was grinning at my bewilderment."
 
+    voice audio.svante_ch9_line4  # transcript: "Sir Dorian turns out Magnus"
     svante "Sir Dorian, turns out Magnus is actually a nice guy! When he saw I volunteered to help with the vegetables, he wanted to join in too!"
     show svante alt_funny at left_char with Dissolve(0.2)
+    voice audio.svante_ch9_line5  # transcript: "You should have seen him."
     svante "You should've seen him! Did I mention he's great at poetry as well? He was so excited about chopping vegetables, he started reciting poetry about them."
 
     show magnus alt_newpose at center_char with Dissolve(0.1)
     "My eyes flickered back to Magnus. He was still cutting daikons by the numbers, his brown hair falling slightly over his face as he worked."
     "Magnus noticed my stare and flashed me a small, contented smile."
 
+    voice audio.magnus_ch9_line3
     magnus "Cooking is an art, Dorian. One must respect the ingredients. Handle them with care, as one would a delicate soul."
 
     "This was the same man who, less than a day ago, had sworn to rip me apart with divine fury. I ran a hand down my face, my gaze wandering absently around the kitchen."
@@ -332,22 +364,27 @@ label ch9_common:
     "Tedda and Roboto entered, lugging even more sacks of food, their arms full of supplies."
     "Tedda, struggling under the weight, huffed as she set her load down with a loud thump. Roboto placed its sacks down neatly before dusting off his metallic hands."
 
+    voice audio.tedda_ch9_line1  # transcript: "Ta-da! One more sack of"
     tedda "Ta-daaaa!! One more sack of tomatoes for chopping!"
 
     show svante normal_neutral at right_char 
     show roboto happy at center_robot
     with Dissolve(0.2)
+    voice audio.svante_ch9_line6  # transcript: "Here, Tetta, I'll help you."
     svante "Here, Tedda. I'll help you, hold on-"
-
+    voice audio.tedda_ch9_line2
     tedda "Aww, Mister Svante! Thank you! You're such a handsome gentleman teehee~"
+    voice audio.roboto_ch9_line1  # transcript: "M-M-Mis-Teta, may I remind you"
     roboto "M-M-Miss Tedda, may I remind you that you are a child's stuffed toy?"
 
+    voice audio.tedda_ch9_line3  # transcript: "Whoops. Sorry."
     tedda "Woops! Sorry!"
 
     show roboto malfunction at center_robot with Dissolve(0.1)
     "Roboto glitched slightly before turning towards Weng."
 
     show roboto happy at center_robot with Dissolve(0.1)
+    voice audio.roboto_ch9_line2  # transcript: "M-M-Mis-Wane. Here is the last"
     roboto "M-M-Miss Weng. Here is the last sack of Hinami c-c-c-crabs."
 
     hide svante
@@ -356,20 +393,25 @@ label ch9_common:
 
     weng "Thank you, Roboto and Tedda. I'll handle the rest. I'll call for you if I need anything else."
 
+    voice audio.roboto_ch9_line3  # transcript: "No problem, Miss Wayne. You,"
     roboto "No problem, Miss Weng. Y-Y-Y-You can always count on Robotoooo~"
 
     "Its glowing eyes flickered as he turned toward me."
 
+    voice audio.roboto_ch9_line4  # transcript: "Oh, Master Tuddudorian! You're awake!"
     roboto "Oh Master D-D-D-Dorian! You're awake!"
 
     hide weng
     show dorian neutral at left_char
     show tedda_human at right_char
     with Dissolve(0.2)
+    voice audio.tedda_ch9_line4  # transcript: "Oh! Mr. Dorian's awake! Hello"
     tedda "Ooh Mister Dorian is awake! Hello Mister Dorian! Is Lady Elias sleeping now?"
 
+    voice audio.dorian_ch9_line13  # transcript: "Yes, he is."
     dorian "Yes, he is."
 
+    voice audio.tedda_ch9_line5  # transcript: "Perfect! That means Mr. Roboto"
     tedda "Perfect! That means Mister Roboto and I can help with chopping vegetables!"
 
     hide roboto
@@ -381,6 +423,7 @@ label ch9_common:
     show magnus alt_newpose at center_char with Dissolve(0.2)
     "Magnus, completely unbothered, glanced at Weng."
 
+    voice audio.magnus_ch9_line4  # transcript: "How many more di-cons do"
     magnus "How many more daikon do we need?"
 
     show weng alt_base at right_char with Dissolve(0.2)
@@ -389,6 +432,7 @@ label ch9_common:
     weng "We still need one sack more, Sir Magnus."
     hide magnus with Dissolve(0.1)
 
+    voice audio.dorian_ch9_line14  # transcript: "What is all this form"
     dorian "...What is all of this for, Miss Weng?"
 
     weng "Today is the Fifth Anniversary of the Tragedy of Tianho, sir Dorian. Aside from our group, I'll be cooking for the employees and their families as well."
@@ -407,22 +451,27 @@ label ch9_common:
 
     "That made sense. Hinami was always the first to extend a hand in times of remembrance."
 
+    voice audio.dorian_ch9_line15  # transcript: "I'm not surprised. Their customs"
     dorian "I'm not surprised. Their customs place great value on honoring the dead-especially their burial rites."
 
     show svante normal_neutral at center_char with Dissolve(0.2)
     "Svante leaned forward slightly, holding a tomato, curiosity flickering in his violet eyes."
 
+    voice audio.svante_ch9_line7  # transcript: "What kind of custom, sir?"
     svante "What kind of customs, sir? Sorry, I'm not too familiar with Hinami's traditions. Father forbade us from stepping outside of Mjoll."
 
     hide svante
     show magnus alt_newpose at center_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line5  # transcript: "I must admit, I too"
     magnus "I must admit, I too am unfamiliar. Can you enlighten us, Dorian?"
 
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.dorian_ch9_line16  # transcript: "For starters, they sink their"
     dorian "For starters, they sink their dead to the bottom of the ocean. To them, the ocean isn't just a body of water-it's an eternal resting place, where souls drift into the embrace of the Dragon of the Depths."
 
     hide magnus
     show svante normal_nervous at center_char with Dissolve(0.2)
+    voice audio.svante_ch9_line8  # transcript: "Wait, they just... Sink them?"
     svante "...Wait. They just-sink them?"
 
     show weng alt_base at right_flip with Dissolve(0.1)
@@ -435,7 +484,9 @@ label ch9_common:
 
     show magnus alt_shocked at center_char with Dissolve(0.2)
 
+    voice audio.magnus_ch9_line6  # transcript: "But if the dead are"
     magnus "But if the dead are scattered across the ocean, how do the living visit their loved ones? Graves, shrines-these are markers, places of remembrance."
+    voice audio.magnus_ch9_line7  # transcript: "How does one pay respects"
     magnus "How does one pay respects when the resting place is... endless?"
 
     show weng thinking at right_flip with Dissolve(0.1)
@@ -444,42 +495,51 @@ label ch9_common:
     show dorian normal_alt_neutral at left_char
     show weng alt_base at right_flip
     with Dissolve(0.1)
+    voice audio.dorian_ch9_line17  # transcript: "Honestly, I don't know."
     dorian "Honestly? I don't know."
 
     hide magnus
     show roboto happy at center_robot with Dissolve(0.2)
+    voice audio.roboto_ch9_line5
     roboto "The e-e-e-entire ocean. Whenever they s-s-s-see the ocean, they remember them. Their memory is not confined to a single place."
 
     hide roboto
     show svante normal_happy at center_char with Dissolve(0.2)
+    voice audio.svante_ch9_line9  # transcript: "Really, that's amazing."
     svante "Really? That's amazing."
 
     hide svante
     show tedda_human at center_char with Dissolve(0.2)
+    voice audio.tedda_ch9_line6  # transcript: "Leave it to Mr. Roboto"
     tedda "Leave it to Mister Roboto to give a quick answer!!"
 
     hide tedda_human
     show roboto happy at center_robot with Dissolve(0.2)
     "Roboto blinked, its glowing eyes whirring slightly."
 
+    voice audio.roboto_ch9_line6
     roboto "Y-Y-Y-You can always count on Robotooooo, sir Svanteee~~"
 
     hide roboto
     show magnus alt_newpose at center_char with Dissolve(0.2)
     "Magnus, intrigued, tapped a finger against his chin."
 
+    voice audio.magnus_ch9_line8  # transcript: "Hey profound perspective, to be"
     magnus "A profound perspective. To be remembered not by stone, but by the endless tides. Hm..."
 
     hide magnus
     show svante normal_neutral at center_char with Dissolve(0.2)
+    voice audio.svante_ch9_line10  # transcript: "Have you ever been to"
     svante "Have you ever been to Hinami, sir Dorian?"
 
     show dorian neutral at left_char with Dissolve(0.1)
     "I shook my head."
 
+    voice audio.dorian_ch9_line18  # transcript: "No, he numbs an island."
     dorian "No. Hinami's an island. And as you can imagine, fire and water don't exactly mix. Besides, it's a long boat ride from here."
 
     show svante alt_funny at center_char with Dissolve(0.2)
+    voice audio.svante_ch9_line11  # transcript: "Yes, Sir Dorian. I can"
     svante "Yeah, sir Dorian, I can see how that'd be a problem."
 
     hide svante
@@ -493,23 +553,28 @@ label ch9_common:
 
     hide magnus
     show tedda_human at center_char with Dissolve(0.2)
+    voice audio.tedda_ch9_line7  # transcript: "Oh! I saw him at"
     tedda "Oh! I saw him at the tavern in Tianho while Mister Roboto and I were picking up the sacks of food!"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I frowned, scanning the room and noticing for the first time that someone else was missing."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line19  # transcript: "What about Shung-E? Have you"
     dorian "What about Chung-hee? Have you seen him?"
 
     hide tedda_human
     show roboto happy at center_robot with Dissolve(0.2)
+    voice audio.roboto_ch9_line7
     roboto "I s-saw Sir Chung-hee at Master Yuxuan's library before he left for Tianho with M-M-Miss Tedda."
+    voice audio.roboto_ch9_line8  # transcript: "He was intent on reading,"
     roboto "He was intent on reading and I d-didn't want to disturb him."
 
     hide roboto
     show tedda_human at center_char with Dissolve(0.2)
     "I glanced at Tedda, who nodded in confirmation. So both Niko and Chung-hee were in Tianho. That didn't sit right with me."
 
+    voice audio.tedda_ch9_line8  # transcript: "Mr. Chun, he looked serious."
     tedda "Mister Chung-hee looked serious! Too serious oh my!"
 
     show weng alt_close_eyes at right_char with Dissolve(0.2)
@@ -521,18 +586,23 @@ label ch9_common:
     hide weng
     hide tedda_human
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch9_line12  # transcript: "Yes, Miss Wang."
     svante "Yes, Miss Weng!"
 
     show magnus alt_newpose at center_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line9  # transcript: "Ah, the noble sizzle of"
     magnus "Ah! The noble sizzle of flesh meeting flame! The symphony of heat and oil, of golden crisp and fragrant spice!"
+    voice audio.magnus_ch9_line10  # transcript: "A humble fish once a"
     magnus "A humble fish, once a dweller of the deep, now ascends to its final form-a feast for the weary, a balm for the soul!"
 
     show svante alt_funny at right_char with Dissolve(0.2)
     "Svante shot him a side glance, suppressing a laugh."
 
+    voice audio.svante_ch9_line13  # transcript: "Hahaha."
     svante "Pft- Hahahaha!"
 
     show magnus normal at center_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line11  # transcript: "Why are you laughing?"
     magnus "W-Why are you laughing?!"
 
     scene yuxuan_manor with dissolve           # PLACEHOLDER — lab living room
@@ -542,12 +612,15 @@ label ch9_common:
     "But just as I settled onto a chair, Roboto followed me, his servos whirring softly."
 
     show roboto happy at right_robot with Dissolve(0.2)
+    voice audio.roboto_ch9_line9  # transcript: "Master Dorian, all of us"
     roboto "Master Dorian, all of us will be busy for the time being. There's p-p-plenty to do. You can h-help, rest, or d-do whatever you like."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch9_line20  # transcript: "Thanks, Roboto."
     dorian "Thanks, Roboto."
 
     show roboto happy at right_robot
+    voice audio.roboto_ch9_line10  # transcript: "No worries, Master Dorian. You"
     roboto "No worries, master Dorian! You can always count on R-R-Robotooo~"
 
     hide roboto
@@ -569,20 +642,23 @@ label ch9_lab_choices:
 
         "Spend time at Yuxuan's library.":
             $ ch9_lab_choice = "library"
-            $ chunghee_affection += 1
+            $ A4_chunghee_affection += 1
             jump ch9_library
 
         "Go back to the bedroom and check on Elias.":
             $ ch9_lab_choice = "bedroom"
-            $ yuxuan_affection += 1
+            $ A3_yuxuan_affection += 1
             jump ch9_bedroom_yuxuan
 
         "Have a drink at Tianho's tavern.":
             $ ch9_lab_choice = "tavern"
+            $ A1_niko_affection += 1
             jump ch9_tavern
 
         "Help with the kitchen.":
             $ ch9_lab_choice = "kitchen"
+            $ A2_svante_affection += 1
+            $ A5_magnus_affection += 1
             jump ch9_kitchen_help
 
 
@@ -622,6 +698,7 @@ label ch9_library:
     "I took a seat across from him, watching as he turned a page with the kind of delicate precision one would use when handling something ancient and fragile."
     "The silence stretched. I cleared my throat."
 
+    voice audio.dorian_ch9_line21  # transcript: "Hey, Chun, what are you"
     dorian "Hey, Chung. What are you reading?"
 
     "Nothing."
@@ -636,10 +713,13 @@ label ch9_library:
     "A pause. His fingers hovered over the text, hesitating just for a second, as if debating whether my question warranted an answer. Then, with an air of finality, he set his hand down."
 
     show chunghee normal_v2 at right_char with Dissolve(0.1)
+    voice audio.chung_ch9_line1  # transcript: "Sorry."
     chung_hee "Hm? Sorry..."
+    voice audio.chung_ch9_line2  # transcript: "I'm reading about Magnus, the"
     chung_hee "I'm reading about Magnus. The Divine Weapon."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line23  # transcript: "Divine weapon? You think Magnus"
     dorian "Divine Weapon? You think Magnus is the Divine Weapon King Gustav was after?"
 
     show chunghee alt_tense at right_char with Dissolve(0.1)
@@ -650,44 +730,55 @@ label ch9_library:
     show chunghee alt_neutral at right_char
     with Dissolve(0.1)
 
+    voice audio.chung_ch9_line3  # transcript: "Yes, and no."
     chung_hee "Yes... and no."
 
     "I could feel the strain in the voice inside my head. His composure, usually steady and unwavering, cracked ever so slightly."
 
+    voice audio.chung_ch9_line4  # transcript: "look. I remain unconvinced that"
     chung_hee "Look, I remain unconvinced that the Divine Weapon is merely a fully-grown man with wings."
 
     "His thoughts pressed into mine with force."
 
+    voice audio.chung_ch9_line5  # transcript: "On top of that I"
     chung_hee "On top of that, I searched his mind thoroughly, there was NOTHING about his memories connected with being a Divine Weapon. None!"
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line24  # transcript: "You did say that most"
     dorian "You did say that most of his memories weren't there. Does that mean... he lost them? Like amnesia or something?"
 
     show chunghee alt_tense at right_char with Dissolve(0.1)
+    voice audio.chung_ch9_line6  # transcript: "I'm afraid it is far"
     chung_hee "I'm afraid it is far stranger than that."
+    voice audio.chung_ch9_line7  # transcript: "He did not lose memory,"
     chung_hee "He did not lose memories, Dorian. Nothing is forgotten by him. It's just as if nothing was there in the first place."
+    voice audio.chung_ch9_line8  # transcript: "only select memories were there."
     chung_hee "Only select memories were there. I-"
 
     show chunghee normal_sad at right_char with Dissolve(0.1)
     "His grip on the book tightened."
 
+    voice audio.chung_ch9_line9  # transcript: "I must uncover the truth."
     chung_hee "I must uncover the truth. If my lead was mistaken, then what have I been chasing? Have I erred? What would my aunt think? I-"
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I blinked."
     show dorian serious at left_char with Dissolve(0.1)
 
+    voice audio.dorian_ch9_line25  # transcript: "your aunt."
     dorian "Your aunt?"
 
     show chunghee alt_tense at right_char with Dissolve(0.1)
     "The moment the words left my mouth, his entire presence changed."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line26  # transcript: "Yesterday, the false Yushuan mentioned"
     dorian "Yesterday, the false Yuxuan mentioned that you had an aunt in Kyeongjang. Was that true?"
 
     show chunghee alt_tense at right_char with Dissolve(0.1)
     "The rhythmic tapping of his fingers against the wood ceased. His eyes, which had been darting between pages, now remained fixed, unreadable."
 
+    voice audio.chung_ch9_line10  # transcript: "It is of no consequence."
     chung_hee "It is of no consequence. Forget it."
 
     show dorian serious at left_char with Dissolve(0.1)
@@ -696,6 +787,7 @@ label ch9_library:
     dorian "Chung-"
 
     show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch9_line11  # transcript: "Please drop the subject. I"
     chung_hee "Please drop the subject. I must concentrate."
 
     "And just like that, he retreated into his book. Focused."
@@ -703,12 +795,14 @@ label ch9_library:
     menu:
         "Press further for more details about his aunt.":
             $ ch9_chung_pressed = True
-            $ chunghee_affection -= 1
+            $ A4_chunghee_affection -= 1
 
             "I didn't want to let it go. Not this time."
             "Maybe it was the way he shut down the moment I mentioned his aunt. The way his unshakable presence wavered, if only for a breath."
 
+            voice audio.dorian_ch9_line28  # transcript: "Chong, I need to know"
             dorian "Chung, I need to know. Who is your aunt?"
+            voice audio.dorian_ch9_line29  # transcript: "Tell me more. Do you"
             dorian "Tell me more, do you have any other family in-"
 
             show chunghee alt_tense at right_char with Dissolve(0.2)
@@ -716,8 +810,11 @@ label ch9_library:
             "He turned to face me, his eyes gleaming like polished metal, sharp and unreadable. The weight of his presence settled over me like an invisible force."
             "Then, in my mind, his voice cut through with the precision of a blade."
 
+            voice audio.chung_ch9_line12  # transcript: "Dorian, you saved my life."
             chung_hee "Dorian. You saved my life. For that, I will always be thankful."
+            voice audio.chung_ch9_line13  # transcript: "but you must understand something."
             chung_hee "But you must understand something. You and I met only yesterday."
+            voice audio.chung_ch9_line14  # transcript: "I hope you don't mistake"
             chung_hee "I hope you don't mistake shared battlefields for shared burdens."
 
             show dorian normal_alt_calm at left_char with Dissolve(0.1)
@@ -727,16 +824,18 @@ label ch9_library:
             show chunghee alt_neutral at right_char
             with Dissolve(0.1)
             "Chung-hee adjusted his sleeve, returning his gaze to his book."
+            voice audio.chung_ch9_line15  # transcript: "You will always have my"
             chung_hee "You will always have my gratitude, but you must learn your place."
 
         "Let him be and read a book.":
-            $ chunghee_affection += 1
+            $ A4_chunghee_affection += 1
 
             show dorian neutral at left_char with Dissolve(0.1)
             "I didn't press further."
             "If he wasn't ready to talk, then pushing him wouldn't change that. I knew what it was like to have parts of your past locked away, too painful or complicated to bring to light."
             "Honestly, I might even be pissed if anyone pressed me about Elara or about my kids..."
 
+            voice audio.dorian_ch9_line30  # transcript: "Alright"
             dorian "Alright."
 
     jump ch9_library_common
@@ -771,27 +870,33 @@ label ch9_library_common:
     with Dissolve(0.2)
     "Miss Weng stepped into the library, carrying a few bottles of water."
 
+    voice audio.weng_ch9_line1  # transcript: "I figured you two would"
     weng "I figured you two would be parched after reading so much."
 
     "She handed one to me, another to Chung-hee. He took it with a polite nod."
 
     show chunghee normal_neutral at center_char with Dissolve(0.2)
+    voice audio.chung_ch9_line16  # transcript: "Thank you, Miss Wang."
     chung_hee "Thank you, Miss Weng."
 
     "I twisted the cap open, taking a long sip of water, letting its coolness settle in my throat."
 
+    voice audio.dorian_ch9_line31  # transcript: "How's the cooking coming along?"
     dorian "How's the cooking coming along?"
 
     show weng alt_base at right_char with Dissolve(0.1)
     "Weng wiped her hands on her apron, her expression warm but a little tired."
 
+    voice audio.weng_ch9_line2  # transcript: "We're still roasting the chicken"
     weng "We're still roasting the chicken and cooking the beef. It's taking a while, so I thought I'd check up on you both. Make sure you're not already starving."
+    voice audio.weng_ch9_line3  # transcript: "Magnus is a lot of"
     weng "Magnus is a lot of help, by the way. He's very optimistic about helping. Prepping ingredients take a lot of work, you know."
 
     show chunghee alt_tense at center_char with Dissolve(0.2)
     "I noticed the slightest twitch in Chung-hee's brow. His fingers, which had been resting idly on his book, curled just a little tighter."
 
     show weng normal at right_flip with Dissolve(0.1)
+    voice audio.weng_ch9_line4  # transcript: "Anyway, if you're feeling hungry"
     weng "Anyway, if you're feeling hungry already, just let me know, okay?"
 
     hide weng with Dissolve(0.1)
@@ -800,6 +905,7 @@ label ch9_library_common:
     show dorian serious at left_char 
     show chunghee alt_neutral at right_char
     with Dissolve(0.1)
+    voice audio.dorian_ch9_line32  # transcript: "Calm down, Shung. You're letting"
     dorian "Calm down, Chung. You're letting this whole Magnus business get into you."
 
     show chunghee normal_sad at right_char 
@@ -807,6 +913,7 @@ label ch9_library_common:
     with Dissolve(0.1)
     "His shoulders, drawn taut like a bowstring, loosened ever so slightly. He let out a slow breath, rubbing his temple before replying."
 
+    voice audio.chung_ch9_line17  # transcript: "apologies, I am on edge."
     chung_hee "Apologies. I am... on edge."
 
     hide dorian
@@ -847,6 +954,7 @@ label ch9_bedroom_yuxuan:
     "Paladin Feng."
     "We used to tease him for his love of romance novels."
 
+    voice audio.cyrus_ch9_line1  # transcript: "Feng, are you seriously reading"
     cyrus "Feng, are you seriously reading that in the middle of camp?"
     feng "Buzz off, Cyrus! I need my daily romance!"
     "But he never cared. He would sit with a book in one hand completely engrossed in some dramatic tale of love and tragedy, nodding along as if it were the most natural thing in the world."
@@ -863,6 +971,7 @@ label ch9_bedroom_yuxuan:
     "The king took note of his work and decided to help publish Takayori's work, making him famous. I could almost hear her voice-bright, teasing, full of conviction. She was crazy about this man."
 
     # Elara memory — no sprite (deceased)
+    voice audio.elara_ch9_line1  # transcript: "I want to marry Takiyori"
     elara "I want to marry Takayori Sogen!"
 
     show dorian sad at left_char with Dissolve(0.1)
@@ -880,52 +989,65 @@ label ch9_bedroom_yuxuan:
     with Dissolve(0.2)
     "Yuxuan stepped inside, holding a plastic bag filled with treats. His silver hair was slightly tousled, and his long robes rustled as he moved. His eyes lit up when he saw me awake."
 
+    voice audio.yuxuan_ch9_line1  # transcript: "Oh Dorian, you're up."
     yuxuan "Ah, Dorian! You're up-"
 
     "He cut himself off, glancing toward the bed. His excited expression immediately shifted to one of guilt when he saw Elias still fast asleep."
 
     show yuxuan normal_lying at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line2  # transcript: "Oops."
     yuxuan "...Oops."
 
     show dorian normal at left_char with Dissolve(0.1)
     "I smirked, closing the book in my hands."
 
+    voice audio.dorian_ch9_line33  # transcript: "You forgot it was the"
     dorian "You forgot it was Elias' nap time?"
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "He winced, treading carefully."
 
+    voice audio.dorian_ch9_line34  # transcript: "How was the meeting with"
     dorian "How was the meeting with the representatives from Hinami?"
 
     show yuxuan normal_sad at right_char with Dissolve(0.1)
     "He sighed."
 
+    voice audio.yuxuan_ch9_line3  # transcript: "by the prosperity dragon they"
     yuxuan "By the Prosperity Dragon, they have so much planned! But they wouldn't tell me a single thing!"
+    voice audio.yuxuan_ch9_line4  # transcript: "It's a surprise, Lord Chang,"
     yuxuan "\"It's a surprise, Lord Cheng.\" They said. Pft! As if I enjoy surprises!"
 
     show dorian smile at left_char with Dissolve(0.1)
     "I chuckled, leaning back against the couch."
 
+    voice audio.dorian_ch9_line35  # transcript: "is the king of heenemy"
     dorian "Is the King of Hinami already here with his royal entourage?"
 
     show yuxuan normal_neutral at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line5  # transcript: "Yes, Dorian. All the royals"
     yuxuan "Yes, Dorian. All the royals are here in Tianho as we speak. Tianho, Gale, Hinami, Mjoll, and the Centennial Isles... and Kyeongjang... if you count Chung-hee."
+    voice audio.yuxuan_ch9_line6  # transcript: "Technically he is the Emperor"
     yuxuan "Technically he is the Emperor of Kyeongjang so..."
+    voice audio.yuxuan_ch9_line7  # transcript: "By the way, I brought"
     yuxuan "By the way, I brought some freshly made fish treats from Hinami. Figured he'd like them. And maybe you would too."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "I raised a brow. Fish treats?"
 
     show yuxuan normal_neutral at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line8  # transcript: "I was supposed to bring"
     yuxuan "I was supposed to bring the two of you there yesterday when... well... there was a bomb... and the whole situation with Chung-hee happened."
 
     "He placed the bag on the low table between us, and immediately, a rich, savory scent wafted through the air-crispy, golden batter infused with the deep umami of Hinami spices."
     "I glanced at Elias. Yeah. He wasn't going to eat that."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line36  # transcript: "Did you really just bring"
     dorian "Did you really just bring these for Elias, or were you hoping I'd be the one eating them?"
 
     show yuxuan alt_smile at right_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line9  # transcript: "um... both what can i"
     yuxuan "Umm... Both? What can I say? You always look like you forget to eat."
 
     show dorian neutral at left_char 
@@ -937,21 +1059,24 @@ label ch9_bedroom_yuxuan:
 
         "Eat with Yuxuan.":
             $ ch9_yuxuan_ate = True
-            $ yuxuan_affection += 1
+            $ A3_yuxuan_affection += 1
 
             show dorian neutral at left_char with Dissolve(0.1)
             "I sighed, defeated, and reached for the bag."
 
+            voice audio.dorian_ch9_line37  # transcript: "Fine."
             dorian "...Fine."
 
             show yuxuan normal_happy at right_char with Dissolve(0.1)
             "Yuxuan laughed, then motioned to another bag."
 
+            voice audio.yuxuan_ch9_line10  # transcript: "I also got some Tianhoo"
             yuxuan "I also got some Tianho sweets. Figured I'd make up for yesterday."
 
             "The faint scent of sweet red bean paste and toasted sesame drifted from the package."
             "I opened it, finding an assortment of soft pastries, perfectly golden rice cakes, and delicate buns dusted with just a touch of sugar."
 
+            voice audio.yuxuan_ch9_line11  # transcript: "Let's eat!"
             yuxuan "Let's eat!!"
             show yuxuan normal_neutral at right_char with Dissolve(0.1)
 
@@ -959,21 +1084,26 @@ label ch9_bedroom_yuxuan:
             "As I took a bite, the flavors melted onto my tongue-a delicate balance of salt, spice, and the natural sweetness of the fish."
 
             show yuxuan normal_happy at right_char with Dissolve(0.1)
+            voice audio.yuxuan_ch9_line12  # transcript: "Tian Ho always makes the"
             yuxuan "Tianho always makes the best sweets. There's this one stall near the east district-"
 
             show tedda_human at center_char with Dissolve(0.2)
+            voice audio.tedda_ch9_line9  # transcript: "Master Youseren, I saw you"
             tedda "Master Yuxuan, I saw you with sweets!"
 
             show yuxuan normal_neutral at right_char with Dissolve(0.1)
             "We both turned as Tedda stepped in, carrying a small stack of water bottles in her arms. She shot Yuxuan a pointed look."
 
+            voice audio.tedda_ch9_line10  # transcript: "Well, I saw you carrying"
             tedda "Well, I saw you carrying sweets, so I figured they were for my Lady Elias. I barely had time to react before she continued."
+            voice audio.tedda_ch9_line11  # transcript: "And since sweets can be"
             tedda "And since sweets can be a choking hazard, I took it upon myself to bring water for all of you. Because unlike some stuffed toys, I am a responsible caretaker!"
 
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "I covered my mouth, still chewing, and reached for one of the bottles. She plopped it down beside me with an exaggerated sigh, looking incredibly proud of herself."
 
             show tedda_human at center_char with Dissolve(0.1)
+            voice audio.tedda_ch9_line12  # transcript: "What do you think, Sir"
             tedda "What do you think, sir Dorian? Am I a responsible caretaker of Lady Elias?"
 
             "Unfortunately, I was still chewing."
@@ -982,10 +1112,12 @@ label ch9_bedroom_yuxuan:
             "Yuxuan, ever the opportunist, saw his chance."
             "He sat up straighter, then flashed the most ridiculous, salesman-like grin I had ever seen."
 
+            voice audio.yuxuan_ch9_line13  # transcript: "he says yes, Tedder, but"
             yuxuan "He says yes, Tedda. But more importantly-!"
 
             "He turned toward an invisible audience, gesturing dramatically with the half-eaten pastry in his hand."
 
+            voice audio.yuxuan_ch9_line14  # transcript: "nothing pairs better with the"
             yuxuan "Nothing pairs better with the delicious, time-honored taste of Cheng Industries' Tianho Sweets than a refreshing bottle of water!"
 
             show dorian normal_alt_annoyed at left_char 
@@ -996,14 +1128,17 @@ label ch9_bedroom_yuxuan:
             show tedda_human at center_char 
             show dorian normal_alt_neutral at left_char 
             with Dissolve(0.1)
+            voice audio.tedda_ch9_line13  # transcript: "even the fish treats best"
             tedda "Even the fish treats, Master Yuxuan?"
 
             show yuxuan normal_neutral at right_char with Dissolve(0.1)
+            voice audio.yuxuan_ch9_line15  # transcript: "No, not the fish treats"
             yuxuan "No... Not the fish treats though. Those are from the Hinami booth."
 
             show tedda_human at center_char with Dissolve(0.1)
             "Tedda grinned and reached for a fish treat."
 
+            voice audio.tedda_ch9_line14  # transcript: "They look delicious! I want"
             tedda "They look delicious! I wanna try some! Yummy yummy fishy treat!"
 
             "I sighed, reaching for a sesame rice cake."
@@ -1015,10 +1150,12 @@ label ch9_bedroom_yuxuan:
             "If I decided not to eat the treats, Yuxuan's smile faltered-just for a second. It was subtle, barely noticeable, but I caught the way his expression dimmed."
 
             show yuxuan normal_neutral at right_char with Dissolve(0.1)
+            voice audio.yuxuan_ch9_line16  # transcript: "Oh, well, that's fine. More"
             yuxuan "Oh... well, that's fine. More for Elias, I guess."
 
             "He shrugged it off, forcing an easygoing tone, but I knew him well enough to see the flicker of disappointment in his eyes."
 
+            voice audio.yuxuan_ch9_line17  # transcript: "Anyway, that's not the only"
             yuxuan "A-Anyway! That's not the only reason I came by. So you won't believe what my Operations Manager said to me-"
 
     pause 1.0
@@ -1031,13 +1168,16 @@ label ch9_bedroom_yuxuan:
     show yuxuan normal_neutral at right_char 
     show dorian neutral at left_char
     with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line18  # transcript: "Oh, wait! I have to"
     yuxuan "Oh, wait! I have to go. I need to check up on Miss Weng. I need to see if she finished cooking the meals!"
 
     "He stood, brushing the crumbs from his ornate robes."
 
+    voice audio.dorian_ch9_line39  # transcript: "Don't worry, I'll be here."
     dorian "Don't worry. I'll be here. I'll be up in a bit."
 
     show yuxuan normal_happy at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch9_line19  # transcript: "Try not to fall asleep"
     yuxuan "Try not to fall asleep where you sit."
 
     hide yuxuan
@@ -1048,33 +1188,40 @@ label ch9_bedroom_yuxuan:
     show elias sleepware_neutral at right_char_kids with Dissolve(0.2)
     "I turned just in time to see Elias stirring, his tiny fists rubbing at his tired eyes. His hair was a tousled mess, and he blinked up at me in a sleepy daze."
 
+    voice audio.elias_ch9_line14      # transcript: "Hello, butariii"
     elias "Hello, Daddy."
 
     "His voice was soft, still laced with drowsiness. "
     show elias sleepware_happy at right_char_kids with Dissolve(0.1)
     "Then, his gaze shifted to the table, and the moment his half-lidded eyes landed on the neatly arranged pastries and treats, they snapped fully open."
-
+    
+    voice audio.elias_ch9_line15
     elias "Ooh! Treats!"
 
     "A sleepy grin spread across his face as he sat up, suddenly far more awake than he had been mere seconds ago."
     show dorian normal at left_char with Dissolve(0.1)
     "I chuckled, shaking my head."
 
+    voice audio.dorian_ch9_line40  # transcript: "Those are from you Shwan."
     dorian "Those are from Yuxuan."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "I reached over, lifting Elias effortlessly from the bed and settling him onto the couch."
     "He wiggled in place, already reaching for one of the sweet red bean pastries with eager fingers."
 
+    voice audio.dorian_ch9_line41  # transcript: "Enjoy buddy."
     dorian "Enjoy, buddy."
 
     show elias sleepware_cute at right_char_kids with Dissolve(0.1)
     "Elias took a big bite, his cheeks puffing out as he chewed. His eyes lit up, his entire face brightening with pure delight."
 
+    voice audio.elias_ch9_line16
     elias "Mmm! 'S yummy, Daddy!"
+    voice audio.elias_ch9_line17
     elias "Mister Yuxuan's always so nice! He's a biiiig heart!"
 
     show dorian smile at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line42  # transcript: "He sure is, Elias. He"
     dorian "He sure is, Elias. He sure is."
     jump ch9_outfit_gather
 
@@ -1096,13 +1243,20 @@ label ch9_tavern:
     "I exited the underground laboratory. As I stepped forward, the massive mechanical door behind me gave a soft chime, its metal plates shifting with a smooth, clockwork precision."
     "A warm, automated tone filled the air."
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.door_ch9_line1  # transcript: "Good afternoon, Master Dorian. A"
     door_voice "Good afternoon, Master Dorian. A reminder: Today marks the Fifth Anniversary of the Tragedy of Tianho. A day of remembrance for those we lost."
+    voice audio.dorian_ch9_line43  # transcript: "You already know my name."
     dorian "You already know my name? I just came here yesterday."
 
+    voice audio.door_ch9_line2  # transcript: "I give a record of"
     door_voice "I keep a record of all the guests through Roboto, Master Dorian."
+    voice audio.door_ch9_line3  # transcript: "Events will be held throughout"
     door_voice "Events will be held throughout the entire day and will conclude late into the night. Might I suggest visiting the Tianho Memorial? Or perhaps lighting an offering at the shrine?"
+    voice audio.door_ch9_line4  # transcript: "And for the most anticipated"
     door_voice "And for the most anticipated event of the evening-don't miss the grand Lantern Release tonight! Let your loved ones' spirits dance among the stars!"
+    voice audio.door_ch9_line5  # transcript: "By our exclusive chain industry's"
     door_voice "Buy our exclusive Cheng Industries Lantern, now featuring: red weather-resistant paper, ensuring a smooth ascent even in the wind!"
+    voice audio.door_ch9_line6  # transcript: "Here at Chains, we bring"
     door_voice "Here at Cheng's, we bring change!"
 
     # play sound sfx_cheng_jingle              # PLACEHOLDER — not declared
@@ -1110,19 +1264,26 @@ label ch9_tavern:
     "-Here at Cheng's, we bring change...  -"
     "A familiar odd jingle filled the area, the cheerful tone feeling almost out of place."
 
+    voice audio.dorian_ch9_line44  # transcript: "Lantern release. What's that?"
     dorian "Lantern release? What's that?"
 
+    voice audio.door_ch9_line7  # transcript: "The lantern release is its"
     door_voice "The Lantern Release is an age-old tradition in the kingdom of Tianho. Participants write the name of their departed loved ones on the lantern, along with a message from their heart."
+    voice audio.door_ch9_line8  # transcript: "Then as the night deepens,"
     door_voice "Then, as the night deepens, they release the lanterns into the sky together, creating a breathtaking sea of light that drifts into the heavens."
+    voice audio.door_ch9_line9  # transcript: "Legend says that the prosperity"
     door_voice "Legend says that the Prosperity Dragon sees the lanterns and their messages. Moved by the love and longing of those left behind, the Prosperity Dragon intercedes on their behalf to the Dragon of the Depths."
+    voice audio.door_ch9_line10  # transcript: "And in turn, the dragon"
     door_voice "And in turn, the Dragon of the Depths carries those messages to the dead."
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "The thought lingered in my mind longer than I expected."
     
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line45  # transcript: "I'll think about it. Thank"
     dorian "I'll... think about it. Thank you for reminding me."
 
+    voice audio.door_ch9_line11  # transcript: "You're welcome. Have a wonderful"
     door_voice "You're welcome. Have a wonderful day, Master Dorian!"
 
     scene tianho_tragedy_day with fade # PLACEHOLDER — Tianho streets, daytime
@@ -1153,54 +1314,66 @@ label ch9_tavern:
     show niko alt_annoyed at right_char
     show dorian neutral at left_char
     with Dissolve(0.2)
+    voice audio.niko_ch9_line1  # transcript: "Those mellow soldiers. You'd think"
     niko "Tsk. Those Mjoll soldiers... You'd think they'd have better things to do than getting drunk in broad daylight."
 
     "I turned, finding him standing just behind me, arms crossed, his eyes flicking toward the soldiers."
 
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line2  # transcript: "What are you doing here?"
     niko "What are you doing here? Did you follow me?"
 
+    voice audio.dorian_ch9_line46  # transcript: "Follow you? Hardly. I heard"
     dorian "Follow you? Hardly. I heard you were meeting your fellow prophets in a tavern. Thought I'd grab a drink myself."
 
     show niko normal_base at right_char with Dissolve(0.2)
     "Niko's gaze drifted back to the Mjoll soldiers. His smirk faded, replaced with a quiet look of distaste."
 
+    voice audio.niko_ch9_line3  # transcript: "Change of plans, we ate"
     niko "Change of plans. We ate at a local eatery nearby instead. Seeing all those Mjoll soldiers... well, let's just say it killed my appetite."
 
     "He exhaled, rubbing his temples before glancing back at me."
 
+    voice audio.niko_ch9_line4  # transcript: "But if you're still planning"
     niko "But if you're still planning on eating, maybe I'll join you. We didn't eat that much, and I could use something sweet."
 
     menu:
 
         "Eat with Niko.":
             $ ch9_niko_ate = True
-            $ niko_affection += 1
+            $ A1_niko_affection += 1
 
             scene bg_tianho_city_morning with dissolve # PLACEHOLDER — Tianho food stalls
 
             "As we stepped away from the tavern, the scent of something rich and fragrant drifted through the air."
             "I followed my nose to a nearby food stall, where a vendor worked over a sizzling clay pot, stirring a deep, amber-colored broth bubbling with spices."
+            voice audio.vendor_ch9_line1  # transcript: "Fresh balls of Cabbagehead Hot"
             vendor "Fresh bowls of Cabbage Head Hotpot! Good for the soul on this solemn day!"
 
             show dorian neutral at left_char 
             show niko normal_base at right_char
             with Dissolve(0.2)
+            voice audio.dorian_ch9_line47  # transcript: "Never had this before. It's"
             dorian "Ever had this before? It's called Cabbage Head Hotpot. A Tianho classic."
 
+            voice audio.niko_ch9_line5  # transcript: "Can't say I have. Looks"
             niko "Can't say I have. Looks pretty hearty. But sure, go ahead."
 
             show dorian normal at left_char with Dissolve(0.1)
             "I ordered two bowls, and we settled onto a wooden bench nearby, the warmth of the simmering broth already curling into the crisp air."
 
+            voice audio.vendor_ch9_line2  # transcript: "to order, sir. Come and"
             vendor "Two orders, sir? Coming right up! Thank you for your patronage!"
+            voice audio.vendor_ch9_line3  # transcript: "Here you go, sirs. Two"
             vendor "Here you go, sirs! Two piping hot bowls of Cabbage Head Hotpot-perfect for a day like this."
 
             show niko normal_anger at right_char with Dissolve(0.1)
+            voice audio.niko_ch9_line6  # transcript: "Ah, merciful Enoch."
             niko "Ah- Merciful Enoch!"
 
             "He recoiled slightly, nearly dropping his bowl as the heat seared through the ceramic."
 
+            voice audio.vendor_ch9_line4  # transcript: "Careful sir, that ball was"
             vendor "Careful, sir! That bowl is fresh off the fire!"
 
             show niko normal_smile at right_char with Dissolve(0.1)
@@ -1208,26 +1381,33 @@ label ch9_tavern:
             "The broth, thick and deeply savory, carried just the right balance of richness, clinging to the softened strands of cabbage."
             "Niko hummed in approval, his chopsticks plucking up a bundle of glistening noodles."
 
+            voice audio.niko_ch9_line7  # transcript: "Alright, I'll admit it. It's"
             niko "Alright, I'll admit-it's damn good. The cabbage soaks up all the flavor. Reminds me of the dishes we had back at the seacoast of Hinami."
 
             "As he leaned back, tapping his chopsticks against the rim of his bowl, curiosity flickered across his face."
 
+            voice audio.niko_ch9_line8  # transcript: "Kind sir, this is excellent."
             niko "Kind sir, this is excellent. Would you mind parting with the recipe?"
 
+            voice audio.vendor_ch9_line5  # transcript: "I must apologize, sir. This"
             vendor "Ah, I must apologize, sir. This recipe has been passed down through generations. Can't just go giving away family secrets."
+            voice audio.vendor_ch9_line6  # transcript: "Both are honored by your"
             vendor "But I'm honored by your praise."
 
             show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line48  # transcript: "Would you like seconds? I"
             dorian "Would you like seconds? I could go for another round."
 
             show niko normal_base at right_char with Dissolve(0.1)
+            voice audio.niko_ch9_line9  # transcript: "Maybe just an extra serving"
             niko "Maybe just an extra serving of noodles. Not the broth-I can feel it settling in my bones already."
 
+            voice audio.vendor_ch9_line7
             vendor "Coming right up, sir! Again, thank you for your patronage!"
 
             show niko alt_annoyed at right_char with Dissolve(0.1)
             "As the vendor prepared another portion, Niko shot me an amused glance."
-
+            voice audio.niko_ch9_line10
             niko "You eat more than I expected, Dorian. Guess it's fair, considering the last thing we had was dinner, and we're well past lunch now."
 
             show dorian normal_alt_neutral at left_char 
@@ -1235,20 +1415,27 @@ label ch9_tavern:
             with Dissolve(0.1)
             "I only shrugged, savoring the last sip of broth on my bowl."
 
+            voice audio.vendor_ch9_line8  # transcript: "Here you are, sirs, a"
             vendor "Here you are, sirs. A second serving. I added extra meatballs to your bowl-on the house, in honor of the festivities."
+            voice audio.vendor_ch9_line9  # transcript: "And also I heard about"
             vendor "And also, I heard about what you did yesterday. Thank you for clearing the town from those damn yaoguai. Consider this my way of saying thanks."
 
+            voice audio.dorian_ch9_line49  # transcript: "How generous. Thank you."
             dorian "How generous. Thank you."
 
+            voice audio.vendor_ch9_line10  # transcript: "Your mouse welcomes her. If"
             vendor "You're most welcome, sir. If my daughter were still here, she'd have me giving out an extra meatball to anyone who so much as complimented the cooking. She had a kind heart like that."
+            voice audio.vendor_ch9_line11  # transcript: "She was taken during the"
             vendor "She was taken during the Tragedy... five years ago today. Our family was being chased by a yaoguai and... you know."
 
             show niko normal_sad at right_char with Dissolve(0.1)
             "Niko set his chopsticks down, his gaze shifting, solemn."
 
             show dorian sad at left_char with Dissolve(0.1)
+            voice audio.niko_ch9_line11  # transcript: "I'm very sorry to hear"
             niko "I'm very sorry to hear that."
 
+            voice audio.vendor_ch9_line12  # transcript: "Don't worry yourself, sir. She"
             vendor "Don't worry yourselves, sirs. She wouldn't have wanted grief. Today, we honor the fallen, not with sorrow, but with life. And so, we cook, we eat, and we carry forward."
 
             show dorian normal_alt_neutral at left_char 
@@ -1257,6 +1444,7 @@ label ch9_tavern:
             "We ate the rest of our meal in a more reflective silence, letting the warmth of the broth settle in. Delicious."
             "Just as we finished, Niko's attention drifted elsewhere, his gaze sharpening."
 
+            voice audio.niko_ch9_line12  # transcript: "Now this looks interesting."
             niko "...Now that looks interesting."
 
             show dorian normal_alt_neutral at left_char
@@ -1264,48 +1452,62 @@ label ch9_tavern:
             "A rich, caramelized aroma wafted from it-sweet, creamy, with just the faintest hint of toasted sugar."
             "Something about the man seemed familiar. Then it clicked."
 
+            voice audio.dorian_ch9_line50  # transcript: "Wait, go. Is that you?"
             dorian "Wait... Gao? Is that you?"
 
             show soldier_gao at center_char with Dissolve(0.2)
             "The man looked up sharply, then broke into a broad grin."
 
+            voice audio.gao_ch9_line1  # transcript: "Fallen Dorian, you're here!"
             gao "Paladin Dorian! You're here!"
 
             show niko normal_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch9_line13  # transcript: "Gauw, the soldier yesterday. What"
             niko "Gao? The soldier yesterday? What are you doing here?"
 
+            voice audio.gao_ch9_line2  # transcript: "Oh, Dr. Niko! Well, I'm"
             gao "Oh, Doctor Niko! Well, I'm selling! Care to buy some delicious Tianho flan? Fresh from my mother's kitchen."
 
             "He patted the side of the cart with pride, the lids of several ceramic dishes clinking faintly against one another."
 
+            voice audio.gao_ch9_line3  # transcript: "You'd best grab them now,"
             gao "You'd best grab them now, sirs. I'm heading to the memorial soon, and we sell out quickly."
 
             show niko normal_base at right_char with Dissolve(0.2)
             "Niko stepped forward, peering at the cart's contents with mild interest."
 
+            voice audio.niko_ch9_line14  # transcript: "How much?"
             niko "How much?"
 
+            voice audio.gao_ch9_line4  # transcript: "Five coins per flonzer. It'll"
             gao "Five coins per flan, sir. It'll be worth every coin. I promise!"
 
             "Without hesitation, Niko reached into his pouch and pulled out several coins, stacking them in Gao's palm."
             show niko normal_smile at right_char with Dissolve(0.1)
+            voice audio.niko_ch9_line15  # transcript: "I'll take five."
             niko "I'll take five."
 
+            voice audio.gao_ch9_line5  # transcript: "Thank you, sir. I'll wrap"
             gao "Thank you, sir! I'll wrap those up for you!"
 
             show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I blinked."
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line51
             dorian "Five, Niko?"
 
             show niko normal_base at right_char with Dissolve(0.2)
+            voice audio.niko_ch9_line16  # transcript: "One for you, one for"
             niko "One for you. One for me. One for Elias. One for Tim."
 
+            voice audio.dorian_ch9_line52  # transcript: "and the fifth"
             dorian "...And the fifth?"
 
             "Niko hesitated, just for a moment. Then he exhaled through his nose, taking the wrapped flans from Gao with careful hands."
 
+            voice audio.gao_ch9_line6  # transcript: "Here you are, sirs. Five"
             gao "Here you are, sirs! Five Hinami flans!"
+            voice audio.gao_ch9_line7  # transcript: "Anyway, I had to get"
             gao "Anyway I have to get going. People in the memorial are a little impatient. See you, Paladin! Doctor!"
 
             hide soldier_gao
@@ -1316,14 +1518,17 @@ label ch9_tavern:
             show niko alt_base at right_char with Dissolve(0.1)
             "Niko looked at me."
 
+            voice audio.niko_ch9_line17  # transcript: "The fifth is for Kaito."
             niko "The fifth is for Kaito."
 
             show dorian serious at left_char with Dissolve(0.1)
             "My breath caught in my throat. Kaito. Niko's younger brother."
             show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line53  # transcript: "Well, I know for a"
             dorian "Well, I know for a fact that he'd love whatever you give him."
 
             show niko normal_base at right_char with Dissolve(0.1)
+            voice audio.niko_ch9_line18  # transcript: "I know, but he really"
             niko "I know. But he really loved sweets so I figured he'd definitely want this."
 
             "I didn't press. Instead, I simply nodded."
@@ -1333,11 +1538,13 @@ label ch9_tavern:
             show dorian neutral at left_char with Dissolve(0.2)
             "I shook my head."
 
+            voice audio.dorian_ch9_line54  # transcript: "I'm not really hungry, Nico."
             dorian "I'm not really hungry, Niko."
 
             show niko normal_base at right_char with Dissolve(0.2)
             "Niko shot me a sideways glance but didn't push the matter."
 
+            voice audio.niko_ch9_line19  # transcript: "Suit yourself. Let's get out"
             niko "Suit yourself. Let's get out of here."
 
 
@@ -1360,7 +1567,9 @@ label ch9_tavern:
     show niko normal_serious at right_char
     show dorian serious at left_char 
     with Dissolve(0.2)
+    voice audio.niko_ch9_line20  # transcript: "Keep your guard up, Dorian."
     niko "Keep your guard up, Dorian."
+    voice audio.dorian_ch9_line55  # transcript: "You don't have to tell"
     dorian "You don't have to tell me twice."
 
 
@@ -1368,16 +1577,21 @@ label ch9_tavern:
     "Aoi's sharp eyes flicked to us, her gaze lingering just long enough to let us know she had seen us long before we noticed her."
     "She tilted her head slightly, the faintest ghost of a smirk tugging at her lips."
 
+    voice audio.aoi_ch9_line1  # transcript: "Sir Dorian, Dr. Nico, a"
     aoi "Sir Dorian. Doctor Niko. A pleasure."
     "We didn't return the greeting. Our stares were cold, unyielding. She rolled her eyes."
 
+    voice audio.aoi_ch9_line2  # transcript: "Why are you looking at"
     aoi "Why are you looking at me like that?"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line56  # transcript: "Oh, I don't know. Maybe"
     dorian "Oh, I don't know. Maybe because the last time we met, you tried to kill us?"
 
     show niko alt_irritate at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line21  # transcript: "or because we have no"
     niko "Or because we have no idea if you're still working for King Gustav?"
+    voice audio.niko_ch9_line22  # transcript: "For all we know, you"
     niko "For all we know, you might still be getting coin from him."
 
     show dorian serious at left_char 
@@ -1385,33 +1599,42 @@ label ch9_tavern:
     with Dissolve(0.1)
     "She let out a slow, exaggerated sigh before raising her hands-not in surrender, but with an air of casual indifference."
 
+    voice audio.aoi_ch9_line3  # transcript: "For the love of Tetrad."
     aoi "Oh, for the love of Tetrad. I'm not after the Emperor anymore. I know when I'm beaten."
 
     "She met our stares head-on, her voice cool and steady."
 
+    voice audio.aoi_ch9_line25  # transcript: "Look, I'll be honest with"
     aoi "Look, I'll be honest with you. Yes, I was in it for the money. I always am. But I'm not an idiot."
+    voice audio.aoi_ch9_line4  # transcript: "the last mercenary who failed"
     aoi "The last mercenary who failed King Gustav's orders? He was executed. Him and his wife."
 
     "The words hung in the air like a blade over our heads."
 
+    voice audio.aoi_ch9_line5  # transcript: "Shunlin knows I'm not going"
     aoi "Xianlun knows I'm not going back there."
 
     "She fixed her hair with her fingers."
 
+    voice audio.aoi_ch9_line6  # transcript: "I took the coin he"
     aoi "I took the coin he gave me. And I deserted."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch9_line57  # transcript: "So that's why you took"
     dorian "So that's why you took the job from Feng."
 
     "Aoi gave a small shrug."
 
+    voice audio.aoi_ch9_line7  # transcript: "pretty much, but that's not"
     aoi "Pretty much. But that's not why I'm here right now."
 
     show dorian neutral at left_char
     show niko alt_base at right_char
     with Dissolve(0.1)
+    voice audio.dorian_ch9_line58  # transcript: "Speaking of which, where is"
     dorian "Speaking of which, where is Feng?"
 
+    voice audio.aoi_ch9_line8  # transcript: "With the Empress at the"
     aoi "With the Empress at the Tianho Memorial, I've heard. He told me that he's on guard duty and won't leave her side."
 
     "Before I could say anything, a woman approached, balancing a tray with a delicate porcelain cup. The faint aroma of herbs and citrus drifted through the air."
@@ -1423,6 +1646,7 @@ label ch9_tavern:
 
     show niko alt_irritate at right_char with Dissolve(0.1)
     "Niko, however, arched a brow."
+    voice audio.niko_ch9_line23  # transcript: "Long Yangtze, that tease used"
     niko "Longyan Tea? That tea's used by singers to clear their voices."
     show niko alt_base at right_char 
     show dorian normal_alt_neutral at left_char
@@ -1430,61 +1654,77 @@ label ch9_tavern:
 
     "Aoi lifted the cup gracefully, inhaling the steam before taking a careful sip."
 
+    voice audio.aoi_ch9_line9  # transcript: "Yes, I'll be singing tonight,"
     aoi "Yes. I'll be singing tonight, Doctor."
 
     "She glanced up at us, watching our reactions with quiet amusement."
 
+    voice audio.aoi_ch9_line10  # transcript: "Why the Faces? Haven't you"
     aoi "Why the faces? Haven't you heard? Hinami is hosting the Anniversary this year."
 
     "Aoi took a small sip of her tea before answering."
 
+    voice audio.aoi_ch9_line33
     aoi "His Majesty King Tatsuya Fujiwara of Hinami specifically requested me for a song, and who am I to refuse?"
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line59  # transcript: "Svante has mentioned that you"
     dorian "Svante has mentioned that you were a songstress before."
 
     "Aoi let out a soft chuckle."
 
+    voice audio.aoi_ch9_line12  # transcript: "Oh, I was never anything"
     aoi "Oh, I was never anything grand. Just a woman with a voice, singing songs that spoke to my homeland."
 
     show niko alt_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line24  # transcript: "Wait, you're the mistress of"
     niko "Wait... you're the Mistress of Flowing Verses. You performed for King Tatsuya while channeling rain."
 
     "Aoi smirked slightly, swirling the tea in her cup."
 
+    voice audio.aoi_ch9_line13  # transcript: "I see my reputation precedes"
     aoi "I see my reputation precedes me. But I'm no more than a normal person."
 
     show niko normal_serious at right_char with Dissolve(0.2)
     "Niko leaned forward."
 
+    voice audio.niko_ch9_line25  # transcript: "King Gustav is surely going"
     niko "King Gustav is surely going to be at the Tianho Memorial for the ceremony. If you're singing, he'll see you. He might order your capture."
 
+    voice audio.aoi_ch9_line14  # transcript: "Let him try."
     aoi "Let him try."
 
     "With that, she pointed to the small pin on her robe-a delicate emblem of Hinami's royal crest, unmistakable in its craftsmanship."
 
+    voice audio.aoi_ch9_line15  # transcript: "He'll be inviting war with"
     aoi "He'll be inviting war with the kingdom of Hinami. The royal singer is protected by His Majesty, King Tatsuya Fujiwara."
 
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line26  # transcript: "Good point."
     niko "Good point."
 
     menu:
         "Encourage Aoi.":
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line60  # transcript: "You must be an incredible"
             dorian "You must be an incredible singer if you performed for the King of Hinami himself. Channeling rain while singing... I can't even imagine the level of control that takes."
 
             "Aoi raised a delicate brow, her fingers brushing against the porcelain cup of tea. A small smirk curled on her lips."
 
+            voice audio.aoi_ch9_line16  # transcript: "famous is a strong word."
             aoi "\"Famous\" is a strong word. I was simply... appreciated. People liked what I did. I didn't just sing-I told stories. I gave people something to believe in."
 
             "She placed her cup down and lifted a single hand, her fingers elegantly tracing the air. A cool breeze stirred around us, and suddenly, droplets of water formed in the air."
             "The moisture wove together into shimmering threads, swirling like mist before gathering into a delicate ribbon of liquid."
             "The ribbon of water coiled around her wrist like a living ornament before dispersing into the air in a fine mist. She exhaled slowly, as if lost in the memory."
 
+            voice audio.aoi_ch9_line17  # transcript: "the stage was my battlefield"
             aoi "The stage was my battlefield before I ever picked up a blade."
 
+            voice audio.dorian_ch9_line61  # transcript: "I'm curious. I'd like to"
             dorian "I'm curious. I'd like to see you perform."
 
+            voice audio.aoi_ch9_line18  # transcript: "and watch closely tonight. Who"
             aoi "Then watch closely tonight. Who knows? Maybe I'll dedicate a verse to you."
 
         "Don't say anything.":
@@ -1495,18 +1735,22 @@ label ch9_tavern:
     "Their expressions were solemn, their movements slow and deliberate, as if honoring something unseen."
     "She exhaled softly, her fingers brushing against the silk of her kimono sleeve."
 
+    voice audio.aoi_ch9_line19  # transcript: "I used to think music"
     aoi "I used to think music was just for beauty. For fleeting moments of admiration."
 
     "Her voice was quieter now, almost lost beneath the hum of the festival."
     "Then, just as quickly as the moment arrived, she straightened."
 
+    voice audio.aoi_ch9_line20  # transcript: "Anyway, I must bid you"
     aoi "Anyway, I must bid you gentlemen farewell. I need to rest my voice for my performance later."
 
     show niko alt_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line27  # transcript: "We wish you luck in"
     niko "We wish you luck in your performance, Lady Aoi. Make Hinami proud."
 
     "She inclined her head slightly, her gaze sharp."
 
+    voice audio.aoi_ch9_line21  # transcript: "I'll do my best. Take"
     aoi "I'll do my best. Take care, Sir Dorian. Doctor Niko."
 
     hide aoi_base
@@ -1515,6 +1759,7 @@ label ch9_tavern:
     "I let out a slow breath, shaking my head slightly before glancing at Niko."
 
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line28  # transcript: "Well, at least we have"
     niko "Well... at least we have one less person who has a target on our backs."
 
     show tim normal at center_char_kids with Dissolve(0.2)
@@ -1522,18 +1767,23 @@ label ch9_tavern:
     "The tiny genius clutched a plate precariously balanced in his little hands. On it were three perfectly arranged slices of Tianho flan."
 
     show niko alt_annoyed at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line29  # transcript: "Tim, what an ENOX name"
     niko "Tim? What in Enoch's name are you doing here alone?"
 
     show tim alt_nervous at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line1  # transcript: "Sir Nico? Sir Dorian? What"
     tim "S-Sir Niko? Sir Dorian? What are you doing here?"
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line62  # transcript: "adult stuff now back to"
     dorian "Adult stuff. Now back to you. What are you doing all by yourself here?"
 
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line30  # transcript: "Miss Wang might be worried"
     niko "Miss Weng might be worried sick."
 
     show tim alt_pumped at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line2  # transcript: "I always go out by"
     tim "I always go out by myself. I'm a big boy!"
 
     show dorian normal at left_char 
@@ -1544,36 +1794,44 @@ label ch9_tavern:
     show tim normal at center_char_kids 
     show dorian normal_alt_neutral at left_char 
     with Dissolve(0.1)
+    voice audio.tim_ch9_line3  # transcript: "I went out to the"
     tim "I went out of the lab and bought flan for all of us! I did the math. Three flan. One for me, one for Elias, and one we can share for the occasion! Perfectly balanced."
 
     show niko normal_smile at right_char with Dissolve(0.1)
     "Niko, however, smirked and lifted a small paper bag, shaking it lightly."
 
+    voice audio.niko_ch9_line31  # transcript: "I already bought five, kid."
     niko "I already bought five, kid. We have more than enough."
 
     show tim think at center_char_kids with Dissolve(0.1)
     "Tim froze. His eyes darted from the bag to his own plate. Then back to the bag. Then to the plate again."
 
+    voice audio.tim_ch9_line4
     tim "Five, sir Niko?"
 
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch9_line32
     niko "Five."
 
     show tim think at center_char_kids with Dissolve(0.1)
     "Another pause. A deep frown creased Tim's brow. He looked at his three flan. Then at Niko's five. Then back at his own."
 
     show tim alt_serious at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line5  # transcript: "My calculations are wrong. Ah,"
     tim "...My calculations are wrong... Rookie mistake."
     tim "Numbers don't matter if you control the pace of the battlefield."
 
     show niko normal_base at right_char with Dissolve(0.1)
     "We looked at the number of people. It's getting larger."
 
+    voice audio.niko_ch9_line33  # transcript: "Well, it's better to have"
     niko "Well, it's better to have an abundance than a shortage. Let's just go back."
 
     show tim normal at  center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line6  # transcript: "Your rights are Nico."
     tim "You're right, Sir Niko."
 
+    voice audio.dorian_ch9_line63  # transcript: "Come on. Let's head back."
     dorian "Come on. Let's head back."
 
     jump ch9_outfit_gather
@@ -1597,35 +1855,45 @@ label ch9_kitchen_help:
     "Magnus held the radish up to the light, turning it this way and that as though contemplating its very essence."
     "Then, with a dramatic flourish, he brought his knife down, slicing cleanly through it."
 
+    voice audio.magnus_ch9_line12  # transcript: "Ah, the crisp snap of"
     magnus "Ah! The crisp snap of a fresh daikon beneath my blade! It sings, a melody of earth and harvest, a tale whispered by the soil itself-"
+    voice audio.svante_ch9_line14  # transcript: "It's just a vegetable magnus."
     svante "It's just a vegetable, Magnus."
+    voice audio.magnus_ch9_line13  # transcript: "A vegetable that has leafed,"
     magnus "A vegetable that has lived, Svante. A humble root, torn from its slumber beneath the earth, now meeting its noble fate in the fires of culinary creation."
 
     show svante normal_base at right_char with Dissolve(0.1)
+    voice audio.svante_ch9_line15  # transcript: "Magnus, please just cut the"
     svante "Magnus, please just cut the daikon."
 
     show dorian normal at left_char with Dissolve(0.1)
     "I smirked, folding my arms as I leaned against the counter."
+    voice audio.dorian_ch9_line64  # transcript: "Where's Miss Wang? Shouldn't she"
     dorian "Where's Miss Weng? Shouldn't she be making sure Magnus doesn't turn dinner into a sonnet?"
     show dorian neutral at left_char
     show svante normal_happy at right_char
     with Dissolve(0.1)
 
+    voice audio.svante_ch9_line16  # transcript: "Oh, Sir Dorian, you're here."
     svante "Oh, sir Dorian! You're here! You decided want to help us?"
 
     show magnus alt_newpose at center_char with Dissolve(0.2)
     "Magnus, still handling his daikon with far too much ceremony, gestured vaguely toward the back of the kitchen."
+    voice audio.magnus_ch9_line14  # transcript: "Miss Wang has retreated to"
     magnus "Miss Weng has retreated to the sacred domain of baking."
 
     show svante normal_neutral at right_char with Dissolve(0.1)
     "Svante nodded, finally glancing up."
 
+    voice audio.svante_ch9_line17  # transcript: "She took Teta with her,"
     svante "She took Tedda with her. Baking is a long and arduous process, and Mjoll cuisine requires a lot of it."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line65  # transcript: "Makes sense. Imagine it's easier"
     dorian "Makes sense. I imagine it's easier with an extra pair of hands."
 
     show magnus alt_smirk at center_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line15  # transcript: "Then we must prepare our"
     magnus "Then we must prepare our stomachs! For a true feast is on the horizon!"
 
     hide magnus
@@ -1633,6 +1901,7 @@ label ch9_kitchen_help:
     with Dissolve(0.1)
     "I sighed, stepping forward and turning my attention to Svante."
 
+    voice audio.dorian_ch9_line66  # transcript: "Anything you need me to"
     dorian "Anything you need me to do?"
 
     show svante normal_nervous at right_char with Dissolve(0.1)
@@ -1640,6 +1909,7 @@ label ch9_kitchen_help:
     "His face turned the faintest shade of pink before he quickly gestured toward a small basket of onions beside him."
 
     show svante alt_guilty at right_char with Dissolve(0.1)
+    voice audio.svante_ch9_line18  # transcript: "Ah yes, the onions. We"
     svante "Ah-yes! The onions. We need more of them chopped."
     show svante normal_base at right_char with Dissolve(0.1)
     "I nodded and grabbed a knife, setting to work beside him. The sharp scent of onions filled the air, stinging my eyes slightly as I worked in quiet rhythm next to him."
@@ -1647,19 +1917,23 @@ label ch9_kitchen_help:
     "After a moment, he cleared his throat."
 
     show svante normal_neutral at right_char with Dissolve(0.1)
+    voice audio.svante_ch9_line19  # transcript: "So, um, Sir Dorian, you"
     svante "So, um... Sir Dorian. You were with the Paladins before, right? With Paladin Feng?"
 
     "I nodded and continued chopping."
 
+    voice audio.svante_ch9_line20  # transcript: "Is it true you were"
     svante "Is it true you were best friends?"
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I paused briefly, considering my answer, before resuming my work."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line67  # transcript: "We were close. Yes. In"
     dorian "We were close, yes. In a way, you could say we were."
 
     show svante alt_base at right_char
+    voice audio.svante_ch9_line21  # transcript: "Oh, I see."
     svante "Oh... I see..."
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
@@ -1676,13 +1950,16 @@ label ch9_kitchen_help:
     "Engrossed in tales of star-crossed lovers and grand declarations of devotion."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line68  # transcript: "What do you ask?"
     dorian "Why do you ask?"
 
     show svante alt_guilty at right_char with Dissolve(0.1)
+    voice audio.svante_ch9_line22  # transcript: "Oh, um, nothing, sir."
     svante "Oh-um. Nothing, sir."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I sighed, shaking my head."
+    voice audio.dorian_ch9_line69  # transcript: "There it is again. What's"
     dorian "There it is again. What's with the 'sir'? I thought I told you to just call me Dorian."
 
     show dorian normal_alt_neutral at left_char
@@ -1690,6 +1967,7 @@ label ch9_kitchen_help:
     with Dissolve(0.1)
     "Svante stiffened slightly, his ears turning red as he immediately tried to correct himself."
 
+    voice audio.svante_ch9_line23  # transcript: "Oh, sorry, Dorian, I mean,"
     svante "Oh, s-sorry, s-Dorian! I meant Dorian-Sorry, sir. I mean-"
 
     show svante alt_guilty at right_char with Dissolve(0.1)
@@ -1709,10 +1987,12 @@ label ch9_kitchen_help:
             show svante normal_nervous at right_char with Dissolve(0.1)
             "Svante glanced at the counter, and his eyes widened slightly when he noticed the photograph still sitting there."
             "His cheeks flushed, and with quick, almost clumsy movements, he scooped it up and slipped it into his pocket."
+            voice audio.svante_ch9_line24  # transcript: "Sorry, Sir Dorian, I must"
             svante "S-Sorry, Sir Dorian. I must have left it."
 
             show dorian normal at left_char with Dissolve(0.1)
             "I offered a small, reassuring smile."
+            voice audio.dorian_ch9_line70  # transcript: "Don't worry, I didn't see"
             dorian "Don't worry. I didn't see anything."
 
             show dorian neutral at left_char
@@ -1725,25 +2005,29 @@ label ch9_kitchen_help:
             "Roboto rolled toward us, its metal joints clicking faintly as it maneuvered across the kitchen."
             "In one hand, it clutched a spatula-though whether it actually intended to cook or was simply mimicking us, I wasn't sure."
 
+            voice audio.roboto_ch9_line11
             roboto "Sir S-S-S-Svante, how are you holding up? You and S-S-Sir Magnus have been working a lot. Would you prefer to have a quick rest?"
 
             hide roboto
             show magnus alt_newpose at center_char with Dissolve(0.2)
             "Magnus scoffed, tossing his brown hair over his shoulder with unnecessary flair."
-
+            voice audio.magnus_ch9_line16
             magnus "Rest? Me? Real men power through all of this!"
 
             show svante alt_funny at right_char with Dissolve(0.1)
             "Svante chuckled, shaking his head as he wiped his hands on a cloth."
+            voice audio.svante_ch9_line26  # transcript: "Don't worry, Roboto, I've had"
             svante "Don't worry, Roboto. I've done harder tasks during my time at Mjoll with Father."
 
             show magnus alt_smirk at center_char with Dissolve(0.2)
+            voice audio.magnus_ch9_line17  # transcript: "That's the spirit, a true"
             magnus "That's the spirit! A true warrior of the kitchen!"
 
         "Ask about the woman in the picture.":
             $ ch9_svante_photo = True
-            $ svante_affection += 1
+            $ A2_svante_affection += 1
 
+            voice audio.dorian_ch9_line71  # transcript: "This dance, it's Buddha Wang,"
             dorian "This dance... It's budao weng, right?"
 
             
@@ -1751,37 +2035,50 @@ label ch9_kitchen_help:
             show svante normal_sad at right_char with Dissolve(0.1)
             "Beside me, Svante's knife stilled. His gaze flickered toward the photograph, and for a moment, something unreadable crossed his face."
             "Then, with slightly pinkened cheeks, he quickly took the picture back, slipping it into his pocket."
+            voice audio.svante_ch9_line25  # transcript: "Sorry, sir, that's just my"
             svante "S-Sorry, sir. That's just my mom."
 
             show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line72
             dorian "Oh, that's right. You mentioned before-your mother was a songstress in Tianho."
 
             show svante normal_neutral at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line27  # transcript: "Yes, sir. This photo was"
             svante "Yes, sir. This photo was taken during one of her performances when I was younger. She would perform the budao weng while singing."
 
             "There was an unmistakable fondness in his tone."
 
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line73  # transcript: "He looks graceful."
             dorian "She looks graceful."
 
             show svante normal_happy at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line28  # transcript: "She was, sir."
             svante "She was, sir."
 
             show svante normal_neutral at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line29
             svante "You see... the budao weng requires precise balance. The movements are fluid, but they need to be controlled."
+            voice audio.svante_ch9_line30  # transcript: "My mother would wear metal"
             svante "My mother would wear metal cufflinks on her ankles-thin, but heavy enough to ground her movements."
             show svante normal_base at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line31  # transcript: "She asked me to reinforce"
             svante "She asked me to reinforce them since I can channel metal. To ensure she wouldn't slip or stumble."
+            voice audio.svante_ch9_line32  # transcript: "She taught me a lot"
             svante "She taught me a lot about performance. About music, dance... even metal channeling."
 
+            voice audio.dorian_ch9_line74  # transcript: "Metal channeling. Is she a"
             dorian "Metal channeling? Is she a metal channeler?"
 
             show svante alt_guilty at right_char with Dissolve(0.1)
             "Svante shook his head."
 
+            voice audio.svante_ch9_line33  # transcript: "No sir, my mother is"
             svante "No, sir. My mother is a fire channeler."
             show svante normal_base at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line34  # transcript: "But she studied it. She"
             svante "But... she studied it. She read books, talked to scholars from Tianho, Mjoll, Gale-did everything she could to understand what I could do. She didn't know how to channel metal herself, but she still coached me."
+            voice audio.svante_ch9_line35  # transcript: "She helped refine my control."
             svante "She helped me refine my control, made sure I didn't strain myself, even though there was barely any information out there."
 
             show roboto happy at center_robot with Dissolve(0.2)
@@ -1792,25 +2089,30 @@ label ch9_kitchen_help:
 
             show svante normal_happy at right_char with Dissolve(0.1)
             "Svante turned toward Roboto with bright eyes."
+            voice audio.svante_ch9_line36  # transcript: "Thank you, Robota."
             svante "Thank you, Roboto."
 
             roboto "Anyway, d-d-d-d-do you dance and sing, sir Svante?"
 
             show svante normal_nervous at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line37  # transcript: "Dance, where did you get"
             svante "D-Dance? Where did you get that?"
 
             roboto "Y-Y-You said that you mom taught you a lot about performance. About music, dance. S-S-So I assumed that she taught you how to dance and sing."
 
             show svante normal_neutral at right_char with Dissolve(0.1)
+            voice audio.svante_ch9_line38  # transcript: "I... I know how, but"
             svante "I... I know how, but I'm not really good at it. Not as good as Magnus here."
 
             hide roboto
             show magnus alt_close at center_char with Dissolve(0.2)
+            voice audio.magnus_ch9_line18
             magnus "*belting a high note* Ahhhh!"
 
             show svante alt_funny at right_char 
             show dorian smile at left_char
             with Dissolve(0.1)
+            voice audio.svante_ch9_line39  # transcript: "See? I can't compare to"
             svante "See?! I can't compare to that!"
 
     jump ch9_kitchen_common
@@ -1825,6 +2127,7 @@ label ch9_kitchen_common:
     show svante alt_funny at right_char with Dissolve(0.2)
     "Then, as if realizing something, he let out a small chuckle, rubbing the back of his neck."
 
+    voice audio.svante_ch9_line40  # transcript: "Sorry, I'm just so happy."
     svante "Sorry. I'm just so happy! It's just... I've never had a conversation with a real-life robot before."
 
     show magnus alt_newpose at center_char 
@@ -1833,12 +2136,15 @@ label ch9_kitchen_common:
     with Dissolve(0.1)
     "Magnus suddenly clapped his hands together, his brown hair catching the light as he grinned."
 
+    voice audio.magnus_ch9_line19  # transcript: "Me too! And now I"
     magnus "Me too! And now, I feel the poetic urge to compose a song in honor of our beloved robotic companion!"
 
     show magnus alt_close at center_char with Dissolve(0.1)
     "Magnus took a deep breath and, with the dramatic flair only he could muster, began to sing in an exaggerated operatic tone."
 
+    voice audio.magnus_ch9_line20  # transcript: "Oh, no will steal and"
     magnus "Oh, noble steel and gears divine! ~"
+    voice audio.magnus_ch9_line21  # transcript: "With spatula in hand, a"
     magnus "With spatula in hand, a chef most grand! Oh, dear Roboto, guide our pan! ~"
 
     show dorian smile at left_char
@@ -1849,6 +2155,7 @@ label ch9_kitchen_common:
     show dorian neutral at left_char
     show svante normal_base at right_char
     with Dissolve(0.1)
+    voice audio.svante_ch9_line41  # transcript: "He's been like that since"
     svante "He's been like that since early morning."
 
     hide magnus
@@ -1860,7 +2167,9 @@ label ch9_kitchen_common:
 
     show svante normal_neutral at right_char with Dissolve(0.2)
     "Svante shook his head."
+    voice audio.svante_ch9_line42  # transcript: "The Qing Industries delivery bot"
     svante "The Cheng Industries delivery bots don't really talk, Roboto."
+    voice audio.svante_ch9_line43  # transcript: "me and Kristen try talking"
     svante "Me and Kristin tried talking to one once, but all they do is sing a jingle."
 
     show roboto happy at center_robot with Dissolve(0.2)
@@ -1871,9 +2180,11 @@ label ch9_kitchen_common:
 
     hide roboto
     show magnus alt_newpose at center_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line23
     magnus "HERE AT CHENG'S, WE BRING CHANGE!!!~"
 
     show dorian smile at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line75  # transcript: "Dragon's, BOLX Magnus! You surprised"
     dorian "Dragon's bollocks, Magnus! You surprised me!"
 
     show dorian neutral at left_char with Dissolve(0.1)
@@ -1881,6 +2192,7 @@ label ch9_kitchen_common:
 
     show magnus alt_smirk at center_char with Dissolve(0.2)
     "Magnus, emboldened by his successful performance, placed a hand over his chest as if addressing an invisible audience."
+    voice audio.magnus_ch9_line24  # transcript: "A glorious melody etched into"
     magnus "A glorious melody, etched into the hearts of many! A song of commerce! Of unapologetic capitalism! Of-"
 
     hide magnus
@@ -1891,6 +2203,7 @@ label ch9_kitchen_common:
     show magnus alt_newpose at center_char with Dissolve(0.2)
     "Magnus sighed dramatically, shaking his head as if he had just been gravely wronged."
 
+    voice audio.magnus_ch9_line25  # transcript: "I don't need help, Roberto."
     magnus "I don't need help, Roboto. A thousand thanks though."
 
     "After a solid hour of work, we had finally finished all the preparations. Svante, Magnus and I handled the chopping-onions, scallions, daikon, and an assortment of other vegetables."
@@ -1906,16 +2219,19 @@ label ch9_kitchen_common:
     show dorian neutral at left_char
     show magnus normal at right_char
     with Dissolve(0.2)
+    voice audio.magnus_ch9_line26  # transcript: "Woo! I can't believe we"
     magnus "Woo! I can't believe we finished all of that! My hands are still sore from the chopping."
 
     "He wiggled his fingers for emphasis, then flexed them dramatically as if they had endured some great battle."
 
+    voice audio.magnus_ch9_line27  # transcript: "Oh, the toil of mortal"
     magnus "Oh, the toil of mortal labor! The weary hands of a soldier turned humble servant of the kitchen! Is this the fate I have been reduced to? From the clash of steel to the gentle kiss of a kitchen knife against daikon?"
 
+    voice audio.dorian_ch9_line76  # transcript: "Magnus, are you seriously comparing"
     dorian "Magnus, are you seriously comparing chopping ingredients to fighting a war?"
 
     "Magnus grinned, folding his arms."
-
+    voice audio.magnus_ch9_line28
     magnus "Precisely! And I-I, the valiant warrior-have emerged victorious once again!"
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
@@ -1927,15 +2243,18 @@ label ch9_kitchen_common:
     "I turned my head slightly, listening as his deep, rich voice filled the space between us. The song was unmistakable-a traditional Galean ballad, one I hadn't heard in years."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch9_line77  # transcript: "That song."
     dorian "That song..."
 
     show magnus normal at right_char
     "Magnus smiled, eyes half-lidded in contentment."
 
+    voice audio.magnus_ch9_line29  # transcript: "Ah, you know it. Of"
     magnus "Ah, you know it? Of course you do. It is the Song of Longing. A tale as old as the gales themselves."
 
     "He sang softly, the words carrying an old sorrow, a quiet yearning."
 
+    voice audio.magnus_ch9_line30  # transcript: "O sky above, how cruel"
     magnus "O sky above, how cruel you are, to gift me wings yet keep me far..."
 
     "I watched him as he sang, the way his fingers tapped idly against his knee in time with the rhythm."
@@ -1952,6 +2271,7 @@ label ch9_kitchen_common:
             show magnus alt_smirk at right_char with Dissolve(0.1)
             "When he finished, he exhaled, smiling to himself."
 
+            voice audio.magnus_ch9_line31  # transcript: "A beautiful song isn't it?"
             magnus "A beautiful song, isn't it?"
 
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
@@ -1960,13 +2280,15 @@ label ch9_kitchen_common:
             show magnus normal at right_char with Dissolve(0.1)
             "Magnus stretched his arms above his head, wings fluttering slightly as he relaxed further into the sofa as well."
 
+            voice audio.magnus_ch9_line32  # transcript: "Ah, but enough of that."
             magnus "Ah, but enough of that. I mustn't let my heart grow too sentimental. We have a feast ahead, after all!"
 
         "Join him in singing.":
             $ ch9_magnus_song = True
-            $ magnus_affection += 1
+            $ A5_magnus_affection += 1
 
             show dorian smile at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line78  # transcript: "O gentle breeze, please let"
             dorian "O gentle breeze, please let me fly, so I may reach where heavens lie..."
 
             show magnus alt_smirk at right_char with Dissolve(0.1)
@@ -1975,13 +2297,17 @@ label ch9_kitchen_common:
             show magnus alt_base at right_char with Dissolve(0.1)
             "When we finished, Magnus laughed softly, a genuine warmth in his expression."
 
+            voice audio.magnus_ch9_line33  # transcript: "Well, well, not bad at"
             magnus "Well, well. Not bad at all, Dorian. You've got the soul of a Galean troubadour hidden beneath all that paladin steel."
 
             show dorian neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line79  # transcript: "Don't get used to it."
             dorian "Don't get used to it."
 
             show magnus normal at right_char with Dissolve(0.1)
+            voice audio.magnus_ch9_line34  # transcript: "Oh, but now that I"
             magnus "Oh, but now that I know you can sing, how could I not?"
+            voice audio.magnus_ch9_line35  # transcript: "You sing that song well,"
             magnus "You sang the song well, Dorian. You may not have wings, but your voice knows the wind."
 
             "His wings fluttered slightly, a sign of amusement. There was a pleased glint in his eye, and though he said nothing more, I could tell-he was genuinely happy."
@@ -2008,26 +2334,31 @@ label ch9_outfit_gather:
     "The delicate embroidery caught my eye immediately-fine, intricate threads woven into mesmerizing patterns."
 
     show yuxuan normal_happy at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line20  # transcript: "Everyone, it is time to"
     yuxuan "Everyone, it is time to dress for the occasion."
 
     "He gestured to Weng, who carefully laid the outfits out for all to see."
 
     show weng happy at right_flip with Dissolve(0.1)
+    voice audio.weng_ch9_line5  # transcript: "and they've been tailored to"
     weng "They've been tailored to fit each of you perfectly."
     show weng alt_base at right_flip with Dissolve(0.1)
     
     "Her voice was brimming with pride as she smoothed the fabric with careful hands."
 
     show yuxuan normal_happy at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line21  # transcript: "The colors were chosen with"
     yuxuan "The colors were chosen with intention."
 
     "He let his gaze sweep over us, taking in each reaction."
 
     show yuxuan normal_neutral at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line22  # transcript: "They speak of who you"
     yuxuan "They speak of who you are. They reflect your spirit. Wear them, and you will command not just attention, but respect."
 
     hide weng
     show tim normal at right_char_kids with Dissolve(0.2)
+    voice audio.tim_ch9_line7  # transcript: "But it is unfortunate to"
     tim "But it is unfortunate to say that Roboto and Tedda won't be getting any garments."
 
     hide tim
@@ -2042,41 +2373,50 @@ label ch9_outfit_gather:
 
     hide roboto
     show tedda_human at right_char with Dissolve(0.2)
+    voice audio.tedda_ch9_line15
     tedda "Awwww!!! But I wanna dress up tooooo!!"
 
     hide tedda_human
     show elias normal_sad at right_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line18
     elias "*cries* It's unfwair!"
 
     show elias normal_mad at right_char_kids with Dissolve(0.1)
     "Elias cried and hugged Tedda. His small fists clenched as he pouted up at me."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line80  # transcript: "Elias, it's not the end"
     dorian "Elias, it's not the end of the world."
 
     hide elias
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line34  # transcript: "They'll survive."
     niko "They'll survive."
 
     hide niko
     show tim think at right_char_kids with Dissolve(0.2)
     "Despite his deliberately dry tone, his eyes lingered on the stitching, a clear sign that he approved of the craftsmanship."
 
+    voice audio.tim_ch9_line8  # transcript: "Come to think of it,"
     tim "Hmm. Come to think of it, the outfits look like what we wore last time, Miss Weng."
 
     show magnus alt_newpose at right_char with Dissolve(0.2)
     "Then there was Magnus."
     "He stepped forward, his gaze sweeping over the garments as though he were staring at something divine. Slowly, he reached out, barely brushing his fingertips against the fabric."
 
+    voice audio.magnus_ch9_line36  # transcript: "These outfits look stellar!"
     magnus "These outfits look... STELLAR!"
+    voice audio.magnus_ch9_line37  # transcript: "Oh, look how the threads"
     magnus "Oh, look how the threads of fate are woven into cloth! The artisans who stitched these must have whispered to the very stars, coaxing light and shadow to dance upon silk and thread!"
 
     hide magnus
     show tim alt_pumped at right_char_kids with Dissolve(0.2)
+    voice audio.tim_ch9_line9  # transcript: "I firmly agree, Sir Magnus."
     tim "I firmly agree, sir Magnus!"
 
     hide tim 
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line35  # transcript: "You swan, you do realize"
     niko "Yuxuan, you do realize we can't go to the Tianho Memorial, right?"
 
     hide niko
@@ -2085,55 +2425,69 @@ label ch9_outfit_gather:
 
     hide weng
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch9_line44
     svante "Sir Yuxuan... you said Father would be there, right?"
+    voice audio.svante_ch9_line45  # transcript: "I don't want to be"
     svante "I... I don't want to be seen."
 
     hide svante
     show magnus alt_newpose at right_char with Dissolve(0.2)
+    voice audio.magnus_ch9_line38  # transcript: "Swant, you have a father?"
     magnus "Svante, you have a father? You did not mention this to me earlier. Do you two share a strained bond-"
 
     hide magnus
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch9_line46  # transcript: "I'll tell you later, Magnus."
     svante "I... I'll tell you later, Magnus."
 
     hide svante
     show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee's arms were crossed, his expression unreadable."
 
+    voice audio.chung_ch9_line18  # transcript: "Svante's right. As much as"
     chung_hee "Svante's right. As much as I'd love to challenge King Gustav right then and there, I doubt he'll fight fair."
 
     hide chunghee normal_neutral
     show elias normal_sad at right_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line19  # transcript: "Daddy, do something we don't"
     elias "Daddy, does that mean we don't get to eat Hinami fwan?"
 
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.dorian_ch9_line81  # transcript: "We're just not going to"
     dorian "We're just not going to the memorial, Elias. You can still have some. Hey, stop tugging my sleeve."
 
     show elias normal_sad at right_char_kids
+    voice audio.elias_ch9_line20  # transcript: "Oh, okay. I really wanted"
     elias "Oh... okay. I really wanted some fwan."
 
     hide elias 
     show tim normal at right_char_kids with Dissolve(0.2)
+    voice audio.tim_ch9_line10  # transcript: "Elias, I bought one for"
     tim "Elias, I bought one for you! We'll still eat Hinami flan!"
 
     hide tim
     show elias normal_happy at right_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line21  # transcript: "Yay!"
     elias "Yeyy!!"
 
     hide elias
     show tedda_human at right_char with Dissolve(0.2)
+    voice audio.tedda_ch9_line16  # transcript: "Awww, but we still won't"
     tedda "Aww, but we still won't see the festivities!"
 
     hide tedda_human
     show niko alt_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line36  # transcript: "It's for the best. We"
     niko "It's for the best. We don't want to risk getting seen by King Gustav."
 
     show yuxuan alt_smile at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line23  # transcript: "Who said anything about being"
     yuxuan "Who said anything about being seen?"
 
     "He stepped forward, his gaze sweeping over us like he was savoring the moment."
     show yuxuan alt_neutral at center_char with Dissolve(0.1)
 
+    voice audio.yuxuan_ch9_line24  # transcript: "There is a place, one"
     yuxuan "There is a place-one where we can watch everything unfold without a single soul noticing us."
 
     hide niko
@@ -2142,17 +2496,20 @@ label ch9_outfit_gather:
 
     hide roboto
     show weng happy at right_flip with Dissolve(0.1)
+    voice audio.weng_ch9_line6  # transcript: "not only magnificent, but also"
     weng "Not only magnificent. But also romantic!"
     show weng normal at right_flip with Dissolve(0.1)
 
     "I narrowed my eyes."
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line82  # transcript: "And where exactly is this"
     dorian "And where exactly is this place, Yu?"
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
     show yuxuan alt_smile at center_char with Dissolve(0.1)
     "Yuxuan merely chuckled. His voice was like silk, smooth and unreadable."
     show yuxuan normal_neutral at center_char with Dissolve(0.1)
+    voice audio.yuxuan_ch9_line25  # transcript: "patient's story and you'll see."
     yuxuan "Patience, Dorian... You'll see."
 
     hide yuxuan
@@ -2160,61 +2517,75 @@ label ch9_outfit_gather:
     show magnus alt_newpose at right_char with Dissolve(0.2)
     "Magnus, of course, immediately seized the moment, launching into song with a dramatic flourish."
 
+    voice audio.magnus_ch9_line39  # transcript: "Oh, secrets held in moonlight"
     magnus "Oh, secrets held in moonlit air, unseen eyes in silent stare-"
+    voice audio.magnus_ch9_line40  # transcript: "But seriously, where?"
     magnus "But seriously. Where?"
 
     hide magnus
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line37  # transcript: "Agreed. I apologize for the"
     niko "Agreed. I apologize for the bluntness, but I don't care if this place has a 'magnificent view.' What I care about is our safety."
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch9_line47  # transcript: "We need to be safe."
     svante "We need to be safe. I'm sorry. I'm just... very anxious. I don't want to see Father."
 
     hide svante
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     "Yuxuan only smiled wider, tilting his head in amusement."
 
+    voice audio.yuxuan_ch9_line26  # transcript: "It's a surprise!"
     yuxuan "It's a surpriseeeee~"
 
     hide yuxuan
     show niko normal_ignore at right_char with Dissolve(0.2)
     "Niko groaned, rubbing his temple."
 
+    voice audio.niko_ch9_line38  # transcript: "I hate surprises. Can't you"
     niko "I hate surprises. Can't you just read Yuxuan's mind, Chung?"
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch9_line19  # transcript: "Do you consent to having"
     chung_hee "Do you consent to having your mind read, Yuxuan?"
 
     hide chunghee normal_neutral
     show yuxuan normal_angry at right_char with Dissolve(0.2)
+    voice audio.yuxuan_ch9_line27  # transcript: "What? By the prosperity dragon's"
     yuxuan "WHAT?! By the Prosperity Dragon's name, NO!"
 
     hide yuxuan
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch9_line20  # transcript: "Well, there. You have your"
     chung_hee "Well, there. You have your answer."
 
     hide chunghee normal_neutral
     show tedda_human at right_char with Dissolve(0.2)
+    voice audio.tedda_ch9_line17
     tedda "Awww!!"
 
     hide tedda_human
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line39  # transcript: "But aren't you already reading"
     niko "But aren't you already reading our minds?"
 
     hide niko
     show chunghee normal_neutral at right_char with Dissolve(0.2)
+    voice audio.chung_ch9_line21  # transcript: "I read minds, yes, but"
     chung_hee "I read minds, yes. But as much as possible, I don't delve deep to look for secrets. Especially those I have a relationship with... or am trying to have a relationship with."
 
     hide chunghee normal_neutral
     show svante alt_funny at right_char with Dissolve(0.2)
+    voice audio.svante_ch9_line13  # transcript: "Ha ha ha ha."
     svante "Hahahaha!"
 
     hide svante
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     "Yuxuan arched a brow, crossing his arms as he turned his gaze back to Chung-hee with playful intrigue."
 
+    voice audio.yuxuan_ch9_line28  # transcript: "trying are we?"
     yuxuan "Trying, are we?"
 
     hide yuxuan
@@ -2224,6 +2595,7 @@ label ch9_outfit_gather:
     "Chung-hee didn't respond and walked away."
     hide chunghee 
     show niko normal_ignore at right_char with Dissolve(0.2)
+    voice audio.niko_ch9_line40  # transcript: "Ah, leave the man alone,"
     niko "Sighs Leave the man alone, Yuxuan."
 
     scene spare_room with dissolve          # PLACEHOLDER — lab bedroom
@@ -2236,6 +2608,7 @@ label ch9_outfit_gather:
     show tim alt_pumped at center_char_kids with Dissolve(0.2)
     "Tim trailed in, carefully balancing a plate stacked with glistening slices of Hinami flan."
 
+    voice audio.tim_ch9_line11  # transcript: "Elias Elias look what I"
     tim "Elias! Elias! Look what I got!"
 
     show elias alt_joy at right_char_kids with Dissolve(0.1)
@@ -2243,39 +2616,50 @@ label ch9_outfit_gather:
     "Elias wasted no time, eagerly grabbing a piece and taking a bite. The moment the soft custard melted on his tongue, his entire face lit up in pure joy."
 
     show elias normal_cute at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line22  # transcript: "It's so sweet! I love"
     elias "It's so sweet! I LOVE IT! I LOVE FWAN!"
 
     show tim happy at center_char_kids with Dissolve(0.1)
     "Tim beamed, arms crossed as if he had just proven a great point."
 
+    voice audio.tim_ch9_line12  # transcript: "See, Sir Dorian? I told"
     tim "See, Sir Dorian? I told you Elias would love it!"
+    voice audio.tim_ch9_line13  # transcript: "We have so much food"
     tim "We have so much food for the festivities! Miss Weng cooked a lot! You'd be happy!"
 
     show dorian normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line83  # transcript: "We do have a lot"
     dorian "We do have a lot of food."
     show dorian neutral at left_char with Dissolve(0.1)
 
     show elias normal_happy at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line23  # transcript: "Like a mountain of food!"
     elias "Like... a mountain of food!"
 
     "His excitement was contagious, his legs kicking under the table as he stuffed another spoonful into his mouth."
 
     show tim normal at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line14  # transcript: "A whole kingdom's worth of"
     tim "A whole kingdom's worth of food! An entire feast!"
+    voice audio.tim_ch9_line15
     tim "And mooncakes! And those soft, fluffy steamed cakes! And grilled skewers with that amazing sauce!"
 
     show elias alt_smirk at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line24
     elias "The sauce! The sauce!"
 
     "They both burst into giggles, their shared enthusiasm making even me hungry."
 
     show tim normal at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line16  # transcript: "Oh, Sardorian! Surnico told me"
     tim "Oh! Sir Dorian-Sir Niko told me that you're a great storyteller!"
 
     show elias normal_happy at right_char_kids with Dissolve(0.1)
+    voice audio.elias_ch9_line25
     elias "Ooh! Yes, Daddy is a great storyteller!"
 
     show tim alt_pumped at center_char_kids with Dissolve(0.1)
+    voice audio.tim_ch9_line17  # transcript: "Really? Is that true? Sardorian,"
     tim "Really? Is that true? Sir Dorian, can you tell us a story sometime?"
 
     show elias normal_happy at right_char_kids
@@ -2289,16 +2673,19 @@ label ch9_outfit_gather:
             show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I sighed, rubbing my temples." 
             show dorian serious at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line84  # transcript: "Not tonight. I have too"
             dorian "Not tonight. I have too much on my plate."
 
             show elias normal_sad at right_char_kids with Dissolve(0.1)
             "Elias' face fell, his excitement dimming like a candle in the wind. He looked down at his half-eaten flan, suddenly less enthusiastic."
 
+            voice audio.elias_ch9_line26  # transcript: "Oh, okay."
             elias "Oh... okay."
 
             show tim alt_serious at center_char_kids with Dissolve(0.1)
             "Tim frowned but nodded in understanding."
 
+            voice audio.tim_ch9_line18  # transcript: "I get it, you're busy."
             tim "I get it! You're busy. Maybe another time, Sir Dorian?"
 
             show elias normal_sad at right_char_kids with Dissolve(0.1)
@@ -2306,29 +2693,35 @@ label ch9_outfit_gather:
 
         "Sure. Maybe once I'm available.":
             $ ch9_story_promised = True
-            $ magnus_affection += 1
+            $ A5_magnus_affection += 1
 
             show dorian smile at left_char with Dissolve(0.1)
             "I smiled, ruffling Elias' hair before nodding."
 
+            voice audio.dorian_ch9_line85  # transcript: "Maybe once I'm free. I'll"
             dorian "Maybe once I'm free. I'll tell you both a story then."
 
             show tim alt_pumped at center_char_kids with Dissolve(0.2)
             "Tim grinned, clasping his hands together."
 
+            voice audio.tim_ch9_line19  # transcript: "Oh, I can't wait! Please"
             tim "Ooh, I can't wait! Please tell me something I haven't read before! Please!"
 
             show dorian neutral at left_char with Dissolve(0.1)
             "My eyes widened. I doubt I have something Tim hasn't read before."
 
             show tim normal at center_char_kids with Dissolve(0.1)
+            voice audio.tim_ch9_line20  # transcript: "Magnus also said he wanted"
             tim "Magnus also said he wanted to tell me and Elias some stories too!"
 
+            voice audio.dorian_ch9_line86  # transcript: "Magnus. Really."
             dorian "Magnus? Really?"
 
+            voice audio.tim_ch9_line21  # transcript: "Yes, he said he'll tell"
             tim "Yes! He said he'll tell us some old Galean ballads. Something about heroes and destiny and whatnot."
 
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+            voice audio.dorian_ch9_line87  # transcript: "I'll tell the two of"
             dorian "I'll tell the two of you a story soon. But for now, we need to get ready."
 
             show elias normal_happy at right_char_kids
@@ -2347,22 +2740,27 @@ label ch9_outfit_gather:
 
     roboto "Master Yuxuan requests your presence, Special Guest."
 
+    voice audio.dorian_ch9_line88  # transcript: "special guest."
     dorian "Special guest?"
 
     roboto "Yes. You are invited to b-b-bathe with him in the underground hot springs. This is for preparation in wearing the special outfits you will don for the Anniversary."
 
+    voice audio.dorian_ch9_line89  # transcript: "Hot Springs. I didn't know"
     dorian "Hot springs? I didn't know Yu had a hot spring here."
 
     show tim normal at center_char_kids with Dissolve(0.2)
     "From inside the room, Tim piped up between bites of flan."
 
+    voice audio.tim_ch9_line22  # transcript: "Oh yeah! Master Yushuan has"
     tim "Oh, yeah! Master Yuxuan has a hot spring here. It's natural!"
 
     hide tim
     show elias normal_happy at center_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line27  # transcript: "Oh, wellie, is her knife?"
     elias "Oh weally? Ish it nice?"
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line90  # transcript: "Lias, don't talk when your"
     dorian "Elias, don't talk when your mouth is full... Roboto, how exactly does a hot spring exist here?"
 
     hide elias
@@ -2374,16 +2772,19 @@ label ch9_outfit_gather:
     roboto "The mineral-rich waters are known for their r-r-rejuvenating properties."
 
     show elias normal_neutral at center_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line28
     elias "Whoa... What's a geo-thermical?"
 
     hide elias
     show tim think at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch9_line23  # transcript: "It means the ground makes"
     tim "It means the ground makes the water hot!"
 
     hide tim think
     show dorian normal at left_char with Dissolve(0.1)
     "I chuckled, shaking my head."
 
+    voice audio.dorian_ch9_line91  # transcript: "Sounds luxurious, Roboto. But I"
     dorian "Sounds luxurious, Roboto, but I need to bathe Elias first so he can get dressed in the outfit Yuxuan gave him."
 
     show roboto happy at right_robot
@@ -2397,18 +2798,23 @@ label ch9_outfit_gather:
     show tedda_human at right_char with Dissolve(0.2)
     "From the corner of the room, Tedda-Elias's ever-loyal stuffed bear-let out an indignant little squeak."
 
+    voice audio.tedda_ch9_line18  # transcript: "Oh, but I wanted to"
     tedda "Aww! But I wanted to relax too! I never get to do anything fun!"
 
     show elias normal_happy at center_char_kids with Dissolve(0.2)
+    voice audio.elias_ch9_line29  # transcript: "It's okay, Daddy. I'm gonna"
     elias "It's okay, daddy. Tim and I will be hewe."
 
     hide elias normal_happy
     show tim normal at center_char_kids with Dissolve(0.2)
+    voice audio.tim_ch9_line24  # transcript: "Yeah, go enjoy your baths,"
     tim "Yeah! Go enjoy your bath, Sir Dorian! I'll make sure Elias doesn't eat all the flan before you get back."
 
+    voice audio.tedda_ch9_line19  # transcript: "Hey! Lady Elias deserves to"
     tedda "Hey! Lady Elias deserves to eat ALL the flan!"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
+    voice audio.dorian_ch9_line92  # transcript: "Tera, we talked about this."
     dorian "Tedda, we talked about this..."
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
@@ -2429,7 +2835,9 @@ label ch9_outfit_gather:
     show elias normal_happy at center_char_kids
     show tim normal at left_char_kids 
     with Dissolve(0.2)
+    voice audio.tedda_ch9_line20  # transcript: "Oh, lady alliance, your outfits"
     tedda "Ooh Lady Elias! Your outfit is so pretty!"
+    voice audio.tim_ch9_line25  # transcript: "Look at mine! Don't I"
     tim "Look at mine! Don't I look handsome? Hehe."
 
     jump ch9_p2
@@ -2446,3 +2854,4 @@ label ch9_p2:
 # =============================================================================
 # END OF CHAPTER 9 PART 1
 # =============================================================================
+

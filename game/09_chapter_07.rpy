@@ -50,6 +50,7 @@ label chapter_7:
     # play music ost_ch7_dream fadein 1.0         # PLACEHOLDER — urgent dream theme
 
     show magnus normal at center_char, dream_haze_in  # PLACEHOLDER — no magnus sprite declared
+    voice audio.magnus_ch7_line1  # transcript: "Dragonkin! Dragonkin!"
     magnus "DRAGONKIN…. DRAGONKIN!!"
 
     "I gasped, my breath sharp and ragged as I jolted awake. There he was—the winged man again."
@@ -68,38 +69,45 @@ label chapter_7:
     show dorian serious at left_char
     show magnus alt_anger at right_char
     with Dissolve(0.2)
+    voice audio.magnus_ch7_line2  # transcript: "They're here, Dragonkin! Help me!"
     magnus "They're here… Dragonkin. Help me! Please!"
 
     "And then—I felt it. Something watching. Something waiting."
     "A presence, slow and hungry, like a massive, slumbering beast curling in its den, exhaling long, rattling breaths through jagged fangs."
 
     show dorian angry at left_char 
+    voice audio.dorian_ch7_line1  # transcript: "Magnus!"
     dorian "Magnus!"
 
+    voice audio.magnus_ch7_line3  # transcript: "You have to hurry. No,"
     magnus "You have to hurry—no, no, no, listen to me, Dorian! This isn't a warning anymore—IT'S HERE!"
 
     "The cracks in his feathers deepened. The cavern trembled. Stone dust rained down from above." with hpunch
     "The air was heavier now—thick with something unseen, something pressing against my ribs, my throat, my skull."
-
+    voice audio.yaoguai_ch7_line1
     yk "Dragonkin… Dragonkin…"
 
     "It was low. Hungry. Smiling. Like it knew I was there. Like it knew my name."
     "I felt my blood turn to ice."
 
     show dorian serious at left_char
+    voice audio.dorian_ch7_line2  # transcript: "Magnus, what in Tetred's name"
     dorian "Magnus! What in Tetrad's name is happening? What's behind that door?!"
 
     "Then Magnus became quiet."
 
     show magnus normal at right_char with Dissolve(0.1)
+    voice audio.magnus_ch7_line4  # transcript: "There's no time. The seal..."
     magnus "There's no time. The seal—it's WEAKENING. I don't know how, but something—someone—has started to undo it!"
     show magnus alt_shocked at right_char with Dissolve(0.1)
+    voice audio.magnus_ch7_line5  # transcript: "If it breaks, if it"
     magnus "If it breaks—if it breaks, Dorian, I… I—"
 
     "The stone splintered. Something on the other side moved."
 
     show magnus alt_anger at right_char with Dissolve(0.1)
 
+    voice audio.magnus_ch7_line6  # transcript: "Please hurry! I don't know."
     magnus "PLEASE! HURRY! I don't think I can last much longer—Please—!!"
 
     show dorian normal_alt_tense at left_char with Dissolve(0.1)
@@ -107,9 +115,11 @@ label chapter_7:
     "Magnus screamed. His entire body convulsed as unseen forces ripped at him, as if his very essence was being torn apart."
     "His wings, so brilliant and white before, fractured, black veins crawling along his feathers like spreading rot."
 
+    voice audio.magnus_ch7_line7
     magnus "AHHHH!!!"
 
     show dorian angry at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line3  # transcript: "Magnus!"
     dorian "MAGNUS!!"
 
     "He reached for me, and I reached out for him. But before I could grasp him, he was yanked away."
@@ -133,6 +143,7 @@ label chapter_7:
     show supply_robot normal at right_supply
     show dorian serious at left_char
     with Dissolve(0.2)
+    voice audio.yuxuan_ch7_line1  # transcript: "Had another dream, Dorian Buddy?"
     yuxuan "Had another dream, Dorian buddy?"
 
     "His usual teasing tone was there, but the way his brows furrowed told me he already knew the answer."
@@ -149,11 +160,13 @@ label chapter_7:
     "I took the teacup that Weng held out to me."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line4  # transcript: "Thank you, Miss Wang."
     dorian "Thank you, Miss Weng."
 
     show weng happy at right_flip with Dissolve(0.1)
     weng "You must be parched from the battle earlier. I really have to thank you for being concerned about an old woman like me."
 
+    voice audio.yuxuan_ch7_line2  # transcript: "Wing told me about the"
     yuxuan "Weng told me about the Hundun. And when I heard, well—by the Prosperity Dragon, I was mortified! What in the world was an extinct creature doing here?!"
 
     show weng normal at right_flip with Dissolve(0.1)
@@ -161,6 +174,7 @@ label chapter_7:
     weng "And then we went outside and saw the body."
 
     show dorian serious at left_char
+    voice audio.dorian_ch7_line5  # transcript: "You... how's Elias?"
     dorian "Yu, how's Elias?"
 
     "Yuxuan opened his mouth to respond, but before he could—"
@@ -171,6 +185,7 @@ label chapter_7:
     show roboto happy at center_robot
     with Dissolve(0.2)
     tedda "Master Doriaaaann! Lady Elias is sleeping soundly! You have nothing to worry about! She is—"
+    voice audio.roboto_ch7_line1  # transcript: "Miss Tetta, please lower your"
     roboto "Miss Tedda, please lower your voice."
     tedda "Oh… Sorry, Roboto. Whoopsiee…"
 
@@ -180,6 +195,7 @@ label chapter_7:
     with Dissolve(0.2)
     "Yuxuan sighed, but a smirk tugged at the corner of his lips."
 
+    voice audio.yuxuan_ch7_line3  # transcript: "Well, you heard it, buddy."
     yuxuan "Well, you heard it, buddy. Elias is fine."
 
     show dorian neutral at left_char
@@ -197,6 +213,7 @@ label ch7_dream_debrief:
     show dorian serious at left_char 
     show supply_robot lied at right_supply 
     with Dissolve(0.1)
+    voice audio.dorian_ch7_line6  # transcript: "You, I have to tell"
     dorian "Yu… I have to tell you something."
 
     "The room hushed slightly. I took a breath and told them everything."
@@ -209,10 +226,12 @@ label ch7_dream_debrief:
     show weng normal at right_flip with Dissolve(0.2)
     weng "By the stars… Is that what happened in your dream?"
 
+    voice audio.yuxuan_ch7_line4  # transcript: "A Winged Man. Proposterous. We..."
     yuxuan "A winged man? Preposterous. We—"
 
     hide weng
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line1  # transcript: "A winged man you set?"
     niko "A winged man, you said?"
 
     "I turned just in time to see him striding over, his coat slightly disheveled from tending to the injured."
@@ -220,13 +239,16 @@ label ch7_dream_debrief:
 
     hide niko
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line1  # transcript: "Sir Dorian, you're awake."
     svante "Sir Dorian, you're awake."
 
     "The violet-haired Aldorith lifted his head. He set down the cloth and stood, striding toward us."
 
+    voice audio.svante_ch7_line2  # transcript: "me and Serniko hurried to"
     svante "Me and Sir Niko hurried to get here when we learned that the monsters attacked Tianho."
 
     show supply_robot normal at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line5  # transcript: "If it wasn't for them,"
     yuxuan "If it wasn't for them, almost half of the wounded here might have died."
 
     hide svante
@@ -237,6 +259,7 @@ label ch7_dream_debrief:
 
     hide weng
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line2  # transcript: "Describe the winged man to"
     niko "Describe the winged man to me. Every detail."
 
     "I hesitated. Something about the intensity in his voice—like he wasn't just curious, but searching for something."
@@ -250,17 +273,22 @@ label ch7_dream_debrief:
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line3  # transcript: "But I can't be."
     svante "But… That can't be."
 
     hide svante
     show niko normal_serious at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line3  # transcript: "Are you certain that wasn't"
     niko "Are you certain that wasn't a premonition of the Death God?"
+    voice audio.niko_ch7_line4  # transcript: "It must be a sign"
     niko "It must be a sign from Enoch himself! I implore you, tell me more about this dream! Is it telling you to go somewhere? I will follow you, Dorian!"
 
     "I opened my mouth to respond, but before I could—"
 
     show supply_robot base at center_supply 
+    voice audio.yuxuan_ch7_line6  # transcript: "oh here we go"
     yuxuan "Oh, here we go…"
+    voice audio.yuxuan_ch7_line7  # transcript: "Nico, I think you'd love"
     yuxuan "Niko, I think you'd love any excuse to bring up Enoch."
 
     show niko normal_ignore at right_char with Dissolve(0.1)
@@ -270,14 +298,17 @@ label ch7_dream_debrief:
     "Niko shot him a glare but turned back to me, the intensity in his expression unwavering."
 
     show niko normal_serious at right_char
+    voice audio.niko_ch7_line5  # transcript: "You described a man with"
     niko "You described a man with wings. The golden eyes is a dead giveaway."
 
     show supply_robot sad at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line8  # transcript: "Oh come on, you're reading"
     yuxuan "Oh, come on. You're reading into this a little too much. Not everything is about your Death God, Niko. Dreams happen all the time!"
 
     "Yuxuan's image flickered with animation."
     
     show supply_robot lied at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line9  # transcript: "Why, just last week, I"
     yuxuan "Why, just last week, I dreamt that I had only eaten one piece of chocolate, but when I turned around—bam!—I was surrounded by an entire mountain of Hinami treats! And naturally, I ate all of them."
 
     hide niko
@@ -285,28 +316,36 @@ label ch7_dream_debrief:
     weng "That's such a lovely dream, Master Yuxuan. You are incomparable and you are such a visionary!"
 
     show supply_robot base at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line10  # transcript: "Oh, thank you so much,"
     yuxuan "Awww thank you so much, Miss Weng!"
 
     hide weng
     show niko normal_ignore at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line6
     niko "*groans* Ugh…"
 
+    voice audio.yuxuan_ch7_line11  # transcript: "Now tell me, Nico, should"
     yuxuan "Now tell me, Niko. Should I be preparing for an avalanche of delectable confections from Hinami to be given to me by the magnificent Prosperity Dragon? Because, if so, I need to grab my finest fork and plate!"
 
     show niko alt_annoyed at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line7  # transcript: "What? That's just ridiculous, you"
     niko "What? That's just ridiculous, Yuxuan."
 
     hide niko
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line4  # transcript: "now that you mention it."
     svante "Now that you mention it, that sounds like a wonderful dream, Sir Yuxuan." 
     show svante alt_funny at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line5
     svante "I once dreamt that I stood in a field of violet flowers! I was barefoot, and the earth beneath me was warm! And for the first time, I felt… light."
 
     show supply_robot normal at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line12  # transcript: "See? Dreams are harmless."
     yuxuan "See?! Dreams are harmless!"
 
     hide svante
     show niko normal_anger at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line8  # transcript: "That's not what I'm talking"
     niko "That's not what I'm talking about, Yuxu—"
 
     hide niko
@@ -315,54 +354,69 @@ label ch7_dream_debrief:
 
     hide weng
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line6  # transcript: "Wow, that really fits you,"
     svante "Wow… That really fits you, Miss Weng."
 
     hide svante
     show niko normal_ignore at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line9  # transcript: "You're all missing the point."
     niko "You're all missing the point… Enoch, help me."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line7  # transcript: "I... I need to find"
     dorian "I… I need to find him. Magnus said he's in Tianho—but I have no damn clue where."
 
     show niko normal_serious at right_char with Dissolve(0.2)
     "Niko straightened, nodding. I blinked."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line8
     dorian "You sure?"
 
     show niko normal_serious at right_char
+    voice audio.niko_ch7_line10  # transcript: "I believe this isn't just"
     niko "I believe this isn't just some cryptic dream, Dorian. Something is happening."
 
     "I ran a hand through my hair, taking a slow breath."
 
+    voice audio.niko_ch7_line11  # transcript: "Tell me, was there anything"
     niko "Tell me—was there anything else in your dream? Something distinct?"
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I closed my eyes for a moment, trying to recall every detail. Think, Dorian, think. Then, it hit me."
 
     show dorian neutral at left_char with Dissolve(0.1)
-    dorian "There was a massive door. It was made of simple stone… but it bore an amazing illustration of the Prosperity Dragon. The details were immaculate, almost like I was looking at the dragon himself."
+    voice audio.dorian_ch7_line9  # transcript: "There was a massive door."
+    dorian "There was a massive door. It was made of simple stone… but it bore an amazing illustration of the Prosperity Dragon."
+    voice audio.dorian_ch7_line10
+    dorian "The details were immaculate, almost like I was looking at the dragon himself."
 
     show supply_robot lied at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line13  # transcript: "A massive door, intricate illustrations"
     yuxuan "A massive door… Intricate illustration of the Prosperity Dragon…"
 
     "I turned to the delivery bot as Yuxuan's face flickered on the screen. His usual playfulness was gone, replaced with a calculating look."
 
     show supply_robot base at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line14  # transcript: "I think I know where"
     yuxuan "I think I know where that is."
 
     show dorian serious at left_char
     "My breath hitched."
 
+    voice audio.dorian_ch7_line11  # transcript: "You do?"
     dorian "You do?"
 
+    voice audio.yuxuan_ch7_line15  # transcript: "I'm not completely sure yet,"
     yuxuan "I'm not completely sure yet. But if my guess is right, there's only one place in Tianho that fits that description."
 
     show niko alt_tense at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line12  # transcript: "Isn't the prosperity dragon the"
     niko "Isn't the Prosperity Dragon the main deity of Tianho? Surely there are hundreds of places with illustrations of it."
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line7  # transcript: "Huh? What's that mean deity?"
     svante "Huh? The main deity? I was certain I saw a shrine for the Tetrad here in Tianho a while ago."
 
     hide svante
@@ -371,12 +425,15 @@ label ch7_dream_debrief:
 
     hide weng
     show svante normal_neutral at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line8  # transcript: "Oh, that makes a lot"
     svante "Oh… That makes a lot of sense, mam."
 
+    voice audio.yuxuan_ch7_line16  # transcript: "Trust me, I'll explain. Get"
     yuxuan "Trust me. I'll explain. Get back to the lab. I'll lead you there once you arrive."
 
     hide svante
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line13  # transcript: "Fine."
     niko "Fine."
 
     show dorian neutral at left_char
@@ -384,33 +441,41 @@ label ch7_dream_debrief:
 
     hide niko
     show svante normal_happy at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line9  # transcript: "If it's not a bother,"
     svante "If it's not a bother. I'd love to join if Sir Niko's coming."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line12  # transcript: "You sure? You don't have"
     dorian "You sure? You don't have to come."
 
     show svante normal_neutral at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line10  # transcript: "If you're heading towards danger,"
     svante "If you're heading toward danger, I would like to help, sir. It's the least I can do."
 
     hide svante
     show niko normal_ignore at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line14  # transcript: "Ugh. Knock yourself out."
     niko "*sighs* Knock yourself out."
 
     show niko normal_base at right_char with Dissolve(0.1)
     "Niko wiped his hands on a clean cloth before turning toward the injured."
 
+    voice audio.niko_ch7_line15  # transcript: "Give me a few minutes"
     niko "Give me a few minutes, Dorian. I need to finish treating the wounded first."
 
     hide niko
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line11  # transcript: "I'll help you, Cernico. Wait!"
     svante "I… I'll help too, Sir Niko. W-Wait!"
 
     hide svante
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line16  # transcript: "Hurry up!"
     niko "Hurry up."
 
     hide niko
     show weng normal at right_flip with Dissolve(0.2)
+    voice audio.yuxuan_ch7_line17  # transcript: "Miss Wang, how's the medical"
     yuxuan "Miss Weng, how's medical supply stock? How are the wounded?"
 
     weng "We have plenty in reserve, Master Yuxuan. Right this way."
@@ -445,22 +510,22 @@ label ch7_waiting:
 
         "Spend time with Svante.":
             $ ch7_d1_choice = "svante"
-            $ svante_affection += 2
+            $ A2_svante_affection += 2
             jump ch7_svante_time
 
         "Help Niko with the patients.":
             $ ch7_d1_choice = "niko"
-            $ niko_affection += 2
+            $ A1_niko_affection += 2
             jump ch7_niko_time
 
         "Look for Chung-hee.":
             $ ch7_d1_choice = "chunghee"
-            $ chunghee_affection += 2
+            $ A4_chunghee_affection += 2
             jump ch7_chunghee_time
 
         "Check the remaining supplies with Yuxuan.":
             $ ch7_d1_choice = "yuxuan"
-            $ yuxuan_affection += 2
+            $ A3_yuxuan_affection += 2
             jump ch7_yuxuan_time
 
 
@@ -479,62 +544,76 @@ label ch7_svante_time:
     "I sighed, stepping over."
 
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.dorian_ch7_line13  # transcript: "You look like you're about"
     dorian "You look like you're about to perform a heart surgery, Svante."
 
     "He jumped slightly, nearly knocking over a jar of ointment."
 
     show svante normal_sad at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line12  # transcript: "No, sir. I... I wouldn't"
     svante "N-No, sir! I w-wouldn't dream of it!"
 
     "He quickly straightened, holding up a small glass bottle filled with clear liquid. His brows furrowed as he inspected the label like it might hold a hidden trap."
 
+    voice audio.svante_ch7_line13  # transcript: "There's this little girl who"
     svante "There's this little girl who was wounded by a yaoguai, and I'm trying to look for something that can clean the wound."
 
     show svante normal_neutral at right_char  with Dissolve(0.1)
+    voice audio.svante_ch7_line14  # transcript: "This is antiseptic, but I"
     svante "This says, 'antiseptic'. But I don't know what it does."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line14  # transcript: "It's fine. Antiseptic cleans wounds."
     dorian "It's fine. Antiseptic cleans wounds. Prevents infection, that sort of thing."
 
     show svante normal_happy at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line15  # transcript: "Really sir?"
     svante "Really, sir?"
 
     "Relief flooded his features. Then, just as quickly, he frowned again."
 
     show svante normal_neutral at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line16  # transcript: "I was worried it might"
     svante "I was worried that it might be poison. I don't want anyone's flesh dissolving on my watch."
 
     "I choked on a laugh."
 
     show dorian smile at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line15  # transcript: "Who would mix poison with"
     dorian "Who would mix poison with medical supplies?"
 
     show svante normal_nervous at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line17  # transcript: "You never know sir back"
     svante "Y-You never know, sir! Back in Mjoll, I don't have much experience with all this medical stuff."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "He waved a hand vaguely at the shelves filled with neatly arranged vials and bandages."
 
+    voice audio.svante_ch7_line18  # transcript: "Us guy algorithms tend to"
     svante "Us guy Aldoriths tend to stick to the battlefield."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "That part didn't surprise me. Aldorith warriors were known for their resilience in combat, their strict traditions. If you weren't patching up wounds in the middle of a war zone, you probably weren't learning medicine at all."
     show dorian normal at left_char with Dissolve(0.1)
 
+    voice audio.dorian_ch7_line16  # transcript: "Then why are you helping"
     dorian "Then why are you helping Niko?"
 
     show svante alt_guilty at right_char with Dissolve(0.1)
     "Svante rubbed the back of his neck, looking sheepish."
+    voice audio.svante_ch7_line19  # transcript: "He needed an assistant, sir."
     svante "He needed an assistant, sir. And... I figured, since I'm a metal channeler, I could be useful somehow."
 
     "He hesitated, then raised his hand. A soft hum filled the air as faint metallic glimmers flickered along his fingertips."
 
     show svante alt_base at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line20  # transcript: "See? I can use my"
     svante "See, I can use my metal channeling to bend surgical tools into shape if they break or dull too fast."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "To demonstrate, he picked up a pair of tweezers that had a slightly bent tip. With a careful touch, he straightened them out, the metal shifting smoothly beneath his fingertips."
 
+    voice audio.svante_ch7_line21  # transcript: "I can also clean instruments"
     svante "I can also clean instruments really well. Niko told me that sterilization is important, so..."
 
     "He gestured toward a tray of scalpels and forceps, all gleaming under the lantern light."
@@ -542,70 +621,89 @@ label ch7_svante_time:
 
     "I raised a brow."
 
+    voice audio.dorian_ch7_line17  # transcript: "That's actually really useful."
     dorian "That's actually really useful."
 
     show svante alt_weird at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line22  # transcript: "You think so?"
     svante "Y-You think so?"
 
     "His ears burned red, and he fidgeted with the antiseptic bottle."
 
     show svante normal_sad at right_char
+    voice audio.svante_ch7_line23  # transcript: "I was just trying to"
     svante "I was just trying to be helpful. My sister Kristin was the real healer in the family. She always patched me up whenever I got hurt when we were kids."
 
     "His voice softened at the mention of her, his eyes growing distant."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line18  # transcript: "She sounds like she was"
     dorian "She sounds like she was good at what she did."
 
     show svante normal_sad at right_char
+    voice audio.svante_ch7_line24  # transcript: "She was amazing. Mom and"
     svante "She was amazing. Mom and I loved her."
+    voice audio.svante_ch7_line25  # transcript: "I remember one time during"
     svante "I remember one time during my birthday, she made me a snow-violet cake."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "I raised a brow."
 
+    voice audio.dorian_ch7_line19  # transcript: "Oh, so she's a baker."
     dorian "Oh, so she's a baker?"
 
     show svante alt_funny at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line26  # transcript: "No, sir, not even close,"
     svante "Haha. No, sir. Not even close. But she did her best."
+    voice audio.svante_ch7_line27  # transcript: "She made it so she"
     svante "She made it so she and I could celebrate with Mom. Even if it was a little lopsided and too sweet, it was the best cake I ever had."
 
     show dorian smile at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line20  # transcript: "Your eyes. She does sound"
     dorian "You're right. She does sound amazing."
     show dorian neutral at left_char with Dissolve(0.1)
 
     show svante normal_sad at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line28  # transcript: "Kristen, Mom."
     svante "Kristin… Mom…"
 
     "For a moment, he lingered in the memory, and a small nostalgic smile played at his lips but then he caught himself, clearing his throat."
 
     show svante normal_nervous at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line29  # transcript: "Marciful Enoch. Look at me"
     svante "M-Merciful Enoch… Look at me rambling."
 
     "He straightened, gripping the bottle a little tighter."
 
+    voice audio.svante_ch7_line30  # transcript: "Anyway, I should probably bring"
     svante "A-Anyway, I should probably bring this to Sir Niko before I waste more time."
 
     "He turned to go but then hesitated, glancing back at me."
 
     show svante normal_happy at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line31
     svante "T-Thank you, sir Dorian. I would've overthought this for another ten minutes if you hadn't come in."
 
     show dorian normal at left_char with Dissolve(0.1)
     "I smirked."
 
+    voice audio.dorian_ch7_line21  # transcript: "Not a problem. But are"
     dorian "Not a problem. But are you sure you want to come with me and Niko to search for Magnus? You don't have to."
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
+    voice audio.svante_ch7_line32  # transcript: "yes sir i really do"
     svante "Y-Yes, sir! I really do want to help. I—"
 
     show niko normal_base at center_char with Dissolve(0.2)
+    voice audio.niko_ch7_line17  # transcript: "Svante, did you get the"
     niko "Svante, did you get the antiseptic for the yaoguai bite?"
 
     show svante normal_nervous at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line33  # transcript: "Sir Nico coming"
     svante "S-Sir Niko! C-Coming!"
 
     show svante normal_base at right_char with Dissolve(0.1)
+    voice audio.svante_ch7_line34  # transcript: "See you later, Sir Dorian."
     svante "See you later, sir Dorian."
 
     hide svante
@@ -632,15 +730,19 @@ label ch7_niko_time:
     with Dissolve(0.2)
     "I spotted Jiang, crouching beside a soldier with a deep gash on his leg. He looked up as I approached and gave me a quick wave."
 
+    voice audio.jiang_ch7_line1  # transcript: "Pelin and Dorian, you're safe."
     jiang "Paladin Dorian. You're safe. Thank the Prosperity Dragon."
 
     "His gaze flicked over my clothes, as if checking for wounds."
 
+    voice audio.jiang_ch7_line2  # transcript: "You don't seem wounded. I"
     jiang "You don't seem to be wounded. I take it you're here to help?"
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line22  # transcript: "Yeah, you look like you"
     dorian "Yeah. You look like you could use a few extra hands. Where's Gao and Tim?"
 
+    voice audio.jiang_ch7_line3  # transcript: "Gowse outside for trolleyn entrance."
     jiang "Gao's outside, patrolling the entrance. Tim's with Miss Weng, helping with supplies."
 
     "A pained voice interrupted us—a woman, her voice barely above a whisper."
@@ -649,6 +751,7 @@ label ch7_niko_time:
     woman_2 "I was hurt by a caught by a yaoguai when… Ughhh…"
 
     show soldier_jiang at right_flip
+    voice audio.jiang_ch7_line4  # transcript: "on it miss. See you"
     jiang "On it, miss! See you later, Paladin."
 
     hide soldier_jiang with Dissolve(0.1)
@@ -661,14 +764,18 @@ label ch7_niko_time:
 
     "Niko barely glanced up as I approached."
     show niko normal_serious at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line18  # transcript: "If you're here to help,"
     niko "If you're here to help, take a pair of gloves from that crate and get to work."
+    voice audio.niko_ch7_line19  # transcript: "And watch your step. There"
     niko "And watch your step. There are vines near your feet—I'd rather not have a patient and a Paladin to heal tonight."
 
     "I grabbed a pair and pulled them on, stepping toward the injured soldier."
 
+    voice audio.dorian_ch7_line23  # transcript: "What do you need, Nico?"
     dorian "What do you need, Niko?"
 
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line20  # transcript: "Keep pressure on this wound"
     niko "Keep pressure on this wound while I stitch it up."
 
     "The soldier winced as I applied pressure. He was a young man—early twenties, maybe—with dark hair matted to his forehead."
@@ -676,12 +783,15 @@ label ch7_niko_time:
     male_soldier_ch7 "T-Thank you, sir..."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line24  # transcript: "Hang in there."
     dorian "Hang in there."
 
     male_soldier_ch7 "I knew it'd be tough, but I didn't think it'd be this bad…"
 
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line21  # transcript: "The wound will heal soon."
     niko "The wound will heal soon. Don't worry, sir."
+    voice audio.niko_ch7_line22  # transcript: "Now please relax and stay"
     niko "Now, please relax and stay still."
 
     "With a flick of his wrist, he reached for a vial of clear liquid—one of Cheng Industries' medical innovations."
@@ -690,10 +800,12 @@ label ch7_niko_time:
     "The soldier's breathing steadied, his pain lessening as Niko's nature channeling took over."
 
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line23  # transcript: "Feeling any pain, sir?"
     niko "Feeling any pain, sir?"
 
     male_soldier_ch7 "N-no, sir."
 
+    voice audio.niko_ch7_line24  # transcript: "Good, please continue to relax."
     niko "Good. Please continue to relax."
 
     "The medicinal plants growing around them responded to his call. A cluster of leaves twitched before unfurling, releasing a faint, sweet aroma."
@@ -702,20 +814,24 @@ label ch7_niko_time:
     male_soldier_ch7 "That's… incredible."
     
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line25  # transcript: "Side effects include dizziness, so"
     niko "Side effects may include dizziness. So don't be surprised if you're seeing stars now."
 
     male_soldier_ch7 "My father was a jeweler before this…"
 
     show niko normal_smile at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line26  # transcript: "That's great to hear. Jule"
     niko "That's great to hear. Jewelry is a profitable trade here in Tianho."
     show niko alt_base at right_char with Dissolve(0.1)
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line25  # transcript: "Where is he now?"
     dorian "Where is he now?"
 
     male_soldier_ch7 "The… The tragedy of Tianho happened. We lost everything."
 
     show niko normal_sad at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line27  # transcript: "I'm sorry to hear that."
     niko "I'm sorry to hear that."
 
     "The soldier's voice hardened, and his fingers curled into fists."
@@ -723,6 +839,7 @@ label ch7_niko_time:
     male_soldier_ch7 "Damn that wretched Death God and his rotten followers. They deserve worse than death."
 
     show niko alt_annoyed at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line28
     niko "…"
     show dorian serious at left_char with Dissolve(0.1)
     dorian "…"
@@ -737,14 +854,17 @@ label ch7_niko_time:
     "Niko remained silent, his expression unreadable as he tied off the bandage with practiced precision."
     "When he finally spoke, his voice was carefully measured."
 
+    voice audio.niko_ch7_line29  # transcript: "There you should be good"
     niko "There. You should be good now."
 
     "He adjusted the bandage one last time, ensuring it was snug but not restrictive."
 
+    voice audio.niko_ch7_line30  # transcript: "Your bandages are secure. We"
     niko "Your bandages are secure. We closed the wound, but still, try not to move too much."
 
     "With a quiet, deliberate motion, he reached for a cloth and gently placed it over the soldier's eyes."
 
+    voice audio.niko_ch7_line31  # transcript: "I want you to rest."
     niko "I want you to rest. Your body needs time to recover from closing the wound."
 
     "The soldier's breath slowed. Within moments, he was out."
@@ -752,10 +872,13 @@ label ch7_niko_time:
 
     hide dorian
     show soldier_jiang at left_char with Dissolve(0.2)
+    voice audio.jiang_ch7_line5  # transcript: "Dr. Niko, my men and"
     jiang "Doctor Niko, my men and I can take over from here. The Paladins have arrived. We'll handle the rest."
 
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line32  # transcript: "Make sure they stay hydrated,"
     niko "Make sure they stay hydrated. Even with the medicine, their bodies need strength to heal."
+    voice audio.niko_ch7_line33  # transcript: "And most importantly, don't let"
     niko "And most importantly—don't let them push themselves. I don't care how much better they say they feel."
 
     hide soldier_jiang 
@@ -768,11 +891,14 @@ label ch7_niko_time:
     "I leaned against it, watching him."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch7_line26  # transcript: "I was surprised you didn't"
     dorian "…I was surprised you didn't say anything, Niko."
 
     show niko normal_ignore at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line34  # transcript: "I doubt it would have"
     niko "I doubt it would have changed anything, Dorian."
     show niko normal_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line35  # transcript: "Besides, if you're in my"
     niko "Besides, if you're in my profession you'll need to grow a thick skin."
 
     "He didn't look at me, but I could see it in the way his hands curled into loose fists, the tension in his jaw, the flicker of something unreadable in his eyes."
@@ -782,12 +908,15 @@ label ch7_niko_time:
     "Through the half-open door, I caught a glimpse of the makeshift ward—rows of injured soldiers quietly lying on worn cots, some resting, others grimacing as volunteers carefully wrapped fresh bandages around their wounds."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line27  # transcript: "Tam knows your guay."
     dorian "Damn those yaoguai…"
 
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line36  # transcript: "We're still on later, right?"
     niko "We're still on later, right? I apologize for making you wait."
 
     show dorian neutral at left_char
+    voice audio.dorian_ch7_line28  # transcript: "Yes, we're still on."
     dorian "Yes, we're still on."
 
     pause 1.5 
@@ -795,22 +924,27 @@ label ch7_niko_time:
     "A pause. I glanced toward the doorway again, watching as a young volunteer carefully adjusted a soldier's sling, murmuring reassurances as she worked."
     "Others bustled around, distributing water, tending to wounds, keeping the place running."
 
+    voice audio.dorian_ch7_line29  # transcript: "Take your time. You did"
     dorian "Take your time. You did well today."
 
     show niko alt_base at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line37  # transcript: "Thank you. This won't be"
     niko "Thank you. This won't be long. We've already patched up most of them."
 
     "I studied him for a moment, debating whether to press further."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line30  # transcript: "Want me to help?"
     dorian "Want me to help?"
 
     show niko normal_smile at right_char with Dissolve(0.1)
+    voice audio.niko_ch7_line38  # transcript: "No need. Though if you"
     niko "No need. *chuckle* Though if you can, maybe fill that pitcher with water."
 
     "His voice was lighter now, a flicker of warmth cutting through the exhaustion."
     "I pushed off the table, grabbing the empty pitcher from a nearby shelf."
 
+    voice audio.niko_ch7_line39  # transcript: "Thanks, Dorian."
     niko "Thanks Dorian."
 
     hide niko 
@@ -841,19 +975,23 @@ label ch7_chunghee_time:
     show chunghee normal_neutral at left_char
     show soldier_gao at right_char 
     with Dissolve(0.2)
+    voice audio.gao_ch7_line1  # transcript: "I still can't believe I"
     gao "I still can't believe I actually met the Emperor of Kyeongjang! Do you know how rare that is? This is historic!"
 
     "He clapped his hands together, eyes gleaming."
 
+    voice audio.gao_ch7_line2  # transcript: "I'm gushing. Someone pinch me."
     gao "I—I'm gushing! Someone pinch me! I must be dreaming!"
 
     show chunghee normal_neutral at left_char with Dissolve(0.2)
+    voice audio.chung_ch7_line1  # transcript: "You're overreacting, Sir Gow. Calm"
     chung_hee "You're overreacting, Sir Gao. Calm down."
 
     show dorian normal_alt_neutral at left_char
     show chunghee normal_neutral at center_char 
     with Dissolve(0.2)
 
+    voice audio.dorian_ch7_line31  # transcript: "Chung's right gal, keep your"
     dorian "Chung's right, Gao. Keep your voice down. There are injured people resting."
 
 
@@ -862,12 +1000,14 @@ label ch7_chunghee_time:
     show chunghee normal_neutral at right_char 
     show tim normal at center_char_kids
     with Dissolve(0.2)
+    voice audio.tim_ch7_line1  # transcript: "Technically speaking, it's not unprecedented."
     tim "Technically speaking, it's not unprecedented."
 
     hide tim
     show soldier_gao at center_char with Dissolve(0.2)
     "Gao turned to him, eyes wide."
 
+    voice audio.gao_ch7_line3  # transcript: "See? Even Tim thinks it's"
     gao "See?! Even Tim thinks it's a big deal!"
 
     hide soldier_gao
@@ -875,21 +1015,25 @@ label ch7_chunghee_time:
     "Tim swallowed his last bite and wiped his mouth, his expression completely serious."
 
     tim "I never said it was a big deal, mister. I simply stated that, historically, rulers do occasionally engage in interactions with their subordinates."
+    voice audio.tim_ch7_line2  # transcript: "However, the context and frequency"
     tim "However, the context and frequency of these occurrences would determine whether this situation qualifies as 'rare.'"
 
     hide tim
     show soldier_gao at center_char with Dissolve(0.2)
     "Gao blinked at him."
 
+    voice audio.gao_ch7_line4  # transcript: "That... I do understand that."
     gao "That… I didn't understand that…"
 
     "I stepped closer, and Gao immediately perked up, beaming."
 
+    voice audio.gao_ch7_line5  # transcript: "Surtorian, that's right. You haven't"
     gao "Sir Dorian! That's right! You haven't tasted this one yet!"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I raised an eyebrow."
 
+    voice audio.dorian_ch7_line32  # transcript: "taste what?"
     dorian "Taste what?"
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
@@ -897,74 +1041,91 @@ label ch7_chunghee_time:
     "A subtle hint of spice lingered in the air, something I didn't usually associate with a simple dessert."
     
     # TODO: check for food in assets
+    voice audio.gao_ch7_line6  # transcript: "Tionhau Flan, my mom packed"
     gao "Tianho flan! My mom packed these for me before I left home. This one's still fresh. You gotta try it."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line33  # transcript: "Oh, how thoughtful."
     dorian "Oh… How thoughtful…"
 
     hide soldier_gao
     show tim happy at center_char_kids with Dissolve(0.2)
     "Tim, having already finished his portion, wiped his mouth and grinned."
 
+    voice audio.tim_ch7_line3  # transcript: "Mr. Chung, this is so"
     tim "Mister Chung!! This is so delicious!"
 
     "He held up his tiny hands as if presenting an invisible award."
 
+    voice audio.tim_ch7_line4  # transcript: "Acceptable texture, balance sweetness. The"
     tim "Acceptable texture! Balanced sweetness! The cinnamon infusion is an amazing addition!"
 
     hide tim 
     show soldier_gao at center_char with Dissolve(0.2)
+    voice audio.gao_ch7_line7  # transcript: "You heard that? It's Tim"
     gao "You heard that? It's Tim-approved, Your Majesty! That means it's gotta be top-tier!"
 
     show chunghee alt_tense at right_char with Dissolve(0.1)
     "Chung-hee hesitated, his gaze shifting between the flan and Gao. He looked... almost wary."
 
+    voice audio.chung_ch7_line2  # transcript: "Well, um, if you're referring"
     chung_hee "Well, um… If you're referring to the physical act of hearing what he said, kind sir, I haven't, since I'm deaf."
+    voice audio.chung_ch7_line3  # transcript: "But if you're referring to"
     chung_hee "But if you're referring to the understanding of what someone meant, then yes, I 'heard' him."
 
     "Chung-hee paused."
     
     show chunghee alt_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch7_line4  # transcript: "Does that make sense?"
     chung_hee "…Does that make sense?"
 
     show soldier_gao at center_char with Dissolve(0.2)
     "Gao nodded rapidly, flustered."
 
+    voice audio.gao_ch7_line8  # transcript: "Oh, um... right."
     gao "Oh… Um… Right?"
 
     "Quickly recovering, Gao cleared his throat."
 
+    voice audio.gao_ch7_line9  # transcript: "My mom makes the best"
     gao "My mom makes the best desserts in Tianho, Your Majesty! You should visit her stall tomorrow at the anniversary—she sells out before the ceremony even starts every time!"
 
     show chunghee normal_neutral at right_char with Dissolve(0.1)
+    voice audio.chung_ch7_line5  # transcript: "That would be the anniversary"
     chung_hee "That would be the anniversary of the Tragedy of Tianho, correct?"
 
+    voice audio.gao_ch7_line10  # transcript: "Yes, sir! A lot of"
     gao "Yes, sir! A lot of people buy them to leave at the graves of their families and loved ones. I'm sure they'd appreciate it! It's a small but sweet way to remember them."
 
     show chunghee normal_sad at right_char with Dissolve(0.1)
     "Chung-hee's gaze lowered slightly, fingers tightening around the small dish in his hands."
 
+    voice audio.chung_ch7_line6  # transcript: "something for father, mother."
     chung_hee "Something for Father… Mother…"
 
     show dorian serious at left_char with Dissolve(0.1)
     "I studied him, sensing the shift in his mood like the dimming of a flame."
 
+    voice audio.dorian_ch7_line34  # transcript: "is something that matters."
     dorian "Is something the matter, Chung?"
 
     show chunghee normal_neutral at right_char 
     show dorian neutral at left_char
     with Dissolve(0.1)
+    voice audio.chung_ch7_line7  # transcript: "Well, it's nothing, Sardorian."
     chung_hee "Well… it's nothing, sir Dorian."
 
     hide soldier_gao 
     show tim happy at center_char_kids with Dissolve(0.2)
     "Tim perked up again, eyes sparkling."
 
+    voice audio.tim_ch7_line5  # transcript: "I should tell Elias about"
     tim "I should tell Elias about this! That way, the two of us can eat—"
 
     show dorian serious at left_char with Dissolve(0.1)
     "I cut in sharply."
 
+    voice audio.dorian_ch7_line35  # transcript: "Intetret's name please don't."
     dorian "(In Tetrad's name, please don't.)"
 
     show dorian neutral at left_char with Dissolve(0.1)
@@ -981,30 +1142,34 @@ label ch7_chunghee_time:
 
     hide tim
     show soldier_gao at center_char with Dissolve(0.2)
+    voice audio.gao_ch7_line11  # transcript: "Pinch me, I must be"
     gao "Pinch me, I must be dreaming! His Majesty will be eating my mother's flan!! AHHH!!"
 
     "There was a long, drawn-out silence."
 
 
     chung_hee "…"
-    dorian    "…"
+    dorian "…"
     tim       "…"
     chung_hee "…"
 
     show dorian neutral at left_char
     "I gave him a pointed look."
 
+    voice audio.dorian_ch7_line36  # transcript: "You're supposed to eat it,"
     dorian "You're supposed to eat it, you know."
 
     show chunghee normal_neutral at right_char with Dissolve(0.2)
     "Chung-hee's shoulders tensed slightly."
 
+    voice audio.chung_ch7_line8  # transcript: "I know that, Sardorian."
     chung_hee "I… know that, Sir Dorian."
 
     hide soldier_gao
     show tim think at center_char_kids with Dissolve(0.2)
     "Tim tapped a tiny finger against his chin, studying him."
 
+    voice audio.tim_ch7_line6  # transcript: "Mr. Chung, you might be"
     tim "Mister Chung, you might be overthinking the consumption process."
 
     show chunghee normal_v2 at right_char with Dissolve(0.2)
@@ -1013,18 +1178,21 @@ label ch7_chunghee_time:
     "After a moment, he swallowed and nodded slightly."
 
     show chunghee normal_happy at right_char with Dissolve(0.1)
+    voice audio.chung_ch7_line9  # transcript: "It's amazing actually."
     chung_hee "…It's amazing, actually."
 
     hide tim
     show soldier_gao at center_char with Dissolve(0.2)
     "Gao let out a victorious cheer."
 
+    voice audio.gao_ch7_line12  # transcript: "I knew it!"
     gao "HA! I KNEW IT!"
 
     hide soldier_gao
     show tim happy at center_char_kids with Dissolve(0.2)
     "Tim clapped his hands."
 
+    voice audio.tim_ch7_line7  # transcript: "Sensory approval has been achieved."
     tim "Sensory approval has been achieved!"
 
     hide tim happy
@@ -1059,7 +1227,7 @@ label ch7_yuxuan_time:
     with Dissolve(0.2)
 
     weng "Ah, Sir Dorian. How are you faring?"
-
+    voice audio.dorian_ch7_line37
     dorian "Just came to help, Miss Weng. What's the situation? Where's Yu?"
 
     show weng alt_base at right_flip with Dissolve(0.1)
@@ -1071,6 +1239,7 @@ label ch7_yuxuan_time:
     "There were rolls of self-adhesive bandages, burn ointments that absorbed instantly, and even auto-suture kits for rapid wound closure."
     "Expensive, cutting-edge supplies, leagues beyond the rough linen and herbal pastes most medics had to work with."
 
+    voice audio.dorian_ch7_line38  # transcript: "This is all from Chang"
     dorian "This is all from Cheng Industries?"
 
     show weng thinking at right_flip with Dissolve(0.1)
@@ -1088,12 +1257,14 @@ label ch7_yuxuan_time:
     weng "But you're free to leave a voice message, Sir Dorian."
 
     show dorian normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line39  # transcript: "Might as well."
     dorian "Might as well."
 
     show weng normal at right_flip with Dissolve(0.1)
     "She pressed a button on the delivery drone hovering beside her. She motioned me to speak."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line40  # transcript: "Hey you, while I'm waiting"
     dorian "Hey Yu. While I'm waiting on Niko to finish with his duties here, I—"
 
     show supply_robot base at center_supply with Dissolve(0.2)
@@ -1104,21 +1275,26 @@ label ch7_yuxuan_time:
     "His normally sleek hair had a few stray strands sticking out, and there was ink smudged on his fingers."
 
     show supply_robot normal at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line18  # transcript: "Dorian buddy, how are you?"
     yuxuan "Dorian, buddy! How are you? S-Sorry for the mess. I didn't know you would be calling me."
 
     "He waved a hand at the air, flustered, as if trying to push the scattered notes and tools off-screen."
     "I raised an eyebrow."
 
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line41  # transcript: "I'm sorry you. Do you"
     dorian "I'm sorry, Yu. Do you need a moment?"
 
     show supply_robot lied at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line19  # transcript: "No, I mean, yes, I"
     yuxuan "NO— I mean YES— I mean—"
 
     "He sucked in a sharp breath, then smoothed a hand down his robe in a poor attempt to compose himself."
 
+    voice audio.dorian_ch7_line42  # transcript: "Marry you sure? You look"
     dorian "Are you sure? You look busy. I can just—"
 
+    voice audio.yuxuan_ch7_line20  # transcript: "I don't look busy. I"
     yuxuan "I don't look busy! I take offense to that!"
 
     show dorian smile at left_char with Dissolve(0.1)
@@ -1127,6 +1303,7 @@ label ch7_yuxuan_time:
     show weng sad at right_char with Dissolve(0.1)
     weng "Master Yuxuan hasn't rested since the attack. He was at the front lines aiding the wounded, negotiating with the local relief groups, overseeing Cheng Industries' contributions, and distributing emergency rations—"
 
+    voice audio.yuxuan_ch7_line21  # transcript: "Miss Wang, I told you"
     yuxuan "Miss Weng, I told you. I'm fine. I don't need rest. There's a lot I need to do."
 
     show weng normal at right_char with Dissolve(0.1)
@@ -1135,41 +1312,51 @@ label ch7_yuxuan_time:
     show dorian neutral at left_char with Dissolve(0.1)
     "I took a closer look at him. Even in a flickering hologram, I could see the exhaustion clinging to him. The dim circles under his sharp eyes. The way his shoulders drooped ever so slightly."
 
+    voice audio.dorian_ch7_line43  # transcript: "You, you look like you"
     dorian "Yu. You look like you could use some sleep. Can you sleep?"
 
     show supply_robot base at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line22  # transcript: "Dorian Buddy, I'm going to"
     yuxuan "Dorian buddy, I'm going to be escorting you to the area you dreamed about, remember? I need to finish this before I can lead the rest of you there. I—"
 
+    voice audio.dorian_ch7_line44  # transcript: "I appreciate that you. Really,"
     dorian "I appreciate that, Yu. Really, I do. It means a lot. But you really do look tired. I don't want you to overexert yourself."
 
     "For a moment, he looked like he wanted to argue. To brush it off. But instead, he sighed, running a hand through his hair. His voice dropped slightly, softer now."
 
+    voice audio.yuxuan_ch7_line23  # transcript: "It's not just that."
     yuxuan "It's not just that."
 
+    voice audio.dorian_ch7_line45  # transcript: "than what?"
     dorian "Then what?"
 
     "Yuxuan hesitated. He shifted, glancing away, as if gathering his thoughts. Finally, he exhaled, his tone unusually vulnerable."
     show supply_robot sad at center_supply
     show weng sad at right_flip
     with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line24  # transcript: "Tomorrow, it's the fifth anniversary"
     yuxuan "Tomorrow… It's the fifth anniversary of the Tragedy of Tianho."
 
     "A weight settled between us."
     "Even though the kingdom of Hinami would be hosting the memorial this year, it didn't change the fact that Tianho would be in focus."
     "And for Cheng Industries, the most powerful corporations in Tianho, that meant every move Yuxuan made would be under a magnifying lens."
 
+    voice audio.yuxuan_ch7_line25  # transcript: "Cheng industries will be scrutinized."
     yuxuan "Cheng Industries will still be scrutinized. Every action, every donation, every word I say—there are people just waiting for me to slip up."
+    voice audio.yuxuan_ch7_line26  # transcript: "Some people still believe we"
     yuxuan "Some people still believe we didn't do enough. Others think we did too much. And I know that no matter what I do tomorrow, someone will find a reason to be upset. A reason to call us vultures. Or opportunists. Or worse."
 
     show dorian neutral at left_char 
     show weng normal at right_flip
     with Dissolve(0.1)
+    voice audio.dorian_ch7_line46  # transcript: "and that's why you're not"
     dorian "And that's why you're not resting?"
 
     show supply_robot base at center_supply with Dissolve(0.1)
     "Yuxuan let out a quiet, almost bitter laugh."
 
     show supply_robot normal at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line27  # transcript: "I wouldn't be able to"
     yuxuan "I wouldn't be able to sleep even if I tried."
 
     show weng normal at right_flip with Dissolve(0.1)
@@ -1182,15 +1369,19 @@ label ch7_yuxuan_time:
     "Then I sighed."
 
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line47  # transcript: "Come here."
     dorian "Come here."
 
+    voice audio.yuxuan_ch7_line28  # transcript: "What?"
     yuxuan "W-what?"
 
     show dorian normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line48  # transcript: "I said come here."
     dorian "I said come here…"
 
     "His hologram flickered slightly as he shifted in place."
 
+    voice audio.yuxuan_ch7_line29  # transcript: "I am literally a projection"
     yuxuan "Dorian, I am literally a projection right now, what do you mean come here?"
 
     show weng normal at right_flip with Dissolve(0.1)
@@ -1200,32 +1391,43 @@ label ch7_yuxuan_time:
     "I lifted my hand, hovering it right where his shoulder would be if he were standing in front of me."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line49  # transcript: "I want you to rest,"
     dorian "I want you to rest, okay?"
+    "Yuxuan inhaled sharply. His hologram glitched, flickering for just a second."
 
+    voice audio.dorian_ch7_line50
+    dorian "You're allowed to rest, Yu. You're allowed to breathe."
     show supply_robot base at center_supply with Dissolve(0.1)
+    voice audio.yuxuan_ch7_line30  # transcript: "Dorian."
     yuxuan "D-Dorian…"
 
     "Yuxuan opened his mouth as if to protest, but then hesitated. His image wavered."
 
+    voice audio.yuxuan_ch7_line31  # transcript: "But what about later? You"
     yuxuan "But what about later? You still need me to show you the place from your dream…"
+    voice audio.yuxuan_ch7_line32  # transcript: "Or I don't know. Maybe"
     yuxuan "Or, I don't know. Hmm… maybe Roboto can do it for you—"
 
     "He blinked at me, then scoffed, rubbing the back of his neck."
 
+    voice audio.yuxuan_ch7_line33  # transcript: "I mean, technically he could."
     yuxuan "I mean, technically, he could. Wait. In fact, Roboto can. Why in the Prosperity Dragon's name didn't I think of that?"
 
     "Yuxuan sucked in a breath, eyes widening just slightly. I took a step closer to his hologram, the faint blue light casting a soft glow over my face."
 
+    voice audio.dorian_ch7_line52  # transcript: "if there's anything i can"
     dorian "If there's anything I can do to help you rest, just say the word."
 
     "There was a long pause."
     "Yuxuan seemed at a complete loss for words. He stared at me, opened his mouth, closed it again, then finally muttered, almost inaudibly—"
 
+    voice audio.yuxuan_ch7_line34  # transcript: "Maybe if you were here..."
     yuxuan "Maybe if you were here…"
 
     "I blinked."
     "His eyes went wide as he realized what he had just said, his entire face turning red."
 
+    voice audio.yuxuan_ch7_line35  # transcript: "Dorian, forget it. I didn't"
     yuxuan "D-Dorian! F-Forget it! I didn't—I mean—I was just—ugh!"
 
     "He ran both hands through his already-messy hair, looking like he wanted to crawl into a hole."
@@ -1233,27 +1435,31 @@ label ch7_yuxuan_time:
     show weng happy at right_char
     weng "Master Yuxuan, you really are bad at this."
 
+    voice audio.yuxuan_ch7_line36  # transcript: "Uh, wing! Not now!"
     yuxuan "Ugh. Weng! Not now!"
 
     show dorian smile at left_char
+    voice audio.dorian_ch7_line53  # transcript: "I'll be there soon, you."
     dorian "I'll be there soon, Yu. But for now… just try to get some rest."
 
     show dorian neutral at left_char
     show supply_robot base at center_supply 
     with Dissolve(0.1)
 
-
+    voice audio.yuxuan_ch7_line37  # transcript: "Fine. But only because you"
     yuxuan "Fine… But only because you asked."
 
     "The flickering blue light of his hologram made his expression hard to read, but there was something else in his gaze now—something softer. Warmer."
     "Then, he huffed dramatically, shifting back into his usual bravado."
 
+    voice audio.yuxuan_ch7_line38  # transcript: "Ugh, fine, I'll send Roboto"
     yuxuan "Fine. I'll send Roboto before I head to bed. Happy?"
 
     "I rolled my eyes and didn't reply. Before the connection could cut, another voice suddenly rang through the hologram."
     
     tedda "Mister Yuxuan! Mister Yuxuan! Here's your water!"
 
+    voice audio.yuxuan_ch7_line39  # transcript: "Oh, Tedder, since you're here,"
     yuxuan "Oh Tedda! Since you're here, can you do a hand massage? I need one so I can get to sleep."
 
     tedda "Ooh! I can do that, Mister Yuxuan!"
@@ -1297,9 +1503,11 @@ label ch7_waiting_common:
     "A fresh wave of wounded stumbled in through the entrance, the sound of hurried footsteps and pained groans breaking the temporary peace."
 
     show niko normal_anger at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line40  # transcript: "More! Get them here quickly!"
     niko  "More? Get them here! Quickly!"
 
     show svante normal_nervous at left_char with Dissolve(0.2)
+    voice audio.svante_ch7_line35  # transcript: "on its sir"
     svante "On it, sir!"
 
     hide svante
@@ -1334,6 +1542,7 @@ label ch7_waiting_common:
 
     "I stepped forward, scanning him for any serious injuries."
 
+    voice audio.dorian_ch7_line54  # transcript: "How's the situation?"
     dorian "How's the situation?"
 
     show feng_suit at right_char
@@ -1346,6 +1555,7 @@ label ch7_waiting_common:
     feng "Turns out there were still a few lurking. But we already took care of them too."
 
     show niko normal_base at center_char with Dissolve(0.2)
+    voice audio.niko_ch7_line41  # transcript: "How sure are you? There"
     niko "How sure are you? There might still be some yaoguai lurking."
 
     show feng_suit at right_char with Dissolve(0.2)
@@ -1355,8 +1565,9 @@ label ch7_waiting_common:
     hide niko
     show svante normal_sad at center_char with Dissolve(0.2)
     "Svante, who had been silently organizing supplies nearby, hesitated before speaking."
-
+    voice audio.svante_ch7_line36
     svante "Lady Aoi… Hmm…"
+    voice audio.svante_ch7_line37  # transcript: "I just... I just hope"
     svante "I just… I just hope nobody else gets hurt. Seeing all these people injured makes me worry."
 
     show feng_suit at right_char with Dissolve(0.2)
@@ -1368,6 +1579,7 @@ label ch7_waiting_common:
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I rolled my eyes."
 
+    voice audio.dorian_ch7_line55  # transcript: "Right."
     dorian "Right."
 
     "Feng grinned, a deep, boisterous laugh escaping his throat."
@@ -1378,9 +1590,11 @@ label ch7_waiting_common:
     show svante alt_base at center_char with Dissolve(0.2)
     "Svante's head tilted slightly, curiosity flickering in his eyes."
 
+    voice audio.svante_ch7_line38  # transcript: "Pardon me sir. You and"
     svante "Pardon me, sir. Y-You and Sir Dorian know each other?"
 
     show dorian normal at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line56  # transcript: "You could say that."
     dorian "You could say that."
     show dorian neutral at left_char with Dissolve(0.1)
 
@@ -1393,6 +1607,7 @@ label ch7_waiting_common:
     show niko alt_annoyed at center_char with Dissolve(0.2)
     "Niko, who had been quietly observing, finally spoke up."
 
+    voice audio.niko_ch7_line42  # transcript: "Yeah, the two of you"
     niko "Yeah. The two of you. And that Cyrus fellow."
 
     show feng_suit at right_char with Dissolve(0.2)
@@ -1410,6 +1625,7 @@ label ch7_waiting_common:
     with Dissolve(0.1)
     "Niko's fingers curled slightly against his arms, his expression unreadable."
 
+    voice audio.niko_ch7_line43  # transcript: "Yes, I was."
     niko "Yes… I was."
 
     show feng_suit at right_char with Dissolve(0.2)
@@ -1431,12 +1647,14 @@ label ch7_feng_niko_clash:
     feng "Maybe if we had, things would have turned out differently. No Tianho Tragedy. No need for underground camps, no need for wounded paladins bleeding out on stone floors."
 
     show niko normal_serious at center_char with Dissolve(0.2)
+    voice audio.niko_ch7_line44  # transcript: "Maybe if the Paladin spent"
     niko "Maybe if the paladins had spent less time polishing their pride, they'd still be standing."
 
     show feng_suit at right_char with Dissolve(0.2)
     feng "Right. Because listening to the Death God's lapdog always leads to prosperity."
 
     show niko normal_ignore at center_char with Dissolve(0.2)
+    voice audio.niko_ch7_line45  # transcript: "Hmm."
     niko "Hmph."
 
     "He gestured vaguely toward the injured, his smirk thin and humorless."
@@ -1446,19 +1664,21 @@ label ch7_feng_niko_clash:
 
     show niko normal_base at center_char with Dissolve(0.2)
     "Niko's expression didn't change, but something in his shoulders stiffened."
-
+    voice audio.niko_ch7_line46
     niko "…"
 
     hide niko
     show svante normal_nervous at center_char with Dissolve(0.2)
     "Svante shifted uncomfortably, his gaze darting between them."
 
+    voice audio.svante_ch7_line39  # transcript: "Sir, that's really not necessary."
     svante "S-Sir, that's really not necessary, we're just—"
 
     feng "You're not off the hook either, aldorith."
     feng "Your Mjollians worship Enoch, don't they? A god of order, of righteous judgment? Tell me, where was that divine justice when Tianho burned?"
 
     show dorian serious at left_char with Dissolve(0.2)
+    voice audio.dorian_ch7_line57  # transcript: "FANG ENOUGH!"
     dorian "Feng, enough."
 
     "His eyes snapped to mine, still burning, but I didn't waver."
@@ -1480,6 +1700,7 @@ label ch7_feng_niko_clash:
     feng "Cyrus would still be alive if it wasn't for you lot."
 
     show dorian angry at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line58  # transcript: "Fang"
     dorian "Feng!"
 
     feng "Didn't have much love for the guy, but at least he didn't sit back and let the world burn while preaching about 'balance' and 'divine order.' At least he fought for something real."
@@ -1502,6 +1723,7 @@ label ch7_feng_niko_clash:
     hide screen feng_blue_fire
     
     show svante normal_nervous at right_char with Dissolve(0.2)
+    voice audio.svante_ch7_line40  # transcript: "Sir, please you can't be"
     svante "S-Sir! Please! You can't be serious!"
 
     hide svante
@@ -1513,12 +1735,15 @@ label ch7_feng_niko_clash:
     show niko normal_base at center_char with Dissolve(0.1)
     "Niko didn't flinch. He continued examining the medical equipment."
 
+    voice audio.niko_ch7_line47  # transcript: "Sir Feng, you are exhausted."
     niko "Sir Feng, you are exhausted. Your core temperature has risen by approximately three degrees, your muscles are visibly tense, and you're favoring your left side."
+    voice audio.niko_ch7_line48  # transcript: "Your challenge is tempting, but"
     niko "Your challenge is tempting but I'd much rather focus on treating our actual patients."
 
     feng "Why you arrogant son of a—"
 
     show niko normal_serious at center_char with Dissolve(0.1)
+    voice audio.niko_ch7_line49  # transcript: "There are wounded here. Tell"
     niko "There are wounded here. Tell me, Sir Feng—how many people will suffer tonight because you chose to satisfy your pride instead of helping them?"
 
     feng "Die, you mother—"
@@ -1529,11 +1754,13 @@ label ch7_feng_niko_clash:
     "His flames flickered in protest but didn't lash out."
 
     show dorian angry at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line59  # transcript: "That's enough, Fang!"
     dorian "That's enough, Feng."
 
     "His eyes snapped to mine, still burning, but I didn't waver."
 
     show dorian serious at left_char with Dissolve(0.1)
+    voice audio.dorian_ch7_line60  # transcript: "What's gotten into you? Lay"
     dorian "What's gotten into you? Lay off. Now. I won't ask again."
 
     show feng_suit at right_char
@@ -1559,6 +1786,7 @@ label ch7_feng_niko_clash:
     "Svante stiffened immediately."
     "His hands, which had just been sorting through medical supplies, froze mid-motion. His back straightened, and his face turned an even paler shade than before."
 
+    voice audio.svante_ch7_line41  # transcript: "Lady Howie"
     svante "L-Lady Aoi…"
 
     show aoi_battle_suit at right_flip with Dissolve(0.2)
@@ -1566,6 +1794,7 @@ label ch7_feng_niko_clash:
     "For a moment, there was silence."
     "Then, with all the enthusiasm of a stone wall, she gave him the slightest nod of acknowledgment."
 
+    voice audio.aoi_ch7_line1  # transcript: "Spontane."
     aoi "Svante."
 
     "Svante swallowed hard, his fingers fumbling slightly as he hastily resumed sorting the medical supplies."
@@ -1591,6 +1820,7 @@ label ch7_feng_niko_clash:
     show aoi_battle_suit at right_flip with Dissolve(0.2)
     "Aoi, without missing a beat, put the wine bottle down and crossed her arms."
 
+    voice audio.aoi_ch7_line2  # transcript: "You're supposed to ration these."
     aoi "You're supposed to ration these."
 
     show feng_suit at center_char with Dissolve(0.2)
@@ -1600,6 +1830,7 @@ label ch7_feng_niko_clash:
 
     "Aoi gave him a long, slow blink."
 
+    voice audio.aoi_ch7_line3  # transcript: "I don't drink on duty."
     aoi "I don't drink on duty, sir. I'm your mercenary, remember?"
 
     "Feng snorted, nudging me with his elbow."
@@ -1608,6 +1839,7 @@ label ch7_feng_niko_clash:
 
     "Aoi exhaled through her nose."
 
+    voice audio.aoi_ch7_line4  # transcript: "That never happened."
     aoi "That never happened. *sighs*"
 
     feng "See? That's what a guilty person would say."
@@ -1620,21 +1852,24 @@ label ch7_feng_niko_clash:
     "For a second, she didn't move. Then, with slow, deliberate precision, she reached into the crate, grabbed a bottle, and turned toward me."
     "She held it out, her grip firm, but her tone was flatter than a deadpan joke."
 
+    voice audio.aoi_ch7_line5  # transcript: "by the orders of Sir"
     aoi "By the orders of Sir Feng, I am required to provide you with this beverage."
 
     "Her eyes flicked toward me, unreadable but clearly unimpressed."
 
+    voice audio.aoi_ch7_line6  # transcript: "drink responsibly sir."
     aoi "*dryly* Drink responsibly, sir."
 
     "Feng let out a bark of laughter."
 
     feng "Hahahaha! Aoi, you make it sound like I'm corrupting him!"
 
+    voice audio.aoi_ch7_line7  # transcript: "Aren't you, sir?"
     aoi "Aren't you, sir?"
 
     feng "Hahahaha! Cheeky lady! I love it!"
-
-    aoi "Ugh… Men…"
+    voice audio.aoi_ch7_line8
+    aoi "Ugh… Men…" 
 
     "The firelight flickered against the rough stone walls, casting long, wavering shadows across the underground camp."
 
@@ -1658,9 +1893,9 @@ label ch7_drink_choice:
 
         "Drink with Feng.":
             $ ch7_drink_choice = "drink"
-            $ svante_affection += 1
-            $ feng_affection   += 1
-            $ aoi_affection    += 1
+            $ A2_svante_affection += 1
+            $ feng_score   += 1
+            $ aoi_score    += 1
 
             show dorian normal at left_char with Dissolve(0.1)
             "I let out a breath, then smirked. It's been a while since I drank with him. Feng whooped, throwing an arm around my shoulder."
@@ -1672,7 +1907,7 @@ label ch7_drink_choice:
             hide aoi_battle_suit
             show svante normal_happy at right_char with Dissolve(0.2)
             "Svante, who had been watching nervously, immediately perked up."
-
+            voice audio.svante_ch7_line42 
             svante "Ah… T-that's good, Sir Dorian! You should relax a little…"
 
             "He smiled, clearly relieved. Is he… worried about me?"
@@ -1680,6 +1915,7 @@ label ch7_drink_choice:
 
             hide svante
             show niko alt_disappointed at right_char with Dissolve(0.2)
+            voice audio.niko_ch7_line50  # transcript: "Ah, really Dorian, at this"
             niko "Really, Dorian? At this time?"
 
             "I turned to him, catching the way his arms were crossed. He wasn't fuming, but there was disapproval in his gaze."
@@ -1702,6 +1938,7 @@ label ch7_drink_choice:
             "I huffed a quiet laugh despite myself."
             show dorian neutral at left_char with Dissolve(0.1)
 
+            voice audio.dorian_ch7_line61  # transcript: "Yeah, yeah, just don't make"
             dorian "Yeah, yeah. Just don't make me regret this."
 
             feng "No promises."
@@ -1714,6 +1951,7 @@ label ch7_drink_choice:
             show aoi_battle_suit at right_flip with Dissolve(0.2)
             "She rolled her eyes, arms still crossed."
 
+            voice audio.aoi_ch7_line9  # transcript: "I don't drink on duty,"
             aoi "I don't drink on duty."
 
             hide aoi_battle_suit
@@ -1724,6 +1962,7 @@ label ch7_drink_choice:
             show aoi_battle_suit at right_flip with Dissolve(0.2)
             "Aoi arched a brow at him. Then, with a dramatic sigh, she plucked a bottle from the stash."
 
+            voice audio.aoi_ch7_line10  # transcript: "fine, since you're still paying"
             aoi "Fine. Since you're still paying me, basically."
 
             hide aoi_battle_suit
@@ -1733,17 +1972,19 @@ label ch7_drink_choice:
             feng "CHEERS, YOU BASTARDS! TO THE PROSPERITY DRAGON AND TO US!!"
             feng "MAY OUR COINS NEVER FAIL, OUR STOMACHS NEVER EMPTY, AND OUR CUPS NEVER RUN DRY!"
 
+            voice audio.dorian_ch7_line62
             "CHEERS!"
 
             jump ch7_drink_common
 
         "Refuse to drink with Feng.":
             $ ch7_drink_choice = "refuse"
-            $ niko_affection += 1
-            $ aoi_affection  += 1
+            $ A1_niko_affection += 1
+            $ aoi_score  += 1
 
             "I turned the bottle in my hands, watching the liquid swirl, before shaking my head."
 
+            voice audio.dorian_ch7_line63  # transcript: "Not tonight."
             dorian "Not tonight."
 
             "Feng blinked, caught off guard. For a split second, he looked almost disappointed—before he threw his head back with an exaggerated groan and dramatically slumped against a crate."
@@ -1753,11 +1994,13 @@ label ch7_drink_choice:
             show dorian smile at left_char with Dissolve(0.1)
             "I chuckled, shoving the bottle back toward him."
 
+            voice audio.dorian_ch7_line64  # transcript: "Someone has to stay sharp."
             dorian "Someone has to stay sharp."
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
             feng "Pft… Boring Dorian. That's what you are now. Boring. Dorian."
 
+            voice audio.aoi_ch7_line11  # transcript: "You could learn from him,"
             aoi "You could learn from him, sir."
 
             feng "Don't chastise me, Aoi. I get enough of that from my commanding officers, thanks."
@@ -1767,6 +2010,7 @@ label ch7_drink_choice:
             show niko alt_base at right_char with Dissolve(0.2)
             "Out of the corner of my eye, Niko's expression softened. He didn't say much—he never did when he was pleased—but I caught the slight nod of approval."
 
+            voice audio.niko_ch7_line51  # transcript: "God"
             niko "…Good."
 
             "I understood. To Niko, discipline meant survival. He had seen firsthand what happened when people got careless, when they let themselves indulge too much."
@@ -1777,6 +2021,7 @@ label ch7_drink_choice:
 
             hide niko
             show svante normal_nervous at right_char with Dissolve(0.2)
+            voice audio.svante_ch7_line43  # transcript: "Sir Dorian, it's just one"
             svante "…Sir Dorian, it's just one drink. You can afford to relax, can't you?"
 
             "I glanced at him. Was he worried about me? Maybe, in his eyes, refusing to drink meant I was still carrying too much."
@@ -1794,6 +2039,7 @@ label ch7_drink_choice:
             show aoi_battle_suit at right_flip with Dissolve(0.2)
             "Aoi pinched the bridge of her nose, but eventually sighed in resignation, grabbing another bottle."
 
+            voice audio.aoi_ch7_line12  # transcript: "Ugh, fine. Just one, alright?"
             aoi "*sigh* Fine. Just one, alright?"
 
             feng "Fine."
@@ -1806,8 +2052,10 @@ label ch7_drink_choice:
             show soldier_jiang at left_char
             show soldier_gao at right_char
             with Dissolve(0.2)
+            voice audio.jiang_ch7_line6  # transcript: "Yes, paladin?"
             jiang "Yes, Paladin?"
 
+            voice audio.gao_ch7_line13  # transcript: "Yes sir."
             gao "Y-yes, sir?"
 
             "Feng grinned, waving his bottle."
@@ -1818,6 +2066,7 @@ label ch7_drink_choice:
 
             hide soldier_gao
             show aoi_battle_suit at right_flip with Dissolve(0.2)
+            voice audio.aoi_ch7_line13  # transcript: "Really sir? You really are"
             aoi "Really, sir? *sighs* You really are something, huh?"
 
             hide aoi_battle_suit
@@ -1826,14 +2075,16 @@ label ch7_drink_choice:
             feng "The more the merrier! This is a celebration—we survived another damn battle, didn't we?"
 
             "Jiang hesitated, but Gao—after a brief moment of uncertainty—grabbed a bottle and took a small sip. He coughed, sputtering slightly."
-
+            voice audio.gao_ch7_line14  # transcript: "*coughs* Oh by the Dragon… *coughs* That's strong! *coughs*"
             gao "*coughs* Oh by the Dragon… *coughs* That's strong! *coughs*"
 
             show soldier_jiang at left_char with Dissolve(0.2)
+            voice audio.jiang_ch7_line7  # transcript: "Ugh, Gowl. Get a grip."
             jiang "Ugh… Gao, get a grip."
 
             hide soldier_gao
             show aoi_battle_suit at right_flip with Dissolve(0.2)
+            voice audio.aoi_ch7_line14  # transcript: "Hey, are you alright?"
             aoi "Hey, are you alright?"
 
             hide soldier_jiang
@@ -1842,6 +2093,7 @@ label ch7_drink_choice:
 
             feng "That's the spirit! See? This guy gets it! Your turn, other guy! PARTY!!"
 
+            voice audio.aoi_ch7_line15  # transcript: "Sir, calm yourself down."
             aoi "Sir, calm yourself down."
 
             show dorian normal at left_char with Dissolve(0.1)
@@ -1880,10 +2132,12 @@ label ch7_drink_common:
     
     hide weng
     show niko normal_base at right_char with Dissolve(0.2)
+    voice audio.niko_ch7_line52  # transcript: "No need to apologize, ma'am."
     niko  "No need to apologize, ma'am. I took too long as well. Come on, Svante."
 
     hide tim
     show svante normal_neutral at center_char with Dissolve(0.2)
+    voice audio.svante_ch7_line44  # transcript: "Yes, sir Nico."
     svante "Yes, sir Niko."
 
     hide svante
@@ -1892,6 +2146,7 @@ label ch7_drink_common:
 
     "I rolled my shoulders, turning to Feng, who was still nursing his bottle of wine, his usual cocky smirk firmly in place."
 
+    voice audio.dorian_ch7_line65  # transcript: "We're heading out."
     dorian "We're heading out."
 
     feng "Where are you going?! The night's still young, buddy! Tomorrow is the anniversary! We have so many stuff to catch up on!"
@@ -1901,6 +2156,7 @@ label ch7_drink_common:
     "I hesitated. I could feel his eyes on me—sharp, questioning."
     "But there was no time to waste. I had already lingered too long."
 
+    voice audio.dorian_ch7_line66  # transcript: "Sorry buddy, but we need"
     dorian "Sorry, buddy. But we need to move. Now. It's urgent."
 
     hide feng_suit
@@ -1929,6 +2185,7 @@ label ch7_drink_common:
 
     hide dorian
     show aoi_battle_suit at left_char with Dissolve(0.2)
+    voice audio.aoi_ch7_line16  # transcript: "Another wine bottle, sir."
     aoi  "Another wine bottle, sir?"
 
     feng "Sure thing, Aoi."

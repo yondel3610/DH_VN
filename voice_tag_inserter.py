@@ -18,8 +18,22 @@ WHAT THIS DOES
     the character in the audio ID matches the speaker of the dialogue line.
 
 5. For each confident match, inserts:
-        voice "audio.xxx"
+        voice "audio.xxx"  # transcript: "matched transcript text"
     directly above the matched dialogue line, with the same indentation.
+    The trailing comment lets you eyeball whether the match is correct
+    without needing to jump back to audio.rpy.
+
+DUPLICATE LINE HANDLING
+------------------------
+Some dialogue is genuinely repeated verbatim in more than one place -
+most commonly the same line appearing in both a chapter 9 and chapter 10
+route, or a line reused across two menu branches. When several dialogue
+candidates share an identical line of text, this is NOT treated as an
+ambiguous match (which would previously cause both to be skipped). Instead,
+each is resolved in order: audio IDs are processed in ascending "_lineN"
+order, and each is assigned to the earliest not-yet-used duplicate
+occurrence in the chapter file. Genuinely different-but-similarly-scored
+lines are still flagged as ambiguous and skipped, same as before.
 """
 
 import os
@@ -33,7 +47,7 @@ import difflib
 AUDIO_RPY_PATH = r"game/01_voice_lines.rpy"
 
 CHAPTER_FILES = [
-    r"game/07_chapter_05.rpy",
+    r"game/13_chapter_10.rpy",
 ]
 MATCH_THRESHOLD = 0.55
 AMBIGUITY_MARGIN = 0.05
@@ -42,7 +56,14 @@ OVERWRITE_ORIGINAL = False
 
 COMMENT_MARKER = "# transcript:"
 
-# --- NEW: Chapter & character filtering ---
+# When True, every inserted `voice audio.xxx` line also gets the matched
+# transcript appended as a trailing comment, e.g.:
+#     voice audio.dorian_ch5_line12  # transcript: "I choose Niko."
+# This makes it much faster to eyeball whether a match is correct directly
+# in the chapter file, without cross-referencing audio.rpy.
+INCLUDE_TRANSCRIPT_COMMENT = True
+
+# --- Chapter & character filtering ---
 
 # When True, only transcripts whose audio ID contains the current chapter's
 # number (e.g. "ch3" in "dorian_ch3_line95") will be considered for that
@@ -78,6 +99,8 @@ CHARACTER_ALIASES = {
     "chung": "chung_hee",
     "mjoll_soldier_female_1": "femaleguard",
     "girl_ald" : "girl_ald_soldier",
+    "hulijing" : "huli_jing",
+    "supplyrobot" : "supply_robot",
 }
 
 # Speaker names in audio IDs that should match narrator lines (no speaker).
@@ -130,7 +153,7 @@ DIALOGUE_PATTERN = re.compile(
 
 
 # =============================================================================
-# NEW: Chapter extraction & filtering
+# Chapter extraction & filtering
 # =============================================================================
 
 def extract_chapter_num(chapter_path):
@@ -214,6 +237,20 @@ def extract_expected_character(audio_id, chapter_num):
     return None
 
 
+def extract_line_number(audio_id):
+    """
+    Extract the trailing line number from an audio ID for ordering purposes.
+        "dorian_ch3_line95" -> 95
+        "narrator_ch10_line5" -> 5
+    Returns a large sentinel value if no line number is found, so IDs
+    without one sort to the end rather than crashing the sort.
+    """
+    m = re.search(r'line(\d+)\s*$', audio_id, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    return float("inf")
+
+
 def extract_existing_voice_tags(lines):
     """
     Scan chapter lines and return a set of audio IDs that already have 
@@ -282,13 +319,26 @@ def extract_dialogue_candidates(lines):
     return candidates
 
 
+def _normalize_text(text):
+    """Collapse whitespace and lowercase, for exact-duplicate comparison."""
+    return " ".join(text.split()).lower()
+
+
 def find_best_match(transcript, candidates, used_indices, expected_char=None):
     """
     Return (best_candidate, best_score, is_ambiguous).
 
-    NEW: If expected_char is provided, only dialogue lines spoken by that
+    If expected_char is provided, only dialogue lines spoken by that
     character are considered. This prevents a Dorian voice clip from
     matching an Elias line.
+
+    DUPLICATE HANDLING: if the top-scoring candidates are tied within
+    AMBIGUITY_MARGIN but their full dialogue text is identical (a genuine
+    duplicate line, e.g. the same line repeated across a ch9/ch10 route
+    split), this is NOT treated as ambiguous. The earliest (lowest index)
+    unused duplicate is returned instead. Ties between candidates with
+    genuinely different text are still flagged as ambiguous, unchanged
+    from before.
     """
     # Resolve any alias mapping
     expected_speaker = None
@@ -304,7 +354,6 @@ def find_best_match(transcript, candidates, used_indices, expected_char=None):
         if cand["index"] in used_indices:
             continue
 
-        # --- NEW: Character enforcement ---
         if expected_char is not None:
             if is_narrator_audio:
                 # Narrator audio should only match lines with no speaker
@@ -314,7 +363,6 @@ def find_best_match(transcript, candidates, used_indices, expected_char=None):
                 # Character audio must match the speaker exactly
                 if cand["speaker"] != expected_speaker:
                     continue
-        # --- END NEW ---
 
         text_start = " ".join(cand["text"].split()[:8])
         score = difflib.SequenceMatcher(
@@ -331,9 +379,24 @@ def find_best_match(transcript, candidates, used_indices, expected_char=None):
     if best_score < MATCH_THRESHOLD:
         return None, best_score, False
 
-    if len(scored) > 1:
-        second_score = scored[1][0]
-        if (best_score - second_score) < AMBIGUITY_MARGIN:
+    # Gather every candidate within the ambiguity margin of the best score -
+    # this is the "top group" we need to check for genuine duplicates.
+    top_group = [pair for pair in scored if (best_score - pair[0]) < AMBIGUITY_MARGIN]
+
+    if len(top_group) > 1:
+        normalized_texts = {_normalize_text(cand["text"]) for _, cand in top_group}
+
+        if len(normalized_texts) == 1:
+            # All tied candidates have IDENTICAL dialogue text - this is a
+            # duplicate line (e.g. repeated across routes), not a genuinely
+            # ambiguous match. Deterministically resolve to the earliest
+            # unused occurrence so repeated audio IDs (processed in
+            # ascending line-number order) fill duplicates top-to-bottom.
+            top_group.sort(key=lambda pair: pair[1]["index"])
+            best_cand = top_group[0][1]
+            best_score = top_group[0][0]
+        else:
+            # Tied candidates have different text - genuinely ambiguous.
             return None, best_score, True
 
     return best_cand, best_score, False
@@ -348,7 +411,6 @@ def process_chapter_file(chapter_path, all_transcripts):
         print(f"  ERROR: file not found, skipping.")
         return
 
-    # --- NEW: Chapter filtering ---
     chapter_num = extract_chapter_num(chapter_path)
 
     if ENFORCE_CHAPTER_FILTER:
@@ -365,15 +427,12 @@ def process_chapter_file(chapter_path, all_transcripts):
                   f"{len(dropped)} from other chapters excluded.")
     else:
         transcripts = all_transcripts
-    # --- END NEW ---
 
     with open(chapter_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    # --- NEW: Extract voice tags already in the file ---
     existing_voice_tags = extract_existing_voice_tags(lines)
     skipped_already_inserted = 0
-    # -----------------------------------------------------
 
     candidates = extract_dialogue_candidates(lines)
     print(f"  Found {len(candidates)} dialogue candidate line(s).")
@@ -384,23 +443,29 @@ def process_chapter_file(chapter_path, all_transcripts):
     no_match_log = []
     no_char_log = []
 
-    for audio_id, transcript in transcripts.items():
+    # Process audio IDs in ascending "_lineN" order. This matters for
+    # duplicate-line resolution: when several audio IDs all match the same
+    # repeated dialogue text, processing them in recording order and always
+    # claiming the earliest unused occurrence gives a deterministic,
+    # sensible top-to-bottom assignment instead of an arbitrary one.
+    ordered_transcripts = sorted(
+        transcripts.items(),
+        key=lambda pair: extract_line_number(pair[0])
+    )
+
+    for audio_id, transcript in ordered_transcripts:
         if not transcript:
             continue
 
-        # --- NEW: Skip if already inserted, preventing warnings/notes ---
         if audio_id in existing_voice_tags:
             skipped_already_inserted += 1
             continue
-        # ---------------------------------------------------------------
 
-        # --- NEW: Extract expected character ---
         expected_char = extract_expected_character(audio_id, chapter_num)
 
         if ENFORCE_CHARACTER_MATCH and expected_char is None:
             no_char_log.append(audio_id)
             # Still proceed — will match against any speaker
-        # --- END NEW ---
 
         best_cand, score, is_ambiguous = find_best_match(
             transcript, candidates, used_indices, expected_char
@@ -423,13 +488,20 @@ def process_chapter_file(chapter_path, all_transcripts):
             continue
 
         used_indices.add(line_idx)
-        insertions.append((line_idx, audio_id, score, best_cand["indent"]))
+        insertions.append((line_idx, audio_id, score, best_cand["indent"], transcript))
 
     # Apply insertions from bottom to top
     insertions.sort(key=lambda x: x[0], reverse=True)
 
-    for line_idx, audio_id, score, indent in insertions:
-        voice_line = f'{indent}voice audio.{audio_id}\n'
+    for line_idx, audio_id, score, indent, transcript in insertions:
+        if INCLUDE_TRANSCRIPT_COMMENT:
+            voice_line = (
+                f'{indent}voice audio.{audio_id}  '
+                f'{COMMENT_MARKER} "{transcript}"\n'
+            )
+        else:
+            voice_line = f'{indent}voice audio.{audio_id}\n'
+
         lines.insert(line_idx, voice_line)
         print(f"  INSERTED: voice \"audio.{audio_id}\" above line {line_idx + 1} "
             f"(confidence {score:.2f})")

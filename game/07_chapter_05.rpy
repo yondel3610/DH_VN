@@ -71,7 +71,7 @@ label chapter_5:
     niko   "Breathing. Good. Looks like the tonic is working."
 
     "Elias walked beside Yuxuan, his tiny fingers clutching Tedda. The glow from his flower-shaped flashlight cast flickering shadows on the walls, guiding our way."
-    hide niko 
+    hide niko  with Dissolve(0.1)
     show elias normal_lying at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line1
     elias "Are we there yet, Mister Yuxuan? Tedda's getting tired…"
@@ -79,13 +79,13 @@ label chapter_5:
 
     "Svante, the aldorith, walked near me, shifting anxiously. Every few steps, he would whisper yet another apology, his voice trembling slightly."
 
-    hide elias
+    hide elias with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line1
     svante "Forgive me for earlier. I'm sorry… I—"
 
     "Still, the rain poured outside. A distant rumble of thunder echoed above."
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line1
     yuxuan "Here we are… Just open it here. Perfect."
@@ -99,7 +99,7 @@ label chapter_5:
 
 label ch5_lab_entrance:
     play sound sfx_earth
-    show dorian dragon_eyes at left_char
+    show dorian dragon_eyes at left_char with Dissolve(0.1)
     "I planted my feet firmly on the damp ground and extended my hand."
     "The earth rumbled beneath my palm, shifting and parting at my command." with vpunch
     scene bg_underground_lit with fade 
@@ -118,20 +118,20 @@ label ch5_lab_entrance:
     show dorian normal_alt_neutral at left_char with Dissolve(0.2)
     voice audio.dorian_ch5_line1
     dorian "Amazing. I wouldn't expect less from Cheng Yuxuan himself."
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line2
     niko   "…Wait a minute. Cheng Yuxuan? You're not just a Yuxuan. You're the Cheng Yuxuan? The renowned inventor?"
 
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line3
     yuxuan "The one and only. Pleasure to make your acquaintance."
 
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line3
     niko   "No wonder you have enough coin to facilitate the construction of all these tunnels. How much did it cost? It must have been a sizeable fortune."
 
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line4
     yuxuan "Haha. Thanks, but these tunnels have been here for a while now. Me and my partners just happened to stumble on it by accident."
     voice audio.yuxuan_ch5_line5
@@ -139,7 +139,7 @@ label ch5_lab_entrance:
 
     "There was silence—then—"
 
-    hide niko
+    hide niko with Dissolve(0.1)
     show svante normal_happy at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line3
     svante "CHENG INDUSTRIES?! YOU'RE THAT CHENG YUXUAN?!"
@@ -149,17 +149,17 @@ label ch5_lab_entrance:
     svante "This… This can't be real! You—you're the genius behind the delivery bots! The man who revolutionized steam-powered mechanisms from Mjoll! You— you saved me and my mother! I— I don't even know what to say! I—"
 
     "His words tumbled out in an excited, breathless mess, his face glowing with genuine admiration."
-    show svante alt_base at right_char
+    show svante alt_base at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line5
     svante "During the great blizzard… when our food ran out… the relief packages from Cheng Industries saved us. We were going to die, sir! But your shipments—your generosity—we lived because of you."
 
     "His hands clenched against his chest, his lip trembling as he blinked rapidly, clearly fighting back tears."
-    hide svante
+    hide svante with Dissolve(0.1)
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line2
     elias "Tedda, why is he crying?"
     tedda "..."
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show yuxuan normal_neutral at center_char
     show svante normal_happy at right_char with Dissolve(0.2)
@@ -169,7 +169,7 @@ label ch5_lab_entrance:
     yuxuan "…Uh. Right. Well. Glad to hear that. No need to make this weird."
     voice audio.svante_ch5_line6
     svante "B-But you're amazing—"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line4
     niko   "Kid, breathe. The last thing I need is another patient."
@@ -230,11 +230,10 @@ label ch5_yuxuan_lab:
     # play sound sfx_door_open                    # PLACEHOLDER — door opening SFX
     # scene bg_yuxuan_lab with dissolve           # PLACEHOLDER — Yuxuan's lab main room
 
-    # play music ost_cheng_lab fadein 2.0         # PLACEHOLDER — warm lab theme
-    # play audio amb_lab_hum loop fadein 1.5      # PLACEHOLDER — lab ambient hum
-    
+    stop sound fadeout 1.75
     "With a deep, mechanical thunk, the massive door finally split apart, revealing a sterile yet inviting interior."
     scene lab_cave_off with fade
+    play music audio.ost_yuxuan_lab volume 0.75 fadein 1.75
     "A rush of cool, crisp air greeted us as the passageway opened. The lighting inside was dimmed but warm, perfectly illuminating the space beyond."
     "We stepped inside, one by one."
     "It looked… comfortable."
@@ -249,7 +248,7 @@ label ch5_yuxuan_lab:
     voice audio.dorian_ch5_line2
     dorian "Where should we put him?"
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line9
     yuxuan "Roboto will escort you to the spare room. Roboto! Come here."
 
@@ -269,21 +268,22 @@ label ch5_yuxuan_lab:
 
     "Roboto's screen shifted, displaying a large question mark before flickering back to its usual expression."
 
-    show roboto bad_mood at center_robot
+    show roboto bad_mood at center_robot with Dissolve(0.1)
     voice audio.roboto1_ch5_line2
     roboto "Which spare room, Master Yuxuan?"
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line11
     yuxuan "Any spare room, Roboto. Now. It's urgent."
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto1_ch5_line3
     roboto "Certainly, Master Yuxuan."
     hide roboto
     hide yuxuan
+    with Dissolve(0.1)
     show svante normal_happy at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line7
     svante "A… A robot servant? A talking real-life robot servant? This is… AMAZING!!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line3
     elias "Daddy, daddy, look! A robot!"
@@ -295,7 +295,7 @@ label ch5_yuxuan_lab:
     voice audio.roboto1_ch5_line5
     roboto "…chef if need be."
 
-    show elias alt_joy at right_char_kids
+    show elias alt_joy at right_char_kids with Dissolve(0.1)
     "Elias let out an excited squeal, making Tedda bounce in his grasp."
     voice audio.elias_ch5_line4
     elias "Ooohhh, so cute! Mister Roboto, do you wanna play with me and Tedda?"
@@ -303,7 +303,7 @@ label ch5_yuxuan_lab:
     "Roboto's head twitched slightly as it processed the request."
 
     # line 06 (1) end
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto1_ch5_line6
     roboto "Certainly! My b-b-b-built-in intelligence allows me to play a wide v-v-variety of games. S-Seeing that you are a child, might I suggest a game of 'tag'?"
 
@@ -311,7 +311,7 @@ label ch5_yuxuan_lab:
     voice audio.dorian_ch5_line3
     dorian "Don't touch the robot, Elias. Take a seat and wait for us…"
 
-    show elias normal_sad at right_char_kids
+    show elias normal_sad at right_char_kids with Dissolve(0.1)
     "Elias pouted but obeyed, hugging Tedda close."
     hide elias 
     hide roboto
@@ -330,18 +330,18 @@ label ch5_yuxuan_lab:
 
     "His eyes darted toward me, then back to the child. He took a shaky step backward."
 
-    show svante normal_angry at right_char
+    show svante normal_angry at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line10
     svante "Y-You're Elias Drakos?!"
 
     "Elias nodded his head and innocently nodded Tedda's head as well."
-    hide svante
+    hide svante with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line5
     elias "That's me! And this is Tedda. We're best friends. And that's my Daddy right there."
 
     "Svante's face drained of all color. He suddenly looked sick. His entire body stiffened, his expression twisted with disbelief. His hand shot up, pointing straight at Elias."
-    hide elias 
+    hide elias  with Dissolve(0.1)
     show svante normal_angry at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line11
     svante "What are you doing here?! Why are you dressed up like a girl?!"
@@ -368,14 +368,14 @@ label ch5_yuxuan_lab:
     "The reaction was instant."
     "His words faltered, his body swaying. He blinked sluggishly."
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line17
     svante "Wh… What?"
 
     "His knees buckled. With a soft thud, he collapsed onto the floor."
     "A moment of silence."
 
-    hide svante
+    hide svante with Dissolve(0.1)
     voice audio.svante_ch5_line18
     svante "Zzz… Zzz…."
 
@@ -387,24 +387,24 @@ label ch5_yuxuan_lab:
 
     "Roboto's screen flickered. A sleeping face with Zs on top."
 
-    show roboto bad_mood at center_robot 
+    show roboto bad_mood at center_robot  with Dissolve(0.1)
     # line 01
     voice audio.roboto_ch5_line1
     roboto "I detect sudden drowsiness. Should I-I-I activate tuck-in mode?"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line5
     niko   "No. No, no, no. Right now, we need to get to the spare room. We have a man that needs treatment."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line2
     roboto "Ah! Of course. Prioritizing medical emergency. Please follow me."
 
     "The little robot turned sharply and began leading the way down the corridor."
     "I adjusted the unconscious man in my arms and followed."
     "As we walked, Yuxuan grabbed Svante by the collar and dragged him effortlessly across the floor."
-    hide roboto
-    show yuxuan normal_neutral at center_char
+    hide roboto with Dissolve(0.1)
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line13
     yuxuan "I'll take this one to the storage room. I'll have to call Miss Weng first."
 
@@ -445,11 +445,11 @@ label ch5_spare_room:
     "He pulled the blankets up to the young man's shoulders, tucking him in with practiced care. But there was a lingering uncertainty in Niko's expression—he wasn't satisfied just yet."
     "He looked at the little robot whirring around the room."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line7
     niko   "Excuse me, what should we call you again?"
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line4
     roboto "R-R-Robotooo. Robot with an 'o'. Roboto."
 
@@ -458,15 +458,15 @@ label ch5_spare_room:
 
     "Roboto perked up, its monitor face flashing a bright question mark before flickering back to its usual cheerful expression."
 
-    show roboto malfunction at center_robot
+    show roboto malfunction at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line5
     roboto "Warm… or… C-C-Cold? Does it need to be p-p-purified?"
 
-    show niko alt_base at right_char
+    show niko alt_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line9
     niko   "Warm water is fine. Can you put it in a pitcher and bring us some cups?"
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line6
     roboto "No problemooo!!! You can count on Roboto~"
 
@@ -484,13 +484,13 @@ label ch5_spare_room:
     show dorian neutral at left_char with Dissolve(0.2)
     voice audio.dorian_ch5_line4
     dorian "…You're using nature channeling again?"
-    show niko normal_serious at right_char
+    show niko normal_serious at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line10
     niko   "It's not enough that he's breathing. He needs to recover properly."
 
     "With another wave of his hand, the young plants continued to grow. They bloomed into delicate white blossoms, their petals trembling slightly as if breathing in the room's air."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line11
     niko "These flowers release a mild healing essence. It should help his body recover faster, strengthen his energy flow, and ease any lingering strain on his energy."
 
@@ -499,28 +499,28 @@ label ch5_spare_room:
 
     chung_hee "…"
 
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line12
     niko "Good. He's stabilizing."
 
     "He adjusted the blankets again, making sure the man was warm but not overheated. Then he sat back with a quiet sigh."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line5
     dorian "You're really thorough with this."
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line13
     niko   "… Just being careful."
 
     "He looked at the man."
 
-    show niko normal_sad at right_char
+    show niko normal_sad at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line14
     niko "I've seen this before. People pushing themselves past their limits, burning through their energy until there's nothing left. Some never recover."
 
     "A brief silence stretched between us. Maybe now was a good time to talk to him."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     jump ch5_niko_choices
 
 
@@ -537,9 +537,9 @@ label ch5_niko_choices:
     menu:
         "Thank him for his assistance earlier." if not niko_assistance:
             $ niko_assistance = True
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             dorian "You didn't have to help back there. But you did. So… thanks."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line15
             niko   "Don't mention it. It's my duty."
             dorian "Your duty?"
@@ -547,22 +547,22 @@ label ch5_niko_choices:
             niko   "I was a doctor before."
             voice audio.niko_ch5_line17
             niko   "Trained for years under some of the best healers in my clan. Medicine was my life."
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I blinked."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line6
             dorian "A doctor? I figured you had medical experience, but I didn't think you were trained formally."
 
             "He let out a low chuckle."
 
-            show niko normal_smile at right_char
+            show niko normal_smile at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line18
             niko   "What, you thought I just had a natural talent for it?"
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line7
             dorian "With the way you worked? Yeah, I wouldn't have been surprised."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line19
             niko   "Where I come from, healers aren't just people who stitch wounds and mix herbs. We had to know how to fight too."
             voice audio.niko_ch5_line20
@@ -571,35 +571,35 @@ label ch5_niko_choices:
             "He smirked slightly. His gaze drifted to his hands."
             "His fingers flexed slightly, and for the first time, I got a clear look at the intricate symbols running along his arm. Runes—etched like ink, wrapping around. They weren't familiar. They weren't decorative."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line8
             dorian "Those runes on your hands… I haven't seen them before."
-            show niko normal_serious at right_char
+            show niko normal_serious at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line21
             niko   "No. They're protective runes. A gift. Or maybe a curse. Depends on who you ask."
 
             "He turned his hand over, the runes catching the dim light of the room."
 
-            show niko alt_base at right_char
+            show niko alt_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line22
             niko "They help me control my shadows."
 
             "His voice trailed off, and for a brief second, I swore I saw something shift behind him. A flicker of darkness, barely noticeable, curling at the edges of his silhouette like something alive."
             "Then it was gone."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line9
             dorian "Where did you get them?"
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line23
             niko   "Hamatame. A village deep in the mountains of the kingdom of Hinami. The Village of Shadows."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line10
             dorian "I see. I haven't been to Hinami before."
-            show niko normal_smile at right_char
+            show niko normal_smile at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line24
             niko   "You should. The beaches are terrific this time of the year."
-            show dorian smile at left_char
+            show dorian smile at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line11
             dorian "Haha. Maybe. Thanks."
 
@@ -609,30 +609,30 @@ label ch5_niko_choices:
             $ niko_raven = True
             "I shifted slightly, glancing at him."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line12
             dorian "I've been meaning to ask you this… How—how did you turn into a raven?"
 
-            show niko normal_smile at right_char
+            show niko normal_smile at right_char with Dissolve(0.1)
             "He smirked, clearly amused."
 
             voice audio.niko_ch5_line25
             niko   "Didn't I already tell you?"
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             
             "I crossed my arms."
 
             voice audio.dorian_ch5_line13
             dorian "I've seen nature channelers before. Hell, I've fought against them. They can summon beasts, enhance their senses, even morph parts of their bodies. But none of them could fully transform."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             "I narrowed my eyes."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line15
             dorian "You don't just shift. You become the animal. How?"
 
             "Niko leaned back, arms resting lazily behind his head."
 
-            show niko alt_base at right_char
+            show niko alt_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line26
             niko "It's part of my clan's bloodline ability. Clan Kaibig is… different. We don't just borrow nature's gifts—we embody them."
             voice audio.niko_ch5_line27
@@ -640,11 +640,11 @@ label ch5_niko_choices:
             voice audio.niko_ch5_line28
             niko "Some in our clan dedicate their lives to mastering every single animal form - hundreds of them. They become the creatures they study, forsaking everything else."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line16
             dorian "What about you?"
 
-            show niko normal_sad at right_char
+            show niko normal_sad at right_char with Dissolve(0.1)
             "His smirk faded slightly. He glanced at the unconscious man, then back at me."
 
             voice audio.niko_ch5_line29
@@ -656,31 +656,31 @@ label ch5_niko_choices:
             $ niko_meeting = True
             "I looked at him, searching his face for some kind of recognition."
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line17
             dorian "You said we've met before? Sorry… I don't remember."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line30
             niko   "Tianho. You were with Paladin Cyrus. I was with my brother, Kaito."
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I blinked. Tianho. That name carried echoes of fire and screaming, the weight of bodies hitting the ground before I could even process what was happening."
             "My mind clawed at the memories, but all I could grasp was the scent of burning flesh and the metallic tang of blood."
             "Elara. My family. Yuxuan. The Emperor of Kyeongjang. Paladin Cyrus. Vasily. Gao. Jiang. King Long Shen. Empress Olympia."
             "I don't recall meeting Niko. Or his brother."
 
-            show dorian sad at left_char
+            show dorian sad at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line18
             dorian "Tianho… That was years ago."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line31
             niko   "Kaito wanted to be the translator for the Emperor of Kyeongjang's son. The deaf-mute son of the Emperor."
 
             "I frowned, trying to piece together the fragments."
 
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line19
             dorian "I'm very sorry. I still don't remember. But I do recall the auditions. Long lines. Hundreds of people waiting for a chance to serve."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line32
             niko   "Yes. The line was massive. Even though we didn't get the chance."
             voice audio.niko_ch5_line33
@@ -688,20 +688,20 @@ label ch5_niko_choices:
 
             "I hesitated before asking."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line20
             dorian "So… Kaito. He's a follower of the Death God too?"
 
-            show niko normal_serious at right_char
+            show niko normal_serious at right_char with Dissolve(0.1)
             "Niko's fingers twitched."
 
             voice audio.niko_ch5_line34
             niko   "Yes. But biologically speaking, he's also my brother."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line21
             dorian "So… where is he now?"
 
-            show niko normal_sad at right_char
+            show niko normal_sad at right_char with Dissolve(0.1)
             "Niko didn't answer immediately. Instead, he exhaled slowly through his nose. He tightened his fist and stared at the runes etched along his arm."
 
             voice audio.niko_ch5_line35
@@ -709,10 +709,10 @@ label ch5_niko_choices:
 
             "I looked down. The air grew thick, like the room had suddenly shrunk."
 
-            show dorian sad at left_char
+            show dorian sad at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line22
             dorian "I'm sorry to hear that."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line36
             niko   "Don't worry about it."
 
@@ -725,11 +725,11 @@ label ch5_niko_choices:
 
         "Ask him about his faith in the Death God.":
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line23
             dorian "You're a follower of the death god, right?"
 
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             "Niko looked down at his half-robe."
 
             voice audio.niko_ch5_line38
@@ -789,7 +789,7 @@ label ch5_niko_common:
     "I exhaled sharply, shaking my head, trying to push past the echoes clawing at my mind. My fists clenched."
     "I looked at him, my voice tight."
 
-    show dorian angry at left_char
+    show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line25
     dorian "Why? Why do you worship such a deity?"
     voice audio.dorian_ch5_line26
@@ -803,14 +803,14 @@ label ch5_niko_common:
 
     "Niko didn't speak right away. Instead, he stepped forward and placed a firm hand on my shoulder."
 
-    show niko normal_serious at right_char
+    show niko normal_serious at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line40
     niko "You might wanna sit down for this, Dorian."
 
     "I resisted at first. My blood still burned, my hands still trembled with the weight of old memories."
     "Reluctantly, I sank onto the chair."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "He reached into a small folded pouch at his side and pulled out a worn pamphlet."
     hide dorian
     hide niko
@@ -834,29 +834,29 @@ label ch5_niko_common:
     "There's a certain purity and warmth in Niko's beliefs that is undeniably endearing."
     "If only his faith were centered around a different deity, like the Tetrad for example, and not the one associated with the events in Tianho, I would have wholeheartedly embraced and admired his devotion."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line29
     dorian "There are lots of drawings here. What's this have to do with the death god?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line44
     niko   "Well, as we all know, the death god is not a static entity but is reincarnated again and again, much like the cycle of life and death it oversees."
 
     "I ran a thumb over the painted pages, my chest still tight."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line30
     dorian "So, you worship all of the reincarnations of the death gods. Not just Enoch?"
-    show niko alt_base at right_char
+    show niko alt_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line45
     niko   "Precisely. We worship the death god as an entity. However, the most prominent reincarnation of the death god is Enoch of Mjoll."
     voice audio.niko_ch5_line46
     niko   "Many historians agree that Enoch was the cause of the many changes in Ena: the downfall of the civilization of Kyeongjang, the fall of the tyrant king in Mjoll, the disappearance of the Tetrad gods and the immortal dragons, the abolishment of slavery in the Centennial Isles, and the list goes on."
     voice audio.niko_ch5_line47
     niko   "He shows the capacity of mankind. He may be a god, but he is also human. Both capable of doing good, and bad. Light and dark. Life and death."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line31
     dorian "I appreciate your explanation about Enoch, but what does this have to do with the death god not being related to the incident in Tianho?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line48
     niko   "In Enoch's final moments, as he lay on his dying bed, he made a solemn vow to his best friend. He swore that in his next lives, he would do everything within his power to right the wrongs he had committed while he was alive."
     voice audio.niko_ch5_line49
@@ -865,19 +865,19 @@ label ch5_niko_common:
     niko   "And thus, from those ancient promises, the Prophets of the Death God were founded. A dedicated group of individuals who have taken it upon themselves to seek out and guide the incarnations of the death god, nurturing their potential for benevolence and compassion."
     voice audio.niko_ch5_line51
     niko   "I am proud to be one of those people. This is my calling."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line32
     dorian "Interesting. How many death gods were influenced by the prophets?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line52
     niko   "The first sighting we had was five years ago on Tianho. Our brothers tried to help him, but alas, he was already killed."
 
     "Five years ago?!"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line33
     dorian "Five years ago? That's... surprising. I thought you said that the Prophets were founded four centuries ago. I would have expected the prophets to have encountered and influenced multiple death gods by now."
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line53
     niko   "We were. The Prophets have transitioned into a charity organization after the first century it was established. Many of us have already believed that death god's work is complete."
     voice audio.niko_ch5_line54
@@ -886,17 +886,17 @@ label ch5_niko_common:
     "I could imagine it, all right."
     "Four hundred years of waiting, of fading purpose—then suddenly, proof. A reason to move."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line34
     dorian "And now you're investigating that sighting. Because you don't believe the creature that destroyed Tianho was the Death God."
-    show niko alt_tense at right_char
+    show niko alt_tense at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line55
     niko   "Exactly."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line35
     dorian "Have you gotten any leads?"
 
-    show niko alt_disappointed at right_char
+    show niko alt_disappointed at right_char with Dissolve(0.1)
     "Niko shook his head, frustration evident in the way his fingers curled slightly."
 
     voice audio.niko_ch5_line56
@@ -913,41 +913,41 @@ label ch5_niko_common:
     show roboto happy at center_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line7
     roboto "Beep-boop! R-r-r-Roboto has arrived with water delivery!"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line58
     niko   "Roboto, lower your voice."
 
     "The robot's screen immediately switched to a large 'shhh' icon, accompanied by the sound of static mimicking a whisper."
 
-    show roboto bad_mood at center_robot
+    show roboto bad_mood at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line8
     roboto "Activating silent mode… Shhhh…."
 
     "It turned back to us, its voice now hushed."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line9
     roboto "H-H-Here is your water, sir. Warm, just as you've requested."
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line59
     niko   "Thank you. Just place it beside me, please."
 
     "It wobbled forward, carefully placing the tray on the small bedside table. The screen changed again, now showing a satisfied-looking pitcher giving a thumbs-up."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line10
     roboto "Mission accomplished! Would you like Roboto to stay and provide additional hydration support?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line36
     dorian "Hydration support?"
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line11
     roboto "Roboto can monitor water levels! Fluff pillows! Tuck in patients! Or… or… tell a bedtime story!"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line37
     dorian "Stories, huh? Interesting."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     "Niko yawned, stretching his arms."
 
     voice audio.niko_ch5_line60
@@ -955,24 +955,24 @@ label ch5_niko_common:
 
     "Roboto's screen changed again, now displaying a small clock icon."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line12
     roboto "Oh! Speaking of time—it's almost dinner! Master Yuxuan is currently looking for you in the living room, Sir Dorian."
 
     "I glanced at Niko, who was already sinking back into his chair, stretching his legs out with a quiet sigh."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line61
     niko "Go ahead. I'll keep watch here."
 
     "I gave him a nod before stepping out, leaving Roboto standing beside the bed, its screen flickering between a neutral expression and a 'standby mode' prompt."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line13
     roboto "Please g-g-g-g-go ahead and take a nap, sir Niko. If the patient exhibits irregular breathing patterns, Roboto shall alert you immediately!"
     voice audio.roboto_ch5_line14
     roboto "Would you like me to turn off the lights?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line62
     niko   "Sure. Thanks."
     scene spare_room_off with Dissolve(0.3)
@@ -1032,7 +1032,7 @@ label ch5_living_room:
     "An elderly woman in a crisp white uniform strode toward them, her silver-streaked hair pulled into a neat bun."
     "The little boy let out a small grunt, clearly reluctant to stop playing. He turned his head slightly, brows furrowed."
 
-    show tim sad at left_char_kids
+    show tim sad at left_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line6
     tim  "But we're busy, Miss Weng…"
     weng "Tim, be careful. You might break something again! I don't want a repeat of your Roboto incident."
@@ -1044,51 +1044,52 @@ label ch5_living_room:
     hide tim
     hide weng
 
+    with Dissolve(0.1)
     show dorian neutral at left_char
     show elias normal_neutral at right_char_kids
     with Dissolve(0.2)
     "I glanced at Elias, who was still bouncing on his feet, too absorbed in the game to notice me watching. A small smile tugged at my lips."
     "It was rare—seeing him like this. Seeing him play with someone other than Tedda. Someone real. Someone his age."
 
-    show dorian smile at left_char
+    show dorian smile at left_char with Dissolve(0.1)
     "I softened my voice."
 
     voice audio.dorian_ch5_line38
     dorian "Elias, are you having fun?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "No response. He was too caught up in his play, bouncing excitedly on his feet."
 
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line9
     elias "Tim, should we continue playing tag?"
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim sad at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line8
     tim   "Sorry, Elias. But Miss Weng doesn't want me to play tag anymore."
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias normal_sad at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line10
     elias "Aww… But… But—"
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim happy at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line9
     tim   "That's okay! We can still tell stories!"
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line11
     elias "Oh… Okay!"
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim happy at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line10
     tim   "I'll start! There's a huge library here! And my favorite story is the one about the kumiho and—"
-    hide tim
+    hide tim with Dissolve(0.1)
 
     "Yuxuan approached me, his usual easygoing smirk in place. He gestured toward the green-haired kid."
 
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line14
     yuxuan "So that's Tim. The one playing with Elias."
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line39
     dorian "He and Elias are getting along well. I'm happy."
     voice audio.yuxuan_ch5_line15
@@ -1103,43 +1104,43 @@ label ch5_living_room:
     yuxuan "Soooo, this is Cai Weng. Miss Weng, this is Dorian Burnham."
     voice audio.yuxuan_ch5_line17
     yuxuan "Weng is a true gem. She's my personal assistant, my cook, my all-rounder here at this laboratory."
-    show weng happy at right_flip
+    show weng happy at right_flip with Dissolve(0.1)
     weng   "Oh, you're too kind, Master Yuxuan. I'm just doing my job. It's a pleasure to be of service here. Is that right, Tim?"
 
     "Tim was still too focused on Elias. Elias giggles and waves Tedda around."
-    show weng sad at right_flip
+    show weng sad at right_flip with Dissolve(0.1)
     weng "…*sighs* Kids…"   
 
     "She turned to me with a polite nod."
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng   "Pleasure to meet you, Sir Burnham."
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line40
     dorian "Likewise, Miss Weng."
 
     "I chuckled under my breath, watching Elias laugh as he exchanged stories with Tim."
     "Yuxuan told me that Svante, the aldorith who realized who I was, was placed in the storage room."
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "Isn't that dangerous? Svante's a metal channeler, as we've seen a while ago. He might turn on us."
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "Miss Weng tells me that Svante's been handcuffed with Jinyan steel which suppresses channeling."
     "Yuxuan crossed his arms as he looked at me."
-    show yuxuan alt_think at center_char
+    show yuxuan alt_think at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line18
     yuxuan "By the way, Svante—the Aldorith who figured out who you were? I had him placed in the storage room."
 
     "I turned to him sharply."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line41
     dorian "Isn't that dangerous? He's a metal channeler. We saw what he could do earlier. He might turn on us."
 
     "Before Yuxuan could answer, Weng let out a small chuckle, shaking her head."
-    show weng happy at right_flip
+    show weng happy at right_flip with Dissolve(0.1)
     weng "No need to worry, Sir Burnham. The aldorith's been properly restrained."
 
     "She gestured toward her wrist, mimicking the snap of cuffs."
-    show weng happy at right_flip
+    show weng happy at right_flip with Dissolve(0.1)
     weng "We restrained him with Jinyan Steel—he shouldn't be a problem now."
 
     "That caught my attention. Jinyan Steel—extremely rare, ridiculously expensive. I'd only used it once before, back when I had to subdue a particularly powerful channeler."
@@ -1148,9 +1149,10 @@ label ch5_living_room:
     show weng normal at right_flip
 
     show dorian neutral at left_char
+    with Dissolve(0.1)
     voice audio.dorian_ch5_line42
     dorian "And he's just… sitting in there?"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line19
     yuxuan "Fast asleep. Thanks to the Cheng Industries' Sleeping Powder."
 
@@ -1158,20 +1160,20 @@ label ch5_living_room:
 
     weng   "Speaking of sleep, it's already past dinner time… No wonder I'm feeling lightheaded."
     weng   "I need to hurry. You must be hungry, Master Yuxuan. Sir Burnham."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line43
     dorian "Just a little."
 
     "Right on cue, my stomach growled. Loudly."
 
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     "Yuxuan shot me a look of pure amusement."
 
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line20
     yuxuan "Don't worry, Dorian. We'll have you fed up in no time."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "I sighed, rubbing the back of my neck."
 
     voice audio.dorian_ch5_line44
@@ -1180,50 +1182,50 @@ label ch5_living_room:
     "And then it hit me—Elias."
     "I glanced toward him, still caught up in his conversation with Tim. The two of them were huddled close, exchanging animated whispers about something I couldn't hear."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line45
     dorian "Elias is probably starving too…"
 
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     "Yuxuan waved a hand dismissively."
 
     voice audio.yuxuan_ch5_line21
     yuxuan "Oh, don't worry about him. I made sure he was well-fed while you were off handling, you know… family matters at the memorial gravesite."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line46
     dorian "Thanks, Yu. What did you feed him?"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line22
     yuxuan "Umm… Tianho chocolates. Took him to a booth. It was owned by Cheng Industries so I told my employee to give him as much as he wanted."
 
     "I blinked."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line47
     dorian "How many did he eat?"
 
     "I stared at him, and a sense of deep, immediate regret settled in."
 
-    show yuxuan normal_lying at center_char
+    show yuxuan normal_lying at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line23
     yuxuan "I… uh… got caught up. Associates called. Kinda lost track. *clears throat* Sorry?"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I sighed."
 
     voice audio.dorian_ch5_line48
     dorian "Tetrad, help me."
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line24
     yuxuan "Hey, he liked it! Kept him happy while you were gone."
 
     "I looked back at Elias, who was still bouncing on his feet, chattering away with Tim, his energy seemingly endless."
     "So that's why he was so hyper."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "I let out a slow breath, pinching the bridge of my nose. Yuxuan clapped a hand on my shoulder."
 
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line25
     yuxuan "Relax. He'll crash eventually. Maybe after dinner. Or maybe at midnight."
 
@@ -1237,29 +1239,29 @@ label ch5_living_room:
     voice audio.yuxuan_ch5_line26
     yuxuan "She's asking about our food, Dorian. You already know what I want, Miss Weng."
     weng   "Of course. I wouldn't want Master Yuxuan being denied his favorite dragonfire curry."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line49
     dorian "Tianho's Dragonfire Curry?"
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line27
     yuxuan "Spicy, bold, and delicious!"
     weng   "Suiting an amazing inventor such as yourself, Master Yuxuan! You're truly incredible!"
 
     "I watched as she showered him with praise, her words flowing like an endless stream. I smiled awkwardly."
 
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line28
     yuxuan "Thank you so much, Miss Weng."
-    show weng alt_base at right_flip
+    show weng alt_base at right_flip with Dissolve(0.1)
     weng   "A man of vision! An inspiration to the people of Tianho! The greatest inventor in the kingdom! The—"
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     "Weng paused, looking at me."
 
     weng "Ah, apologies, Sir Burnham. I can make other things too, of course. I'm well-versed in the cuisines of all five kingdoms—Tianho, Gale, Hinami, Mjoll, and the Centennial Isles."
     weng "Just name any dish. If we have the ingredients, I'm sure I can cook it for you."
     weng "And if we don't have the ingredients, well I'll just buy it from the market at the Tianho city proper. I don't mind. It's directly up ground from here. There's still time before it closes."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I rubbed the back of my neck."
     "Honestly, I wasn't picky. I'd eat just about anything. But maybe I should choose a dish from one of the kingdoms."
 
@@ -1287,10 +1289,10 @@ label ch5_svante_choices:
     menu:
         "Why were you the only aldorith spared by this man?":
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "When I saw the battlefield, the bodies of your brothers and sisters were scattered around him. Yet, you… you were still alive."
             dorian "How did he know you were on his side?"
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "I… defended him. He saw it, surely."
             svante "I tried to explain to our commanders Tian Xun, to Lady Aoi… to all of them… I told them that something felt wrong. That I wasn't sure this man deserved to die."
             svante "But Tian Xun and Lady Aoi called me a traitor."
@@ -1298,67 +1300,67 @@ label ch5_svante_choices:
 
             "I studied him carefully. He wasn't lying. The tremor in his voice, the way his body tensed at the memory—it was all genuine."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "What about your commanders? Tell me about them."
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "Oh them? Tian Xun was um…"
 
             "Svante shifted, adjusting his wrists against the cuffs. He winced slightly."
 
             svante "Sorry. A little bit itchy."
             svante "Tian Xun was a loose cannon. He's obsessed with bombs. They say he grew up in Tianho in an impoverished family, even though his father worked for the King."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "You mean King Long Shen, the late king of Tianho?"
 
             "Svante frowned a little bit."
 
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "I think so. Sorry, sir. I'm not familiar with the other kings. I only know Father."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "And the last one? Lady Aoi?"
-            show svante normal_happy at right_char
+            show svante normal_happy at right_char with Dissolve(0.1)
             svante "Oh! Believe it or not, Lady Aoi used to be a songstress from Hinami."
-            show dorian normal_alt_annoyed at left_char
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
             dorian "That's not what I asked."
 
             "Svante flinched."
 
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "O-Oh! Sorry, sir! She—uh—she's a powerful water channeler from Hinami. She just… showed up at the palace one day, gave a demonstration of her power."
             svante "Father was impressed. So impressed that he made her commander of an entire battalion of Aldoriths."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "You don't sound convinced."
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "Just between you and me, sir… word among my brothers is that Father only sees Queen Ekaterina in her."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "Yeah…. I can see that."
 
             jump ch5_svante_choices
 
         "Who are you?":
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "What's your name?"
 
             "Svante blinked at me, looking genuinely confused—almost as if the question was unnecessary."
 
-            show svante normal_neutral at right_char
+            show svante normal_neutral at right_char with Dissolve(0.1)
             svante "Svante, sir. Svante Nordstrom."
 
             "I tilted my head slightly."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "Nordstrom. As in Gustav Nordstrom. You took on the king's last name. I'm surprised he even let you do that."
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "You're not wrong, sir. Usually, us aldoriths carry the last name of their mothers."
             svante "M-Mother received special permission from Father, sir."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "Really? How come?"
-            show svante normal_neutral at right_char
+            show svante normal_neutral at right_char with Dissolve(0.1)
             svante "Mother was at the top of her career when she gave birth to me. She was a songstress. Father was really into her back then."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "What about your sister?"
-            show svante normal_sad at right_char
+            show svante normal_sad at right_char with Dissolve(0.1)
             svante "Kristin…"
 
             "He paused, his hands twitching against the cuffs."
@@ -1369,61 +1371,61 @@ label ch5_svante_choices:
 
         "How do you know me?":
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "How did you recognize me?"
 
             "He shifted slightly, as if trying to find the right words."
 
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "I… I actually didn't at first, sir."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "How come?"
 
             "Svante's gaze flickered toward me. At my hair, my clothes, everything."
 
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "Well, your hair, sir. It's different. And your clothes."
 
             "He bit his lip, hesitating."
 
             svante "Elias was also wearing girl's clothes so I didn't recognize him."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "But then you figured it out."
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "It wasn't until I heard you call Elias' name that I put all the pieces together."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "You called me a different name as well. Why?"
-            show svante normal_sad at right_char
+            show svante normal_sad at right_char with Dissolve(0.1)
             svante "The Massacrer of Mjoll. They named you that after you… you—"
 
             "His breathing quickened, and his eyes darted toward mine—fearful, desperate. A long silence erupted."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "I won't hurt you. I promise."
-            show svante normal_nervous at right_char
+            show svante normal_nervous at right_char with Dissolve(0.1)
             svante "O-Okay, sir."
 
             jump ch5_svante_choices
 
         "That's all for now.":
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "That's all. I don't have any more questions for you."
 
             "I exhaled, stepping back, watching him in the dim light. His breathing had steadied, but his posture remained rigid, his body still caught between fear and exhaustion."
 
-            show svante normal_sad at right_char
+            show svante normal_sad at right_char with Dissolve(0.1)
             svante "Sir Dorian…"
             svante "What would you have done? If you were me?"
 
             "I narrowed my eyes."
 
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             dorian "If I were you?"
 
             "He nodded. His violet eyes met mine, pleading, uncertain. No malice. No scheming. Just a hurt and tormented man."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "I wouldn't let doubt rule me. I would decide. I'd choose a side. And stick with it."
 
             "He swallowed, nodding slowly."
@@ -1442,19 +1444,19 @@ label ch5_svante_common:
     "I felt that he wasn't a threat. Not now."
     "I reached into my pocket, fingers brushing over the cold metal key Weng had given me."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Can I trust you?"
 
     "His head shot up."
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     svante "Trust me with what?"
 
     "I held the key up between us, letting it glint in the dim light."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     dorian "Swear to me—by your god—that you will never harm my family."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     svante "I… I wasn't planning to, but…. I swear by Enoch that I will never harm you or your family."
 
     "Then, without breaking eye contact, I stepped forward and reached for his cuffs."
@@ -1462,13 +1464,14 @@ label ch5_svante_common:
     "The heavy Jinshen steel fell away from his wrists."
     "Svante inhaled sharply, his arms dropping limply to his sides. He stared at his freed hands for a moment."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Don't make me regret this."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     svante "I won't, sir."
 
     hide svante
     hide dorian
+    with Dissolve(0.1)
     jump ch5_dinner_setup
 
 
@@ -1485,7 +1488,7 @@ label ch5_food_choice:
     menu:
         "A dish from Tianho.":
             $ ch5_food_choice = "tianho"
-            $ yuxuan_affection += 1             # +1 Yuxuan affection
+            $ A3_yuxuan_affection += 1             # +1 Yuxuan affection
 
             "Tianho."
             "I remembered when Elara and I took the kids there—before everything. Before the tragedy."
@@ -1496,11 +1499,11 @@ label ch5_food_choice:
 
             "I turned to him, offering a small smile."
 
-            show dorian smile at left_char
+            show dorian smile at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line50
             dorian "Thank you."
 
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             "A faint blush dusted Yuxuan's face."
 
             voice audio.yuxuan_ch5_line29
@@ -1508,12 +1511,12 @@ label ch5_food_choice:
 
             "I glanced back at Weng."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line51
             dorian "I'll go with something from Tianho, Miss Weng."
 
             "She clapped her hands together, eyes lighting up."
-            show weng alt_calm at right_flip
+            show weng alt_calm at right_flip with Dissolve(0.1)
             weng "A fine choice, sir Burnham! I know just the thing!"
 
             "She jotted something down on her notepad, nodding to herself."
@@ -1522,7 +1525,7 @@ label ch5_food_choice:
 
         "A dish from Gale.":
             $ ch5_food_choice = "gale"
-            $ chunghee_affection += 1           # +1 Chung-hee interest (Gale / Kyeongjang curiosity)
+            $ A4_chunghee_affection += 1           # +1 Chung-hee interest (Gale / Kyeongjang curiosity)
 
             "Gale. My home."
             "The Empire of Gale was a land of plenty, its cuisine just as vast and rich."
@@ -1535,25 +1538,25 @@ label ch5_food_choice:
             "Something about him. Just made me very curious."
             "I shook the thought away. No use overthinking. Once he wakes up, we'll hopefully get to know him."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line52
             dorian "I'll have something from Gale. My homeland."
 
             "Weng's eyes widened."
-            show weng alt_base at right_flip
+            show weng alt_base at right_flip with Dissolve(0.1)
             weng "You're from the Empire of Gale, Sir Burnham?"
 
             "I nodded. She practically gushed."
-            show weng alt_close_eyes at right_flip
+            show weng alt_close_eyes at right_flip with Dissolve(0.1)
             weng "Oh, I've been to Gale before! With my lover! The sights—oh, the sights!"
 
             "She twirled her pen between her fingers, a nostalgic smile crossing her lips."
-            show weng normal at right_flip
+            show weng normal at right_flip with Dissolve(0.1)
             weng "Ah… then you'll need something fit for a nobleman. I have just the thing, Sir Burnham!"
 
         "A dish from Hinami.":
             $ ch5_food_choice = "hinami"
-            $ niko_affection += 1               # +1 Niko affection
+            $ A1_niko_affection += 1               # +1 Niko affection
 
             "Hinami. The Kingdom of Water and Shadow Channelers."
             "I had plenty of friends from Hinami. When I was a Paladin for the Empress of Gale, I had the honor of meeting King Tatsuya Fujiwara during his state visit."
@@ -1563,7 +1566,7 @@ label ch5_food_choice:
             "The way he moved, the way he carried himself—his grace, his skill. Watching him heal the unconscious man had been nothing short of mesmerizing."
             "How he used his shadows to protect us from the Mjoll soldiers earlier."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line53
             dorian "I think I'll have something from Hinami."
 
@@ -1572,26 +1575,26 @@ label ch5_food_choice:
             weng "The Island Kingdom of Hinami—oh! Such beautiful beaches!"
 
             "She tapped her notepad, thinking."
-            show weng thinking at right_flip
+            show weng thinking at right_flip with Dissolve(0.1)
             weng "The fish there? Top notch. There's even an elusive species called Aokibane—very rare!"
 
             "She chuckled to herself."
 
             weng "And of course, there's the famous Ganderbilt—an exquisite delicacy."
-            show weng happy at right_flip
+            show weng happy at right_flip with Dissolve(0.1)
             "She snapped her fingers."
-            show weng alt_base at right_flip 
+            show weng alt_base at right_flip  with Dissolve(0.1)
             weng "Great choice, Sir Burnham. Something warm and comforting, then."
 
         "A dish from Mjoll.":
             $ ch5_food_choice = "mjoll"
-            $ svante_affection += 1             # +1 Svante affection
+            $ A2_svante_affection += 1             # +1 Svante affection
 
             "Mjoll."
             "Elara's hometown. I lived there for—what? Four, five years? I'd lost count."
             "King Gustav. Queen Ekaterina. Elias. Vasily."
             "Tetrad above, Vasily."
-            show dorian sad at left_char
+            show dorian sad at left_char with Dissolve(0.1)
             "I can't believe I killed him. Vasily. My friend."
             "Not only him. But an entire battalion of aldoriths and soldiers. It was a blur. But I can hear the aldoriths cries and screams."
             "Not just him. An entire battalion of Aldoriths and soldiers. It was a blur, but I could still hear it."
@@ -1601,24 +1604,24 @@ label ch5_food_choice:
 
             weng "Sir Dorian? Are you having trouble choosing?"
 
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             "I blinked, shaking the memories away."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             voice audio.dorian_ch5_line54
             dorian "Oh, uh. Sorry. I'd like something from Mjoll."
 
             "She tilted her head slightly, observing me."
-            show weng sad at right_flip
+            show weng sad at right_flip with Dissolve(0.1)
             weng "The snowy kingdom. I see…"
 
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             voice audio.yuxuan_ch5_line30
             yuxuan "I remember you telling me that you've been there before, Miss Weng."
 
             "A brief silence. She looked down, her fingers tightening around her pen."
-            show weng alt_close_eyes at right_flip
+            show weng alt_close_eyes at right_flip with Dissolve(0.1)
             weng "Yes… yes, I have."
-            show weng alt_base at right_flip
+            show weng alt_base at right_flip with Dissolve(0.1)
             "Then, just as quickly, she smiled and scribbled on her notepad."
 
             weng "A hearty meal, then. Something warm, something rich."
@@ -1646,6 +1649,7 @@ label ch5_common:
     tim "Braised Tianho fish with fermented black beans. Steamed tofu with ginger. And a side of sautéed bok choy with garlic."
     hide tim 
     hide weng
+    with Dissolve(0.1)
     show dorian neutral at left_char with Dissolve(0.2)
     "I blinked."
 
@@ -1654,59 +1658,60 @@ label ch5_common:
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line31
     yuxuan "Hahaha! That's Tim. He has quite the refined palate, just like me and Weng."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show tim alt_pumped at right_char_kids with Dissolve(0.2)
     "Tim pushed his glasses up the bridge of his nose, utterly serious."
     voice audio.tim_ch5_line12
     tim "Proper nutrition is essential for cognitive development of toddlers like myself. My brain requires high-quality fuel."
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     "Meanwhile, Elias was bouncing on his heels, practically vibrating with excitement."
 
     voice audio.elias_ch5_line12
     elias "Ooh! I want choco—"
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I cut him off before he could even finish."
     voice audio.dorian_ch5_line56
     dorian "Chicken. Rice. Soup. And lots of vegetables. He'll have that."
-    show elias normal_sad at right_char_kids
+    show elias normal_sad at right_char_kids with Dissolve(0.1)
     "Elias's little face scrunched up into a dramatic pout, his lower lip jutting out."
     voice audio.elias_ch5_line13
     elias "But daddy—"
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I gave him The Look."
     voice audio.dorian_ch5_line57
     dorian "No, Elias. You already ate enough chocolate today. You need your vitamins."
     show elias normal_sad at right_char_kids
     show dorian neutral at left_char
+    with Dissolve(0.1)
     "Elias squirmed. His little hands clutched Tedda, his stuffed bear, like the poor toy could somehow convince me to change my mind."
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim alt_serious at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line13
     tim "Vegetables are good for you, Elias."
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias alt_doubt at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line14
     elias "No, they're not… They're icky!"
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim alt_normal at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line14
     tim "Yes, they are. They contain essential vitamins and minerals that help you grow stronger and support brain function. You want to be smart like me, don't you?"
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias normal_neutral at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line15
     elias "Fiiineeee…"
-    hide elias
+    hide elias with Dissolve(0.1)
     show weng normal at right_flip with Dissolve(0.2)
     weng "Alright then, why don't you two go play while I prepare dinner?"
-    hide weng
+    hide weng with Dissolve(0.1)
     show tim alt_normal at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line15
     tim "Master Yuxuan, can Elias and I go to the library?"
     show yuxuan normal_happy at center_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line32
     yuxuan "Always, Tim. Keep on reading, green-haired buddy."
-    show tim happy at right_char_kids
+    show tim happy at right_char_kids with Dissolve(0.1)
 
     "Tim's face lit up. He turned to Elias, taking his hand like a tiny professor guiding his student."
 
@@ -1716,20 +1721,20 @@ label ch5_common:
 
     voice audio.tim_ch5_line17
     tim "I'll show you my favorite books! Let's read together! Oh, you're gonna love the legend of the kumiho!"
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line16
     elias "Let's go! Ooh! Do they have pictures and flowers there?"
-    hide elias
+    hide elias with Dissolve(0.1)
     show weng alt_calm at right_flip with Dissolve(0.2)
     weng "Tim… Make sure to be back once dinner is finished, okay? It's a challenge to get you away from those books once you start. Be mindful of little Elias with you."
 
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     "Yuxuan and I watched them go, both of us shaking our heads in amusement."
 
     voice audio.yuxuan_ch5_line33
     yuxuan "They make quite the pair huh, Dorian? They just met and they're acting like they've known each other for a long time!"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line58
     dorian "No kidding."
 
@@ -1752,7 +1757,7 @@ label ch5_nap:
     with Dissolve(0.2)
     voice audio.yuxuan_ch5_line34
     yuxuan "Gonna take a nap?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line59
     dorian "Just for a bit."
 
@@ -1799,36 +1804,36 @@ label ch5_nap:
     dorian "Yeah. What about him?"
 
     "She glanced toward the hallway leading to the storage room."
-    show weng alt_calm at right_flip
+    show weng alt_calm at right_flip with Dissolve(0.1)
     voice audio.weng_ch5_line41
     weng "I took the liberty of preparing something from Mjoll for him. His food's almost ready. No use letting him starve."
 
     "She reached into her pocket and pulled out a small, cold iron key, pressing it into my palm."
-    show weng alt_close_eyes at right_flip
+    show weng alt_close_eyes at right_flip with Dissolve(0.1)
     voice audio.weng_ch5_line42
     weng "You're the one who he has a problem with. I was thinking you should be the one to check on him. See if he's woken up. Maybe talk to him."
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     "I looked down at the key. It was simple but sturdy, and heavier than I expected."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line63
     dorian "Is he even awake?"
-    show weng alt_base at right_flip
+    show weng alt_base at right_flip with Dissolve(0.1)
     voice audio.weng_ch5_line43
     weng   "Hard to say. He's been out for a while, but knowing sleeping powder, its effects should have worn off about now."
     voice audio.dorian_ch5_line64
     dorian "And if he's a threat?"
 
     "Weng wiped her hands on her apron again."
-    show weng serious at right_flip
+    show weng serious at right_flip with Dissolve(0.1)
     voice audio.weng_ch5_line44
     weng "Then you'll know what to do, sir Burnham."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I nodded. A test. A chance. If Svante didn't prove to be a threat, I could unlock his cuffs. But if he did…"
     "I clenched my jaw and stood up, pocketing the key."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line65
     dorian "I'll see where he stands."
 
@@ -1848,7 +1853,7 @@ label ch5_interrogation:
     "A voice—low, trembling—whispering desperate words into the dark."
     scene storage_room with dissolve
 
-    show svante normal_sad at center_char
+    show svante normal_sad at center_char with Dissolve(0.1)
     voice audio.svante_ch5_line20
     svante "Mighty Enoch… Please… {i}*tears*{/i} Your servant is afraid…"
 
@@ -1885,17 +1890,17 @@ label ch5_interrogation:
     svante "No… No, no, no… Please—please, no…"
     voice audio.dorian_ch5_line66
     dorian "Calm down. I just want to ask you a few things."
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line28
     svante "Sir… I beg you. Please let me go! {i}*crying*{/i} I have a mother! She's sick. She's the only family that I have left!"
-    show svante normal_nervous at right_char 
+    show svante normal_nervous at right_char  with Dissolve(0.1)
     svante "No… No, no, no… Don't hurt me! I beg you! Please—please, no—"
 
     "I heard his stomach rumble."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line67
     dorian "You must be starving. Here, I just need to—"
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line29
     svante "I… Is that it, sir? I-If you wish to spare me, Please, you don't have to feed me."
     voice audio.svante_ch5_line30
@@ -1903,50 +1908,50 @@ label ch5_interrogation:
 
     "I rolled my eyes."
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line68
     dorian "ARE YOU GOING TO CALM DOWN OR NOT?!"
 
     "Silence. He stopped struggling. But I could see him trembling."
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line31
     svante "{i}*crying*{/i}"
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line69
     dorian "No one needs to die today. I just need to ask you a few questions. Calm down."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line32
     svante "Y-Yes, sir…"
 
     "I took a deep breath."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line70
     dorian "Let's start with the obvious. Why does Mjoll want the man that we saved dead?"
 
     "Svante hesitated, his fingers twitching against the cuffs. His gaze flickered toward the floor, avoiding mine."
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line33
     svante "I—I don't know everything, sir. I swear it. But..."
     voice audio.svante_ch5_line34
     svante "Father said that the man we were supposed to kill… cursed him."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line71
     dorian "Cursed him?"
 
     "My eyes widened."
-    show svante alt_guilty at right_char
+    show svante alt_guilty at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line35
     svante "That's what he told us. That the man— he was some kind of heretic and is an enemy of Mjoll."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line72
     dorian "And you believe him?"
 
     "A brief silence erupted between us."
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line36
     svante "No… I think he's… lying…"
     voice audio.svante_ch5_line37
@@ -1959,16 +1964,16 @@ label ch5_interrogation:
     svante "I was the only person my sister talked to about this. At first, I got mad at her for doubting Father but after her death, I… I started to wonder."
     voice audio.svante_ch5_line41
     svante "What if she was right?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line73
     dorian "So you think the man you were sent to kill today… was innocent?"
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line42
     svante "Y-Yes, sir."
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I nodded. That was brave of him to say. For an aldorith, it would have been a death sentence."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line43
     svante "Do you have any more questions, sir?"
 
@@ -1996,12 +2001,12 @@ label ch5_interrogation_menu:
 
 # --- Q1 ---
 label ch5_interro_q1:
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line74
     dorian "When I saw the battlefield, the bodies of your brothers and sisters were scattered around him. Yet, you… you were still alive."
     voice audio.dorian_ch5_line75
     dorian "How did he know you were on his side?"
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line44
     svante "I… defended him. He saw it, surely."
     voice audio.svante_ch5_line45
@@ -2013,52 +2018,52 @@ label ch5_interro_q1:
 
     "I studied him carefully. He wasn't lying. The tremor in his voice, the way his body tensed at the memory—it was all genuine."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line76
     dorian "What about your commanders? Tell me about them."
     
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line48
     svante "Oh them? Tian Xun was um…"
 
     "Svante shifted, adjusting his wrists against the cuffs. He winced slightly."
     
-    show svante alt_guilty at right_char
+    show svante alt_guilty at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line49
     svante "Sorry. A little bit itchy."
     voice audio.svante_ch5_line50
     svante "Tian Xun was a loose cannon. He's obsessed with bombs. They say he grew up in Tianho in an impoverished family, even though his father worked for the King."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line77
     dorian "You mean King Long Shen, the late king of Tianho?"
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     "Svante frowned a little."
 
     voice audio.svante_ch5_line51
     svante "I think so. Sorry, sir. I'm not familiar with the other kings. I only know Father."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line78
     dorian "And the last one? Lady Aoi?"
-    show svante normal_happy at right_char
+    show svante normal_happy at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line52
     svante "Oh! Believe it or not, Lady Aoi used to be a songstress from Hinami."
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line79
     dorian "That's not what I asked."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     "Svante flinched."
 
     voice audio.svante_ch5_line53
     svante "O-Oh! Sorry, sir! She—uh—she's a powerful water channeler from Hinami. She just… showed up at the palace one day, gave a demonstration of her power."
     voice audio.svante_ch5_line54
     svante "Father was impressed. So impressed that he made her commander of an entire battalion of Aldoriths."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line80
     dorian "You don't sound convinced."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line55
     svante "Just between you and me, sir… word among my brothers is that Father only sees Queen Ekaterina in her."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line81
     dorian "Yeah…. I can see that."
 
@@ -2066,37 +2071,37 @@ label ch5_interro_q1:
 
 # --- Q2 ---
 label ch5_interro_q2:
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line82
     dorian "What's your name?"
 
     "Svante blinked at me, looking genuinely confused—almost as if the question was unnecessary."
 
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line56
     svante "Svante, sir. Svante Nordstrom."
 
     "I tilted my head slightly."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line83
     dorian "Nordstrom. As in Gustav Nordstrom. You took on the king's last name. I'm surprised he even let you do that."
 
     voice audio.svante_ch5_line57
     svante "You're not wrong, sir. Usually, us aldoriths carry the last name of their mothers."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line58
     svante "M-Mother received special permission from Father, sir."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line4
     dorian "Really? How come?"
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line59
     svante "Mother was at the top of her career when she gave birth to me. She was a songstress. Father was really into her back then."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line85
     dorian "What about your sister?"
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line60
     svante "Kristin… She only carried my mother's name."
 
@@ -2106,45 +2111,45 @@ label ch5_interro_q2:
 
 # --- Q3 ---
 label ch5_interro_q3:
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line86
     dorian "How did you recognize me?"
     "He shifted slightly, as if trying to find the right words."
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line61
     svante "I… I actually didn't at first, sir."
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line87
     dorian "How come?"
 
     "Svante's gaze flickered toward me. At my hair, my clothes, everything."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line62
     svante "Well, your hair, sir. It's different. And your clothes."
     "He bit his lip, hesitating."
     voice audio.svante_ch5_line63
     svante "Elias was also wearing girl's clothes so I didn't recognize him."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line88
     dorian "But then you figured it out."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line64
     svante "It wasn't until I heard you call Elias' name that I put all the pieces together."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line89
     dorian "You called me a different name as well. Why?"
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line65
     svante "The Massacrer of Mjoll. They named you that after you… you—"
 
     "His breathing quickened, and his eyes darted toward mine—fearful, desperate. A long silence erupted."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line90
     dorian "I won't hurt you. I promise."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line66
     svante "O-Okay, sir."
 
@@ -2152,11 +2157,11 @@ label ch5_interro_q3:
 
 # --- Q4 ---
 label ch5_interro_q4:
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line91
     dorian "That's all. I don't have any more questions for you."
     "I exhaled, stepping back, watching him in the dim light. His breathing had steadied, but his posture remained rigid, his body still caught between fear and exhaustion."
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line67
     svante "Sir Dorian…"
     voice audio.svante_ch5_line68
@@ -2164,17 +2169,17 @@ label ch5_interro_q4:
 
     "I narrowed my eyes."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line92
     dorian "If I were you?"
 
     "He nodded. His violet eyes met mine, pleading, uncertain. No malice. No scheming. Just a hurt and tormented man."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line93
     dorian "I wouldn't let doubt rule me. I would decide. I'd choose a side. And stick with it."
 
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     "He swallowed, nodding slowly."
 
 # =============================================================================
@@ -2186,22 +2191,22 @@ label ch5_interro_common:
     "I felt that he wasn't a threat. Not now."
     "I reached into my pocket, fingers brushing over the cold metal key Weng had given me."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line94
     dorian "Can I trust you?"
 
     "His head shot up."
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line69
     svante "Trust me with what?"
 
     "I held the key up between us, letting it glint in the dim light."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line95
     dorian "Swear to me—by your god—that you will never harm my family."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line70
     svante "I… I wasn't planning to, but…. I swear by Enoch that I will never harm you or your family."
 
@@ -2210,10 +2215,10 @@ label ch5_interro_common:
     "The heavy Jinshen steel fell away from his wrists."
     "Svante inhaled sharply, his arms dropping limply to his sides. He stared at his freed hands for a moment."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line96
     dorian "Don't make me regret this."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line71
     svante "I won't, sir."
 
@@ -2239,19 +2244,19 @@ label ch5_return_to_lab:
     voice audio.weng_ch5_line46
     weng "Proper introductions are in order. I'm Cai Weng, Master Yuxuan's assistant. It's a pleasure to meet you, young man."
 
-    show svante normal_sad at left_char
+    show svante normal_sad at left_char with Dissolve(0.1)
     "He blinked, as if taken aback by the kindness in her voice. He looked at me, and then back to her."
 
     show svante normal_neutral at left_char with Dissolve(0.2)
     voice audio.svante_ch5_line72
     svante "I… Yes. Thank you, m-mam. My name's Svante. Svante Nordstrom. I-I'm so glad to meet you."
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     voice audio.weng_ch5_line47
     weng "Dinner is ready. Please have a seat, gentlemen and I'll be serving you up the food."
     voice audio.weng_ch5_line48
     weng "I hope you like haugensoppa. I made it just for you."
-    show svante normal_happy at left_char
+    show svante normal_happy at left_char with Dissolve(0.1)
     voice audio.svante_ch5_line73
     svante "Haugensoppa? You… know Mjoll cuisine?"
     voice audio.weng_ch5_line49
@@ -2281,16 +2286,16 @@ label ch5_return_to_lab:
     tim "Rainbows are not educational, Elias."
 
     "Elias gasped as he spotted Svante. His eyes widened with delight."
-    show elias normal_lying at right_char_kids
+    show elias normal_lying at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch5_line19
     elias "Look! It's the pink haired guy! He's awake!"
-    show tim alt_normal at left_char_kids
+    show tim alt_normal at left_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line21
     tim "Huh? He's not pink haired, Elias! It's violet!"
-    show elias normal_evil at right_char_kids
+    show elias normal_evil at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch5_line20
     elias "Tim, pink and violet are the same. Right, Tedda?"
-    show tim alt_annoyed at left_char_kids
+    show tim alt_annoyed at left_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line22
     tim "What?! They're completely different colors. Right, Miss Weng?"
     show svante normal_base at center_char with Dissolve(0.2)
@@ -2301,7 +2306,7 @@ label ch5_return_to_lab:
     voice audio.weng_ch5_line50
     weng "Tim, quit it. You're embarrassing me in front of Sir Burnham and Sir Nordstrom. Now be a good boy and help me serve dinner."
 
-    show tim shy at left_char_kids
+    show tim shy at left_char_kids with Dissolve(0.1)
     "Tim huffed but did as he was told, setting his book down carefully before moving to grab a stack of bowls."
     hide svante
     hide tim
@@ -2323,7 +2328,7 @@ label ch5_chung_wakes:
     show dorian neutral at left_char with Dissolve(0.2)
     voice audio.dorian_ch5_line97
     dorian "Elias, why did you even bring all of those—"
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
 
     "I felt something. A shift in the air."
     "A presence."
@@ -2342,7 +2347,7 @@ label ch5_chung_wakes:
     roboto "One for you… One for you…"
     voice audio.roboto_ch5_line16
     roboto "Would you prefer ice cold or lukewarm, Sir Niko?"
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line63
     niko   "Ice cold. Thanks."
@@ -2350,12 +2355,13 @@ label ch5_chung_wakes:
     "Then—the voice returned. Not spoken aloud, but entering our minds like a gentle ripple through still water."
     hide niko
     hide roboto
+    with Dissolve(0.1)
     show niko normal_base at right_char
     show chunghee normal_neutral at center_char
     with Dissolve(0.2)
     chung_hee "Once again, I wish to express my deepest gratitude. Words alone cannot convey how much I owe you."
     chung_hee "If not for you, I would have met a terrible fate."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line98
     dorian    "Don't mention it."
     voice audio.niko_ch5_line64
@@ -2363,47 +2369,47 @@ label ch5_chung_wakes:
 
     "There was a pause."
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "Forgive me. I can only communicate through mind channeling. I hope it is not of any inconvenience to you."
-    hide niko
+    hide niko with Dissolve(0.1)
     show yuxuan normal_neutral at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line35
     yuxuan    "Really? Why not?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "I was born unable to speak. Nor hear. This is the only way I can make myself understood."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line65
     niko      "So you're a deaf-mute… and you're using your channeling abilities to expand your senses. That's impressive."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch5_line99
     dorian    "I respect that."
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line66
     niko      "I actually know a little bit of sign language. My brother and I studied it so we can translate for the Emperor of Kyeongjang's son—he's also a deaf-mute."
-    hide niko
+    hide niko with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line75
     svante    "The son of the Emperor of Kyeongjang's a deaf-mute? Poor guy."
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "You know my father?"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_serious at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line67
     niko      "Father?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "Yes, you've heard correctly. My name is Hyon Chung-hee. Son of Emperor Hyon Min-joon. And the Emperor of Kyeongjang."
 
     "Silence."
     "For a moment, none of us reacted."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     dorian    "?!"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line68
     niko      "?!"
-    hide niko
-    show svante normal_nervous at right_char
+    hide niko with Dissolve(0.1)
+    show svante normal_nervous at right_char with Dissolve(0.1)
     svante    "?!"
 
     "Niko inhaled sharply, his eyes darting toward me as if to confirm that we had all heard the same thing."
@@ -2411,22 +2417,23 @@ label ch5_chung_wakes:
     "Tim, who had been carefully placing spoons on the table, accidentally dropped one. The clatter was deafening in the silence."
     hide chunghee
     hide svante
+    with Dissolve(0.1)
     show elias normal_happy at right_char_kids with Dissolve(0.2)
     "Only Elias remained blissfully unaware, still coloring, his small voice humming a made-up tune."
 
     voice audio.elias_ch5_line21
     elias "La la la la..."
     tedda "..."
-    hide elias
+    hide elias with Dissolve(0.1)
 
     show yuxuan normal_lying at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line36
     yuxuan "T-The Emperor?!"
-    hide yuxuan 
+    hide yuxuan  with Dissolve(0.1)
     show weng alt_nervous at right_flip with Dissolve(0.2)
     voice audio.weng_ch5_line51
     weng   "By the stars…"
-    hide weng 
+    hide weng  with Dissolve(0.1)
     show yuxuan normal_normal at right_char with Dissolve(0.2)
 
 
@@ -2434,29 +2441,30 @@ label ch5_chung_wakes:
     show chunghee alt_neutral at center_char with Dissolve(0.2)
     "His expression did not waver. He did not fidget, nor did he show any trace of uncertainty."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     dorian    "You must be joking. The Emperor of Kyeongjang is dead."
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     chung_hee "Yes, my Father, Emperor Min-joon and my mother passed away during their time in Tianho."
     chung_hee "In the wake of their passing, I was named their successor. I am the Emperor now."
     
-    show chunghee normal_sad at center_char
+    show chunghee normal_sad at center_char with Dissolve(0.1)
     "He exhaled slowly."
 
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     chung_hee "But as for me. I am alive and well. Thanks to all of your combined efforts."
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I blinked."
     "Silence stretched across the room, thick and suffocating. No one spoke. No one moved."
     "Then—"
 
     show yuxuan normal_happy at right_char
     show dorian serious at left_char
+    with Dissolve(0.1)
     "Yuxuan burst out laughing."
 
     yuxuan "HAHAHAHAHAHA!"
-    show yuxuan alt_smile at right_char
+    show yuxuan alt_smile at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line37
     yuxuan "Pfft—alright, that's it. I've officially lost my mind because of that damn propulsion system. This is a dream. A really weird, stress-induced dream."
     "He waved a hand in front of his face dramatically."
@@ -2467,14 +2475,14 @@ label ch5_chung_wakes:
 
     voice audio.yuxuan_ch5_line39
     yuxuan "Come on, Miss Weng. Pinch me. Maybe I'll wake up in my office, face-first in a pile of paperwork."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show weng alt_close_eyes_nervous at right_flip with Dissolve(0.2)
     voice audio.weng_ch5_line52
     "Weng let out a long, suffering sigh, pressing her fingers against her temples."
 
     voice audio.weng_ch5_line53
     weng "Master Yuxuan… Are you sure?"
-    hide weng
+    hide weng with Dissolve(0.1)
     show niko normal_smile at right_char with Dissolve(0.2)
     "Niko chuckled, shaking his head."
 
@@ -2482,7 +2490,7 @@ label ch5_chung_wakes:
     niko "Well, I didn't exactly expect to be dining with the owner of Cheng Industries at his 'secret laboratory' either, let alone with an elderly lady as his personal maid… but here we are."
     voice audio.niko_ch5_line70
     niko "On top of that, let's look at our dinner party for a second, shall we?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line71
     niko "First up, we have a former Paladin who can channel earth, wind, and fire. Let's also not forget the spectacle with the draconic fire earlier."
 
@@ -2498,18 +2506,18 @@ label ch5_chung_wakes:
     niko "A talking robot with a mind of its own. And—"
 
     # play sound sfx_roboto_crash                 # PLACEHOLDER — Roboto crash SFX
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show roboto error at center_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line17
     roboto "R-R-R-R-R-R-R-ooooooo- *crashes*"
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show chunghee alt_neutral at center_char with Dissolve(0.2)
     show niko normal_ignore at right_char
     voice audio.niko_ch5_line74
     niko "Right. Moving on."
     voice audio.niko_ch5_line75
     niko "A green-haired toddler who, for some reason, spends his free time reading damn bibliographies instead of playing with toys."
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show tim shy at center_char_kids with Dissolve(0.2)
     "Tim blinked up at him from behind his book, entirely unfazed. Then, as if on cue, he calmly turned a page in his heavy tome—Tianho's Ancient Dynasties."
 
@@ -2521,44 +2529,45 @@ label ch5_chung_wakes:
     "Elias suddenly giggled, completely unaware of the tension in the air. He held up his coloring book, showing it off proudly."
     voice audio.elias_ch5_line22
     elias "Look! Wainbow, daddy!"
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim alt_nervous at center_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line24
     tim   "Not now, Elias. The grown-ups are talking."
     hide tim with Dissolve(0.1)
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line77
     niko  "And you have me. A Prophet of the death god, Enoch, who happens to be his Chosen."
 
     "Niko shot Yuxuan a slow, knowing smirk."
 
-    show niko normal_serious at right_char
+    show niko normal_serious at right_char with Dissolve(0.1)
 
     niko "So tell me, Yuxuan—are you really that surprised that the man sitting with us is the Emperor of Kyeongjang?"
     voice audio.niko_ch5_line78
     "Yuxuan stared at him for a moment, then exhaled, shaking his head."
-    hide niko
+    hide niko with Dissolve(0.1)
     show yuxuan alt_think at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line40
     yuxuan "You make a fair point."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show weng alt_base at right_flip with Dissolve(0.2)
     voice audio.weng_ch5_line54
     weng   "You're such an open-minded and understanding person, Master Yuxuan. The pinnacle of open-mindedness!"
-    hide weng
+    hide weng with Dissolve(0.1)
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line41
     yuxuan "Aww thank you, Miss Weng! Well, I am a veryyyyy understanding man, so—"
     show yuxuan normal_neutral at right_char
 
     show dorian normal_alt_calm at left_char # with Dissolve(0.2)
+    with Dissolve(0.1)
     "I buried my face in my palms."
     show dorian serious at left_char
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     chung_hee "I see. You are all… quite the interesting group."
 
     "Chung-hee's expression remained unreadable. Svante suddenly spoke up, his voice quiet but firm."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line77
     svante "If I may… I believe His Majesty is telling the truth."
@@ -2569,7 +2578,7 @@ label ch5_chung_wakes:
     svante "Father said the Emperor of Kyeongjang was going to be the next target. He told us the Emperor was a sick, twisted, dishonorable person."
 
     "His hands clenched into fists."
-    show svante normal_angry at right_char
+    show svante normal_angry at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line79
     svante "And I believed him at first. I had no reason to but I believed him."
     voice audio.svante_ch5_line80
@@ -2579,12 +2588,12 @@ label ch5_chung_wakes:
     voice audio.svante_ch5_line82
     svante "But looking at it now, he must have been lying. Not that you weren't the Emperor but the part where you were a sick, twisted person."
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee regarded him for a long moment, expression unreadable."
     "Then—he gave a small, approving nod."
-    show chunghee alt_wink at center_char
+    show chunghee alt_wink at center_char with Dissolve(0.1)
     chung_hee "Thank you."
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     "The Emperor of Kyeongjang… No, Emperor Min-joon's son."
     "A thousand questions swirled in my mind. Questions about the past. About the Tragedy of Tianho. About why he was targeted. About why he was here."
     "But before I could voice a single thought—"
@@ -2593,6 +2602,7 @@ label ch5_chung_wakes:
     "Her voice was warm and full of praise as she placed a steaming bowl in front of Yuxuan."
     hide svante
     hide chunghee
+    with Dissolve(0.1)
     show weng normal at right_flip
     with Dissolve(0.2)
     voice audio.weng_ch5_line55
@@ -2605,28 +2615,28 @@ label ch5_chung_wakes:
 
     "He clasped his hands together dramatically."
     "Meanwhile, Roboto whirred into view, carefully balancing trays of food."
-    hide weng
+    hide weng with Dissolve(0.1)
     # end food 10
 
     show roboto happy at right_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line18
     roboto "Robotoooo is ready to s-s-s-serve~ F-f-food is ready~"
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line79
     niko   "The robot shouldn't be allowed to serve food. It might crash again."
-    show yuxuan normal_angry at center_char
+    show yuxuan normal_angry at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line42
     yuxuan "You're the only one who thinks that, Niko. Roboto is a technological marvel and- IT. DOES. NOT. CRASH."
 
     "Niko's eyes blinked."
-    show niko normal_ignore at right_char 
+    show niko normal_ignore at right_char  with Dissolve(0.1)
     voice audio.niko_ch5_line80
     niko   "Yuxuan, I mean no disrespect to Roboto. It's amazing. But a while ago it almost crashed and brought down a jar filled with water in it."
-    show yuxuan normal_lying at center_char
+    show yuxuan normal_lying at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line43
     yuxuan "Why I never!"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line81
     niko   "Dorian was there. He'll be our witness. Dorian, it's true right?"
 
@@ -2641,29 +2651,29 @@ label ch5_roboto_witness:
     menu:
         "Yes. Roboto almost tripped.":
             $ ch5_roboto_witness = "yes"
-            $ niko_affection += 1               # +1 Niko affection
+            $ A1_niko_affection += 1               # +1 Niko affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "Yeah… Roboto did almost trip. But Niko caught it in time, so I don't think it matters much."
-            show niko normal_base at right_char
+            show niko normal_base at right_char with Dissolve(0.1)
             voice audio.niko_ch5_line82
             niko   "There you have it."
 
             # play sound sfx_roboto_beep          # PLACEHOLDER — Roboto beep SFX
-            hide yuxuan
+            hide yuxuan with Dissolve(0.1)
             show roboto bad_mood at center_robot with Dissolve(0.2)
             voice audio.roboto_ch5_line19
             roboto "M-m-m-master Dorian is c-c-correct! I was transporting water, but my sensors momentarily overloaded. Sir Niko was able to assist me."
-            hide roboto
+            hide roboto with Dissolve(0.1)
             show yuxuan alt_think at center_char with Dissolve(0.2)
             voice audio.yuxuan_ch5_line44
             yuxuan "Oh… Maybe some recalibration is in order. Can't have my masterpiece faltering under pressure."
             "Roboto blinked rapidly, its mechanical eyes adjusting."
-            hide yuxuan
-            show roboto happy at center_robot
+            hide yuxuan with Dissolve(0.1)
+            show roboto happy at center_robot with Dissolve(0.1)
             voice audio.roboto_ch5_line20
             roboto "C-c-confirmed! Roboto will undergo recalibration!"
-            hide roboto
+            hide roboto with Dissolve(0.1)
             show yuxuan normal_neutral at center_char with Dissolve(0.2)
             "Yuxuan sighed, adjusting his glasses."
 
@@ -2676,31 +2686,31 @@ label ch5_roboto_witness:
 
         "No. Roboto had it all under control.":
             $ ch5_roboto_witness = "no"
-            $ yuxuan_affection += 1             # +1 Yuxuan affection
+            $ A3_yuxuan_affection += 1             # +1 Yuxuan affection
 
             "I shook my head, folding my arms."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "No, Roboto had it under control."
 
             # play sound sfx_roboto_beep          # PLACEHOLDER — Roboto beep SFX
-            hide yuxuan
+            hide yuxuan with Dissolve(0.1)
             show roboto happy at center_robot with Dissolve(0.2)
             voice audio.roboto_ch5_line22
             roboto "D-d-data inconclusive. Roboto must recalibrate!!"
-            hide roboto
+            hide roboto with Dissolve(0.1)
             show yuxuan normal_happy at center_char with Dissolve(0.2)
             "Yuxuan's expression brightened, and he gave me a satisfied nod."
 
             voice audio.yuxuan_ch5_line46
             yuxuan "Thank you, Dorian. At least someone here has good judgment."
 
-            show niko normal_ignore at right_char
+            show niko normal_ignore at right_char with Dissolve(0.1)
             "Niko pinched the bridge of his nose."
 
             voice audio.niko_ch5_line83
             niko   "Oh, for the love of—"
-            show yuxuan alt_smile at center_char
+            show yuxuan alt_smile at center_char with Dissolve(0.1)
             voice audio.yuxuan_ch5_line47
             yuxuan "Let this be a lesson, Niko. One should never question the technological marvel that is Roboto."
     hide dorian
@@ -2714,7 +2724,7 @@ label ch5_roboto_witness:
 
     "As Roboto spoke, its small monitor flickered to life, displaying a video of hand signs."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line24
     roboto "T-T-This is called mountain herb stew along with a plate of sautéed highland greens."
     voice audio.roboto_ch5_line25
@@ -2726,31 +2736,31 @@ label ch5_roboto_witness:
     "Chung-hee's expression softened slightly. He raised his hands and responded with hand signs of his own."
     "Roboto paused for a moment before beeping happily."
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line26
     roboto "A-A-A-Affirmative! I will not call you Your Majesty. T-t-thank you, Sir Chung-hee!"
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show niko alt_tense at right_char with Dissolve(0.2)
     "Niko and Yuxuan paused, exchanging glances."
 
     voice audio.niko_ch5_line84
     niko   "Roboto knows sign language?"
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show yuxuan normal_neutral at center_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line48
     yuxuan "I programmed Roboto to recognize multiple languages, but I don't remember programming sign language. Fascinating…"
     voice audio.weng_ch5_line56
     weng   "As is expected from our amazing and very talented inventor, Master Yuxuan!"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line49
     yuxuan "Aww thank you, Miss Weng!"
-    show niko normal_ignore at right_char
+    show niko normal_ignore at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line85
     niko   "Oh brother."
 
-    show niko alt_irritate at right_char
+    show niko alt_irritate at right_char with Dissolve(0.1)
     "Niko rolled his eyes, picked up his chopsticks and started eating."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     "Chung-hee picked up his chopsticks, taking a bite of the stew. For the first time since arriving, he looked almost… at ease."
@@ -2796,71 +2806,71 @@ label ch5_food_moonlit:
 
     menu:
         "Is it because of the egg?":
-            $ yuxuan_affection += 1             # +1 Yuxuan affection
+            $ A3_yuxuan_affection += 1             # +1 Yuxuan affection
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             "I looked at the egg and it vaguely looked like the moon."
 
             dorian "Is it because of the egg?"
 
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             "Yuxuan looked at the bowl."
 
             voice audio.yuxuan_ch5_line51
             yuxuan "Oh you're right. I haven't thought of it that way."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "You mean you didn't know, Yu?"
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             voice audio.yuxuan_ch5_line52
             yuxuan "I don't know. That's why I'm asking."
 
         "I don't know.":
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "No. Why are they called that?"
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             voice audio.yuxuan_ch5_line53
             yuxuan "I don't know. That's why I'm asking you."
-            show dorian normal_alt_annoyed at left_char
+            show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
             dorian "This is my first time eating these, Yu. Why would I know that?"
-            show yuxuan normal_lying at center_char
+            show yuxuan normal_lying at center_char with Dissolve(0.1)
             yuxuan "… Oh…"
             voice audio.yuxuan_ch5_line54
             yuxuan "Well, yeah. Figures. You don't really look like someone who dabbles in fine cuisine."
 
             "I raised an eyebrow."
 
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "What's that supposed to mean?"
 
             "Yuxuan waved his hand vaguely."
 
-            show yuxuan normal_neutral at center_char
+            show yuxuan normal_neutral at center_char with Dissolve(0.1)
             voice audio.yuxuan_ch5_line55
             yuxuan "No, no, no. I didn't mean it in a bad way. I meant that you can eat almost anything and still be happy! Not many people are like you, Dorian."
-            show dorian neutral at left_char
+            show dorian neutral at left_char with Dissolve(0.1)
             dorian "I'll take that as a compliment. Thanks, Yu."
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    show roboto happy at right_robot
+    show roboto happy at right_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line28
     roboto "M-m-m-master Dorian is a man of culture! M-m-my sensors detect a 92.3%% probability that he will e-e-e-enjoy this meal!"
-    show yuxuan normal_neutral at center_char
+    show yuxuan normal_neutral at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line56
     yuxuan "But what happens if Dorian doesn't like it?"
 
     "There was a brief pause. Then—"
 
-    show roboto error at right_robot
+    show roboto error at right_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line29
     roboto "E-e-e-error! Scenario not calculated! Rebooting crisis protocol… Processing…"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I sighed."
 
     dorian "Yu, stop messing with Roboto."
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line57
     yuxuan "It's just part of his crisis protocol subroutine, Dorian. He can handle it."
 
@@ -2871,7 +2881,7 @@ label ch5_food_moonlit:
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
-    show roboto happy at right_robot
+    show roboto happy at right_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line30
     roboto "A c-c-c-compliment? Certainly!"
 
@@ -2879,26 +2889,26 @@ label ch5_food_moonlit:
 
     voice audio.roboto_ch5_line31
     roboto "M-M-Master Yuxuan, you are the greatest inventor Ena has ever known! Your intelligence will put the Almighty Tetrad Li Mengtia to shame!"
-    show yuxuan alt_smile at center_char
+    show yuxuan alt_smile at center_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line59
     yuxuan "Awww Roboto, you really know how to make a guy feel special."
-    show roboto happy at right_robot
+    show roboto happy at right_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line32
     roboto "I-I-I'm glad you like it, Master Y-Y-Yuxuan! I-I-I try my b-b-best!"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I let out a slow breath, stirring my noodles with my chopsticks. The warmth from the broth seeped into my fingers."
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show chunghee normal_v2 at right_char with Dissolve(0.2)
     chung_hee "You should be proud of yourself, Sir Yuxuan."
 
-    show yuxuan normal_happy at center_char
+    show yuxuan normal_happy at center_char with Dissolve(0.1)
     "Yuxuan blinked, his smirk brightening into a smile as he turned to the Emperor."
 
     voice audio.yuxuan_ch5_line60
     yuxuan "Really, Your Majesty?"
     "Chung-hee nodded, setting his chopsticks down neatly beside his bowl."
-    show chunghee alt_neutral at right_char
+    show chunghee alt_neutral at right_char with Dissolve(0.1)
     chung_hee "Roboto is a marvel. Not only functional but adaptable. Few inventors create something with the ability to learn, let alone something with such… personality."
     chung_hee "In Kyeongjang, our automatons do not use sign language. They do not adapt to individual needs. I appreciate what Roboto did."
 
@@ -2927,15 +2937,15 @@ label ch5_food_truffle:
     "I eyed the venison, the glaze shimmering. Chung-hee leaned forward slightly, his sharp eyes scanning my plate with interest."
 
     chung_hee "Fascinating…"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian    "Something wrong?"
 
-    show chunghee alt_smirk at center_char
+    show chunghee alt_smirk at center_char with Dissolve(0.1)
     "He studied the dish as if committing every detail to memory."
 
     chung_hee "Kyeongjang is familiar with many foreign dishes, but an Imperial Truffle Roast is a rarity among our people."
     chung_hee "Truffles themselves are difficult to acquire within our lands… and venison, though not unheard of, is not often prepared in this manner."
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show tim think at right_char_kids with Dissolve(0.2)
     "Tim, who had been quietly flipping through the pages of his latest book, had dropped it onto the table. He blinked up at Chung-hee, adjusting his glasses."
 
@@ -2945,7 +2955,7 @@ label ch5_food_truffle:
     "The table fell silent."
     "I turned to Tim, half-expecting him to be making things up. But no—his expression was as serious as ever."
 
-    show chunghee alt_tense at center_char
+    show chunghee alt_tense at center_char with Dissolve(0.1)
     "Chung-hee stiffened. Just barely, but enough for me to notice. His gaze, so often cool and composed, flickered with something else. A sharp glint of recognition."
 
     chung_hee "...That practice fell out of use centuries ago."
@@ -2955,11 +2965,11 @@ label ch5_food_truffle:
     chung_hee "Few even remember it."
 
     "Tim tilted his head."
-    show tim alt_normal at right_char_kids
+    show tim alt_normal at right_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line26
     tim "It was abandoned before the time of the Death God Enoch, correct?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee's head turned toward the boy fully now, shocked."
 
     voice audio.tim_ch5_line27
@@ -2967,44 +2977,46 @@ label ch5_food_truffle:
 
     "He spread his tiny arms wide to emphasize just how massive Yuxuan's collection was."
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee studied him with the same scrutiny he had given my meal moments before."
 
     chung_hee "How old are you?"
 
     "Tim adjusted his glasses."
-    show tim alt_serious at right_char_kids
+    show tim alt_serious at right_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line28
     tim   "Five."
 
     show dorian normal_alt_calm at left_char
     show chunghee alt_wink at center_char
+    with Dissolve(0.1)
     "I blinked."
     "Chung-hee blinked."
     "The two of us stared at him."
     show chunghee alt_neutral at center_char
     show dorian neutral at left_char
+    with Dissolve(0.1)
     dorian "Are you sure?"
-    show tim alt_normal at right_char_kids
+    show tim alt_normal at right_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line29
     tim    "Yes, I'm sure, sir Dorian."
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show roboto happy at center_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line35
     roboto "R-R-Roboto confirms! Tim is 100%% five years old!"
 
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show yuxuan normal_happy at center_char with Dissolve(0.2)
     yuxuan "Ahaha… don't mind Tim. He's just... Well, we call him a little genius here."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     chung_hee "A five-year-old… quoting lost histories and the fall of divine ages..."
-    show chunghee alt_smirk at center_char
+    show chunghee alt_smirk at center_char with Dissolve(0.1)
     chung_hee "In Kyeongjang, wisdom is not measured by years, but by the depth of one's spirit. And yours, young scholar, is fathomless."
 
-    show tim alt_pumped at right_char_kids
+    show tim alt_pumped at right_char_kids with Dissolve(0.1)
     "Tim beamed proudly, pushing up his glasses with both hands."
     voice audio.tim_ch5_line30
     tim "Anyway, thank you for confirming it, Your Majesty. I was just curious."
@@ -3019,15 +3031,16 @@ label ch5_food_hotpot:
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
     hide niko
     hide chunghee
+    with Dissolve(0.1)
     show roboto happy at right_robot
     with Dissolve(0.2)
     voice audio.roboto_ch5_line36
     roboto "A dish fit for a traveler of tides and a seeker of shadows! Presenting your Fisherman's Hotpot, M-M-Master D-D-Dorian—crafted with the heart of the sea and the soul of the island itself!"
 
     # TODO: FOOD15
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Thank you, Roboto. It looks delicious."
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     "As I took the first sip of the miso broth, the rich umami flavor spread over my tongue, warming me instantly."
     "The fresh seafood, barely touched by the heat, still had that ocean-bright taste, balanced perfectly with the mild tofu and tender greens."
@@ -3040,40 +3053,41 @@ label ch5_food_hotpot:
 
     "He finished his prayer and glanced at my bowl."
 
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line88
     niko   "Delicious, huh?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Yeah. The miso broth with the seafood is a great combination."
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line89
     niko   "It does. Used to have that all the time when I stopped by Hinami Port for fish and supplies."
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I raised a brow."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Didn't peg you as the type to sit around a fire with a bunch of fishermen."
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line90
     niko   "Well, when you're a doctor in a small village in Hamatame, you take what you can get. They'd trade me fresh seafood, supplies for herbs and organic medicine."
     voice audio.niko_ch5_line91
     niko   "Oftentimes I'd end up sharing a meal with them."
 
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     "He stirred his spoon through the broth, a hint of nostalgia flickering across his face."
 
     voice audio.niko_ch5_line92
     niko "Hinami isn't as wealthy as Mjoll or Gale, but the sea is generous. The people there take care of each other. No one eats alone after a long day at sea."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "I take it you miss your home nation?"
-    show niko normal_base at right_char
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line93
     niko   "You could say that. They say that Hinami will be hosting the Tragedy of Tianho's anniversary tomorrow. Perhaps I'll—"
 
     "A small commotion at the other end of the table pulled my attention away."
     hide niko
     hide dorian
+    with Dissolve(0.1)
     show elias normal_mad at right_char_kids
     show tim alt_annoyed at left_char_kids
     with Dissolve(0.2)
@@ -3097,29 +3111,29 @@ label ch5_food_hotpot:
     niko "What seems to be the problem?"
     voice audio.tim_ch5_line33
     tim  "Elias won't eat his vegetables!"
-    hide tim
+    hide tim with Dissolve(0.1)
 
     show dorian serious at left_char with Dissolve(0.2)
     dorian "Elias. We talked about this. You need to eat your vegetables."
-    hide dorian
+    hide dorian with Dissolve(0.1)
     show tim normal at left_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line34
     tim    "Listen to your father, Elias."
-    show elias normal_sad at right_char_kids
+    show elias normal_sad at right_char_kids with Dissolve(0.1)
     voice audio.elias_ch5_line24
     elias "But daddy…"
-    show niko normal_smile at center_char
+    show niko normal_smile at center_char with Dissolve(0.1)
     voice audio.niko_ch5_line95
     niko   "Alright, kiddo. How about this—if you eat your chicken, rice, and veggies, I'll read you a bedtime story tonight. How's that sound?"
 
-    show elias normal_happy at right_char_kids
+    show elias normal_happy at right_char_kids with Dissolve(0.1)
     "Elias's eyes lit up."
 
     elias "A story?! Okay!"
 
     "Elias glanced at his plate, then back at Niko. He picked up his spoon and carefully scooped up a piece of chicken. After a moment's hesitation, he popped it into his mouth."
 
-    show elias normal_happy at right_char_kids
+    show elias normal_happy at right_char_kids with Dissolve(0.1)
     "Then he beamed again."
 
     voice audio.elias_ch5_line26
@@ -3128,13 +3142,13 @@ label ch5_food_hotpot:
     tim   "(muttering) Manipulated by bedtime stories…"
 
     "After a pause, he fidgeted slightly before speaking up."
-    show tim alt_nervous at left_char_kids
+    show tim alt_nervous at left_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line36
     tim  "I… I'm included too, Sir Niko, right? I can join the storytime… if you want…"
 
-    show niko normal_smile at center_char
+    show niko normal_smile at center_char with Dissolve(0.1)
     "Niko grinned."
-    show niko alt_base at center_char
+    show niko alt_base at center_char with Dissolve(0.1)
     voice audio.niko_ch5_line96
     niko "Sure, but only if you eat your food too."
     voice audio.tim_ch5_line37
@@ -3144,6 +3158,7 @@ label ch5_food_hotpot:
     hide tim
     hide elias
     hide niko
+    with Dissolve(0.1)
     show roboto happy at right_robot
     show dorian neutral at left_char
     with Dissolve(0.2)
@@ -3151,7 +3166,7 @@ label ch5_food_hotpot:
     roboto "C-c-cognitive reinforcement successful! Reward-based motivation confirmed as eff-eff-effective!"
 
     "I glanced at Niko, offering a nod of thanks."
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     dorian "Thanks for your help with Elias. Didn't know you were good with kids."
 
@@ -3166,7 +3181,7 @@ label ch5_food_hotpot:
     "Across the table, Chung-hee had been quietly observing."
 
     chung_hee "Fascinating… You should be proud of yourself, Sir Niko."
-    show niko normal_smile at right_char
+    show niko normal_smile at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line98
     niko      "I used to have a lot of kid patients back in Hamatame. You learn a few tricks when you're treating scared little ones, Your Majesty."
 
@@ -3179,6 +3194,7 @@ label ch5_food_lamb:
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
     hide niko
     hide chunghee
+    with Dissolve(0.1)
     show roboto happy at right_robot
     with Dissolve(0.2)
     voice audio.roboto_ch5_line38
@@ -3187,28 +3203,28 @@ label ch5_food_lamb:
     "I stared down at the plate in front of me. Thick, spiced mead sauce clung to the slow-braised lamb shank, its aroma warm and heady."
     "Beside it, a dense slice of black rye bread and a small dish of herbed butter sat neatly on the tray."
     "It looked rich—very rich. Heavy. Nothing like the plain food I usually ate."
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line83
     svante "Have you eaten that before, Sir Dorian? Back in Mjoll?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "I… don't remember eating this. I usually just made something easy—stews, boiled potatoes, whatever was quick."
-    show svante normal_neutral at right_char
+    show svante normal_neutral at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line84
     svante "Did Father's cooks serve you food when you were working under him as a mercenary?"
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "No, I always refused. Dishes like this are too fancy for my taste back then."
 
     "I glanced at him, then back at the food."
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     "Svante hesitated before exhaling softly, a sad smile ghosting his lips."
 
     voice audio.svante_ch5_line85
     svante "My mother used to love that dish. Before she got sick… back when she was still— back when people still talked about her."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "Your mother?"
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line86
     svante "I doubt you'd know her sir Dorian. She was a songstress—a famous one, once. Back in Tianho, before she got sick."
     voice audio.svante_ch5_line87
@@ -3222,10 +3238,10 @@ label ch5_food_lamb:
     "I looked down at the dish again. To me, it was just another meal—fuel to keep going, nothing more. But to him? It was a memory."
     "I nudged the plate slightly in his direction."
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian "You can have it if you want. I really don't mind. I'll just ask for something else—"
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     "Svante's eyes widened slightly."
 
     voice audio.svante_ch5_line89
@@ -3233,11 +3249,11 @@ label ch5_food_lamb:
     voice audio.svante_ch5_line90
     svante "You should eat it, sir Dorian. Who knows? Maybe you'll grow to like something other than stale bread and ration bars, sir."
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I rolled my eyes."
 
     dorian "You're making it sound like that's all I eat."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line91
     svante "No, no, no! I apologize, sir, I—"
 
@@ -3245,17 +3261,18 @@ label ch5_food_lamb:
     show roboto happy at center_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line39
     roboto "M-m-m-my sensors indicate that M-M-Master Dorian is just fooling around."
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     voice audio.svante_ch5_line92
     svante "Oh, um… S-Sorry…"
 
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     "I shrugged, took my chopsticks, and went to eating."
 
     "A few minutes after I started eating, Weng approached, setting down another dish with practiced ease."
     hide svante
     hide dorian
     hide roboto
+    with Dissolve(0.1)
     show weng normal at right_flip
     show tim happy at left_char_kids
     with Dissolve(0.2)
@@ -3275,7 +3292,7 @@ label ch5_food_lamb:
     show weng normal at right_flip with Dissolve(0.2)
     weng "And some tea. Freshly brewed from tea leaves from Tianho. I hope you like it."
 
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show yuxuan normal_happy at center_char with Dissolve(0.2)
     yuxuan "The teacup looks beautiful, Miss Weng!"
 
@@ -3283,98 +3300,101 @@ label ch5_food_lamb:
     voice audio.tim_ch5_line39
     tim "We got it yesterday from a bargain store, Master Yuxuan!"
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng "Now, everyone grab a cup and I'll pour you some."
     hide yuxuan
     hide tim
+    with Dissolve(0.1)
     show svante normal_neutral at left_char
     with Dissolve(0.2)
     "Svante glanced at her, a thoughtful expression crossing his face."
     voice audio.svante_ch5_line93
     svante "Miss Weng, you're from Tianho, right?"
 
-    show weng alt_close_eyes at right_flip
+    show weng alt_close_eyes at right_flip with Dissolve(0.1)
     "Weng's hands paused, just for a fraction of a second, as she poured the tea."
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng "Sharp observation, young man. Yes, I'm from Tianho."
 
-    show svante normal_neutral at left_char
+    show svante normal_neutral at left_char with Dissolve(0.1)
     "Svante nodded, not noticing the way her expression shifted—gentle, almost… nostalgic."
 
     voice audio.svante_ch5_line94
     svante "My mother always spoke about someone she loved there. Said she left part of her heart in Tianho."
 
-    show weng alt_close_eyes at right_flip
+    show weng alt_close_eyes at right_flip with Dissolve(0.1)
     "For the briefest moment, Weng's fingers stilled. A flicker of something passed through her eyes—too fleeting to name."
     "Then, just as quickly, she was smiling again, her face unreadable."
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng "Did she, now?"
 
-    show svante normal_sad at left_char
+    show svante normal_sad at left_char with Dissolve(0.1)
     voice audio.svante_ch5_line95
     svante "She said he made the best Moonlit Noodles she ever had. She used to say that if life had been different, maybe she would've—"
 
     "He stopped, shaking his head."
-    show svante normal_base at left_char
+    show svante normal_base at left_char with Dissolve(0.1)
     voice audio.svante_ch5_line96
     svante "Never mind, Miss. Sorry. It's just something she used to say."
 
-    show weng happy at right_flip
+    show weng happy at right_flip with Dissolve(0.1)
     weng "The lover must have been quite the woman to make such an impression."
 
-    show svante normal_neutral at left_char
+    show svante normal_neutral at left_char with Dissolve(0.1)
     voice audio.svante_ch5_line97
     svante "Oh, that's right… She never told me if it was a man or a woman. Sorry, I assumed…"
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng "Don't worry about it, Svante. You think too much. Eat up. You too, Sir Burnham."
-    hide svante
+    hide svante with Dissolve(0.1)
     show dorian neutral at left_char with Dissolve(0.2)
     dorian "Thanks, Miss Weng."
 
     show roboto happy at center_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line41
     roboto "Would you like more Tianho dumplings?"
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show tim normal at center_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line40
     tim "I'd love more please!"
     hide dorian
     hide tim
+    with Dissolve(0.1)
     show niko normal_smile at left_char with Dissolve(0.2)
     voice audio.niko_ch5_line99
     niko "This tea is amazing. I'd love to get some seeds so I can brew this."
 
-    show weng happy at right_flip
+    show weng happy at right_flip with Dissolve(0.1)
     weng "Please, have some more, sir Niko."
     
     show yuxuan normal_neutral at center_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line61
     yuxuan "By the way, Hinami would be hosting the Tragedy of Tianho's anniversary tomorrow. Miss Weng, please don't forget to buy some more fish."
 
-    show weng alt_calm at right_flip
+    show weng alt_calm at right_flip with Dissolve(0.1)
     weng "I'll take care of it, Master Yuxuan."
     hide niko
     hide yuxuan
+    with Dissolve(0.1)
     show svante normal_happy at left_char with Dissolve(0.2)
     voice audio.svante_ch5_line98
     svante "Hinami's hosting this year? That's great! Maybe they brought some of their tropical fish to sell. Mom didn't eat seafood that often but she loved ganderbilt."
 
-    show weng normal at right_flip
+    show weng normal at right_flip with Dissolve(0.1)
     weng "I think they will, sir Svante. Hinami's trade ships arrived this morning—I saw the sails near the eastern docks."
 
-    show svante normal_happy at left_char
+    show svante normal_happy at left_char with Dissolve(0.1)
     voice audio.svante_ch5_line99
     svante "They're already here?! Wow…"
 
     "Weng poured tea for our other companions. Then, she handed Svante a teacup, her fingers brushing his just for a second."
 
-    show weng alt_calm at right_flip
+    show weng alt_calm at right_flip with Dissolve(0.1)
     weng "By the way, you have your mother's eyes, Svante."
 
-    show svante normal_nervous at left_char
+    show svante normal_nervous at left_char with Dissolve(0.1)
     "Svante blinked."
 
     voice audio.svante_ch5_line100
@@ -3383,7 +3403,7 @@ label ch5_food_lamb:
     show chunghee normal_neutral at center_char with Dissolve(0.2)
     chung_hee "I hope your mother is doing well, Svante."
 
-    show svante normal_neutral at left_char
+    show svante normal_neutral at left_char with Dissolve(0.1)
     "Svante swallowed, his expression carefully neutral."
 
     voice audio.svante_ch5_line101
@@ -3416,9 +3436,9 @@ label ch5_dinner_talk:
     voice audio.yuxuan_ch5_line62
     yuxuan "It's a great name!"
 
-    show chunghee alt_smirk at center_char
+    show chunghee alt_smirk at center_char with Dissolve(0.1)
     chung_hee "Thank you."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
 
     show weng happy at right_flip with Dissolve(0.2)
     weng "It's a wonderful name for a wonderful gentleman such as yourself, Sir Chung."
@@ -3427,11 +3447,12 @@ label ch5_dinner_talk:
 
     weng "Would you like more tea, sir Chung?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "I would love some more."
     hide chunghee
     hide dorian
     hide weng
+    with Dissolve(0.1)
     show roboto happy at center_robot
     show niko normal_base at right_char
     show svante normal_happy at left_char 
@@ -3443,6 +3464,7 @@ label ch5_dinner_talk:
     svante "Don't mind if I do! Thanks a lot!"
     hide niko
     hide svante
+    with Dissolve(0.1)
     show tim normal at left_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line41
     tim "Elias, want some tea?"
@@ -3451,7 +3473,7 @@ label ch5_dinner_talk:
     voice audio.elias_ch5_line27
     elias "Mmm… Just water please!"
 
-    show roboto happy at center_robot
+    show roboto happy at center_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line43
     roboto "C-c-c-coming right up!"
 
@@ -3473,6 +3495,7 @@ label ch5_dinner_talk:
     dorian "So, Chung. Any idea why the kingdom of Mjoll wanted you killed?"
     show chunghee alt_tense at right_char
     show dorian serious at left_char
+    with Dissolve(0.1)
     "The light-hearted atmosphere dimmed instantly. Chung-hee's expression darkened."
     "He met my gaze. Then, calmly, with the weight of finality, he spoke."
 
@@ -3480,13 +3503,13 @@ label ch5_dinner_talk:
 
     "The entire table went silent."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I felt my grip tighten around my cup. The room had grown heavy, like a storm rolling in. Across from me, Svante's entire body went rigid, his fingers barely twitching against the table."
-    hide chunghee
+    hide chunghee with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line102
     svante "?!"
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko alt_tense at right_char with Dissolve(0.2)
     "Niko leaned forward, brows furrowing."
     voice audio.niko_ch5_line101
@@ -3496,114 +3519,114 @@ label ch5_dinner_talk:
     show weng alt_nervous at right_flip with Dissolve(0.2)
     weng "By the stars…"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee remained composed, his gaze unwavering."
 
     chung_hee "King Gustav seeks to claim the Divine Weapon. He wishes to rule over all nations of Ena."
-    hide weng
-    show niko normal_base at right_char
+    hide weng with Dissolve(0.1)
+    show niko normal_base at right_char with Dissolve(0.1)
     voice audio.niko_ch5_line102
     niko      "Divine Weapon? What are you talking about?"
 
     show chunghee normal_v2 at center_char with Dissolve(0.2)
     "Chung-hee didn't blink. He met our gazes."
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "Five years ago, King Long Shen spoke to my father about a weapon unlike any other. A relic forged to defy the laws of life and death itself."
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     chung_hee "A weapon meant to raise the dead. To bring back entire armies."
 
     "A weighted silence followed. I had never heard of such a thing. And judging by the expressions around the room, neither had they."
     "Tim shook his head, pushing his glasses up the bridge of his nose."
-    hide niko
+    hide niko with Dissolve(0.1)
     show tim alt_nervous at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line42
     tim "…I… don't think I've ever read about anything like that, Sir Chung."
-    hide tim
+    hide tim with Dissolve(0.1)
     show yuxuan alt_think at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line63
     yuxuan "Hmm… That doesn't sound good. If Tim hasn't read about it, it probably doesn't exist."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show weng alt_close_eyes_nervous at right_flip with Dissolve(0.2)
     weng "That is true, Master Yuxuan."
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
     "Roboto's glowing eyes flickered. The whir of his internal mechanisms filled the room as he processed the information."
-    hide weng
+    hide weng with Dissolve(0.1)
     show roboto bad_mood at right_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line44
     roboto "Checking… C-C-C-Checking library r-r-r-records…"
-    show roboto happy at right_robot
+    show roboto happy at right_robot with Dissolve(0.1)
     voice audio.roboto_ch5_line45
     roboto "Search concluded! N-N-No records in the library about a so-called 'DIVINE WEAPON.'"
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line103
     svante "Legends speak of weapons blessed—or cursed— but none have ever mentioned such a thing as a weapon bringing back people to life."
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line103
     niko   "I've read all of Enoch's chronicles. Every single one. Not one of them mentions a Divine Weapon."
-    show niko alt_tense at right_char
+    show niko alt_tense at right_char with Dissolve(0.1)
     "He leaned forward, gaze sharp."
     voice audio.niko_ch5_line104
     niko "Do you even know where this thing is?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "No. Only that it is somewhere in Tianho."
     chung_hee "The fact remains. It must never fall into King Gustav's hands."
     chung_hee "I will end him before that happens."
 
-    hide niko
+    hide niko with Dissolve(0.1)
     show yuxuan normal_sad at right_char with Dissolve(0.2)
     "Yuxuan let out a sharp breath, leaning back in his chair."
     voice audio.yuxuan_ch5_line64
     yuxuan "I was not expecting that with my tea."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     "Svante's fingers trembled against the table. His voice was unsteady."
     voice audio.svante_ch5_line104
     svante    "Kill… Father? A-Are you sure of this, sir Chung?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "I would not speak of such things lightly."
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
     "Roboto, usually cheerful, gave a low whirring sound."
-    hide svante
+    hide svante with Dissolve(0.1)
     show roboto bad_mood at right_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line46
     roboto "D-d-d-danger level escalating. Adjusting threat parameters… I-I-I strongly advise against making dangerous statements out loud!"
 
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show niko normal_ignore at right_char with Dissolve(0.2)
     "Niko exhaled sharply, rubbing his temples."
     voice audio.niko_ch5_line105
     niko "You're talking about regicide, Chung."
-    show chunghee normal_v2 at center_char
+    show chunghee normal_v2 at center_char with Dissolve(0.1)
     chung_hee "If he succeeds, countless lives will be lost. I will not allow it."
-    hide niko
+    hide niko with Dissolve(0.1)
     show svante normal_angry at right_char with Dissolve(0.2)
     "Svante's hands curled into fists. He hesitated before speaking, voice shaking just slightly."
     voice audio.svante_ch5_line105
     svante "If I may, how do you intend to k-kill Father, sir Chung?"
 
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     "Chung-hee lowered his gaze for a moment."
 
     chung_hee "Cheonmyeong Gyeol…"
 
-    show svante normal_nervous at right_char
+    show svante normal_nervous at right_char with Dissolve(0.1)
     "Svante blinked, confused."
 
     voice audio.svante_ch5_line106
     svante "Huh? Chanmong…"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "Cheonmyeong Gyeol… A duel between two rulers to the death."
 
     "The words seemed to echo through our minds."
     "For a moment, nobody spoke. Then, from the far end of the table—"
 
-    hide svante
+    hide svante with Dissolve(0.1)
 
     show tim alt_nervous at right_char_kids with Dissolve(0.2)
     "Tim straightened, his eyes widening with recognition."
@@ -3612,155 +3635,157 @@ label ch5_dinner_talk:
     voice audio.tim_ch5_line44
     tim "I've read that before! In pre-Enoch books!"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee gave a single nod."
 
     chung_hee "Yes. It is an ancient tradition, one older than any war on record."
     chung_hee "Long ago, the rulers of old would stake their lives in battle rather than sacrifice their people to war. A single duel—no armies, no bloodshed beyond their own. The winner would decide the fate of nations. It was a trial of honor, strength, and destiny."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian    "I've never heard of that before."
-    hide tim
+    hide tim with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line106
     niko      "Me neither. I don't think those are present in any of the Death God's scriptures."
-    hide niko
+    hide niko with Dissolve(0.1)
     "Tim's expression glowed with excitement."
 
     show tim happy at right_char_kids with Dissolve(0.2) 
     voice audio.tim_ch5_line45
     tim   "I knew it! The texts said the greatest rulers of the old dynasties fought like this! Right, Elias?"
-    hide tim
+    hide tim with Dissolve(0.1)
     show elias alt_joy at right_char_kids with Dissolve(0.2)
     voice audio.elias_ch5_line28
     elias "Hehe. Tedda says I love you, Tim!"
     tedda "..."
-    hide elias
+    hide elias with Dissolve(0.1)
     show tim alt_annoyed at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line46
     tim   "Umm… never mind."
-    hide tim
+    hide tim with Dissolve(0.1)
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
     show roboto happy at right_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line47
     roboto "Tim's knowledge is accurate. The Cheonmyeong Gyeol was considered the ultimate test of kingship. Only the worthy could survive."
-    hide roboto 
+    hide roboto  with Dissolve(0.1)
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line65
     yuxuan "That's Tim for you. Always knowing the old stories."
     show yuxuan alt_neutral at right_char
 
     show chunghee normal_neutral at center_char
+    with Dissolve(0.1)
     chung_hee "I challenged Gustav months ago. He only recently accepted."
 
-    show yuxuan normal_neutral at right_char
+    show yuxuan normal_neutral at right_char with Dissolve(0.1)
     "Yuxuan leaned back in his chair, one brow arching in curiosity."
 
     voice audio.yuxuan_ch5_line66
     yuxuan "Then tell me, Chung—if King Gustav agreed to the duel, why did he send a battalion of soldiers and Aldoriths after you?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "A shadow passed over Chung-hee's face."
 
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_sad at right_char with Dissolve(0.2)
     "I turned to Svante."
 
     dorian "Svante, do you know anything about this?"
 
-    show svante normal_sad at right_char
+    show svante normal_sad at right_char with Dissolve(0.1)
     "Svante looked down, his hands tightening into fists. He swallowed hard before shaking his head."
 
     voice audio.svante_ch5_line107
     svante "N-no. I… We were only told by Father that Chung would be there. He didn't tell us anything else."
-    hide svante 
+    hide svante  with Dissolve(0.1)
     show niko normal_ignore at right_char with Dissolve(0.2)
     "Niko scoffed. He leaned back, arms crossed, his expression dark with disgust."
     voice audio.niko_ch5_line107
     niko "What a coward."
     "Weng approached the table with practiced grace, a porcelain teapot cradled gently in her hands."
 
-    hide niko
+    hide niko with Dissolve(0.1)
     show weng normal at right_flip with Dissolve(0.2)
     weng   "Perhaps a calming tea is just what you boys need. Should I pour some more?"
-    hide weng
+    hide weng with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line108
     svante "Yes, please. Thank you, miss."
-    hide svante
+    hide svante with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line108
     niko   "Yeah…. Thanks."
 
     "Beside them, Tim reached across the table, cheerfully nudging a plate forward."
-    hide niko
+    hide niko with Dissolve(0.1)
     show tim happy at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line47
     tim   "Here, have some more crumpets sirs! They go well along with the tea."
-    hide tim
+    hide tim with Dissolve(0.1)
     show svante normal_neutral at right_char with Dissolve(0.2)
     "Svante took one, though his hands still trembled slightly as he brought it to his plate."
     voice audio.svante_ch5_line109
     svante "T-Thank you."
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Across the table, Chung-hee inhaled deeply, his hands resting flat against the polished wood."
 
     chung_hee "I was honestly surprised… A king should be… strong, just, honorable…"
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan alt_smile at right_char with Dissolve(0.2)
     "Yuxuan snorted. Then he laughed."
     voice audio.yuxuan_ch5_line67
     yuxuan "Hahaha! King Gustav? Honorable? Hah! That's the best joke I've heard all day!"
 
-    show dorian normal_alt_calm at left_char
+    show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "I exhaled sharply, shaking my head."
 
     menu:
         "Don't be naïve, Chung.":
             $ ch5_chunghee_speech = "naive"
-            $ chunghee_affection -= 1           # -1 Chung-hee affection
-            hide yuxuan
+            $ A4_chunghee_affection -= 1           # -1 Chung-hee affection
+            hide yuxuan with Dissolve(0.1)
             show chunghee normal_neutral at right_char
             show dorian serious at left_char
             with Dissolve(0.2) 
             dorian "You're being naïve, Chung."
 
-            show chunghee normal_sad at right_char
+            show chunghee normal_sad at right_char with Dissolve(0.1)
             "Chung-hee frowned."
 
-            show chunghee normal_angry at right_char
+            show chunghee normal_angry at right_char with Dissolve(0.1)
             chung_hee "Those in power need to have honor. They won't be sitting in their thrones otherwise. People follow them for a reason. They—"
-            show dorian angry at left_char
+            show dorian angry at left_char with Dissolve(0.1)
             dorian    "Honor doesn't rule kingdoms. Power does. And those who don't accept that? They get crushed beneath those who do."
             show dorian serious at left_char
             show chunghee normal_sad at right_char
+            with Dissolve(0.1)
             "For the first time, doubt flickered in Chung-hee's eyes. But it was quickly buried under quiet defiance."
 
             chung_hee "I..."
             chung_hee "You're wrong, Dorian."
-            show chunghee alt_tense at right_char
+            show chunghee alt_tense at right_char with Dissolve(0.1)
             "He turned his gaze away, staring at the table."
 
         "It's inspiring how you still believe in that.":
             $ ch5_chunghee_speech = "inspiring"
-            $ chunghee_affection += 1           # +1 Chung-hee affection
-            hide yuxuan
+            $ A4_chunghee_affection += 1           # +1 Chung-hee affection
+            hide yuxuan with Dissolve(0.1)
             show chunghee normal_neutral at right_char
             show dorian neutral at left_char 
             with Dissolve(0.2)
             "I sighed, rubbing the back of my neck."
-            show chunghee alt_wink at right_char
+            show chunghee alt_wink at right_char with Dissolve(0.1)
             dorian "I don't know if I agree with you, Chung… but it's inspiring how you still believe in that."
             "Chung-hee blinked, caught off guard. Then, slowly, a small, grateful smile crossed his face."
             chung_hee "You… You think so?"
 
-            show dorian normal_alt_neutral at left_char
+            show dorian normal_alt_neutral at left_char with Dissolve(0.1)
             "I nodded."
 
             dorian "Maybe I've seen too much of the world to believe in nobility anymore… but it's not a bad thing to hold onto."
 
-            show chunghee normal_neutral at right_char
+            show chunghee normal_neutral at right_char with Dissolve(0.1)
             "Chung-hee's shoulders eased, some of the tension melting away."
 
             chung_hee "Then I will prove to you that nobility isn't dead, Dorian."
@@ -3784,14 +3809,14 @@ label ch5_divine_weapon:
     yuxuan "Chung, if I may ask—why are you alone? Don't Emperors get, like… I don't know, guards or something?"
 
     "He gestured vaguely with his free hand."
-    show yuxuan alt_mid_close_eyes at right_char
+    show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line69
     yuxuan "I remember when the previous Emperor of Kyeongjang visited Tianho. He was flanked by an entire regiment of soldiers."
 
-    show chunghee normal_v2 at center_char
+    show chunghee normal_v2 at center_char with Dissolve(0.1)
     "Chung-hee nodded, his gaze distant, as if recalling the memory himself."
 
-    show yuxuan normal_normal at right_char
+    show yuxuan normal_normal at right_char with Dissolve(0.1)
     chung_hee "Yes… my father and my mother went to Tianho with an honor guard. His visit was meant to be a grand affair—fanfare, ceremony. His presence symbolized Kyeongjang standing as one with Ena."
 
     "He let out a quiet breath, then shook his head."
@@ -3800,54 +3825,54 @@ label ch5_divine_weapon:
  
     "He paused, glancing at Svante for the briefest moment before looking away."
 
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     chung_hee "So I believed…"
 
     "His fingers brushed against the table's surface, contemplative."
 
     chung_hee "I saw no need to march with banners or soldiers. I came alone, as an Emperor of Kyeongjang should in a duel to the death. But Gustav…"
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "His jaw tightened."
 
-    show chunghee normal_angry at center_char
+    show chunghee normal_angry at center_char with Dissolve(0.1)
     chung_hee "King Gustav did not honor our agreement. He sent his army. His Aldoriths. His soldiers. Assassins."
 
     "A cold silence settled over the table."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_sad at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line110
     svante    "I apologize again. Please forgive me, sir. I—"
-    show chunghee alt_neutral at center_char
+    show chunghee alt_neutral at center_char with Dissolve(0.1)
     chung_hee "No need to apologize. It's the ruler who makes the decisions."
-    show dorian neutral at left_char
+    show dorian neutral at left_char with Dissolve(0.1)
     dorian    "And it led you to us."
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line70
     yuxuan    "By the goodness of the Prosperity Dragon, you're still alive. Praise be!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line109
     niko      "That bastard Gustav. Can you imagine travelling thousands of miles for a duel just for you to be the target of assassination?"
 
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
     "Chung-hee reached into the folds of his robes and pulled out a small, ornate object—an amulet, its surface shimmering with emerald green light."
 
     chung_hee "I didn't travel. If not for this, I would not be here."
 
     # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-    hide niko
+    hide niko with Dissolve(0.1)
     show roboto bad_mood at right_robot with Dissolve(0.2)
     voice audio.roboto_ch5_line48
     roboto "Powerful device detected. Anomaly class: High-tier. Likelihood of survival increase: 89.4%%. E-E-E-E-Errr-r-r-r-r-r—"
 
     # play sound sfx_roboto_crash                 # PLACEHOLDER — Roboto crash SFX
 
-    show roboto error at right_robot
+    show roboto error at right_robot with Dissolve(0.1)
     roboto "*crashes*"
 
-    hide roboto
+    hide roboto with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     "Yuxuan whistled, leaning in."
 
@@ -3855,39 +3880,41 @@ label ch5_divine_weapon:
     yuxuan "Wow!"
     show yuxuan normal_normal at right_char
     show chunghee normal_neutral at center_char
+    with Dissolve(0.1)
     chung_hee "This was the last thing found on my parents' bodies. Tianho gave to us after the day of the tragedy."
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show weng sad at right_flip with Dissolve(0.2)
     weng "That's too sad. I'm so sorry Sir Chung."
 
-    show dorian serious at left_char
+    show dorian serious at left_char with Dissolve(0.1)
     "I stared at the amulet, my gaze locked onto its swirling green glow. There was something about it—something calling to me."
     "And then, as if a switch flipped in my mind, I remembered something. The amulet Elias wore back in Mjoll."
     "My breath hitched. Could it be—? Could this have the same power?"
     "No, it couldn't."
 
-    hide weng
+    hide weng with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     "Yuxuan, of course, was already leaning in, his eyes gleaming with barely contained excitement."
 
     voice audio.yuxuan_ch5_line72
     yuxuan "Chung, is it okay if I touch it?"
 
-    show dorian normal_alt_annoyed at left_char
+    show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I rolled my eyes."
 
     dorian "Yu!"
-    show dorian serious at left_char
-    hide yuxuan 
+    show dorian serious at left_char with Dissolve(0.1)
+    hide yuxuan  with Dissolve(0.1)
     show weng alt_base at right_flip with Dissolve(0.2)
     weng   "Please forgive my master, Sir Chung."
-    hide weng
+    hide weng with Dissolve(0.1)
     show yuxuan alt_neutral at right_char with Dissolve(0.2)
     "Yuxuan threw up his hands."
     voice audio.yuxuan_ch5_line73
     yuxuan "What? I was just asking a question!"
     hide yuxuan
     hide chunghee
+    with Dissolve(0.1)
     show elias normal_happy at right_char_kids 
     show tim alt_pumped at center_char_kids
     with Dissolve(0.2)
@@ -3897,14 +3924,15 @@ label ch5_divine_weapon:
     tim   "Can I touch it too, Mister Chung? I promise I'll take good care of it!"
     voice audio.elias_ch5_line29
     elias "Me too! And Tedda!"
-    show tim alt_annoyed at center_char_kids
+    show tim alt_annoyed at center_char_kids with Dissolve(0.1)
     voice audio.tim_ch5_line49
     tim   "Hey I was first, Elias!"
     hide tim
     hide elias
+    with Dissolve(0.1)
     show weng alt_close_eyes at right_flip with Dissolve(0.2)
     weng  "Tim, let the adults talk."
-    hide weng
+    hide weng with Dissolve(0.1)
 
     show chunghee normal_neutral at center_char
     show niko normal_base at right_char
@@ -3913,20 +3941,21 @@ label ch5_divine_weapon:
 
     chung_hee "Please… be my guest?"
 
-    show niko alt_tense at right_char
+    show niko alt_tense at right_char with Dissolve(0.1)
     "Niko raised a brow, folding his arms."
 
     voice audio.niko_ch5_line110
     niko "Your Majest—Chung. You don't have to let him touch your amulet. We know it's sacred."
 
-    show chunghee alt_smirk at center_char
+    show chunghee alt_smirk at center_char with Dissolve(0.1)
     "Chung-hee offered a small smile."
 
     chung_hee "Don't worry, Sir Niko. You all proved that I can trust you with my life. What's a small amulet compared to that?"
-    show chunghee normal_neutral at center_char
+    show chunghee normal_neutral at center_char with Dissolve(0.1)
 
     hide niko
     hide chunghee
+    with Dissolve(0.1)
     show yuxuan normal_happy at right_char 
     show roboto happy at center_robot
     with Dissolve(0.2)
@@ -3939,47 +3968,47 @@ label ch5_divine_weapon:
     voice audio.roboto_ch5_line49
     roboto "O-o-on it, Master Y-Y-Yuxuan! Engaging scanning proc-proc-process—ERROR! Unstable energy detected! I r-r-recommend caution!"
 
-    show yuxuan normal_normal at right_char
+    show yuxuan normal_normal at right_char with Dissolve(0.1)
     "Before Roboto could finish his analysis, Yuxuan had already reached out, his fingertips brushing the amulet's cool, engraved surface."
-    show yuxuan alt_mid_close_eyes at right_char
+    show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
     "A deep hum pulsed through the air. The sound wasn't just audible—it was something I could feel in my chest, like the distant vibration of a temple bell."
     "Yuxuan's eyes lit up with childlike wonder. He giggled, completely ignoring Roboto's warning."
 
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line75
     yuxuan "Ooooh! This thing is buzzing! You feel that? Dorian! Come! Touch!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show svante normal_nervous at right_char with Dissolve(0.2)
     voice audio.svante_ch5_line111
     svante "S-Sir Yuxuan! Are you sure you can touch it like that?"
-    hide svante
+    hide svante with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line76
     yuxuan "Of course! Come on! Touch it, Svante! You too, Niko!"
-    hide yuxuan
+    hide yuxuan with Dissolve(0.1)
     show niko normal_ignore at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line111
     niko   "Not interested…"
-    hide niko
+    hide niko with Dissolve(0.1)
     show tim happy at right_char_kids with Dissolve(0.2)
     voice audio.tim_ch5_line50
     tim    "I'm interested!"
-    hide tim 
+    hide tim  with Dissolve(0.1)
     show weng serious at right_flip with Dissolve(0.2)
     weng   "No, Tim. No."
-    hide weng
+    hide weng with Dissolve(0.1)
     show yuxuan normal_happy at right_char with Dissolve(0.2)
 
     show dorian normal_alt_calm at left_char
     "I sighed, pinching the bridge of my nose."
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     dorian "Yu, you are way too excited about this."
-    show yuxuan normal_happy at right_char
+    show yuxuan normal_happy at right_char with Dissolve(0.1)
     voice audio.yuxuan_ch5_line77
     yuxuan "Come on, Dorian! Touch it! What's the worst that could happen?"
 
-    show dorian normal_alt_neutral at left_char
+    show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     "Reluctantly, I reached forward."
     "The moment my fingers made contact—"
 
@@ -3993,10 +4022,11 @@ label ch5_divine_weapon:
 label ch5_amulet_vision:
 
     # play sound sfx_amulet_vision                # PLACEHOLDER — amulet vision SFX
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     dorian "ARRGHHHH!!!"
     hide roboto
     hide yuxuan
+    with Dissolve(0.1)
     show niko normal_anger at right_char with Dissolve(0.2)
     voice audio.niko_ch5_line112
     niko   "Dorian!"
@@ -4014,7 +4044,7 @@ label ch5_amulet_vision:
     "A half-naked man with wings."
     "His golden eyes burned with urgency. Feathers glistened under an unseen light, his presence radiant yet commanding."
 
-    show magnus alt_shocked at center_char, dream_haze
+    show magnus alt_shocked at center_char, dream_haze with Dissolve(0.1)
     voice audio.magnus_ch5_line1
     magnus "Dragonkin!! We don't have much time!"
 
@@ -4026,7 +4056,7 @@ label ch5_amulet_vision:
     "His wings flared wide, winds surging from nowhere. The world around me warped, twisted—"
     "Then—"
 
-    hide magnus
+    hide magnus with Dissolve(0.1)
     # [COMMENT: bg_sealed_door — underground chamber, blood, torchlight — Min-joon's death]
     # scene bg_sealed_door with dissolve          # PLACEHOLDER — sealed underground chamber
     # stop music fadeout 0.5
@@ -4122,6 +4152,7 @@ label ch5_amulet_vision:
 
     show magnus normal at right_char, dream_haze_in 
     show dorian serious at left_char, dream_haze_in 
+    with Dissolve(0.1)
     voice audio.magnus_ch5_line3
     magnus "Dragonkin! You're alright."
 
@@ -4132,7 +4163,7 @@ label ch5_amulet_vision:
 
     dorian "What… just happened? Where am I?"
 
-    show magnus alt_shocked at right_char
+    show magnus alt_shocked at right_char with Dissolve(0.1)
     "He didn't answer. His golden eyes flickered to something behind me. His wings tensed."
 
     voice audio.magnus_ch5_line4
@@ -4142,7 +4173,7 @@ label ch5_amulet_vision:
 
     dorian "What is?"   
 
-    show magnus alt_anger at right_char
+    show magnus alt_anger at right_char with Dissolve(0.1)
     "Magnus took another step forward, his movements sharp, urgent."
 
     voice audio.magnus_ch5_line5
@@ -4153,20 +4184,20 @@ label ch5_amulet_vision:
     "I followed his gaze but saw nothing."
 
     dorian "Who are you?"
-    show magnus alt_newpose at right_char
+    show magnus alt_newpose at right_char with Dissolve(0.1)
     voice audio.magnus_ch5_line6
     magnus "I…"
 
     "For the briefest second, he hesitated."
     "Then, his golden eyes flicked back to mine."
 
-    show magnus alt_newpose at right_char
+    show magnus alt_newpose at right_char with Dissolve(0.1)
     voice audio.magnus_ch5_line7
     magnus "Magnus…"
     dorian "Magnus?"
     voice audio.magnus_ch5_line8
     magnus "Yes… Magnus…It's been a while since anyone called me that…"
-    show magnus alt_evil_eye at right_char
+    show magnus alt_evil_eye at right_char with Dissolve(0.1)
     voice audio.magnus_ch5_line9
     magnus "Time… There's no time…"
     voice audio.magnus_ch5_line10
@@ -4184,7 +4215,7 @@ label ch5_magnus_choices:
         "I saw the vision of the late Kyeongjang Emperor and his wife. Why did I see it?" if not ch5_magnus_q1:
             $ ch5_magnus_q1 = True
 
-            show magnus alt_close at right_char
+            show magnus alt_close at right_char with Dissolve(0.1)
             "His expression darkened."
             "A flicker of sorrow crossed his face—but then, just as quickly, he looked away."
             "His wings shifted restlessly."
@@ -4193,13 +4224,13 @@ label ch5_magnus_choices:
             magnus "That past is written in blood. I cannot change it."
             voice audio.magnus_ch5_line12
             magnus "And neither can you, Dragonkin…"
-            show dorian normal_alt_calm at left_char
+            show dorian normal_alt_calm at left_char with Dissolve(0.1)
             dorian "Why did I see the vision? Did they send it?"
 
-            show magnus alt_shocked at right_char
+            show magnus alt_shocked at right_char with Dissolve(0.1)
             "He kept quiet. He does not know."
             "His hands twitched—fingers tightening, as if trying to grasp something unseen."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
             voice audio.magnus_ch5_line13
             magnus "Come find me, Dorian. Before the past claims another soul."
             voice audio.magnus_ch5_line14
@@ -4211,7 +4242,7 @@ label ch5_magnus_choices:
         "Do you know what happened during the Tragedy of Tianho?" if not ch5_magnus_q2:
             $ ch5_magnus_q2 = True
 
-            show magnus alt_shocked at right_char
+            show magnus alt_shocked at right_char with Dissolve(0.1)
             voice audio.magnus_ch5_line15
             "Magnus flinched."
             "His golden eyes widened—but then, just as quickly, he squeezed them shut, shaking his head."
@@ -4219,7 +4250,7 @@ label ch5_magnus_choices:
             voice audio.magnus_ch5_line16
             magnus "Tianho… You need to find me…"
 
-            show magnus alt_evil_eye at right_char
+            show magnus alt_evil_eye at right_char with Dissolve(0.1)
             "He inhaled sharply, as if the very words burned his throat."
 
             voice audio.magnus_ch5_line17
@@ -4230,20 +4261,20 @@ label ch5_magnus_choices:
             voice audio.magnus_ch5_line18
             magnus "They're coming… they're trying to get in…"
 
-            show magnus alt_anger at right_char
+            show magnus alt_anger at right_char with Dissolve(0.1)
             "His wings shuddered."
             "Then, he turned back to me, his voice a mere whisper of fire."
 
             voice audio.magnus_ch5_line19
             magnus "Come find me, Dorian. Beneath Tianho."
-            show dorian serious at left_char
+            show dorian serious at left_char with Dissolve(0.1)
 
             jump ch5_magnus_choices
 
         "What is this place?" if not ch5_magnus_q3:
             $ ch5_magnus_q3 = True
 
-            show magnus alt_newpose at right_char
+            show magnus alt_newpose at right_char with Dissolve(0.1)
             "His movements slowed. His breathing evened."
             "Magnus looked directly at me."
 
@@ -4257,17 +4288,17 @@ label ch5_magnus_choices:
             voice audio.magnus_ch5_line22
             magnus "I… I wish I could leave and—"
 
-            show magnus alt_close at right_char
+            show magnus alt_close at right_char with Dissolve(0.1)
             "His golden gaze softened—just for a second."
             "Then, suddenly— his body tensed again. The paranoia returned. His wings trembled."
 
-            show magnus alt_shocked at right_char
+            show magnus alt_shocked at right_char with Dissolve(0.1)
             voice audio.magnus_ch5_line23
             magnus "No, no, no. There's no time—!"
             voice audio.magnus_ch5_line24
             magnus "They might get in…. No!"
 
-            show magnus alt_anger at right_char
+            show magnus alt_anger at right_char with Dissolve(0.1)
             "His head snapped toward the unseen horizon, eyes wild."
 
             voice audio.magnus_ch5_line25
@@ -4278,13 +4309,13 @@ label ch5_magnus_choices:
         "I touched this amulet. What did it do to me?":
             $ ch5_magnus_q4 = True
 
-            show magnus alt_evil_eye at right_char
+            show magnus alt_evil_eye at right_char with Dissolve(0.1)
             "Magnus looked around. He clenched his fists tight."
 
             voice audio.magnus_ch5_line26
             magnus "No… There's not enough time…"
 
-            show magnus alt_anger at right_char
+            show magnus alt_anger at right_char with Dissolve(0.1)
             "His voice shook."
 
             magnus "It's too soon."
@@ -4300,7 +4331,7 @@ label ch5_magnus_choices:
 label ch5_magnus_common:
     # play sound sfx_void_crack loop              # PLACEHOLDER — void cracking SFX
 
-    show magnus alt_anger at right_char
+    show magnus alt_anger at right_char with Dissolve(0.1)
     "The world quaked around us."
     "A low, guttural rumble crawled through the white void, rising—building—like a storm about to break." with hpunch
     "Magnus lunged forward, grabbing my wrist with a grip like iron."
@@ -4313,14 +4344,14 @@ label ch5_magnus_common:
     voice audio.magnus_ch5_line29
     magnus "You're nearer than you think! You must—"
 
-    show magnus alt_shocked at right_char
+    show magnus alt_shocked at right_char with Dissolve(0.1)
     "The ground lurched. The white space around us fractured, cracks splintering through reality itself."
     "There was a distant thunderous BOOM."
-    show dorian normal_alt_tense at left_char
+    show dorian normal_alt_tense at left_char with Dissolve(0.1)
     "The rumbling grew louder—deafening."
     "Magnus' wings flared wide, his breath ragged. He yanked me closer, his nails digging into my skin."
 
-    show magnus alt_anger at right_char
+    show magnus alt_anger at right_char with Dissolve(0.1)
     voice audio.magnus_ch5_line30
     magnus "HURRY!"
 
@@ -4336,7 +4367,7 @@ label ch5_magnus_common:
     # TODO: add boom sfx
     "A final, ear-splitting ROAR."
 
-    hide magnus
+    hide magnus with Dissolve(0.1)
     camera
     jump ch5_nightmare
 
