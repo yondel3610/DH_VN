@@ -7,6 +7,15 @@ __pycache__/
 *.pyc
 *.pyo
 
+# .py files
+*.py
+
+# Large files
+*.webm
+*.mp4
+# *.ogg
+*.mp3
+*.wav
 
 # OS files
 .DS_Store
@@ -34,6 +43,9 @@ traceback.txt
 dialogue_scan.txt
 files.txt
 .branchpy.toml
+credits.txt
+credits.txt
+    
 
 # xclude audio files
 # *.ogg
