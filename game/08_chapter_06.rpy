@@ -513,7 +513,7 @@ label ch6_tedda:
     "Tedda only giggled, her eyes twinkling."
 
     tedda "Just a little nickname. It suits her, don't you think?"
-    
+    play sound audio.sfx_roboto_motor
     "Then, we heard whirring. Roboto approached us."
     hide tedda_human
     show roboto happy at right_robot with Dissolve(0.2)

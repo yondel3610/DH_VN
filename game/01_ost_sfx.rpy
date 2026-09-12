@@ -3,7 +3,7 @@
 # ====================================================================================
 define audio.amb_underground   = "audio/sfx and ost/amb/Cave.ogg" # cave ambience DONE
 define audio.ost_tension_short = "audio/sfx and ost/amb/tension_theme.ogg" 
-
+define audio.amb_cave_fire     = "audio/sfx and ost/amb/cave_fire.ogg"
 
 # ====================================================================================
 # SFX
@@ -43,6 +43,8 @@ define audio.sfx_shadow_burst   = "audio/sfx and ost/sfx/sfx_shadows_burst.ogg"
 define audio.sfx_shadows        = "audio/sfx and ost/sfx/sfx_shadows_base.ogg"
 define audio.chain_cast         = "audio/sfx and ost/sfx/chain_cast.ogg"
 define audio.sfx_psychic_chains = "audio/sfx and ost/sfx/psychic_chains.ogg"
+define audio.orb_glow           = "audio/sfx and ost/sfx/orb_glow.ogg"
+define audio.sfx_vine_attack    = "audio/sfx and ost/sfx/sfx_vine_attack.ogg"
 
 define audio.stone_click        = "audio/sfx and ost/sfx/sfx_stoneclick.ogg"
 define audio.amulet_door        = "audio/sfx and ost/sfx/amulet_solved.ogg"
@@ -54,6 +56,8 @@ define audio.yg_scream      = "audio/sfx and ost/beast sounds/freesound_communit
 define audio.qq_roar        = "audio/sfx and ost/beast sounds/dffdv-tiger-roar-loudly-193229.ogg"
 define audio.qq_raah        = "audio/sfx and ost/beast sounds/dffdv-monster-warrior-roar-195877.ogg"
 define audio.monster_death  = "audio/sfx and ost/beast sounds/ragecore29-htf-flesh-impact-1-480118.ogg"
+define audio.frost_oni1    = "audio/sfx and ost/beast sounds/oni1.ogg"
+define audio.frost_oni2    = "audio/sfx and ost/beast sounds/oni2.ogg"
 
 # ====================================================================================
 # THEMES
@@ -65,6 +69,7 @@ define audio.ost_tragedy         = "audio/sfx and ost/ost/ost_tragedy.ogg"
 define audio.ost_tianho_festival = "audio/sfx and ost/ost/ost_tianho_festival_music.ogg"   # upbeat plays during the city exploration sequence
 define audio.ost_emperor_arrival = "audio/sfx and ost/ost/ost_emperor_arrival.ogg" 
 define audio.ost_fun             = "audio/sfx and ost/ost/Fun.ogg"
+define audio.ost_mjoll_festive   = "audio/sfx and ost/ost/mjoll_festive.ogg"
 define audio.ost_cabin           = "audio/sfx and ost/ost/ch2-3 elias cabin.ogg"
 define audio.ost_danger          = "audio/sfx and ost/ost/ost_danger_peril.ogg"
 define audio.ost_date            = "audio/sfx and ost/ost/ost_Date.ogg"
@@ -80,6 +85,7 @@ define audio.ost_yuxuan_lab      = "audio/sfx and ost/ost/ost_yuxuan_lab.ogg"
 
 # MAIN THEME
 define audio.main_theme         = "audio/sfx and ost/ost/DH Main theme.ogg"
+
 # CHARACTER THEMES
 define audio.aoi_theme           = "audio/sfx and ost/char themes/Aoi_s theme.ogg"
 define audio.weng_theme          = "audio/sfx and ost/char themes/Cai Weng_s theme.ogg"

@@ -97,7 +97,8 @@ def convert_audio_folder(input_folder, bitrate="128k", samplerate=44100):
 
 if __name__ == "__main__":
     # --- Option 1: Convert with default settings ---
-    convert_audio_folder("game/audio/sfx and ost/sfx")
+    convert_audio_folder("game/audio/sfx and ost/amb")
+    
     
     # --- Option 2: Convert with custom bitrate and sample rate ---
     # convert_audio_folder("audio/raw", bitrate="192k", samplerate=48000)

@@ -1235,7 +1235,7 @@ label ch8_open_door:
 
             # --- MINIGAME START ---
             stop audio fadeout 2.0
-            call ch8_amulet_door_puzzle
+            call ch8_amulet_door_puzzle from _call_ch8_amulet_door_puzzle
             play audio audio.amb_underground volume 0.1 loop fadein 1.0 
             # --- MINIGAME END ---
 
@@ -1485,7 +1485,7 @@ label ch8_corpse:
 
             # play music ost_ch8_letter fadein 1.5 # PLACEHOLDER — sorrowful letter theme
 
-            call show_hwan_sik_diary
+            call show_hwan_sik_diary from _call_show_hwan_sik_diary
 
             "The final lines trailed off, ink smudged and uneven. The last stroke faltered, as if his strength had failed him in his final moments."
 

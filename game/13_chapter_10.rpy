@@ -3122,7 +3122,9 @@ label ch10_epilogue:
     "To Hinami."
 
     scene black with fade
-    play music audio.main_theme fadein 1.5
+    stop music fadeout 1.0
+    stop sound 
+    pause 3.0
     jump credit_roll
 
 
@@ -3134,7 +3136,7 @@ label ch10_credits_scene:
 
     scene black with fade
     stop music fadeout 2.0
-    pause 1.0
+    pause 2.0
 
     scene destroyed_land with fade
     pause 3.0
@@ -3278,7 +3280,7 @@ label ch10_credits_scene:
 
     scene black with fade
     stop music fadeout 3.0
-    pause 2.0
+    pause 5.0
 
     "Back up this save before finishing. Thank you for playing."
 
@@ -3319,8 +3321,140 @@ label ch10_bad_end_credits:
 # CH10 CREDITS ROLL — unskippable except via Space
 # ============================================================
 
+# ============================================================
+# CH10 CREDITS ROLL — unskippable except via Space
+# ============================================================
+
+# init python:
+#     CREDITS_SCROLL_DURATION = 35.0  # TODO: tune to match how long your credit list takes to read comfortably
+
+# transform credits_scroll_up:
+#     yanchor 1.0       # Anchor the text box by its bottom edge
+#     ypos 0.5          # The target destination is the center of the screen
+#     yoffset 2500      # Start pushed 2500 pixels down (completely hidden off the bottom of the screen)
+#     linear CREDITS_SCROLL_DURATION yoffset 0  # Scroll upwards until yoffset is 0 (stops at center)
+
+# screen credits_roll():
+#     modal True
+#     zorder 200
+
+#     # solid black background
+#     add Solid("#000000")
+
+#     # ---------------- input locking ----------------
+#     # block every normal way of advancing/exiting a screen
+#     key "game_menu" action NullAction()
+#     key "hide_windows" action NullAction()
+#     key "rollback" action NullAction()
+#     key "rollforward" action NullAction()
+#     key "skip" action NullAction()
+
+#     # the only way out - press Space
+#     key "K_SPACE" action [Hide("credits_roll", transition=Dissolve(1.5)), Jump("ch10_credits_scene")]
+
+#     # invisible fullscreen button - swallows every click so nothing
+#     # underneath can be triggered and the screen itself can't be
+#     # dismissed by clicking
+#     button:
+#         xfill True
+#         yfill True
+#         background None
+#         action NullAction()
+
+#     # ---------------- scrolling credit text ----------------
+#     vbox:
+#         at credits_scroll_up
+#         xalign 0.5
+#         spacing 40
+
+#         # TODO: placeholder - swap for the real logo asset path/size
+#         add "dh_logo":
+#             xalign 0.5
+#             zoom 0.8
+#         text " " size 60
+
+#         text "DRAGON'S HEART: Crimson Rebirth" size 70 color "#ffffff" xalign 0.5 text_align 0.5 bold True
+#         text "by Temers Studio" size 40 xalign 0.5 text_align 0.5
+#         text " " size 60
+
+#         text "Written & Directed by" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "ICO" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         # text " " size 40
+
+#         text "Sprite Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         # text " " size 40
+
+#         text "Background Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+
+#         text "Music & Composition" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "---------- " size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+
+#         text "Programming" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "yondel__" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+
+#         text "Character VAs" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+#         # text " " size 40
+#         # text "Character Name" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         # text "*insert va" size 40 color "#ffffff" xalign 0.5 text_align 0.5 # TODO: VA LIST
+
+#         # ── Assets Used ──
+#         text "Assets Used" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "Tavern art by Maethavee.Kay'E on ArtStation" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Library by Vui Huynh" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Ice Monster art by Kvasir501 on Twitter" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Tianho Throne room by Background Kit (Webtoon blanks)" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+
+#         # ── Modules & Plugins ──
+#         text "Modules & Plugins" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "Kinetic Text Tags by Daniel Westfall/@sodara9 on Twitter" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Wave Shader Ren'Py Module 2022 by Daniel Westfall" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Shattered Glass by Maurimo" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Easy Renpy GUI by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text "Immersive Particles by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 40
+        
+#         text "Special Thanks" size 30 color "#999999" xalign 0.5 text_align 0.5
+#         text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+#         text " " size 100
+#         text "And most importantly, to you our dear player.\nIt was because of you who made this possible. " size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
+#         text "Thank you for playing Dragon's Heart and supporting Temers Studio. \nIt has been an honor making this game and we hope for your \ncontinued support on the studio's future endevours.\n.\n.\n\." size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
+#         text "\n---------- " size 42 xalign 0.5 text_align 0.5
+#         text "\n----------" size 42 xalign 0.5 text_align 0.5
+#         text "\n----------" size 42 xalign 0.5 text_align 0.5
+
+#     # small skip hint, tucked in the corner, always visible
+#     text "Press SPACE to skip":
+#         xpos 30
+#         ypos 1050
+#         size 22
+#         color "#777777"
+
+#     # auto-continue once the scroll finishes on its own + 3 seconds of pause
+#     timer (CREDITS_SCROLL_DURATION + 3.0) action [Hide("credits_roll", transition=Dissolve(1.5)), Jump("ch10_credits_scene")]
+
+
+# label credit_roll:
+#     play music audio.main_theme fadein 0.5
+#     show screen credits_roll
+#     with Dissolve(1.5)
+#     $ ui.interact()
+
+#     return
+
+# ============================================================
+# CH10 CREDITS ROLL — unskippable except via Space
+# ============================================================
+
 init python:
-    CREDITS_SCROLL_DURATION = 15.0  # TODO: tune to match how long your credit list takes to read comfortably
+    CREDITS_SCROLL_DURATION = 75.0  # TODO: tune to match how long your credit list takes to read comfortably
 
 transform credits_scroll_up:
     yanchor 0.0
@@ -3366,45 +3500,62 @@ screen credits_roll():
             zoom 0.8
         text " " size 60
 
-        text "DRAGON'S HEART: Crimson Rebirth" size 70 color "#ffffff" xalign 0.5 bold True
+        text "DRAGON'S HEART: Crimson Rebirth" size 70 color "#ffffff" xalign 0.5 text_align 0.5 bold True
         text "by Temers Studio" size 40 xalign 0.5 text_align 0.5
         text " " size 60
 
-        text "Written & Directed by" size 30 color "#999999" xalign 0.5
-        text "ICO" size 42 color "#ffffff" xalign 0.5
+        text "Written & Directed by" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "ICO" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         # text " " size 40
 
-        text "Sprite Artists" size 30 color "#999999" xalign 0.5
-        text " SAMPLE TEXT" size 42 color "#ffffff" xalign 0.5
+        text "Sprite Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         # text " " size 40
 
-        text "Background Artists" size 30 color "#999999" xalign 0.5
-        text " SAMPLE TEXT" size 42 color "#ffffff" xalign 0.5
+        text "Background Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
 
-        text "Music & Composition" size 30 color "#999999" xalign 0.5
-        text " SAMPLE TEXT " size 42 color "#ffffff" xalign 0.5
+        text "Music & Composition" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "---------- " size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
 
-        text "Programming" size 30 color "#999999" xalign 0.5
-        text "yondel__" size 42 color "#ffffff" xalign 0.5
+        text "Programming" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "yondel__" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "Character VAs" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+        # text " " size 40
+        # text "Character Name" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        # text "*insert va" size 40 color "#ffffff" xalign 0.5 text_align 0.5 # TODO: VA LIST
+
+        # ── Assets Used ──
+        text "Assets Used" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Tavern art by Maethavee.Kay'E on ArtStation" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Library by Vui Huynh" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Ice Monster art by Kvasir501 on Twitter" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Tianho Throne room by Background Kit (Webtoon blanks)" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        # ── Modules & Plugins ──
+        text "Modules & Plugins" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Kinetic Text Tags by Daniel Westfall/@sodara9 on Twitter" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Wave Shader Ren'Py Module 2022 by Daniel Westfall" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Shattered Glass by Maurimo" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Easy Renpy GUI by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Immersive Particles by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
         
-
-        text "Character VAs" size 30 color "#999999" xalign 0.5
-        text "Dorian Burnham" size 42 color "#ffffff" xalign 0.5
-        text " " size 40
-        text "Character Name" size 42 color "#ffffff" xalign 0.5
-        text "*insert va" size 40 color "#ffffff" xalign 0.5 # TODO: VA LIST
-
-        text "Special Thanks" size 30 color "#999999" xalign 0.5
-        text "" size 42 color "#ffffff" xalign 0.5
+        text "Special Thanks" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 100
-        text "And most importantly, to you our dear player.\nIt was because of you who made this possible. " size 36 color "#e8d9b0" xalign 0.5
-        text "Thank you for playing Dragon's Heart and supporting Temers Studio." size 36 color "#e8d9b0" xalign 0.5
-        text "It has been an honor making this game and we hope for your" size 36 color "#e8d9b0" xalign 0.5
-        text "continued support on the studio's future endevours." size 36 color "#e8d9b0" xalign 0.5
-
-
+        text "And most importantly, to you our dear player.\nIt was because of you who made this possible. " size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
+        text "Thank you for playing Dragon's Heart and supporting Temers Studio. \nIt has been an honor making this game and we hope for your \ncontinued support on the studio's future endevours.\n.\n.\n\." size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
+        text "\n---------- " size 42
+        text "\n----------" size 42
+        text "\n----------" size 42
     # small skip hint, tucked in the corner, always visible
     text "Press SPACE to skip":
         xpos 30
@@ -3418,6 +3569,7 @@ screen credits_roll():
 
 
 label credit_roll:
+    play music audio.main_theme fadein 0.5
     show screen credits_roll
     with Dissolve(1.5)
     $ ui.interact()

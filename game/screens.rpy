@@ -234,7 +234,7 @@ screen choice(items):
                     yalign 0.5
                     background Frame(Solid(
                         # ── BORDER COLOR ──────────────────────────
-                        "#c8a96e"
+                        "#825c87"
                     ), 8, 8)    # ← CORNER ROUNDING HERE
 
                 # Inner fill frame
@@ -259,7 +259,7 @@ screen choice(items):
                             old_value=0
                         )
                         # ── BAR COLORS ────────────────────────────
-                        left_bar Frame(Solid("#c8a96e"), 8, 8)  # fill
+                        left_bar Frame(Solid("#825c87"), 8, 8)  # fill
                         right_bar Frame(Solid("#2a2a2a"), 8, 8) # empty
 
 style choice_vbox is vbox
@@ -379,25 +379,25 @@ screen navigation():
                 textbutton _("Quit") action Quit(confirm=True) at hover_float
 
         else: #in-game menu buttons
-            textbutton _("History") action ShowMenu("history")
-            textbutton _("Settings") action ShowMenu("settings")
+            textbutton _("History") action ShowMenu("history") at hover_float
+            textbutton _("Settings") action ShowMenu("settings") at hover_float
 
             # indentation 
             if _in_replay:
-                textbutton _("End Replay") action EndReplay(confirm=True)
+                textbutton _("End Replay") action EndReplay(confirm=True) at hover_float
             else:
                 textbutton _("Main Menu") action [
                     SetVariable("save_name", "Quick Save"),
                     QuickSave(message="Saved to Quick Save", newest=True),
                     MainMenu(confirm=True)
-                ]
+                ] at hover_float
 
             if renpy.variant("pc"):
                 textbutton _("Quit") action [
                     SetVariable("save_name", "Quick Save"),
                     QuickSave(message="Saved to Quick Save", newest=True),
                     Quit(confirm=True)
-                ]
+                ] at hover_float
 
 
 style navigation_button is gui_button
@@ -554,7 +554,7 @@ style return_button_text is navigation_button_text
 style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
-    background "gui/overlay/game_menu.png"
+    background "gui/overlay/confirm.png"
 
 style game_menu_navigation_frame:
     xsize 420
@@ -675,14 +675,27 @@ screen about():
         vbox:
             spacing 15
             text "[config.name!t]" size 35
-            text _("Version [config.version!t]\n") size 25
+            text _("Version [config.version!t]") size 25
 
             null height 20
-            # TODO: insert text info
+            
+            # ── Credits ──
+            text _("Credits:") size 30 color gui.accent_color bold True
+            text _("Temers Studio") size 25 color "#ffffff"
+            
+            null height 15
+            
+            # ── Socials ──
+            text _("Socials:") size 30 color gui.accent_color bold True
+            text _("@TemersStudio - Twitter") size 25 color "#ffffff"
+            text _("Temers Studio - itch.io") size 25 color "#ffffff"
+            text _("") size 20 color "#888888" italic True
 
-            null height 20
+            null height 30 
+
             text _("Created with Ren'Py [renpy.version_only]") size 20 color "#888888"
-            text _("© 2026 Temers Studio ") size 20 color "#888888"   
+            text _("© 2026 Temers Studio") size 20 color "#888888"
+            
             null height 30 
 
         textbutton _("Back"):
@@ -692,7 +705,6 @@ screen about():
             xoffset 20
             yoffset 465 #sweet spot
             text_size 35
-
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
@@ -958,7 +970,6 @@ label after_load:
     if persistent.main_volume is not None:
         $ apply_main_volume(persistent.main_volume)
     return
-
 screen settings():
     tag menu
     default tab = "general"  # ADDED: tracks active tab
@@ -976,53 +987,60 @@ screen settings():
                     text_color (gui.accent_color if tab == "general" else "#888888")
                     text_size 45
                     text_hover_color "#ffffff"
-                    background (Frame("#1a6e8840", 5, 5) if tab == "general" else None)
-                    hover_background Frame("#1a6e8860", 5, 5)
+                    background None
+                    hover_background None
+                    selected_background None
                     xpadding 12
                     ypadding 6
+                    at hover_float
 
                 textbutton _("Sounds"):
                     action SetScreenVariable("tab", "sounds")
                     text_color (gui.accent_color if tab == "sounds" else "#888888")
                     text_size 45
                     text_hover_color "#ffffff"
-                    # FIXED: was checking tab == "general"
-                    background (Frame("#1a6e8840", 5, 5) if tab == "sounds" else None)
-                    hover_background Frame("#1a6e8860", 5, 5)
+                    background None
+                    hover_background None
+                    selected_background None
                     xpadding 12
                     ypadding 6
+                    at hover_float
 
                 textbutton _("Display"):
                     action SetScreenVariable("tab", "display")
                     text_color (gui.accent_color if tab == "display" else "#888888")
                     text_size 45
                     text_hover_color "#ffffff"
-                    # FIXED: was checking tab == "general"
-                    background (Frame("#1a6e8840", 5, 5) if tab == "display" else None)
-                    hover_background Frame("#1a6e8860", 5, 5)
+                    background None
+                    hover_background None
+                    selected_background None
                     xpadding 12
                     ypadding 6
+                    at hover_float
                     
                 textbutton _("About"):
                     action SetScreenVariable("tab", "about")
                     text_color (gui.accent_color if tab == "about" else "#888888")
                     text_size 45
                     text_hover_color "#ffffff"
-                    # FIXED: was checking tab == "general"
-                    background (Frame("#1a6e8840", 5, 5) if tab == "about" else None)
-                    hover_background Frame("#1a6e8860", 5, 5)
+                    background None
+                    hover_background None
+                    selected_background None
                     xpadding 12
                     ypadding 6
+                    at hover_float
+
                 textbutton _("Controls"):
                     action SetScreenVariable("tab", "controls")
                     text_color (gui.accent_color if tab == "controls" else "#888888")
                     text_size 45
                     text_hover_color "#ffffff"
-                    # FIXED: was checking tab == "general"
-                    background (Frame("#1a6e8840", 5, 5) if tab == "controls" else None)
-                    hover_background Frame("#1a6e8860", 5, 5)
+                    background None
+                    hover_background None
+                    selected_background None
                     xpadding 12
                     ypadding 6
+                    at hover_float
 
             null height 15
 
@@ -1039,15 +1057,15 @@ screen settings():
                     textbutton _("Unseen Text"):
                         style "check_button"
                         action Preference("skip", "toggle")
-                        text_selected_color "#88ff88"
+                        text_selected_color "#fffa5f"
                     textbutton _("After Choices"):
                         style "check_button"
                         action Preference("after choices", "toggle")
-                        text_selected_color "#88ff88"
+                        text_selected_color "#fffa5f"
                     textbutton _("Transitions"):
                         style "check_button"
                         action InvertSelected(Preference("transitions", "toggle"))
-                        text_selected_color "#88ff88"
+                        text_selected_color "#fffa5f"
                 null height 10
 
                 # ── Text Speed ──
@@ -1074,13 +1092,13 @@ screen settings():
                 vbox:
                     xoffset 30
                     spacing 8
-                    label _("Main"):
-                        style "pref_label_text"
-                        text_size 18
-                    bar:
-                        style "pref_bar_thin"
-                        value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
-                        changed apply_main_volume
+                    # label _("Main"):
+                    #     style "pref_label_text"
+                    #     text_size 18
+                    # bar:
+                    #     style "pref_bar_thin"
+                    #     value FieldValue(persistent, "main_volume", range=1.0, max_is_zero=False)
+                    #     changed apply_main_volume
                     if config.has_music:
                         label _("Music"):
                             style "pref_label_text"
@@ -1121,15 +1139,17 @@ screen settings():
                         $ win_symbol = "◉" if not preferences.fullscreen else "◯"
                         textbutton "[win_symbol] Window":
                             action Preference("display", "window")
+                            text_size 35
                             if not preferences.fullscreen:
-                                text_color "#88ff88"
+                                text_color "#fffa5f"
                             else:
                                 text_color "#cccccc"
                         $ full_symbol = "◉" if preferences.fullscreen else "◯"
                         textbutton "[full_symbol] Fullscreen":
                             action Preference("display", "fullscreen")
+                            text_size 35
                             if preferences.fullscreen:
-                                text_color "#88ff88"
+                                text_color "#fffa5f"
                             else:
                                 text_color "#cccccc"
                 else:
@@ -1141,13 +1161,28 @@ screen settings():
                 vbox:
                     spacing 15
                     text "[config.name!t]" size 35
-                    text _("Version [config.version!t]\n") size 25
+                    text _("Version [config.version!t]") size 25
+
                     null height 20
-                    # TODO: insert text info
-                    null height 20
+                    
+                    # ── Credits ──
+                    text _("Credits:") size 30 color gui.accent_color bold True
+                    text _("Temers Studio") size 25 color "#ffffff"
+                    
+                    null height 15
+                    
+                    # ── Socials ──
+                    text _("Socials:") size 30 color gui.accent_color bold True
+                    text _("@TemersStudio - Twitter") size 25 color "#ffffff"
+                    text _("Temers Studio - itch.io") size 25 color "#ffffff"
+                    text _("") size 20 color "#888888" italic True
+
+                    null height 30 
+
                     text _("Created with Ren'Py [renpy.version_only]") size 20 color "#888888"
                     text _("© 2025-2026 Temers Studio") size 20 color "#888888"
-
+                    
+            # TODO: FIX IN NEXT PATCH
             elif tab == "controls":
                 default device = "keyboard"
                 vbox:
@@ -1159,8 +1194,8 @@ screen settings():
                             text_color (gui.accent_color if device == "keyboard" else "#888888")
                             text_size 30
                             text_hover_color "#ffffff"
-                            background (Frame("#1a6e8840", 5, 5) if device == "keyboard" else None)
-                            hover_background Frame("#1a6e8860", 5, 5)
+                            background (Frame("#fffa5f41", 5, 5) if device == "keyboard" else None) 
+                            hover_background Frame("#fffa5f6f", 5, 5)
                             xpadding 12
                             ypadding 6
                         textbutton _("Mouse"):
@@ -1168,8 +1203,8 @@ screen settings():
                             text_color (gui.accent_color if device == "mouse" else "#888888")
                             text_size 30
                             text_hover_color "#ffffff"
-                            background (Frame("#1a6e8840", 5, 5) if device == "mouse" else None)
-                            hover_background Frame("#1a6e8860", 5, 5)
+                            background (Frame("#fffa5f41", 5, 5) if device == "mouse" else None)
+                            hover_background Frame("#fffa5f6f", 5, 5)
                             xpadding 12
                             ypadding 6
                         if GamepadExists():
@@ -1178,8 +1213,8 @@ screen settings():
                                 text_color (gui.accent_color if device == "gamepad" else "#888888")
                                 text_size 30
                                 text_hover_color "#ffffff"
-                                background (Frame("#1a6e8840", 5, 5) if device == "gamepad" else None)
-                                hover_background Frame("#1a6e8860", 5, 5)
+                                background (Frame("#fffa5f41", 5, 5) if device == "gamepad" else None)
+                                hover_background Frame("#fffa5f6f", 5, 5)
                                 xpadding 12
                                 ypadding 6
 
@@ -1187,23 +1222,23 @@ screen settings():
 
                     if device == "keyboard":
                         vbox:
-                            spacing 8
+                            spacing 15
                             for key_label, key_desc in [
                                 ("Enter",      "Advances dialogue and activates the interface."),
                                 ("Space",      "Advances dialogue without selecting choices."),
-                                ("Arrow Keys", "Navigate the interface."),
-                                ("Escape",     "Accesses the game menu."),
-                                ("Ctrl",       "Skips dialogue while held down."),
-                                ("Tab",        "Toggles dialogue skipping."),
-                                ("Page Up",    "Rolls back to earlier dialogue."),
-                                ("Page Down",  "Rolls forward to later dialogue."),
-                                ("H",          "Hides the user interface."),
-                                ("S",          "Takes a screenshot."),
-                                ("V",          "Toggles assistive self-voicing."),
-                                ("Shift+A",    "Opens the accessibility menu."),
+                                ("Arrow Keys", "             Navigate the interface."),
+                                ("Escape",     "                   Accesses the game menu."),
+                                ("Ctrl",       "           Skips dialogue while held down."),
+                                ("Tab",        "                       Toggles dialogue skipping."),
+                                ("Page Up",    "        Rolls back to earlier dialogue."),
+                                ("Page Down",  " Rolls forward to later dialogue."),
+                                ("H",          "                             Hides the user interface."),
+                                ("S",          "                                       Takes a screenshot."),
+                                ("V",          "                      Toggles assistive self-voicing."),
+                                ("Shift+A",    "           Opens the accessibility menu."),
                             ]:
                                 hbox:
-                                    xsize 850
+                                    xsize 1150
                                     spacing 0
                                     text "[key_label]":
                                         xsize 200
@@ -1218,19 +1253,20 @@ screen settings():
                                         size 30
                                         color "#dddddd"
                                         yalign 0.5
+                                        text_align 1.0
 
                     elif device == "mouse":
                         vbox:
-                            spacing 8
+                            spacing 15
                             for key_label, key_desc in [
                                 ("Left Click",       "Advances dialogue and activates the interface."),
-                                ("Middle Click",     "Hides the user interface."),
-                                ("Right Click",      "Accesses the game menu."),
-                                ("Mouse Wheel Up",   "Rolls back to earlier dialogue."),
-                                ("Mouse Wheel Down", "Rolls forward to later dialogue."),
+                                ("Middle Click",     "               Hides the user interface."),
+                                ("Right Click",      "                 Accesses the game menu."),
+                                ("Mouse Wheel Up",   "      Rolls back to earlier dialogue."),
+                                ("Mouse Wheel Down", "    Rolls forward to later dialogue."),
                             ]:
                                 hbox:
-                                    xsize 850
+                                    xsize 1150
                                     spacing 0
                                     text "[key_label]":
                                         xsize 200
@@ -1245,20 +1281,21 @@ screen settings():
                                         size 30
                                         color "#dddddd"
                                         yalign 0.5
+                                        text_align 1.0
 
                     elif device == "gamepad":
                         vbox:
-                            spacing 8
+                            spacing 10
                             for key_label, key_desc in [
                                 ("Right Trigger\nA/Bottom Button", "Advances dialogue and activates the interface."),
-                                ("Left Trigger\nLeft Shoulder",    "Rolls back to earlier dialogue."),
-                                ("Right Shoulder",                 "Rolls forward to later dialogue."),
-                                ("D-Pad, Sticks",                  "Navigate the interface."),
-                                ("Start, Guide,\nB/Right Button",  "Accesses the game menu."),
-                                ("Y/Top Button",                   "Hides the user interface."),
+                                ("Left Trigger\nLeft Shoulder",    "            Rolls back to earlier dialogue."),
+                                ("Right Shoulder",                 "                 Rolls forward to later dialogue."),
+                                ("D-Pad, Sticks",                  "                        Navigate the interface."),
+                                ("Start, Guide,\nB/Right Button",  "                    Accesses the game menu."),
+                                ("Y/Top Button",                   "                      Hides the user interface."),
                             ]:
                                 hbox:
-                                    xsize 850
+                                    xsize 1150
                                     spacing 0
                                     text "[key_label]":
                                         xsize 200
@@ -1268,12 +1305,15 @@ screen settings():
                                         color gui.accent_color
                                         yalign 0.5
                                         layout "subtitle"
+                                        
                                     null width 20
                                     text "[key_desc]":
                                         xsize 620
                                         size 30
                                         color "#dddddd"
                                         yalign 0.5
+                                        text_align 1.0
+                                        
                             if tab == "controls" and device == "gamepad":
                                 textbutton _("Calibrate"):
                                     action GamepadCalibrate()
@@ -1354,7 +1394,7 @@ style check_button:
 
 style check_button_text:
     properties gui.text_properties("check_button")
-    size 18
+    size 28
     color "#ffffff"
     hover_color "#ffcc88"
 

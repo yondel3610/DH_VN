@@ -858,7 +858,7 @@ label ch9_library_common:
     hide chunghee normal_
     with Dissolve(0.2)
 
-    call show_poem_screen
+    call show_poem_screen from _call_show_poem_screen
 
     "I closed the book. Lovely poem."
     "A father's sorrow. It hits close to home. Too close."
@@ -981,7 +981,7 @@ label ch9_bedroom_yuxuan:
 
     hide dorian with Dissolve(0.1)
 
-    call show_poem_screen
+    call show_poem_screen from _call_show_poem_screen_1
 
     "Just as I was about to place the book back, the door suddenly opened."
     show yuxuan normal_happy at right_char 

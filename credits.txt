@@ -1,5 +1,10 @@
 Tavern art by Maethavee.Kay'E on ArtStation
 Library by Vui Huynh
 Ice Monster art by Kvasir501 on Twitter
-Kinetic Text Tags by Daniel Westfall/@sodara9 on Twitter
 Tianho Throne room by Background Kit (Webtoon blanks)
+
+Kinetic Text Tags by Daniel Westfall/@sodara9 on Twitter
+Wave Shader Ren'Py Module 2022 by Daniel Westfall
+Shattered Glass by Maurimo
+Easy Renpy GUI by Feniks
+Immersive Particles by Feniks

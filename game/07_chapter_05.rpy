@@ -443,6 +443,7 @@ label ch5_spare_room:
     niko "He's alright. His pulse is steady. He just needs rest."
 
     "He pulled the blankets up to the young man's shoulders, tucking him in with practiced care. But there was a lingering uncertainty in Niko's expression—he wasn't satisfied just yet."
+    play sound audio.sfx_roboto_motor
     "He looked at the little robot whirring around the room."
 
     show niko normal_base at right_char with Dissolve(0.1)
@@ -904,10 +905,10 @@ label ch5_niko_common:
     voice audio.niko_ch5_line57
     niko "Something isn't right, Dorian. We're missing something. We just don't know what."
 
+    play sound audio.sfx_roboto_motor
     "Before I could respond, a familiar whirring sound filled the room."
 
-    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
+    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
     "The little machine rolled in with a tray, a neat pitcher of warm water and a stack of cups balanced with near-perfect precision. Its screen flickered, displaying an animated image of water being poured."
 
     show roboto happy at center_robot with Dissolve(0.2)
@@ -3589,8 +3590,8 @@ label ch5_dinner_talk:
     show chunghee normal_neutral at center_char with Dissolve(0.1)
     chung_hee "I would not speak of such things lightly."
 
-    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
+    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    voice audio.sfx_roboto_motor
     "Roboto, usually cheerful, gave a low whirring sound."
     hide svante with Dissolve(0.1)
     show roboto bad_mood at right_robot with Dissolve(0.2)

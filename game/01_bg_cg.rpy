@@ -278,6 +278,12 @@ image mjoll_palace_throne:
     xalign 0.5
     yalign 1.0
 
+image bg_mjoll_pavilion:
+    "images/Assets/Background/Mjoll - pavillion.png"           
+    size (1920, 1080)
+    xalign 0.5
+    yalign 1.0
+
 image frostcradle_blizzard: # BG – Icelands in pdf   
     "images/Assets/Background/Frostcradle - Blizzard.png"         
     size (1920, 1080)

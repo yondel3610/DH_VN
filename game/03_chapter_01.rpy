@@ -1091,7 +1091,7 @@ label ch1_common_fireworks:
     "Then, I see him."
 
     scene bg_tianho_city_night_sleeping with fade
-    play music audio.ost_dream_dragon
+    play music audio.ost_dream_dragon volume 0.4 loop
 
     # show prosperity_dragon on balcony — Prosperity Dragon sprite on balcony
     # cg_prosperity_dragon_balcony here — dragon on the balcony overlooking Tianho
@@ -1624,12 +1624,13 @@ label ch1_long_shen:
     show dorian normal_alt_neutral at left_char
     show cyrus at right_char
     with Dissolve(0.25)
-    voice audio.dorian_ch1_line63
+    voice audio.dorian_ch1_line64
     dorian "Cyrus. Calm down, old man. You're scaring the soldiers."
     hide dorian
     hide cyrus
     with Dissolve(0.1)
     scene bg_tianho_deng_night with fade
+    play music audio.ost_tianho_festival fadein 3.0 loop volume 0.1
     "As the sun begins its descent, the imperial kitchens prepare an elaborate feast. The scent of roasted duck, spiced noodles, and sweet lotus cakes wafts through the air."
 
     # [COMMENT: bg_tianho_deng_blossom — twilight, hundreds of lanterns, ceremony bells]
@@ -1646,11 +1647,11 @@ label ch1_long_shen:
     "I stand a little straighter as her gaze lands on me."
 
     show olympia at right_char
-    show dorian serious at left_char
+    show dorian neutral at left_char
     with Dissolve(0.25)
     voice audio.olympia_ch1_line1
     olympia "Paladin Dorian. Paladin Cyrus."
-    voice audio.dorian_ch1_line64
+    voice audio.dorian_ch1_line63
     dorian  "Your Grace."
     hide dorian with Dissolve(0.1)
     show cyrus at left_char with Dissolve(0.2)
@@ -1796,7 +1797,7 @@ label ch1_ceremony:
     hide cyrus
     with Dissolve(0.1)
     scene bg_tianho_city_night with fade   # PLACEHOLDER — castle interior, ceremony begins
-
+    stop music fadeout 3.0
     "As the ceremonial bell tolls, the low, resonant chime echoes through the courtyard. My thoughts wander briefly to Elara and the kids. Are they watching this momentous event unfold from somewhere within the palace grounds?"
     "I picture Sarah with her sketchpad balanced on her knees. Daniel, Lucas, and Emily, I imagine, are pretending to be guards, mimicking the disciplined stances of the soldiers."
     "Elara probably hushes them with a smile, pulling them close to keep them still."
@@ -1815,8 +1816,6 @@ label ch1_ceremony:
     "I straighten instinctively, adjusting my stance and gripping the hilt of my sword at my side. This is the moment we've been preparing for."
     "As the Emperor takes another step forward, his eyes sweep across the gathered assembly. For a brief moment, I feel his gaze linger on me, and I resist the urge to fidget."
     "Behind him, his guards form a protective arc, their movements precise and synchronized."
-
-    hide cg_emperor_arrival with Dissolve(0.1)
     scene bg_tianho_city_night
     with fade
     "When he speaks, his voice is deep and resonant, carrying effortlessly across the courtyard."
@@ -1831,13 +1830,16 @@ label ch1_ceremony:
     emperor_minjoon "Together, we will shape a future that honors our past and secures the well-being of generations to come. Let us begin."
 
     "As he finishes, he steps forward to meet Empress Olympia and the King of Tianho. The three rulers exchange formal bows before clasping hands in a gesture of unity."
-    play music audio.ost_tianho_emperor volume 0.6
+    play music audio.ost_tianho_emperor volume 0.5 fadein 3.0
     "The crowd erupts into applause, the sound reverberating through the courtyard like a thunderous wave."
     # add crowd applause sfx
     "I give the signal, and the courtyard springs to life. The musicians begin their symphony, a vibrant blend of drums, strings, and flutes."
-    # music + fanrong_square for bg
+    scene bg_tianho_fanrong_square with dissolve
     "Dragon dancers burst into motion, their costumes shimmering in the lantern light as they weave intricate patterns across the open space."
+
+    play sound audio.sfx_fireworks 
     "Fireworks crackle and explode overhead, painting the night sky with vivid bursts of red, gold, and green."
+    play sound audio.sfx_sparklers 
     "The crowd cheers even louder, swept up in the grandeur of the moment. I glance upward toward the balconies, half-expecting to catch a glimpse of Elara and the kids."
     "Though I know they're likely watching from a private chamber with the other families, a small part of me still hopes to see them, to know they're witnessing this historic event."
 
@@ -1849,11 +1851,12 @@ label ch1_ceremony:
     "The air hums with lively conversation, the laughter of nobles, and the harmonious tunes of zithers and flutes."
     "Courtiers, nobles, and foreign dignitaries mingle, raising cups of fine rice wine in celebration, while dancers clad in flowing silks perform graceful routines in perfect synchronization, to the beat of Tianho's ceremonial tunes."
     "Fire channelers perform a dazzling routine in the center, conjuring fiery dragons that swirl and dissolve into embers, earning applause from the crowd."
+    stop music fadeout 3.0
     "I stand at the edge of the gathering, my hand resting on the hilt of my sword, my thoughts far from the revelry."
     "The dragon's cryptic words in my dream earlier still weigh heavily on my mind."
-    stop music fadeout 2.0
-
-    prosperity_dragon "There will come a time when you feel like all is lost. In that moment, you must hold on to who you are — and hold on to me."
+    
+    voice audio.prosperity_dragon_ch1_line8
+    prosperity_dragon "But you must trust me. There will come a time when you feel like all is lost. In that moment, you must hold on to who you are — and hold on to me."
 
     "I scan the room until my gaze lands on Feng, effortlessly charming a group of nobles with his jokes."
 
@@ -2356,7 +2359,7 @@ label ch1_battle:
 
     hide yaoguai with Dissolve(0.1)
     show dorian serious at left_char
-    show soldier_jiang at right_char
+    show soldier_jiang at right_flip
     with Dissolve(0.2)
 
     voice audio.dorian_ch1_line106
@@ -2368,9 +2371,8 @@ label ch1_battle:
 
     hide soldier_jiang
     hide dorian
-
-    with Dissolve(0.1)
-    show yaoguai at center_yg with Dissolve(0.2)
+    show yaoguai at center_yg
+    with Dissolve(0.2)
     "The yaoguai in front of me snarls, its molten eyes locking onto mine. It lunges, claws slicing through the air like scythes. I brace myself, raising my sword, but before its strike can land—."
     "A blinding light erupts from the darkness, illuminating the courtyard as though the sun itself had descended."
 
@@ -2584,7 +2586,7 @@ label ch1_battle:
 
     voice audio.vasily_ch1_line13
     vasily "Dorian! Look out!"
-    play sound sfx_heartbeat loop
+    # play sound sfx_heartbeat loop
 
     $ _choice_timeout = 5.0
     menu:
@@ -2594,13 +2596,16 @@ label ch1_battle:
             stop sound
             play sound sfx_wind           # PLACEHOLDER — wind blast SFX
 
-            hide vasily with Dissolve(0.1)
+            hide vasily
             show dorian dragon_eyes at left_char
-            show yaoguai at right_yg with Dissolve(0.2)
-            "I thrust my arms forward, summoning the wind with a roar. A sharp gale tears through the room, slamming into the yaoguai with the force of a hurricane. They're thrown backward, smashing into the far wall with bone-cracking force."
+            show yaoguai at right_yg 
+            with Dissolve(0.2)
+            "I thrust my arms forward, summoning the wind with a roar. A sharp gale tears through the room, slamming into the yaoguai with the force of a hurricane."
+            play sound audio.monster_death 
+            "They're thrown backward, smashing into the far wall with bone-cracking force."
 
+            voice audio.yg_screech
             yg "Gaaaahhhh—"
-            hide yaoguai with flash
 
         "Stumble and fall.":
             $ _choice_timeout = 0
@@ -2614,7 +2619,7 @@ label ch1_battle:
             dorian "Ahhh!"
 
             "The yaoguai's sudden attack catches me off guard, and I trip on a loose stone, hitting the ground hard."
-            scene cg_blindinglight with flash
+            scene vasily_attack with flash
             "Before they can close in, Vasily steps forward, raising a glowing hand. With a burst of crimson light, one yaoguai disintegrates."
             scene bg_underground_dim with fade
             hide yaoguai with Dissolve(0.1)
@@ -2626,6 +2631,7 @@ label ch1_battle:
             hide yaoguai with Dissolve(0.1)
             show dorian dragon_eyes at left_char with Dissolve(0.2)
             # add sfx
+            play sound audio.sfx_wind 
             "I roll to the side and summon a quick gust of wind to send the second one flying into the wall."
 
     stop sound
@@ -2634,9 +2640,7 @@ label ch1_battle:
     scene bg_underground_dim with fade
 
     show dorian serious at left_char with Dissolve(0.1)
-
     "With the yaoguai dealt with, I look around, my heart sinking."
-    stop music fadeout 2.0
     show olympia at right_char with Dissolve(0.2)
     "At the far end of the room, Empress Olympia is slumped against the wall, her once-pristine robes soaked in blood."
     "Paladins Cyrus and Feng are crouched beside her, their armor dented and smeared with gore."
@@ -2713,7 +2717,7 @@ label ch1_battle:
     cyrus "There might be a doctor here who can—"
 
     # add shaking effect
-    "The ground beneath us begins to tremble. Then, the entire castle shakes violently, dust and debris raining down from the ceiling."
+    "The ground beneath us begins to tremble. Then, the entire castle shakes violently, dust and debris raining down from the ceiling." with hpunch
 
     show cyrus at right_char with Dissolve(0.1)
     voice audio.cyrus_ch1_line32
@@ -2736,7 +2740,7 @@ label ch1_battle:
 
     scene bg_tianho_city_on_fire with shock_cut  # PLACEHOLDER — city on fire, courtyard
 
-    play music audio.ost_battle fadein 2.0 loop volume 0.8
+    play music audio.ost_battle fadein 2.0 loop volume 0.5
     "Finally, we burst out into the courtyard, gasping for air."
     "The city of Tianho is in chaos. Streets are lit by the glow of fires, their smoke curling into the night sky."
     "People are screaming, running in every direction. Buildings collapse in the distance, their foundations giving way as the earth continues to quake."
@@ -2753,8 +2757,9 @@ label ch1_battle:
     # pause 1.5
     # scene bg_tianho_city_on_fire with dissolve
 
+    play sound audio.sfx_stone_break 
     "It fires a red beam towards the castle. The ancient structure groans in protest. Parts of it falling off."
-    "As the castle collapses, a shockwave ripples outward, sending dust and debris flying into the air. The ground beneath our feet trembles again, nearly throwing us off balance."
+    "As the castle collapses, a shockwave ripples outward, sending dust and debris flying into the air. The ground beneath our feet trembles again, nearly throwing us off balance." with hpunch 
 
     show feng_suit at right_char with Dissolve(0.2)
 
@@ -2892,7 +2897,7 @@ label ch1_battle:
 
     show taotie at right_tt with Dissolve(0.2)
     voice audio.toatie_roar_ch1_line1
-    "The Taotie roars again, shaking the ground beneath us. I glance up, my heart pounding. The creature is already advancing, its massive jaws snapping at the air."
+    "The Taotie roars again, shaking the ground beneath us. I glance up, my heart pounding. The creature is already advancing, its massive jaws snapping at the air." with vpunch
     "I think of rushing towards his aid, but somehow I need to kill this creature first."
 
     voice audio.toatie_roar_ch1_line3
@@ -3023,14 +3028,16 @@ label ch1_battle:
     stop sound fadeout 1.0
     # All QTCs survived — Olympia delivers the killing blow
     "The Taotie rears back, its monstrous body quaking with fury. Its eyes glow like molten orbs."
-    "The ground beneath us trembles as the beast lets out a guttural roar, louder and more furious than before. Lava bursts from its jagged maw, spraying the battlefield with scorching droplets."
+    "The ground beneath us trembles as the beast lets out a guttural roar, louder and more furious than before. Lava bursts from its jagged maw, spraying the battlefield with scorching droplets." with hpunch
     "The Taotie lunges, its massive jaws aiming straight for me. But before it can strike, a sudden burst of wind slams into its side like a battering ram."
+    voice audio.toatie_roar_ch1_line3
+    play sound audio.sfx_wind
     "The beast roars in confusion and stumbles back, teetering precariously on the edge of a deep pit. The wind intensifies, forcing the Taotie to lose its balance."
     "With a final deafening roar, it plummets into the pit below, disappearing into the fiery abyss."
 
-    hide taotie with Dissolve(0.1)
     voice audio.toatie_roar_ch1_line3
     taotie "GRAAAWWRRRR!!"
+    hide taotie with Dissolve(0.1)
     stop music fadeout 3.0
     "I whirl around, heart pounding, to see the source of the wind. There stands Empress Olympia, barely upright."
 
@@ -3088,10 +3095,8 @@ label ch1_battle:
     olympia "We'll be fine, Dorian. Get to your family now. That's an order."
 
     hide olympia with Dissolve(0.1)
-    show soldier_gao at right_char with Dissolve(0.2)
     male_soldier_2 "You can leave the empress and Paladin Feng to us, Paladin."
 
-    hide soldier_gao
     hide dorian
     with Dissolve(0.1)
     jump ch1_common_end
@@ -3118,7 +3123,7 @@ label game_over:
 label ch1_common_end:
 
     stop music fadeout 1.0
-    play music ost_tragedy fadein 3.0           # PLACEHOLDER — grief OST begins
+    play music audio.ost_danger fadein 3.0 volume 0.5          # PLACEHOLDER — grief OST begins
 
     scene bg_tianho_city_on_fire with dissolve
 
@@ -3144,7 +3149,7 @@ label ch1_common_end:
     woman_3 "My baby! My child and I are inside!"
 
     "I skid to a halt. The doorway is blocked by debris, the flames licking hungrily at the edges. I stretch out a hand, summoning my power."
-    "With a forceful motion, I manipulate the earth, shattering the debris blocking the entrance."
+    "With a forceful motion, I manipulate the earth, shattering the debris blocking the entrance." with vpunch
 
     show dorian angry at left_char with Dissolve(0.2)
     voice audio.dorian_ch1_line140
@@ -3179,7 +3184,7 @@ label ch1_common_end:
     show yuxuan normal_neutral at right_char with Dissolve(0.1)
     voice audio.dorian_ch1_line143
     dorian "You're not going to die here. What's your name?"
-    voice audio.yuxuan_ch1_line10
+    voice audio.yuxuan_ch1_line11
     yuxuan "Y-Yuxuan. Cheng Yuxuan."
     show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line144
@@ -3198,10 +3203,8 @@ label ch1_common_end:
 
     show dorian serious at left_char with Dissolve(0.1)
     show yuxuan alt_mid_close_eyes at right_char with Dissolve(0.1)
-    voice audio.yuxuan_ch1_line11
-    yuxuan "You… You saved me. I…"
     voice audio.yuxuan_ch1_line12
-    yuxuan "P-Paladin D-Dorian, right?"
+    yuxuan "You… You saved me. I… P-Paladin D-Dorian, right?"
     show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line146
     dorian "Don't mention it, Yuxuan. I want you to run. Head straight and you'll find soldiers who will help you. Hurry!"

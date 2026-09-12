@@ -13,14 +13,14 @@
 ## The _() surrounding the string marks it as eligible for translation.
 
 # TODO: change build name and version on release
-# define config.name = _("Dragon's Heart: Crimson Rebirth")
-define config.name = _("Dragon's Heart: DEMO EDITION v2")
+define config.name = _("Dragon's Heart: Crimson Rebirth")
+# define config.name = _("Dragon's Heart: DEMO EDITION v2")
 
 ## The version of the game.
 # game version docs:
 # [test phase] (version num).(chapter/major update).(bugs)
 
-define config.version = "dev 1.9.1"
+define config.version = "release 1.0"
 # define config.version = "alpha 1.2.0"
 # define config.version = "demo 1.2.0"
 
@@ -33,18 +33,7 @@ define gui.show_name = True
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-    Dragon's Heart: Crimson Rebirth 
-    
-    v1.9 demo
 
-    Credits:
-    Temers Studio 
-
-    Socials: 
-    @TemersStudio - Twitter
-    Temers Studio - itch.io
-
-    (insert rest when done)
 """)
 
 
@@ -52,7 +41,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 # TODO: change build name and version on release
-define build.name = "Dragon's Heart"
+define build.name = "Dragon's Heart: Crimson Rebirth"
 # define build.name = "DragonsHeart_Demo"
 # define build.version = "1.2.0"
 
@@ -214,7 +203,7 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 # Pause when window loses focus - the correct variable
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/window_icon.png" # DH LOGO ADDED
 
 # Auto-save on focus loss (optional)
 # define config.save_on_focus_loss = True

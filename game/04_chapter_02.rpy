@@ -280,12 +280,14 @@ label chapter_2:
     voice audio.lars_ch2_line7
     mjoll_lars  "Helga, your bow! Hit it on its shoulder!"
 
+    play sound audio.sfx_arrow  
     "One of the Mjoll soldiers managed to shoot an arrow, and by some stroke of luck—or desperation—it embedded itself in the Qiongqi's shoulder. The beast howled, thrashing violently, but it only seemed angrier."
     scene frostcradle_blizzard with shock_cut
     show snow_blizzard_1
     show qiongqi at right_qq with Dissolve(0.2)
     voice audio.qq_roar
     qiongqi "Krieeeeeewwwaaahh!!"
+
     show mjoll_helga at left_char with Dissolve(0.2)
     mjoll_helga "Haha! Take that!"
     hide mjoll_helga with Dissolve(0.1)
@@ -315,9 +317,9 @@ label chapter_2:
     hide qiongqi
     hide dorian
     with Dissolve(0.1)
+    stop music fadeout 2.0
     "The monstrous shrieking was cut short. The Qiongqi twitched once… then went still."
     "Dead."
-    stop music fadeout 2.0
 
     show dorian normal_alt_annoyed at left_char
     show mjoll_pavel at right_flip with Dissolve(0.2)
@@ -348,6 +350,7 @@ label chapter_2:
     voice audio.vasily_ch2_line6
     vasily "Are we even needed anymore, or are we just here for the scenery? Haha."
 
+    play music audio.ost_frostcradle volume 0.5
     "I didn't respond. My eyes were fixed on the distant horizon, where the snow-covered peaks loomed like silent watchers."
 
     hide vasily with Dissolve(0.1)
@@ -357,6 +360,7 @@ label chapter_2:
 
     # hide characters here, only bg
     hide dorian with Dissolve(0.1)
+
     "The walk back to Mjoll was silent except for the crunch of snow beneath our boots. The soldiers lingered behind me, talking about how they survived the fight with the monster."
     "The Qiongqi's head dangled from my grasp, dripping thick, acrid blood that left a crimson trail in the pure white snow. Its weight didn't bother me—I'd carried far worse."
 
@@ -371,9 +375,10 @@ label chapter_2:
 label ch2_palace:
 
     # [COMMENT: mjoll_palace_throne — guards stiffened at gates, incense in throne room]
+    stop music
     scene bg_mjoll_icelands with fade      # PLACEHOLDER — Mjoll throne room
     show snow_blizzard_1
-    play music ost_mjoll_palace fadein 2.0      # PLACEHOLDER — stiff court theme
+    # play music ost_mjoll_palace fadein 2.0      # PLACEHOLDER — stiff court theme
 
     show dorian sad at left_char with Dissolve(0.2)
     "When we reached the gates of the palace, the guards stiffened, their pale faces betraying their unease. They exchanged glances but didn't dare to stop me. As I pushed through the heavy doors, Vasily trailing close behind."
@@ -548,7 +553,7 @@ label ch2_cave:
     # [COMMENT: dorians_cave — fur curtain doorway, small fireplace, flickering shadows]
     scene dorians_cave with fade               # PLACEHOLDER — cave interior, firelight
     stop music fadeout 2.0
-    play music ost_cave_grief fadein 3.0        # PLACEHOLDER — fragile grief theme
+    # play music ost_cave_grief fadein 3.0        # PLACEHOLDER — fragile grief theme
     play audio amb_cave_fire loop fadein 2.0    # PLACEHOLDER — crackling fire ambient
 
     show dorian sad at left_char with Dissolve(0.2)
@@ -604,12 +609,12 @@ label ch2_square_intro:
     # [COMMENT: bg_mjoll_square_festive — booths being set up, thin snow falling, merchants bustling]
     scene bg_mjoll_square_festive with fade
     show snow_blizzard_1
-    play music ost_mjoll_festive volume 0.4 fadein 2.0  # PLACEHOLDER — light festive theme
+    play music ost_mjoll_festive volume 0.3 fadein 2.0 loop  # PLACEHOLDER — light festive theme
 
     "The city square of Mjoll is already alive with activity as I arrive the next day. The air is brisk, the cold biting but not enough to faze me anymore."
     "Booths are being set up around the square, their wooden frames dusted with a thin layer of snow. Merchants and servants bustle about, their breath forming small clouds in the icy air."
     "I spot Vasily almost immediately, standing near the center of the square. He's barking out orders, pointing left and right."
-
+    stop music fadeout 3.0
     show vasily alt_aggressive at right_char with Dissolve(0.2)
     voice audio.vasily_ch2_line12
     vasily "Make sure the performers don't miss a single beat. We don't want to have any on-the-spot beheadings this time around. We don't want any blood on our booths now, would we?"
@@ -642,11 +647,7 @@ label ch2_square_intro:
 
     show vasily alt_normal at right_char with Dissolve(0.1)
     voice audio.vasily_ch2_line16
-    vasily "The king and queen will be here later, but as you can see, we've got quite the spectacle planned. Feast, performances, and of course…"
-
-    "He leans in slightly, lowering his voice."
-
-    vasily "…the presentation of the Qiongqi's head. It'll be the centerpiece."
+    vasily "The king and queen will be here later, but as you can see, we've got quite the spectacle planned. Feast, performances, and of course, the presentation of the Qiongqi's head. It'll be the centerpiece."
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     voice audio.dorian_ch2_line12
@@ -784,6 +785,7 @@ label ch2_food_stalls:
     # [COMMENT: bg_mjoll_food_stalls — cast iron cauldrons, smoked fish, bread bowls steaming]
     scene bg_mjoll_square_festive with dissolve    # PLACEHOLDER — Mjollian food stalls
     show snow_blizzard_1
+    play music ost_mjoll_festive volume 0.3 fadein 2.0 loop
 
     show dorian neutral at left_char
     show vasily alt_normal at right_char
@@ -797,8 +799,8 @@ label ch2_food_stalls:
     dorian "Hmph."
 
     "I grunt in response, but my stomach betrays me with a growl. He smirks and gestures toward a booth with a large cast iron cauldron."
-
-    vendor_mjoll "Two Zarybas, fresh and hot! Best in all of Mjoll!"
+    voice audio.vasily_ch2_line29
+    vasily "Two Zarybas, fresh and hot! Best in all of Mjoll!"
 
     show vasily neutral at right_char with Dissolve(0.1)
     "Vasily hands over a few coins and passes me one of the bread bowls."
@@ -811,6 +813,8 @@ label ch2_food_stalls:
     "I take a bite. The smoky, savory flavor of the sturgeon hits me first, followed by the earthiness of the parsnips and turnips. The bread, soaked in the stew, is soft yet hearty. It's... surprisingly good."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.dorian_ch2_line20
+
     dorian "It's… *groans*"
     show vasily alt_normal at right_char with Dissolve(0.1)
     voice audio.vasily_ch2_line32
@@ -823,7 +827,7 @@ label ch2_food_stalls:
 
     "I don't answer, focusing instead on the meal. Vasily knows better than to push further and continues eating."
     show dorian serious at left_char with Dissolve(0.1)
-
+    stop music fadeout 3.0
     "As we get up to leave, I catch sight of the vendor. She stands at the edge of the stall, watching the guards escort two boys carrying heavy crates. Her eyes are filled with tears."
 
     hide vasily with Dissolve(0.1)
@@ -907,6 +911,7 @@ label ch2_food_stalls:
     show dorian neutral at left_char
     show vasily alt_normal at right_char
     with Dissolve(0.1)
+    voice audio.vasily_ch2_line36
     vasily "I know what you're thinking. You want to charge in, right every wrong. But that's not how Mjoll works, Dorian."
     voice audio.vasily_ch2_line37
     vasily "This place… It survives because of the system. The King and Queen, for all their flaws, keep the kingdom standing."
@@ -938,7 +943,7 @@ label ch2_food_stalls:
 label ch2_fortune:
     # [COMMENT: violet_tent — dim, violet curtains, crystal orb glowing faintly, incense]
     scene violet_tent with dissolve    # PLACEHOLDER — Babala's booth interior
-    play music ost_babala_prophecy fadein 2.0   # PLACEHOLDER — ethereal prophecy theme
+    # play music ost_babala_prophecy fadein 2.0   # PLACEHOLDER — ethereal prophecy theme
 
     show dorian neutral at left_char
     show vasily alt_normal at right_char
@@ -1130,7 +1135,7 @@ label ch2_fortune:
             vasily "I do not fret."
             hide vasily with Dissolve(0.1)
             show babala at right_char with Dissolve(0.2)
-            voice audio.babala_ch2_line21
+            voice audio.babala_ch2_line22
             babala "But the threads of fate do not end here. We must look to the future."
             hide babala with Dissolve(0.1)
             show vasily alt_think at right_char with Dissolve(0.1)
@@ -1141,6 +1146,7 @@ label ch2_fortune:
             # play sound sfx_prophecy_thunder     # PLACEHOLDER — thunder crack SFX
             hide vasily with Dissolve(0.1)
             show babala at right_char with Dissolve(0.2)
+            play sound orb_glow
             "A sudden crash of thunder interrupts him. The orb glows fiercely, and Babala's voice grows deeper, more resonant. Smoke surrounds her, and her eyes shine with an unnatural light."
             "The booth grows colder as her voice rises."
 
@@ -1748,15 +1754,16 @@ label ch2_frost_oni:
     "Then, out of the frost-laden mist, they appeared."
 
     # TODO: add sfx
-    # play sound sfx_ice_crack                    
+    play sound audio.sfx_ice_explosion                     
     # CG: Frost Oni emerging from the mist
     scene bg_mjoll_blizzard with shock_cut
     show snow_blizzard_1
 
-    # TODO: play music ost_frost_oni_battle fadein 0.5
+    play music audio.ost_battle  fadein 0.5
     "Towering figures, their forms jagged and crystalline, emerged from the haze. Beings of ice, emanating an eerie glow."
     "Long, flowing tendrils of frost extended from their limbs, crackling as they moved. They carried weapons of ice—curved swords and long spears."
-
+    
+    play sound audio.sfx_back 
     frost_oni "*Crackling sounds*"
     man_2 "W-What are those things?!"
     woman_1 "D-Demons! Demons!"
@@ -1779,6 +1786,7 @@ label ch2_frost_oni:
     "His words died in his throat, his body encased in frost before shattering into pieces."
 
     show frost_oni at center_char with shock_cut
+    voice audio.frost_oni1  
     frost_oni "Graaaaa!!"
 
     "The dunk tank was their next target. One of the creatures slammed its massive fist against the frame, shattering it instantly. The water inside spilled out, freezing as it hit the ground."
@@ -1808,7 +1816,9 @@ label ch2_frost_oni:
     voice audio.dorian_ch2_line55
     dorian "I don't know."
 
+    play sound audio.sfx_earth
     "I raised my hands, channeling earth and wind. The ground around me shifted, sharp pillars of stone erupting to block the ice beings' path."
+    play sound audio.sfx_wind
     "I followed up with a gust of wind, sending shards of debris flying toward them."
 
     # play sound sfx_earth                  # PLACEHOLDER — earth spike SFX
@@ -1836,11 +1846,10 @@ label ch2_frost_oni:
     show dorian serious at left_char
     show frost_oni at right_char
     with Dissolve(0.2)
+    voice audio.frost_oni2 
     frost_oni "Graaaaa!!"
 
     "One of the creatures ran towards me, its icy breath misting the air as it raised its massive spear toward me. It would be difficult for me to physically dodge the spear."
-    # play sound sfx_heartbeat loop
-
     # =====================================================================
     # D4 — TIMED QTC: Frost Spear (wind = safe / dodge = +ICE)
     # PDF p83
@@ -1855,7 +1864,7 @@ label ch2_frost_oni:
             play sound sfx_wind           # PLACEHOLDER
             show dorian dragon_eyes at left_char with Dissolve(0.1)
             "I summoned a powerful gust of wind just in time, the spear flying off course and shattering against the ground. The ice being let out an enraged screech, its glowing eyes locked on me."
-
+            voice audio.frost_oni2 
             frost_oni "Graaaaa!!"
 
         "Dodge to the side.":                      # WRONG — +1 ICE
@@ -1886,13 +1895,14 @@ label ch2_frost_oni:
             vasily "Dorian!"
             hide vasily with Dissolve(0.1)
             show frost_oni at right_char with Dissolve(0.1)
+            voice audio.frost_oni1 
             frost_oni "Graaaaa!!"
 
     # TODO: fix sfx
     # play sound sfx_heartbeat loop
     show dorian angry at left_char with Dissolve(0.1)
     "Another creature surged forward, its clawed hand reaching for Vasily. He fired a beam of light magic, but it was too fast, dodging the attack. Its focus turned to me."
-
+    voice audio.frost_oni1 
     frost_oni "Graaaaa!"
     hide frost_oni with Dissolve(0.1)
     show vasily alt_mad at right_char with Dissolve(0.2)
@@ -1975,6 +1985,7 @@ label ch2_frost_oni:
             show dorian dragon_eyes at left_char
             show frost_oni at right_char
             with Dissolve(0.2)
+            voice audio.frost_oni2
             "I called on the wind, forcing it into a violent cyclone that tore through the frost cloud. The creature let out a shriek of frustration as its attack dissipated, leaving it vulnerable."
 
             voice audio.dorian_ch2_line58
@@ -1984,9 +1995,10 @@ label ch2_frost_oni:
             voice audio.babala_ch2_line27
             babala "*gibberish* Taste the wrath of the Weaver!"
 
-            # play sound sfx_vine_attack          # PLACEHOLDER — vine attack SFX
+            play sound sfx_vine_attack          # PLACEHOLDER — vine attack SFX
             hide babala with Dissolve(0.1)
             show frost_oni at right_char with Dissolve(0.2)
+            voice audio.frost_oni1 
             "All of a sudden, vines surrounded the ice being and smashed it on its vulnerable spot."
             hide frost_oni with Dissolve(0.1)
 
@@ -2192,7 +2204,6 @@ label ch2_common_end:
 
     show dorian sad at left_char with Dissolve(0.2)
 
-    # [COMMENT: the fire crackled softly]
     # TODO: add sfx
     voice audio.dorian_ch2_line65
     dorian "Elara… Kids… I'm home."
@@ -2373,7 +2384,7 @@ label ch2_common_end:
     dorian "Let's go."
 
     "The messenger nodded, and we began the trek back to Mjoll."
-
+    stop audio fadeout 1.0
     jump ch2_castle_briefing
 
 
@@ -2859,14 +2870,11 @@ label ch2_end:
 
 
     jump chapter_2_extension
-    # TODO: some audio from ch2 will be at the ch3 file due to some error, deal with it
 
 label chapter_2_extension:
     scene frostcradle_blizzard with fade
     show snow_blizzard_1
-    
-    # play music ost_frostcradle_approach fadein 2.0    # PLACEHOLDER
-    # play audio amb_frostcradle_wind loop fadein 1.5   # PLACEHOLDER
+    play music audio.ost_frostcradle loop fadein 1.5   # PLACEHOLDER
 
     show dorian serious at left_char with Dissolve(0.2)
     "The wind howled like a living thing as I trudged westward. Each step was a battle against the biting cold that seeped through every layer of clothing I wore."
@@ -2874,7 +2882,6 @@ label chapter_2_extension:
     "If it wasn't for my fire channeling gift, I would have frozen by now."
     "The snow grew deeper as I climbed higher, the jagged peaks of the Iceclaw Pass looming in the distance."
 
-    # Family ghost-voices — no sprites; they exist only as warmth in Dorian's mind
     voice audio.elara_ch2_line12
     elara "We're almost there, my heart. Let's keep moving."
     lucas "Let's go, dad! We're almost at the Frost… Frostcray—"
@@ -2908,10 +2915,10 @@ label chapter_2_extension:
 # =============================================================================
 
 label ch2_mine:
-
+    stop music fadeout 3.0
     scene bg_frostcradle_cave with fade       # PLACEHOLDER
-
     show dorian serious at left_char with Dissolve(0.2)
+    play audio amb_underground loop volume 0.4
     "I entered the mine, and it was as silent as a graveyard."
     "The first body I found wasn't whole."
     "An aldorith. His hair was frozen to the icy floor, his body contorted unnaturally. Jagged shards of ice jutted through his chest and limbs like stakes."
@@ -3265,7 +3272,9 @@ label ch2_yuki_boss:
         # pause 1.0
         # scene bg_frostcradle_interior with dissolve
 
-        # stop music fadeout 2.0
+        stop music fadeout 2.0
+        stop audio
+        stop sound
 
         hide yuki_onna with Dissolve(0.1)
         show dorian serious at left_char
@@ -3301,7 +3310,7 @@ label ch2_yuki_boss:
 label ch2_truth:
 
     scene frostcradle_cabin with fade                 # PLACEHOLDER
-    play music audio.ost_cabin fadein 2.0 loop      # PLACEHOLDER
+    play music audio.ost_cabin fadein 2.0 loop volume 0.5     # PLACEHOLDER
     # play audio amb_shack_fire loop fadein 1.5         # PLACEHOLDER
 
     "Eventually, I emerged into a small chamber carved into the rock. At its center was a crude, weathered shack."
@@ -3321,6 +3330,7 @@ label ch2_truth:
     "His face pale, his eyes wide with fear, his tiny hands clutching a wooden spoon."
 
     show elias first_meet_sad at right_elias with Dissolve(0.2)
+    voice audio.elias_ch2_line1
     elias "Go away! Go away!"
 
     "The toddler let out a frightened cry as the spoon flew through the air, bouncing harmlessly off my chest."
@@ -3344,12 +3354,14 @@ label ch2_truth:
     "I lunged forward, catching his wrist mid-throw. He screamed."
 
     show elias first_meet_crying at right_elias with Dissolve(0.1)
+    voice audio.elias_ch2_line2
     elias "Let me go! Let me go!"
 
     show dorian neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch2_line115
     dorian "Stop. I'm not going to hurt you."
 
+    voice audio.elias_ch2_line3
     elias "Let me go! *crying*"
 
     "Something stirred a pang of unease in my chest. I looked closer, scanning him for any sign of the death god's energy. Nothing. Not on him, at least."
@@ -3363,6 +3375,7 @@ label ch2_truth:
 
     show elias first_meet_crying at right_elias
     with Dissolve(0.1)
+    voice audio.elias_ch2_line4
     elias "*sobbing* E-Elias…"
 
     voice audio.dorian_ch2_line117
@@ -3564,6 +3577,7 @@ label ch2_truth:
     "And then she was gone."
 
     scene frostcradle_cabin_on with shock_cut                 # PLACEHOLDER
+    play music audio.ost_cabin fadein 2.0 loop volume 0.4
     # stop music fadeout 2.0
     show dorian serious at left_char with Dissolve(0.2)
     "The vision faltered. I was back in the room, staring at the sleeping toddler and the glowing amulet around his neck. Ekaterina's words echoed in my ears."

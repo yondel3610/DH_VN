@@ -121,6 +121,7 @@ label ch3_elias_questions:
     pause 3.0
 
     scene frostcradle_cabin_on with fade
+    play music audio.ost_cabin fadein 2.0 loop volume 0.3
     "The cold floor bit into my cheek as I stirred awake. The roar of the blizzard echoed through the mining cave like a living beast."
     "When I opened my eyes, I was greeted by the dim light of the shack. Elias was in the corner, fumbling with what appeared to be a jar."
     "His tiny hands struggled against the lid, his face scrunched up in determination."
@@ -230,6 +231,7 @@ label ch3_question_menu:
             voice audio.dorian_ch3_line13
             dorian "Well… I'm not getting any answers from you, am I?"
             show elias first_meet_neutral at right_elias with Dissolve(0.1)
+            voice audio.elias_ch3_line5
             elias "Um… Huh?"
 
             jump ch3_question_menu
@@ -243,7 +245,7 @@ label ch3_question_menu:
 
             show elias first_meet_neutral at right_elias with Dissolve(0.1)
             "At this, Elias froze. His sticky hands darted to the amulet, clutching it protectively."
-
+            voice audio.elias_ch3_line6
             elias "This? They Mommy say... uh... um... Mommy say, don't give it! Don't give it to bad guys. No, no, no!"
 
             "He shook his head so hard his hair flopped around."
@@ -286,6 +288,7 @@ label ch3_question_menu:
             "He threw his arms up, making a dramatic gusting sound."
 
             show elias first_meet_happy at right_elias with Dissolve(0.1)
+            voice audio.elias_ch3_line11
             elias "And they go... um... like statues. Mommy say, 'Leave!' An' dey didn't... so, um, they go 'brrrrrrrrrr!'"
 
             "He shivered for emphasis, then giggled, poking at the jar."
@@ -307,6 +310,7 @@ label ch3_question_menu:
             "Elias let out a happy hum, kicking his feet as he hugged the empty jar."
 
             show elias first_meet_happy at right_elias with Dissolve(0.2)
+            voice audio.elias_ch3_line13
             elias "Okay! You ask lotsa stuffs, mister. I like da fruit. Got more?"
 
             show dorian neutral at left_char with Dissolve(0.1)
@@ -337,7 +341,7 @@ label ch3_blizzard_trapped:
     dorian "Kid, is there any food in here?"
     show elias first_meet_neutral at right_elias with Dissolve(0.2)
     "The toddler looked up from where he was fiddling with the now-empty jar. He pointed a finger toward the corner."
-
+    voice audio.elias_ch3_line14
     elias "Uhhh... um... fishies over there, mister! An' veggies... Mommy say dey for soup. But I don't know how."
     hide elias
     hide dorian
@@ -416,7 +420,8 @@ label ch3_blizzard_trapped:
 
     with Dissolve(0.1)
     "Elias barely acknowledged me, too absorbed in savoring every bite of his stew. I shook my head and stepped toward the entrance of the shack, the sound of the blizzard growing louder with every step."
-
+    stop music fadeout 3.0
+    stop audio
     scene frostcradle_blizzard with dissolve
     show snow_blizzard_1
 
@@ -497,6 +502,7 @@ label ch3_blizzard_trapped:
 
     with Dissolve(0.1)
     scene frostcradle_cabin_on with dissolve
+    play music audio.ost_cabin fadein 2.0 loop volume 0.3
 
     "A couple of days passed. The blizzard showed no sign of letting up. The storm had trapped us here, together."
     "I didn't speak to Elias. Not once."
@@ -617,6 +623,7 @@ label ch3_blizzard_trapped:
     voice audio.elias_ch3_line28
     elias "Thank you, mister."
 
+    play sound audio.sfx_roboto_motor
     "I opened my mouth to respond, but before I could, a faint whirring sound cut through the silence. It grew louder, and I turned toward the noise."
     "Then I saw it—something rolling toward the shack's entrance, its small frame navigating the uneven ground with mechanical precision."
 
@@ -645,6 +652,7 @@ label ch3_yuxuan_arrives:
     voice audio.dorian_ch3_line41
     dorian "No, it's not alive. It's a supply bot. Made by Cheng Industries."
     show elias first_meet_neutral at right_elias with Dissolve(0.1)
+    voice audio.elias_ch3_line30
     elias "A suh-ply bot?"
     "The bot's sensors glowed softly as it paused."
     show supply_robot normal at center_supply with Dissolve(0.2)
@@ -960,6 +968,7 @@ label ch3_yuxuan_arrives:
 label ch3_mushroom:
     # play music ost_blizzard_days fadein 2.0           # PLACEHOLDER
     scene frostcradle_cabin_on with Dissolve(0.9)
+    play music audio.ost_cabin fadein 2.0 loop volume 0.3     # PLACEHOLDER
 
     show dorian neutral at left_char with Dissolve(0.2)
 
@@ -969,6 +978,7 @@ label ch3_mushroom:
     "The blizzard was still there - howling louder than ever."
 
     "I found that I was wearing the amulet Elias was previously wearing. Oddly enough, it stopped glowing. I stood up, removed it and placed it on a small table."
+    play sound audio.sfx_roboto_motor
     "A soft whirring sound made me glance toward the corner where Yuxuan's bot had been powered down."
     "For some reason, it's still here. It came to life with a low hum, the hologram of Yuxuan flickering into existence above it."
 
@@ -1341,9 +1351,10 @@ label ch3_breakfast:
     hide elias with Dissolve(0.1)
     show supply_robot base at right_supply with Dissolve(0.2)
     yuxuan "Good night to both of you. May the howling blizzard only make our little shack feel warmer."
-    
-    scene frostcradle_cabin with fade
 
+    scene frostcradle_cabin with fade
+    pause 2.0
+    stop music fadeout 3.0
     "The next day, I woke up to an eerie silence."
     "No howling winds."
     "No biting cold seeping through the cracks of the shack."
@@ -1523,6 +1534,7 @@ label ch3_vasily_arrives:
     with Dissolve(0.1)
 
     "He dragged the blue-haired prophet away, but the he shot me one last look, before disappearing over the crowd."
+    play music audio.ost_tension_rising volume 0.5 loop
     "The murmurs among the soldiers grew louder. An aldorith with silver hair stepped forward, her voice trembling but resolute."
 
     show kristin_normal at right_char with Dissolve(0.2)           
@@ -1570,6 +1582,7 @@ label ch3_vasily_arrives:
     voice audio.vasily_ch3_line16
     vasily          "Hmph. Your Father never tolerates treason. Remember that."
 
+    stop music fadeout 1.0
     "The soldiers stiffened, their faces a mix of shock and fear. Svante dropped to his knees beside Kristin's lifeless body, his cries piercing the silence."
 
     show svante normal_sad at left_char with Dissolve(0.2)
@@ -1647,7 +1660,7 @@ label ch3_critical_fork:
         "Give Elias to Vasily.":
             $ ch3_d5 = "gave"
             stop sound
-            # stop music fadeout 1.0
+            stop music fadeout 1.0
 
             show dorian sad at left_char with Dissolve(0.2)
             "A long silence."
@@ -1719,7 +1732,7 @@ label ch3_bad_end:
 
     scene bg_mjoll_icelands with fade
     show snow_blizzard_1
-    # play music ost_bad_end_luxury fadein 3.0          # PLACEHOLDER
+    play music audio.ost_tragedy fadein 3.0 loop volume 0.4          # PLACEHOLDER
 
     "Years passed."
     "Mjoll welcomed me back like a long-lost hero."
@@ -1796,7 +1809,7 @@ label ch3_bad_end:
 
     "For a moment, everything was silent. The world seemed to hold its breath, waiting."
     "And then I let go."
-    stop audio fadeout 3.0
+    stop music fadeout 3.0
 
     pause 3.0
 
@@ -2000,6 +2013,7 @@ label ch3_fight_back:
 
     show girl_ald_normal at right_char with Dissolve(0.2)
     girl_ald "What in the name of Enoch—"
+    play sound audio.sfx_yaoguai_burst 
     "The ground beneath her erupted, jagged pillars of molten rock spearing upward. The heat melted the steel of her armor, her body incinerated before she could even cry out." with vpunch
     hide girl_ald_normal with Dissolve(0.1)
     hide screen draconic_rage
@@ -2007,6 +2021,7 @@ label ch3_fight_back:
 
     scene cg_mjoll_massacre with fade
     # TODO: add intense fight music (massacre)
+    play music audio.ost_battle loop volume 0.5
     voice audio.boy_ald_ch3_line8
     boy_ald "C-Charge! Charge!"
     "They came at me in waves, arrows flying, swords raised."
@@ -2020,7 +2035,7 @@ label ch3_fight_back:
     boy_ald "Mercy!! Enoch save me!! Ahhh!!"
     girl_ald "We're just obeying orders! Don't kill us!! Ahh!!"
     dorian "..."
-
+    stop music fadeout 1.0
     scene black with fade
     "A raven approached Elias."
     voice audio.elias_ch3_line51
@@ -2090,6 +2105,7 @@ label ch3_fight_back:
     voice audio.svante_ch3_line18 
     svante "AHHHH!!!"
     scene black with shock_cut
+    play sound audio.sfx_stone_break
     "The ground beneath him crumbled. He screamed as he fell, his voice cutting off abruptly."
     "Silence."
 
@@ -2117,6 +2133,7 @@ label ch3_fight_back:
 label ch3_escape:
     scene black
     pause 1.5
+    play sound audio.sfx_roboto_motor
     "A faint whirring sound pulled me from the void. It was mechanical, distant, but growing louder."
     # TODO: add robot motor sounds (small motors)
     "My body felt heavy, as though I were sinking into the earth itself."

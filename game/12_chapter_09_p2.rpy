@@ -3245,7 +3245,7 @@ label ch9_lantern_kids:
     "And just like that, they vanished-sprinting back with a flurry of giggles, robotic beeping, and a suspicious trail of glitter that they absolutely were not supposed to have."
 
     # jump ch9_route_magnus # check each label scene
-    call check_affection_route
+    call check_affection_route from _call_check_affection_route
 
 # =============================================================================
 # SECTION 20: LABEL CH9_ROUTE_YUXUAN — Yuxuan Lantern Scene
