@@ -13,6 +13,7 @@
 ## The _() surrounding the string marks it as eligible for translation.
 
 # TODO: change build name and version on release
+# NOTE: this is the title bar display
 define config.name = _("Dragon's Heart: Crimson Rebirth")
 # define config.name = _("Dragon's Heart: DEMO EDITION v2")
 
@@ -41,7 +42,8 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 # TODO: change build name and version on release
-define build.name = "Dragon's Heart: Crimson Rebirth"
+# NOTE: This is the .exe file
+define build.name = "DragonsHeart" 
 # define build.name = "DragonsHeart_Demo"
 # define build.version = "1.2.0"
 

@@ -17,36 +17,7 @@
 
 # =============================================================================
 # SECTION 3: AUDIO DECLARATIONS
-# =============================================================================
-
-# --- Music ---
-# define audio.ost_tunnel_move     = "audio/music/ost_tunnel_move.ogg"        # PLACEHOLDER
-# define audio.ost_cheng_lab       = "audio/music/ost_cheng_lab.ogg"          # PLACEHOLDER
-# define audio.ost_niko_faith      = "audio/music/ost_niko_faith.ogg"         # PLACEHOLDER
-# define audio.ost_svante_talk     = "audio/music/ost_svante_talk.ogg"        # PLACEHOLDER
-# define audio.ost_dinner_warm     = "audio/music/ost_dinner_warm.ogg"        # PLACEHOLDER
-# define audio.ost_chung_reveal    = "audio/music/ost_chung_reveal.ogg"       # PLACEHOLDER
-# define audio.ost_amulet_vision   = "audio/music/ost_amulet_vision.ogg"      # PLACEHOLDER
-# define audio.ost_minjoon_memory  = "audio/music/ost_minjoon_memory.ogg"     # PLACEHOLDER
-# define audio.ost_nightmare       = "audio/music/ost_nightmare.ogg"          # PLACEHOLDER
-
-# --- Sound Effects ---
-# define audio.sfx_earth_open      = "audio/sfx/sfx_earth_open.ogg"           # PLACEHOLDER
-# define audio.sfx_door_scan       = "audio/sfx/sfx_door_scan.ogg"            # PLACEHOLDER
-# define audio.sfx_door_chime      = "audio/sfx/sfx_door_chime.ogg"           # PLACEHOLDER
-# define audio.sfx_door_open       = "audio/sfx/sfx_door_open.ogg"            # PLACEHOLDER
-# define audio.sfx_roboto_beep     = "audio/sfx/sfx_roboto_beep.ogg"          # PLACEHOLDER
-# define audio.sfx_roboto_crash    = "audio/sfx/sfx_roboto_crash.ogg"         # PLACEHOLDER
-# define audio.sfx_amulet_vision   = "audio/sfx/sfx_amulet_vision.ogg"        # PLACEHOLDER
-# define audio.sfx_void_crack      = "audio/sfx/sfx_void_crack.ogg"           # PLACEHOLDER
-# define audio.sfx_chains          = "audio/sfx/sfx_chains.ogg"               # PLACEHOLDER
-# define audio.sfx_sleep_powder    = "audio/sfx/sfx_sleep_powder.ogg"         # PLACEHOLDER
-
-# # --- Ambient ---
-# define audio.amb_tunnel_drip     = "audio/ambient/amb_tunnel_drip.ogg"      # PLACEHOLDER
-# define audio.amb_lab_hum         = "audio/ambient/amb_lab_hum.ogg"          # PLACEHOLDER
-# define audio.amb_rain_muffled    = "audio/ambient/amb_rain_muffled.ogg"     # PLACEHOLDER
-# define audio.amb_kitchen         = "audio/ambient/amb_kitchen.ogg"          # PLACEHOLDER
+# ============================================================================
 
 # =============================================================================
 # SECTION 4: GAME VARIABLES
@@ -233,13 +204,13 @@ label ch5_yuxuan_lab:
     stop sound fadeout 1.75
     "With a deep, mechanical thunk, the massive door finally split apart, revealing a sterile yet inviting interior."
     scene lab_cave_off with fade
-    play music audio.ost_yuxuan_lab volume 0.75 fadein 1.75
     "A rush of cool, crisp air greeted us as the passageway opened. The lighting inside was dimmed but warm, perfectly illuminating the space beyond."
     "We stepped inside, one by one."
     "It looked… comfortable."
     "The room was spacious, lined with sleek furniture, and had the distinct coziness of a lived-in space rather than the cold sterility of a scientific lab."
     "A few shelves were stacked with books, blueprints, and small trinkets, while elegant screens displayed various data across the walls."
     scene lab_cave_on with dissolve
+    play music audio.ost_yuxuan_lab volume 0.75 fadein 1.75 loop
     show yuxuan normal_happy at right_char with Dissolve(0.2)
     voice audio.yuxuan_ch5_line8
     yuxuan "There we are. Home sweet home."
@@ -252,8 +223,7 @@ label ch5_yuxuan_lab:
     voice audio.yuxuan_ch5_line9
     yuxuan "Roboto will escort you to the spare room. Roboto! Come here."
 
-    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
-
+    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
     "At his command, a small mechanical figure whirred to life from the corner of the room."
     "With a series of cheerful beeps, a scrappy little robot wobbled its way toward us, its monitor-like face flickering before settling into a bright, pixelated smile."
 
@@ -362,8 +332,6 @@ label ch5_yuxuan_lab:
     voice audio.svante_ch5_line16
     svante "Everyone, we're not safe here! This man—"
 
-    # play sound sfx_sleep_powder                 # PLACEHOLDER — sleep powder SFX
-
     "A swift movement—Yuxuan stepped forward and flicked a handful of shimmering powder straight into Svante's face."
     "The reaction was instant."
     "His words faltered, his body swaying. He blinked sluggishly."
@@ -383,7 +351,7 @@ label ch5_yuxuan_lab:
     voice audio.yuxuan_ch5_line12
     yuxuan "You can never have too much sleeping powder."
 
-    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
 
     "Roboto's screen flickered. A sleeping face with Zs on top."
 
@@ -751,6 +719,10 @@ label ch5_niko_common:
 
     # [COMMENT: bg_tianho_on_fire — Tianho burning, crowds screaming — memory flash]
     # scene bg_tianho_on_fire with flash          # PLACEHOLDER — Tianho on fire (memory)
+    stop audio fadeout 1.0
+    stop music fadeout 1.0
+    play music audio.ost_tension_rising volume 0.75 fadein 1.75 loop
+
     scene bg_tianho_city_on_fire at flashback_filter_enter
     with flash
 
@@ -778,7 +750,7 @@ label ch5_niko_common:
 
     # [COMMENT: bg_lab_bedroom — back to spare room]
     scene spare_room with fade              # PLACEHOLDER — lab bedroom
-
+    stop music fadeout 1.4
     show niko normal_base at right_char
     show dorian serious at left_char
     with Dissolve(0.2)
@@ -989,6 +961,7 @@ label ch5_living_room:
 
     # [COMMENT: bg_yuxuan_lab — lab main room, Elias and Tim running in circles]
     # scene bg_yuxuan_lab with dissolve           # PLACEHOLDER — lab main room
+    play music audio.ost_yuxuan_lab volume 0.75 fadein 1.75 loop
     scene lab_cave_on with fade
     "As I stepped into the main area, the sound of playful giggles filled the air. Laughter bouncing off the walls like sunlight filtering through an open window."
     scene cg_tim_and_elias with Dissolve(0.4)
@@ -3965,7 +3938,7 @@ label ch5_divine_weapon:
     voice audio.yuxuan_ch5_line74
     yuxuan "Yes! Woohoo! Roboto, engage study mode!"
 
-    # play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
+    play sound sfx_roboto_beep                  # PLACEHOLDER — Roboto beep SFX
     voice audio.roboto_ch5_line49
     roboto "O-o-on it, Master Y-Y-Yuxuan! Engaging scanning proc-proc-process—ERROR! Unstable energy detected! I r-r-recommend caution!"
 
@@ -4021,7 +3994,8 @@ label ch5_divine_weapon:
 # =============================================================================
 
 label ch5_amulet_vision:
-
+    stop audio
+    stop music fadeout 1.0
     # play sound sfx_amulet_vision                # PLACEHOLDER — amulet vision SFX
     show dorian normal_alt_tense at left_char with Dissolve(0.1)
     dorian "ARRGHHHH!!!"
@@ -4482,7 +4456,6 @@ label ch5_nightmare:
         duration=3.0
     )
     pause 3.0
-    # jump demo
     jump chapter_6
 
 

@@ -7,13 +7,6 @@
 # =============================================================================
 
 label chapter_6:
-    if demo_mode:
-        scene black with fade
-        pause 1.0
-        centered "Thank you for playing the demo\n\n Full version will include ch6-10"
-        pause 2.0
-        $ MainMenu(confirm=False)()
-        
     $ save_name = "Chapter 6"
     # scene bg_lab_bedroom with fade              # PLACEHOLDER — lab bedroom, dim lamp in corner — use spare_room
     scene spare_room with fade
@@ -791,7 +784,7 @@ label ch6_overlooking:
     voice audio.chung_ch6_line16  # transcript: "Get back!"
     chung_hee "Get back!"
 
-    # play sound sfx_lightning_crack              # PLACEHOLDER — lightning SFX
+    play sound sfx_lightning_crack              # PLACEHOLDER — lightning SFX
     show chunghee normal_power_up at left_char
     "He thrust a hand forward, and the air pulsed— a sudden, invisible force slammed into the nearest Yaoguai, halting it mid-lunge."
     voice audio.yg_screech
@@ -1042,7 +1035,7 @@ label ch6_yaoguai_common:
         "His eyes flashed. He lifted his arms."
         "And then— Lightning."
 
-        # play sound sfx_lightning_crack          # PLACEHOLDER — lightning SFX
+        play sound sfx_lightning_crack          # PLACEHOLDER — lightning SFX
         hide chunghee
         hide dorian
         show yaoguai at center_yg 
@@ -1285,6 +1278,7 @@ label ch6_hundun_appears:
 
     "And then I saw it."
     scene cg_hundun_attack with shock_cut
+    play music ost_battle loop
     # play sound sfx_hundun_whisper               # PLACEHOLDER — Hundun whisper SFX
     "A massive, shifting mass of flesh and darkness loomed above us, writhing and twisting in unnatural ways."
     "Its form was never still."
@@ -1399,7 +1393,6 @@ label ch6_hundun_appears:
 label ch6_hundun_illusion_1:
 
     scene bg_dorians_room with shock_cut # PLACEHOLDER — Dorian's Tianho room (illusion), no asset declared
-    # play music ost_illusion_family fadein 0.5   # PLACEHOLDER — distorted warmth theme
     pause 1.5
     "It was sharp, cutting through the suffocating fog in my mind."
 
@@ -1446,7 +1439,6 @@ label ch6_hundun_illusion_1:
     "One step—"
     "NO."
 
-    # scene bg_tianho_food_stalls_fire with shock_cut # PLACEHOLDER — food stalls on fire (nightmare) — use tianho_food_stalls_fire
     scene tianho_food_stalls_fire with shock_cut
 
     show dorian angry at left_char 
@@ -1481,7 +1473,6 @@ label ch6_hundun_illusion_1:
 
     "Elara's soft features melted into a grotesque, many-mouthed horror. The children's arms stretched into clawed appendages. Their eyes turned into endless, soulless pits."
     show hundun at silhouette_hd with Dissolve(0.8)
-    # play sound sfx_illusion_shatter             # PLACEHOLDER — shatter SFX
 
     "Its true form coiled in the darkness—its many mouths stretched wide, jagged teeth gnashing in fury."
     "It screamed."
@@ -1734,7 +1725,7 @@ label ch6_rulers_illusion:
     hide vasily
     show king_gustav at right_char with Dissolve(0.2)
     voice audio.gustav_ch6_line1
-    gustav "DIE!"
+    king_gustav "DIE!"
 
     hide king_gustav
     show olympia at right_char with Dissolve(0.2)
@@ -1751,7 +1742,7 @@ label ch6_rulers_illusion:
 
     hide olympia
     voice audio.minjoon_ch6_line1
-    minjoon "Your head will be ours… It will look good on a pike."
+    emperor_minjoon "Your head will be ours… It will look good on a pike."
 
     show vasily alt_savage at right_char with Dissolve(0.2)
     "My breath hitched."
@@ -1799,7 +1790,7 @@ label ch6_rulers_illusion:
     "On the far left, Gustav stood unshaken, his broad form towering, his expression carved from stone."
     "Cracks spiderwebbed beneath his feet, the very earth groaning under the weight of his rage."
     voice audio.gustav_ch6_line2
-    gustav "Prepare to die, Dorian!"
+    king_gustav "Prepare to die, Dorian!"
 
     "To his right, Empress Olympia hovered mid-air, her robes billowing violently in a cyclone of shrieking wind."
     "A hurricane twisted around her, distorting the air itself, flickers of lightning threading through the storm."
@@ -1814,7 +1805,7 @@ label ch6_rulers_illusion:
     "On the far right, Emperor Min-joon stood, but he did not move. His eyes gleamed an unnatural violet, swirling with shifting patterns."
 
     voice audio.minjoon_ch6_line2
-    minjoon "Your family died because of you. Death will be too kind of a punishment for monsters such as yourself…"
+    emperor_minjoon "Your family died because of you. Death will be too kind of a punishment for monsters such as yourself…"
 
     hide king_gustav
     hide olympia
@@ -1868,9 +1859,9 @@ label ch6_darkness_qtc:
             voice audio.olympia_ch6_line4
             olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
             voice audio.gustav_ch6_line3
-            gustav "Foolish. Utterly foolish."
+            king_gustav "Foolish. Utterly foolish."
             voice audio.minjoon_ch6_line3
-            minjoon "How disappointing. How unworthy."
+            emperor_minjoon "How disappointing. How unworthy."
             voice audio.vasily_ch6_line14  # transcript: "You always were predictable dear"
             vasily  "You always were predictable, dear friend."
 
@@ -1908,11 +1899,11 @@ label ch6_darkness_qtc:
             camera
 
             voice audio.minjoon_ch6_line4
-            minjoon "AH! AH! AHHH!!!"
+            emperor_minjoon "AH! AH! AHHH!!!"
 
             "Emperor Min-joon vanished, his form dissolving like ash on the wind."
             voice audio.gustav_ch6_line4
-            gustav "Curse…. CURSE YOU!!!! I WON'T FALL TO FIRE!!"
+            king_gustav "Curse…. CURSE YOU!!!! I WON'T FALL TO FIRE!!"
 
             "His form shattered as he continued to mutter curses."
 
@@ -1931,8 +1922,8 @@ label ch6_darkness_qtc:
             dorian "W-What?! But how?!"
             voice audio.olympia_ch6_line4
             olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav "Foolish. Utterly foolish."
-            minjoon "How disappointing. How unworthy."
+            king_gustav "Foolish. Utterly foolish."
+            emperor_minjoon "How disappointing. How unworthy."
             vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
@@ -1960,8 +1951,8 @@ label ch6_darkness_qtc:
             dorian "W-What?! But how?!"
             voice audio.olympia_ch6_line4
             olympia "Oh, Paladin. Did you think you could strike down the wind? The Dragon of Gale has lost his wits."
-            gustav "Foolish. Utterly foolish."
-            minjoon "How disappointing. How unworthy."
+            king_gustav "Foolish. Utterly foolish."
+            emperor_minjoon "How disappointing. How unworthy."
             vasily  "You always were predictable, dear friend."
 
             "A sudden pressure exploded in my chest—"
@@ -2160,6 +2151,7 @@ label ch6_hundun_defeated:
 
     scene bg_tianho_city_night with dissolve
     stop audio fadeout 1.5
+    stop music fadeout 1.5
     # play music ost_tianho_night fadein 1.0      # PLACEHOLDER — night theme returns
 
     "I was standing in Tianho again."
@@ -2432,7 +2424,7 @@ label ch6_feng_appears:
     voice audio.yg_scream
     yg "GRAAAAAA!!!"
 
-    # play sound sfx_lightning_crack              # PLACEHOLDER — Chung-hee lightning SFX
+    play sound sfx_lightning_crack              # PLACEHOLDER — Chung-hee lightning SFX
 
     scene bg_tianho_city_night with dissolve
     show dorian dragon_eyes at left_char

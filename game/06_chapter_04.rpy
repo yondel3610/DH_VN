@@ -1599,7 +1599,7 @@ label ch4_cemetery_exit:
     voice audio.yuxuan_ch4_line49
     yuxuan "What are they talking about?"
 
-    # TODO: play sound sfx_explosion_boom                  # PLACEHOLDER
+    play sound sfx_explosion_boom                  # PLACEHOLDER
 
     "-EXPLOSION-"
     scene tianho_cemetery_morning_alt with shock_cut
@@ -1745,7 +1745,7 @@ label ch4_cemetery_exit:
     voice audio.aoi_ch4_line5
     aoi "Tian Xun, stop! That's the last bomb we have!"
 
-    # play sound sfx_explosion_boom                  # PLACEHOLDER
+    play sound sfx_explosion_boom                  # PLACEHOLDER
     scene destroyed_land with shock_cut
     "-EXPLOSION-"
 
@@ -2600,6 +2600,7 @@ label ch4_svante_capture:
     hide niko with Dissolve(0.1)
     show cg_niko_save_chung with shock_cut
     "A pulse of shadow erupted from his body, snaking through the air like living tendrils. The shadows coiled and writhed, stretching toward the oncoming cavalry with an unnatural speed."
+    play sound audio.sfx_shadow_burst
     "As the darkness reached them, it engulfed the soldiers and their horses, twisting around them like black flames."
 
     mjoll_soldier_1 "What the?! Is that the power of the death god?! I don't want to die! I don't want to die!"
@@ -2611,6 +2612,7 @@ label ch4_svante_capture:
     mjoll_soldier_female_1 "Ahhh!! Tetrad save me!"
     mjoll_lars   "Ahhh!!"
 
+    play sound audio.sfx_shadows
     "The shadows seemed alive, hissing and whispering as they consumed the light around them."
     "Niko stood tall, his figure wreathed in a shroud of creeping shadows."
 
@@ -2723,6 +2725,7 @@ label ch4_svante_capture:
     tian_xun "Oh, Prosperity Dragon, hear me now, your loyal servant! I offer this moment, this explosion, as a symphony to your grandeur!"
     voice audio.tianxun_ch4_line42
     tian_xun "Let your draconic fire consume the unworthy! Burn for me, my deity! BURN FOR GLORY! BURN FOR ART! BOOM! BOOM! HAHAHAHA!"
+    play music ost_battle loop
 
     hide tian_xun with Dissolve(0.1)
     "Suddenly, the air around us shifted. A deafening roar erupted from the container as something massive was hurled into the sky."
@@ -2865,7 +2868,7 @@ label ch4_prosperity_dragon:
         "Remember the tragedy of Tianho.":
             $ ch4_draconic_choice = "tianho"
             $ _choice_timeout = 0
-            stop sound
+            stop music
             scene bg_tianho_city_on_fire at flashback_filter_enter
             with fade
             "The tragedy of Tianho—the screams, the chaos, the flames engulfing the city as people cried out."
@@ -2883,6 +2886,7 @@ label ch4_prosperity_dragon:
             $ ch4_draconic_choice = "family"
             $ _choice_timeout = 0
             stop sound
+            stop music fadeout 1.0
 
             "Their laughter echoed in my ears. Elara's warm smile as she held Lucas in her arms. Daniel teaching Emily how to channel her first flame, the two of them bickering playfully as Sarah tried to mediate."
             "I could see them all so clearly. Elara's hand brushing against my cheek, her voice soft as she whispered to me."
@@ -2897,6 +2901,7 @@ label ch4_prosperity_dragon:
             $ ch4_draconic_choice = "mjoll"
             $ _choice_timeout = 0
             stop sound
+            stop music fadeout 1.0
 
             "Their faces haunted me too. The aldoriths of Mjoll and… how could I forget? Vasily."
             "My power unleashed recklessly. I only defended myself and Elias but…"
@@ -2912,10 +2917,10 @@ label ch4_prosperity_dragon:
         "Remember yourself.":
             $ ch4_draconic_choice = "self"
             $ _choice_timeout = 0
-            stop sound
+            stop music fadeout 1.0
 
             "I closed my eyes, letting the voice of the Prosperity Dragon wash over me. The flames burned brighter."
-
+            play music audio.dorian_theme 
             voice audio.dorian_ch4_line83
             dorian "The Dragon of Gale…"
 
@@ -3008,6 +3013,7 @@ label ch4_draconic_fire:
     "Others tried to run, but there was no escape."
 
     scene destroyed_land with fade
+    stop music fadeout 1.0
     "The battlefield fell silent, save for the crackling of the flames. The once-proud soldiers of Tian Xun's forces were gone, their remains nothing more than ashes."
     "I stood there, breathing heavily."
 
@@ -3050,6 +3056,8 @@ label ch4_draconic_fire:
     
     show aoi_battle_suit at right_char with Dissolve(0.2)
     "Her eyes gleamed with an almost unhinged fury as she turned to her soldiers."
+    play music ost_battle loop
+
     voice audio.aoi_ch4_line26
     aoi        "CHARGE! Kill them all! Leave no survivors! They will pay for what they've done!"
     scene soldiers_charging with shock_cut
@@ -3198,8 +3206,9 @@ label ch4_draconic_fire:
     show niko normal_base at right_char with Dissolve(0.2)
     voice audio.niko_ch4_line49
     niko   "Move over! Shadows, release!"
+    stop music fadeout 1.0
 
-    # play sound sfx_tunnel_seal                     # PLACEHOLDER
+    play sound audio.sfx_shadows                     # PLACEHOLDER
 
     hide niko with Dissolve(0.1)
     "As he jumped, the shadows recoiled, pulling away like a collapsing wave. I didn't waste a second—I slammed my hands into the dirt once more, sealing the tunnel shut above us."
