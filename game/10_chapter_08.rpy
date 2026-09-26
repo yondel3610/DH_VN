@@ -695,7 +695,7 @@ label ch8_impostor:
     "A low, guttural sound filled the chamber. The body on the ground twitched, spasming unnaturally before its limbs jerked at odd angles."
     play sound audio.monster_death volume 0.4
     "Bones cracked, skin rippled, and for one terrifying moment, its face melted into something grotesque."
-    play music audio.ost_battle volume 0.5
+    
     show yaoguai at center_yg with Dissolve(0.2)
     "A yaoguai."
 
@@ -711,8 +711,7 @@ label ch8_impostor:
     voice audio.niko_ch8_line12  # transcript: "You knock above what is"
     niko "Enoch above… What is going on here?!"
 
-    # play sound sfx_roboto_beep               # PLACEHOLDER — not declared
-
+    play sound sfx_roboto_beep               # PLACEHOLDER — not declared
     show roboto happy at center_robot 
     show dorian serious at left_char
     with Dissolve(0.2)
@@ -808,7 +807,7 @@ label ch8_impostor:
     voice audio.roboto_ch8_line10
     roboto "N-N-N-No worries, Master Yuxuan! Y-Y-Y-You can always count on Robotoooo~~"
 
-    # TODO: beep sound
+    play sound sfx_roboto_beep               # PLACEHOLDER — not declared
     "It beeped and blinked its lights proudly."
 
     voice audio.roboto_ch8_line11  # transcript: "I was worried, so I"
@@ -823,9 +822,10 @@ label ch8_impostor:
     roboto "I shall take care of this! P-p-proper disposal protocols will be followed!"
 
     scene cg_roboto_yuxuan with shock_cut
-    # TODO: play sound sfx_roboto_beep               # PLACEHOLDER — not declared
+    play sound sfx_roboto_beep               # PLACEHOLDER — not declared
 
     "With a series of quick, mechanical movements, Roboto extended a set of slender, metallic arms."
+    play sound audio.sfx_roboto_motor
     "It latched onto the corpse, adjusting its grip before effortlessly hoisting the body upward."
     "The weight didn't seem to strain it in the slightest."
 
@@ -843,8 +843,9 @@ label ch8_impostor:
     svante "See you, Roboto!"
     play sound audio.sfx_roboto_beep
     voice audio.roboto_ch8_line16
-    roboto "Robotooooo~"
+    roboto "Robotooooo~"    
 
+    play sound audio.sfx_roboto_motor
     "A collective breath seemed to escape from all of us."
 
     scene bg_underground_dim with fade
@@ -2040,7 +2041,7 @@ label ch8_magnus_found:
 
     show magnus alt_anger at center_char with Dissolve(0.2)
     "His words struck like a hammer, reverberating through the chamber."
-    "The walls shook. The abyss itself seemed to tremble beneath us."
+    "The walls shook. The abyss itself seemed to tremble beneath us." with hpunch
     "Before I could speak, before any of us could even breathe—he moved."
     "Lightning-fast, Magnus lunged, his wings snapping open with the force of a hurricane. The ground cracked beneath his takeoff." with vpunch
     "Magnus soared upward, his entire body wreathed in raw celestial power. Golden veins of energy crackled along his arms, surging through his fingers like barely-contained lightning."
@@ -2132,6 +2133,7 @@ label ch8_magnus_found:
     hide niko
     show niko_shadows with shock_cut
     "His fingers flexed, dark energy coiling around them like tendrils of living shadow."
+    play sound sfx_shadow_burst
     "The torches lining the cavern walls flickered violently before being snuffed out—plunging us into darkness."
     hide niko_shadows
     scene underground_magnus with shock_cut
@@ -2190,7 +2192,7 @@ label ch8_magnus_found:
     "Near the rubble, broken spearheads littered the ground—remnants of royal guards who had once stood here. They were crude, but they were large enough to act as a weapon."
     "Scattered all around us were the remains of ancient lantern stands, their metal frames cracked and bent."
     "They weren't as large or sturdy as the spearheads, but their fragmented nature meant Svante could spread his power through them, striking from multiple angles at once."
-    play music audio.ost_battle fadein 1.5 loop
+    play music audio.ost_magnus_battle fadein 1.5 loop
     "And with Magnus focused on Niko, he might not anticipate it."
     scene cg_magnus_battle with shock_cut
     jump ch8_magnus_battle

@@ -300,6 +300,7 @@ label ch10_consult:
 label ch10_common_wake:
 
     scene spare_room with flash
+    play music ost_yuxuan_lab loop
 
     "My body was drenched in sweat. The room was trembling. No-not the room. The ground."
 
@@ -359,7 +360,7 @@ label ch10_common_wake:
     niko   "Great. *yawns* Are we done here? I'm late for prayer."
     voice audio.yuxuan_ch10_line3  # transcript: "Honestly, I think his agani's"
     yuxuan "Honestly, I think Isagani's voice is underrated too. So grounded. So real. But enough about my tastes, I-"
-
+    stop music fadeout 1.5
     scene storage_room with Dissolve(0.2)
     "And then... I stepped into the room, the weight of urgency pressing on my shoulders."
 

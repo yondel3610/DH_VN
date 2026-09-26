@@ -2393,7 +2393,7 @@ label ch6_feng_appears:
     show dorian serious at left_char
     show chunghee normal_v2 at right_char 
     with Dissolve(0.2)
-    play music audio.ost_battle
+    play music audio.ost_battle loop
     "I rolled my shoulders, feeling the fire in my veins ignite."
 
     show chunghee normal_power_up at right_char with Dissolve(0.1)
@@ -2534,6 +2534,7 @@ label ch6_feng_appears:
     voice audio.aoi_ch6_line3  # transcript: "I'll handle it, this won't"
     aoi "I'll handle it, Feng. This won't take long."
 
+    stop music fadeout 1.5
     hide aoi_battle_suit
     hide yaoguai
     with Dissolve(0.1)

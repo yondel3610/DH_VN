@@ -439,16 +439,28 @@ screen main_menu():
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
+    add "gui/dhcr_logo.png":
+        xalign 0.99
+        ypos 650
+        zoom 0.5
+
     if gui.show_name:
+        text "[config.version]":
+            style "main_menu_version"
+            xalign 1.0
+            yalign 1.0
+            xoffset -20
+            yoffset -15
+    # if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+    #     vbox:
+    #         style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #         text "[config.name!t]":
+    #             style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #         text "[config.version]":
+    #             style "main_menu_version"
 
 
 style main_menu_frame is empty

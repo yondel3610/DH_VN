@@ -37,6 +37,7 @@
 label chapter_09_p2:
     $ save_name = "Chapter 9"
     scene yuxuan_lab_hotspring with fade          # PLACEHOLDER — hot spring
+    play music ost_yuxuan_lab loop
     # play music ost_ch9_hotspring fadein 2.0     # PLACEHOLDER — hot spring theme
     # play audio amb_hot_spring loop fadein 1.5   # PLACEHOLDER — hot spring ambient
 
@@ -448,7 +449,7 @@ label chapter_09_p2:
     scene yuxuan_lab_hotspring with Dissolve(0.75)          # PLACEHOLDER — hot spring
     "Steam curled lazily through the air as we settled deeper into the hot springs."
     "The warmth seeped into my muscles, unraveling tension I hadn't even realized I carried. For a moment-just a moment-it was peaceful."
-
+    stop music fadeout 1.5
     jump ch9_huli_jing
 
 
@@ -1424,7 +1425,7 @@ label ch9_judgment_kyeong:
     # [COMMENT: bg_kyeongjang_palace — palace courtyard, pagodas, marble platform]
     scene kyeonjang_palace with flash       # PLACEHOLDER — Kyeongjang illusion
     stop music fadeout 0.5
-    play music ost_judgment_kyeong fadein 0.5   # PLACEHOLDER — Kyeongjang judgment theme
+    # play music ost_judgment_kyeong fadein 0.5   # PLACEHOLDER — Kyeongjang judgment theme
 
     "The air shifted again-sharp and dry, like brittle parchment touched by flame."
     "The scent of lotus blossoms and aged ink reached my nostrils, thick and heady. My feet met smooth stone, cold to the touch. I looked around slowly."
@@ -1729,7 +1730,7 @@ label ch9_judgments_back:
     # [COMMENT: bg_hot_spring — back to hot spring]
     scene yuxuan_lab_hotspring with flash              # PLACEHOLDER — hot spring return
     stop music fadeout 0.5
-    play music ost_huli_jing fadein 0.5         # PLACEHOLDER — Huli Jing theme
+    # play music ost_huli_jing fadein 0.5         # PLACEHOLDER — Huli Jing theme
 
     "The air shifted one final time."
     "The incense, the towers of Kyeongjang, the weight of our choices-all of it faded like breath on glass. The cold dissolved. The thunderous silence of the spirit realm gave way to something gentler."
@@ -2311,6 +2312,7 @@ label ch9_stuffed_fox_exit:
     dorian "What in the name of the Tetrad-?!"
 
     scene cg_men_trapped with dissolve
+    play music audio.ost_fun volume 0.5 loop
     "I was squished-stuffed, really-inside what looked like a giant toy Limbs tangled, faces mashed together, undergarments sticking uncomfortably."
 
     dorian "Why... why can't I move my legs-"
@@ -2332,7 +2334,7 @@ label ch9_stuffed_fox_exit:
     magnus "Oh brothers of steam, of springs and of soap, Entangled in trials~"
     voice audio.chung_ch9_line79
     chung_hee "Magnus. Shut up."
-
+    stop music fadeout 1.0
     jump ch9_kids_spring
 
 
@@ -2344,7 +2346,7 @@ label ch9_kids_spring:
 
     # [COMMENT: bg_hot_spring — Tim and Elias in the springs, playing]
     scene yuxuan_lab_hotspring with fade           # PLACEHOLDER — hot spring kids
-
+    play music ost_yuxuan_lab loop
     show tim underwear_normal at left_char_kids
     show elias swimwear_neutral at right_char_kids 
     with Dissolve(0.2)
@@ -2781,6 +2783,7 @@ label ch9_hilltop:
     "The warm breeze rolled over the hill as we all stood beneath the deepening indigo sky. "
     "The last rays of sunlight clung to the clouds like strands of gold silk, while the first stars blinked to life-gentle pearls scattered across a velvet sky."
     scene bg_tianho_deng_blossom with dissolve
+    play music ost_tianho_festival volume 0.5 loop
     "From afar, the Tianho Memorial shimmered in the twilight, glowing faintly."
     "Elias and Tim were already running in small circles around the hill, chasing each other in their ceremonial robes."
 
@@ -2913,6 +2916,7 @@ label ch9_hilltop:
     dorian "That's nice, Elias."
 
     scene bg_tianho_deng_blossom with Dissolve(0.5)
+    stop music fadeout 1.5
     "Then the lights dimmed."
     "The entire sky above the Tianho Memorial shimmered-and from the center of the clearing, a pulse of blue light burst upward."
 
@@ -3012,6 +3016,7 @@ label ch9_hilltop:
     dorian    "It's a... commercial jingle. For Cheng Industries. Yuxuan's company."
 
     scene bg_tianho_deng_blossom with Dissolve(0.5)
+    play music ost_tianho_festival volume 0.5 loop
     "Despite the interruption, the ceremony below continued, unbothered by the distant chorus of the people around me."
     scene bg_tianho_fanrong_square with Dissolve(0.5)
     "The ceremony continued from afar, the glow of the memorial casting long, gentle light over the gathering below."
@@ -3242,8 +3247,9 @@ label ch9_lantern_kids:
     hide weng
     hide roboto
     with Dissolve(0.1)
+    stop music fadeout 1.5
     "And just like that, they vanished-sprinting back with a flurry of giggles, robotic beeping, and a suspicious trail of glitter that they absolutely were not supposed to have."
-
+    
     # jump ch9_route_magnus # check each label scene
     call check_affection_route from _call_check_affection_route
 
@@ -3255,6 +3261,7 @@ label ch9_route_yuxuan:
 
     hide weng
     show yuxuan ceremonial_neutral at right_char with Dissolve(0.2)
+    play music ost_date volume 0.75 loop 
 
     "As I turned around, I saw Yuxuan. He was standing there, wide-eyed, staring up at the wobbling lantern."
 
@@ -3385,7 +3392,6 @@ label ch9_route_yuxuan:
 
     play sound audio.sfx_fireworks                # PLACEHOLDER — firework boom SFX
     scene cg_festivities with shock_cut
-    # play music ost_ch9_fireworks fadein 0.5     # PLACEHOLDER — fireworks theme
     "BOOM."
     
     "A firework lit the sky in brilliant pink."
@@ -3507,8 +3513,8 @@ label ch9_route_chunghee:
 
     voice audio.chung_ch9_line85  # transcript: "Are you alright, Dorian?"
     chung_hee "Are you alright, Dorian?"
-
-    "I turned around-and there stood Chung-hee, silent as always, holding his lantern with both hands like it was some sacred relic."
+    play music ost_date volume 0.75 loop 
+    "I turned around-and there stood Chung-hee, silent as always, holding his lantern with both hands like it was some sacred relic."   
     "His brows were slightly furrowed as he watched the crooked, ink-blotted \"teDuH\" lantern bobbing higher and higher into the night sky."
     "I gave him a tired smile, brushing a bit of glitter off my sleeve."
 
@@ -3747,7 +3753,7 @@ label ch9_route_svante:
 
     hide weng
     show svante ceremonial_neutral at right_char with Dissolve(0.2)
-
+    play music ost_date volume 0.75 loop 
     svante "Is... that your lantern, Dorian?"
 
     "I turned around, still shaking my head at the trail of glitter Elias left behind, and there he was-Svante."
@@ -3991,7 +3997,7 @@ label ch9_route_niko:
     # play music audio.niko_theme with fadein 2.0 loop
     hide weng
     show niko ceremonial_base at right_char with Dissolve(0.2)
-
+    play music ost_date volume 0.75 loop 
     niko "...I told Miss Weng not to give the kids any brushes. Especially Elias."
 
     "I turned around-and there he was. Niko. Standing a few steps behind me with his arms crossed and that usual unreadable expression on his face, like the breeze didn't dare ruffle his robes without permission."
@@ -4275,7 +4281,7 @@ label ch9_route_magnus:
 
     hide weng
     show magnus ceremonial at right_char with Dissolve(0.2)
-
+    play music ost_date volume 0.75 loop 
     voice audio.magnus_ch9_line125  # transcript: "What a lovely made piece"
     magnus "What a lovely made piece of artwork!"
 
@@ -4513,6 +4519,8 @@ label ch9_route_magnus:
 
 label ch9_end:
 
+    stop music fadeout 1.5
+    stop audio fadeout 1.5
     "The hilltop was glowing now, cast in soft hues of flame and magic. Lanterns floated steadily upward, their light flickering like heartbeat echoes. Sparklers twirled in tiny hands."
     "One by one, the firecrackers gave way to silence. The celebration slowly dissolved into the hush of night."
     scene black with fade

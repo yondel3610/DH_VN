@@ -10,6 +10,7 @@
 **Engine:** Ren'Py 8.5+  
 **Platforms:** Windows, Mac, Linux, Android
 **Demo Status:** Complete
+**Release Statues:** Testing
 
 ---
 
@@ -62,16 +63,16 @@ renpy.exe /path/to/project
 ## Credits
 
 ### Lead Developer
-[insert name]
+@yondel__
 
-### Writers
-[To be added]
+### Writer and Director
+ICO
 
 ### Artists
 - Character Sprites: [To be added]
 - Backgrounds: [To be added]
 - CGs: [To be added]
-- GUI Design: [To be added]
+- GUI Design: @yondel__
 
 ### Music & Sound
 - Composer: [To be added]
@@ -100,8 +101,8 @@ renpy.exe /path/to/project
 For questions, feedback, or collaboration inquiries:
 
 - Email: 
-- Discord: 
-- Twitter: 
+- Discord:  
+- Twitter: @TemersStudio
 
 ---
 
@@ -119,12 +120,12 @@ All assets follow these conventions:
 
 ### Save Compatibility
 
-- Save files are stored in `%APPDATA%/RenPy/dragons_heart-[id]/`
+- Save files are stored in `%APPDATA%/RenPy/DragonsHeartCrimsonRebirth/`
 - Do not modify save files directly
 - Breaking changes between versions may break old saves
 
 ### Known Issues
-- save files and the continue function (to be fixed)
+
 
 ---
 

@@ -2292,9 +2292,10 @@ label ch9_kitchen_common:
             dorian "O gentle breeze, please let me fly, so I may reach where heavens lie..."
 
             show magnus alt_smirk at right_char with Dissolve(0.1)
-            "Magnus' voice faltered for just a second, as if surprised, but then he grinned, adjusting his pitch to harmonize with mine. His voice was richer, seasoned with experience, while mine was steadier, more grounded."
+            "Magnus' voice faltered for just a second, as if surprised, but then he grinned, adjusting his pitch to harmonize with mine."
+            "His voice was richer, seasoned with experience, while mine was steadier, more grounded."
 
-            show magnus alt_base at right_char with Dissolve(0.1)
+            show magnus alt_newpose at right_char with Dissolve(0.1)
             "When we finished, Magnus laughed softly, a genuine warmth in his expression."
 
             voice audio.magnus_ch9_line33  # transcript: "Well, well, not bad at"
@@ -2729,8 +2730,7 @@ label ch9_outfit_gather:
             with Dissolve(0.2)
             "Tim and Elias high-fived each other, their excitement renewed."
 
-    # TODO: play sound sfx_roboto_beep               # PLACEHOLDER — not declared
-
+    play sound sfx_roboto_beep               # PLACEHOLDER — not declared
     scene spare_room with Dissolve(0.75)          # PLACEHOLDER — lab bedroom
     "A gentle but firm knock echoed from the door. I sighed, setting aside my cup as I got up to answer."
     show roboto happy at right_robot
