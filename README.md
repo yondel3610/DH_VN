@@ -68,18 +68,71 @@ renpy.exe /path/to/project
 ### Writer and Director
 ICO
 
+### Editor
+Ji-yoo
+
 ### Artists
-- Character Sprites: [To be added]
-- Backgrounds: [To be added]
-- CGs: [To be added]
+- Lead Artist: Ren
+- Character Designs: Imaxdmn
+- Food Art: Ilde
+- Other Art: Xylas
+- Logo Design: Ally
 - GUI Design: @yondel__
 
 ### Music & Sound
-- Composer: [To be added]
-- Sound Design: [To be added]
+- Composer: Wikki & Iyan
+- Sound Design: Wikki & Iyan
+- Audio Editing: Xylas
 
 ### Voice Acting
-[To be added]
+Dorian Burnham - Ryan Hoyle
+Niko Tsukumo - Ty Coker
+Cheng Yuxuan - Harry Dyer
+Hyon Chung-hee - Bryson Maggard
+Svante Nordstrom - Dakota Farnsworth
+Magnus Wyndham - Nick Eriksen
+Elias Drakos - Allison Chen
+Vasily Lyuminov - Vladimir “Vladibear” Gabatel
+Tim - Zacaro
+Roboto - Jeff Rosenau
+Cai Weng - Kiyana Morgan
+Qi Feng - Jason Zimowski
+Yaoguai King - Harry Dyer
+Huli Jing - June Holoubek
+Elara Burnham - Sky Santacruz
+Tedda - Becca Su
+Aoi Mizuhara - Becca Su
+Prosperity Dragon - Logan Fletcher
+Soldier Li Gao - Jason Zimowski
+Soldier Sun Jiang - Scotty Oka
+King Gustav - Bradley Garreth
+Paladin Cyrus - GM Hakim
+Tian Xun - Jeff Rosenau
+Babala - Sean Madson
+Lucas Burnham - FlourishingVA
+Daniel Burnham - FlourishingVA
+Sunwoo - Alex Bui
+Sarah Burnham - Sky Santacruz
+Emily Burnham - Angel Cass
+Kristin - Lindsey Vachon
+Queen Ekaterina Drakos - Vanessa Benoit
+Prophet - Justin Ali
+Mjoll Soldier Helga - June Holoubek
+Mjoll Soldier Lars - Ty Wilkins
+King Long Shen - Max Herzfeld
+Empress Olympia Wyndham - Vanessa Benoit
+Emperor Hyon Minjoon - Logan Fletcher
+Hwan Sik - Vince
+Emi - Luna (Mariane)
+Fynn - Sean Madson
+Katashi - Justin Ali
+Herald - Justin Ali
+Mjoll Soldier Pavel - Ali Gohar
+Taotie - Jordy Sword
+Qiongqi - Jordy Sword
+Yaoguai - Jordy Sword
+Chace (cameo) - Ty Coker
+Isagani (cameo) - Vince
 
 ### Special Thanks sections
 
