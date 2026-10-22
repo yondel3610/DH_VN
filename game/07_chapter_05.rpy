@@ -4041,7 +4041,8 @@ label ch5_amulet_vision:
 
     "Blood. Darkness. Betrayal."
     "I saw him."
-    show king_gustav at right_char 
+    show king_gustav at right_char
+    show emperor_minjoon at left_char
     with Dissolve(0.2)
     "A man, regal yet crumbling—his robes once pristine, now soaked in his own blood."
     "Emperor Min-joon."
@@ -4079,6 +4080,7 @@ label ch5_amulet_vision:
 
     "Min-joon collapsed to the ground, gasping. Blood pooled beneath him, his strength fading."
     hide king_gustav
+    hide emperor_minjoon
     with Dissolve(0.1)
     "Beside him, a frail, trembling hand reached out."
     "His wife."

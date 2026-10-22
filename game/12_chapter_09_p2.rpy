@@ -1755,7 +1755,7 @@ label ch9_judgments_back:
     voice audio.magnus_ch9_line105
     magnus "And yet... we're still in our undergarments. Perhaps now we can enjoy a proper bath without sentencing anyone to death."
     svante    "I don't think I'll ever look at justice the same way again..."
-    show svante underwear_normal at left_char with Dissolve(0.1)
+    show svante underwear_neutral at left_char with Dissolve(0.1)
     voice audio.hulijing_ch9_line69  # transcript: "Mmm, delicious, wasn't it? Judging"
     huli_jing "Mmmm... Delicious, wasn't it? Judging mortals is no neat affair. It tangles the soul."
     voice audio.hulijing_ch9_line70  # transcript: "makes it chewy like good"

@@ -261,7 +261,7 @@ label ch4_kyeongjang:
     "Next, Park Dae-hyun, Head of Infrastructure, approached."
     "He was a man of practicality, his hands calloused from years of overseeing the empire's great projects. His bow was deep and deliberate."
 
-    show dae_hyun at right_char with Dissolve(0.2)
+    # show dae_hyun at right_char with Dissolve(0.2)
     dae_hyun "Pyeha, I too wish you the happiest of birthdays. May your wisdom guide Kyeongjang for generations to come."
 
     "Beyond my advisors, I felt the pulse of the celebration itself."

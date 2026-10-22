@@ -1819,6 +1819,7 @@ label ch1_ceremony:
     scene bg_tianho_city_night
     with fade
     "When he speaks, his voice is deep and resonant, carrying effortlessly across the courtyard."
+    show emperor_minjoon at center_char with Dissolve(0.2)
     voice audio.minjoon_ch1_line1
     emperor_minjoon "People of Tianho. My name is Hyon Min-joon, and I am the Emperor of Kyeongjang."
     voice audio.minjoon_ch1_line2

@@ -1179,14 +1179,12 @@ image ya_ji_hye:
 image yaoguai:
     At("images/Assets/Character Sprites/yaoguai.png", sprite_highlight("yg")) # beast not yg king
     fit "contain"
-
 image yaoguai_1:
     At("images/Assets/Character Sprites/yaoguai.png", sprite_highlight("yg")) # beast not yg king
     fit "contain"
 image yuki_onna:
     At("images/Assets/Character Sprites/yuki onna v2.png", sprite_highlight("yuki_onna"))
     fit "contain"
-
 image kristin_normal:
     At("images/Assets/Character Sprites/Kristin Nordstrom.png", sprite_highlight("kristin"))
     fit "contain"
@@ -1199,27 +1197,24 @@ image girl_ald_normal:
 image yk:
     At("images/Assets/Character Sprites/yaoguai king v3.png", sprite_highlight("yk"))
     fit "contain"
-
+image emperor_minjoon:
+    At("images/Assets/Character Sprites/hyon_min_joon_colored_2.png", sprite_highlight("emperor_minjoon"))
+    fit "contain"
 image mjoll_male_soldier:
     At("images/Assets/Character Sprites/ald grunts/male_soldier.png", sprite_highlight("mjoll_male_soldier"))
     fit "contain"
-
 image mjoll_soldier_1:
     At("images/Assets/Character Sprites/ald grunts/ald_grunt_1.png", sprite_highlight("mjoll_soldier_1"))
     fit "contain"
-
 image mjoll_soldier_2:
     At("images/Assets/Character Sprites/ald grunts/ald_grunt_2.png", sprite_highlight("mjoll_soldier_2"))
     fit "contain"
-    
 image mjoll_soldier_enby:
     At("images/Assets/Character Sprites/ald grunts/enby_grunt.png", sprite_highlight("mjoll_soldier_enby"))
     fit "contain"
-
 image mjoll_soldier_female_1:
     At("images/Assets/Character Sprites/ald grunts/female_soldier_1.png", sprite_highlight("mjoll_soldier_female_1"))
     fit "contain"
-
 image mjoll_soldier_female_2:
     At("images/Assets/Character Sprites/ald grunts/female_soldier_2.png.png", sprite_highlight("mjoll_soldier_female_2"))
     fit "contain"
