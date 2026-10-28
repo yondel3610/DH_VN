@@ -2056,6 +2056,7 @@ label ch9_huli_reward_high:
 
             hide chunghee
             show niko underwear_ignore at right_char with Dissolve(0.2)
+            voice audio.niko_ch9_line6  # transcript: "Ah, merciful Enoch."
             niko "...Merciful Enoch."
 
             voice audio.hulijing_ch9_line100  # transcript: "Yeah, you mean the soundtrack?"
@@ -2213,6 +2214,7 @@ label ch9_huli_love:
             chung_hee "Svante, I jest. A ruler who cannot laugh has already lost half his kingdom. And I already accepted your apology. I do not give those lightly."
             hide chunghee
             show svante underwear_base at right_char with Dissolve(0.2)
+            voice audio.svante_ch9_line36  # transcript: "Thank you, Robota."
             svante    "I... Thank you, Chung."
             hide svante with Dissolve(0.1)
 
@@ -2250,6 +2252,7 @@ label ch9_huli_love:
             show magnus underwear_base at right_char
             with Dissolve(0.2)
 
+            voice audio.dorian_ch9_line11  # transcript: "Magnus."
             dorian "I choose Magnus."
             show magnus underwear_powered at right_char with Dissolve(0.1)
 
@@ -2325,6 +2328,7 @@ label ch9_stuffed_fox_exit:
     svante "Wait-I think I found a lever!"
     voice audio.chung_ch9_line78  # transcript: "That is not a lever."
     chung_hee "T-That is NOT a lever! P-Please-unhand me!"
+    voice audio.svante_ch9_line23  # transcript: "Oh, sorry, Dorian, I mean,"
     svante "AHH! I-I'm sorry, Your Maj-I mean, Chung!"
     dorian "Svante, for the love of the Tetrad, don't lift your arms. I can smell your armpits-"
     svante "AHH! Sorry! Oh-Enoch above, smite me now-"
@@ -2969,6 +2973,7 @@ label ch9_hilltop:
 
     voice audio.aoi_ch9_line49  # transcript: "We are graced by the"
     aoi "We are graced by the presence of those who lead our world with dignity and strength."
+    voice audio.aoi_ch9_line11  # transcript: "His majesty King Tatsuya Fujiwara"
     aoi "His Majesty, King Tatsuya Fujiwara of Hinami, whose wisdom and compassion have lit a path of healing for his people."
     voice audio.aoi_ch9_line50  # transcript: "King Gustav Nordstrom of Moll,"
     aoi "King Gustav Nordstrom of Mjoll, whose fierce devotion to justice and peace remains unwavering even in times of grief."
@@ -3137,6 +3142,7 @@ label ch9_lantern_kids:
     "I didn't notice Elias had quietly dipped a brush into the ink. His tiny hands were already scribbling furiously across the side of my lantern."
 
     show dorian ceremonial_neutral at left_char with Dissolve(0.1)
+    voice audio.tedda_ch9_line19  # transcript: "Hey! Lady Elias deserves to"
     tedda "Oh my! Lady Elias! Is that me?"
     show elias ceremonial_happy at right_char_kids with Dissolve(0.1)
 
@@ -3191,6 +3197,7 @@ label ch9_lantern_kids:
     with Dissolve(0.2)
     voice audio.elias_ch9_line66  # transcript: "Solid daddy, it was pretty"
     elias "Sowwy, Daddy. It was pretty though."
+    voice audio.dorian_ch9_line8  # transcript: "It was... enlightening. I wouldn't"
     dorian "It was... something. Don't worry, buddy."
 
     show elias ceremonial_happy at right_char_kids with Dissolve(0.1)
@@ -3267,6 +3274,7 @@ label ch9_route_yuxuan:
 
     yuxuan "Dorian, what was that?! That lantern just launched early! What if someone down there saw it?! It's glowing like a signal flare! It could give away our location! I told Miss Weng not to let the kids have brushes unsupervised-!"
     dorian "Yu, it said teDuH. I don't think anyone is gonna decode that and send battalions."
+    voice audio.yuxuan_ch9_line8  # transcript: "I was supposed to bring"
     yuxuan "...TeDuH?! Was that supposed to be Tedda?"
 
     "I nodded. I watched his shoulders slowly slump as the lantern disappeared over the ridge."
@@ -3364,7 +3372,8 @@ label ch9_route_yuxuan:
     hide yuxuan
     show feng_suit at center_char
     with Dissolve(0.2)
-    feng   "Honored guests, travelers, friends from every border-"
+    voice audio.feng_ch9_line2  # transcript: "Honored guests, travelers, friends from every border."
+    feng "Honored guests, travelers, friends from every border-"
     hide feng_suit
 
     show yuxuan ceremonial_neutral at right_char
@@ -3379,9 +3388,12 @@ label ch9_route_yuxuan:
     show feng_suit at center_char
     with Dissolve(0.2)
 
-    feng   "Tonight, our lanterns rise not just as tribute, but as light."
-    feng   "May they find the ones we lost... and may the stars remember them always."
-    feng   "On the count of three-One. Two. Three-Release!"
+    voice audio.feng_ch9_line3  # transcript: "Tonight, our lanterns rise not just as a"
+    feng "Tonight, our lanterns rise not just as tribute, but as light."
+    voice audio.feng_ch9_line4  # transcript: "May they find the ones we lost, and"
+    feng "May they find the ones we lost... and may the stars remember them always."
+    voice audio.feng_ch9_line5  # transcript: "on the count of three. One. Two. Three."
+    feng "On the count of three-One. Two. Three-Release!"
     
     hide feng_suit
     "All around us, lanterns lifted."
@@ -3578,6 +3590,7 @@ label ch9_route_chunghee:
     "Finally, he lifted his head and wiped at his face with the back of his sleeve."
 
     chung_hee "Forgive me... Such a display is unbecoming of an emperor."
+    voice audio.dorian_ch9_line79  # transcript: "Don't get used to it."
     dorian    "Don't say that."
 
     "I turned to him."
@@ -3622,7 +3635,8 @@ label ch9_route_chunghee:
     "Down below, Feng's voice carried across the fields, rich and resonant, echoing through the hush of the gathered crowd."
 
     show feng_suit at center_char with Dissolve(0.2)
-    feng      "Honored guests, travelers, friends from every border-"
+    voice audio.feng_ch9_line2  # transcript: "Honored guests, travelers, friends from every border."
+    feng "Honored guests, travelers, friends from every border-"
 
     hide feng_suit
     show chunghee ceremonial_neutral at right_char
@@ -3637,9 +3651,12 @@ label ch9_route_chunghee:
     hide chunghee
     show feng_suit at center_char 
     with Dissolve(0.2)
-    feng      "Tonight, our lanterns rise not just as tribute, but as light."
-    feng      "May they find the ones we lost... and may the stars remember them always."
-    feng      "On the count of three-One. Two. Three-Release!"
+    voice audio.feng_ch9_line3
+    feng "Tonight, our lanterns rise not just as tribute, but as light."
+    voice audio.feng_ch9_line4
+    feng "May they find the ones we lost... and may the stars remember them always."
+    voice audio.feng_ch9_line5
+    feng "On the count of three-One. Two. Three-Release!"
 
     hide feng_suit with Dissolve(0.1)
     "We let go together."
@@ -3754,6 +3771,7 @@ label ch9_route_svante:
     hide weng
     show svante ceremonial_neutral at right_char with Dissolve(0.2)
     play music ost_date volume 0.75 loop 
+    voice audio.svante_ch9_line46  # transcript: "I'll tell you later, Magnus."
     svante "Is... that your lantern, Dorian?"
 
     "I turned around, still shaking my head at the trail of glitter Elias left behind, and there he was-Svante."
@@ -3860,7 +3878,9 @@ label ch9_route_svante:
     "Then... the call came."
 
     show feng_suit at center_char with Dissolve(0.2)
-    feng   "Honored guests, travelers, friends from every border-"
+
+    voice audio.feng_ch9_line2
+    feng "Honored guests, travelers, friends from every border-"
     hide feng_suit
     show svante ceremonial_neutral at right_char
     show dorian ceremonial_neutral at left_char
@@ -3873,10 +3893,12 @@ label ch9_route_svante:
     hide dorian
     show feng_suit at center_char 
     with Dissolve(0.2)
-
-    feng   "Tonight, our lanterns rise not just as tribute, but as light."
-    feng   "May they find the ones we lost... and may the stars remember them always."
-    feng   "On the count of three-One. Two. Three-Release!"
+    voice audio.feng_ch9_line3
+    feng "Tonight, our lanterns rise not just as tribute, but as light."
+    voice audio.feng_ch9_line4
+    feng "May they find the ones we lost... and may the stars remember them always."
+    voice audio.feng_ch9_line5
+    feng "On the count of three-One. Two. Three-Release!"
 
     scene bg_tianho_deng_blossom with Dissolve(0.2)
 
@@ -4138,7 +4160,8 @@ label ch9_route_niko:
     "I nodded. Together, we lit the lantern. Then... the call came."
 
     show feng_suit at center_char with Dissolve(0.1) 
-    feng   "Honored guests, travelers, friends from every border-"
+    voice audio.feng_ch9_line2
+    feng "Honored guests, travelers, friends from every border-"
     hide feng_suit
     show dorian ceremonial_neutral at left_char 
     show niko ceremonial_smile at right_char 
@@ -4147,10 +4170,13 @@ label ch9_route_niko:
     dorian "I guess he is... That charismatic dog..."
     hide niko
     hide dorian
-    show feng_suit at center_char with Dissolve(0.2) 
-    feng   "Tonight, our lanterns rise not just as tribute, but as light."
-    feng   "May they find the ones we lost... and may the stars remember them always."
-    feng   "On the count of three-One. Two. Three-Release!"
+    show feng_suit at center_char with Dissolve(0.2)
+    voice audio.feng_ch9_line3
+    feng "Tonight, our lanterns rise not just as tribute, but as light."
+    voice audio.feng_ch9_line4
+    feng "May they find the ones we lost... and may the stars remember them always."
+    voice audio.feng_ch9_line5
+    feng "On the count of three-One. Two. Three-Release!"
     hide feng_suit with Dissolve(0.1)
     "All around us, lanterns lifted."
     "One by one. Then by the dozens. Then by the hundreds."
@@ -4206,6 +4232,7 @@ label ch9_route_niko:
 
     "I stared at the charm, turning it gently in my hand."
 
+    voice audio.dorian_ch9_line51  # transcript: "5 Niko"
     dorian "Niko..."
 
     "He cleared his throat, still avoiding my gaze."
@@ -4269,6 +4296,7 @@ label ch9_route_niko:
     "And before either of us spoke again, our fingers found each other."
     "No words. Just the quiet meeting of palms. His fingers curled gently into mine."
 
+    voice audio.niko_ch9_line20  # transcript: "Keep your guard up, Dorian."
     niko "Thank you, Dorian."
     jump ch9_end
 
@@ -4372,6 +4400,7 @@ label ch9_route_magnus:
 
     "A cold thrill ran down my spine."
 
+    voice audio.dorian_ch9_line84  # transcript: "Not tonight. I have too"
     dorian "No... that can't be right. I'm the one who dreamed of you."
 
     "The lantern between us flickered."
@@ -4393,10 +4422,14 @@ label ch9_route_magnus:
     "We lit the lantern together. The flame inside flickered once, then glowed warm and steady. Then... the call came."
 
     show feng_suit at center_char with Dissolve(0.2)
-    feng   "Honored guests, travelers, friends from every border-"
-    feng   "Tonight, our lanterns rise not just as tribute, but as light."
-    feng   "May they find the ones we lost... and may the stars remember them always."
-    feng   "On the count of three-One. Two. Three-Release!"
+    voice audio.feng_ch9_line2
+    feng "Honored guests, travelers, friends from every border-"
+    voice audio.feng_ch9_line3
+    feng "Tonight, our lanterns rise not just as tribute, but as light."
+    voice audio.feng_ch9_line4
+    feng "May they find the ones we lost... and may the stars remember them always."
+    voice audio.feng_ch9_line5
+    feng "On the count of three-One. Two. Three-Release!"
 
     hide feng_suit with Dissolve(0.1)
     "All around us, lanterns lifted."
@@ -4539,9 +4572,7 @@ label ch9_end:
         duration=3.0
     )
     pause 3.0
-
     jump chapter_10
-
 
 # =============================================================================
 # END OF CHAPTER 9 PART 2

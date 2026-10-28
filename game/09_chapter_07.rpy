@@ -1526,11 +1526,13 @@ label ch7_waiting_common:
     "They moved in slower than the others, their silver-plated armor scuffed and dirtied, some of them limping as they entered."
 
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line1  # transcript: "Finally!"
     feng "Finally!"
 
     "At his side, he held the hand of what looked to be an injured fellow paladin—a younger man whose breathing was shallow but steady."
     "Feng's grip was firm, as if anchoring him in place."
 
+    voice audio.feng_ch7_line2  # transcript: "You'll be alright, just breathe!"
     feng "You'll be alright. Just breathe."
 
     "The younger paladin barely managed a nod before being led away for treatment."
@@ -1538,6 +1540,7 @@ label ch7_waiting_common:
     "His expression brightened."
 
     show dorian neutral at left_char with Dissolve(0.2)
+    voice audio.feng_ch7_line3  # transcript: "Hold buddy! There you are!"
     feng "Old buddy! There you are!"
 
     "I stepped forward, scanning him for any serious injuries."
@@ -1548,10 +1551,12 @@ label ch7_waiting_common:
     show feng_suit at right_char
     "Feng rolled his shoulders with a tired stretch. He dusted off his gauntlets, exhaling sharply."
 
+    voice audio.feng_ch7_line4  # transcript: "taken care of by the prosperity dragon, we"
     feng "Taken care of. By the Prosperity Dragon, we handled the yaoguai. Before heading back, we swept the perimeter, just to be sure."
 
     "I watched as he leaned against a stone pillar, the dim lantern light catching on his armor's scuffs and dents."
 
+    voice audio.feng_ch7_line5  # transcript: "Turns out there were still a few lurking,"
     feng "Turns out there were still a few lurking. But we already took care of them too."
 
     show niko normal_base at center_char with Dissolve(0.2)
@@ -1559,7 +1564,9 @@ label ch7_waiting_common:
     niko "How sure are you? There might still be some yaoguai lurking."
 
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line6  # transcript: "Nah, we did everything we could. We checked"
     feng "Nah. We did everything we could. We checked the ruins, scouted the paths, even made sure there were no lingering traces of their aura. If there were any left, they'd have come crawling out by now."
+    voice audio.feng_ch7_line7
     feng "I got Aoi fetch us some booze. I told that woman to lighten up but Dragon's bollocks was she as rigid as a dead ganderbilt."
 
     hide niko
@@ -1574,6 +1581,7 @@ label ch7_waiting_common:
     "Feng waved a hand dismissively."
     show svante normal_neutral at center_char with Dissolve(0.2)
 
+    voice audio.feng_ch7_line8  # transcript: "Meh, relax, Aldooth Kid. We've got it under"
     feng "Meh. Relax, aldorith kid. We've got it under control. They don't call us paladins for nothing, eh, Dorian?"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
@@ -1584,7 +1592,7 @@ label ch7_waiting_common:
 
     "Feng grinned, a deep, boisterous laugh escaping his throat."
     show dorian neutral at left_char with Dissolve(0.1)
-
+    voice audio.feng_ch7_line9
     feng "Hahaha! Just like old times, huh, buddy?"
 
     show svante alt_base at center_char with Dissolve(0.2)
@@ -1601,6 +1609,7 @@ label ch7_waiting_common:
     show feng_suit at right_char with Dissolve(0.2)
     "Feng scoffed and clapped a hand against my shoulder, shaking his head."
 
+    voice audio.feng_ch7_line10  # transcript: "You could say that. Dying and I were"
     feng "You could say that?! Dorian and I were best friends!"
 
     hide svante
@@ -1614,10 +1623,12 @@ label ch7_waiting_common:
     "A flicker of recognition crossed Feng's face. His gaze drifted toward Niko, his brow furrowing slightly as he looked him over."
     show niko alt_base at center_char with Dissolve(0.1)
 
+    voice audio.feng_ch7_line11  # transcript: "Oh, I remember you."
     feng "Oh… I remember you."
 
     "A beat passed. His expression changed—his features sharpening into something colder, edged with disdain."
 
+    voice audio.feng_ch7_line12  # transcript: "You're the Death God Prophet. What a brother"
     feng "You're that Death God prophet who had a brother with the audacity to try out for the interpreter for the son of the Emperor of Kyeongjang."
 
     show niko normal_serious at center_char 
@@ -1629,6 +1640,7 @@ label ch7_waiting_common:
     niko "Yes… I was."
 
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line13  # transcript: "Hmm. We should have you arrested in the"
     feng "Hmph. We should have arrested you in the first place."
 
     jump ch7_feng_niko_clash
@@ -1644,6 +1656,7 @@ label ch7_feng_niko_clash:
 
     "The air grew heavier."
 
+    voice audio.feng_ch7_line14  # transcript: "Maybe if we had, things would have turned"
     feng "Maybe if we had, things would have turned out differently. No Tianho Tragedy. No need for underground camps, no need for wounded paladins bleeding out on stone floors."
 
     show niko normal_serious at center_char with Dissolve(0.2)
@@ -1651,6 +1664,7 @@ label ch7_feng_niko_clash:
     niko "Maybe if the paladins had spent less time polishing their pride, they'd still be standing."
 
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line15  # transcript: "Right. Because listening to the Deathguard's lapdog always"
     feng "Right. Because listening to the Death God's lapdog always leads to prosperity."
 
     show niko normal_ignore at center_char with Dissolve(0.2)
@@ -1659,7 +1673,9 @@ label ch7_feng_niko_clash:
 
     "He gestured vaguely toward the injured, his smirk thin and humorless."
 
+    voice audio.feng_ch7_line16  # transcript: "Your death got caused this idiot."
     feng "Your death god caused this, idiot."
+    voice audio.feng_ch7_line17  # transcript: "Do you ever wonder if your God watched"
     feng "Do you ever wonder if your god watched and did nothing? Or do you already know the answer to that?"
 
     show niko normal_base at center_char with Dissolve(0.2)
@@ -1674,7 +1690,9 @@ label ch7_feng_niko_clash:
     voice audio.svante_ch7_line39  # transcript: "Sir, that's really not necessary."
     svante "S-Sir, that's really not necessary, we're just—"
 
+    voice audio.feng_ch7_line18  # transcript: "Yonanath the Hogither, Aldorath."
     feng "You're not off the hook either, aldorith."
+    voice audio.feng_ch7_line19  # transcript: "Your Mjoln's worshiping, though, don't they? A god"
     feng "Your Mjollians worship Enoch, don't they? A god of order, of righteous judgment? Tell me, where was that divine justice when Tianho burned?"
 
     show dorian serious at left_char with Dissolve(0.2)
@@ -1689,20 +1707,24 @@ label ch7_feng_niko_clash:
     "Niko, still expressionless, simply turned away, resuming his work as if the conversation had already been beneath him. But I knew better."
     "Feng let out a low, humorless chuckle, shaking his head."
 
+    voice audio.feng_ch7_line27  # transcript: "Whatever"
     feng "Tch. Whatever."
 
     "He locked eyes with Niko and gave him the finger."
 
+    voice audio.feng_ch7_line20  # transcript: "Yeah, that's what I thought. Typical Enoch bootlicker."
     feng "Yeah. That's what I thought. Typical Enoch bootlicker."
 
     "His boots scraped against the stone floor as he stepped closer to Niko. With slow deliberation, he spat on the ground near Niko's feet."
 
+    voice audio.feng_ch7_line21  # transcript: "Cyrus would still be alive if it wasn't"
     feng "Cyrus would still be alive if it wasn't for you lot."
 
     show dorian angry at left_char with Dissolve(0.1)
     voice audio.dorian_ch7_line58  # transcript: "Fang"
     dorian "Feng!"
 
+    voice audio.feng_ch7_line22  # transcript: "Didn't have much love for that guy, but"
     feng "Didn't have much love for the guy, but at least he didn't sit back and let the world burn while preaching about 'balance' and 'divine order.' At least he fought for something real."
 
     show feng_suit at right_char with Dissolve(0.1)
@@ -1714,7 +1736,7 @@ label ch7_feng_niko_clash:
     # TODO: play sound sfx_blue_flames               # PLACEHOLDER — blue fire SFX
 
     "He flexed his fingers, and the fire coiled and twisted with the motion, waiting—hungry."
-
+    voice audio.feng_ch7_line23
     feng "How about a duel, huh?"
 
     "The challenge rang through the air like a war drum."
@@ -1730,6 +1752,7 @@ label ch7_feng_niko_clash:
     show feng_suit at right_char with Dissolve(0.2)
     show screen feng_blue_fire
 
+    voice audio.feng_ch7_line24  # transcript: "Oh, I'm dead serious. Inak bootlickers need to"
     feng "Oh, I'm dead serious. Enoch bootlickers need to be taught a lesson."
 
     show niko normal_base at center_char with Dissolve(0.1)
@@ -1740,12 +1763,14 @@ label ch7_feng_niko_clash:
     voice audio.niko_ch7_line48  # transcript: "Your challenge is tempting, but"
     niko "Your challenge is tempting but I'd much rather focus on treating our actual patients."
 
+    voice audio.feng_ch7_line25  # transcript: "Why are you an arrogant son of a-"
     feng "Why you arrogant son of a—"
 
     show niko normal_serious at center_char with Dissolve(0.1)
     voice audio.niko_ch7_line49  # transcript: "There are wounded here. Tell"
     niko "There are wounded here. Tell me, Sir Feng—how many people will suffer tonight because you chose to satisfy your pride instead of helping them?"
 
+    voice audio.feng_ch7_line26  # transcript: "You mother"
     feng "Die, you mother—"
 
     show dorian serious at left_char with Dissolve(0.1)
@@ -1765,7 +1790,7 @@ label ch7_feng_niko_clash:
 
     show feng_suit at right_char
     "For a long, tense moment, Feng's fists remained clenched, his fire refusing to die down."
-
+    voice audio.feng_ch7_line27
     feng "Tch. Whatever."
     hide screen feng_blue_fire with Dissolve(0.5)
 
@@ -1810,10 +1835,12 @@ label ch7_feng_niko_clash:
 
     hide aoi_battle_suit
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line28  # transcript: "Cheers to old friends!"
     feng "Cheers to old friends!"
 
     "He grabbed another bottle for himself, lifting it in an exaggerated toast before taking a hearty swig straight from the neck."
 
+    voice audio.feng_ch7_line29  # transcript: "Now this is what I call a proper"
     feng "Now this is what I call a proper end to a fight!"
 
     hide feng_suit
@@ -1826,6 +1853,7 @@ label ch7_feng_niko_clash:
     show feng_suit at center_char with Dissolve(0.2)
     "Feng shrugged, tilting the bottle toward her in offering."
 
+    voice audio.feng_ch7_line30  # transcript: "Come on, Awe. Never little. If you can't"
     feng "C'mon, Aoi. Live a little. Even you can't tell me you don't need a drink after today."
 
     "Aoi gave him a long, slow blink."
@@ -1835,6 +1863,7 @@ label ch7_feng_niko_clash:
 
     "Feng snorted, nudging me with his elbow."
 
+    voice audio.feng_ch7_line31  # transcript: "She says that. But I swear I've seen"
     feng "She says that, but I swear I've seen her drink a whole bottle before. Right, Dorian?"
 
     "Aoi exhaled through her nose."
@@ -1842,11 +1871,13 @@ label ch7_feng_niko_clash:
     voice audio.aoi_ch7_line4  # transcript: "That never happened."
     aoi "That never happened. *sighs*"
 
+    voice audio.feng_ch7_line32  # transcript: "See? That's what a guilty person would say."
     feng "See? That's what a guilty person would say."
 
     "She didn't dignify him with a response, but the sharpness in her gaze was enough to make most men reconsider their choices. Feng, however, was not most men."
     "With a dramatic sigh, he leaned against the crate, glancing between me and Aoi before making a lazy gesture."
 
+    voice audio.feng_ch7_line33  # transcript: "Owie, get my boy here a wine bottle."
     feng "Aoi, get my boy here a wine bottle."
 
     "For a second, she didn't move. Then, with slow, deliberate precision, she reached into the crate, grabbed a bottle, and turned toward me."
@@ -1861,12 +1892,13 @@ label ch7_feng_niko_clash:
     aoi "*dryly* Drink responsibly, sir."
 
     "Feng let out a bark of laughter."
-
+    voice audio.feng_ch7_line34
     feng "Hahahaha! Aoi, you make it sound like I'm corrupting him!"
 
     voice audio.aoi_ch7_line7  # transcript: "Aren't you, sir?"
     aoi "Aren't you, sir?"
 
+    voice audio.feng_ch7_line35  # transcript: "Oh, cheeky lady. I love it."
     feng "Hahahaha! Cheeky lady! I love it!"
     voice audio.aoi_ch7_line8
     aoi "Ugh… Men…" 
@@ -1879,6 +1911,7 @@ label ch7_feng_niko_clash:
     "The liquid inside sloshed gently as I tilted it, the deep amber catching the glow of the lanterns."
     "Feng, watching me closely, smirked."
 
+    voice audio.feng_ch7_line36  # transcript: "Well, what's it gonna be? Old buddy."
     feng "Well? What's it gonna be, old buddy?"
 
     jump ch7_drink_choice
@@ -1900,6 +1933,7 @@ label ch7_drink_choice:
             show dorian normal at left_char with Dissolve(0.1)
             "I let out a breath, then smirked. It's been a while since I drank with him. Feng whooped, throwing an arm around my shoulder."
 
+            voice audio.feng_ch7_line37  # transcript: "That's my boy! Thought you got too serious"
             feng "That's my boy! Thought you got too serious for a good drink!"
             show dorian neutral at left_char with Dissolve(0.1)
             "I took a long sip, the burn of the wine spreading warmth through my chest. The tension from the day—the injured, the yaoguai attacks, the exhaustion—eased just a little."
@@ -1928,10 +1962,12 @@ label ch7_drink_choice:
 
             hide niko
             show feng_suit at right_char with Dissolve(0.2)
+            voice audio.feng_ch7_line38  # transcript: "Ignore the boot liquor, buddy."
             feng "Ignore the bootlicker, buddy."
 
             "He raised his bottle, clinking it against mine with an exaggerated wink."
 
+            voice audio.feng_ch7_line39  # transcript: "Tonight, we drink to survival, to kick an"
             feng "Tonight, we drink to survival. To kicking ass. To another battle won. And to you not losing your damn mind under all that responsibility."
 
             show dorian smile at left_char with Dissolve(0.1)
@@ -1941,10 +1977,12 @@ label ch7_drink_choice:
             voice audio.dorian_ch7_line61  # transcript: "Yeah, yeah, just don't make"
             dorian "Yeah, yeah. Just don't make me regret this."
 
+            voice audio.feng_ch7_line40  # transcript: "No promises."
             feng "No promises."
 
             "Then, he turned toward Aoi, lifting his bottle in her direction."
 
+            voice audio.feng_ch7_line41  # transcript: "Howdy! Join us with you!"
             feng "Aoi, join us, would you?"
 
             hide feng_suit
@@ -1956,6 +1994,7 @@ label ch7_drink_choice:
 
             hide aoi_battle_suit
             show feng_suit at right_char with Dissolve(0.2)
+            voice audio.feng_ch7_line42  # transcript: "Oh please, they're still getting paid on you."
             feng "Oh, please. You're still getting paid, aren't you? It's not like I'm asking you to down the whole bottle and start singing folk songs. Just one drink."
 
             hide feng_suit
@@ -1969,7 +2008,9 @@ label ch7_drink_choice:
             show feng_suit at right_char with Dissolve(0.2)
             "Feng whooped again as we clinked our bottles together."
 
+            voice audio.feng_ch7_line43  # transcript: "Cheers you bastards to the Frospirity Dragon and"
             feng "CHEERS, YOU BASTARDS! TO THE PROSPERITY DRAGON AND TO US!!"
+            voice audio.feng_ch7_line44  # transcript: "May our coins never fail! Our stomachs never"
             feng "MAY OUR COINS NEVER FAIL, OUR STOMACHS NEVER EMPTY, AND OUR CUPS NEVER RUN DRY!"
 
             voice audio.dorian_ch7_line62
@@ -1989,6 +2030,7 @@ label ch7_drink_choice:
 
             "Feng blinked, caught off guard. For a split second, he looked almost disappointed—before he threw his head back with an exaggerated groan and dramatically slumped against a crate."
 
+            voice audio.feng_ch7_line45  # transcript: "Uh, you really have changed."
             feng "Ugh, you really have changed."
 
             show dorian smile at left_char with Dissolve(0.1)
@@ -1998,11 +2040,13 @@ label ch7_drink_choice:
             dorian "Someone has to stay sharp."
             show dorian normal_alt_neutral at left_char with Dissolve(0.1)
 
+            voice audio.feng_ch7_line46  # transcript: "B-Boring Dorian. That's what you are now. Boring"
             feng "Pft… Boring Dorian. That's what you are now. Boring. Dorian."
 
             voice audio.aoi_ch7_line11  # transcript: "You could learn from him,"
             aoi "You could learn from him, sir."
 
+            voice audio.feng_ch7_line47  # transcript: "Don't chastise me, Owie. You get enough of"
             feng "Don't chastise me, Aoi. I get enough of that from my commanding officers, thanks."
 
             hide feng_suit
@@ -2029,10 +2073,12 @@ label ch7_drink_choice:
             show feng_suit at center_char with Dissolve(0.2)
             "Feng, of course, just shrugged and took another swig, completely unbothered."
 
+            voice audio.feng_ch7_line48  # transcript: "So yourself, more from me."
             feng "Suit yourself. More for me."
 
             "He raised his bottle in a mock toast, then grinned."
 
+            voice audio.feng_ch7_line49  # transcript: "Come on, Aoi. More for us."
             feng "Come on, Aoi. More for us."
 
             hide svante
@@ -2042,10 +2088,12 @@ label ch7_drink_choice:
             voice audio.aoi_ch7_line12  # transcript: "Ugh, fine. Just one, alright?"
             aoi "*sigh* Fine. Just one, alright?"
 
+            voice audio.feng_ch7_line50  # transcript: "Fine."
             feng "Fine."
 
             "Then, without missing a beat, he turned his attention to the nearby soldiers."
 
+            voice audio.feng_ch7_line51  # transcript: "Hey you!"
             feng "Hey you!"
             hide dorian
             hide aoi_battle_suit
@@ -2060,6 +2108,7 @@ label ch7_drink_choice:
 
             "Feng grinned, waving his bottle."
 
+            voice audio.feng_ch7_line52  # transcript: "Join us now!"
             feng "Join us! Now!"
 
             "Jiang and Gao exchanged nervous glances."
@@ -2072,6 +2121,7 @@ label ch7_drink_choice:
             hide aoi_battle_suit
             show soldier_gao at right_char with Dissolve(0.2)
 
+            voice audio.feng_ch7_line53  # transcript: "The more the merrier, this is a celebration!"
             feng "The more the merrier! This is a celebration—we survived another damn battle, didn't we?"
 
             "Jiang hesitated, but Gao—after a brief moment of uncertainty—grabbed a bottle and took a small sip. He coughed, sputtering slightly."
@@ -2091,6 +2141,7 @@ label ch7_drink_choice:
             show dorian neutral at left_char with Dissolve(0.1)
             dorian "Gao, don't push yourself, please."
 
+            voice audio.feng_ch7_line54  # transcript: "That's the spirit. See? This guy gets it."
             feng "That's the spirit! See? This guy gets it! Your turn, other guy! PARTY!!"
 
             voice audio.aoi_ch7_line15  # transcript: "Sir, calm yourself down."
@@ -2149,7 +2200,9 @@ label ch7_drink_common:
     voice audio.dorian_ch7_line65  # transcript: "We're heading out."
     dorian "We're heading out."
 
+    voice audio.feng_ch7_line55  # transcript: "You're going. The night's still young, buddy. Tomorrow"
     feng "Where are you going?! The night's still young, buddy! Tomorrow is the anniversary! We have so many stuff to catch up on!"
+    voice audio.feng_ch7_line56  # transcript: "You still haven't told me all about your"
     feng "You still haven't told me all about your time in the kingdom of Mjoll! Or did the cold finally get to your funny bone, huh? Hahaha!"
 
     show dorian serious at left_char with Dissolve(0.1)
@@ -2166,17 +2219,21 @@ label ch7_drink_common:
     "He didn't need to ask why—I could tell by the look in his eyes that he already had a sense of it. Svante, after a brief moment of hesitation, hurried after us, his steps quick."
     hide chunghee
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch7_line57
     feng "Hmm…"
 
     "Behind me, I could feel Feng's stare lingering. A breath. A pause."
     "Then—a chuckle."
     "The flickering firelight cast shadows over his face as he leaned back slightly, tilting his bottle lazily toward me. He grinned."
 
+    voice audio.feng_ch7_line58  # transcript: "Ha ha. Alright, alright. No need to be"
     feng "Heh. Alright, alright. No need to be so serious."
+    voice audio.feng_ch7_line59  # transcript: "You always don't have a way of making"
     feng "You always did have a way of making things dramatic, old friend. But I get it."
 
     "He lifted the bottle in an easygoing mock toast."
 
+    voice audio.feng_ch7_line60  # transcript: "See you tomorrow. Try not to get yourself"
     feng "See you tomorrow. Try not to get yourself killed before then, yeah?"
 
     show dorian neutral at left_char with Dissolve(0.2)
@@ -2188,6 +2245,7 @@ label ch7_drink_common:
     voice audio.aoi_ch7_line16  # transcript: "Another wine bottle, sir."
     aoi  "Another wine bottle, sir?"
 
+    voice audio.feng_ch7_line61  # transcript: "Sure thing, Ali."
     feng "Sure thing, Aoi."
     
     scene black with fade

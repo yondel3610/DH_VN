@@ -2479,6 +2479,7 @@ label ch6_feng_appears:
     show aoi_battle_suit at left_char
     with Dissolve(0.2)
     dorian "Feng?!"
+    voice audio.feng_ch6_line1  # transcript: "Watch out! Behind you!"
     feng   "Watch out! Behind you!"
     voice audio.aoi_ch6_line1  # transcript: "Stay sharp!"
     aoi    "Stay sharp!"
@@ -2508,6 +2509,7 @@ label ch6_feng_appears:
     show aoi_battle_suit at left_char
     with Dissolve(0.2)
 
+    voice audio.feng_ch6_line2  # transcript: "Easy. She's on our side."
     feng "Easy. She's on our side."
 
     "Aoi merely huffed, flicking her wrist."
@@ -2558,14 +2560,17 @@ label ch6_reunion:
     show dorian normal at left_char 
     with Dissolve(0.2)
     "He didn't say anything at first. His gaze lingered on Chung-hee. The ghost of a smirk pulled at his lips."
+    voice audio.feng_ch6_line3  # transcript: "By the prosperity dragon, the Emperor Kiyonjiang and"
     feng "By the Prosperity Dragon, The Emperor of Kyeongjang in the flesh."
 
     "Chung-hee met his gaze, still stiff, still guarded."
 
+    voice audio.feng_ch6_line4  # transcript: "You look different from your father. His majesty,"
     feng "You look different from your father, His Majesty Hyon Min-joon. But I see the resemblance."
 
     "Chung-hee didn't respond."
 
+    voice audio.feng_ch6_line5  # transcript: "Should I kneel? Or perhaps I should summon"
     feng "Should I kneel? Or perhaps I should summon an interpreter for a deaf-mute? I could arrange—"
 
     show chunghee normal_angry at center_char with Dissolve(0.1)
@@ -2592,11 +2597,13 @@ label ch6_reunion:
 
     "Feng cut me off with a single, casual shrug."
 
+    voice audio.feng_ch6_line6  # transcript: "She's a mercenary of King Gustav, her loyalty"
     feng "She's a mercenary of King Gustav. Her loyalty can always be bought."
 
     show chunghee normal_neutral at center_char
     chung_hee "Loyalty isn't something that can be bought."
 
+    voice audio.feng_ch6_line7  # transcript: "Loyalty is a luxury, your majesty. Some of"
     feng "Loyalty is a luxury, Your Majesty. Some of us don't have the privilege of being born into it."
 
     show dorian neutral at left_char
@@ -2604,19 +2611,25 @@ label ch6_reunion:
 
     "Feng only rolled his shoulders, exhaling lazily."
 
+    voice audio.feng_ch6_line8  # transcript: "Look, I didn't come here to debate politics."
     feng "Look, I didn't come here to debate politics. I came because I heard some crazy rumors—"
+    voice audio.feng_ch6_line9  # transcript: "So, there we were, interrogating the outdoors that"
     feng "So, there we were, interrogating the aldoriths that was with Aoi earlier—nothing unusual. Then they start babbling about a blond-haired demon who burned through an entire battalion. Fire, wind, earth, they said."
+    voice audio.feng_ch6_line10  # transcript: "And I thought... Nah, I can't be my"
     feng "And I thought, 'Nah. That can't be my best friend. My best friend left Tianho years ago, and he sure as hell ain't going back...' Then—lo and behold."
+    voice audio.feng_ch6_line11  # transcript: "How's it going, old friend? Miss me?"
     feng "How's it going, old friend? Miss me?"
 
     show dorian normal at left_char with Dissolve(0.1)
     dorian "Feng… It's been a while. I thought you were dead."
+    voice audio.feng_ch6_line12  # transcript: "Funny. I thought the same about you."
     feng   "Funny. I thought the same about you."
 
     show dorian neutral at left_char with Dissolve(0.1)
     "And then—without thinking—I stepped forward and pulled him into a hug."
     "Then, with a quiet chuckle, he patted my back—harder than necessary."
 
+    voice audio.feng_ch6_line13  # transcript: "Alright, alright. Don't get all sentimental on me."
     feng "Alright, alright. Don't get all sentimental on me."
 
     show dorian smile at left_char
@@ -2631,28 +2644,35 @@ label ch6_reunion:
 
     "Feng waved a hand dismissively."
 
+    voice audio.feng_ch6_line14  # transcript: "It's fine, yield a long time ago."
     feng "It's fine. Healed up a long time ago."
+    voice audio.feng_ch6_line15  # transcript: "The Empress's personal doctor patched me up. Had"
     feng "The Empress' personal doctor patched me up. Had some fancy healing techniques. You know how they are in the Imperial City—spare no expense when they want you back in fighting shape."
 
     "He smirked, tapping his glasses."
 
+    voice audio.feng_ch6_line16  # transcript: "Still, I keep these around. Give me a"
     feng "Still, I keep these around. Gives me a little edge. Makes me look mysterious, don't you think?"
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     "I rolled my eyes."
 
     dorian "You always did think too highly of yourself."
+    voice audio.feng_ch6_line17  # transcript: "HAHAHAHA Damn right"
     feng   "Hahaha. Damn right."
     show dorian neutral at left_char with Dissolve(0.1)
 
     "Feng slung an arm around my shoulders, his grin easy. He gestured toward the charred remains of the Hundun, its twisted form still crackling with lingering energy."
 
+    voice audio.feng_ch6_line18  # transcript: "Tell you what, once we're done cleaning up"
     feng "Tell you what—once we're done cleaning up this mess, let's catch up over a drink. I know a place."
     feng "Best liquor this side of Tianho."
+    voice audio.feng_ch6_line19  # transcript: "My treat, of course, the Emperor still pays"
     feng "My treat, of course. The Empress still pays us Paladins well."
 
     "Then, with an exaggerated wave, he turned his attention to Chung-hee, his smirk widening."
 
+    voice audio.feng_ch6_line20  # transcript: "What about you, Your Majesty? Will the Emperor"
     feng "What about you, Your Majesty? Will the Emperor Lord grace us peasants with his presence?"
 
     show chunghee normal_v2 at center_char
@@ -2671,6 +2691,7 @@ label ch6_reunion:
     chung_hee "I… suppose I can accompany you."
     show chunghee normal_neutral at center_char with Dissolve(0.1)
 
+    voice audio.feng_ch6_line21  # transcript: "Oh, his majesty drinks with commoners? I'm honored!"
     feng "Oh? His Majesty drinks with commoners? I'm honored."
 
     jump ch6_end
@@ -2689,24 +2710,30 @@ label ch6_end:
     show feng_suit at right_char
     "Feng's entire body went rigid. The easygoing playfulness vanished in an instant. His smirk faded, his stance shifting, shoulders squared."
 
+    voice audio.feng_ch6_line22  # transcript: "See you later buddy!"
     feng "See you later, buddy."
 
     "He cracked his knuckles, stepping forward as his blue flames reignited at his fingertips."
 
+    voice audio.feng_ch6_line23  # transcript: "Don't worry, me and the paladins will handle"
     feng "Don't worry. Me and the Paladins will handle this. Go to the hideout."
 
     show dorian serious at left_char
     "I frowned, feeling an unease settle in my gut."
 
     dorian "You sure?"
+    voice audio.feng_ch6_line24  # transcript: "Tiana was under the protection of the Imperial"
     feng   "Tianho is under the protection of the Imperial City of Gale. This is our job as Paladins. You should know this, buddy—you were one of us once."
+    voice audio.feng_ch6_line25  # transcript: "Besides, they're plenty of us. You sticking around"
     feng   "Besides, there are plenty of us. You sticking around would just be a waste of resources."
     
     show dorian normal_alt_calm at left_char with Dissolve(0.1)
     "He wasn't wrong. He looked at the charred body of the Hundun."
     show dorian serious at left_char with Dissolve(0.1)
 
+    voice audio.feng_ch6_line26  # transcript: "And more importantly, the appearance of this thing"
     feng "And more importantly—the appearance of this… thing isn't normal. Whatever's happening, we need answers, not just bodies in the streets."
+    voice audio.feng_ch6_line27  # transcript: "Fortunately, we have specialists from the city who"
     feng "Fortunately, we have specialists from the city who will handle the investigation. Best you steer clear once they arrive."
 
     show chunghee normal_v2 at center_char with Dissolve(0.1)
@@ -2717,6 +2744,7 @@ label ch6_end:
 
     show dorian normal_alt_annoyed at left_char with Dissolve(0.1)
     dorian "Tch. Fine."
+    voice audio.feng_ch6_line28  # transcript: "Try not to miss me too much. See"
     feng   "Try not to miss me too much. See you later."
 
     "I rolled my eyes."

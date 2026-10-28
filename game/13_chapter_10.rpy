@@ -2672,13 +2672,16 @@ label ch10_tianho_battle:
         voice audio.jiang_ch10_line16  # transcript: "What the-"
         jiang "What the-"
         show feng_suit at center_char with Dissolve(0.2)
+        voice audio.feng_ch10_line1  # transcript: "KEEP BACK!"
         feng  "GET BACK!"
         voice audio.gao_ch10_line9  # transcript: "Wait, paladin fang!"
         gao   "Wait... PALADIN FENG!!"
+        voice audio.feng_ch10_line2  # transcript: "Yeah, stay low. You're not dying today."
         feng  "Stay low. You're not dying today."
 
         voice audio.jiang_ch10_line17
         jiang "F-Feng?! P-Paladin! SIR!"
+        voice audio.feng_ch10_line3  # transcript: "I've seen too many good people far today."
         feng  "I've seen too many good people fall today. I won't lose you two. Not tonight."
         hide soldier_jiang
         hide soldier_gao
@@ -2687,6 +2690,7 @@ label ch10_tianho_battle:
         with Dissolve(0.2)
         voice audio.yg_screech
         yg    "GWAAARR!!"
+        voice audio.feng_ch10_line4
         feng  "HYAAAA!!"
         hide yaoguai
         show feng_suit at center_char
@@ -2695,8 +2699,10 @@ label ch10_tianho_battle:
         with Dissolve(0.2)
         voice audio.gao_ch10_line10  # transcript: "So cool!"
         gao   "S... So cool...."
+        voice audio.feng_ch10_line5  # transcript: "5 years of working together, and you're crushing"
         feng  "Heh. Five years of working together and you're crushing on me now, Gao? I'm touched."
         man_1 "Th-thank you! May the Prosperity Dragon bless you!"
+        voice audio.feng_ch10_line6  # transcript: "Get inside and lock all the damn doors"
         feng  "Get inside. And lock all the damn doors. And for the love of, we told you to get inside!"
         man_1 "Y-Yes, sir!!"
     
@@ -2715,6 +2721,7 @@ label ch10_tianho_battle:
             show yuxuan normal_neutral at right_char with Dissolve(0.2)
             yuxuan "Paladin Feng!! Oh!! Thank the Prosperity Dragon you're still here..."
 
+        voice audio.feng_ch10_line7  # transcript: "You're lucky my best friend still owes me"
         feng "Heh. You're lucky my best friend still owes me a drink. Now-how about we roast some yaoguai? My blue flame's just getting warmed up."
     stop music fadeout 2.0
     jump ch10_tianho_aoi
@@ -2795,6 +2802,7 @@ label ch10_tianho_aoi:
             hide babala
             show feng_suit at right_char with Dissolve(0.2)
 
+            voice audio.feng_ch10_line8  # transcript: "Well, well. You were the battlefield well, Lady"
             feng "Well, well... You wear the battlefield well, Lady Aoi. Quite the vision outside your kimono. Long hair really does suit you."
             voice audio.aoi_ch10_line7  # transcript: "Really thing, save the charm"
             aoi  "Ugh. Really, Feng? Save the charm for after we've cleaned up this mess. Now move-we're not done yet."
@@ -2805,11 +2813,15 @@ label ch10_tianho_aoi:
             hide yaoguai with Dissolve(0.1)
             voice audio.aoi_ch10_line8  # transcript: "to think they've learned from"
             aoi  "To think... they've learned from their attack yesterday."
+            voice audio.feng_ch10_line9  # transcript: "Heh heh heh. Heh. More fun for us."
             feng "Heh. More fun for us. Let's do it. I'll even give you a nice bonus if we survive."
             voice audio.aoi_ch10_line9  # transcript: "Agreed, you're on. It would"
             aoi  "Agreed. You're on. It would be an opportunity to go all out with my water channeling."
+            voice audio.feng_ch10_line10  # transcript: "and me with my blue fire."
             feng "And me with my blue fire."
+            voice audio.feng_ch10_line11  # transcript: "Side by side. You and me. These young"
             feng "Side by side, you and me? These yaoguai won't know what hit them."
+            voice audio.feng_ch10_line12  # transcript: "They will be sorry they messed with Tiano."
             feng "They will be sorry they messed with Tianho."
 
     jump ch10_epilogue
@@ -3318,14 +3330,73 @@ label ch10_bad_end_credits:
 # ============================================================
 # CH10 CREDITS ROLL — unskippable except via Space
 # ============================================================
-
 init python:
-    CREDITS_SCROLL_DURATION = 75.0  # TODO: tune to match how long your credit list takes to read comfortably
+    # Total scroll time in seconds (also when the auto-continue timer fires).
+    # The credits are now roughly 9,500px tall (estimate), and the scroll below
+    # travels that height plus one screen, so 170s works out to about 62px/s.
+    # That's close to the pace you had before (~58px/s). Higher = slower.
+    CREDITS_SCROLL_DURATION = 170.0
+
+    # (character, voice actor) - same order as the README
+    CREDITS_VOICE_CAST = [
+        ("Dorian Burnham", "Ryan Hoyle"),
+        ("Niko Tsukumo", "Ty Coker"),
+        ("Cheng Yuxuan", "Harry Dyer"),
+        ("Hyon Chung-hee", "Bryson Maggard"),
+        ("Svante Nordstrom", "Dakota Farnsworth"),
+        ("Magnus Wyndham", "Nick Eriksen"),
+        ("Elias Drakos", "Allison Chen"),
+        ("Vasily Lyuminov", "Vladimir “Vladibear” Gabatel"),
+        ("Tim", "Zacaro"),
+        ("Roboto", "Jeff Rosenau"),
+        ("Cai Weng", "Kiyana Morgan"),
+        ("Qi Feng", "Jason Zimowski"),
+        ("Yaoguai King", "Harry Dyer"),
+        ("Huli Jing", "June Holoubek"),
+        ("Elara Burnham", "Sky Santacruz"),
+        ("Tedda", "Becca Su"),
+        ("Aoi Mizuhara", "Becca Su"),
+        ("Prosperity Dragon", "Logan Fletcher"),
+        ("Soldier Li Gao", "Jason Zimowski"),
+        ("Soldier Sun Jiang", "Scotty Oka"),
+        ("King Gustav", "Bradley Garreth"),
+        ("Paladin Cyrus", "GM Hakim"),
+        ("Tian Xun", "Jeff Rosenau"),
+        ("Babala", "Sean Madson"),
+        ("Lucas Burnham", "FlourishingVA"),
+        ("Daniel Burnham", "FlourishingVA"),
+        ("Sunwoo", "Alex Bui"),
+        ("Sarah Burnham", "Sky Santacruz"),
+        ("Emily Burnham", "Angel Cass"),
+        ("Kristin", "Lindsey Vachon"),
+        ("Queen Ekaterina Drakos", "Vanessa Benoit"),
+        ("Prophet", "Justin Ali"),
+        ("Mjoll Soldier Helga", "June Holoubek"),
+        ("Mjoll Soldier Lars", "Ty Wilkins"),
+        ("King Long Shen", "Max Herzfeld"),
+        ("Empress Olympia Wyndham", "Vanessa Benoit"),
+        ("Emperor Hyon Minjoon", "Logan Fletcher"),
+        ("Hwan Sik", "Vince"),
+        ("Emi", "Luna (Mariane)"),
+        ("Fynn", "Sean Madson"),
+        ("Katashi", "Justin Ali"),
+        ("Herald", "Justin Ali"),
+        ("Mjoll Soldier Pavel", "Ali Gohar"),
+        ("Taotie", "Jordy Sword"),
+        ("Qiongqi", "Jordy Sword"),
+        ("Yaoguai", "Jordy Sword"),
+        ("Chace (cameo)", "Ty Coker"),
+        ("Isagani (cameo)", "Vince"),
+    ]
 
 transform credits_scroll_up:
+    # Starts with the TOP edge of the block at the bottom of the screen and
+    # ends with the BOTTOM edge at the top of the screen. Animating yanchor
+    # together with ypos means the block always travels exactly far enough to
+    # clear the screen, however long the credits get.
     yanchor 0.0
     ypos 1.0
-    linear CREDITS_SCROLL_DURATION ypos -3.0
+    linear CREDITS_SCROLL_DURATION ypos 0.0 yanchor 1.0
 
 screen credits_roll():
     modal True
@@ -3370,32 +3441,67 @@ screen credits_roll():
         text "by Temers Studio" size 40 xalign 0.5 text_align 0.5
         text " " size 60
 
+        # ── Core team ──
         text "Written & Directed by" size 30 color "#999999" xalign 0.5 text_align 0.5
         text "ICO" size 42 color "#ffffff" xalign 0.5 text_align 0.5
-        # text " " size 40
-
-        text "Sprite Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
-        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
-        # text " " size 40
-
-        text "Background Artists" size 30 color "#999999" xalign 0.5 text_align 0.5
-        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
 
-        text "Music & Composition" size 30 color "#999999" xalign 0.5 text_align 0.5
-        text "---------- " size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text "Editor" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Ji-yoo" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
 
         text "Programming" size 30 color "#999999" xalign 0.5 text_align 0.5
         text "yondel__" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
 
-        text "Character VAs" size 30 color "#999999" xalign 0.5 text_align 0.5
-        text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        # ── Art ──
+        text "Lead Artist" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Ren" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
-        # text " " size 40
-        # text "Character Name" size 42 color "#ffffff" xalign 0.5 text_align 0.5
-        # text "*insert va" size 40 color "#ffffff" xalign 0.5 text_align 0.5 # TODO: VA LIST
+
+        text "Character Designs" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Imaxdmn" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "Food Art" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Ilde" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "Other Art" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Xylas" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "Logo Design" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Ally" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "GUI Design" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "yondel__" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        # ── Music & Sound ──
+        text "Music Composition & Sound Design" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Wikki & Iyan" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        text "Audio Editing" size 30 color "#999999" xalign 0.5 text_align 0.5
+        text "Xylas" size 42 color "#ffffff" xalign 0.5 text_align 0.5
+        text " " size 40
+
+        # ── Voice cast (two columns: character | actor) ──
+        text "Character VAs" size 30 color "#999999" xalign 0.5 text_align 0.5
+        hbox:
+            xalign 0.5
+            spacing 50
+            vbox:
+                spacing 16
+                for role, actor in CREDITS_VOICE_CAST:
+                    text role size 36 color "#999999" xalign 1.0 text_align 1.0
+            vbox:
+                spacing 16
+                for role, actor in CREDITS_VOICE_CAST:
+                    text actor size 36 color "#ffffff" xalign 0.0 text_align 0.0
+        text " " size 40
 
         # ── Assets Used ──
         text "Assets Used" size 30 color "#999999" xalign 0.5 text_align 0.5
@@ -3413,15 +3519,13 @@ screen credits_roll():
         text "Easy Renpy GUI by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
         text "Immersive Particles by Feniks" size 38 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 40
-        
+
         text "Special Thanks" size 30 color "#999999" xalign 0.5 text_align 0.5
         text "----------" size 42 color "#ffffff" xalign 0.5 text_align 0.5
         text " " size 100
         text "And most importantly, to you our dear player.\nIt was because of you who made this possible. " size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
-        text "Thank you for playing Dragon's Heart and supporting Temers Studio. \nIt has been an honor making this game and we hope for your \ncontinued support on the studio's future endevours.\n.\n.\n\." size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
-        text "\n---------- " size 42
-        text "\n----------" size 42
-        text "\n----------" size 42
+        text "Thank you for playing Dragon's Heart and supporting Temers Studio. \nIt has been an honor making this game and we hope for your \ncontinued support on the studio's future endeavors.\n \n \n " size 36 color "#e8d9b0" xalign 0.5 text_align 0.5
+
     # small skip hint, tucked in the corner, always visible
     text "Press SPACE to skip":
         xpos 30

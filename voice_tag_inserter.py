@@ -45,9 +45,10 @@ import difflib
 # =============================================================================
 
 AUDIO_RPY_PATH = r"game/01_voice_lines.rpy"
+# ch1 
 
 CHAPTER_FILES = [
-    r"game/13_chapter_10.rpy",
+    r"game/03_chapter_01.rpy",
 ]
 MATCH_THRESHOLD = 0.55
 AMBIGUITY_MARGIN = 0.05
@@ -101,8 +102,8 @@ CHARACTER_ALIASES = {
     "girl_ald" : "girl_ald_soldier",
     "hulijing" : "huli_jing",
     "supplyrobot" : "supply_robot",
+    "feng": "feng",
 }
-
 # Speaker names in audio IDs that should match narrator lines (no speaker).
 # e.g. "narrator_ch3_line1" matches `"Some narration."`
 NARRATOR_KEYWORDS = {"narrator", "narration", "mono", "internal", "thought"}

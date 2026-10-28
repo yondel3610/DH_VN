@@ -35,7 +35,7 @@ import sys
 
 # Folder containing the .ogg voice files to transcribe.
 # This will automatically scan ALL subfolders (character folders, route folders, etc.)
-VOICE_FOLDER = r"game/audio/Chapter 6"
+VOICE_FOLDER = r"game/audio/Chapter 10/Feng_Chapter 10"
 
 # Path to your central audio.rpy file containing all `define audio.xxx = ...` lines.
 AUDIO_RPY_PATH = r"game/01_voice_lines.rpy"

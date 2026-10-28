@@ -1690,17 +1690,21 @@ label ch1_long_shen:
     show feng_suit at right_char
     show dorian normal_alt_neutral at left_char
     with Dissolve(0.2)
+    voice audio.feng_ch1_line1  # transcript: "Dorian, how are you holding up? You look"
     feng   "Dorian. How are you holding up? You look like you haven't slept a wink."
     voice audio.dorian_ch1_line65
     dorian "Managing. You know how it is — no rest for the weary."
+    voice audio.feng_ch1_line2  # transcript: "Oh, you're telling me. Yesterday, my wife dragged"
     feng   "You're telling me. Yesterday, my wife dragged me all around the city. Said she needed to find 'the perfect gift' for tonight's feast."
     voice audio.dorian_ch1_line66
     dorian "You tell me. Elara did the same. Something about 'immersing ourselves in Tianho's culture.' My legs still ache from all the walking. But, yeah. I had fun. The kids had fun as well."
     show dorian normal_alt_confident at left_char with Dissolve(0.1)
+    voice audio.feng_ch1_line3  # transcript: "Kids huh you've got no excuse then"
     feng   "Kids, huh? You've got no excuse then."
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line67
     dorian "Where did you go? Too bad we didn't bump into each other. I would have loved for you to meet my kids."
+    voice audio.feng_ch1_line4  # transcript: "Showing? Man, you should have been there. Her"
     feng   "Zhuo Yin! Man, you should have been there! Her Grace the Empress also got me coupons for the all-you-can-eat! It was fantastic!"
     voice audio.dorian_ch1_line68
     dorian "Wait… coupons? She didn't give me any. I'm starting to think you're the favorite Paladin."
@@ -1712,6 +1716,7 @@ label ch1_long_shen:
     cyrus "You two fools! Standing here gossiping like washerwomen while the King of Tianho is giving his address? Do you have no sense of decorum?"
 
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch1_line5  # transcript: "Relax, Cyrus. We're just killing time. Oh, you"
     feng "Relax, Cyrus. We're just killing time. You should try it sometime — it might help with your blood pressure."
 
     "I suppress a laugh, but Cyrus' glare deepens, his face reddening."
@@ -1744,6 +1749,7 @@ label ch1_long_shen:
             show feng_suit at right_char
             show dorian normal_alt_neutral at left_char
             with Dissolve(0.2)
+            voice audio.feng_ch1_line6  # transcript: "Oh, that was... enlightening. Glad you kept the"
             feng "Well, that was… enlightening. Glad you kept the peace, but you owe me for sitting through that without cracking a joke."
             show cyrus at center_char with Dissolve(0.25)
             voice audio.cyrus_ch1_line28
@@ -1761,16 +1767,17 @@ label ch1_long_shen:
             show dorian normal_alt_annoyed at left_char with Dissolve(0.2)
             voice audio.dorian_ch1_line69
             dorian "Shut up, old man. You've been yelling all day — take a break before you keel over."
-
             "Feng snorts beside me, clearly amused, while Cyrus' face flushes an even deeper shade of crimson."
 
             show feng_suit at right_char with Dissolve(0.2)
+            voice audio.feng_ch1_line7
             feng "Pft— Hahahaha!"
             show dorian normal_alt_neutral at left_char with Dissolve(0.2)
             voice audio.dorian_ch1_line70
             dorian "You heard me. Save the theatrics for the soldiers, Cyrus. It's not like the King will notice if I miss one line of his speech."
             voice audio.cyrus_ch1_line29
             cyrus "I-well… Tsk…"
+            voice audio.feng_ch1_line8  # transcript: "Dorian's right, Cyrus! We're all tired, and honestly,"
             feng "Dorian's right, Cyrus. We're all tired, and honestly, you yelling at us isn't helping your blood pressure. Maybe you should sit down for a minute before you pop a vein."
             voice audio.dorian_ch1_line71
             dorian "Just loosen up, will you?"
@@ -1778,6 +1785,7 @@ label ch1_long_shen:
             "The look on Cyrus' face is priceless. He opens his mouth to retort but snaps it shut again, storming off with a muttered string of curses. Qi Feng and I exchange a triumphant grin."
 
             hide cyrus with Dissolve(0.1)
+            voice audio.feng_ch1_line9  # transcript: "That was bold. Then thank you, how did"
             feng "That was bold. I didn't think you had it in you."
 
 
@@ -1863,6 +1871,7 @@ label ch1_ceremony:
 
     show feng_suit at right_char
     with Dissolve(0.2)
+    voice audio.feng_ch1_line10  # transcript: "And then I said, what do you want"
     feng "And then I said — what do you want me to do? Pray to Adriana to hand me a new daughter?!"
     woman_1 "Hahaha! Paladin Feng, that's hilarious!"
     voice man1_ch1_line3
@@ -1873,24 +1882,29 @@ label ch1_ceremony:
     show dorian serious at left_char with Dissolve(0.2)
     voice audio.dorian_ch1_line72
     dorian "Feng… Can I have a word with you?"
+    voice audio.feng_ch1_line11  # transcript: "Dorian? Oh sure man."
     feng "Dorian? Oh sure, man!"
 
     "Feng raises a curious eyebrow but excuses himself with a dramatic flourish, much to the nobles' disappointment. He leads me to a quieter corner, away from prying ears."
 
     show dorian neutral at left_char with Dissolve(0.1)
+    voice audio.feng_ch1_line12  # transcript: "What's up? You look like you've been shooting"
     feng  "What's up? You look like you've been chewing on a rock all night."
     show dorian sad at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line73
     dorian "Feng, I need to leave. I need to be with Elara and the kids. Something doesn't feel right, and I can't shake it off."
     "Feng turns to me, his usual relaxed grin softening as he studies my face."
 
+    voice audio.feng_ch1_line13  # transcript: "Really? The point is just about a start."
     feng  "Really? The party's just about to start! They haven't even brought out the roasted pig yet!"
     voice audio.dorian_ch1_line74
     dorian "I'll pass… I just have this feeling, you know?"
+    voice audio.feng_ch1_line14  # transcript: "Your as tense as a bowstring Dorian. Alright,"
     feng  "You're as tense as a bowstring, Dorian. Alright, I'll cover for you. Enjoy your time with your family. If anyone asks, I'll tell them you're handling some critical duty."
     show dorian normal at left_char with Dissolve(0.2)
     voice audio.dorian_ch1_line75
     dorian "Thanks, Feng. You're the best."
+    voice audio.feng_ch1_line15  # transcript: "I know. Not go before I change my"
     feng  "I know. Now go before I change my mind. And before Cyrus catches you."
     hide dorian
     hide feng_suit
@@ -2654,12 +2668,14 @@ label ch1_battle:
     show feng_suit at right_char with Dissolve(0.2)
 
     "Feng's face is tight with worry, his usual confidence replaced by relief as I approach. Cyrus looks grim, his jaw set like iron."
+    voice audio.feng_ch1_line16  # transcript: "Dorian! It's great to see that you're still"
     feng "Dorian! It's great to see that you're still alive, man."
 
     show dorian neutral at left_char with Dissolve(0.1)
 
     voice audio.dorian_ch1_line116
     dorian "You too, Feng. What happened here?"
+    voice audio.feng_ch1_line17  # transcript: "No clue. We were summoned by the Empress."
     feng "No clue. We were summoned by the Empress."
 
     show dorian serious at left_char with Dissolve(0.1)
@@ -2706,6 +2722,7 @@ label ch1_battle:
 
     hide olympia with Dissolve(0.1)
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch1_line18  # transcript: "We need to get her out of here."
     feng "We need to get her out of here. She's lost too much blood."
     show dorian serious at left_char with Dissolve(0.1)
     voice audio.dorian_ch1_line120
@@ -2725,6 +2742,7 @@ label ch1_battle:
     cyrus "The castle's collapsing! We need to get out — NOW!"
     hide cyrus with Dissolve(0.1)
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch1_line19  # transcript: "And Teteret's name. What is going on here?"
     feng  "In Tetrad's name… What is going on here?!"
 
     hide feng_suit with Dissolve(0.1)
@@ -2764,6 +2782,7 @@ label ch1_battle:
 
     show feng_suit at right_char with Dissolve(0.2)
 
+    voice audio.feng_ch1_line20  # transcript: "The castle. It's gone."
     feng "The castle… It's gone…"
 
     voice toatie_roar_ch1_line1
@@ -2807,6 +2826,7 @@ label ch1_battle:
 
     voice audio.dorian_ch1_line124
     dorian "Feng, we need to help them evacuate! The city will burn if we don't act now!"
+    voice audio.feng_ch1_line21  # transcript: "On it, a clear the streets and rally"
     feng  "On it. I'll clear the streets and rally anyone who can still fight."
     hide feng_suit with Dissolve(0.1)
     show cyrus at right_char
@@ -2841,6 +2861,7 @@ label ch1_battle:
     show dorian serious at left_char
     with Dissolve(0.2)
 
+    voice audio.feng_ch1_line22  # transcript: "Let's go! Dorian Wii!"
     feng "Let's go, Dorian! We—"
     hide feng_suit
     hide dorian
@@ -2864,6 +2885,7 @@ label ch1_battle:
     show feng_suit at right_char with Dissolve(0.2)
 
     "Paladin Feng steps forward, unwavering, his sword burning with blue fire."
+    voice audio.feng_ch1_line23  # transcript: "Dorian, get the civilians out! I'll handle this"
     feng "Dorian, get the civilians out! I'll handle this beast!"
 
     show dorian angry at left_char with Dissolve(0.1)
@@ -2887,7 +2909,7 @@ label ch1_battle:
     play sound audio.sfx_body_thud
     "The claws rake across his face, sending him flying backward. He crashes into the ground, rolling to a stop near me."
     "Blood gushes from deep, savage gashes across his eyes, the blue fire extinguished from his blade as it clatters to the ground."
-
+    voice audio.feng_ch1_line24
     feng "ARGGGHHHH!!!!"
     scene bg_tianho_city_on_fire with shock_cut
     show dorian angry at left_char with Dissolve(0.2)
@@ -2932,6 +2954,7 @@ label ch1_battle:
             hide taotie
             with Dissolve(0.1)
             show feng_suit at right_char with Dissolve(0.2)
+            voice audio.feng_ch1_line25  # transcript: "Dorian!"
             feng "DORIAN!!"
             hide feng_suit with Dissolve(0.1)
             show olympia at right_char with Dissolve(0.2)
@@ -2976,6 +2999,7 @@ label ch1_battle:
             "The ground beneath me erupts, molten lava surging upward. I scream as the searing heat engulfs me."
 
             dorian "AHHH!!!"
+            voice audio.feng_ch1_line26  # transcript: "DORIAN!"
             feng "DORIAN!!"
             voice audio.olympia_ch1_line7
             olympia "PALADIN! NO!"
@@ -3073,6 +3097,7 @@ label ch1_battle:
 
     hide dorian with Dissolve(0.1)
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch1_line27  # transcript: "Dorian, I'm not out yet. Just help me"
     feng "Dorian… I-I'm not out yet. Just help me up."
 
     "Two more soldiers appear, offering to take Feng to the medics. My chest tightens as I watch them lift him gently, his face contorted in pain."
@@ -3080,6 +3105,7 @@ label ch1_battle:
     hide feng_suit with Dissolve(0.1)
     female_guard "We'll take it from here, Paladin. I'm a trained medic."
     show feng_suit at right_char with Dissolve(0.2)
+    voice audio.feng_ch1_line28  # transcript: "Dorian, your family."
     feng "Dorian. Your family."
 
     "And then it hits me like a thunderclap."

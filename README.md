@@ -146,7 +146,6 @@ Ji-yoo
 
 ## Links (add after development)
 
-
 ---
 
 ## Contact
@@ -154,7 +153,7 @@ Ji-yoo
 For questions, feedback, or collaboration inquiries:
 
 - Email: 
-- Discord:  
+- Discord: 
 - Twitter: @TemersStudio
 
 ---
@@ -178,8 +177,10 @@ All assets follow these conventions:
 - Breaking changes between versions may break old saves
 
 ### Known Issues
-
+- Lack of sprites for some supporting characters
+- Continue button
+- No voice lines for some supporting characters
 
 ---
 
-*Last Updated: Sept 2026*
+*Last Updated: Oct 2026*

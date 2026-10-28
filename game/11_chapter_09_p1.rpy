@@ -956,6 +956,7 @@ label ch9_bedroom_yuxuan:
 
     voice audio.cyrus_ch9_line1  # transcript: "Feng, are you seriously reading"
     cyrus "Feng, are you seriously reading that in the middle of camp?"
+    voice audio.feng_ch9_line1
     feng "Buzz off, Cyrus! I need my daily romance!"
     "But he never cared. He would sit with a book in one hand completely engrossed in some dramatic tale of love and tragedy, nodding along as if it were the most natural thing in the world."
     show dorian normal at left_char with Dissolve(0.1)
