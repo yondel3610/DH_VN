@@ -1036,7 +1036,7 @@ label ch7_chunghee_time:
     voice audio.dorian_ch7_line32  # transcript: "taste what?"
     dorian "Taste what?"
     show dorian normal_alt_neutral at left_char with Dissolve(0.1)
-
+    $ food_popup("food12", "Tianho Flan")
     "Grinning, he held up a small, round clay dish filled with something golden, glossy, and smooth. It looked like flan—caramelized on top, thick and creamy—but the scent was richer, deeper."
     "A subtle hint of spice lingered in the air, something I didn't usually associate with a simple dessert."
     

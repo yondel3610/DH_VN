@@ -13,7 +13,7 @@ define slow_fade = Fade(0.3, 0.5, 0.3)
 define fast_dissolve = Dissolve(0.2)    
 
 label splashscreen:
-    scene black
+    scene plain_white
     with Pause(1)
 
     show temers_studio with Dissolve(1)
@@ -22,6 +22,7 @@ label splashscreen:
     hide temers_studio with dissolve
     with Pause(1)
 
+    scene black with fade
     show dh_logo with dissolve
     with Pause(1.5)
 
@@ -32,7 +33,7 @@ label splashscreen:
     return
 
 image temers_studio:
-    "gui/Temers_Studio_Logo-removebg-preview.png"
+    "gui/TemersStudioLogo.jpg"
     xalign 0.5
     yalign 0.5
     fit "contain"

@@ -2767,7 +2767,7 @@ label ch5_food_moonlit:
     voice audio.roboto_ch5_line27
     roboto "Here are your Moonlit Noodles, M-M-Master D-D-Dorian!"
     # TODO: FOOD14
-
+    $ food_popup("food14", "Moonlit Noodles")
     "The little machine's voice stuttered slightly, but its movements were careful and precise as it placed the bowl before me. "
     "The deep, dark broth gleamed under the dim light, the noodles glistening as they curled beneath the surface."
     "Resting atop them were thin slices of braised beef, their edges caramelized to perfection, and a single soft-boiled tea egg, its yolk just barely runny."
@@ -2904,6 +2904,7 @@ label ch5_food_truffle:
     dorian "Palate. Thanks, Roboto."
 
     # TODO: FOOD13
+    $ food_popup("food13", "Imperial Truffle Roast")
     "It placed the dish before me with an exaggerated flourish, its screen blinking in what I could only assume was enthusiasm."
     "The scent of roasted venison and truffle filled the air, rich and mouthwatering."
 
@@ -3012,6 +3013,7 @@ label ch5_food_hotpot:
     roboto "A dish fit for a traveler of tides and a seeker of shadows! Presenting your Fisherman's Hotpot, M-M-Master D-D-Dorian—crafted with the heart of the sea and the soul of the island itself!"
 
     # TODO: FOOD15
+    $ food_popup("food15", "Fisherman's Hotpot")
     show dorian neutral at left_char with Dissolve(0.1)
     dorian "Thank you, Roboto. It looks delicious."
     hide roboto with Dissolve(0.1)
@@ -3174,6 +3176,7 @@ label ch5_food_lamb:
     voice audio.roboto_ch5_line38
     roboto "Behold! A meal fit for a warrior! A dish crafted for the strong and the steadfast—M-M-Master D-D-Dorian, your Mjollian Mead-Braised Lamb awaits!"
     # TODO: FOOD11
+    $ food_popup("food11", "Mjollian Mead-Braised Lamb")
     "I stared down at the plate in front of me. Thick, spiced mead sauce clung to the slow-braised lamb shank, its aroma warm and heady."
     "Beside it, a dense slice of black rye bread and a small dish of herbed butter sat neatly on the tray."
     "It looked rich—very rich. Heavy. Nothing like the plain food I usually ate."

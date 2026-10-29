@@ -810,6 +810,7 @@ label ch2_food_stalls:
     vasily "Eat, friend. You'll thank me later, hungry grumpy man."
 
     # TODO: [COMMENT: FOOD4 — Zaryba Stew: smoked sturgeon, root vegetables, wild herbs, served in thick crusty bread bowls]
+    $ food_popup("food4", "Zaryba Stew")
     "I take a bite. The smoky, savory flavor of the sturgeon hits me first, followed by the earthiness of the parsnips and turnips. The bread, soaked in the stew, is soft yet hearty. It's... surprisingly good."
 
     show dorian neutral at left_char with Dissolve(0.1)

@@ -1165,6 +1165,7 @@ label ch3_breakfast:
             "I frowned, adding a touch more oil as the edges began to crisp."
             "I folded the omelet in half, the golden fish glinting faintly against the soft yellow of the eggs."
             # TODO: show food 6
+            $ food_popup("food6", "Golden Fish Omelette")
             "The result was decent—it looked nice! Yuxuan made me add a little herbs. “For garnishing”, he said."
 
         "Hearty White-Scaled Fish and Vegetable Soup.":
@@ -1187,6 +1188,7 @@ label ch3_breakfast:
             voice audio.dorian_ch3_line68
             dorian "Maybe some dried herbs…"
             # TODO: show food 7
+            $ food_popup("food7", "Hearty White-Scaled Fish and Vegetable Soup")
             "The bot handed me a small pouch of spices, and I added a pinch of dried basil. The soup took on a richer aroma, the fish's natural oils blending with the vegetables."
 
 
@@ -1205,7 +1207,7 @@ label ch3_breakfast:
             voice audio.dorian_ch3_line69
             dorian "Dragon's bollocks! *grumbling*"
             # TODO: show food 8
-
+            $ food_popup("food8", "Pan-Fried Golden Fish with Scrambled Blisscaps and Veggies")
             "The bot beeped. I plated the fish on a bed of the sautéed Blisscaps and veggies, adding a small garnish of string bean slices for color."
 
         "String-Bean and White-Scaled Fish Fried Rice.":
@@ -1226,7 +1228,7 @@ label ch3_breakfast:
             "Not bad."
 
             # TODO: add food 9
-
+            $ food_popup("food9", "String-Bean and White-Scaled Fish Fried Rice")
             "I plated the fried rice, sprinkling a pinch of dried herbs on top for good measure."
     
     hide supply_robot with Dissolve(0.1)

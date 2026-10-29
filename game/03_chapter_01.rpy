@@ -556,6 +556,7 @@ label ch1_city_xiangli:
     hide lucas with Dissolve(0.1)
     # [COMMENT: FOOD1 — Spring Bite Skewers: bite-sized glazed meat with charred fruit slices and crispy greens]
     # food illus at food_pos with dissolve
+    $ food_popup("food1", "Spring Bite Skewers")
     "The vendor lifts a skewer of the food. Each skewer has bite-sized pieces of meat glazed in a tangy-sweet sauce, interspersed with charred fruit slices and crispy greens. Lucas' mouth hangs open as he stares at it."
 
     vendor "Tianho's finest! Would you like to have some?"
@@ -637,6 +638,7 @@ label ch1_city_xiangli:
     elara "Wow, that has a kick."
 
     # [COMMENT: FOOD3 — Bamboo Crystal Cakes (zhū yè píng gāo): translucent jelly squares with fruit]
+    $ food_popup("food3", "Bamboo Crystal Cakes")
     "Meanwhile, Sarah picks at a plate of zhū yè píng gāo — 'Bamboo Crystal Cakes.' The translucent, jelly-like squares shimmer under the lantern light, filled with bursts of fruit and a faintly sweet flavor."
     "She sketches the cakes in her notebook before taking a single, careful bite."
     hide elara with Dissolve(0.1)

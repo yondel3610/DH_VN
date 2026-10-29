@@ -124,8 +124,8 @@ image bg_tianho_zhong_promenade: # tianho proper at night in files
 
 # --- Backgrounds: Castle and Ceremony ---
 image bg_tianho_castle_interior:
-    "images/Assets/Background/Tianho - throne.webp" # PLACEHOLDER ASSET
-    zoom 1.10
+    "images/Assets/Background/Tianho - throne.png" # PLACEHOLDER ASSET
+    zoom 1.1
     xalign 0.5
     yalign 1.0
 
@@ -169,12 +169,6 @@ image tianho_food_stalls_destroyed:
 
 image bg_tianho_underground_2:
     "images/Assets/Background/Underground Lights Off (1).png" # TODO: check if correct
-    size (1920, 1080)
-    xalign 0.5
-    yalign 1.0
-
-image bg_tianho_throne:
-    # "images/Assets/Background/throne.png"
     size (1920, 1080)
     xalign 0.5
     yalign 1.0
